@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A set of Python scripts that scrape **dmo.gameking.com** (Digimon Masters Online news site) to detect game updates — currently "New Deck" and "New Digimon" announcements — across `EventView` and `PatchNote` posts. Reports are published as static HTML under `docs/` and served as GitHub Pages. Not a package — just scripts run directly from the repo root.
 
-The site is structured as a hub: `docs/index.html` is a landing page linking to topic-specific reports (`docs/decks.html`, `docs/digimon.html`, and future ones like `docs/system.html`).
+The site is structured as a hub: `docs/index.html` is a landing page linking to topic-specific reports (`docs/decks.html`, `docs/digimon.html`, `docs/seals.html`, and future ones like `docs/system.html`). `docs/seals.html` is a cross-server Seal-Exchange feed (NA/KR/TH) with the per-patch exchange tables auto-extracted by `builders/extract_seal_tables.py` + `build_seal_tables.py` (see command #15).
 
 ## Repo layout
 
@@ -93,6 +93,14 @@ python enrichers/enrich_digimon_gameking.py
 #     side-by-side per digimon so divergences are easy to spot.
 python builders/compare_digimon_sources.py              # all digimon
 python builders/compare_digimon_sources.py 731          # just one idx
+
+# 15. Seal Exchange report. Extract the seal-exchange table(s) from every
+#     seal post (NA/KR/TH) into data/seal_tables.json (reads cache/, fetches
+#     the ~10 missing posts and caches them), then inject the cleaned tables
+#     into docs/seals.html. Card ids in seals.html (kr-<o>/na-<idx>/th-<suffix>)
+#     are the JSON keys; build_seal_tables.py is idempotent (ST-marker guarded).
+python builders/extract_seal_tables.py
+python builders/build_seal_tables.py
 ```
 
 ⚠️ **`scanners/scan_digimon.py` is destructive.** It rewrites
