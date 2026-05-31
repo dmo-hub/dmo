@@ -425,8 +425,19 @@
     "note": ""
   },
   "na-810": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
+    "tables": [
+      {
+        "header": "ALIAS",
+        "score": -1,
+        "ocr": true,
+        "alias": "na-4100",
+        "rows": 34,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gaomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>SunFlowmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>DexDoruGreymon Seal</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>Sinduramon Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>Ogremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Fairimon Seal</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>Lanamon Seal</td><td>5</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>MarineAngemon Seal</td><td>1</td><td>1</td><td>DS</td><td>250</td></tr><tr><td>Dorumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Gesomon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>[Awaken] Imperialdramon Paladin Mode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Giromon Seal</td><td>1</td><td>1</td><td>AT</td><td>250</td></tr><tr><td>Tanemon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Gaogamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Lucemon Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>KausGammamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Jesmon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Garudamon Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>Parasimon Seal</td><td>1</td><td>10</td><td>HT</td><td>400</td></tr><tr><td>Baihumon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Bloomlordmon Seal</td><td>1</td><td>25</td><td>DE</td><td>300</td></tr><tr><td>Ankylomon Seal</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Syakomon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Shellmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Lilamon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Falcomon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Mervamon Seal</td><td>1</td><td>1</td><td>EV</td><td>250</td></tr><tr><td>Death-X-Dorugoramon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ลิสต์ Takato มาตรฐาน (เดียวกับ idx 4100)"
+      }
+    ],
+    "note": ""
   },
   "na-789": {
     "tables": [],

@@ -133,6 +133,11 @@
       ["MirageGaogamon Burstmode Seal", "1", "100", "AT", "300"]
     ]
   },
+  "na-810": {
+    "alias": "na-4100",
+    "tag": "ลิสต์ Takato มาตรฐาน (เดียวกับ idx 4100)",
+    "img": "EventView idx=810 (14.01.2026) published no list of its own — it reuses the standing Takato seal-exchange list, identical to idx 4100 (confirmed equal to KR kr-812989)"
+  },
   "na-530": {
     "img": "EventView idx=530 (Takato's Seal Exchange) — source lists bare digimon names",
     "rows": [

@@ -449,7 +449,7 @@ def extract(post):
             "html": cleaned,
         })
     # Fall back to a vision-OCR'd table for posts whose list is image-only.
-    if not tables and post["key"] in OCR_DATA:
+    if not tables and "rows" in OCR_DATA.get(post["key"], {}):
         tables.append({
             "header": "OCR", "score": -1, "ocr": True,
             "rows": len(OCR_DATA[post["key"]]["rows"]) + 1,
@@ -481,6 +481,24 @@ def main():
         print(f"{p['key']:<12} tables={len(tbls)}{flag}")
         for t in tbls:
             print(f"    score={t['score']:>3} rows={t['rows']:>2} hdr={t['header']!r}")
+
+    # Resolve OCR aliases: a post that reuses another post's standing list
+    # (e.g. na-810 had no list of its own — it's the same Takato list as 4100).
+    for key, meta in OCR_DATA.items():
+        if "alias" not in meta or result.get(key, {}).get("tables"):
+            continue
+        src = result.get(meta["alias"], {}).get("tables")
+        if not src:
+            print(f"  !! alias source missing for {key}: {meta['alias']}", file=sys.stderr)
+            continue
+        srv = key.split("-")[0].upper()
+        result[key] = {"tables": [{
+            "header": "ALIAS", "score": -1, "ocr": True, "alias": meta["alias"],
+            "rows": src[0]["rows"], "normalized": True, "html": src[0]["html"],
+            "caption": CAPTION[srv] + " · " + meta.get("tag", "ลิสต์มาตรฐาน"),
+        }], "note": ""}
+        print(f"{key:<12} tables=1 (alias -> {meta['alias']})")
+
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     n_tbl = sum(len(v.get("tables", [])) for v in result.values())
     n_none = sum(1 for v in result.values() if not v.get("tables"))
