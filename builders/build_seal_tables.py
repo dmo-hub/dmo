@@ -26,7 +26,14 @@ DATA = PROJ / "data" / "seal_tables.json"
 
 CSS = """
   /* injected by build_seal_tables.py — seal exchange tables */
-  .seal-detail { margin: 2px 20px 16px; }
+  /* cards on this page carry no head/title, so the first row (source links,
+     or the KR gloss note) is the card's header: give it top padding and pull
+     the detail toggle up close beneath it */
+  .tl-entry > .sources:first-child,
+  .tl-entry > .seal-note:first-child { padding-top: 16px; }
+  .tl-entry .seal-note,
+  .tl-entry .sources { padding-bottom: 8px; }
+  .seal-detail { margin: 0 20px 16px; }
   .seal-detail > summary {
     cursor: pointer; list-style: none; user-select: none;
     display: inline-flex; align-items: center; gap: 7px;
@@ -107,7 +114,7 @@ def update_counts(html, data):
             lambda m, n=c[srv.lower()]: f"{m.group(1)}{n}{m.group(2)}", html)
     html = re.sub(r'(<div class="num">)\d+(</div><div class="lbl">โพสต์)',
                   lambda m: f"{m.group(1)}{len(kept)}{m.group(2)}", html)
-    years = re.findall(r'<span class="card-date">\d{2}\.\d{2}\.(\d{4})</span>', html)
+    years = re.findall(r'<span class="src-date">\d{2}\.\d{2}\.(\d{4})</span>', html)
     if years:
         lo = min(years)
         html = re.sub(r'(<div class="num">)\d{4}(</div><div class="lbl">ตั้งแต่)',
