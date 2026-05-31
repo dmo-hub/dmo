@@ -10,32 +10,6 @@
   .card-kind-badge.sv-na { background: var(--surface-card); color: var(--body); }
   .card-kind-badge.sv-kr { background: var(--coral); color: var(--on-primary); }
   .card-kind-badge.sv-th { background: var(--teal); color: var(--on-primary); }
-  /* Server tabs */
-  .server-tabs {
-    display: flex; flex-wrap: wrap; gap: 2px;
-    border-bottom: 1px solid var(--hairline);
-    margin: 0 0 22px;
-  }
-  .server-tab {
-    appearance: none; background: none; border: 0;
-    border-bottom: 2px solid transparent; margin-bottom: -1px;
-    padding: 9px 14px; font: inherit; font-size: 13px; font-weight: 500;
-    color: var(--muted-soft); cursor: pointer;
-    display: inline-flex; align-items: center; gap: 7px;
-    transition: color .12s ease, border-color .12s ease;
-  }
-  .server-tab:hover { color: var(--ink); }
-  .server-tab .tab-count {
-    font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 9999px;
-    background: var(--surface-soft); color: var(--muted-soft);
-    font-variant-numeric: tabular-nums;
-  }
-  .server-tab.is-active { color: var(--ink); border-bottom-color: var(--ink); }
-  .server-tab.tab-kr.is-active { color: var(--coral); border-bottom-color: var(--coral); }
-  .server-tab.tab-th.is-active { color: var(--teal); border-bottom-color: var(--teal); }
-  .server-tab.is-active .tab-count { background: var(--surface-card); color: var(--ink); }
-  .server-tab.tab-kr.is-active .tab-count { background: var(--coral); color: var(--on-primary); }
-  .server-tab.tab-th.is-active .tab-count { background: var(--teal); color: var(--on-primary); }
   .seal-note { margin: 0; padding: 0 20px 16px; color: var(--muted-soft); font-size: 13px; line-height: 1.5; }
   .seal-note .gloss { color: var(--body); }
   .card-tag-system {
@@ -74,8 +48,6 @@
   table.seal-tbl td:first-child, table.seal-tbl th:first-child {
     text-align: left; font-weight: 500; }
   table.seal-tbl tr:last-child td { border-bottom: 0; }
-  .seal-empty { margin: 0 20px 16px; font-size: 12px; color: var(--muted-soft);
-    font-style: italic; }
 /* /SEAL-CSS */
 </style>
 </head>
@@ -108,13 +80,6 @@
     </div>
   </div>
 
-  <div class="server-tabs" role="tablist" aria-label="เลือกเซิร์ฟเวอร์">
-    <button class="server-tab is-active" data-server="all" role="tab" aria-selected="true">ทั้งหมด <span class="tab-count">56</span></button>
-    <button class="server-tab tab-na" data-server="NA" role="tab" aria-selected="false">NA · gameking <span class="tab-count">18</span></button>
-    <button class="server-tab tab-kr" data-server="KR" role="tab" aria-selected="false">KR · digimonmasters <span class="tab-count">25</span></button>
-    <button class="server-tab tab-th" data-server="TH" role="tab" aria-selected="false">TH · vplay <span class="tab-count">13</span></button>
-  </div>
-
   <div class="timeline">
 
     <div class="tl-month"><span class="tl-month-label">May 2026</span><span class="tl-month-count">1 post</span></div>
@@ -126,9 +91,6 @@
       
       
       
-        <!--ST:kr-816593-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">April 2026</span><span class="tl-month-count">1 post</span></div>
@@ -136,6 +98,7 @@
         <div class="card-head"><span class="card-date">01.04.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4129</span></div>
         <h2 class="card-title">[Seal Exchange] Event added</h2>
         <div class="sources"><span class="src-item is-na"><span class="src-label">NA</span><span class="src-date">01.04.2026</span><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4129" target="_blank">PatchNoteView.aspx?idx=4129 ↗</a></span></div>
+      
       
       
       
@@ -155,6 +118,7 @@
       
       
       
+      
         <!--ST:na-4121-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">Seal Exchange Ticket — Craft List</div>
@@ -170,6 +134,7 @@
       
       
       
+      
         <!--ST:kr-814935-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -181,6 +146,7 @@
         <div class="card-head"><span class="card-date">11.03.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4118</span></div>
         <h2 class="card-title">[Limited Seal Exchange] Event added</h2>
         <div class="sources"><span class="src-item is-na"><span class="src-label">NA</span><span class="src-date">11.03.2026</span><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4118" target="_blank">PatchNoteView.aspx?idx=4118 ↗</a></span></div>
+      
       
       
       
@@ -201,6 +167,7 @@
       
       
       
+      
         <!--ST:kr-814707-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล · 2 ตาราง</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (1)</div>
@@ -214,6 +181,7 @@
         <div class="card-head"><span class="card-date">04.03.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4114</span></div>
         <h2 class="card-title">[Seal Exchange] Event added</h2>
         <div class="sources"><span class="src-item is-na"><span class="src-label">NA</span><span class="src-date">04.03.2026</span><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4114" target="_blank">PatchNoteView.aspx?idx=4114 ↗</a></span></div>
+      
       
       
       
@@ -232,6 +200,7 @@
       
       
       
+      
         <!--ST:kr-814605-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -245,6 +214,7 @@
         <div class="card-head"><span class="card-date">25.02.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4110</span></div>
         <h2 class="card-title">[Seal Exchangement] + [Limited Seal Exchange] Events added</h2>
         <div class="sources"><span class="src-item is-na"><span class="src-label">NA</span><span class="src-date">25.02.2026</span><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4110" target="_blank">PatchNoteView.aspx?idx=4110 ↗</a></span></div>
+      
       
       
       
@@ -265,6 +235,7 @@
       
       
       
+      
         <!--ST:kr-814493-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล · 2 ตาราง</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (1)</div>
@@ -282,6 +253,7 @@
       
       
       
+      
         <!--ST:kr-814269-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -294,6 +266,7 @@
         <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 오유민 (Oyumin)</p>
         <div class="sources"><span class="src-item is-kr"><span class="src-label">KR</span><span class="src-date">03.02.2026</span><a href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814064&Btype=Update" target="_blank">newsBoard_sub.aspx?o=814064 ↗</a></span></div>
+      
       
       
       
@@ -313,6 +286,7 @@
       
       
       
+      
         <!--ST:na-4100-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">Seal Exchange Ticket — Craft List</div>
@@ -328,6 +302,7 @@
       
       
       
+      
         <!--ST:kr-813810-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -340,6 +315,7 @@
         <h2 class="card-title">อัพเดท 23 ม.ค. 2569</h2>
         <p class="seal-note">กิจกรรมแลกเปลี่ยนซีล — NPC &lt;แลกเปลี่ยนซีล&gt;เมรามอน (Meramon)</p>
         <div class="sources"><span class="src-item is-th"><span class="src-label">TH</span><span class="src-date">23.01.2026</span><a href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-83/" target="_blank">patch -83 ↗</a></span></div>
+      
       
       
       
@@ -360,6 +336,7 @@
       
       
       
+      
         <!--ST:kr-813439-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -374,15 +351,13 @@
       
       
       
-        <!--ST:na-810-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-812989" data-server="KR">
         <div class="card-head"><span class="card-date">13.01.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 812989</span></div>
         <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 오유민 (Oyumin)</p>
         <div class="sources"><span class="src-item is-kr"><span class="src-label">KR</span><span class="src-date">13.01.2026</span><a href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812989&Btype=Update" target="_blank">newsBoard_sub.aspx?o=812989 ↗</a></span></div>
+      
       
       
       
@@ -403,6 +378,7 @@
       
       
       
+      
         <!--ST:kr-811713-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล · 2 ตาราง</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (1)</div>
@@ -416,6 +392,7 @@
         <div class="card-head"><span class="card-date">04.11.2025</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 789</span></div>
         <h2 class="card-title">[Special Seal Exchange] Event</h2>
         <div class="sources"><span class="src-item is-na"><span class="src-label">NA</span><span class="src-date">04.11.2025</span><a href="https://dmo.gameking.com/News/EventView.aspx?idx=789" target="_blank">EventView.aspx?idx=789 ↗</a></span></div>
+      
       
       
       
@@ -436,6 +413,7 @@
       
       
       
+      
         <!--ST:kr-811362-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -450,9 +428,6 @@
       
       
       
-        <!--ST:na-784-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">September 2025</span><span class="tl-month-count">3 posts</span></div>
@@ -461,6 +436,7 @@
         <h2 class="card-title">อัพเดท 25 ก.ย. 2568</h2>
         <p class="seal-note">กิจกรรมแลกซีล — NPC &lt;ครบรอบ 13 ปี&gt; เค้ก</p>
         <div class="sources"><span class="src-item is-th"><span class="src-label">TH</span><span class="src-date">25.09.2025</span><a href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-78/" target="_blank">patch -78 ↗</a></span></div>
+      
       
       
       
@@ -480,6 +456,7 @@
       
       
       
+      
         <!--ST:na-782-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">Seal Exchange Ticket — Craft List</div>
@@ -492,6 +469,7 @@
         <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 씰 교환 보코몬 (Bukamon)</p>
         <div class="sources"><span class="src-item is-kr"><span class="src-label">KR</span><span class="src-date">17.09.2025</span><a href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810828&Btype=Update" target="_blank">newsBoard_sub.aspx?o=810828 ↗</a></span></div>
+      
       
       
       
@@ -512,6 +490,7 @@
       
       
       
+      
         <!--ST:kr-808363-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -523,6 +502,7 @@
         <div class="card-head"><span class="card-date">22.07.2025</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 759</span></div>
         <h2 class="card-title">[Seal Exchange] Event (Gabumon)</h2>
         <div class="sources"><span class="src-item is-na"><span class="src-label">NA</span><span class="src-date">22.07.2025</span><a href="https://dmo.gameking.com/News/EventView.aspx?idx=759" target="_blank">EventView.aspx?idx=759 ↗</a></span></div>
+      
       
       
       
@@ -543,6 +523,7 @@
       
       
       
+      
         <!--ST:kr-807402-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล · 2 ตาราง</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (1)</div>
@@ -556,6 +537,7 @@
         <div class="card-head"><span class="card-date">17.06.2025</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 743</span></div>
         <h2 class="card-title">[Special Seal Exchange] Event / Seal Master Package</h2>
         <div class="sources"><span class="src-item is-na"><span class="src-label">NA</span><span class="src-date">17.06.2025</span><a href="https://dmo.gameking.com/News/EventView.aspx?idx=743" target="_blank">EventView.aspx?idx=743 ↗</a></span></div>
+      
       
       
       
@@ -578,6 +560,7 @@
       
       
       
+      
         <!--ST:kr-797955-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -592,6 +575,7 @@
         <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC ครบรอบ 15 ปี (เค้ก)</p>
         <div class="sources"><span class="src-item is-kr"><span class="src-label">KR</span><span class="src-date">13.11.2024</span><a href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=794497&Btype=Update" target="_blank">newsBoard_sub.aspx?o=794497 ↗</a></span></div>
+      
       
       
       
@@ -612,6 +596,7 @@
       
       
       
+      
         <!--ST:th-66-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">รายการแลกซีล (Seal Exchange List)</div>
@@ -624,6 +609,7 @@
         <h2 class="card-title">쁘띠몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Petitmon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><span class="src-label">KR</span><span class="src-date">25.09.2024</span><a href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=792682&Btype=Update" target="_blank">newsBoard_sub.aspx?o=792682 ↗</a></span></div>
+      
       
       
       
@@ -643,15 +629,13 @@
       
       
       
-        <!--ST:na-683-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-789333" data-server="KR">
         <div class="card-head"><span class="card-date">07.08.2024</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 789333</span></div>
         <h2 class="card-title">특별한 씰 교환 + 뿌띠몬의 씰 교환</h2>
         <p class="seal-note"><span class="gloss">Special Seal Exchange + Pyocomon's Seal Exchange</span> (씰 도둑을 잡아라 patch)</p>
         <div class="sources"><span class="src-item is-kr"><span class="src-label">KR</span><span class="src-date">07.08.2024</span><a href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=789333&Btype=Update" target="_blank">newsBoard_sub.aspx?o=789333 ↗</a></span></div>
+      
       
       
       
@@ -674,6 +658,7 @@
       
       
       
+      
         <!--ST:th-64-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">รายการแลกซีล (Seal Exchange List)</div>
@@ -686,6 +671,7 @@
         <h2 class="card-title">페어리몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Fairimon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><span class="src-label">KR</span><span class="src-date">10.07.2024</span><a href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=788597&Btype=Update" target="_blank">newsBoard_sub.aspx?o=788597 ↗</a></span></div>
+      
       
       
       
@@ -705,9 +691,6 @@
       
       
       
-        <!--ST:na-673-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">May 2024</span><span class="tl-month-count">1 post</span></div>
@@ -716,6 +699,7 @@
         <h2 class="card-title">메라몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Meramon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><span class="src-label">KR</span><span class="src-date">29.05.2024</span><a href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787646&Btype=Update" target="_blank">newsBoard_sub.aspx?o=787646 ↗</a></span></div>
+      
       
       
       
@@ -736,6 +720,7 @@
       
       
       
+      
         <!--ST:kr-783755-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -753,6 +738,7 @@
       
       
       
+      
         <!--ST:th-59-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">รายการแลกซีล (Seal Exchange List)</div>
@@ -765,6 +751,7 @@
         <h2 class="card-title">릴리몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Lillymon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><span class="src-label">KR</span><span class="src-date">07.02.2024</span><a href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=782119&Btype=Update" target="_blank">newsBoard_sub.aspx?o=782119 ↗</a></span></div>
+      
       
       
       
@@ -785,6 +772,7 @@
       
       
       
+      
         <!--ST:kr-780048-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
@@ -799,6 +787,7 @@
         <h2 class="card-title">อัพเดท 23 พ.ย. 2566</h2>
         <p class="seal-note">กิจกรรมแลกซีล — NPC &lt;แลกซีล&gt;ลีลีมอน (Lillymon)</p>
         <div class="sources"><span class="src-item is-th"><span class="src-label">TH</span><span class="src-date">23.11.2023</span><a href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-56/" target="_blank">patch -56 ↗</a></span></div>
+      
       
       
       
@@ -818,9 +807,6 @@
       
       
       
-        <!--ST:na-636-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">April 2023</span><span class="tl-month-count">1 post</span></div>
@@ -829,6 +815,7 @@
         <h2 class="card-title">อัพเดท 27 เม.ย. 2566</h2>
         <p class="seal-note">กิจกรรมแลกเปลี่ยนซีล — NPC &lt;แลกเปลี่ยนซีล&gt;ทาเครุ (Takeru)</p>
         <div class="sources"><span class="src-item is-th"><span class="src-label">TH</span><span class="src-date">27.04.2023</span><a href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-49/" target="_blank">patch -49 ↗</a></span></div>
+      
       
       
       
@@ -849,6 +836,7 @@
       
       
       
+      
         <!--ST:th-42-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">รายการแลกซีล (Seal Exchange List)</div>
@@ -865,9 +853,6 @@
       
       
       
-        <!--ST:na-551-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">October 2021</span><span class="tl-month-count">1 post</span></div>
@@ -878,9 +863,6 @@
       
       
       
-        <!--ST:na-530-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">July 2021</span><span class="tl-month-count">1 post</span></div>
@@ -889,6 +871,7 @@
         <h2 class="card-title">อัพเดท 26 ก.ค. 2564</h2>
         <p class="seal-note">กิจกรรมแลกซีล — NPC &lt;กิจกรรมแลกซีล&gt;ทาคาโตะ (Takato)</p>
         <div class="sources"><span class="src-item is-th"><span class="src-label">TH</span><span class="src-date">26.07.2021</span><a href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-28/" target="_blank">patch -28 ↗</a></span></div>
+      
       
       
       
@@ -909,6 +892,7 @@
       
       
       
+      
         <!--ST:th-21-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">รายการแลกซีล (Seal Exchange List)</div>
@@ -923,6 +907,7 @@
         <h2 class="card-title">อัพเดท 24 ก.ย. 2563</h2>
         <p class="seal-note">รายการซีลที่เพิ่ม + ตั๋วแลกซีลการ์ด</p>
         <div class="sources"><span class="src-item is-th"><span class="src-label">TH</span><span class="src-date">24.09.2020</span><a href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-12/" target="_blank">patch -12 ↗</a></span></div>
+      
       
       
       
@@ -943,6 +928,7 @@
       
       
       
+      
         <!--ST:th-15-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">รายการแลกซีล (Seal Exchange List)</div>
@@ -960,9 +946,6 @@
       
       
       
-        <!--ST:th-system-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">May 2017</span><span class="tl-month-count">2 posts</span></div>
@@ -974,9 +957,6 @@
       
       
       
-        <!--ST:na-352-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-708817" data-server="KR">
         <div class="card-head"><span class="card-date">11.05.2017</span><span class="card-kind-badge sv-kr">KR · Event</span><span class="card-idx">o 708817</span><span class="card-tag-system">System</span></div>
@@ -986,9 +966,6 @@
       
       
       
-        <!--ST:kr-708817-->
-        <p class="seal-empty">ℹ️ โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)</p>
-        <!--/ST-->
       </article>
 
   </div>
@@ -1006,34 +983,5 @@
   &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
 </footer>
 
-<script>
-(() => {
-  const tabs   = document.querySelectorAll('.server-tab');
-  const cards  = document.querySelectorAll('.tl-entry');
-  const months = document.querySelectorAll('.tl-month');
-
-  function select(server) {
-    cards.forEach(c => {
-      const show = server === 'all' || c.dataset.server === server;
-      c.style.display = show ? '' : 'none';
-    });
-    months.forEach(m => {
-      let next = m.nextElementSibling, any = false;
-      while (next && !next.matches('.tl-month')) {
-        if (next.matches('.tl-entry') && next.style.display !== 'none') { any = true; break; }
-        next = next.nextElementSibling;
-      }
-      m.style.display = any ? '' : 'none';
-    });
-  }
-
-  tabs.forEach(tab => tab.addEventListener('click', () => {
-    tabs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
-    tab.classList.add('is-active');
-    tab.setAttribute('aria-selected', 'true');
-    select(tab.dataset.server);
-  }));
-})();
-</script>
 </body>
 </html>

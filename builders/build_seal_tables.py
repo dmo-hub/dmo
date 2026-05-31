@@ -55,8 +55,6 @@ CSS = """
   table.seal-tbl td:first-child, table.seal-tbl th:first-child {
     text-align: left; font-weight: 500; }
   table.seal-tbl tr:last-child td { border-bottom: 0; }
-  .seal-empty { margin: 0 20px 16px; font-size: 12px; color: var(--muted-soft);
-    font-style: italic; }
 """
 
 CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
@@ -65,18 +63,16 @@ ST_RE = re.compile(r"\n?[ \t]*<!--ST:[^>]*?-->.*?<!--/ST-->", re.S)
 
 def block_for(key, data):
     tables = data.get("tables", [])
-    inner = [f'<!--ST:{key}-->']
-    if tables:
-        n = len(tables)
-        label = "ดูตารางแลกซีล" + (f" · {n} ตาราง" if n > 1 else "")
-        inner.append(f'<details class="seal-detail"><summary>📋 {label}</summary>')
-        for t in tables:
-            inner.append(f'<div class="seal-cap">{t["caption"]}</div>')
-            inner.append(f'<div class="seal-tbl-wrap">{t["html"]}</div>')
-        inner.append("</details>")
-    else:
-        note = data.get("note") or "ไม่มีตารางแลกซีลแบบ HTML"
-        inner.append(f'<p class="seal-empty">ℹ️ {note}</p>')
+    if not tables:
+        return ""   # posts without a table get nothing injected
+    n = len(tables)
+    label = "ดูตารางแลกซีล" + (f" · {n} ตาราง" if n > 1 else "")
+    inner = [f'<!--ST:{key}-->',
+             f'<details class="seal-detail"><summary>📋 {label}</summary>']
+    for t in tables:
+        inner.append(f'<div class="seal-cap">{t["caption"]}</div>')
+        inner.append(f'<div class="seal-tbl-wrap">{t["html"]}</div>')
+    inner.append("</details>")
     inner.append("<!--/ST-->")
     return "\n        " + "\n        ".join(inner)
 
@@ -105,6 +101,8 @@ def main():
             print(f"  !! card not found: {key}", file=sys.stderr)
             continue
         blk = block_for(key, d)
+        if not blk:
+            continue   # no-table posts get nothing
         html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2),
                        html, count=1)
         injected += 1
