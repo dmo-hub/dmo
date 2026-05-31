@@ -304,6 +304,22 @@ def normalize_table(tb, server):
     return "".join(out)
 
 
+def _is_trivial_craft(html):
+    """True for a 1-ticket->1-seal list with no stat/max — the redundant
+    'craft each event seal from one exchange ticket' table that sits beside
+    the real stat-bearing exchange table (e.g. na-4118, kr-814707)."""
+    data = re.findall(r"<tr>(.*?)</tr>", html, re.S)[1:]
+    if not data:
+        return False
+    for r in data:
+        c = [re.sub(r"<[^>]+>", "", x).strip()
+             for x in re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)]
+        if len(c) < 5 or not (c[1] == "1" and c[2] == "1"
+                              and c[3] == "—" and c[4] == "—"):
+            return False
+    return True
+
+
 # A header row identifies a seal-EXCHANGE table when it names a seal AND an
 # exchange/produce/obtain action — this cleanly separates the real exchange
 # lists from season-pass reward, new-seal-info, package-sale, and random-box
@@ -371,6 +387,8 @@ def extract(post):
         if not is_exchange_header(htxt, head2, body_score, server):
             continue
         normalized = normalize_table(tb, server)
+        if normalized and _is_trivial_craft(normalized):
+            continue                  # skip redundant 1-ticket->1-seal craft lists
         cleaned = normalized or clean_table(tb)
         if cleaned in seen:           # drop exact-duplicate tables
             continue
