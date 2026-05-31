@@ -141,6 +141,169 @@ def clean_table(tb):
     return "".join(out)
 
 
+# --- Normalisation to one canonical 5-column layout -----------------------
+# Every seal-exchange table, whatever its native column order/wording, is
+# remapped to: [seal | seals given | tickets used | stat | max @ Master].
+NORM_HEADER = ["ซีล / Seal", "ได้ / Qty", "ใช้ตั๋ว / Tickets", "Stat", "สูงสุด / Master"]
+_STAT = re.compile(r"\b(AT|HP|HT|DS|DE|BL|EV|CT|SCD|MS|DEX|EXP)\b")
+
+KW_NAME = ("제작 씰", "제작 아이템", "craft seal", "craft item",
+           "รายการซีล", "ไอเทมที่ได้รับ", "รายการไอเทม", "รายการผลิต")
+KW_GIVEN = ("씰 지급", "씰 획득", "seals given", "seal obtained", "seal given",
+            "จำนวนซีลที่ได้รับ", "จำนวนที่ได้รับ", "จำนวน ที่ได้รับ")
+KW_TICKET = ("교환권", "재료", "seal exchange ticket", "needed seal exchange",
+             "required number of seal", "material", "ตั๋วแลกการ์ดซีล",
+             "ตั๋วแลกซีล", "ไอเทมวัตถุดิบ", "วัตถุดิบ", "ที่ใช้ผลิต", "ในการผลิต")
+KW_MAX = ("최대", "마스터 수치", "마스터 능력치", "수치", "master value", "max value",
+          "stat value", "value (master)", "master attribute", "final ability",
+          "สเตตัสสูงสุด", "ค่าความสามารถสูงสุด", "ค่าสเตตัสสูงสุด", "สูงสุด")
+KW_STAT = ("능력치", "stat", "attribute", "ความสามารถ", "ประเภทสเตตัส",
+           "ประเภท", "คุณสมบัติ", "seal stat", "ค่าความสามารถ", "ค่าสเตตัส", "สเตตัส")
+KW_QTY = ("개수", "จำนวน", "amount")
+
+
+def _has(h, kws):
+    # match ignoring whitespace — KR/TH headers have inconsistent spacing
+    # and occasional typos (e.g. "จำนว น" for "จำนวน")
+    hns = h.lower().replace(" ", "")
+    return any(k.replace(" ", "") in hns for k in kws)
+
+
+def table_rows(tb):
+    """Expand the table into a full grid, honouring colspan/rowspan so that
+    rowspan-collapsed rows (common in TH material tables) keep their columns
+    aligned."""
+    tb = re.sub(r"<colgroup.*?</colgroup>", "", tb, flags=re.S)
+    grid, carry = [], {}            # carry: col -> [text, remaining_rows]
+    for tr in re.findall(r"<tr\b.*?</tr>", tb, re.S):
+        cells = []
+        for m in re.finditer(r"<(t[dh])\b([^>]*)>(.*?)</\1>", tr, re.S):
+            a = m.group(2)
+            cs = re.search(r'colspan="?(\d+)"?', a)
+            rs = re.search(r'rowspan="?(\d+)"?', a)
+            cells.append((strip_text(m.group(3)),
+                          int(cs.group(1)) if cs else 1,
+                          int(rs.group(1)) if rs else 1))
+        if not cells and not any(v[1] > 0 for v in carry.values()):
+            continue
+        line, col, si = [], 0, 0
+        while True:
+            if carry.get(col, [None, 0])[1] > 0:
+                line.append(carry[col][0]); carry[col][1] -= 1; col += 1; continue
+            if si < len(cells):
+                txt, cs, rs = cells[si]; si += 1
+                for _ in range(cs):
+                    line.append(txt)
+                    if rs > 1:
+                        carry[col] = [txt, rs - 1]
+                    col += 1
+                continue
+            future = [k for k, v in carry.items() if v[1] > 0 and k >= col]
+            if future:
+                while col < min(future):
+                    line.append(""); col += 1
+                continue
+            break
+        grid.append(line)
+    return grid
+
+
+def _num(s):
+    m = re.search(r"\d[\d,]*", s)
+    return m.group(0).replace(",", "") if m else ""
+
+
+def _embedded_qty(s):
+    """Oldest TH packs qty into the name cell: 'กาบูมอน ซีล 10 ชิ้น'."""
+    m = re.search(r"(\d+)\s*ชิ้น", s)
+    return (m.group(1), re.sub(r"\s*\d+\s*ชิ้น.*$", "", s).strip()) if m else ("", s)
+
+
+def _role_of(cell):
+    if _has(cell, KW_NAME):
+        return "name"
+    if _has(cell, KW_GIVEN):
+        return "given"
+    if _has(cell, KW_MAX):
+        return "max"
+    if _has(cell, KW_TICKET):
+        return "ticket"
+    if _has(cell, KW_STAT):
+        return "stat"
+    if _has(cell, KW_QTY):
+        return "qty"
+    return None
+
+
+def _classify(header):
+    """Return column-index roles. Generic qty cols resolve by adjacency."""
+    return [_role_of(h) for h in header]
+
+
+def normalize_table(tb, server):
+    rows = table_rows(tb)
+    if len(rows) < 2:
+        return None
+    # header = the row among the first 3 whose cells match the most column
+    # keywords (skips colspan title rows like na-789's "Seal Exchangement"
+    # and avoids data rows when the real header has duplicate column names)
+    hi = max(range(min(3, len(rows))),
+             key=lambda i: sum(1 for c in rows[i] if _role_of(c)))
+    header = rows[hi]
+    role = _classify(header)
+    if "name" not in role:
+        return None                          # can't map confidently -> fall back
+    iname = role.index("name")
+    iticket = role.index("ticket") if "ticket" in role else None
+    igiven = role.index("given") if "given" in role else None
+    stat_idxs = [i for i, r in enumerate(role) if r == "stat"]
+    istat = stat_idxs[0] if stat_idxs else None
+    imax = role.index("max") if "max" in role else None
+    if imax is None and len(stat_idxs) >= 2:   # 1st stat col = type, 2nd = value
+        imax = stat_idxs[-1]
+
+    def qty_after(idx):
+        for j in range(idx + 1, len(role)):
+            if role[j] == "qty":
+                return j
+            if role[j] in ("name", "ticket"):
+                break
+        return None
+
+    given_q = igiven if igiven is not None else qty_after(iname)
+    if iticket is None:
+        ticket_q = None
+    elif _has(header[iticket], ("개수", "필요", "quantity", "required number",
+              "needed", "จำนวน", "ที่ต้องการ", "ตั๋วแลกซีล")):
+        ticket_q = iticket                   # the ticket column is itself a count
+    else:
+        ticket_q = qty_after(iticket) or iticket   # count is the qty beside it
+
+    out = ['<table class="seal-tbl">', "<tr>"]
+    out += [f"<th>{H.escape(c)}</th>" for c in NORM_HEADER]
+    out.append("</tr>")
+    for row in rows[hi + 1:]:
+        if len(row) <= iname or not row[iname].strip():
+            continue
+        eq, name = _embedded_qty(row[iname])
+        given = (row[given_q] if given_q is not None and given_q < len(row) else "")
+        given = _num(given) or eq
+        ticket = _num(row[ticket_q]) if ticket_q is not None and ticket_q < len(row) else ""
+        if not ticket and iticket is not None and iticket < len(row):
+            ticket, _ = _embedded_qty(row[iticket])
+        statcell = row[istat] if istat is not None and istat < len(row) else ""
+        maxcell = row[imax] if imax is not None and imax < len(row) else ""
+        sm = _STAT.search(statcell) or _STAT.search(maxcell)
+        stat = sm.group(1) if sm else statcell.strip()
+        mx = _num(maxcell)
+        if not mx:                            # stat & max combined e.g. "AT +150"
+            mx = _num(statcell)
+        cells = [name, given or "—", ticket or "—", stat or "—", mx or "—"]
+        out.append("<tr>" + "".join(f"<td>{H.escape(c)}</td>" for c in cells) + "</tr>")
+    out.append("</table>")
+    return "".join(out)
+
+
 # A header row identifies a seal-EXCHANGE table when it names a seal AND an
 # exchange/produce/obtain action — this cleanly separates the real exchange
 # lists from season-pass reward, new-seal-info, package-sale, and random-box
@@ -207,7 +370,8 @@ def extract(post):
         body_score = seal_token_count(strip_text(tb))
         if not is_exchange_header(htxt, head2, body_score, server):
             continue
-        cleaned = clean_table(tb)
+        normalized = normalize_table(tb, server)
+        cleaned = normalized or clean_table(tb)
         if cleaned in seen:           # drop exact-duplicate tables
             continue
         seen.add(cleaned)
@@ -215,6 +379,7 @@ def extract(post):
             "header": htxt[:160],
             "score": body_score,
             "rows": tb.count("<tr"),
+            "normalized": bool(normalized),
             "html": cleaned,
         })
     cap = CAPTION[server]
