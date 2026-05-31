@@ -6,10 +6,6 @@
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/site.css">
 <style>
-  /* Seal-page server colour-coding */
-  .card-kind-badge.sv-na { background: var(--surface-card); color: var(--body); }
-  .card-kind-badge.sv-kr { background: var(--coral); color: var(--on-primary); }
-  .card-kind-badge.sv-th { background: var(--teal); color: var(--on-primary); }
   /* Server tabs */
   .server-tabs {
     display: flex; flex-wrap: wrap; gap: 2px;
@@ -45,7 +41,14 @@
   }
 /* SEAL-CSS */
   /* injected by build_seal_tables.py — seal exchange tables */
-  .seal-detail { margin: 2px 20px 16px; }
+  /* cards on this page carry no head/title, so the first row (source links,
+     or the KR gloss note) is the card's header: give it top padding and pull
+     the detail toggle up close beneath it */
+  .tl-entry > .sources:first-child,
+  .tl-entry > .seal-note:first-child { padding-top: 16px; }
+  .tl-entry .seal-note,
+  .tl-entry .sources { padding-bottom: 8px; }
+  .seal-detail { margin: 0 20px 16px; }
   .seal-detail > summary {
     cursor: pointer; list-style: none; user-select: none;
     display: inline-flex; align-items: center; gap: 7px;
@@ -116,9 +119,10 @@
 
     <div class="tl-month"><span class="tl-month-label">April 2026</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="na-4129" data-server="NA">
-        <div class="card-head"><span class="card-date">01.04.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4129</span></div>
-        <h2 class="card-title">[Seal Exchange] Event added</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4129" target="_blank" title="PatchNoteView.aspx?idx=4129">NA</a><span class="src-date">01.04.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -137,9 +141,10 @@
 
     <div class="tl-month"><span class="tl-month-label">March 2026</span><span class="tl-month-count">6 posts</span></div>
       <article class="card tl-entry" id="na-4121" data-server="NA">
-        <div class="card-head"><span class="card-date">17.03.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4121</span></div>
-        <h2 class="card-title">[Seal Exchange] Event added</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4121" target="_blank" title="PatchNoteView.aspx?idx=4121">NA</a><span class="src-date">17.03.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -156,10 +161,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-814935" data-server="KR">
-        <div class="card-head"><span class="card-date">17.03.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 814935</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 오유민 (Oyumin)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814935&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=814935">KR</a><span class="src-date">17.03.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -171,14 +177,15 @@
         <!--ST:kr-814935-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>오로치몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>엑스브이몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>황제드라몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>알파몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>베텔감마몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>시리우스몬 씰</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>볼그몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>머큐레몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>알볼몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>팬텀몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>블랙세라피몬 씰</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr><tr><td>에오스몬 씰</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>샤우트몬 X2 씰</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>스파이더몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>도루루몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>러브리몬 씰</td><td>10</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>번개콩알몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>테슬라젤리몬 씰</td><td>5</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>토이아구몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>가와파몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>스컬그레이몬 씰</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>마하가오가몬 씰</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>[ 각성 ] 세인트가르고몬 씰</td><td>1</td><td>1</td><td>EV</td><td>350</td></tr><tr><td>보코몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>알로몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>슈트몬 씰</td><td>10</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>메탈시드라몬 씰</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>세피로트몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>오파니몬 폴다운 모드 씰</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>라프타드라몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>샤우트몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>볼프몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>제트메르바몬 씰</td><td>1</td><td>1</td><td>HT</td><td>250</td></tr><tr><td>메탈그레이몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>아포카리몬 씰</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr><tr><td>브롯사몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Orochimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>ExV-mon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>ImperialDramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Alphamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>BetelGammamon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Siriusmon Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>Bolgmon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Mercuremon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Arbormon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Phantomon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>ShadowSeraphimon Seal</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr><tr><td>Eosmon Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>ShoutmonX2 Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Spidermon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Dorulumon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Loveramon Seal</td><td>10</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>TeslaJellymon Seal</td><td>5</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Toy Agumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Gawappamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>SkullGreymon Seal</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>MachGaogamon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>[Awaken] SaintGalgomon Seal</td><td>1</td><td>1</td><td>EV</td><td>350</td></tr><tr><td>Bokomon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Allomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Shutusmon Seal</td><td>10</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>MetalSeadramon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Sefirotmon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Ophanimon Falldown Mode Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>RaptorDramon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Shoutmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Wolfmon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>JetMervamon Seal</td><td>1</td><td>1</td><td>HT</td><td>250</td></tr><tr><td>MetalGreymon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Apocalymon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr><tr><td>Blossomon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="na-4118" data-server="NA">
-        <div class="card-head"><span class="card-date">11.03.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4118</span></div>
-        <h2 class="card-title">[Limited Seal Exchange] Event added</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4118" target="_blank" title="PatchNoteView.aspx?idx=4118">NA</a><span class="src-date">11.03.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -195,10 +202,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-814707" data-server="KR">
-        <div class="card-head"><span class="card-date">10.03.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 814707</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — รายการคราฟต์ 이벤트 씰 교환권, NPC 오유민</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814707&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=814707">KR</a><span class="src-date">10.03.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -210,14 +218,15 @@
         <!--ST:kr-814707-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>오메가몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>묘티스몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>베놈묘티스몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>[ 각성 ] 오르디네몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>워메몬 씰</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>크로스업 메르바몬 씰</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>[ 각성 ] 샤크라몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>암피몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>브리트라몬 씰</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>차크몬 씰</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>그로트몬 씰</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>카이젤그레이몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>바오헉몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>디어비트몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>플롯트몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>폰체스몬 W 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>헤라클레스캅테리몬 씰</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>그랑디스쿠가몬 씰</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>바알몬 씰</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>유키다루몬 씰</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>팩몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>엔젤몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>마르스몬 씰</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>톱니몬 씰</td><td>6</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>렛파몬 씰</td><td>10</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>[ 각성 ] 듀크몬 크림존 모드 씰</td><td>1</td><td>25</td><td>HP</td><td>600</td></tr><tr><td>가드로몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>켄터스몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>고래몬 씰</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>파피몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>다크티라노몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>워가루몬 ( 흑 ) 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>[ 각성 ] 지드밀레니엄몬 씰</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>VenomMyotismon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>[Awaken] Ordinemon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Wormmon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>Crossup Mervamon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>[Awaken] Sakkakumon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Amphimon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Vritramon Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>Chakkumon Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Grotmon Seal</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>KaiserGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>BaoHackmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>DearBeatmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Plotmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>PawnChessmon W Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>GrandisKuwagamon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>Baalmon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Yukidarumon Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Pukamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Marsmon Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>Hagurumon Seal</td><td>6</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>Reppamon Seal</td><td>10</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>[Awaken] Gallantmon (Crimson Mode) Seal</td><td>1</td><td>25</td><td>HP</td><td>600</td></tr><tr><td>Guardromon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Whamon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>DarkTyrannomon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>WereGarurumon(Black) Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>[Awaken] ZeedMillenniummon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="na-4114" data-server="NA">
-        <div class="card-head"><span class="card-date">04.03.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4114</span></div>
-        <h2 class="card-title">[Seal Exchange] Event added</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4114" target="_blank" title="PatchNoteView.aspx?idx=4114">NA</a><span class="src-date">04.03.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -234,10 +243,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-814605" data-server="KR">
-        <div class="card-head"><span class="card-date">03.03.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 814605</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 오유민 (Oyumin)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814605&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=814605">KR</a><span class="src-date">03.03.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -249,16 +259,17 @@
         <!--ST:kr-814605-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>크리사리몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>가루몬 씰 ( 흑 )</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>쥬레이몬 씰</td><td>1</td><td>1</td><td>AT</td><td>250</td></tr><tr><td>쿠즈하몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>동글몬 씰</td><td>1</td><td>100</td><td>AT</td><td>250</td></tr><tr><td>듀크몬 크림존모드 씰</td><td>1</td><td>100</td><td>BL</td><td>300</td></tr><tr><td>앙고라몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>바지라몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>오메가몬 씰 즈왈트</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>폰체스몬 씰 B</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>운석몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>배드퍼펫몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>카메몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>번개콩알몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>캔들몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>우드몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>피에몬 씰</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>에오스몬 씰 ( 완전체 ) 씰</td><td>10</td><td>1</td><td>DS</td><td>150</td></tr><tr><td>아르마몬 씰</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>디그몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>레이브몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>가지몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>스컬사탄몬 씰</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>반쵸레오몬 씰</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>감마몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>크레니엄몬 씰</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>문밀레니엄몬 씰</td><td>1</td><td>5</td><td>HT</td><td>300</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Chrysalimon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Garurumon(Black) Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Cherrymon Seal</td><td>1</td><td>1</td><td>AT</td><td>250</td></tr><tr><td>Kuzuhamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Culumon Seal</td><td>1</td><td>100</td><td>AT</td><td>250</td></tr><tr><td>Gallantmon (Crimson Mode) Seal</td><td>1</td><td>100</td><td>BL</td><td>300</td></tr><tr><td>Angoramon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Vajramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Omegamon Zwart Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>PawnChessmon B Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>Meteormon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Warumonzaemon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Candlemon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Woodmon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Piedmon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>Eosmon_LV5 Seal</td><td>10</td><td>1</td><td>DS</td><td>150</td></tr><tr><td>Armadimon Seal</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Digmon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Ravemon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Gazimon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>SkullSatamon Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>BanchoLeomon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Gammamon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Craniamon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>MoonMillenniummon Seal</td><td>1</td><td>5</td><td>HT</td><td>300</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">February 2026</span><span class="tl-month-count">4 posts</span></div>
       <article class="card tl-entry" id="na-4110" data-server="NA">
-        <div class="card-head"><span class="card-date">25.02.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4110</span></div>
-        <h2 class="card-title">[Seal Exchangement] + [Limited Seal Exchange] Events added</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4110" target="_blank" title="PatchNoteView.aspx?idx=4110">NA</a><span class="src-date">25.02.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -277,10 +288,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-814493" data-server="KR">
-        <div class="card-head"><span class="card-date">24.02.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 814493</span></div>
-        <h2 class="card-title">씰 교환 + 한정 씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange + Limited Seal Exchange</span> — NPC 오유민</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814493&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=814493">KR</a><span class="src-date">24.02.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -292,17 +304,18 @@
         <!--ST:kr-814493-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล · 2 ตาราง</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (1)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>아그니몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>기가스몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>라구엘몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>라스트 에볼루션 : 인연 씰</td><td>1</td><td>100</td><td>AT</td><td>400</td></tr><tr><td>황룡몬 씰</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>탱크드라몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>아구몬 (S) 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>파피몬 씰 ( 흑 )</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>카오스피에몬 씰</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>레이디데블몬 씰</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>데들리액스몬 씰</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>티로몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>레나몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>록몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>모노크로몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>팔몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>웨즌감마몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>피노키몬 씰</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>캅테리몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>릴리몬 씰</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>임프몬 씰</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>원뿔몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>루체몬 사탄모드 씰</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>루체몬 : 폴다운 모드 씰</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>두리몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>돌가몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>나이트몬 씰</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>로드나이트몬 씰</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Agunimon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Gigasmon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Raguelmon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Last Evolution Kizuna Seal</td><td>1</td><td>100</td><td>AT</td><td>400</td></tr><tr><td>Huanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>Tankdramon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Gabumon Seal(Black)</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>ChaosPiedmon Seal</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>LadyDevimon Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>DeadlyAxemon Seal</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Tylomon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Renamon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Rockmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Monochromon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Palmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>WezenGammamon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Puppetmon Seal</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>Kabuterimon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Lillymon Seal</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>Impmon Seal</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Ikkakumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Lucemon: Wild 2nd Mode Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Lucemon: Falldown Mode Seal</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>Drimogemon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Dorugamon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Knightmon Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>LordKnightmon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr></table></div>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (2)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>그레이몬 ( 저항 ) 씰</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>워그레이몬 ( 저항 ) 씰</td><td>5</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>알포스브이드라몬 ( 저항 ) 씰</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>제스몬 ( 저항 ) 씰</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>간쿠몬 ( 저항 ) 씰</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>듀크몬 ( 저항 ) 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>발바몬 ( 저항 ) 씰</td><td>1</td><td>25</td><td>BL</td><td>300</td></tr><tr><td>가루몬 ( 저항 ) 씰</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>메탈가루몬 ( 저항 ) 씰</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>매그너몬 ( 저항 ) 씰</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>미네르바몬 ( 저항 ) 씰</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>크레니엄몬 ( 저항 ) 씰</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>리리스몬 ( 저항 ) [ 각성 ] 씰</td><td>1</td><td>10</td><td>CT</td><td>300</td></tr><tr><td>메탈그레이몬 ( 저항 ) 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>두프트몬 ( 저항 ) 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>로드나이트몬 ( 저항 ) 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>카오스드라몬 ( 저항 ) 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>릴리몬 ( 저항 ) 씰</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>로제몬 ( 저항 ) 씰</td><td>5</td><td>1</td><td>DS</td><td>150</td></tr><tr><td>리리스몬 ( 저항 ) 씰</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>마왕몬 ( 저항 ) 씰</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>워가루몬 ( 저항 ) 씰</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>베르제브몬 ( 저항 ) 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>메기드라몬 ( 저항 ) 씰</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>니드몬 ( 저항 ) 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>듀나스몬 ( 저항 ) 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>켄타우로스몬 ( 저항 ) 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>엑자몬 ( 저항 ) 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Greymon X Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>WarGreymon X Seal</td><td>5</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Ulforce V-dramon X Seal</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Jesmon X Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>Gankoomon X Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>Gallantmon X Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Barbamon X Seal</td><td>1</td><td>25</td><td>BL</td><td>300</td></tr><tr><td>Garurumon X Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>MetalGreymon X Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Magnamon X Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Minervamon X Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Craniummon X Seal</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Lilithmon X [Awaken] Seal</td><td>1</td><td>10</td><td>CT</td><td>300</td></tr><tr><td>MetalGreymon X Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Duftmon X Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>LordKnightmon X Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Chaosdramon X Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Lillymon X Seal</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>Rosemon X Seal</td><td>5</td><td>1</td><td>DS</td><td>150</td></tr><tr><td>Lilithmon X Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Demon X Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>WereGarurumon X Seal</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Beelzebumon X Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Megidramon X Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>Togemon X Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Dynasmon X Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Sleipmon X Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Examon X Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-814269" data-server="KR">
-        <div class="card-head"><span class="card-date">10.02.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 814269</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 오유민 (Oyumin)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814269&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=814269">KR</a><span class="src-date">10.02.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -314,15 +327,16 @@
         <!--ST:kr-814269-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>미라지 가오가몬 각성모드 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>가비지몬 씰</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>메가드라몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>볼토바우타몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>스컬나이트몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>오메가몬 Alter-B 씰</td><td>1</td><td>10</td><td>AT</td><td>300</td></tr><tr><td>레베몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>스콜피온몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>바리스타몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>홀리엔젤몬 씰</td><td>10</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>그레이몬 (C) 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>쿠즈하몬 무녀모드 씰</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>아구몬 : 용기의 유대 씰</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>버드라몬 씰</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>[ 각성 ] 듀크몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>가룸몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>브리츠몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>칼마라몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>아수라몬 씰</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>미케몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>그라디몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>쿠다몬 씰</td><td>10</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>듀나스몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>야차몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>로제몬 각성모드 씰</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>세이버헉몬 씰</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>아마게몬 씰</td><td>1</td><td>25</td><td>EV</td><td>400</td></tr><tr><td>메탈에테몬 씰</td><td>5</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>레어몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>오메가몬 Alter-S 씰</td><td>1</td><td>100</td><td>HP</td><td>600</td></tr><tr><td>샤크라몬 씰</td><td>1</td><td>60</td><td>HP</td><td>400</td></tr><tr><td>메일버드라몬 씰</td><td>10</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>블리자몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>그라운드드라몬 씰</td><td>1</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>파피몬 : 우정의 유대 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>웬디몬 씰</td><td>5</td><td>1</td><td>HT</td><td>150</td></tr><tr><td>진바앙고라몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>오메가몬 즈왈트 D 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>베리얼묘티스몬 씰</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr><tr><td>안티라몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>MirageGaogamon BurstMode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Garbagemon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>Megadramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Boltboutamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>SkullKnightmon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Omegamon Alter-B Seal</td><td>1</td><td>10</td><td>AT</td><td>300</td></tr><tr><td>Lowemon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Scorpiomon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Baristamon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>MagnaAngemon Seal</td><td>10</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>Greymon (C) Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Kuzuhamon Miko Mode Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Agumon : Bond of Courage Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Birdramon Seal</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>[Awaken] Gallantmon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Garmmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Blitzmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Calmaramon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Asuramon Seal</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>Mikemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Gladimon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Kudamon Seal</td><td>10</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Dynasmon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Yaksamon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Rosemon Burst Mode Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>SaviorHackmon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Armagemon Seal</td><td>1</td><td>25</td><td>EV</td><td>400</td></tr><tr><td>MetalEtemon Seal</td><td>5</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Omegamon Alter-S Seal</td><td>1</td><td>100</td><td>HP</td><td>600</td></tr><tr><td>Sakkakumon Seal</td><td>1</td><td>60</td><td>HP</td><td>400</td></tr><tr><td>MailBirdramon Seal</td><td>10</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Blizzarmon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Groundramon Seal</td><td>1</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Gabumon : Bond of Friendship Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Wendimon Seal</td><td>5</td><td>1</td><td>HT</td><td>150</td></tr><tr><td>SymbareAngoramon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Omegamon Zwart D Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Belial Vamdemon Seal</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr><tr><td>Antylamon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-814064" data-server="KR">
-        <div class="card-head"><span class="card-date">03.02.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 814064</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 오유민 (Oyumin)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814064&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=814064">KR</a><span class="src-date">03.02.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -334,16 +348,17 @@
         <!--ST:kr-814064-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>마린데블몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>데크스몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>그레이몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>비가라몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>메가시드라몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>니드몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>볼케몬 씰</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>라라몬 씰</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>레이브몬 각성모드 씰</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr><tr><td>메탈티라노몬 씰</td><td>1</td><td>10</td><td>DE</td><td>200</td></tr><tr><td>에렉몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>플라이몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>메라몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>[ 각성 ] 스사노오몬 씰</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr><tr><td>굴루스감마몬 씰</td><td>5</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>피요몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>듀나스몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>바스테몬 씰</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>아트라캅테리몬 씰</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>그라우몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>알포스브이드라몬 씰</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>샤인그레이몬 각성모드 씰</td><td>1</td><td>100</td><td>HP</td><td>550</td></tr><tr><td>타이런트캅테리몬 씰</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>위치몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>페탈드라몬 씰</td><td>5</td><td>1</td><td>HT</td><td>150</td></tr><tr><td>플로라몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Death-X-mon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Greymon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Vikaralamon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>MegaSeadramon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Togemon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Volcamon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Ravemon Burst Mode Seal</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr><tr><td>Metaltyranomon Seal</td><td>1</td><td>10</td><td>DE</td><td>200</td></tr><tr><td>Elecmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Flymon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Meramon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>[Awaken] Susanoomon Seal</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr><tr><td>GulusGammamon Seal</td><td>5</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Dynasmon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Bastemon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>MegaKabuterimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Growmon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>ShineGreymon BurstMode Seal</td><td>1</td><td>100</td><td>HP</td><td>550</td></tr><tr><td>TyrantKabuterimon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Witchmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Petaldramon Seal</td><td>5</td><td>1</td><td>HT</td><td>150</td></tr><tr><td>Floramon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">January 2026</span><span class="tl-month-count">6 posts</span></div>
       <article class="card tl-entry" id="na-4100" data-server="NA">
-        <div class="card-head"><span class="card-date">28.01.2026</span><span class="card-kind-badge sv-na">NA · PatchNote</span><span class="card-idx">idx 4100</span></div>
-        <h2 class="card-title">[Seal Exchange] Event (Takato)</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4100" target="_blank" title="PatchNoteView.aspx?idx=4100">NA</a><span class="src-date">28.01.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -360,10 +375,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-813810" data-server="KR">
-        <div class="card-head"><span class="card-date">27.01.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 813810</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 오유민 (Oyumin)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=813810&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=813810">KR</a><span class="src-date">27.01.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -375,15 +391,16 @@
         <!--ST:kr-813810-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>모노드라몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>메기드라몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>파워드라몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>카오스몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>에테몬 씰</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>텐타몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>드라큐몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>원시고부리몬 씰</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>코로몬 씰</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>쿠네몬 씰</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>구미호몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>코만드라몬 씰</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>메탈가루몬 씰</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>고부리몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>레오몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>우파몬 씰</td><td>10</td><td>1</td><td>DE</td><td>80</td></tr><tr><td>키메라몬 씰</td><td>1</td><td>1</td><td>DE</td><td>250</td></tr><tr><td>디아블로몬 씰</td><td>1</td><td>6</td><td>DS</td><td>500</td></tr><tr><td>아구몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>워가루몬 씰</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>브이드라몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>미스티몬 씰</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>네오데블몬 씰</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>브이몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>소울몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>워그레이몬 씰</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>카노바이스몬 씰</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>아기벌몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>코어드라몬 ( 청 ) 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>돌가몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>베르제브몬 씰</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Megidramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Powerdramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Chaosmon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Etemon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Tentomon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Dracmon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>PrimaryGoburimon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Koromon Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>Kunemon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Commandramon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Goburimon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Leomon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Upamon Seal</td><td>10</td><td>1</td><td>DE</td><td>80</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>1</td><td>DE</td><td>250</td></tr><tr><td>Diablomon Seal</td><td>1</td><td>6</td><td>DS</td><td>500</td></tr><tr><td>Agumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Veedramon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Mistymon Seal</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Veemon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Soulmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>WarGreymon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Canoweissmon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>FanBeemon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Coredramon(Blue) Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Dorugamon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Beelzebumon Seal</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="th-83" data-server="TH">
-        <div class="card-head"><span class="card-date">23.01.2026</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 23 ม.ค. 2569</h2>
         <p class="seal-note">กิจกรรมแลกเปลี่ยนซีล — NPC &lt;แลกเปลี่ยนซีล&gt;เมรามอน (Meramon)</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-83/" target="_blank" title="patch -83">TH</a><span class="src-date">23.01.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -400,10 +417,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-813439" data-server="KR">
-        <div class="card-head"><span class="card-date">20.01.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 813439</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — ขยายรายการแลก, NPC 오유민</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=813439&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=813439">KR</a><span class="src-date">20.01.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -415,14 +433,15 @@
         <!--ST:kr-813439-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>현무몬 씰</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>뿔몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>케라몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>가루몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>코어드라몬 씰 ( 녹 )</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>주작몬 씰</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr><tr><td>페티메라몬 씰</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>길몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>머슈몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>엑자몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>실피드몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>피코데블몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>데이터몬 씰</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>샤벨레오몬 씰</td><td>1</td><td>6</td><td>CT</td><td>300</td></tr><tr><td>다크니스 바그라몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>프린스콩알몬 씰</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>지오그레이몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>로제몬 씰</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>크라운몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>헉몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>카이저레오몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>오쿠와몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>켄타우로스몬 씰</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>쉬라몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>토우몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>말벌몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>상굴몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>블랙가트몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>래비드몬 씰</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>미라지 가오가몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Xuanwumon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Tsunomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Keramon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Garurumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Coredramon(Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Zhuqiaomon Seal</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr><tr><td>PetiMeramon Seal</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>Guillmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Mushmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Silphymon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>PicoDevimon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Datamon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>SaberLeomon Seal</td><td>1</td><td>6</td><td>CT</td><td>300</td></tr><tr><td>Darkness Bagramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>PrinceMamemon Seal</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Rosemon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>Crownmon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Hackmon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Kaiserleomon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Okuwamon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Shurimon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Toumon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Waspmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Sangloupmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>BlackGatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Rapidmon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>MirageGaogamon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="na-810" data-server="NA">
-        <div class="card-head"><span class="card-date">14.01.2026</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 810</span></div>
-        <h2 class="card-title">Seal Exchange Event (Takato)</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/EventView.aspx?idx=810" target="_blank" title="EventView.aspx?idx=810">NA</a><span class="src-date">14.01.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -436,10 +455,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-812989" data-server="KR">
-        <div class="card-head"><span class="card-date">13.01.2026</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 812989</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 오유민 (Oyumin)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812989&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=812989">KR</a><span class="src-date">13.01.2026</span></span></div>
+      
+      
+      
       
       
       
@@ -451,17 +471,18 @@
         <!--ST:kr-812989-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>가오몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>선플라우몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>데크스돌그레몬 씰</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>신드라몬 씰</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>우가몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>페어리몬 씰</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>라나몬 씰</td><td>5</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>마린엔젤몬 씰</td><td>1</td><td>1</td><td>DS</td><td>250</td></tr><tr><td>돌몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>연체몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>[ 각성 ] 황제드라몬 씰 팔라딘모드 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>데블몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>파닥몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>폭탄몬 씰</td><td>1</td><td>1</td><td>AT</td><td>250</td></tr><tr><td>시드몬 씰</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>라이즈그레이몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>가오가몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>루체몬 씰</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>카우스감마몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>제스몬 씰</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>가루다몬 씰</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>파라사이몬 씰</td><td>1</td><td>10</td><td>HT</td><td>400</td></tr><tr><td>백호몬 씰</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>블룸로드몬 씰</td><td>1</td><td>25</td><td>DE</td><td>300</td></tr><tr><td>황금아르마몬 씰</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>샤코몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>쉘몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>샤인그레이몬 씰</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>라일라몬 씰</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>팰코몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>메르바몬 씰</td><td>1</td><td>1</td><td>EV</td><td>250</td></tr><tr><td>데크스돌고라몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>가트몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gaomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>SunFlowmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>DexDoruGreymon Seal</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>Sinduramon Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>Ogremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Fairimon Seal</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>Lanamon Seal</td><td>5</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>MarineAngemon Seal</td><td>1</td><td>1</td><td>DS</td><td>250</td></tr><tr><td>Dorumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Gesomon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>[Awaken] Imperialdramon Paladin Mode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Giromon Seal</td><td>1</td><td>1</td><td>AT</td><td>250</td></tr><tr><td>Tanemon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Gaogamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Lucemon Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>KausGammamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Jesmon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Garudamon Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>Parasimon Seal</td><td>1</td><td>10</td><td>HT</td><td>400</td></tr><tr><td>Baihumon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Bloomlordmon Seal</td><td>1</td><td>25</td><td>DE</td><td>300</td></tr><tr><td>Ankylomon Seal</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Syakomon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Shellmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Lilamon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Falcomon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Mervamon Seal</td><td>1</td><td>1</td><td>EV</td><td>250</td></tr><tr><td>Death-X-Dorugoramon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">November 2025</span><span class="tl-month-count">2 posts</span></div>
       <article class="card tl-entry" id="kr-811713" data-server="KR">
-        <div class="card-head"><span class="card-date">05.11.2025</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 811713</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 씰 교환 워메몬 (Wormmon)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811713&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=811713">KR</a><span class="src-date">05.11.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -473,19 +494,20 @@
         <!--ST:kr-811713-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล · 2 ตาราง</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (1)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>정열의 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>환경의 수호자 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>새 학기 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>여름의 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>푸른 뱀의 씰</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>신궁의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>탐험의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>용기의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>새싹의 씰</td><td>1</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>파워디지몬의 씰 [ 지급용 ]</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>회심의 씰</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>희망의 씰</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>용의 씰</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>성실의 씰</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>무더위의 씰</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>무럭무럭 자라다오</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>갑옷의 씰</td><td>1</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>견고의 씰</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>우정의 씰</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>봄의 씰</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>싸늘함의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>지식의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>가정의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>잔상의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>폭염의 씰</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>행복의 씰</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>시작의 씰</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>12 주년</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>13 주년 기념씰</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>14 주년 씰</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>2023 년의 마지막 씰</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>2024 년 마지막 씰</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>파워디지몬의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>15 주년 AT 씰</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>15 주년 HT 씰</td><td>1</td><td>5</td><td>HT</td><td>300</td></tr><tr><td>15 주년 CT 씰</td><td>1</td><td>5</td><td>CT</td><td>300</td></tr><tr><td>15 주년 HP 씰</td><td>1</td><td>5</td><td>HP</td><td>300</td></tr><tr><td>15 주년 DE 씰</td><td>1</td><td>5</td><td>DE</td><td>300</td></tr><tr><td>15 주년 BL 씰</td><td>1</td><td>5</td><td>BL</td><td>300</td></tr><tr><td>15 주년 EV 씰</td><td>1</td><td>5</td><td>EV</td><td>300</td></tr><tr><td>15 주년 DS 씰</td><td>1</td><td>5</td><td>DS</td><td>300</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Passionate Seal</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Environment Guardian Seal</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>New Semester Seal</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Seal of summer</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Blue Serpent Seal</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Marksman Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Exploration Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Brave Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Sprout’s Seal</td><td>1</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Power Digimon Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Conversion Seal</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Hope Seal</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Dragon Seal</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Sincerity Seal</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Seal of Heat</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Grow Well Seal</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Armor Seal</td><td>1</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Firm Seal</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>friendship Seal</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Seal of spring</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Seal Of Coolness</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Knowledge Seal</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Family Seal</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Afterimage Seal</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Heat Wave Seal</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Happiness Seal</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Beginning Seal</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>12th Year Anniversary Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>13th Year Anniversary Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>14th Year Anniversary Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>Last Seal of 2023 [Event]</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>Last Seal of 2024 [Event]</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>Power Digimon Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>15th Anniversary AT Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>15th Anniversary HT Seal</td><td>1</td><td>5</td><td>HT</td><td>300</td></tr><tr><td>15th Anniversary CT Seal</td><td>1</td><td>5</td><td>CT</td><td>300</td></tr><tr><td>15th Anniversary HP Seal</td><td>1</td><td>5</td><td>HP</td><td>300</td></tr><tr><td>15th Anniversary DE Seal</td><td>1</td><td>5</td><td>DE</td><td>300</td></tr><tr><td>15th Anniversary BL Seal</td><td>1</td><td>5</td><td>BL</td><td>300</td></tr><tr><td>15th Anniversary EV Seal</td><td>1</td><td>5</td><td>EV</td><td>300</td></tr><tr><td>15th Anniversary DS Seal</td><td>1</td><td>5</td><td>DS</td><td>300</td></tr></table></div>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (2)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>던전 마스터즈 HP 씰</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>던전 마스터즈 DS 씰</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>던전 마스터즈 AT 씰</td><td>1</td><td>1</td><td>AT</td><td>300</td></tr><tr><td>던전 마스터즈 CT 씰</td><td>1</td><td>1</td><td>CT</td><td>300</td></tr><tr><td>던전 마스터즈 HT 씰</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>던전 마스터즈 DE 씰</td><td>1</td><td>1</td><td>DE</td><td>300</td></tr><tr><td>던전 마스터즈 BL 씰</td><td>1</td><td>1</td><td>BL</td><td>300</td></tr><tr><td>던전 마스터즈 EV 씰</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>던전 마스터즈 2 HP 씰</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>던전 마스터즈 2 DS 씰</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>던전 마스터즈 2 AT 씰</td><td>1</td><td>1</td><td>AT</td><td>300</td></tr><tr><td>던전 마스터즈 2 CT 씰</td><td>1</td><td>1</td><td>CT</td><td>300</td></tr><tr><td>던전 마스터즈 2 HT 씰</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>던전 마스터즈 2 DE 씰</td><td>1</td><td>1</td><td>DE</td><td>300</td></tr><tr><td>던전 마스터즈 2 BL 씰</td><td>1</td><td>1</td><td>BL</td><td>300</td></tr><tr><td>던전 마스터즈 2 EV 씰</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>던전 마스터즈 3 HP 씰</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>던전 마스터즈 3 DS 씰</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>던전 마스터즈 3 AT 씰</td><td>1</td><td>1</td><td>AT</td><td>300</td></tr><tr><td>던전 마스터즈 3 CT 씰</td><td>1</td><td>1</td><td>CT</td><td>300</td></tr><tr><td>던전 마스터즈 3 HT 씰</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>던전 마스터즈 3 DE 씰</td><td>1</td><td>1</td><td>DE</td><td>300</td></tr><tr><td>던전 마스터즈 3 BL 씰</td><td>1</td><td>1</td><td>BL</td><td>300</td></tr><tr><td>던전 마스터즈 3 EV 씰</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Dungeon Masters HP Seal</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>Dungeon Masters DS Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Dungeon Masters AT Seal</td><td>1</td><td>1</td><td>AT</td><td>300</td></tr><tr><td>Dungeon Masters CT Seal</td><td>1</td><td>1</td><td>CT</td><td>300</td></tr><tr><td>Dungeon Masters HT Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>Dungeon Masters DE Seal</td><td>1</td><td>1</td><td>DE</td><td>300</td></tr><tr><td>Dungeon Masters BL Seal</td><td>1</td><td>1</td><td>BL</td><td>300</td></tr><tr><td>Dungeon Masters EV Seal</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>Dungeon Masters 2 HP Seal</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>Dungeon Masters 2 DS Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Dungeon Masters 2 AT Seal</td><td>1</td><td>1</td><td>AT</td><td>300</td></tr><tr><td>Dungeon Masters 2 CT Seal</td><td>1</td><td>1</td><td>CT</td><td>300</td></tr><tr><td>Dungeon Masters 2 HT Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>Dungeon Masters 2 DE Seal</td><td>1</td><td>1</td><td>DE</td><td>300</td></tr><tr><td>Dungeon Masters 2 BL Seal</td><td>1</td><td>1</td><td>BL</td><td>300</td></tr><tr><td>Dungeon Masters 2 EV Seal</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>Dungeon Masters 3 HP Seal</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>Dungeon Masters 3 DS Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Dungeon Masters 3 AT Seal</td><td>1</td><td>1</td><td>AT</td><td>300</td></tr><tr><td>Dungeon Masters 3 CT Seal</td><td>1</td><td>1</td><td>CT</td><td>300</td></tr><tr><td>Dungeon Masters 3 HT Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>Dungeon Masters 3 DE Seal</td><td>1</td><td>1</td><td>DE</td><td>300</td></tr><tr><td>Dungeon Masters 3 BL Seal</td><td>1</td><td>1</td><td>BL</td><td>300</td></tr><tr><td>Dungeon Masters 3 EV Seal</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">October 2025</span><span class="tl-month-count">2 posts</span></div>
       <article class="card tl-entry" id="kr-811362" data-server="KR">
-        <div class="card-head"><span class="card-date">15.10.2025</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 811362</span></div>
-        <h2 class="card-title">특별한 씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Special Seal Exchange</span> — NPC 씰 교환 워메몬 (Wormmon)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811362&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=811362">KR</a><span class="src-date">15.10.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -497,17 +519,18 @@
         <!--ST:kr-811362-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>정열의 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>환경의 수호자 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>새 학기 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>여름의 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>푸른 뱀의 씰</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>신궁의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>탐험의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>용기의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>새싹의 씰</td><td>1</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>회심의 씰</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>희망의 씰</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>용의 씰</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>성실의 씰</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>무더위의 씰</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>무럭무럭 자라다오</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>갑옷의 씰</td><td>1</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>견고의 씰</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>우정의 씰</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>봄의 씰</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>싸늘함의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>지식의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>가정의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>잔상의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>폭염의 씰</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>행복의 씰</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>시작의 씰</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>12 주년</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>13 주년 기념씰</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>14 주년 씰</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>2023 년의 마지막 씰</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>2024 년 마지막 씰</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Passionate Seal</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Environment Guardian Seal</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>New Semester Seal</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Seal of summer</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Blue Serpent Seal</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Marksman Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Exploration Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Brave Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Sprout’s Seal</td><td>1</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Conversion Seal</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Hope Seal</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Dragon Seal</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Sincerity Seal</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Seal of Heat</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Grow Well Seal</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Armor Seal</td><td>1</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Firm Seal</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>friendship Seal</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Seal of spring</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Seal Of Coolness</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Knowledge Seal</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Family Seal</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Afterimage Seal</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Heat Wave Seal</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Happiness Seal</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Beginning Seal</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>12th Year Anniversary Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>13th Year Anniversary Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>14th Year Anniversary Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>Last Seal of 2023 [Event]</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>Last Seal of 2024 [Event]</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">September 2025</span><span class="tl-month-count">3 posts</span></div>
       <article class="card tl-entry" id="th-78" data-server="TH">
-        <div class="card-head"><span class="card-date">25.09.2025</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 25 ก.ย. 2568</h2>
         <p class="seal-note">กิจกรรมแลกซีล — NPC &lt;ครบรอบ 13 ปี&gt; เค้ก</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-78/" target="_blank" title="patch -78">TH</a><span class="src-date">25.09.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -524,9 +547,10 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="na-782" data-server="NA">
-        <div class="card-head"><span class="card-date">23.09.2025</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 782</span></div>
-        <h2 class="card-title">[Seal Exchange] Event (Lillymon)</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/EventView.aspx?idx=782" target="_blank" title="EventView.aspx?idx=782">NA</a><span class="src-date">23.09.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -543,10 +567,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-810828" data-server="KR">
-        <div class="card-head"><span class="card-date">17.09.2025</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 810828</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC 씰 교환 보코몬 (Bukamon)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810828&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=810828">KR</a><span class="src-date">17.09.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -558,17 +583,18 @@
         <!--ST:kr-810828-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>아그니몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>기가스몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>라구엘몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>라스트 에볼루션 : 인연 씰</td><td>1</td><td>100</td><td>AT</td><td>400</td></tr><tr><td>볼그몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>머큐레몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>알볼몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>레베몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>브리트라몬 씰</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>차크몬 씰</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>그로트몬 씰</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>카이젤그레이몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>아구몬 : 용기의 유대 씰</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>가룸몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>브리츠몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>칼마라몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>카이저레오몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>헤라클레스캅테리몬 씰</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>페어리몬 씰</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>라나몬 씰</td><td>5</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>마린엔젤몬 씰</td><td>1</td><td>1</td><td>DS</td><td>250</td></tr><tr><td>슈트몬 씰</td><td>10</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>메르바몬 씰</td><td>1</td><td>1</td><td>EV</td><td>250</td></tr><tr><td>블리자몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>세피로트몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>오파니몬 폴다운 모드 씰</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>볼프몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>페탈드라몬 씰</td><td>5</td><td>1</td><td>HT</td><td>150</td></tr><tr><td>제트메르바몬 씰</td><td>1</td><td>1</td><td>HT</td><td>250</td></tr><tr><td>파피몬 : 우정의 유대 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Agunimon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Gigasmon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Raguelmon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Last Evolution Kizuna Seal</td><td>1</td><td>100</td><td>AT</td><td>400</td></tr><tr><td>Bolgmon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Mercuremon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Arbormon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Lowemon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Vritramon Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>Chakkumon Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Grotmon Seal</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>KaiserGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Agumon : Bond of Courage Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Garmmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Blitzmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Calmaramon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Kaiserleomon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>Fairimon Seal</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>Lanamon Seal</td><td>5</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>MarineAngemon Seal</td><td>1</td><td>1</td><td>DS</td><td>250</td></tr><tr><td>Shutusmon Seal</td><td>10</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>Mervamon Seal</td><td>1</td><td>1</td><td>EV</td><td>250</td></tr><tr><td>Blizzarmon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Sefirotmon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Ophanimon Falldown Mode Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>Wolfmon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Petaldramon Seal</td><td>5</td><td>1</td><td>HT</td><td>150</td></tr><tr><td>JetMervamon Seal</td><td>1</td><td>1</td><td>HT</td><td>250</td></tr><tr><td>Gabumon : Bond of Friendship Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">July 2025</span><span class="tl-month-count">2 posts</span></div>
       <article class="card tl-entry" id="kr-808363" data-server="KR">
-        <div class="card-head"><span class="card-date">23.07.2025</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 808363</span></div>
-        <h2 class="card-title">제볼루션 씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Jevolution Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=808363&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=808363">KR</a><span class="src-date">23.07.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -580,14 +606,15 @@
         <!--ST:kr-808363-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>그레이몬 X</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>워그레이몬 X</td><td>5</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>알포스브이드라몬 X</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>가이오몬</td><td>5</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>메디벌듀크몬</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>제스몬 X</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>간쿠몬 X</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>니드몬 X</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>듀나스몬 X</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>켄타우로스몬 X</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>엑자몬 X</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>가루몬 X</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>메탈가루몬 X</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>매그너몬 X</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>미네르바몬 X</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>크레니엄몬 X</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>메탈그레이몬 X</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>두프트몬 X</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>로드나이트몬 X</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>카오스드라몬 X</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>타이거베스퍼몬</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>메기드라몬 X</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>듀크몬 X</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>발바몬 X</td><td>1</td><td>25</td><td>BL</td><td>300</td></tr><tr><td>워가루몬 X</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>베르제브몬 X</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>릴리몬 X</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>로제몬 X</td><td>5</td><td>1</td><td>DS</td><td>150</td></tr><tr><td>리리스몬 X</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>마왕몬 X</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Greymon X</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>War Greymon X</td><td>5</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Ulforce V-dramon X</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Gaioumon</td><td>5</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Medieval Gallantmon</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Jesmon X</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>Gankoomon X</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>Togemon X</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Dynasmon X</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Sleipmon X</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Examon X</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Garurumon X</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>MetalGarurumon X</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Magnamon X</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Minervamon X</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Craniummon X</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Metal Greymon X</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Duftmon X</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Lord Knightmon X</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Chaosdramon X</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>TigerVespamon</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Megidramon X</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>Gallantmon X</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Barbamon X</td><td>1</td><td>25</td><td>BL</td><td>300</td></tr><tr><td>Were Garurumon X</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Beelzebumon X</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Lillymon X</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>Rosemon X</td><td>5</td><td>1</td><td>DS</td><td>150</td></tr><tr><td>Lilithmon X</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Demon X</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="na-759" data-server="NA">
-        <div class="card-head"><span class="card-date">22.07.2025</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 759</span></div>
-        <h2 class="card-title">[Seal Exchange] Event (Gabumon)</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/EventView.aspx?idx=759" target="_blank" title="EventView.aspx?idx=759">NA</a><span class="src-date">22.07.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -606,10 +633,11 @@
 
     <div class="tl-month"><span class="tl-month-label">June 2025</span><span class="tl-month-count">2 posts</span></div>
       <article class="card tl-entry" id="kr-807402" data-server="KR">
-        <div class="card-head"><span class="card-date">18.06.2025</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 807402</span></div>
-        <h2 class="card-title">특별한 씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Special Seal Exchange</span> — NPC 씰 교환 워메몬 (Wormmon)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=807402&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=807402">KR</a><span class="src-date">18.06.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -621,16 +649,17 @@
         <!--ST:kr-807402-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล · 2 ตาราง</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (1)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>워메몬 씰</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>[ 각성 ] 오르디네몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>[ 각성 ] 황제드라몬 팔라딘모드 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>샤우트몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>문밀레니엄몬 씰</td><td>1</td><td>5</td><td>HT</td><td>300</td></tr><tr><td>[ 각성 ] 지드밀레니엄몬 씰</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr><tr><td>그레이몬 © 씰</td><td>10</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>다크니스 바그라몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>에오스몬 씰</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>메일버드라몬 씰</td><td>10</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>루체몬 : 폴다운 모드 씰</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>[ 각성 ] 듀크몬 크림존 모드 씰</td><td>1</td><td>25</td><td>HP</td><td>600</td></tr><tr><td>디어비트몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>[ 각성 ] 듀크몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>블룸로드몬 씰</td><td>1</td><td>25</td><td>DE</td><td>300</td></tr><tr><td>암피몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>[ 각성 ] 샤크라몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>크로스업 메르바몬 씰</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>[ 각성 ] 세인트가르고몬 씰</td><td>1</td><td>1</td><td>EV</td><td>350</td></tr><tr><td>아마게몬 씰</td><td>1</td><td>25</td><td>EV</td><td>400</td></tr><tr><td>굴루스감마몬 씰</td><td>5</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>[ 각성 ] 스사노오몬 씰</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Wormmon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>[Awaken] Ordinemon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>[Awaken] Imperialdramon Paladin Mode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Shoutmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>MoonMillenniummon Seal</td><td>1</td><td>5</td><td>HT</td><td>300</td></tr><tr><td>[Awaken] ZeedMillenniummon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr><tr><td>Greymon (C) Seal</td><td>10</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Darkness Bagramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Eosmon Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>MailBirdramon Seal</td><td>10</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Lucemon: Falldown Mode Seal</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>[Awaken] Gallantmon (Crimson Mode) Seal</td><td>1</td><td>25</td><td>HP</td><td>600</td></tr><tr><td>DearBeatmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>[Awaken] Gallantmon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Bloomlordmon Seal</td><td>1</td><td>25</td><td>DE</td><td>300</td></tr><tr><td>Amphimon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>[Awaken] Sakkakumon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Crossup Mervamon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>[Awaken] SaintGalgomon Seal</td><td>1</td><td>1</td><td>EV</td><td>350</td></tr><tr><td>Armagemon Seal</td><td>1</td><td>25</td><td>EV</td><td>400</td></tr><tr><td>GulusGammamon Seal</td><td>5</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>[Awaken] Susanoomon Seal</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr></table></div>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (2)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>정열의 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>환경의 수호자 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>새 학기 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>여름의 씰</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>푸른 뱀의 씰</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>신궁의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>탐험의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>용기의 씰</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>새싹의 씰</td><td>1</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>회심의 씰</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>희망의 씰</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>용의 씰</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>성실의 씰</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>무더위의 씰</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>무럭무럭 자라다오</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>갑옷의 씰</td><td>1</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>견고의 씰</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>우정의 씰</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>봄의 씰</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>싸늘함의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>지식의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>가정의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>잔상의 씰</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>폭염의 씰</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>행복의 씰</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>시작의 씰</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>12 주년</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>13 주년 기념씰</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>14 주년 씰</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>2023 년의 마지막 씰</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>2024 년 마지막 씰</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Passionate Seal</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Environment Guardian Seal</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>New Semester Seal</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Seal of summer</td><td>1</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Blue Serpent Seal</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Marksman Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Exploration Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Brave Seal</td><td>1</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Sprout’s Seal</td><td>1</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Conversion Seal</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Hope Seal</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Dragon Seal</td><td>1</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Sincerity Seal</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Seal of Heat</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Grow Well Seal</td><td>1</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Armor Seal</td><td>1</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Firm Seal</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>friendship Seal</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Seal of spring</td><td>1</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Seal Of Coolness</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Knowledge Seal</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Family Seal</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Afterimage Seal</td><td>1</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Heat Wave Seal</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Happiness Seal</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Beginning Seal</td><td>1</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>12th Year Anniversary Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>13th Year Anniversary Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>14th Year Anniversary Seal</td><td>1</td><td>5</td><td>AT</td><td>300</td></tr><tr><td>Last Seal of 2023 [Event]</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>Last Seal of 2024 [Event]</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="na-743" data-server="NA">
-        <div class="card-head"><span class="card-date">17.06.2025</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 743</span></div>
-        <h2 class="card-title">[Special Seal Exchange] Event / Seal Master Package</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/EventView.aspx?idx=743" target="_blank" title="EventView.aspx?idx=743">NA</a><span class="src-date">17.06.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -649,10 +678,11 @@
 
     <div class="tl-month"><span class="tl-month-label">February 2025</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="kr-797955" data-server="KR">
-        <div class="card-head"><span class="card-date">26.02.2025</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 797955</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span></p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=797955&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=797955">KR</a><span class="src-date">26.02.2025</span></span></div>
+      
+      
+      
       
       
       
@@ -664,17 +694,18 @@
         <!--ST:kr-797955-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>모노드라몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>그레이몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>오로치몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>황제드라몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>알파몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>파피몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>다크티라노몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>브롯사몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>파라사이몬 씰</td><td>1</td><td>10</td><td>HT</td><td>400</td></tr><tr><td>로제몬 씰</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>베리얼 묘티스몬 씰</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr><tr><td>홀리엔젤몬 씰</td><td>10</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>티로몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>팬텀몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>카오스피에몬 씰</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>프린스콩알몬 씰</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>오메가몬 즈왈트 씰</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>가오몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>원뿔몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>가루몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>알포스브이드라몬 씰</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>샤인그레이몬 각성모드 씰</td><td>1</td><td>100</td><td>HP</td><td>550</td></tr><tr><td>반쵸레오몬 씰</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>루체몬 사탄모드 씰</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>플롯트몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>카메몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>쉘몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>배드퍼펫몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>켄타우로스몬 씰</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>드라큐몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>말벌몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>토우몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>탱크드라몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>가트몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>네오데블몬 씰</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>아트라캅테리몬 씰</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>듀나스몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>로제몬 각성모드 씰</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>페티메라몬 씰</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>연체몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>스컬그레이몬 씰</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>주작몬 씰</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr><tr><td>피에몬 씰</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Greymon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Orochimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>ImperialDramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Alphamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>DarkTyrannomon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Blossomon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Parasimon Seal</td><td>1</td><td>10</td><td>HT</td><td>400</td></tr><tr><td>Rosemon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>Belial Vamdemon Seal</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr><tr><td>MagnaAngemon Seal</td><td>10</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>Tylomon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Phantomon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>ChaosPiedmon Seal</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>PrinceMamemon Seal</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>Omegamon Zwart Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Gaomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Ikkakumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Garurumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>ShineGreymon BurstMode Seal</td><td>1</td><td>100</td><td>HP</td><td>550</td></tr><tr><td>BanchoLeomon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Lucemon: Wild 2nd Mode Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Plotmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Shellmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Warumonzaemon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Dracmon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Waspmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Toumon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Tankdramon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>MegaKabuterimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Dynasmon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Rosemon Burst Mode Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>PetiMeramon Seal</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>Gesomon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>SkullGreymon Seal</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>Zhuqiaomon Seal</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr><tr><td>Piedmon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">November 2024</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="kr-794497" data-server="KR">
-        <div class="card-head"><span class="card-date">13.11.2024</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 794497</span></div>
-        <h2 class="card-title">씰 교환 이벤트</h2>
         <p class="seal-note"><span class="gloss">Seal Exchange Event</span> — NPC ครบรอบ 15 ปี (เค้ก)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=794497&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=794497">KR</a><span class="src-date">13.11.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -686,17 +717,18 @@
         <!--ST:kr-794497-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>감마몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>앙고라몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>아구몬 (S) 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>아르마몬 씰</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>라라몬 씰</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>피요몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>파닥몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>카우스감마몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>웨즌감마몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>베텔감마몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>지오그레이몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>엔젤몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>켄터스몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>바알몬 씰</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>바스테몬 씰</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>카노바이스몬 씰</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>라이즈그레이몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>번개콩알몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>블랙가트몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>시리우스몬 씰</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>샤인그레이몬 씰</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>크레니엄몬 씰</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>헤라클레스캅테리몬 씰</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>알포스브이드라몬 씰</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>쿠즈하몬 무녀모드</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gammamon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Angoramon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Armadimon Seal</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>KausGammamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>WezenGammamon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>BetelGammamon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Baalmon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Bastemon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Canoweissmon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>BlackGatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Siriusmon Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Craniamon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Kuzuhamon Miko Mode</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">September 2024</span><span class="tl-month-count">2 posts</span></div>
       <article class="card tl-entry" id="th-66" data-server="TH">
-        <div class="card-head"><span class="card-date">26.09.2024</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 26 ก.ย. 2567</h2>
         <p class="seal-note">กิจกรรมแลกซีล — NPC &lt;แลกซีล&gt;แฟรี่มอน (Fairimon)</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-66/" target="_blank" title="patch -66">TH</a><span class="src-date">26.09.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -713,10 +745,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-792682" data-server="KR">
-        <div class="card-head"><span class="card-date">25.09.2024</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 792682</span></div>
-        <h2 class="card-title">쁘띠몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Petitmon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=792682&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=792682">KR</a><span class="src-date">25.09.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -728,16 +761,17 @@
         <!--ST:kr-792682-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>브이몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>아기벌몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>토이아구몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>뿔몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>피코데블몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>쿠네몬 씰</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>그라우몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>캅테리몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>레어몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>모노크로몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>니드몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>상굴몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>야차몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>쥬레이몬 씰</td><td>1</td><td>1</td><td>AT</td><td>250</td></tr><tr><td>유키다루몬 씰</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>안티라몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>메탈티라노몬 씰</td><td>1</td><td>10</td><td>DE</td><td>200</td></tr><tr><td>키메라몬 씰</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>래비드몬 씰</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>샤인그레이몬 씰</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>메탈가루몬 씰</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>타이런트캅테리몬 씰</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>샤크라몬 씰</td><td>1</td><td>60</td><td>HP</td><td>400</td></tr><tr><td>듀크몬크림존모드 씰</td><td>1</td><td>100</td><td>BL</td><td>300</td></tr><tr><td>파워드라몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>카오스몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>샤우트몬 X2 씰</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Veemon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>FanBeemon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Toy Agumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Tsunomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>PicoDevimon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Kunemon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Growmon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Kabuterimon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Monochromon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Togemon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Sangloupmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Yaksamon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Cherrymon Seal</td><td>1</td><td>1</td><td>AT</td><td>250</td></tr><tr><td>Yukidarumon Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Antylamon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Metaltyranomon Seal</td><td>1</td><td>10</td><td>DE</td><td>200</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>Rapidmon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>TyrantKabuterimon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Sakkakumon Seal</td><td>1</td><td>60</td><td>HP</td><td>400</td></tr><tr><td>Gallantmon (Crimson Mode) Seal</td><td>1</td><td>100</td><td>BL</td><td>300</td></tr><tr><td>Powerdramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Chaosmon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShoutmonX2 Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">August 2024</span><span class="tl-month-count">2 posts</span></div>
       <article class="card tl-entry" id="na-683" data-server="NA">
-        <div class="card-head"><span class="card-date">20.08.2024</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 683</span></div>
-        <h2 class="card-title">[Special Seal Exchange] + [Delumon's Seal Exchange!]</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/EventView.aspx?idx=683" target="_blank" title="EventView.aspx?idx=683">NA</a><span class="src-date">20.08.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -751,10 +785,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-789333" data-server="KR">
-        <div class="card-head"><span class="card-date">07.08.2024</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 789333</span></div>
-        <h2 class="card-title">특별한 씰 교환 + 뿌띠몬의 씰 교환</h2>
         <p class="seal-note"><span class="gloss">Special Seal Exchange + Pyocomon's Seal Exchange</span> (씰 도둑을 잡아라 patch)</p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=789333&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=789333">KR</a><span class="src-date">07.08.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -766,19 +801,20 @@
         <!--ST:kr-789333-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล · 2 ตาราง</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (1)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>에렉몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>아구몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>카메몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>플로라몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>아구몬 (S) 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>가오몬 씰</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>라라몬 씰</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>쉬라몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>지오그레이몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>레어몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>엔젤몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>번개콩알몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>그레이몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>가와파몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>쉘몬 씰</td><td>1</td><td>5</td><td>DE</td><td>150</td></tr><tr><td>데이터몬 씰</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>크라운몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>라이즈그레이몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>홀리엔젤몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>오로치몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>브롯사몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>알포스브이드라몬 씰</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>데크스돌고라몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>미라지가오가몬 각성모드 씰</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>샤인그레이몬 씰</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>보코몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>엑자몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>황룡몬 씰</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>오메가몬 즈왈트 씰</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Elecmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Agumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Floramon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Gaomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Shurimon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Greymon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Gawappamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Shellmon Seal</td><td>1</td><td>5</td><td>DE</td><td>150</td></tr><tr><td>Datamon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>Crownmon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>MagnaAngemon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Orochimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Blossomon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Death-X-Dorugoramon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>MirageGaogamon BurstMode Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Bokomon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Huanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>Omegamon Zwart Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr></table></div>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List) (2)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>12 주년 씰 [ 지급용 ]</td><td>1</td><td>1</td><td>AT</td><td>240</td></tr><tr><td>13 주년 기념 씰 [ 지급용 ]</td><td>1</td><td>1</td><td>AT</td><td>240</td></tr><tr><td>14 주년 씰 [ 지급용 ]</td><td>1</td><td>1</td><td>AT</td><td>240</td></tr><tr><td>2023 년의 마지막 씰 [ 지급용 ]</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>12th Year Anniversary Seal</td><td>1</td><td>1</td><td>AT</td><td>240</td></tr><tr><td>13th Year Anniversary Seal</td><td>1</td><td>1</td><td>AT</td><td>240</td></tr><tr><td>14th Year Anniversary Seal</td><td>1</td><td>1</td><td>AT</td><td>240</td></tr><tr><td>Last Seal of 2023 [Event]</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">July 2024</span><span class="tl-month-count">2 posts</span></div>
       <article class="card tl-entry" id="th-64" data-server="TH">
-        <div class="card-head"><span class="card-date">25.07.2024</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 25 ก.ค. 2567</h2>
         <p class="seal-note">กิจกรรมแลกซีล — NPC &lt;แลกซีล&gt;ลีลีมอน (Lillymon)</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-64/" target="_blank" title="patch -64">TH</a><span class="src-date">25.07.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -795,10 +831,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-788597" data-server="KR">
-        <div class="card-head"><span class="card-date">10.07.2024</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 788597</span></div>
-        <h2 class="card-title">페어리몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Fairimon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=788597&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=788597">KR</a><span class="src-date">10.07.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -810,16 +847,17 @@
         <!--ST:kr-788597-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>샤코몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>폰체스몬 B 씰</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>폰체스몬 W 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>피코데블몬 씰</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>팔몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>피요몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>팰코몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>팩몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>선플라우몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>엑스브이몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>위치몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>코어드라몬 ( 녹 ) 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>코어드라몬 ( 청 ) 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>브이드라몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>가트몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>상굴몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>레오몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>알로몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>나이트몬 씰</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>신드라몬 씰</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>에테몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>가오가몬 씰</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>톱니몬 씰</td><td>1</td><td>6</td><td>EV</td><td>150</td></tr><tr><td>메탈그레이몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>라일라몬 씰</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>실피드몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>팬텀몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>켄타우로스몬 씰</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>워그레이몬 씰</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>피노키몬 씰</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>데크스몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>오메가몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>블랙세라피몬 씰</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Syakomon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>PawnChessmon B Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>PawnChessmon W Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>PicoDevimon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Palmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Falcomon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Pukamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>SunFlowmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>ExV-mon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Witchmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Coredramon(Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Coredramon(Blue) Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Veedramon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Sangloupmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Leomon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Allomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Knightmon Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>Sinduramon Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>Etemon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Gaogamon Seal</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>Hagurumon Seal</td><td>1</td><td>6</td><td>EV</td><td>150</td></tr><tr><td>MetalGreymon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Lilamon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Silphymon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Phantomon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>WarGreymon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Puppetmon Seal</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>Death-X-mon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShadowSeraphimon Seal</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">June 2024</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="na-673" data-server="NA">
-        <div class="card-head"><span class="card-date">11.06.2024</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 673</span></div>
-        <h2 class="card-title">[Guilmon's Seal Exchange!] Event</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/EventView.aspx?idx=673" target="_blank" title="EventView.aspx?idx=673">NA</a><span class="src-date">11.06.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -835,10 +873,11 @@
 
     <div class="tl-month"><span class="tl-month-label">May 2024</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="kr-787646" data-server="KR">
-        <div class="card-head"><span class="card-date">29.05.2024</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 787646</span></div>
-        <h2 class="card-title">메라몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Meramon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787646&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=787646">KR</a><span class="src-date">29.05.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -850,17 +889,18 @@
         <!--ST:kr-787646-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>라라몬 씰</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>파피몬 ( 흑 ) 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>쉬라몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>아구몬 (S) 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>카메몬 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>아르마몬 씰</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>우가몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>엔젤몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>플라이몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>니드몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>캅테리몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>켄터스몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>그라우몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>지오그레이몬 씰</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>황금아르마몬 씰</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>배드퍼펫몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>바오헉몬 씰</td><td>1</td><td>5</td><td>DE</td><td>150</td></tr><tr><td>마린데블몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>묘티스몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>오로치몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>라이즈그레이몬 씰</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>워가루몬 씰</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>안티라몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>레이브몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>샤인그레이몬 씰</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>샤크라몬 씰</td><td>1</td><td>60</td><td>HP</td><td>400</td></tr><tr><td>쿠즈하몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>샤우트몬 X2 씰</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>오메가몬 Alter-S 씰</td><td>1</td><td>100</td><td>HP</td><td>600</td></tr><tr><td>아포카리몬 씰</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Gabumon(Black) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Shurimon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Armadimon Seal</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Ogremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Flymon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Togemon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Kabuterimon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Growmon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Ankylomon Seal</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Warumonzaemon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>BaoHackmon Seal</td><td>1</td><td>5</td><td>DE</td><td>150</td></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Orochimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Antylamon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Ravemon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Sakkakumon Seal</td><td>1</td><td>60</td><td>HP</td><td>400</td></tr><tr><td>Kuzuhamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShoutmonX2 Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Omegamon Alter-S Seal</td><td>1</td><td>100</td><td>HP</td><td>600</td></tr><tr><td>Apocalymon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">March 2024</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="kr-783755" data-server="KR">
-        <div class="card-head"><span class="card-date">13.03.2024</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 783755</span></div>
-        <h2 class="card-title">길몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Guilmon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=783755&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=783755">KR</a><span class="src-date">13.03.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -872,17 +912,18 @@
         <!--ST:kr-783755-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>희망의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>행복의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>DS</td><td>200</td></tr><tr><td>환경의 수호자 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>AT</td><td>150</td></tr><tr><td>우정의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>BL</td><td>100</td></tr><tr><td>지식의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>EV</td><td>100</td></tr><tr><td>성실의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>HP</td><td>150</td></tr><tr><td>용기의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>길몬</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>플로라몬</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>헉몬</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>펠코몬</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>폰체스몬 B</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>폰체스몬 W</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>엑스브이몬</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>가와파몬</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>미케몬</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>레어몬</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>키메라몬</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>바지라몬</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>탱크드라몬</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>토우몬</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>고래몬</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>래비드몬</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>베놈묘티스몬</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>제스몬</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>메탈가루몬</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>메탈시드라몬</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>알포스브이드라몬</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>디아블로몬</td><td>1</td><td>6</td><td>DS</td><td>500</td></tr><tr><td>보코몬</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>황제드라몬</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>엑자몬</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>동글몬</td><td>1</td><td>100</td><td>AT</td><td>250</td></tr><tr><td>베르제브몬</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr><tr><td>마르스몬</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>크레니엄몬</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Hope Seal</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>Happiness Seal</td><td>1</td><td>2</td><td>DS</td><td>200</td></tr><tr><td>Environment Guardian Seal</td><td>1</td><td>2</td><td>AT</td><td>150</td></tr><tr><td>friendship Seal</td><td>1</td><td>2</td><td>BL</td><td>100</td></tr><tr><td>Knowledge Seal</td><td>1</td><td>2</td><td>EV</td><td>100</td></tr><tr><td>Sincerity Seal</td><td>1</td><td>2</td><td>HP</td><td>150</td></tr><tr><td>Brave Seal</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>Guillmon</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Floramon</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Hackmon</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Falcomon</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>PawnChessmon B</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>PawnChessmon W</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>ExV-mon</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Gawappamon</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Mikemon</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Raremon</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Chimairamon</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>Vajramon</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Tankdramon</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Toumon</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Whamon</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>Rapidmon</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>VenomMyotismon</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Jesmon</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>MetalGarurumon</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>MetalSeadramon</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Ulforce V-dramon</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Diablomon</td><td>1</td><td>6</td><td>DS</td><td>500</td></tr><tr><td>Bokomon</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>ImperialDramon</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Examon</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Culumon</td><td>1</td><td>100</td><td>AT</td><td>250</td></tr><tr><td>Beelzebumon</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr><tr><td>Marsmon</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>Craniamon</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">February 2024</span><span class="tl-month-count">2 posts</span></div>
       <article class="card tl-entry" id="th-59" data-server="TH">
-        <div class="card-head"><span class="card-date">22.02.2024</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 22 ก.พ. 2567</h2>
         <p class="seal-note">กิจกรรมแลกซีล — NPC &lt;แลกซีลการ์ด&gt;วิซาร์มอน (Wisemon)</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-59/" target="_blank" title="patch -59">TH</a><span class="src-date">22.02.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -899,10 +940,11 @@
         <!--/ST-->
       </article>
       <article class="card tl-entry" id="kr-782119" data-server="KR">
-        <div class="card-head"><span class="card-date">07.02.2024</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 782119</span></div>
-        <h2 class="card-title">릴리몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Lillymon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=782119&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=782119">KR</a><span class="src-date">07.02.2024</span></span></div>
+      
+      
+      
       
       
       
@@ -914,17 +956,18 @@
         <!--ST:kr-782119-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>파피몬 씰</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>텐타몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>돌몬 씰</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>선플라우몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>상굴몬 씰</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>엑스브이몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>티로몬 씰</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>알로몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>레오몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>데블몬 씰</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>볼케몬 씰</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>운석몬 씰</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>데이터몬 씰</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>신드라몬 씰</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>토우몬 씰</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>실피드몬 씰</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>브롯사몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>고래몬 씰</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>마하가오가몬 씰</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>라일라몬 씰</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>알포스브이드라몬 씰</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>피노키몬 씰</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>듀나스몬 씰</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>켄타우로스몬 씰</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>베리얼묘티스몬 씰</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr><tr><td>황제드라몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Tentomon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Dorumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>SunFlowmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Sangloupmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>ExV-mon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Tylomon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Allomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Leomon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Volcamon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>Meteormon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Datamon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>Sinduramon Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>Toumon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Silphymon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Blossomon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Whamon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>MachGaogamon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Lilamon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Puppetmon Seal</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>Dynasmon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Belial Vamdemon Seal</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr><tr><td>ImperialDramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">December 2023</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="kr-780048" data-server="KR">
-        <div class="card-head"><span class="card-date">13.12.2023</span><span class="card-kind-badge sv-kr">KR · Update</span><span class="card-idx">o 780048</span></div>
-        <h2 class="card-title">유키다루몬의 씰 교환!</h2>
         <p class="seal-note"><span class="gloss">Frigimon's Seal Exchange</span></p>
         <div class="sources"><span class="src-item is-kr"><a class="src-label" href="https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=780048&Btype=Update" target="_blank" title="newsBoard_sub.aspx?o=780048">KR</a><span class="src-date">13.12.2023</span></span></div>
+      
+      
+      
       
       
       
@@ -936,17 +979,18 @@
         <!--ST:kr-780048-->
         <details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>
         <div class="seal-cap">씰 교환권 제작 리스트 (Seal Exchange Craft List)</div>
-        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>무럭무럭 자라다오 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>HP</td><td>150</td></tr><tr><td>폭염의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>DS</td><td>200</td></tr><tr><td>정열의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>AT</td><td>150</td></tr><tr><td>싸늘함의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>EV</td><td>100</td></tr><tr><td>견고의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>BL</td><td>100</td></tr><tr><td>신궁의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>회심의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>갑옷의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>DE</td><td>100</td></tr><tr><td>탐험의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>희망의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>행복의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>DS</td><td>200</td></tr><tr><td>환경의 수호자 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>AT</td><td>150</td></tr><tr><td>우정의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>BL</td><td>100</td></tr><tr><td>지식의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>EV</td><td>100</td></tr><tr><td>성실의 씰 [ 지급용 ]</td><td>1</td><td>2</td><td>HP</td><td>150</td></tr><tr><td>코만드라몬 씰</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>록몬 씰</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>우가몬 씰</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>야차몬 씰</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>캅테리몬 씰</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>메탈그레이몬 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>헤라클레스캅테리몬 씰</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>미라지가오가몬 각성모드 씰</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>청룡몬 씰</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>레이브몬 각성모드 씰</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>현무몬 씰</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>크레니엄몬 씰</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>엑자몬 씰</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>판롱몬 씰</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>그랑디스쿠가몬 씰</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr></table></div>
+        <div class="seal-tbl-wrap"><table class="seal-tbl"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Grow Well Seal</td><td>1</td><td>2</td><td>HP</td><td>150</td></tr><tr><td>Heat Wave Seal</td><td>1</td><td>2</td><td>DS</td><td>200</td></tr><tr><td>Passionate Seal</td><td>1</td><td>2</td><td>AT</td><td>150</td></tr><tr><td>Seal Of Coolness</td><td>1</td><td>2</td><td>EV</td><td>100</td></tr><tr><td>Firm Seal</td><td>1</td><td>2</td><td>BL</td><td>100</td></tr><tr><td>Marksman Seal</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>Conversion Seal</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>Armor Seal</td><td>1</td><td>2</td><td>DE</td><td>100</td></tr><tr><td>Exploration Seal</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>Hope Seal</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>Happiness Seal</td><td>1</td><td>2</td><td>DS</td><td>200</td></tr><tr><td>Environment Guardian Seal</td><td>1</td><td>2</td><td>AT</td><td>150</td></tr><tr><td>friendship Seal</td><td>1</td><td>2</td><td>BL</td><td>100</td></tr><tr><td>Knowledge Seal</td><td>1</td><td>2</td><td>EV</td><td>100</td></tr><tr><td>Sincerity Seal</td><td>1</td><td>2</td><td>HP</td><td>150</td></tr><tr><td>Commandramon Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Rockmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Ogremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Yaksamon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Kabuterimon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>MetalGreymon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>MirageGaogamon BurstMode Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>Azulongmon Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>Ravemon Burst Mode Seal</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>Xuanwumon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Craniamon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Fanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>GrandisKuwagamon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr></table></div>
         </details>
         <!--/ST-->
       </article>
 
     <div class="tl-month"><span class="tl-month-label">November 2023</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="th-56" data-server="TH">
-        <div class="card-head"><span class="card-date">23.11.2023</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 23 พ.ย. 2566</h2>
         <p class="seal-note">กิจกรรมแลกซีล — NPC &lt;แลกซีล&gt;ลีลีมอน (Lillymon)</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-56/" target="_blank" title="patch -56">TH</a><span class="src-date">23.11.2023</span></span></div>
+      
+      
+      
       
       
       
@@ -965,9 +1009,10 @@
 
     <div class="tl-month"><span class="tl-month-label">August 2023</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="na-636" data-server="NA">
-        <div class="card-head"><span class="card-date">01.08.2023</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 636</span></div>
-        <h2 class="card-title">[Seal Exchange by Takato!] Event</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/EventView.aspx?idx=636" target="_blank" title="EventView.aspx?idx=636">NA</a><span class="src-date">01.08.2023</span></span></div>
+      
+      
+      
       
       
       
@@ -983,10 +1028,11 @@
 
     <div class="tl-month"><span class="tl-month-label">April 2023</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="th-49" data-server="TH">
-        <div class="card-head"><span class="card-date">27.04.2023</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 27 เม.ย. 2566</h2>
         <p class="seal-note">กิจกรรมแลกเปลี่ยนซีล — NPC &lt;แลกเปลี่ยนซีล&gt;ทาเครุ (Takeru)</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-49/" target="_blank" title="patch -49">TH</a><span class="src-date">27.04.2023</span></span></div>
+      
+      
+      
       
       
       
@@ -1005,10 +1051,11 @@
 
     <div class="tl-month"><span class="tl-month-label">September 2022</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="th-42" data-server="TH">
-        <div class="card-head"><span class="card-date">26.09.2022</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 26 ก.ย. 2565</h2>
         <p class="seal-note">กิจกรรมแลกเปลี่ยนซีล — NPC &lt;กิจกรรมแลกเปลี่ยนซีล&gt;ทาคาโตะ (Takato)</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-42/" target="_blank" title="patch -42">TH</a><span class="src-date">26.09.2022</span></span></div>
+      
+      
+      
       
       
       
@@ -1027,9 +1074,10 @@
 
     <div class="tl-month"><span class="tl-month-label">February 2022</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="na-551" data-server="NA">
-        <div class="card-head"><span class="card-date">28.02.2022</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 551</span></div>
-        <h2 class="card-title">New Seal & [Marcus' Seal Exchange!] Event</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/EventView.aspx?idx=551" target="_blank" title="EventView.aspx?idx=551">NA</a><span class="src-date">28.02.2022</span></span></div>
+      
+      
+      
       
       
       
@@ -1045,9 +1093,10 @@
 
     <div class="tl-month"><span class="tl-month-label">October 2021</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="na-530" data-server="NA">
-        <div class="card-head"><span class="card-date">12.10.2021</span><span class="card-kind-badge sv-na">NA · Event</span><span class="card-idx">idx 530</span></div>
-        <h2 class="card-title">[Takato's Seal Exchange!] Event</h2>
         <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/EventView.aspx?idx=530" target="_blank" title="EventView.aspx?idx=530">NA</a><span class="src-date">12.10.2021</span></span></div>
+      
+      
+      
       
       
       
@@ -1063,10 +1112,11 @@
 
     <div class="tl-month"><span class="tl-month-label">July 2021</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="th-28" data-server="TH">
-        <div class="card-head"><span class="card-date">26.07.2021</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 26 ก.ค. 2564</h2>
         <p class="seal-note">กิจกรรมแลกซีล — NPC &lt;กิจกรรมแลกซีล&gt;ทาคาโตะ (Takato)</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-28/" target="_blank" title="patch -28">TH</a><span class="src-date">26.07.2021</span></span></div>
+      
+      
+      
       
       
       
@@ -1085,10 +1135,11 @@
 
     <div class="tl-month"><span class="tl-month-label">January 2021</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="th-21" data-server="TH">
-        <div class="card-head"><span class="card-date">07.01.2021</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 7 ม.ค. 2564</h2>
         <p class="seal-note">แลกซีลได้จาก NPC ดิจิทามะมอน (Digitamamon)</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-21/" target="_blank" title="patch -21">TH</a><span class="src-date">07.01.2021</span></span></div>
+      
+      
+      
       
       
       
@@ -1107,10 +1158,11 @@
 
     <div class="tl-month"><span class="tl-month-label">September 2020</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="th-12" data-server="TH">
-        <div class="card-head"><span class="card-date">24.09.2020</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 24 ก.ย. 2563</h2>
         <p class="seal-note">รายการซีลที่เพิ่ม + ตั๋วแลกซีลการ์ด</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-12/" target="_blank" title="patch -12">TH</a><span class="src-date">24.09.2020</span></span></div>
+      
+      
+      
       
       
       
@@ -1129,10 +1181,11 @@
 
     <div class="tl-month"><span class="tl-month-label">June 2020</span><span class="tl-month-count">1 post</span></div>
       <article class="card tl-entry" id="th-15" data-server="TH">
-        <div class="card-head"><span class="card-date">26.06.2020</span><span class="card-kind-badge sv-th">TH · Patch</span></div>
-        <h2 class="card-title">อัพเดท 26 มิ.ย. 2563</h2>
         <p class="seal-note">รายละเอียดระบบแลกซีล</p>
         <div class="sources"><span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-15/" target="_blank" title="patch -15">TH</a><span class="src-date">26.06.2020</span></span></div>
+      
+      
+      
       
       
       

@@ -38,6 +38,10 @@ OCR_PATH = PROJ / "data" / "seal_ocr.json"
 # image instead of an HTML table (rows already in canonical column order).
 OCR_DATA = ({k: v for k, v in json.loads(OCR_PATH.read_text(encoding="utf-8")).items()
              if not k.startswith("_")} if OCR_PATH.exists() else {})
+# Korean seal-name -> official English name, so KR tables show English data.
+KR_EN_PATH = PROJ / "data" / "kr_seal_en.json"
+KR_EN = (json.loads(KR_EN_PATH.read_text(encoding="utf-8"))
+         if KR_EN_PATH.exists() else {})
 
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
@@ -293,6 +297,8 @@ def normalize_table(tb, server):
         if len(row) <= iname or not row[iname].strip():
             continue
         eq, name = _embedded_qty(row[iname])
+        if server == "KR":
+            name = KR_EN.get(name, name)     # show KR seal names in English
         given = (row[given_q] if given_q is not None and given_q < len(row) else "")
         given = _num(given) or eq
         ticket = _num(row[ticket_q]) if ticket_q is not None and ticket_q < len(row) else ""
