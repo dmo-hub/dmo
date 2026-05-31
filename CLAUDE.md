@@ -99,6 +99,11 @@ python builders/compare_digimon_sources.py 731          # just one idx
 #     the ~10 missing posts and caches them), then inject the cleaned tables
 #     into docs/seals.html. Card ids in seals.html (kr-<o>/na-<idx>/th-<suffix>)
 #     are the JSON keys; build_seal_tables.py is idempotent (ST-marker guarded).
+#     Only Seal-Exchange-Ticket tables are kept; columns are normalized to the
+#     Thai-server names. gameking posts that ship the list as an image (no HTML
+#     table) get their rows from data/seal_ocr.json (vision-OCR'd, canonical
+#     column order). build_seal_tables.py also removes cards with no table and
+#     refreshes the hero/tab counts from the cards that remain.
 python builders/extract_seal_tables.py
 python builders/build_seal_tables.py
 ```

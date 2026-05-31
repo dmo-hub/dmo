@@ -33,6 +33,11 @@ except Exception:
 PROJ = Path(__file__).resolve().parent.parent
 CACHE = PROJ / "cache"
 OUT = PROJ / "data" / "seal_tables.json"
+OCR_PATH = PROJ / "data" / "seal_ocr.json"
+# Vision-OCR'd exchange tables for gameking posts that ship the list as an
+# image instead of an HTML table (rows already in canonical column order).
+OCR_DATA = ({k: v for k, v in json.loads(OCR_PATH.read_text(encoding="utf-8")).items()
+             if not k.startswith("_")} if OCR_PATH.exists() else {})
 
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
@@ -306,6 +311,18 @@ def normalize_table(tb, server):
     return "".join(out)
 
 
+def emit_norm_rows(rows):
+    """Build a normalized table straight from canonical [name,qty,ticket,stat,max] rows."""
+    out = ['<table class="seal-tbl">', "<tr>"]
+    out += [f"<th>{H.escape(c)}</th>" for c in NORM_HEADER]
+    out.append("</tr>")
+    for r in rows:
+        cells = [str(c) if str(c).strip() else "—" for c in r]
+        out.append("<tr>" + "".join(f"<td>{H.escape(c)}</td>" for c in cells) + "</tr>")
+    out.append("</table>")
+    return "".join(out)
+
+
 # The exchange currency must be a Seal Exchange Ticket — not a material
 # (Kaiser Trace, firecracker) or a special coin (Tamer / Special Exchanger).
 TICKET_RE = re.compile(
@@ -431,9 +448,18 @@ def extract(post):
             "normalized": bool(normalized),
             "html": cleaned,
         })
+    # Fall back to a vision-OCR'd table for posts whose list is image-only.
+    if not tables and post["key"] in OCR_DATA:
+        tables.append({
+            "header": "OCR", "score": -1, "ocr": True,
+            "rows": len(OCR_DATA[post["key"]]["rows"]) + 1,
+            "normalized": True,
+            "html": emit_norm_rows(OCR_DATA[post["key"]]["rows"]),
+        })
     cap = CAPTION[server]
     for i, t in enumerate(tables):
-        t["caption"] = cap if len(tables) == 1 else f"{cap} ({i + 1})"
+        base = cap if len(tables) == 1 else f"{cap} ({i + 1})"
+        t["caption"] = base + (" · ดึงจากรูปภาพ" if t.get("ocr") else "")
     note = "" if tables else "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
     return {"tables": tables, "note": note}
 

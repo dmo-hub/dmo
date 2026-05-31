@@ -476,24 +476,74 @@
     "note": ""
   },
   "na-683": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 32,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Elecmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Agumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Floramon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Gaomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Gomamon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Greymon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Gawappamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Shellmon Seal</td><td>1</td><td>5</td><td>DE</td><td>150</td></tr><tr><td>Nanomon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>Crownmon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>MagnaAngemon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Orochimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Blossomon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Death-X-Dorugoramon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>MirageGaogamon BurstMode Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Bokomon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Huanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>Omegamon Zwart Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Chaosmon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>TyrantKabuterimon Seal</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": ""
   },
   "na-673": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 31,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Gabumon (Black) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Gomamon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Armadimon Seal</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Ogremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Flymon Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Togemon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Kabuterimon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Growmon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Ankylomon Seal</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Warumonzaemon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>BaoHackmon Seal</td><td>1</td><td>5</td><td>DE</td><td>150</td></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Orochimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Antylamon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Ravemon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Sakuyamon Seal</td><td>1</td><td>60</td><td>HP</td><td>400</td></tr><tr><td>Kuzuhamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShoutmonX2 Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Omegamon Alter-S Seal</td><td>1</td><td>100</td><td>HP</td><td>600</td></tr><tr><td>Apocalymon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": ""
   },
   "na-636": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 33,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Shakomon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Palmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Mushroomon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Waspmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Greymon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Garurumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>SunFlowmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Ogremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Witchmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Peckmon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Nanomon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>Yukidarumon Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Knightmon Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>SkullGreymon Seal</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>Firm Seal [Event]</td><td>1</td><td>2</td><td>BL</td><td>100</td></tr><tr><td>Marksman Seal [Event]</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>Conversion Seal [Event]</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>Armor Seal [Event]</td><td>1</td><td>2</td><td>DE</td><td>100</td></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Puppetmon Seal</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>MugenDramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShadowSeraphimon Seal</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr><tr><td>Fanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>Rosemon Burst Mode Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>BanchoLeomon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Belial Vamdemon Seal</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": ""
   },
   "na-551": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 21,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Gaomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Guillmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Commandramon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Coredramon(Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Gaogamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>MachGaogamon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>UlforceV-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>MirageGaogamon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Beelzebumon Seal</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr><tr><td>Megidramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShineGreymon Burstmode Seal</td><td>1</td><td>100</td><td>HP</td><td>550</td></tr><tr><td>MirageGaogamon Burstmode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": ""
   },
   "na-530": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 21,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Dorumon</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Kamemon</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Shakomon</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Gatomon</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>DarkTyrannomon</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Witchmon</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Mikemon</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Devimon</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Tankdramon</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Myotismon</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Neodevimon</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Sleipmon</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Bokomon</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>ChaosPiedmon</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>PrinceMamemon</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>WarGreymon</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Xuanwumon</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Dexmon</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Fanglongmon</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>Omegamon Alter-S</td><td>1</td><td>100</td><td>HP</td><td>600</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": ""
   },
   "na-352": {
     "tables": [],
