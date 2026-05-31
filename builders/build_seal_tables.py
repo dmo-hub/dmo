@@ -104,18 +104,21 @@ def compute_matches(data):
             for k, v in matches.items()}
 
 
-def _twin_link(k):
+def _twin_link(k, dates):
+    """Link to a twin card, labelled "SRV DD.MM.YYYY" (falls back to the
+    post id when the date is unknown)."""
     srv, idp = k.split("-", 1)
-    return f'<a href="#{k}">{srv.upper()} {idp}</a>'
+    label = dates.get(k) or idp
+    return f'<a href="#{k}">{srv.upper()} {label}</a>'
 
 
-def block_for(key, data, twins=()):
+def block_for(key, data, twins=(), dates=None):
     tables = data.get("tables", [])
     if not tables:
         return ""   # posts without a table get nothing injected
     inner = [f"<!--ST:{key}-->"]
     if twins:
-        links = " ".join(_twin_link(t) for t in twins)
+        links = " ".join(_twin_link(t, dates or {}) for t in twins)
         inner.append(f'<div class="seal-match"><span class="lbl">🔗 ลิสต์เดียวกับ:</span> {links}</div>')
     n = len(tables)
     label = "ดูตารางแลกซีล" + (f" · {n} ตาราง" if n > 1 else "")
@@ -183,6 +186,11 @@ def main():
 
     # 3) inject a block before each matching card's </article>
     matches = compute_matches(data)
+    # key -> card date (DD.MM.YYYY), read from each card's src-date span, so
+    # twin links can be labelled by date rather than the opaque post id
+    dates = dict(re.findall(
+        r'<article\b[^>]*\bid="([^"]+)"[^>]*>.*?<span class="src-date">([^<]+)</span>',
+        html, re.S))
     injected = 0
     for key, d in data.items():
         if not d.get("tables"):
@@ -192,7 +200,7 @@ def main():
         if not pat.search(html):
             print(f"  !! card not found: {key}", file=sys.stderr)
             continue
-        blk = block_for(key, d, matches.get(key, []))
+        blk = block_for(key, d, matches.get(key, []), dates)
         html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2),
                        html, count=1)
         injected += 1
