@@ -115,6 +115,12 @@ FAMILY_ICON = {
     "Dark Area": "Dark_Area",
     "TBD": "TBD",
 }
+# Full Families set, shown in the filter even when no digimon has that family
+# yet. Real fields first (canonical order), placeholders (Unknown/TBD) last.
+FAMILY_ORDER = ["Nature Spirits", "Deep Savers", "Nightmare Soldiers",
+                "Wind Guardians", "Metal Empire", "Virus Busters",
+                "Dragon's Roar", "Dark Area", "Jungle Troopers",
+                "Unknown", "TBD"]
 
 
 def elem_slug(value: str) -> str:
@@ -311,9 +317,10 @@ def render() -> str:
         filter_pill("elem", v, elem_slug(v), "chip-elem", "elem")
         for v in elem_values
     )
+    fam_values = FAMILY_ORDER + [f for f in seen_fams if f not in FAMILY_ORDER]
     fam_pills = "".join(
         filter_pill("family", v, family_slug(v), "chip-families", "field")
-        for v in seen_fams
+        for v in fam_values
     )
 
     filter_bar = f"""<div class="filter-bar">
