@@ -26,12 +26,10 @@ DATA = PROJ / "data" / "seal_tables.json"
 
 CSS = """
   /* injected by build_seal_tables.py — seal exchange tables */
-  /* cards on this page carry no head/title, so the first row (source links,
-     or the KR gloss note) is the card's header: give it top padding and pull
-     the detail toggle up close beneath it */
-  .tl-entry > .sources:first-child,
-  .tl-entry > .seal-note:first-child { padding-top: 16px; }
-  .tl-entry .seal-note,
+  /* cards on this page carry no head/title, so the source-links row is the
+     card's header: give it top padding and pull the detail toggle up close
+     beneath it */
+  .tl-entry > .sources:first-child { padding-top: 16px; }
   .tl-entry .sources { padding-bottom: 8px; }
   .seal-detail { margin: 0 20px 16px; }
   .seal-detail > summary {
@@ -62,20 +60,66 @@ CSS = """
   table.seal-tbl td:first-child, table.seal-tbl th:first-child {
     text-align: left; font-weight: 500; }
   table.seal-tbl tr:last-child td { border-bottom: 0; }
+  .seal-match { margin: 2px 20px 14px; font-size: 12px; color: var(--muted); }
+  .seal-match .lbl { color: var(--muted-soft); }
+  .seal-match a { color: var(--coral); text-decoration: none; font-weight: 500;
+    border: 1px solid var(--hairline); border-radius: 9999px; padding: 2px 9px;
+    margin-right: 4px; white-space: nowrap; }
+  .seal-match a:hover { background: var(--surface-soft); }
 """
 
 CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
 ST_RE = re.compile(r"\n?[ \t]*<!--ST:[^>]*?-->.*?<!--/ST-->", re.S)
 
+_SRV_ORDER = {"na": 0, "kr": 1, "th": 2}
 
-def block_for(key, data):
+
+def _row_seq(html):
+    """Rate-tuple sequence (qty,ticket,stat,max) of a table's data rows."""
+    out = []
+    for tr in re.findall(r"<tr>(.*?)</tr>", html, re.S)[1:]:
+        c = [re.sub(r"<[^>]+>", "", x).strip()
+             for x in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
+        if len(c) >= 5:
+            out.append((c[1], c[2], c[3], c[4]))
+    return tuple(out)
+
+
+def compute_matches(data):
+    """Map each post-key to the keys on OTHER servers whose exchange list is
+    identical (same seal qty/ticket/stat/max sequence)."""
+    from collections import defaultdict
+    seqs = defaultdict(set)
+    for key, v in data.items():
+        for t in v.get("tables", []):
+            s = _row_seq(t["html"])
+            if s:
+                seqs[s].add(key)
+    matches = defaultdict(set)
+    for keys in seqs.values():
+        if len(keys) > 1:
+            for k in keys:
+                matches[k] |= keys - {k}
+    return {k: sorted(v, key=lambda x: (_SRV_ORDER.get(x.split("-")[0], 9), x))
+            for k, v in matches.items()}
+
+
+def _twin_link(k):
+    srv, idp = k.split("-", 1)
+    return f'<a href="#{k}">{srv.upper()} {idp}</a>'
+
+
+def block_for(key, data, twins=()):
     tables = data.get("tables", [])
     if not tables:
         return ""   # posts without a table get nothing injected
+    inner = [f"<!--ST:{key}-->"]
+    if twins:
+        links = " ".join(_twin_link(t) for t in twins)
+        inner.append(f'<div class="seal-match"><span class="lbl">🔗 ลิสต์เดียวกับ:</span> {links}</div>')
     n = len(tables)
     label = "ดูตารางแลกซีล" + (f" · {n} ตาราง" if n > 1 else "")
-    inner = [f'<!--ST:{key}-->',
-             f'<details class="seal-detail"><summary>📋 {label}</summary>']
+    inner.append(f'<details class="seal-detail"><summary>📋 {label}</summary>')
     for t in tables:
         inner.append(f'<div class="seal-cap">{t["caption"]}</div>')
         inner.append(f'<div class="seal-tbl-wrap">{t["html"]}</div>')
@@ -138,6 +182,7 @@ def main():
         html = html.replace("</style>", css_block + "\n</style>", 1)
 
     # 3) inject a block before each matching card's </article>
+    matches = compute_matches(data)
     injected = 0
     for key, d in data.items():
         if not d.get("tables"):
@@ -147,9 +192,11 @@ def main():
         if not pat.search(html):
             print(f"  !! card not found: {key}", file=sys.stderr)
             continue
-        html = pat.sub(lambda m: m.group(1) + block_for(key, d) + "\n      " + m.group(2),
+        blk = block_for(key, d, matches.get(key, []))
+        html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2),
                        html, count=1)
         injected += 1
+    print(f"  cross-server matches: {len(matches)} cards link a twin")
 
     # 4) remove cards with no table ("no real data"), then prune empty months
     removed = 0
