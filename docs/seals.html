@@ -107,7 +107,7 @@
   </div>
 
   <div class="server-tabs" role="tablist" aria-label="เลือกเซิร์ฟเวอร์">
-    <button class="server-tab tab-na" data-server="NA" role="tab" aria-selected="false">NA · gameking <span class="tab-count">18</span></button>
+    <button class="server-tab tab-na is-active" data-server="NA" role="tab" aria-selected="true">NA · gameking <span class="tab-count">18</span></button>
     <button class="server-tab tab-kr" data-server="KR" role="tab" aria-selected="false">KR · digimonmasters <span class="tab-count">25</span></button>
     <button class="server-tab tab-th" data-server="TH" role="tab" aria-selected="false">TH · vplay <span class="tab-count">13</span></button>
   </div>
@@ -1047,6 +1047,10 @@
       apply(tab.dataset.server);
     }
   }));
+
+  // Apply the default active tab (NA) on load
+  const initial = document.querySelector('.server-tab.is-active');
+  apply(initial ? initial.dataset.server : null);
 })();
 </script>
 </body>
