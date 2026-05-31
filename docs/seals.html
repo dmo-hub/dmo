@@ -10,6 +10,32 @@
   .card-kind-badge.sv-na { background: var(--surface-card); color: var(--body); }
   .card-kind-badge.sv-kr { background: var(--coral); color: var(--on-primary); }
   .card-kind-badge.sv-th { background: var(--teal); color: var(--on-primary); }
+  /* Server tabs */
+  .server-tabs {
+    display: flex; flex-wrap: wrap; gap: 2px;
+    border-bottom: 1px solid var(--hairline);
+    margin: 0 0 22px;
+  }
+  .server-tab {
+    appearance: none; background: none; border: 0;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    padding: 9px 14px; font: inherit; font-size: 13px; font-weight: 500;
+    color: var(--muted-soft); cursor: pointer;
+    display: inline-flex; align-items: center; gap: 7px;
+    transition: color .12s ease, border-color .12s ease;
+  }
+  .server-tab:hover { color: var(--ink); }
+  .server-tab .tab-count {
+    font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 9999px;
+    background: var(--surface-soft); color: var(--muted-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .server-tab.is-active { color: var(--ink); border-bottom-color: var(--ink); }
+  .server-tab.tab-kr.is-active { color: var(--coral); border-bottom-color: var(--coral); }
+  .server-tab.tab-th.is-active { color: var(--teal); border-bottom-color: var(--teal); }
+  .server-tab.is-active .tab-count { background: var(--surface-card); color: var(--ink); }
+  .server-tab.tab-kr.is-active .tab-count { background: var(--coral); color: var(--on-primary); }
+  .server-tab.tab-th.is-active .tab-count { background: var(--teal); color: var(--on-primary); }
   .seal-note { margin: 0; padding: 0 20px 16px; color: var(--muted-soft); font-size: 13px; line-height: 1.5; }
   .seal-note .gloss { color: var(--body); }
   .card-tag-system {
@@ -78,6 +104,12 @@
       <div class="hero-stat"><div class="num">3</div><div class="lbl">เซิร์ฟ</div></div>
       <div class="hero-stat"><div class="num">2017</div><div class="lbl">ตั้งแต่</div></div>
     </div>
+  </div>
+
+  <div class="server-tabs" role="tablist" aria-label="เลือกเซิร์ฟเวอร์">
+    <button class="server-tab tab-na" data-server="NA" role="tab" aria-selected="false">NA · gameking <span class="tab-count">18</span></button>
+    <button class="server-tab tab-kr" data-server="KR" role="tab" aria-selected="false">KR · digimonmasters <span class="tab-count">25</span></button>
+    <button class="server-tab tab-th" data-server="TH" role="tab" aria-selected="false">TH · vplay <span class="tab-count">13</span></button>
   </div>
 
   <div class="timeline">
@@ -983,5 +1015,39 @@
   &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
 </footer>
 
+<script>
+(() => {
+  const tabs   = document.querySelectorAll('.server-tab');
+  const cards  = document.querySelectorAll('.tl-entry');
+  const months = document.querySelectorAll('.tl-month');
+
+  function apply(server) {
+    cards.forEach(c => {
+      const show = !server || c.dataset.server === server;
+      c.style.display = show ? '' : 'none';
+    });
+    months.forEach(m => {
+      let next = m.nextElementSibling, any = false;
+      while (next && !next.matches('.tl-month')) {
+        if (next.matches('.tl-entry') && next.style.display !== 'none') { any = true; break; }
+        next = next.nextElementSibling;
+      }
+      m.style.display = any ? '' : 'none';
+    });
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    const wasActive = tab.classList.contains('is-active');
+    tabs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+    if (wasActive) {            // click the active tab again to clear the filter (show all)
+      apply(null);
+    } else {
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+      apply(tab.dataset.server);
+    }
+  }));
+})();
+</script>
 </body>
 </html>
