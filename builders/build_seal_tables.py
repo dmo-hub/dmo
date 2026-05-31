@@ -77,6 +77,44 @@ def block_for(key, data):
     return "\n        " + "\n        ".join(inner)
 
 
+def drop_empty_months(html):
+    """Remove month headers left with no <article> after card removal."""
+    op = '<div class="timeline">'
+    oi = html.index(op)
+    note = html.index('<p style="max-width:760px', oi)
+    ci = html.rindex("</div>", oi, note)          # timeline's closing </div>
+    inner = html[oi + len(op):ci]
+    parts = re.split(r'(<div class="tl-month">.*?</div>)', inner, flags=re.S)
+    out = parts[0]
+    for i in range(1, len(parts), 2):
+        content = parts[i + 1] if i + 1 < len(parts) else ""
+        if "<article" in content:
+            out += parts[i] + content
+    return html[:oi + len(op)] + out + html[ci:]
+
+
+def update_counts(html, data):
+    """Set hero total / earliest-year / per-server tab counts from the cards
+    that actually remain in the page."""
+    from collections import Counter
+    kept = [k for k, v in data.items() if v.get("tables")]
+    c = Counter(k.split("-")[0] for k in kept)
+    labels = {"NA": "NA · gameking", "KR": "KR · digimonmasters", "TH": "TH · vplay"}
+    for srv, lab in labels.items():
+        html = re.sub(
+            r'(data-server="%s"[^>]*>%s <span class="tab-count">)\d+(</span>)'
+            % (srv, re.escape(lab)),
+            lambda m, n=c[srv.lower()]: f"{m.group(1)}{n}{m.group(2)}", html)
+    html = re.sub(r'(<div class="num">)\d+(</div><div class="lbl">โพสต์)',
+                  lambda m: f"{m.group(1)}{len(kept)}{m.group(2)}", html)
+    years = re.findall(r'<span class="card-date">\d{2}\.\d{2}\.(\d{4})</span>', html)
+    if years:
+        lo = min(years)
+        html = re.sub(r'(<div class="num">)\d{4}(</div><div class="lbl">ตั้งแต่)',
+                      lambda m: f"{m.group(1)}{lo}{m.group(2)}", html)
+    return html
+
+
 def main():
     html = HTML.read_text(encoding="utf-8")
     data = json.loads(DATA.read_text(encoding="utf-8"))
@@ -95,21 +133,33 @@ def main():
     # 3) inject a block before each matching card's </article>
     injected = 0
     for key, d in data.items():
+        if not d.get("tables"):
+            continue   # no-table posts are removed below, not injected
         pat = re.compile(r'(<article\b[^>]*\bid="%s"[^>]*>.*?)(</article>)'
                          % re.escape(key), re.S)
         if not pat.search(html):
             print(f"  !! card not found: {key}", file=sys.stderr)
             continue
-        blk = block_for(key, d)
-        if not blk:
-            continue   # no-table posts get nothing
-        html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2),
+        html = pat.sub(lambda m: m.group(1) + block_for(key, d) + "\n      " + m.group(2),
                        html, count=1)
         injected += 1
 
+    # 4) remove cards with no table ("no real data"), then prune empty months
+    removed = 0
+    for key, d in data.items():
+        if d.get("tables"):
+            continue
+        html, n = re.subn(r'\n?\s*<article\b[^>]*\bid="%s"[^>]*>.*?</article>'
+                          % re.escape(key), "", html, flags=re.S, count=1)
+        removed += n
+    html = drop_empty_months(html)
+
+    # 5) refresh hero total / year / tab counts to match remaining cards
+    html = update_counts(html, data)
+
     HTML.write_text(html, encoding="utf-8")
     n_tbl = sum(len(v.get("tables", [])) for v in data.values())
-    print(f"Injected into {injected}/{len(data)} cards "
+    print(f"Injected into {injected} cards, removed {removed} no-table cards "
           f"({n_tbl} tables total) -> {HTML}")
 
 
