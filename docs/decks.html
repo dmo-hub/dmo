@@ -15,30 +15,8 @@
     transition: border-color 0.15s;
   }
   .post:hover { border-color: var(--card-hover-border); }
-  .post-header {
-    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
-    margin-bottom: 6px;
-  }
-  .post-header .idx-badge {
-    background: var(--surface-card); color: var(--body);
-    padding: 3px 10px; border-radius: 9999px;
-    font-size: 10px; font-weight: 600; letter-spacing: 1.3px;
-    text-transform: uppercase;
-    font-family: "JetBrains Mono", monospace;
-  }
-  .post-header h2 {
-    color: var(--ink); margin: 0; font-weight: 400;
-    font-size: 22px; letter-spacing: -0.4px;
-    font-family: var(--display-font);
-  }
-  .post-header .date {
-    color: var(--muted-soft); font-size: 11.5px;
-    font-family: "JetBrains Mono", monospace;
-    font-variant-numeric: tabular-nums;
-  }
-  .src { font-size: 12px; margin: 0 0 16px 0; color: var(--muted); }
-  .src a { color: var(--body); }
-  .src a:hover { color: var(--coral); }
+  /* Source badge (NA + date) — align with .post padding, drop card-specific insets */
+  .post .sources { padding: 0; margin: 0 0 14px; }
 
   /* Filter bar layout — single horizontal row across full width.
      h3 → dropdowns (flex-grow to fill) → Reset → status (right-aligned). */
@@ -101,13 +79,6 @@
   }
   .ms-option:hover { background: var(--surface-card); color: var(--ink); }
   .ms-option input { margin: 0; accent-color: var(--coral); flex-shrink: 0; cursor: pointer; }
-  .ms-option.is-all {
-    font-weight: 600; color: var(--ink);
-    border-bottom: 1px solid var(--hairline);
-    margin: 0 0 4px; padding: 9px 10px;
-    border-radius: var(--radius-xs) var(--radius-xs) 0 0;
-    background: var(--surface-soft);
-  }
   .filter-btn {
     padding: 0 18px; height: 40px;
     background: var(--ink); color: var(--on-dark);
@@ -129,6 +100,39 @@
   .post mark {
     background: var(--amber); color: var(--ink);
     padding: 0 4px; border-radius: 3px;
+  }
+  /* Upgrade callout — shows what a later patch added/changed */
+  .upgrade-note { font-size: 12.5px; }
+  .upgrade-note .upg-title { margin: 0 0 8px; font-weight: 600; }
+  .upgrade-note .upg-title a { color: var(--coral); font-weight: 600; }
+  .upgrade-note .upg-cols {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px;
+  }
+  .upgrade-note .upg-h {
+    display: block; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; font-weight: 700; color: var(--muted);
+    margin-bottom: 3px;
+  }
+  /* Multi-stage upgrade timeline (deck buffed across several patches) */
+  .upgrade-note .upg-steps { display: flex; flex-direction: column; gap: 9px; }
+  .upgrade-note .upg-step { border-left: 2px solid var(--coral); padding-left: 10px; }
+  .upgrade-note .upg-step-head {
+    display: block; font-size: 11px; font-weight: 700;
+    color: var(--ink); margin-bottom: 1px;
+  }
+  .upgrade-note .upg-step-head a { color: var(--coral); font-weight: 700; }
+  .upgrade-note ul { margin: 0; padding-left: 16px; line-height: 1.7; }
+  .upgrade-note b { color: var(--ink); }
+  .upgrade-note .upg-old {
+    color: var(--muted-soft); text-decoration: line-through;
+  }
+  .upgrade-note .upg-tag {
+    font-size: 10px; font-weight: 700; color: var(--on-primary);
+    background: var(--coral); border-radius: 3px; padding: 1px 5px;
+    margin-left: 4px; vertical-align: middle;
+  }
+  @media (max-width: 600px) {
+    .upgrade-note .upg-cols { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -156,8 +160,8 @@
       <p class="lead">Deck ใหม่ที่ถูกเพิ่มในเกม — เรียงตามวันที่ของ NA release</p>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="num">19</div><div class="lbl">โพสต์</div></div>
-      <div class="hero-stat"><div class="num">33</div><div class="lbl">deck</div></div>
+      <div class="hero-stat"><div class="num">20</div><div class="lbl">โพสต์</div></div>
+      <div class="hero-stat"><div class="num">34</div><div class="lbl">deck</div></div>
     </div>
   </div>
 
@@ -176,19 +180,13 @@
       <button class="filter-btn" id="f-reset" title="ล้างฟิลเตอร์">Reset</button>
     </div>
   </div>
-  <div class="filter-status" id="f-status">แสดงทั้งหมด <b id="f-count">33</b> deck จาก <b>19</b> โพสต์</div>
+  <div class="filter-status" id="f-status">แสดงทั้งหมด <b id="f-count">34</b> deck จาก <b>20</b> โพสต์</div>
 
   <!-- ============ 663 ============ -->
   <section class="post" id="e663">
-    <div class="post-header">
-      <span class="idx-badge">idx 663</span>
-      <h2>White Wings: Gurei Tou of Courage + Garuru Hou of Friendship</h2>
-      <span class="date">05.03.2024</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=663" target="_blank">EventView.aspx?idx=663 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=663" target="_blank" title="EventView.aspx?idx=663">NA</a><span class="src-date">05.03.2024</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">1. White Wings: Gurei Tou of Courage</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -209,7 +207,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">2. White Wings: Garuru Hou of Friendship</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -230,17 +227,37 @@
     </div>
   </section>
 
-  <!-- ============ 673 ============ -->
-  <section class="post" id="e673">
-    <div class="post-header">
-      <span class="idx-badge">idx 673</span>
-      <h2>God's Will + Leader of the Awakened Four Holy Beasts</h2>
-      <span class="date">11.06.2024</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=673" target="_blank">EventView.aspx?idx=673 ↗</a></p>
+  <!-- ============ 668 ============ -->
+  <section class="post" id="e668">
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=668" target="_blank" title="EventView.aspx?idx=668">NA</a><span class="src-date">16.04.2024</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">1. God's Will</div>
+      <div class="deck-body">
+        <div>
+          <p class="gk-label">Digimon List</p>
+          <table class="gk-table digimon-table"><tr><th>I'm the future Digimon King!</th></tr>
+          <tr><td>Shoutmon</td></tr><tr><td>Shoutmon X2</td></tr><tr><td>Shoutmon X3</td></tr>
+          <tr><td>Shoutmon X4</td></tr><tr><td>Shoutmon X5</td></tr><tr><td>OmegaShoutmon</td></tr>
+          <tr><td>Shoutmon DX</td></tr><tr><td>Shoutmon X7</td></tr><tr><td>Shoutmon X7 Superior Mode</td></tr></table>
+        </div>
+        <div>
+          <p class="gk-label">Effect</p>
+          <table class="gk-table effect-table">
+          <tr><th>Effect Name</th><th>Activation Probability</th><th>Activation Effect</th></tr>
+          <tr><td>Attack Speed</td><td>Always Active</td><td>Increases Attack Speed by 18%</td></tr>
+          <tr><td>Skill Damage</td><td>Always Active</td><td>Increases Skill Damage by 70%</td></tr>
+          <tr><td>HP</td><td>Always Active</td><td>Increases HP by 40%</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 673 ============ -->
+  <section class="post" id="e673">
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=673" target="_blank" title="EventView.aspx?idx=673">NA</a><span class="src-date">11.06.2024</span></span></div>
+
+    <div class="deck">
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -261,7 +278,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">2. Leader of the Awakened Four Holy Beasts</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -283,15 +299,9 @@
 
   <!-- ============ 683 ============ -->
   <section class="post" id="e683">
-    <div class="post-header">
-      <span class="idx-badge">idx 683</span>
-      <h2>Divine Spear / Guardians of the Digital World</h2>
-      <span class="date">20.08.2024</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=683" target="_blank">EventView.aspx?idx=683 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=683" target="_blank" title="EventView.aspx?idx=683">NA</a><span class="src-date">20.08.2024</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">1. Divine Spear and Sacred Sword of Light</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -312,7 +322,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">2. Guardians of the Digital World</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -332,20 +341,35 @@
         </div>
       </div>
     </div>
-    <p class="note">หมายเหตุ: deck "Guardians of the Digital World" นี้คือ version แรก (Aug 2024) — version upgrade ที่ idx 784 มี [Extreme] Susanoomon เพิ่มและค่า effect สูงกว่า</p>
+    <div class="note upgrade-note">
+      <p class="upg-title">🔼 deck นี้ถูกอัปเกรด 2 ครั้ง (เริ่มที่ idx 683 — HP 30%, Crit 125%, AS 22%, Skill 70%)</p>
+      <div class="upg-steps">
+        <div class="upg-step">
+          <span class="upg-step-head"><a href="#e734">idx 734</a> · 27.05.2025 · บัฟค่า effect (ไม่เพิ่ม Digimon)</span>
+          <ul>
+            <li>HP <span class="upg-old">30%</span> → <b>40%</b></li>
+            <li>Critical Damage <span class="upg-old">125%</span> → <b>150%</b></li>
+          </ul>
+        </div>
+        <div class="upg-step">
+          <span class="upg-step-head"><a href="#e784">idx 784</a> · 01.10.2025 · เพิ่ม Digimon + บัฟค่า</span>
+          <ul>
+            <li>เพิ่ม <b>[Extreme] Susanoomon</b> <span class="upg-tag">ใหม่</span></li>
+            <li>Attack Speed <span class="upg-old">22%</span> → <b>23%</b></li>
+            <li>HP <span class="upg-old">40%</span> → <b>50%</b></li>
+            <li>Skill Damage <span class="upg-old">70%</span> → <b>90%</b></li>
+            <li>Critical Damage <span class="upg-old">150%</span> → Critical Rate Damage <b>170%</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ============ 692 ============ -->
   <section class="post" id="e692">
-    <div class="post-header">
-      <span class="idx-badge">idx 692</span>
-      <h2>The Goddess of the False Neverland</h2>
-      <span class="date">12.11.2024</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=692" target="_blank">EventView.aspx?idx=692 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=692" target="_blank" title="EventView.aspx?idx=692">NA</a><span class="src-date">12.11.2024</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">The Goddess of the False Neverland</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -367,15 +391,9 @@
 
   <!-- ============ 708 ============ -->
   <section class="post" id="e708">
-    <div class="post-header">
-      <span class="idx-badge">idx 708</span>
-      <h2>The End, The Ultimate Holy War!</h2>
-      <span class="date">18.03.2025</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=708" target="_blank">EventView.aspx?idx=708 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=708" target="_blank" title="EventView.aspx?idx=708">NA</a><span class="src-date">18.03.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">The End, The Ultimate Holy War!</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -397,15 +415,9 @@
 
   <!-- ============ 731 ============ -->
   <section class="post" id="e731">
-    <div class="post-header">
-      <span class="idx-badge">idx 731</span>
-      <h2>White Wings: Sorrow and Determination</h2>
-      <span class="date">13.05.2025</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=731" target="_blank">EventView.aspx?idx=731 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=731" target="_blank" title="EventView.aspx?idx=731">NA</a><span class="src-date">13.05.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">White Wings: Sorrow and Determination</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -427,14 +439,9 @@
 
   <!-- ============ 734 ============ -->
   <section class="post" id="e734">
-    <div class="post-header">
-      <span class="idx-badge">idx 734</span>
-      <h2>3 New Decks (Justice / Savior / Corrupted)</h2>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=734" target="_blank">EventView.aspx?idx=734 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=734" target="_blank" title="EventView.aspx?idx=734">NA</a><span class="src-date">27.05.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">1. Justice Veiled in Darkness</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -455,7 +462,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">2. Savior Who Protects Peace</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -474,10 +480,29 @@
           </table>
         </div>
       </div>
+      <div class="note upgrade-note">
+        <p class="upg-title">🔼 เวอร์ชันอัปเกรด (01.10.2025) — <a href="#e784">idx 784</a> "Saviors Who Protect Peace"</p>
+        <div class="upg-cols">
+          <div>
+            <span class="upg-h">เพิ่ม Digimon</span>
+            <ul>
+              <li><b>[Extreme] Susanoomon</b> <span class="upg-tag">ใหม่</span></li>
+            </ul>
+          </div>
+          <div>
+            <span class="upg-h">ค่า Effect เพิ่มขึ้น</span>
+            <ul>
+              <li>Attack Speed <span class="upg-old">22%</span> → <b>23%</b></li>
+              <li>HP <span class="upg-old">50%</span> → <b>60%</b></li>
+              <li>Skill Damage <span class="upg-old">80%</span> → <b>100%</b></li>
+              <li>Attack Increase <span class="upg-old">45%</span> → <b>60%</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="deck">
-      <div class="deck-name">3. Corrupted Purification Ritual</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -501,15 +526,9 @@
 
   <!-- ============ 743 - REUNION ============ -->
   <section class="post" id="e743">
-    <div class="post-header">
-      <span class="idx-badge">idx 743</span>
-      <h2>Reunion <span class="featured-badge">★ ตัวอย่างต้นฉบับ</span></h2>
-      <span class="date">17.06.2025</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=743" target="_blank">EventView.aspx?idx=743 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=743" target="_blank" title="EventView.aspx?idx=743">NA</a><span class="src-date">17.06.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">Reunion</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -531,15 +550,9 @@
 
   <!-- ============ 759 ============ -->
   <section class="post" id="e759">
-    <div class="post-header">
-      <span class="idx-badge">idx 759</span>
-      <h2>Invasion of the Real World!</h2>
-      <span class="date">22.07.2025</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=759" target="_blank">EventView.aspx?idx=759 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=759" target="_blank" title="EventView.aspx?idx=759">NA</a><span class="src-date">22.07.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">Invasion of the Real World!</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List (11)</p>
@@ -564,15 +577,9 @@
 
   <!-- ============ 770 ============ -->
   <section class="post" id="e770">
-    <div class="post-header">
-      <span class="idx-badge">idx 770</span>
-      <h2>Last Evolution: Kizuna</h2>
-      <span class="date">19.08.2025</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=770" target="_blank">EventView.aspx?idx=770 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=770" target="_blank" title="EventView.aspx?idx=770">NA</a><span class="src-date">19.08.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">Last Evolution: Kizuna</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -596,15 +603,9 @@
 
   <!-- ============ 782 ============ -->
   <section class="post" id="e782">
-    <div class="post-header">
-      <span class="idx-badge">idx 782</span>
-      <h2>Our hope, our light</h2>
-      <span class="date">23.09.2025</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=782" target="_blank">EventView.aspx?idx=782 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=782" target="_blank" title="EventView.aspx?idx=782">NA</a><span class="src-date">23.09.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">Our hope, our light</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -627,14 +628,9 @@
 
   <!-- ============ 784 ============ -->
   <section class="post" id="e784">
-    <div class="post-header">
-      <span class="idx-badge">idx 784</span>
-      <h2>Transcending Time + 2 Upgrade Decks</h2>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=784" target="_blank">EventView.aspx?idx=784 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=784" target="_blank" title="EventView.aspx?idx=784">NA</a><span class="src-date">01.10.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">1. Transcending Time, The Beginning of a Legend!</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List (11)</p>
@@ -657,7 +653,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">2. Guardians of the Digital World (Upgrade)</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -680,7 +675,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">3. Saviors Who Protect Peace (Upgrade)</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -705,15 +699,9 @@
 
   <!-- ============ 791 ============ -->
   <section class="post" id="e791">
-    <div class="post-header">
-      <span class="idx-badge">idx 791</span>
-      <h2>Wings of Temptation and Wings of Justice</h2>
-      <span class="date">11.11.2025</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=791" target="_blank">EventView.aspx?idx=791 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=791" target="_blank" title="EventView.aspx?idx=791">NA</a><span class="src-date">11.11.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">Wings of Temptation and Wings of Justice</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -735,14 +723,9 @@
 
   <!-- ============ 798 ============ -->
   <section class="post" id="e798">
-    <div class="post-header">
-      <span class="idx-badge">idx 798</span>
-      <h2>3 New Decks (Final Phase / Virus / Fight Virus)</h2>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=798" target="_blank">EventView.aspx?idx=798 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=798" target="_blank" title="EventView.aspx?idx=798">NA</a><span class="src-date">10.12.2025</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">1. Demon of the Final Phase</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -762,7 +745,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">2. Abnormal Status Occurred: Virus</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -785,7 +767,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">3. Fight against the Virus!</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -809,14 +790,9 @@
 
   <!-- ============ 810 ============ -->
   <section class="post" id="e810">
-    <div class="post-header">
-      <span class="idx-badge">idx 810</span>
-      <h2>Fear of the Abyss</h2>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=810" target="_blank">EventView.aspx?idx=810 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/news/EventView.aspx?idx=810" target="_blank" title="EventView.aspx?idx=810">NA</a><span class="src-date">14.01.2026</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">Fear of the Abyss</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List (9)</p>
@@ -835,20 +811,31 @@
           </table>
         </div>
       </div>
+      <div class="note upgrade-note">
+        <p class="upg-title">🔼 เวอร์ชันอัปเกรด (04.03.2026) — <a href="#p4114">idx 4114</a> "The True Form of the Destroyer"</p>
+        <div class="upg-cols">
+          <div>
+            <span class="upg-h">เพิ่ม Digimon</span>
+            <ul>
+              <li><b>Omegamon</b> <span class="upg-tag">ใหม่</span></li>
+            </ul>
+          </div>
+          <div>
+            <span class="upg-h">ค่า Effect</span>
+            <ul>
+              <li>เท่าเดิมทุกค่า (ไม่เปลี่ยนแปลง)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============ 4110 ============ -->
   <section class="post" id="p4110">
-    <div class="post-header">
-      <span class="idx-badge">idx 4110</span>
-      <h2>Abyssal Fear + Perfect data</h2>
-      <span class="date">25.02.2026</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4110" target="_blank">PatchNoteView.aspx?idx=4110 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4110" target="_blank" title="PatchNoteView.aspx?idx=4110">NA</a><span class="src-date">25.02.2026</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">1. Abyssal Fear</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -868,7 +855,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">2. Perfect data, and data of unknown origin</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -893,15 +879,9 @@
 
   <!-- ============ 4114 ============ -->
   <section class="post" id="p4114">
-    <div class="post-header">
-      <span class="idx-badge">idx 4114</span>
-      <h2>The True Form of the Destroyer</h2>
-      <span class="date">04.03.2026</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4114" target="_blank">PatchNoteView.aspx?idx=4114 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4114" target="_blank" title="PatchNoteView.aspx?idx=4114">NA</a><span class="src-date">04.03.2026</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">The True Form of the Destroyer</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List (10)</p>
@@ -928,15 +908,9 @@
 
   <!-- ============ 4121 ============ -->
   <section class="post" id="p4121">
-    <div class="post-header">
-      <span class="idx-badge">idx 4121</span>
-      <h2>Wings of Justice (3 Decks)</h2>
-      <span class="date">17.03.2026</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4121" target="_blank">PatchNoteView.aspx?idx=4121 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4121" target="_blank" title="PatchNoteView.aspx?idx=4121">NA</a><span class="src-date">17.03.2026</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">1. Wings of Justice</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -956,7 +930,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">2. Tempting Wings of Justice</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -976,7 +949,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">3. The Nullifiers</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -1001,15 +973,9 @@
 
   <!-- ============ 4148 ============ -->
   <section class="post" id="p4148">
-    <div class="post-header">
-      <span class="idx-badge">idx 4148</span>
-      <h2>Quantumon (3 Decks)</h2>
-      <span class="date">20.05.2026</span>
-    </div>
-    <p class="src"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4148" target="_blank">PatchNoteView.aspx?idx=4148 ↗</a></p>
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4148" target="_blank" title="PatchNoteView.aspx?idx=4148">NA</a><span class="src-date">20.05.2026</span></span></div>
 
     <div class="deck">
-      <div class="deck-name">1. One who resides in Lark</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -1029,7 +995,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">2. A being that sends Digimon to the human world</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -1049,7 +1014,6 @@
     </div>
 
     <div class="deck">
-      <div class="deck-name">3. Neutral type Digimon</div>
       <div class="deck-body">
         <div>
           <p class="gk-label">Digimon List</p>
@@ -1114,6 +1078,11 @@
         "Attack Amplification": "Attack",
         "Attack Increase": "Attack",
         "Attack Speed": "Attack",
+        "Base Attack": "Attack",
+        "Critical": "Critical",
+        "Critical Damage": "Critical",
+        "Critical Hit Damage": "Critical",
+        "Critical Rate Damage": "Critical",
         "HP": "HP",
         "HP Increase": "HP",
         "Health Increase": "HP",
@@ -1179,15 +1148,6 @@
         panel.className = 'ms-panel';
         panel.hidden = true;
 
-        const allLbl = document.createElement('label');
-        allLbl.className = 'ms-option is-all';
-        const allCb = document.createElement('input');
-        allCb.type = 'checkbox'; allCb.checked = false;
-        allLbl.appendChild(allCb);
-        allLbl.appendChild(document.createTextNode(' All'));
-
-        panel.appendChild(allLbl);
-
         const checkboxes = options.map(o => {
           const lbl = document.createElement('label');
           lbl.className = 'ms-option';
@@ -1210,10 +1170,6 @@
             if (cb.checked) n++;
           });
           const total = checkboxes.length;
-          if (n === total) { allCb.checked = true; allCb.indeterminate = false; }
-          else if (n === 0) { allCb.checked = false; allCb.indeterminate = false; }
-          else { allCb.checked = false; allCb.indeterminate = true; }
-
           if (n === 0 || n === total) {
             btn.textContent = `${allLabel} (${total})`;
             btn.classList.remove('has-filter');
@@ -1243,11 +1199,6 @@
             panel.hidden = true;
             btn.classList.remove('is-open');
           }
-        });
-        allCb.addEventListener('change', () => {
-          const target = allCb.checked;
-          checkboxes.forEach(cb => cb.checked = target);
-          sync();
         });
         checkboxes.forEach(cb => cb.addEventListener('change', sync));
 
