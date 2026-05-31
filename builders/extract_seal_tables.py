@@ -143,8 +143,10 @@ def clean_table(tb):
 
 # --- Normalisation to one canonical 5-column layout -----------------------
 # Every seal-exchange table, whatever its native column order/wording, is
-# remapped to: [seal | seals given | tickets used | stat | max @ Master].
-NORM_HEADER = ["ซีล / Seal", "ได้ / Qty", "ใช้ตั๋ว / Tickets", "Stat", "สูงสุด / Master"]
+# remapped to the canonical layout using the Thai-server column names:
+# [seal | seals given | tickets used | stat | max @ Master].
+NORM_HEADER = ["รายการซีล", "จำนวนซีลที่ได้รับ",
+               "จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต", "ความสามารถ", "สเตตัสสูงสุด"]
 _STAT = re.compile(r"\b(AT|HP|HT|DS|DE|BL|EV|CT|SCD|MS|DEX|EXP)\b")
 
 KW_NAME = ("제작 씰", "제작 아이템", "craft seal", "craft item",
@@ -304,6 +306,33 @@ def normalize_table(tb, server):
     return "".join(out)
 
 
+# The exchange currency must be a Seal Exchange Ticket — not a material
+# (Kaiser Trace, firecracker) or a special coin (Tamer / Special Exchanger).
+TICKET_RE = re.compile(
+    r"씰\s*교환권|교환권|seal exchange ticket|ตั๋วแลกการ์ดซีล|ตั๋วแลกซีล|ตั๋วแลก\S*ซีล",
+    re.I)
+
+
+def uses_exchange_ticket(tb):
+    """True only if the table's exchange input is a Seal Exchange Ticket."""
+    rows = table_rows(tb)
+    if len(rows) < 2:
+        return False
+    hi = max(range(min(3, len(rows))),
+             key=lambda i: sum(1 for c in rows[i] if _role_of(c)))
+    header = rows[hi]
+    role = _classify(header)
+    if "ticket" not in role:
+        return False
+    it = role.index("ticket")
+    if TICKET_RE.search(header[it]):          # forward tables name it in the header
+        return True
+    for r in rows[hi + 1:hi + 4]:             # material tables name it in the cells
+        if it < len(r) and TICKET_RE.search(r[it]):
+            return True
+    return False
+
+
 def _is_trivial_craft(html):
     """True for a 1-ticket->1-seal list with no stat/max — the redundant
     'craft each event seal from one exchange ticket' table that sits beside
@@ -386,6 +415,8 @@ def extract(post):
         body_score = seal_token_count(strip_text(tb))
         if not is_exchange_header(htxt, head2, body_score, server):
             continue
+        if not uses_exchange_ticket(tb):
+            continue                  # keep only Seal-Exchange-Ticket exchanges
         normalized = normalize_table(tb, server)
         if normalized and _is_trivial_craft(normalized):
             continue                  # skip redundant 1-ticket->1-seal craft lists
