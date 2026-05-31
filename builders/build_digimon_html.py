@@ -98,6 +98,10 @@ ELEM_ICON = {
     "Wood": "Wood", "Earth": "Earth", "Steel": "Steel", "Thunder": "Thunder",
     "Ice": "Ice", "Neutral": "Neutral", "Pitch Black": "Pitch_Black",
 }
+# Full Natural-Attribute set, shown in the filter even when no digimon has
+# that element yet (ordered by element, not by what's present in the data).
+ELEM_ORDER = ["Fire", "Water", "Ice", "Wind", "Wood", "Earth",
+              "Steel", "Thunder", "Light", "Pitch Black", "Neutral"]
 FAMILY_ICON = {
     "Virus Busters": "Virus_Busters",
     "Wind Guardians": "Wind_Guardians",
@@ -191,23 +195,6 @@ def render() -> str:
         ym = month_key(p.get("date"))
         by_month.setdefault(ym, []).append((kind, idx, p))
 
-    # --- TOC ------------------------------------------------------------
-    toc_groups: list[str] = []
-    for ym, entries in by_month.items():
-        items = "\n    ".join(
-            f'<a href="#{("e" if kind == "event" else "p")}{idx}">'
-            f'<span style="color:var(--text-soft)">idx {idx}</span> '
-            f'{", ".join(p["digimon"])[:38]}'
-            f'{"..." if len(", ".join(p["digimon"])) > 38 else ""}'
-            f'</a>'
-            for kind, idx, p in entries
-        )
-        toc_groups.append(
-            f'  <h4>{month_label(ym)} <span style="font-weight:400;color:var(--text-soft)">'
-            f'· {len(entries)}</span></h4>\n    {items}'
-        )
-    toc_body = "\n".join(toc_groups)
-
     # --- Source links --------------------------------------------------
     def render_sources(p: dict) -> str:
         seen: set[tuple[str, str]] = set()
@@ -229,9 +216,9 @@ def render() -> str:
                 date_str = fmt_date(p["date"])
             parts.append(
                 f'<span class="src-item {cls}">'
-                f'<span class="src-label">{label}</span>'
+                f'<a class="src-label" href="{u}" target="_blank" '
+                f'title="{_link_text(u, kind)}">{label}</a>'
                 f'<span class="src-date">{date_str}</span>'
-                f'<a href="{u}" target="_blank">{_link_text(u, kind)} ↗</a>'
                 f'</span>'
             )
         return "".join(parts)
@@ -239,7 +226,6 @@ def render() -> str:
     # --- One entry card ------------------------------------------------
     def render_entry(idx: str, p: dict, kind: str) -> str:
         prefix = "e" if kind == "event" else "p"
-        kind_label = "EventView" if kind == "event" else "PatchNote"
         names = p["digimon"]
         n = len(names)
         attrs_map = p.get("attributes", {})
@@ -265,11 +251,6 @@ def render() -> str:
                  data-attr="{",".join(all_attrs)}"
                  data-elem="{",".join(all_elems)}"
                  data-family="{",".join(all_fams)}">
-          <div class="card-head">
-            <span class="card-date">{fmt_date(p.get("date"))}</span>
-            <span class="card-kind-badge">{kind_label}</span>
-            <span class="card-idx">idx {idx}</span>
-          </div>
           <h2 class="card-title">{h2_text}</h2>
           <div class="sources">{render_sources(p)}</div>
           <div class="card-body">
@@ -323,9 +304,12 @@ def render() -> str:
         filter_pill("attr", v, v, f"chip-attr-{ATTR_ABBR_MAP.get(v, 'UN')}", "attr")
         for v in seen_attrs
     )
+    # Show every Natural Attribute, including ones no digimon currently has,
+    # plus any data element not in the canonical order (future-proofing).
+    elem_values = ELEM_ORDER + [e for e in seen_elems if e not in ELEM_ORDER]
     elem_pills = "".join(
         filter_pill("elem", v, elem_slug(v), "chip-elem", "elem")
-        for v in seen_elems
+        for v in elem_values
     )
     fam_pills = "".join(
         filter_pill("family", v, family_slug(v), "chip-families", "field")
@@ -414,6 +398,7 @@ def render() -> str:
 <head>
 <meta charset="UTF-8">
 <title>DMO Digimon — Activity Feed</title>
+<script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
@@ -425,17 +410,13 @@ def render() -> str:
       <a href="./">Home</a>
       <a href="decks.html">Decks</a>
       <a href="digimon.html" class="is-active">Digimon</a>
+      <a href="seals.html">Seal</a>
     </nav>
     <span class="nav-meta">scrape: dmo.gameking.com</span>
   </div>
 </header>
 
-<main class="page has-toc">
-
-  <aside class="toc">
-    <h3>Timeline</h3>
-{toc_body}
-  </aside>
+<main class="page">
 
   <section>
     <div class="hero">

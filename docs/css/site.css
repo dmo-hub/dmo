@@ -453,6 +453,7 @@ h2, h3, h4 {
   text-transform: uppercase; padding: 2px 7px; border-radius: 9999px;
   background: var(--surface-card); color: var(--body);
 }
+.sources .src-item.is-na .src-label { background: var(--amber); color: var(--on-primary); }
 .sources .src-item.is-kr .src-label { background: var(--coral); color: var(--on-primary); }
 .sources .src-item.is-th .src-label { background: var(--teal); color: var(--on-primary); }
 .sources .src-date { color: var(--muted-soft); font-size: 10.5px;
@@ -460,6 +461,12 @@ h2, h3, h4 {
                      font-family: "JetBrains Mono", monospace; }
 .sources .src-item a { color: var(--body); font-size: 11.5px; }
 .sources .src-item a:hover { color: var(--coral); }
+/* NA/KR/TH badge is itself the clickable link (URL text removed) */
+.sources .src-item a.src-label {
+  font-size: 9.5px; text-decoration: none; cursor: pointer;
+  transition: opacity 0.15s, filter 0.15s;
+}
+.sources .src-item a.src-label:hover { opacity: 0.82; filter: brightness(1.08); }
 
 /* --- Digimon list (chip rows) ----------------------------------------- */
 
