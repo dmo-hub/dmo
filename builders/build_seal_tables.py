@@ -70,6 +70,8 @@ CSS = """
   .seal-match a.tw-na { color: var(--amber); border-color: var(--amber); }
   .seal-match a.tw-kr { color: var(--coral); border-color: var(--coral); }
   .seal-match a.tw-th { color: var(--teal); border-color: var(--teal); }
+  /* per-table notes live inside the details, aligned with the caption */
+  .seal-detail .seal-match { margin: -2px 2px 12px; }
 """
 
 CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
@@ -93,22 +95,23 @@ def compute_matches(data):
     """Map each post-key to the keys on OTHER servers whose exchange list is
     identical (same seal qty/ticket/stat/max sequence)."""
     from collections import defaultdict
-    seqs = defaultdict(set)
+    seqs = defaultdict(list)              # sequence -> [(key, table_index)]
     for key, v in data.items():
-        for t in v.get("tables", []):
+        for ti, t in enumerate(v.get("tables", [])):
             s = _row_seq(t["html"])
             if s:
-                seqs[s].add(key)
-    matches = defaultdict(set)
-    for keys in seqs.values():
-        if len(keys) > 1:
-            for k in keys:
-                srv = k.split("-")[0]
-                # cross-server only — a KR list recurring in another KR post
-                # is not a server comparison, so skip same-server twins.
-                matches[k] |= {o for o in keys if o.split("-")[0] != srv}
-    return {k: sorted(v, key=lambda x: (_SRV_ORDER.get(x.split("-")[0], 9), x))
-            for k, v in matches.items() if v}
+                seqs[s].append((key, ti))
+    res = defaultdict(dict)               # key -> {table_index: [twin keys]}
+    for members in seqs.values():
+        for key, ti in members:
+            srv = key.split("-")[0]
+            # cross-server only — a list recurring in another post on the SAME
+            # server is not a server comparison, so skip same-server twins.
+            twins = sorted({o for o, _ in members if o.split("-")[0] != srv},
+                           key=lambda x: (_SRV_ORDER.get(x.split("-")[0], 9), x))
+            if twins:
+                res[key][ti] = twins
+    return res
 
 
 def _twin_link(k, dates):
@@ -119,19 +122,27 @@ def _twin_link(k, dates):
     return f'<a class="tw-{srv}" href="#{k}">{srv.upper()} {label}</a>'
 
 
-def block_for(key, data, twins=(), dates=None):
+def block_for(key, data, tmatch=None, dates=None):
     tables = data.get("tables", [])
     if not tables:
         return ""   # posts without a table get nothing injected
+    dates, tmatch = dates or {}, tmatch or {}
+
+    def note(tw):
+        links = " ".join(_twin_link(x, dates) for x in tw)
+        return (f'<div class="seal-match"><span class="lbl">🔗 ลิสต์เดียวกับ:</span> '
+                f'{links}</div>')
+
+    single = len(tables) == 1
     inner = [f"<!--ST:{key}-->"]
-    if twins:
-        links = " ".join(_twin_link(t, dates or {}) for t in twins)
-        inner.append(f'<div class="seal-match"><span class="lbl">🔗 ลิสต์เดียวกับ:</span> {links}</div>')
-    n = len(tables)
-    label = "ดูตารางแลกซีล" + (f" · {n} ตาราง" if n > 1 else "")
+    if single and tmatch.get(0):          # one table -> note above the toggle
+        inner.append(note(tmatch[0]))
+    label = "ดูตารางแลกซีล" + (f" · {len(tables)} ตาราง" if not single else "")
     inner.append(f'<details class="seal-detail"><summary>📋 {label}</summary>')
-    for t in tables:
+    for ti, t in enumerate(tables):
         inner.append(f'<div class="seal-cap">{t["caption"]}</div>')
+        if not single and tmatch.get(ti):  # many tables -> note per table
+            inner.append(note(tmatch[ti]))
         inner.append(f'<div class="seal-tbl-wrap">{t["html"]}</div>')
     inner.append("</details>")
     inner.append("<!--/ST-->")
@@ -207,7 +218,7 @@ def main():
         if not pat.search(html):
             print(f"  !! card not found: {key}", file=sys.stderr)
             continue
-        blk = block_for(key, d, matches.get(key, []), dates)
+        blk = block_for(key, d, matches.get(key, {}), dates)
         html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2),
                        html, count=1)
         injected += 1
