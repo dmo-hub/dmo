@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DMO Tracker — Breakthrough Simulator</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<style>
+  /* ── Breakthrough simulator (scoped to this page) ──────────────────────
+     Reuses the shared site palette so it tracks the light/dark theme.     */
+
+  .bt-panel {
+    background: var(--surface-card);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    margin-bottom: 22px;
+  }
+  .bt-panel h3 {
+    margin: 0 0 12px; font-size: 11px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;
+  }
+
+  /* Setup: status selectors — minmax(0,1fr) forces two truly equal columns
+     (a bare 1fr keeps min-width:auto, so wider content can unbalance them) */
+  .bt-select-grid {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px;
+  }
+  @media (max-width: 640px) { .bt-select-grid { grid-template-columns: 1fr; } }
+  /* align-content:start keeps each select at its natural height — otherwise
+     grid stretches the 2 negatives to fill the height of the 3 positives */
+  .bt-select-group { display: grid; gap: 8px; min-width: 0; align-content: start; }
+  .bt-select-group .grp-label {
+    font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 2px;
+  }
+  .bt-panel select {
+    width: 100%; padding: 9px 10px; font: inherit; font-size: 13.5px;
+    color: var(--ink); background: var(--canvas);
+    border: 1px solid var(--hairline); border-radius: var(--radius);
+    cursor: pointer; transition: border-color 0.12s;
+  }
+  .bt-panel select:focus { outline: none; border-color: var(--coral); }
+  .bt-panel select:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .bt-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .bt-btn {
+    padding: 10px 20px; font: inherit; font-size: 13.5px; font-weight: 600;
+    border-radius: var(--radius); cursor: pointer; border: 1px solid transparent;
+    transition: background 0.12s, opacity 0.12s, transform 0.1s;
+  }
+  .bt-btn:active { transform: scale(0.98); }
+  .bt-btn.primary { background: var(--coral); color: var(--on-primary); }
+  .bt-btn.primary:hover { background: var(--coral-active); }
+  .bt-btn.ghost {
+    background: var(--canvas); color: var(--body); border-color: var(--hairline);
+  }
+  .bt-btn.ghost:hover { background: var(--surface-soft); color: var(--ink); }
+  .bt-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+  /* Stats / chance dashboard */
+  .bt-dash { display: flex; gap: 14px; flex-wrap: wrap; }
+  .bt-stat {
+    flex: 1; min-width: 220px;
+    background: var(--canvas); border: 1px solid var(--hairline);
+    border-radius: var(--radius); padding: 16px 18px;
+  }
+  .bt-stat .stat-label {
+    font-size: 10px; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 1.4px; font-weight: 600; margin-bottom: 10px;
+  }
+  .bt-progress-track {
+    width: 100%; height: 18px; background: var(--surface-strong);
+    border-radius: 9999px; overflow: hidden; margin-bottom: 8px;
+  }
+  .bt-progress-fill {
+    height: 100%; width: 100%; background: var(--coral);
+    border-radius: 9999px; transition: width 0.3s ease;
+  }
+  .bt-attempts-counter {
+    font-family: "JetBrains Mono", "Consolas", monospace;
+    font-size: 20px; font-weight: 600; color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .bt-chance-big {
+    font-family: var(--display-font);
+    font-size: 34px; font-weight: var(--display-weight); line-height: 1;
+    color: var(--coral); margin-bottom: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  .bt-chance-tiers {
+    display: grid; gap: 4px; font-size: 12.5px; color: var(--body);
+  }
+  .bt-chance-tiers .tier-row {
+    display: flex; justify-content: space-between;
+  }
+  .bt-chance-tiers .tier-row b {
+    font-family: "JetBrains Mono", "Consolas", monospace;
+    font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums;
+  }
+
+  /* Section title bands */
+  .bt-section-title {
+    background: var(--ink); color: var(--on-dark);
+    padding: 9px 16px; border-radius: var(--radius);
+    text-align: center; font-weight: 600; font-size: 13px;
+    letter-spacing: 1px; text-transform: uppercase;
+    margin: 26px 0 12px;
+  }
+  :root[data-theme="dark"] .bt-section-title {
+    background: var(--surface-strong); color: var(--ink);
+  }
+  .bt-section-title.neg { background: var(--coral-active); }
+  :root[data-theme="dark"] .bt-section-title.neg {
+    background: var(--primary); color: var(--on-primary);
+  }
+
+  /* Board / table */
+  .bt-board { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .bt-table {
+    border-collapse: collapse; margin: 0 auto 8px; min-width: 760px;
+    background: var(--canvas);
+  }
+  .bt-table th, .bt-table td {
+    border: 1px solid var(--hairline); text-align: center;
+    font-size: 12.5px; padding: 6px;
+  }
+  .bt-table thead th {
+    background: var(--ink); color: var(--on-dark);
+    font-weight: 500; letter-spacing: 0.3px;
+  }
+  :root[data-theme="dark"] .bt-table thead th {
+    background: var(--surface-strong); color: var(--ink);
+  }
+  .bt-table .status-name {
+    text-align: left; font-weight: 600; color: var(--ink);
+    white-space: nowrap; padding: 6px 12px; background: var(--surface-soft);
+  }
+  .bt-table .total-column {
+    background: var(--surface-strong); color: var(--ink); font-weight: 600;
+    font-family: "JetBrains Mono", "Consolas", monospace; white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Slots */
+  .bt-slot {
+    width: 46px; height: 42px; cursor: pointer; user-select: none;
+    background: var(--surface-card); color: var(--body);
+    transition: background 0.2s, filter 0.12s;
+  }
+  .bt-slot .slot-value {
+    font-weight: 600; font-size: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  .bt-slot.clickable:hover { filter: brightness(0.95); box-shadow: inset 0 0 0 2px var(--coral); }
+  .bt-slot.disabled { cursor: not-allowed; opacity: 0.45; }
+  .bt-slot.success {
+    background: #2e9e5b; color: #fff; opacity: 1;
+  }
+  .bt-slot.fail {
+    background: #d65454; color: #fff; opacity: 1;
+  }
+  :root[data-theme="dark"] .bt-slot.success { background: #1f8a4c; }
+  :root[data-theme="dark"] .bt-slot.fail { background: #c0392b; }
+
+  /* How-it-works note */
+  .bt-help {
+    font-size: 13px; color: var(--body); line-height: 1.6;
+    background: var(--orange-bg); border-radius: var(--radius);
+    padding: 14px 18px; margin-bottom: 22px;
+  }
+  :root[data-theme="dark"] .bt-help {
+    background: rgba(245, 166, 35, 0.08); border-left: 2px solid var(--amber);
+  }
+  .bt-help b { color: var(--ink); }
+  .bt-help .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+  .bt-help .legend span { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; }
+  .bt-help .legend i {
+    width: 16px; height: 16px; border-radius: 3px; display: inline-block;
+    border: 1px solid var(--hairline);
+  }
+  .bt-help .legend i.s-empty { background: var(--surface-card); }
+  .bt-help .legend i.s-success { background: #2e9e5b; border-color: #2e9e5b; }
+  .bt-help .legend i.s-fail { background: #d65454; border-color: #d65454; }
+
+  .bt-credit {
+    font-size: 12px; color: var(--muted-soft); margin-top: 24px; text-align: center;
+  }
+  .bt-credit a { color: var(--coral); }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="breakthrough.html" class="is-active">Breakthrough</a>
+    </nav>
+    <span class="nav-meta">tool: breakthrough sim</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <div>
+      <h1>⚡ Breakthrough Simulator</h1>
+      <p class="lead">จำลองการตี Breakthrough (ตีสเตตัส) — เลือก 3 status บวก + 2 status ลบ แล้วลองสุ่มดูว่าจะได้ค่าเท่าไหร่ ภายใน 40 ครั้ง</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">40</div><div class="lbl">attempts</div></div>
+      <div class="hero-stat"><div class="num">75%</div><div class="lbl">base rate</div></div>
+    </div>
+  </div>
+
+  <div class="bt-help">
+    <b>วิธีเล่น:</b> เลือก status ที่ต้องการแล้วกด <b>เริ่มจำลอง</b> จากนั้นคลิกช่องซ้ายสุดของแต่ละแถวเพื่อตี — ตีติดจะปลดช่องถัดไป
+    โอกาสสำเร็จเริ่มที่ <b>75%</b> และจะ <b>ลดลงทุกครั้งที่ตีติด</b> / <b>เพิ่มขึ้นทุกครั้งที่ตีพลาด</b> (แกว่งระหว่าง 25%–75%).
+    มีโอกาสได้ <b>Double / Triple</b> ที่ทำให้ช่องถัดไปติดฟรี. คุณมี 40 ครั้งต่อรอบ.
+    <div class="legend">
+      <span><i class="s-empty"></i> ยังไม่ตี (คลิกได้)</span>
+      <span><i class="s-success"></i> สำเร็จ</span>
+      <span><i class="s-fail"></i> พลาด</span>
+    </div>
+  </div>
+
+  <!-- Setup -->
+  <div class="bt-panel">
+    <h3>ตั้งค่า Status</h3>
+    <div class="bt-select-grid">
+      <div class="bt-select-group">
+        <div class="grp-label">Status บวก (3)</div>
+        <select id="positive1"></select>
+        <select id="positive2"></select>
+        <select id="positive3"></select>
+      </div>
+      <div class="bt-select-group">
+        <div class="grp-label">Status ลบ (2)</div>
+        <select id="negative1"></select>
+        <select id="negative2"></select>
+      </div>
+    </div>
+    <div class="bt-actions">
+      <button id="startGame" class="bt-btn primary">เริ่มจำลอง</button>
+      <button id="resetGame" class="bt-btn ghost" disabled>เริ่มใหม่</button>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="bt-panel">
+    <h3>สถานะการตี</h3>
+    <div class="bt-dash">
+      <div class="bt-stat">
+        <div class="stat-label">ครั้งที่เหลือ</div>
+        <div class="bt-progress-track"><div id="attempts-progress" class="bt-progress-fill"></div></div>
+        <div id="attempts-counter" class="bt-attempts-counter">40 / 40</div>
+      </div>
+      <div class="bt-stat">
+        <div class="stat-label">โอกาสสำเร็จ</div>
+        <div id="success-chance" class="bt-chance-big">75%</div>
+        <div class="bt-chance-tiers">
+          <div class="tier-row"><span>สำเร็จเดี่ยว (Single)</span><b id="simple-chance">59%</b></div>
+          <div class="tier-row"><span>สำเร็จคู่ (Double)</span><b id="double-chance">15%</b></div>
+          <div class="tier-row"><span>สำเร็จสาม (Triple)</span><b id="triple-chance">1%</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Positive board -->
+  <div class="bt-section-title">POSITIVOS · STATUS บวก</div>
+  <div class="bt-board">
+    <table id="positive-table" class="bt-table">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+          <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+          <th>TOTAL</th>
+        </tr>
+      </thead>
+      <tbody><!-- filled by JS --></tbody>
+    </table>
+  </div>
+
+  <!-- Negative board -->
+  <div class="bt-section-title neg">NEGATIVOS · STATUS ลบ</div>
+  <div class="bt-board">
+    <table id="negative-table" class="bt-table">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+          <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+          <th>TOTAL</th>
+        </tr>
+      </thead>
+      <tbody><!-- filled by JS --></tbody>
+    </table>
+  </div>
+
+  <p class="bt-credit">
+    Mechanics &amp; status data ดัดแปลงจาก
+    <a href="https://allanoliveira33.github.io/dmo_breakthrough_simulator/" target="_blank" rel="noopener">dmo_breakthrough_simulator</a>
+    โดย Allan Oliveira — รวมเข้ากับ DMO Tracker
+  </p>
+
+</main>
+
+<footer class="site-footer">
+  Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
+  &nbsp;·&nbsp; Simulator by <a href="https://allanoliveira33.github.io/dmo_breakthrough_simulator/" target="_blank">Allan Oliveira</a>
+  &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+</footer>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────
+// DATA — status upgrade values per level [basic, bonus] (from data.js)
+// ─────────────────────────────────────────────────────────────────────────
+const statusValues = {
+  positives: {
+    "HP":  [[0,0],[0,0],[0,0],[0,0],[50,0],[100,0],[200,0],[300,0],[400,500],[500,600]],
+    "DS":  [[0,0],[0,0],[0,0],[0,0],[50,0],[100,0],[200,0],[300,0],[400,500],[500,600]],
+    "AT":  [[0,0],[0,0],[0,0],[0,0],[30,0],[50,0],[100,0],[300,0],[150,200],[200,300]],
+    "CT":  [[0,0],[0,0],[0,0],[0,0],[0.2,0],[0.3,0],[0.5,0],[1.5,0],[1.0,0.5],[2.0,3.0]],
+    "DEF": [[0,0],[0,0],[0,0],[0,0],[20,0],[30,0],[50,0],[150,0],[100,200],[200,300]],
+    "EV":  [[0,0],[0,0],[0,0],[0,0],[0.2,0],[0.3,0],[0.5,0],[1.5,0],[1.0,0.5],[2.0,3.0]],
+    "HT":  [[0,0],[0,0],[0,0],[0,0],[20,0],[30,0],[50,0],[150,0],[100,50],[200,300]],
+    "BL":  [[0,0],[0,0],[0,0],[0,0],[0.2,0],[0.3,0],[0.5,0],[1.5,0],[1.0,0.5],[2.0,3.0]],
+    "SD-Elemento": [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[1.0,0],[1.0,0],[2.0,0],[2.0,1.0]],
+    "SD-Atributo": [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[1.0,0],[1.0,0],[2.0,0],[2.0,1.0]]
+  },
+  negatives: {
+    "HP":  [[0,0],[0,0],[0,0],[150,0],[150,0],[150,0],[150,0],[150,0],[150,0],[150,0]],
+    "DS":  [[0,0],[0,0],[0,0],[150,0],[150,0],[150,0],[150,0],[150,0],[150,0],[150,0]],
+    "AT":  [[0,0],[0,0],[0,0],[75,0],[75,0],[75,0],[75,0],[75,0],[75,0],[75,0]],
+    "CT":  [[0,0],[0,0],[0,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0]],
+    "DEF": [[0,0],[0,0],[0,0],[50,0],[50,0],[50,0],[50,0],[50,0],[50,0],[50,0]],
+    "EV":  [[0,0],[0,0],[0,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0]],
+    "HT":  [[0,0],[0,0],[0,0],[50,0],[50,0],[50,0],[50,0],[50,0],[50,0],[50,0]],
+    "BL":  [[0,0],[0,0],[0,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0],[0.5,0]],
+    "SD-Elemento": [[0,0],[0,0],[0,0],[1.0,0],[1.0,0],[1.0,0],[1.0,0],[1.0,0],[1.0,0],[1.0,0]],
+    "SD-Atributo": [[0,0],[0,0],[0,0],[1.0,0],[1.0,0],[1.0,0],[1.0,0],[1.0,0],[1.0,0],[1.0,0]]
+  }
+};
+
+const statusTotals = {
+  "HP":2650,"DS":2650,"AT":1330,"CT":9.0,"DEF":1050,"EV":9.0,"HT":900,"BL":9.0,
+  "SD-Elemento":7.0,"SD-Atributo":7.0
+};
+const negativeStatusTotals = {
+  "HP":1050,"DS":1050,"AT":525,"CT":3.5,"DEF":350,"EV":3.5,"HT":350,"BL":3.5,
+  "SD-Elemento":7.0,"SD-Atributo":7.0
+};
+
+const probabilityTiers = [
+  { total:75, simple:59,   double:15, triple:1 },
+  { total:65, simple:54.2, double:10, triple:0.8 },
+  { total:55, simple:49.4, double:5,  triple:0.6 },
+  { total:45, simple:41.6, double:3,  triple:0.4 },
+  { total:35, simple:32.8, double:2,  triple:0.2 },
+  { total:25, simple:23.9, double:1,  triple:0.1 }
+];
+
+const STATUS_OPTIONS = [
+  ["HP","HP"],["DS","DS"],["AT","AT"],["CT","CT"],["DEF","DEF"],
+  ["EV","EV"],["HT","HT"],["BL","BL"],
+  ["SD-Elemento","SD - Elemento"],["SD-Atributo","SD - Atributo"]
+];
+
+// ─────────────────────────────────────────────────────────────────────────
+// STATE + LOGIC (ported from logic.js)
+// ─────────────────────────────────────────────────────────────────────────
+let positiveStatsCreated = {};
+let gameState = freshState();
+
+function freshState() {
+  return {
+    attemptsLeft: 40,
+    currentProbabilityTier: 0,
+    consecutiveSuccesses: 0,
+    consecutiveFailures: 0,
+    gameStarted: false,
+    positiveStats: [],
+    negativeStats: [],
+    statusProgress: {},
+    slotStatus: {}
+  };
+}
+
+function fmtVal(v) {
+  if (Number.isInteger(v) || v === 0) return String(v);
+  return v.toFixed(1) + '%';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Populate selectors
+  document.querySelectorAll('.bt-panel select').forEach(function (sel) {
+    STATUS_OPTIONS.forEach(function (o) {
+      const opt = document.createElement('option');
+      opt.value = o[0]; opt.textContent = o[1];
+      sel.appendChild(opt);
+    });
+  });
+  // Sensible defaults so the boards aren't all the same stat
+  setVal('positive1','HP'); setVal('positive2','AT'); setVal('positive3','DEF');
+  setVal('negative1','EV'); setVal('negative2','BL');
+
+  document.getElementById('startGame').addEventListener('click', startGame);
+  document.getElementById('resetGame').addEventListener('click', resetGame);
+
+  // Re-render the preview boards whenever a selection changes (before the game starts)
+  document.querySelectorAll('.bt-panel select').forEach(sel => {
+    sel.addEventListener('change', () => { if (!gameState.gameStarted) renderPreview(); });
+  });
+
+  renderPreview();              // show the rows immediately on load
+  updateSuccessChanceDisplay();
+});
+
+function setVal(id, v) { const el = document.getElementById(id); if (el) el.value = v; }
+
+function currentSelections() {
+  return {
+    positive: ['positive1','positive2','positive3'].map(id => document.getElementById(id).value),
+    negative: ['negative1','negative2'].map(id => document.getElementById(id).value)
+  };
+}
+
+// Draw the boards in read-only preview mode (no slot is clickable yet).
+function renderPreview() {
+  positiveStatsCreated = {};
+  const sel = currentSelections();
+  generateTable('positive', sel.positive, false);
+  generateTable('negative', sel.negative, false);
+}
+
+function startGame() {
+  gameState.gameStarted = true;
+  document.getElementById('startGame').disabled = true;
+  document.getElementById('resetGame').disabled = false;
+  document.querySelectorAll('.bt-panel select').forEach(s => s.disabled = true);
+
+  gameState.positiveStats = [
+    document.getElementById('positive1').value,
+    document.getElementById('positive2').value,
+    document.getElementById('positive3').value
+  ];
+  gameState.negativeStats = [
+    document.getElementById('negative1').value,
+    document.getElementById('negative2').value
+  ];
+
+  [...gameState.positiveStats, ...gameState.negativeStats].forEach(stat => {
+    gameState.slotStatus[stat] = Array(10).fill().map(() => Array(2).fill('empty'));
+  });
+
+  // Rebuild the boards as a live game (preview built them once already, so
+  // reset the per-stat row counter to keep rowIds at "<stat>-1").
+  positiveStatsCreated = {};
+  generateTable('positive', gameState.positiveStats, true);
+  generateTable('negative', gameState.negativeStats, true);
+  updateUI();
+}
+
+function resetGame() {
+  gameState = freshState();
+  document.getElementById('startGame').disabled = false;
+  document.getElementById('resetGame').disabled = true;
+  document.querySelectorAll('.bt-panel select').forEach(s => s.disabled = false);
+  renderPreview();              // keep the rows visible after a reset
+  updateUI();
+}
+
+function generateTable(statType, stats, interactive = true) {
+  const tbody = document.querySelector(`#${statType}-table tbody`);
+  tbody.innerHTML = '';
+  const valueSet = statType === 'positive' ? statusValues.positives : statusValues.negatives;
+  const totalsSet = statType === 'positive' ? statusTotals : negativeStatusTotals;
+
+  stats.forEach(stat => {
+    const row = document.createElement('tr');
+    positiveStatsCreated[stat] = (positiveStatsCreated[stat] || 0) + 1;
+    const rowId = `${stat}-${positiveStatsCreated[stat]}`;
+
+    const nameCell = document.createElement('td');
+    nameCell.className = 'status-name';
+    nameCell.textContent = stat;
+    row.appendChild(nameCell);
+
+    for (let i = 0; i < 10; i++) {
+      const cell = document.createElement('td');
+      cell.className = `bt-slot ${statType}`;
+      cell.dataset.stat = stat;
+      cell.dataset.level = i;
+      cell.dataset.rowId = rowId;
+
+      const basicValue = valueSet[stat][i][0];
+      const bonusValue = valueSet[stat][i][1];
+      const shown = basicValue + bonusValue;
+      cell.innerHTML = `<span class="slot-value">${fmtVal(shown)}</span>`;
+
+      // Preview mode: every slot is shown but locked. Live mode: only the
+      // first slot of each row starts clickable; the rest unlock as you go.
+      if (!interactive || i > 0) {
+        cell.classList.add('disabled');
+      } else {
+        cell.classList.add('clickable');
+        cell.addEventListener('click', () => attemptUpgrade(stat, i, statType, rowId));
+      }
+      row.appendChild(cell);
+    }
+
+    const totalCell = document.createElement('td');
+    totalCell.className = 'total-column';
+    totalCell.textContent = '0 / ' + (totalsSet[stat] || 0);
+    totalCell.id = `total-${rowId}`;
+    row.appendChild(totalCell);
+
+    tbody.appendChild(row);
+  });
+}
+
+function slotEl(statType, stat, level, rowId) {
+  return document.querySelector(
+    `.bt-slot.${statType}[data-stat="${stat}"][data-level="${level}"][data-row-id="${rowId}"]`
+  );
+}
+
+function attemptUpgrade(stat, level, statType, rowId) {
+  if (!gameState.gameStarted || gameState.attemptsLeft <= 0) return;
+
+  gameState.attemptsLeft--;
+  const tier = probabilityTiers[gameState.currentProbabilityTier];
+  const roll = Math.random() * 100;
+
+  let successType;
+  if (roll < tier.triple) successType = 3;
+  else if (roll < tier.triple + tier.double) successType = 2;
+  else if (roll < tier.total) successType = 1;
+  else successType = 0;
+
+  if (successType > 0) {
+    handleSuccess(stat, level, statType, successType, rowId);
+    gameState.consecutiveSuccesses++; gameState.consecutiveFailures = 0;
+    adjustSuccessProbability(true);
+  } else {
+    handleFailure(stat, level, statType, rowId);
+    gameState.consecutiveFailures++; gameState.consecutiveSuccesses = 0;
+    adjustSuccessProbability(false);
+  }
+  updateUI();
+}
+
+function handleSuccess(stat, level, statType, successType, rowId) {
+  const slot = slotEl(statType, stat, level, rowId);
+  if (slot) {
+    slot.classList.remove('clickable');
+    slot.classList.add('success', 'disabled');
+    gameState.slotStatus[stat][level][0] = 'success';
+
+    const valueArray = (statType === 'positive' ? statusValues.positives : statusValues.negatives)[stat][level];
+    gameState.statusProgress[rowId] = round1((gameState.statusProgress[rowId] || 0) + valueArray[0] + valueArray[1]);
+    updateTotalDisplay(stat, rowId, statType);
+  }
+
+  if (successType > 1) {
+    applyAdditionalSuccesses(stat, level, statType, successType, rowId);
+  } else {
+    enableNextSlots(stat, level, statType, rowId);
+  }
+}
+
+function handleFailure(stat, level, statType, rowId) {
+  const slot = slotEl(statType, stat, level, rowId);
+  if (slot) {
+    slot.classList.remove('clickable');
+    slot.classList.add('fail', 'disabled');
+    gameState.slotStatus[stat][level][0] = 'fail';
+  }
+  enableNextSlots(stat, level, statType, rowId);
+}
+
+function applyAdditionalSuccesses(stat, level, statType, successCount, rowId) {
+  const set = statType === 'positive' ? statusValues.positives : statusValues.negatives;
+  const extra = [];
+  for (let i = level + 1; i < 10; i++) {
+    extra.push({ level: i, value: set[stat][i][0] + set[stat][i][1] });
+  }
+  for (let i = 0; i < successCount - 1 && i < extra.length; i++) {
+    const nx = extra[i];
+    const el = slotEl(statType, stat, nx.level, rowId);
+    if (el) {
+      el.classList.remove('clickable');
+      el.classList.add('success', 'disabled');
+      gameState.slotStatus[stat][nx.level][0] = 'success';
+      gameState.statusProgress[rowId] = round1((gameState.statusProgress[rowId] || 0) + nx.value);
+    }
+  }
+  enableNextSlots(stat, level + (successCount - 1), statType, rowId);
+  updateTotalDisplay(stat, rowId, statType);
+}
+
+function enableNextSlots(stat, level, statType, rowId) {
+  if (level < 9) {
+    const nextSlot = slotEl(statType, stat, level + 1, rowId);
+    if (nextSlot && nextSlot.classList.contains('disabled') &&
+        !nextSlot.classList.contains('success') && !nextSlot.classList.contains('fail')) {
+      nextSlot.classList.remove('disabled');
+      nextSlot.classList.add('clickable');
+      nextSlot.addEventListener('click', () => attemptUpgrade(stat, level + 1, statType, rowId));
+    }
+  }
+}
+
+function updateTotalDisplay(stat, rowId, statType) {
+  const el = document.getElementById(`total-${rowId}`);
+  if (el) {
+    const max = statType === 'positive' ? statusTotals[stat] : negativeStatusTotals[stat];
+    el.textContent = `${round1(gameState.statusProgress[rowId] || 0)} / ${max}`;
+  }
+}
+
+function adjustSuccessProbability(isSuccess) {
+  if (isSuccess) {
+    gameState.currentProbabilityTier = Math.min(probabilityTiers.length - 1, gameState.currentProbabilityTier + 1);
+  } else {
+    gameState.currentProbabilityTier = Math.max(0, gameState.currentProbabilityTier - 1);
+  }
+}
+
+function updateSuccessChanceDisplay() {
+  const t = probabilityTiers[gameState.currentProbabilityTier];
+  document.getElementById('success-chance').textContent = `${t.total}%`;
+  document.getElementById('simple-chance').textContent = `${t.simple}%`;
+  document.getElementById('double-chance').textContent = `${t.double}%`;
+  document.getElementById('triple-chance').textContent = `${t.triple}%`;
+}
+
+function updateUI() {
+  document.getElementById('attempts-counter').textContent = `${gameState.attemptsLeft} / 40`;
+  document.getElementById('attempts-progress').style.width = `${(gameState.attemptsLeft / 40) * 100}%`;
+  updateSuccessChanceDisplay();
+
+  if (gameState.attemptsLeft <= 0) {
+    document.querySelectorAll('.bt-slot:not(.success):not(.fail)').forEach(slot => {
+      slot.classList.remove('clickable');
+      slot.classList.add('fail', 'disabled');
+    });
+  }
+}
+
+function round1(n) { return Math.round(n * 10) / 10; }
+</script>
+
+</body>
+</html>

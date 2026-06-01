@@ -161,8 +161,8 @@
     background: var(--canvas); color: var(--ink); text-align: right; }
   table.calc-tbl .tk { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); }
   table.calc-tbl tr.sub td { background: var(--surface-card); font-weight: 600; border-top: 2px solid var(--hairline); }
-  .calc-total { position: sticky; bottom: 0; margin-top: 16px; background: var(--ink);
-    color: var(--on-dark); border-radius: var(--radius); padding: 14px 20px;
+  .calc-total { position: sticky; top: 6px; z-index: 2; margin: 0 0 16px; background: var(--ink);
+    color: var(--on-dark); border-radius: var(--radius); padding: 12px 20px;
     display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; }
   .calc-total .t { font-size: 13px; opacity: .8; }
   .calc-total .v { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums;
@@ -233,12 +233,12 @@
         <button id="set-master" type="button">ตั้งทุกแถว = 3000 (ถึง Master)</button>
         <button id="clear-want" type="button">ล้างค่าที่กรอก</button>
       </div>
-      <div id="calc-root"></div>
       <div class="calc-total" id="calc-total" hidden>
         <span><span class="t">รวมตั๋ว</span><span class="v" id="tot-tickets">0</span></span>
         <span><span class="t">แพ็ค (÷3000)</span><span class="v" id="tot-packs">0</span></span>
         <span><span class="t">ราคา</span><span class="v" id="tot-price">0</span></span>
       </div>
+      <div id="calc-root"></div>
     </div>
   </details>
 
