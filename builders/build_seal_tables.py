@@ -99,9 +99,12 @@ def compute_matches(data):
     for keys in seqs.values():
         if len(keys) > 1:
             for k in keys:
-                matches[k] |= keys - {k}
+                srv = k.split("-")[0]
+                # cross-server only — a KR list recurring in another KR post
+                # is not a server comparison, so skip same-server twins.
+                matches[k] |= {o for o in keys if o.split("-")[0] != srv}
     return {k: sorted(v, key=lambda x: (_SRV_ORDER.get(x.split("-")[0], 9), x))
-            for k, v in matches.items()}
+            for k, v in matches.items() if v}
 
 
 def _twin_link(k, dates):
