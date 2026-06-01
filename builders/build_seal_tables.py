@@ -73,12 +73,16 @@ CSS = """
   .seal-match a.tw-th { color: var(--teal); border-color: var(--teal); }
   /* per-table notes live inside the details, aligned with the caption */
   .seal-detail .seal-match { margin: -2px 2px 12px; }
-  .seal-cap { display: flex; align-items: center; gap: 7px; }
-  .seal-star { appearance: none; border: 0; background: none; cursor: pointer;
-    font-size: 16px; line-height: 1; padding: 0; color: var(--muted-soft);
-    transition: transform .1s, color .1s; }
-  .seal-star:hover { transform: scale(1.18); color: var(--amber); }
-  .seal-star.on { color: var(--amber); }
+  /* visible "add to calculator" star bar (sits above the table toggle) */
+  .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 20px 10px; }
+  .seal-star { appearance: none; cursor: pointer; font: inherit; font-size: 12px;
+    font-weight: 600; display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 13px; border-radius: 9999px;
+    border: 1px solid var(--hairline); background: var(--surface-soft);
+    color: var(--body); transition: background .12s, border-color .12s, color .12s; }
+  .seal-star .ic { font-size: 15px; line-height: 1; }
+  .seal-star:hover { border-color: var(--amber); color: var(--amber); }
+  .seal-star.on { background: var(--amber); border-color: var(--amber); color: var(--on-primary); }
 """
 
 CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
@@ -144,14 +148,17 @@ def block_for(key, data, tmatch=None, dates=None):
     inner = [f"<!--ST:{key}-->"]
     if single and tmatch.get(0):          # one table -> note above the toggle
         inner.append(note(tmatch[0]))
+    # visible star bar — add a table to the calculator without expanding it
+    bar = "".join(
+        f'<button class="seal-star" data-tkey="{key}#{ti}" type="button" '
+        f'title="ใส่ตารางนี้ในเครื่องคิดเลข">'
+        f'<span class="ic">☆</span>{"คิดราคา" if single else f"ตาราง {ti + 1}"}</button>'
+        for ti in range(len(tables)))
+    inner.append(f'<div class="seal-starbar">{bar}</div>')
     label = "ดูตารางแลกซีล" + (f" · {len(tables)} ตาราง" if not single else "")
     inner.append(f'<details class="seal-detail"><summary>📋 {label}</summary>')
     for ti, t in enumerate(tables):
-        tkey = f"{key}#{ti}"
-        inner.append(
-            f'<div class="seal-cap"><button class="seal-star" data-tkey="{tkey}" '
-            f'type="button" title="เพิ่มตารางนี้เข้าเครื่องคิดเลข" '
-            f'aria-label="star">☆</button>{t["caption"]}</div>')
+        inner.append(f'<div class="seal-cap">{t["caption"]}</div>')
         if not single and tmatch.get(ti):  # many tables -> note per table
             inner.append(note(tmatch[ti]))
         inner.append(f'<div class="seal-tbl-wrap">{t["html"]}</div>')
