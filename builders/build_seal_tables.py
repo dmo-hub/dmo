@@ -62,10 +62,14 @@ CSS = """
   table.seal-tbl tr:last-child td { border-bottom: 0; }
   .seal-match { margin: 2px 20px 14px; font-size: 12px; color: var(--muted); }
   .seal-match .lbl { color: var(--muted-soft); }
-  .seal-match a { color: var(--coral); text-decoration: none; font-weight: 500;
+  .seal-match a { color: var(--body); text-decoration: none; font-weight: 500;
     border: 1px solid var(--hairline); border-radius: 9999px; padding: 2px 9px;
     margin-right: 4px; white-space: nowrap; }
   .seal-match a:hover { background: var(--surface-soft); }
+  /* twin link wears the colour of the server it points to */
+  .seal-match a.tw-na { color: var(--amber); border-color: var(--amber); }
+  .seal-match a.tw-kr { color: var(--coral); border-color: var(--coral); }
+  .seal-match a.tw-th { color: var(--teal); border-color: var(--teal); }
 """
 
 CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
@@ -112,7 +116,7 @@ def _twin_link(k, dates):
     post id when the date is unknown)."""
     srv, idp = k.split("-", 1)
     label = dates.get(k) or idp
-    return f'<a href="#{k}">{srv.upper()} {label}</a>'
+    return f'<a class="tw-{srv}" href="#{k}">{srv.upper()} {label}</a>'
 
 
 def block_for(key, data, twins=(), dates=None):
