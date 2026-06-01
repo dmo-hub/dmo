@@ -164,11 +164,18 @@
   table.calc-tbl .tk { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); }
   table.calc-tbl tr.sub td { background: var(--surface-card); font-weight: 600; border-top: 2px solid var(--hairline); }
   .calc-total { position: sticky; top: 6px; z-index: 2; margin: 0 0 16px; background: var(--ink);
-    color: var(--on-dark); border-radius: var(--radius); padding: 12px 20px;
-    display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; }
-  .calc-total .t { font-size: 13px; opacity: .8; }
-  .calc-total .v { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums;
-    font-family: var(--display-font); margin-left: 6px; }
+    color: var(--on-dark); border-radius: var(--radius); padding: 6px;
+    display: flex; flex-direction: column; gap: 2px; }
+  .calc-total .ct-row { display: flex; align-items: baseline; justify-content: space-between;
+    gap: 16px; padding: 9px 14px; border-radius: var(--radius-xs); }
+  .calc-total .ct-row + .ct-row { border-top: 1px solid rgba(255,255,255,.10); }
+  .calc-total .t { font-size: 13px; opacity: .82; }
+  .calc-total .t small { opacity: .65; font-size: 11px; font-weight: 400; }
+  .calc-total .v { font-size: 21px; font-weight: 600; font-variant-numeric: tabular-nums;
+    font-family: var(--display-font); letter-spacing: -.3px; }
+  .calc-total .ct-price { background: rgba(217,119,6,.16); }
+  .calc-total .ct-price .t { opacity: 1; }
+  .calc-total .ct-price .v { font-size: 26px; color: var(--amber); }
   .calc-empty { text-align: center; color: var(--muted-soft); padding: 30px 20px;
     border: 1px dashed var(--hairline); border-radius: var(--radius); font-size: 13.5px; line-height: 1.7; }
   .calc-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 5px;
@@ -236,9 +243,9 @@
         <button id="clear-want" type="button">ล้างค่าที่กรอก</button>
       </div>
       <div class="calc-total" id="calc-total" hidden>
-        <span><span class="t">รวมตั๋ว</span><span class="v" id="tot-tickets">0</span></span>
-        <span><span class="t">แพ็ค (÷3000)</span><span class="v" id="tot-packs">0</span></span>
-        <span><span class="t">ราคา</span><span class="v" id="tot-price">0</span></span>
+        <div class="ct-row"><span class="t">🎟️ รวมตั๋ว</span><span class="v" id="tot-tickets">0</span></div>
+        <div class="ct-row"><span class="t">📦 แพ็ค <small>÷ 3,000</small></span><span class="v" id="tot-packs">0</span></div>
+        <div class="ct-row ct-price"><span class="t">💵 ราคา</span><span class="v" id="tot-price">0</span></div>
       </div>
       <div id="calc-root"></div>
     </div>
