@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>DMO Seal Calculator</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<style>
+  .calc-controls {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
+    margin: 0 0 20px; padding: 14px 18px;
+    background: var(--surface-soft); border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+  }
+  .calc-controls label { font-size: 13px; color: var(--body); font-weight: 500;
+    display: inline-flex; align-items: center; gap: 8px; }
+  .calc-controls input[type=number] {
+    width: 90px; padding: 6px 9px; font: inherit; font-size: 13px;
+    border: 1px solid var(--hairline); border-radius: var(--radius-xs);
+    background: var(--canvas); color: var(--ink); text-align: right; }
+  .calc-controls .fixed { color: var(--muted-soft); font-size: 12.5px; }
+  .calc-controls .spacer { flex: 1 1 auto; }
+  .calc-controls button {
+    appearance: none; border: 1px solid var(--hairline); cursor: pointer;
+    background: var(--canvas); color: var(--body); font: inherit; font-size: 12.5px;
+    padding: 6px 12px; border-radius: 9999px; }
+  .calc-controls button:hover { background: var(--surface-card); }
+
+  .calc-card { border: 1px solid var(--hairline); border-radius: var(--radius);
+    background: var(--canvas); margin: 0 0 16px; overflow: hidden; }
+  .calc-card-head { display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; border-bottom: 1px solid var(--hairline);
+    background: var(--surface-soft); }
+  .calc-srv { font-size: 9.5px; font-weight: 600; letter-spacing: 1.2px;
+    text-transform: uppercase; padding: 2px 8px; border-radius: 9999px;
+    background: var(--surface-card); color: var(--body); }
+  .calc-srv.s-kr { background: var(--coral); color: var(--on-primary); }
+  .calc-srv.s-th { background: var(--teal); color: var(--on-primary); }
+  .calc-srv.s-na { background: var(--amber); color: var(--on-primary); }
+  .calc-card-head .cap { font-size: 12.5px; color: var(--ink); font-weight: 500; }
+  .calc-card-head .dt { font-size: 11px; color: var(--muted-soft);
+    font-family: "JetBrains Mono", monospace; }
+  .calc-card-head .rm { margin-left: auto; appearance: none; border: 0;
+    background: none; cursor: pointer; color: var(--muted-soft); font-size: 16px; }
+  .calc-card-head .rm:hover { color: var(--coral); }
+
+  .calc-tbl-wrap { overflow-x: auto; }
+  table.calc-tbl { border-collapse: collapse; width: 100%; font-size: 12px; min-width: 420px; }
+  table.calc-tbl th, table.calc-tbl td { padding: 6px 11px; text-align: center;
+    border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+  table.calc-tbl tr:first-child th { background: var(--surface-card); color: var(--ink); }
+  table.calc-tbl td:first-child, table.calc-tbl th:first-child {
+    text-align: left; font-weight: 500; }
+  table.calc-tbl tr:nth-child(even) td { background: var(--surface-soft); }
+  table.calc-tbl input.want { width: 76px; padding: 4px 7px; font: inherit; font-size: 12px;
+    border: 1px solid var(--hairline); border-radius: var(--radius-xs);
+    background: var(--canvas); color: var(--ink); text-align: right; }
+  table.calc-tbl .tk { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); }
+  table.calc-tbl tr.sub td { background: var(--surface-card); font-weight: 600;
+    border-top: 2px solid var(--hairline); }
+
+  .calc-total { position: sticky; bottom: 0; margin-top: 18px;
+    background: var(--ink); color: var(--on-dark); border-radius: var(--radius);
+    padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; }
+  .calc-total .t { font-size: 13px; opacity: .8; }
+  .calc-total .v { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums;
+    font-family: var(--display-font); margin-left: 6px; }
+  .calc-empty { text-align: center; color: var(--muted-soft); padding: 48px 20px;
+    border: 1px dashed var(--hairline); border-radius: var(--radius); font-size: 14px; line-height: 1.7; }
+  .calc-empty a { color: var(--coral); }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="seal-calc.html" class="is-active">Calc</a>
+      <a href="breakthrough.html">Breakthrough</a>
+    </nav>
+    <span class="nav-meta">seal exchange · ticket &amp; price</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <div>
+      <h1>🧮 Seal Calculator</h1>
+      <p class="lead">กดดาว ⭐ ตารางที่หน้า <a href="seals.html">Seal</a> → มาคำนวณตั๋วแลกการ์ดซีล + ราคาที่นี่</p>
+    </div>
+  </div>
+
+  <div class="calc-controls">
+    <label>ราคา/แพ็ค <input type="number" id="price-pack" min="0" step="1" value="240"></label>
+    <span class="fixed">· 1 แพ็ค = 3,000 ตั๋ว (คงที่)</span>
+    <span class="spacer"></span>
+    <button id="set-master" type="button">ตั้งทุกแถว = 3000 (ถึง Master)</button>
+    <button id="clear-want" type="button">ล้างค่าที่กรอก</button>
+  </div>
+
+  <div id="calc-root"></div>
+
+  <div class="calc-total" id="calc-total" hidden>
+    <span><span class="t">รวมตั๋ว</span><span class="v" id="tot-tickets">0</span></span>
+    <span><span class="t">แพ็ค (÷3000)</span><span class="v" id="tot-packs">0</span></span>
+    <span><span class="t">ราคา</span><span class="v" id="tot-price">0</span></span>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
+  &nbsp;·&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
+  &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+</footer>
+
+<script>
+(() => {
+  const PACK = 3000;                                  // tickets per pack (fixed)
+  const STARS_KEY = 'dmo_seal_stars';
+  const WANT_KEY  = 'dmo_seal_want';
+  const PRICE_KEY = 'dmo_seal_pricepack';
+  const root = document.getElementById('calc-root');
+  const totalBar = document.getElementById('calc-total');
+  const priceInput = document.getElementById('price-pack');
+  const fmt = n => n.toLocaleString('en-US');
+  const fmt2 = n => n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+  const jget = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } };
+  const stars = () => jget(STARS_KEY, []);
+  const setStars = a => localStorage.setItem(STARS_KEY, JSON.stringify(a));
+  let want = jget(WANT_KEY, {});                       // {tkey: {sealName: qty}}
+  const saveWant = () => localStorage.setItem(WANT_KEY, JSON.stringify(want));
+  priceInput.value = jget(PRICE_KEY, 240);
+
+  // ticket cost for one seal row: round UP to whole exchanges
+  const ticketsFor = (qtyWanted, perExchange, ticketsPerExchange) =>
+    (qtyWanted > 0 && perExchange > 0)
+      ? Math.ceil(qtyWanted / perExchange) * ticketsPerExchange : 0;
+
+  let DATA = {};
+
+  function recalc() {
+    let grand = 0;
+    document.querySelectorAll('.calc-card').forEach(card => {
+      let sub = 0;
+      card.querySelectorAll('tr[data-seal]').forEach(tr => {
+        const inp = tr.querySelector('input.want');
+        const e = +tr.dataset.e, f = +tr.dataset.f;
+        const w = parseInt(inp.value, 10) || 0;
+        const tk = ticketsFor(w, e, f);
+        tr.querySelector('.tk').textContent = tk ? fmt(tk) : '–';
+        sub += tk;
+      });
+      card.querySelector('.sub .tk').textContent = fmt(sub);
+      grand += sub;
+    });
+    const price = +priceInput.value || 0;
+    document.getElementById('tot-tickets').textContent = fmt(grand);
+    document.getElementById('tot-packs').textContent = fmt2(grand / PACK);
+    document.getElementById('tot-price').textContent = fmt2(grand / PACK * price);
+  }
+
+  function render() {
+    const keys = stars().filter(k => DATA[k]);
+    root.innerHTML = '';
+    if (!keys.length) {
+      totalBar.hidden = true;
+      root.innerHTML = '<div class="calc-empty">ยังไม่ได้ติดดาวตารางไหน 🌟<br>' +
+        'ไปที่หน้า <a href="seals.html">Seal</a> แล้วกดดาว ☆ บนตารางที่อยากคำนวณ</div>';
+      return;
+    }
+    totalBar.hidden = false;
+    keys.forEach(k => {
+      const t = DATA[k];
+      const card = document.createElement('div');
+      card.className = 'calc-card';
+      card.dataset.tkey = k;
+      const rowsHtml = t.rows.map(r => {
+        const name = r[0], e = r[1], f = r[2];
+        const saved = (want[k] && want[k][name]) || '';
+        return `<tr data-seal="${name.replace(/"/g,'&quot;')}" data-e="${e}" data-f="${f}">
+          <td>${name}</td><td>${e}</td><td>${f}</td>
+          <td><input class="want" type="number" min="0" step="1" value="${saved}"></td>
+          <td class="tk">–</td></tr>`;
+      }).join('');
+      card.innerHTML = `
+        <div class="calc-card-head">
+          <span class="calc-srv s-${t.server}">${t.server.toUpperCase()}</span>
+          <span class="dt">${t.date}</span>
+          <span class="cap">${t.caption}</span>
+          <button class="rm" type="button" title="เอาออก">✕</button>
+        </div>
+        <div class="calc-tbl-wrap"><table class="calc-tbl">
+          <tr><th>ซีล</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>อยากได้</th><th>ใช้ตั๋ว</th></tr>
+          ${rowsHtml}
+          <tr class="sub"><td colspan="4">รวมตั๋วตารางนี้</td><td class="tk">0</td></tr>
+        </table></div>`;
+      // remove (unstar)
+      card.querySelector('.rm').addEventListener('click', () => {
+        setStars(stars().filter(x => x !== k));
+        render();
+      });
+      // input -> save + recalc
+      card.querySelectorAll('input.want').forEach(inp => {
+        inp.addEventListener('input', () => {
+          const name = inp.closest('tr').dataset.seal;
+          want[k] = want[k] || {};
+          if (inp.value === '') delete want[k][name]; else want[k][name] = inp.value;
+          saveWant(); recalc();
+        });
+      });
+      root.appendChild(card);
+    });
+    recalc();
+  }
+
+  priceInput.addEventListener('input', () => {
+    localStorage.setItem(PRICE_KEY, priceInput.value || 0); recalc();
+  });
+  document.getElementById('set-master').addEventListener('click', () => {
+    document.querySelectorAll('.calc-card').forEach(card => {
+      const k = card.dataset.tkey; want[k] = want[k] || {};
+      card.querySelectorAll('tr[data-seal]').forEach(tr => {
+        const inp = tr.querySelector('input.want'); inp.value = 3000;
+        want[k][tr.dataset.seal] = '3000';
+      });
+    });
+    saveWant(); recalc();
+  });
+  document.getElementById('clear-want').addEventListener('click', () => {
+    want = {}; saveWant();
+    document.querySelectorAll('input.want').forEach(i => i.value = '');
+    recalc();
+  });
+
+  fetch('seal_data.json')
+    .then(r => r.json())
+    .then(d => { DATA = d; render(); })
+    .catch(() => {
+      root.innerHTML = '<div class="calc-empty">โหลดข้อมูลไม่ได้ — เปิดหน้านี้ผ่านเว็บ (GitHub Pages) ' +
+        'ไม่ใช่เปิดไฟล์ตรง ๆ นะครับ</div>';
+    });
+})();
+</script>
+</body>
+</html>

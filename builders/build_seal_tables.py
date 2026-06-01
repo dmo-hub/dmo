@@ -23,6 +23,7 @@ except Exception:
 PROJ = Path(__file__).resolve().parent.parent
 HTML = PROJ / "docs" / "seals.html"
 DATA = PROJ / "data" / "seal_tables.json"
+SEAL_DATA_OUT = PROJ / "docs" / "seal_data.json"   # per-table data for calc.html
 
 CSS = """
   /* injected by build_seal_tables.py — seal exchange tables */
@@ -72,6 +73,12 @@ CSS = """
   .seal-match a.tw-th { color: var(--teal); border-color: var(--teal); }
   /* per-table notes live inside the details, aligned with the caption */
   .seal-detail .seal-match { margin: -2px 2px 12px; }
+  .seal-cap { display: flex; align-items: center; gap: 7px; }
+  .seal-star { appearance: none; border: 0; background: none; cursor: pointer;
+    font-size: 16px; line-height: 1; padding: 0; color: var(--muted-soft);
+    transition: transform .1s, color .1s; }
+  .seal-star:hover { transform: scale(1.18); color: var(--amber); }
+  .seal-star.on { color: var(--amber); }
 """
 
 CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
@@ -140,13 +147,51 @@ def block_for(key, data, tmatch=None, dates=None):
     label = "ดูตารางแลกซีล" + (f" · {len(tables)} ตาราง" if not single else "")
     inner.append(f'<details class="seal-detail"><summary>📋 {label}</summary>')
     for ti, t in enumerate(tables):
-        inner.append(f'<div class="seal-cap">{t["caption"]}</div>')
+        tkey = f"{key}#{ti}"
+        inner.append(
+            f'<div class="seal-cap"><button class="seal-star" data-tkey="{tkey}" '
+            f'type="button" title="เพิ่มตารางนี้เข้าเครื่องคิดเลข" '
+            f'aria-label="star">☆</button>{t["caption"]}</div>')
         if not single and tmatch.get(ti):  # many tables -> note per table
             inner.append(note(tmatch[ti]))
         inner.append(f'<div class="seal-tbl-wrap">{t["html"]}</div>')
     inner.append("</details>")
     inner.append("<!--/ST-->")
     return "\n        " + "\n        ".join(inner)
+
+
+def _table_rows_only(html):
+    """Data rows (no header) of a normalized seal table as lists of cells."""
+    out = []
+    for tr in re.findall(r"<tr>(.*?)</tr>", html, re.S)[1:]:
+        cells = [re.sub(r"<[^>]+>", "", x).strip()
+                 for x in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+        if cells:
+            out.append(cells)
+    return out
+
+
+def emit_seal_data(data, html):
+    """Write docs/seal_data.json — one entry per table, keyed key#index, so
+    calc.html can fetch the seals a user stars and run the ticket/price calc."""
+    dates = dict(re.findall(
+        r'<article\b[^>]*\bid="([^"]+)"[^>]*>.*?<span class="src-date">([^<]+)</span>',
+        html, re.S))
+    out = {}
+    for key, v in data.items():
+        if not v.get("tables"):
+            continue
+        srv = key.split("-")[0]
+        for ti, t in enumerate(v["tables"]):
+            out[f"{key}#{ti}"] = {
+                "server": srv,
+                "date": dates.get(key, ""),
+                "caption": t.get("caption", ""),
+                "rows": _table_rows_only(t["html"]),
+            }
+    SEAL_DATA_OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1),
+                             encoding="utf-8")
+    print(f"  wrote {SEAL_DATA_OUT.name} ({len(out)} tables)")
 
 
 def drop_empty_months(html):
@@ -238,6 +283,7 @@ def main():
     html = update_counts(html, data)
 
     HTML.write_text(html, encoding="utf-8")
+    emit_seal_data(data, html)            # per-table data for calc.html
     n_tbl = sum(len(v.get("tables", [])) for v in data.values())
     print(f"Injected into {injected} cards, removed {removed} no-table cards "
           f"({n_tbl} tables total) -> {HTML}")
