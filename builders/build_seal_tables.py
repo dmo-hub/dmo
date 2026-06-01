@@ -151,8 +151,8 @@ def block_for(key, data, tmatch=None, dates=None):
     # visible star bar — add a table to the calculator without expanding it
     bar = "".join(
         f'<button class="seal-star" data-tkey="{key}#{ti}" type="button" '
-        f'title="ใส่ตารางนี้ในเครื่องคิดเลข">'
-        f'<span class="ic">☆</span>{"คิดราคา" if single else f"ตาราง {ti + 1}"}</button>'
+        f'title="เพิ่มเข้ารายการติดตาม">'
+        f'<span class="ic">☆</span>{"รายการติดตาม" if single else f"รายการติดตาม #{ti + 1}"}</button>'
         for ti in range(len(tables)))
     inner.append(f'<div class="seal-starbar">{bar}</div>')
     label = "ดูตารางแลกซีล" + (f" · {len(tables)} ตาราง" if not single else "")
