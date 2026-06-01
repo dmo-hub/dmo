@@ -146,9 +146,11 @@
   .calc-srv.s-na { background: var(--amber); color: var(--on-primary); }
   .calc-card-head .cap { font-size: 12.5px; color: var(--ink); font-weight: 500; }
   .calc-card-head .dt { font-size: 11px; color: var(--muted-soft); font-family: "JetBrains Mono", monospace; }
-  .calc-card-head .rm { margin-left: auto; appearance: none; border: 0; background: none;
-    cursor: pointer; color: var(--muted-soft); font-size: 16px; }
-  .calc-card-head .rm:hover { color: var(--coral); }
+  .calc-card-head .rm { margin-left: auto; appearance: none; cursor: pointer;
+    font: inherit; font-size: 11.5px; font-weight: 600; color: var(--muted);
+    background: var(--canvas); border: 1px solid var(--hairline);
+    border-radius: 9999px; padding: 4px 12px; white-space: nowrap; }
+  .calc-card-head .rm:hover { color: var(--on-primary); background: var(--coral); border-color: var(--coral); }
   .calc-tbl-wrap { overflow-x: auto; }
   table.calc-tbl { border-collapse: collapse; width: 100%; font-size: 12px; min-width: 420px; }
   table.calc-tbl th, table.calc-tbl td { padding: 6px 11px; text-align: center;
@@ -2187,7 +2189,7 @@
       card.innerHTML = `
         <div class="calc-card-head"><span class="calc-srv s-${t.server}">${t.server.toUpperCase()}</span>
           <span class="dt">${t.date}</span><span class="cap">${t.caption}</span>
-          <button class="rm" type="button" title="เอาตารางนี้ออก">✕</button></div>
+          <button class="rm" type="button" title="เลิกติดตามตารางนี้">✕ เลิกติดตาม</button></div>
         ${statsList.length > 1 ? `<div class="calc-filter"><span class="lbl">Stat:</span>${chips}</div>` : ''}
         <div class="calc-tbl-wrap"><table class="calc-tbl">
           <tr><th>ซีล</th><th>Stat</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>อยากได้</th><th>ใช้ตั๋ว</th><th class="rm-cell"></th></tr>
