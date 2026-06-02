@@ -6,7 +6,7 @@
    See DESIGN-dmo.md for the dark-theme token reference.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
 
 /* ============================================================
    LIGHT theme (default) — Minimal white + blue
@@ -52,7 +52,7 @@
   --hairline-soft: #e8edf5;
 
   /* Per-theme typography swap */
-  --display-font: "Source Serif 4", "Tiempos Headline", "Georgia", "Cambria", serif;
+  --display-font: "Prompt", "Segoe UI", sans-serif;
   --display-weight: 400;
   --display-tracking: -0.7px;
 
@@ -130,7 +130,7 @@
   --hairline-soft: #1f2330;
 
   /* Typography swap → tight modern sans */
-  --display-font: "Inter", "SST Pro", "Segoe UI", sans-serif;
+  --display-font: "Prompt", "SST Pro", "Segoe UI", sans-serif;
   --display-weight: 700;
   --display-tracking: -0.8px;
 
@@ -145,7 +145,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
 body {
-  font-family: "Inter", "StyreneB", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Prompt", "StyreneB", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   margin: 0; color: var(--body); background: var(--canvas);
   line-height: 1.55; font-size: 15px;
   -webkit-font-smoothing: antialiased;
@@ -164,7 +164,7 @@ h1, .display, .display-xl, .display-lg, .display-md {
 
 /* Section / card titles use sans for utility */
 h2, h3, h4 {
-  font-family: "Inter", "StyreneB", "Segoe UI", sans-serif;
+  font-family: "Prompt", "StyreneB", "Segoe UI", sans-serif;
   color: var(--ink);
 }
 
@@ -376,7 +376,7 @@ h2, h3, h4 {
 .tl-month-label {
   font-size: 11px; font-weight: 600; color: var(--ink);
   text-transform: uppercase; letter-spacing: 1.5px;
-  font-family: "Inter", sans-serif;
+  font-family: "Prompt", sans-serif;
 }
 .tl-month-count {
   font-size: 11px; color: var(--muted-soft);
