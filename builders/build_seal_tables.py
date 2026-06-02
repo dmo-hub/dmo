@@ -89,29 +89,48 @@ CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
 ST_RE = re.compile(r"\n?[ \t]*<!--ST:[^>]*?-->.*?<!--/ST-->", re.S)
 
 _SRV_ORDER = {"na": 0, "kr": 1, "th": 2}
+_TH_EN_PATH = PROJ / "data" / "th_seal_en.json"
+TH_EN = (json.loads(_TH_EN_PATH.read_text(encoding="utf-8"))
+         if _TH_EN_PATH.exists() else {})
 
 
-def _row_seq(html):
-    """Rate-tuple sequence (qty,ticket,stat,max) of a table's data rows."""
-    out = []
+def _norm_seal(s):
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+def _name_multiset(html, server):
+    """Multiset of canonical English seal names. TH names are translated via
+    TH_EN; an untranslated TH name is namespaced so it never matches by chance."""
+    from collections import Counter
+    ms = Counter()
     for tr in re.findall(r"<tr>(.*?)</tr>", html, re.S)[1:]:
-        c = [re.sub(r"<[^>]+>", "", x).strip()
-             for x in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
-        if len(c) >= 5:
-            out.append((c[1], c[2], c[3], c[4]))
-    return tuple(out)
+        cells = [re.sub(r"<[^>]+>", "", x).strip()
+                 for x in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
+        if not cells or not cells[0]:
+            continue
+        raw = re.sub(r"\[[^\]]*\]", "", cells[0]).strip()
+        if server == "th":
+            base = re.sub(r"\s*ซีล.*$", "", raw).strip()
+            en = TH_EN.get(base)
+            key = _norm_seal(en) if en else "th:" + _norm_seal(re.sub(r"ซีล", "", base))
+        else:
+            key = _norm_seal(re.sub(r"\s*Seal.*$", "", raw))
+        if key:
+            ms[key] += 1
+    return ms
 
 
 def compute_matches(data):
-    """Map each post-key to the keys on OTHER servers whose exchange list is
-    identical (same seal qty/ticket/stat/max sequence)."""
+    """Map each post-key to the keys on OTHER servers whose exchange list has
+    the SAME seals (English-name multiset, order-independent; TH via TH_EN)."""
     from collections import defaultdict
-    seqs = defaultdict(list)              # sequence -> [(key, table_index)]
+    seqs = defaultdict(list)              # name-multiset -> [(key, table_index)]
     for key, v in data.items():
+        srv = key.split("-")[0]
         for ti, t in enumerate(v.get("tables", [])):
-            s = _row_seq(t["html"])
-            if s:
-                seqs[s].append((key, ti))
+            ms = _name_multiset(t["html"], srv)
+            if ms:
+                seqs[frozenset(ms.items())].append((key, ti))
     res = defaultdict(dict)               # key -> {table_index: [twin keys]}
     for members in seqs.values():
         for key, ti in members:

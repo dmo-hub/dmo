@@ -106,7 +106,15 @@ python builders/compare_digimon_sources.py 731          # just one idx
 #     KR table cells are shown in English via data/kr_seal_en.json (Korean
 #     seal-name -> official English; unmapped names stay Korean). build_seal_tables.py
 #     also removes cards with no table and refreshes hero/tab counts.
+#     Cross-server "same list" notes match by ACTUAL SEAL NAMES (order-independent
+#     multiset), not by rate — TH Thai names are mapped to the KR/NA English
+#     spelling via data/th_seal_en.json (build_th_seal_en.py bootstraps it from
+#     rate-aligned pairs + a manual tail). The Seal page also embeds a
+#     localStorage "Seal Budget" calculator (per-table ⭐, per-server sub-tabs,
+#     ticket = ceil(want/qty)*tickets, packs = /3000, price = *editable/pack)
+#     fed by docs/seal_data.json.
 python builders/extract_seal_tables.py
+python builders/build_th_seal_en.py
 python builders/build_seal_tables.py
 ```
 
