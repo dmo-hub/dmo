@@ -15,6 +15,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))   # for `import aliases`
+import aliases  # noqa: E402  central dub/JP name canonicaliser
+
 try:
     sys.stdout.reconfigure(encoding="utf-8")
 except Exception:
@@ -86,7 +89,10 @@ CSS = """
 """
 
 CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
-ST_RE = re.compile(r"\n?[ \t]*<!--ST:[^>]*?-->.*?<!--/ST-->", re.S)
+# Strip the leading newline+indent AND the trailing newline+indent we add
+# around the block on inject (step 3), so repeated rebuilds don't accumulate
+# blank lines before each card's </article> (keeps the build idempotent).
+ST_RE = re.compile(r"\n?[ \t]*<!--ST:[^>]*?-->.*?<!--/ST-->[ \t]*\n?[ \t]*", re.S)
 
 _SRV_ORDER = {"na": 0, "kr": 1, "th": 2}
 _TH_EN_PATH = PROJ / "data" / "th_seal_en.json"
@@ -95,7 +101,9 @@ TH_EN = (json.loads(_TH_EN_PATH.read_text(encoding="utf-8"))
 
 
 def _norm_seal(s):
-    return re.sub(r"[^a-z0-9]", "", s.lower())
+    # alias-fold dub/JP spellings of the same digimon (Scorpiomon==Anomalocarimon)
+    # so KR and NA lists compare equal; aliases.norm also strips " Seal"/[tags].
+    return aliases.norm(s)
 
 
 def _name_multiset(html, server):

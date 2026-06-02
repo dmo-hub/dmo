@@ -1,0 +1,22 @@
+name: validate
+
+# Lightweight gate on every push / PR: parse all JSON and check that every
+# published HTML page has balanced tags. No network, no scrape, no commit —
+# just keeps a broken page from reaching GitHub Pages.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: JSON + HTML checks
+        run: python tools/validate.py --no-build

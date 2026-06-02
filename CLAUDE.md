@@ -116,6 +116,14 @@ python builders/compare_digimon_sources.py 731          # just one idx
 python builders/extract_seal_tables.py
 python builders/build_th_seal_en.py
 python builders/build_seal_tables.py
+
+# 16. Static site checks (no network). Run before committing / in CI:
+#     - every data/*.json + docs/*.json parses
+#     - every docs/*.html has balanced tags
+#     - the deterministic builders are idempotent (re-running them leaves no
+#       git diff — catches template drift and accumulation bugs)
+python tools/validate.py              # all checks
+python tools/validate.py --no-build   # skip the rebuild/idempotency check
 ```
 
 ⚠️ **`scanners/scan_digimon.py` is destructive.** It rewrites
@@ -129,6 +137,27 @@ and the KR site (digimonmasters.com) are trusted for digimon stats.
 `digitalmastersworld.wiki.gg` (formerly cached as `cache/dmw_*.html`) is
 **blocklisted** — its Awaken/Extreme pages return base-form data that
 disagrees with the game. Do not re-introduce it.
+
+**Digimon name aliases (dub vs JP).** KR and NA both label seals in English but
+sometimes pick different spellings for the *same* digimon — one the English-dub
+name, one the Japanese romanization (Scorpiomon = Anomalocarimon, Garbagemon =
+Gerbemon, Datamon = Nanomon). `data/digimon_aliases.json` (canonical name →
+[alt spellings]) folds these onto one key via `builders/aliases.py`
+(`norm()` for comparison, `canonical()` for display). `build_seal_tables._norm_seal`
+uses it so cross-server lists line up. ⚠️ Only add a pair after confirming on
+wikimon.net that it is genuinely one digimon — do NOT merge two distinct digimon
+one stage apart (MachGaogamon ≠ MirageGaogamon, both real). The cards still show
+each server's own spelling; aliasing only affects *matching*.
+
+**CI / automation.** Two GitHub Actions (manual + push-gated, never auto-push):
+- `.github/workflows/validate.yml` — runs `tools/validate.py --no-build` on every
+  push/PR (JSON + HTML balance). A broken page fails the check before Pages rebuilds.
+- `.github/workflows/refresh.yml` — `workflow_dispatch` only. Re-runs the
+  *cloud-safe* half of the pipeline (seal extract/build + KR/TH digimon refs +
+  rebuild digimon.html) on a runner, validates, and opens a **PR** for review.
+  Deliberately skips `scan_digimon.py` (destructive), attribute enrichment (needs
+  Chrome CDP past Cloudflare), and image extraction (binaries) — those stay local.
+  Because `cache/` is gitignored, the runner fetches live each run.
 
 There is no test suite, lint config, package manifest, or virtualenv setup. Only runtime dep is `requests`.
 

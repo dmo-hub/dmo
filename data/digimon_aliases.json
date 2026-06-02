@@ -1,0 +1,6 @@
+{
+  "_README": "Central Digimon-name alias map. Each canonical name (the spelling we want to match ON) maps to a list of alternate spellings the servers use for the SAME digimon — typically English-dub vs Japanese-romanized names. Used by builders/aliases.py to fold every spelling onto one key so cross-server data lines up. ONLY add a pair after confirming on wikimon.net that it is genuinely one digimon under two names; do NOT list two distinct digimon (e.g. MachGaogamon != MirageGaogamon, both real and one stage apart).",
+  "Anomalocarimon": ["Scorpiomon"],
+  "Gerbemon": ["Garbagemon"],
+  "Nanomon": ["Datamon"]
+}
