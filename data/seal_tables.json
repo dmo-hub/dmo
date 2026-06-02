@@ -586,6 +586,19 @@
     ],
     "note": ""
   },
+  "th-76": {
+    "tables": [
+      {
+        "header": "รายการซีล จำนวนซีลที่ได้รับ จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต ความสามารถ สเตตัสสูงสุด (เมื่อถึงระดับซีลมาสเตอร์)",
+        "score": 34,
+        "rows": 31,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>เกรย์มอน X ซีล</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>วอร์เกรย์มอน X ซีล</td><td>5</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>อัลฟอร์ซ วีดรามอน X ซีล</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>ไกโอมอน ซีล</td><td>5</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>เมดิวอล ดุ๊คมอน ซีล</td><td>1</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>เจสมอน X ซีล</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>กันคูมอน X ซีล</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>โทเกมอน X ซีล</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>ดูนัสมอน X ซีล</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>สเลปมอน X ซีล</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>เอ็กซามอน X ซีล</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>การูรูมอน X ซีล</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>เมทัลการูรูมอน X ซีล</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>แมคนามอน X ซีล</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>มิเนอร์วามอน X ซีล</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>เครเนียมมอน X ซีล</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>เมทัลเกร์ยมอน X ซีล</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>ดูฟต์มอน X ซีล</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>ลอร์ดไนท์มอน X ซีล</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>เคออสดรามอน X ซีล</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>ไทเกอร์เวสปามอน ซีล</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>เมกิดรามอน X ซีล</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>ดุ๊คมอน X ซีล</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>บาร์บามอน X ซีล</td><td>1</td><td>25</td><td>BL</td><td>300</td></tr><tr><td>วาร์การูรูมอน X ซีล</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>เบลเซบุมอน X ซีล</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>ลีลีมอน X ซีล</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>โรสมอน X ซีล</td><td>5</td><td>1</td><td>DS</td><td>150</td></tr><tr><td>ลิลิธมอน X ซีล</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>เดมอน X ซีล</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr></table>",
+        "caption": "รายการแลกซีล (Seal Exchange List)"
+      }
+    ],
+    "note": ""
+  },
   "th-66": {
     "tables": [
       {
@@ -677,6 +690,19 @@
     ],
     "note": ""
   },
+  "th-24": {
+    "tables": [
+      {
+        "header": "ไอเทมวัตถุดิบ จำนวน ไอเทมที่ได้รับ จำนวน สเตตัส",
+        "score": 42,
+        "rows": 22,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>กิลมอน ซีล</td><td>10</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>มัชชูมอน ซีล</td><td>10</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>คาเมมอน ซีล</td><td>10</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>โดรุมอน ซีล</td><td>10</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>ทิโรมอน ซีล</td><td>5</td><td>1</td><td>CT</td><td>—</td></tr><tr><td>ดาร์คทีราโนมอน ซีล</td><td>5</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>แรร์มอน ซีล</td><td>5</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>ซังกุลูมอน ซีล</td><td>5</td><td>1</td><td>BL</td><td>—</td></tr><tr><td>คาบุเทริมอน ซีล</td><td>5</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>จูเรย์มอน ซีล</td><td>1</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>คิเมรามอน ซีล</td><td>1</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>เอเทมอน ซีล</td><td>1</td><td>1</td><td>BL</td><td>—</td></tr><tr><td>เนโอเดวีมอน ซีล</td><td>1</td><td>1</td><td>EV</td><td>—</td></tr><tr><td>วาจิรามอน ซีล</td><td>1</td><td>10</td><td>CT</td><td>—</td></tr><tr><td>พาราไซมอน ซีล</td><td>1</td><td>10</td><td>HT</td><td>—</td></tr><tr><td>ปรินซ์มาเมมอน ซีล</td><td>1</td><td>25</td><td>CT</td><td>—</td></tr><tr><td>โบโคมอน ซีล</td><td>1</td><td>25</td><td>EV</td><td>—</td></tr><tr><td>เครเนียมมอน ซีล</td><td>1</td><td>25</td><td>HT</td><td>—</td></tr><tr><td>อัลฟอร์ซ วีดรามอน ซีล</td><td>1</td><td>25</td><td>HP</td><td>—</td></tr><tr><td>โอเมกามอน อัลเทอร์-S ซีล</td><td>1</td><td>100</td><td>HP</td><td>—</td></tr><tr><td>โอเมกามอน ซีล</td><td>1</td><td>100</td><td>AT</td><td>—</td></tr></table>",
+        "caption": "รายการแลกซีล (Seal Exchange List)"
+      }
+    ],
+    "note": ""
+  },
   "th-21": {
     "tables": [
       {
@@ -690,19 +716,6 @@
     ],
     "note": ""
   },
-  "th-12": {
-    "tables": [
-      {
-        "header": "ลำดับ รายการไอเทม คุณสมบัติ ไอเทมที่ใช้ผลิต",
-        "score": 18,
-        "rows": 10,
-        "normalized": true,
-        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>กาบูมอน ซีล</td><td>10</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>โดรุมอน ซีล</td><td>10</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>โกเลมอน ซีล</td><td>5</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>แรปเตอร์ดรามอน ซีล</td><td>5</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>ดาร์คทีราโนมอน ซีล</td><td>5</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>โมโนคุโรมอน ซีล</td><td>5</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>อาโลมอน ซีล</td><td>5</td><td>1</td><td>EV</td><td>—</td></tr><tr><td>แรร์มอน ซีล</td><td>5</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>โอเมกามอน ซีล</td><td>1</td><td>100</td><td>AT</td><td>—</td></tr></table>",
-        "caption": "รายการแลกซีล (Seal Exchange List)"
-      }
-    ],
-    "note": ""
-  },
   "th-15": {
     "tables": [
       {
@@ -711,6 +724,19 @@
         "rows": 22,
         "normalized": true,
         "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>เท็นโตมอน ซีล</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>เรนามอน ซีล</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>เครามอน ซีล</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>กาจิมอน ซีล</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>คิวบีมอน ซีล</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>วีดรามอน ซีล</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>เชนทารูมอน ซีล</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>ไนท์มอน ซีล</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>นาโนมอน ซีล</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>วารุมอนซาเอมอน</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>เดธ X โดรุโกรามอน</td><td>1</td><td>10</td><td>—</td><td>—</td></tr><tr><td>พาราไซมอน ซีล</td><td>1</td><td>10</td><td>—</td><td>—</td></tr><tr><td>มารีนเดวีมอน ซีล</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>จินลองมอน ซีล</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>ไบฟูมอน ซีล</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>โอเมกามอน</td><td>1</td><td>100</td><td>—</td><td>—</td></tr><tr><td>เดธ X มอน</td><td>1</td><td>100</td><td>—</td><td>—</td></tr><tr><td>ไทแรนคาบูเทริมอน</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>เคออส ปิเอมอน ซีล</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>เอ็กซามอน ซีล</td><td>1</td><td>100</td><td>—</td><td>—</td></tr><tr><td>โอเมกามอน อัลเทอร์-S ซีล</td><td>1</td><td>100</td><td>—</td><td>—</td></tr></table>",
+        "caption": "รายการแลกซีล (Seal Exchange List)"
+      }
+    ],
+    "note": ""
+  },
+  "th-12": {
+    "tables": [
+      {
+        "header": "ลำดับ รายการไอเทม คุณสมบัติ ไอเทมที่ใช้ผลิต",
+        "score": 18,
+        "rows": 10,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>กาบูมอน ซีล</td><td>10</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>โดรุมอน ซีล</td><td>10</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>โกเลมอน ซีล</td><td>5</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>แรปเตอร์ดรามอน ซีล</td><td>5</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>ดาร์คทีราโนมอน ซีล</td><td>5</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>โมโนคุโรมอน ซีล</td><td>5</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>อาโลมอน ซีล</td><td>5</td><td>1</td><td>EV</td><td>—</td></tr><tr><td>แรร์มอน ซีล</td><td>5</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>โอเมกามอน ซีล</td><td>1</td><td>100</td><td>AT</td><td>—</td></tr></table>",
         "caption": "รายการแลกซีล (Seal Exchange List)"
       }
     ],
