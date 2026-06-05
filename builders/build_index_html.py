@@ -2,7 +2,8 @@
 
 Renders:
   - Hero with site-wide totals
-  - Feature cards linking to decks/digimon archives + 'coming soon' system
+  - Feature cards linking to decks / digimon / seal / breakthrough pages
+    (seal + breakthrough counts are static — those pages aren't scan-driven)
   - Recent Activity feed (latest 8 items across both decks + digimon),
     timeline-grouped by month, so the landing page reads like a changelog.
 
@@ -155,6 +156,8 @@ def main() -> None:
       <a href="./" class="is-active">Home</a>
       <a href="decks.html">Decks</a>
       <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="breakthrough.html">Breakthrough</a>
     </nav>
     <span class="nav-meta">scrape: dmo.gameking.com</span>
   </div>
@@ -195,12 +198,25 @@ def main() -> None:
       </div>
     </a>
 
-    <div class="feature disabled">
-      <div class="icon">⚙️</div>
-      <h3>New System</h3>
-      <p>ระบบเกม/feature ใหม่ (เร็วๆ นี้)</p>
-      <span class="badge">Coming Soon</span>
-    </div>
+    <a href="seals.html" class="feature">
+      <div class="icon">🔁</div>
+      <h3>Seal Exchange</h3>
+      <p>กิจกรรม/ระบบแลกซีล (씰 교환 · แลกซีล) รวมทุกเซิร์ฟ NA · KR · TH</p>
+      <div class="feature-stats">
+        <div class="stat"><b>56</b>โพสต์</div>
+        <div class="stat"><b>3</b>เซิร์ฟ</div>
+      </div>
+    </a>
+
+    <a href="breakthrough.html" class="feature">
+      <div class="icon">⚡</div>
+      <h3>Breakthrough Sim</h3>
+      <p>จำลองการตี Breakthrough (ตีสเตตัส) — ลองสุ่มดูค่าที่จะได้ภายใน 40 ครั้ง</p>
+      <div class="feature-stats">
+        <div class="stat"><b>40</b>attempts</div>
+        <div class="stat"><b>75%</b>base rate</div>
+      </div>
+    </a>
   </div>
 
   <div class="section-header">
@@ -218,6 +234,7 @@ def main() -> None:
   Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
   &nbsp;·&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
   &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+  &nbsp;·&nbsp; <a href="styleguide.html">Style Guide</a>
 </footer>
 
 </body>

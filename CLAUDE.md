@@ -238,7 +238,28 @@ The `docs/` folder is published as **https://dmo-hub.github.io/dmo/** via GitHub
 git add docs/ && git commit -m "update report" && git push
 ```
 
-To add a new report type (e.g. `system.html` for game-system updates), add a card to `docs/index.html` linking to it and create `docs/<topic>.html` with the same look-and-feel as `decks.html` / `digimon.html` (shared CSS inline in each file).
+To add a new report type (e.g. `system.html` for game-system updates), add a
+card to `docs/index.html` linking to it and create `docs/<topic>.html` with the
+same look-and-feel as `decks.html` / `digimon.html`. All pages share the
+external stylesheet `docs/css/site.css` (light/dark via `docs/js/theme.js`) and
+the same `.site-nav` / `.hero` / `.timeline` / `.card` markup — don't re-inline
+CSS; reuse the tokens. `docs/styleguide.html` renders every shared component for
+copy-paste reference.
+
+**Mockup-first for new pages.** Before writing a `build_<topic>_html.py`, hand-write
+a *static mockup* `docs/<topic>.html` with 2-3 rows of FAKE data so the layout can
+be reviewed in a real browser first (this is the "HTML is the new Markdown"
+workflow — spend effort on the visual spec, not on a builder you'll rewrite). Mark
+the mockup with a `<!-- MOCKUP -->` comment + a visible banner, and keep it OUT of
+`index.html` and `tools/validate.py` until the builder exists. Once the layout is
+approved, write the builder to regenerate the file from real scan data; the
+hand-written mockup is then thrown away (overwritten by the builder's output).
+
+**Curation micro-UI.** `tools/curate.html` is a standalone (no-server, `file://`)
+editor for `data/scan_result_digimon.json`: drag-drop the JSON, fix
+`image`/`image_th`/`image_kr`/`source*` and `digimon[]` names visually with image
+previews, then "Download JSON" to save back over the data file. Use it instead of
+hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
 
 ## Conventions worth knowing
 

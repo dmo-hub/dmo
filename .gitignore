@@ -5,6 +5,7 @@ __pycache__/
 
 # Claude Code local settings (user-specific)
 .claude/settings.local.json
+.claude/scheduled_tasks.lock
 
 # Generated artifacts
 scan_log.txt

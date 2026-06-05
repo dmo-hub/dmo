@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMO System — Game-System Updates (MOCKUP)</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<!--
+  ⚠️ MOCKUP / DESIGN DRAFT — hand-written with FAKE sample data.
+  Purpose (per the "HTML is the new Markdown" workflow): see the page layout
+  in a real browser BEFORE writing builders/build_system_html.py. Once the
+  layout is approved, a builder will regenerate this file from real scan data
+  and this hand-written version is thrown away. Do NOT wire this into
+  index.html or validate.py until the builder exists.
+-->
+<style>
+  /* system.html mockup-only tweaks (fold into site.css if kept) */
+  .sys-tag{font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+    padding:2px 8px;border-radius:999px}
+  .sys-tag.kind-balance{background:var(--primary-soft);color:var(--primary-active)}
+  .sys-tag.kind-feature{background:rgba(8,145,178,.15);color:var(--teal)}
+  .sys-tag.kind-qol{background:rgba(217,119,6,.15);color:var(--amber)}
+  .sys-changes{margin:8px 0 0;padding-left:18px;color:var(--body);font-size:14px}
+  .sys-changes li{margin:3px 0}
+  .mockup-banner{max-width:1080px;margin:14px auto 0;padding:10px 16px;border-radius:8px;
+    background:rgba(217,119,6,.12);border:1px solid var(--amber);color:var(--amber);
+    font-size:13px;font-weight:500}
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="breakthrough.html">Breakthrough</a>
+      <a href="system.html" class="is-active">System</a>
+    </nav>
+    <span class="nav-meta">scrape: dmo.gameking.com</span>
+  </div>
+</header>
+
+<div class="mockup-banner">⚠️ MOCKUP — ข้อมูลสมมติทั้งหมด ไว้ดู layout ก่อนเขียน builder จริง</div>
+
+<main class="page">
+
+  <section>
+    <div class="hero">
+      <div>
+        <h1>System Updates</h1>
+        <p class="lead">การปรับ balance / ฟีเจอร์ / QoL ของระบบเกม — เรียงตามเดือนของ NA release</p>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">3</div><div class="lbl">โพสต์</div></div>
+        <div class="hero-stat"><div class="num">7</div><div class="lbl">changes</div></div>
+        <div class="hero-stat"><div class="num">3</div><div class="lbl">เดือน</div></div>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <h4>Change type</h4>
+      <div class="filter-group">
+        <button class="filter-pill" data-filter="kind" data-value="balance">Balance</button>
+        <button class="filter-pill" data-filter="kind" data-value="feature">Feature</button>
+        <button class="filter-pill" data-filter="kind" data-value="qol">QoL</button>
+        <button class="filter-reset" id="filter-reset">reset</button>
+        <span class="filter-count" id="filter-count"></span>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-month">
+        <span class="tl-month-label">May 2026</span>
+        <span class="tl-month-count">1 post</span>
+      </div>
+      <article class="card tl-entry" data-kind="balance">
+        <h2 class="card-title">Damage formula rebalance + Riding skill cap</h2>
+        <div class="sources">
+          <span class="src-item is-na"><a class="src-label" href="#" target="_blank">NA</a><span class="src-date">20.05.2026</span></span>
+          <span class="src-item is-kr"><a class="src-label" href="#" target="_blank">KR</a><span class="src-date">14.05.2026</span></span>
+        </div>
+        <div class="card-body">
+          <span class="sys-tag kind-balance">Balance</span>
+          <ul class="sys-changes">
+            <li>ปรับสูตรดาเมจคริติคอลให้ scale ตาม AT% แทน flat</li>
+            <li>เพิ่มเพดาน Riding skill จาก lv.5 → lv.7</li>
+            <li>ลด cooldown ของ Mega burst skill ลง 1.5s</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="tl-month">
+        <span class="tl-month-label">April 2026</span>
+        <span class="tl-month-count">1 post</span>
+      </div>
+      <article class="card tl-entry" data-kind="feature">
+        <h2 class="card-title">New Tamer Pass season + Account-wide storage</h2>
+        <div class="sources">
+          <span class="src-item is-na"><a class="src-label" href="#" target="_blank">NA</a><span class="src-date">08.04.2026</span></span>
+        </div>
+        <div class="card-body">
+          <span class="sys-tag kind-feature">Feature</span>
+          <ul class="sys-changes">
+            <li>เปิด Tamer Pass Season 4 (40 tiers, premium track)</li>
+            <li>เพิ่ม account-wide shared storage 30 ช่อง</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="tl-month">
+        <span class="tl-month-label">March 2026</span>
+        <span class="tl-month-count">1 post</span>
+      </div>
+      <article class="card tl-entry" data-kind="qol">
+        <h2 class="card-title">UI cleanup &amp; auto-sort inventory</h2>
+        <div class="sources">
+          <span class="src-item is-na"><a class="src-label" href="#" target="_blank">NA</a><span class="src-date">17.03.2026</span></span>
+          <span class="src-item is-th"><a class="src-label" href="#" target="_blank">TH</a><span class="src-date">—</span></span>
+        </div>
+        <div class="card-body">
+          <span class="sys-tag kind-qol">QoL</span>
+          <ul class="sys-changes">
+            <li>ปุ่ม auto-sort ในกระเป๋า</li>
+            <li>ย่อ/ขยาย minimap ได้</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
+  &nbsp;·&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
+  &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+  &nbsp;·&nbsp; <a href="styleguide.html">Style Guide</a>
+</footer>
+
+</body>
+</html>

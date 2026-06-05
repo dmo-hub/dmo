@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMO Tracker — Accessories (เครื่องประดับ TH)</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<!--
+  MOCKUP — hand-written from vplay.in.th GM-Note posts (TH server only).
+  Data source: https://www.vplay.in.th/category/news/gm-note/
+  Reuses the shared design system (.hero / .timeline / .card / .seal-tbl / .note).
+  No builder yet — this is a static page reviewed in-browser first.
+  Once the layout is approved, a build_accessories_html.py can regenerate it.
+-->
+<style>
+  /* page-local: reuse seal-table look for the stat/option tables */
+  .acc-detail { margin: 0 20px 16px; }
+  .acc-detail > summary {
+    cursor: pointer; list-style: none; user-select: none;
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 12px; font-weight: 600; color: var(--teal);
+    padding: 6px 13px; border: 1px solid var(--hairline);
+    border-radius: 9999px; background: var(--surface-soft);
+  }
+  .acc-detail > summary::-webkit-details-marker { display: none; }
+  .acc-detail > summary::before { content: "▸"; font-size: 9px; }
+  .acc-detail[open] > summary::before { content: "▾"; }
+  .acc-detail[open] > summary { margin-bottom: 12px; }
+  .acc-cap { font-size: 11.5px; font-weight: 600; color: var(--muted);
+    margin: 16px 2px 6px; display: flex; align-items: center; gap: 8px; }
+  .acc-cap:first-of-type { margin-top: 4px; }
+  .acc-cap .item-kind { font-size: 9.5px; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; padding: 2px 8px; border-radius: 9999px;
+    background: var(--teal); color: var(--on-primary); }
+  .acc-tbl-wrap { overflow-x: auto; border: 1px solid var(--hairline);
+    border-radius: var(--radius); background: var(--canvas); }
+  table.acc-tbl { border-collapse: collapse; width: 100%;
+    font-size: 12px; min-width: 320px; }
+  table.acc-tbl th, table.acc-tbl td {
+    padding: 6px 11px; text-align: center; line-height: 1.35;
+    border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+  table.acc-tbl tr:first-child th {
+    background: var(--surface-card); color: var(--ink); font-weight: 600;
+    position: sticky; top: 0; }
+  table.acc-tbl tr:nth-child(even) td { background: var(--surface-soft); }
+  table.acc-tbl td:first-child, table.acc-tbl th:first-child {
+    text-align: left; font-weight: 500; }
+  table.acc-tbl tr:last-child td { border-bottom: 0; }
+  table.acc-tbl td.dash { color: var(--muted-soft); }
+  /* craft / material recipe block */
+  .acc-craft { margin: 4px 20px 6px; font-size: 13px; color: var(--body);
+    line-height: 1.7; }
+  .acc-craft .npc { font-weight: 600; color: var(--ink); }
+  .acc-craft .mat-pill { display: inline-flex; align-items: center; gap: 5px;
+    font-size: 12px; padding: 2px 10px; margin: 2px 4px 2px 0;
+    border: 1px solid var(--hairline); border-radius: 9999px;
+    background: var(--surface-soft); color: var(--body); white-space: nowrap; }
+  .acc-craft .mat-pill b { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .acc-craft .craft-row { margin: 6px 0 0; }
+  .acc-craft .craft-label { font-size: 11px; font-weight: 600; color: var(--muted-soft);
+    text-transform: uppercase; letter-spacing: .5px; margin-right: 6px; }
+  /* item title inside a card (when a card has >1 item) */
+  .card-title.acc-card-title { margin-bottom: 4px; }
+  .acc-sub { margin: 0 20px 10px; font-size: 13px; color: var(--muted);
+    line-height: 1.6; }
+  .mockup-banner { background: var(--amber); color: var(--on-primary);
+    text-align: center; font-weight: 700; padding: 7px; font-size: 13px;
+    letter-spacing: .3px; }
+</style>
+</head>
+<body>
+
+<div class="mockup-banner">⚠️ MOCKUP — หน้านี้เขียนมือจากโพสต์ vplay.in.th (ยังไม่มี builder / ยังไม่ลิงก์จาก index)</div>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="accessories.html" class="is-active">Accessories</a>
+      <a href="breakthrough.html">Breakthrough</a>
+    </nav>
+    <span class="nav-meta">scrape: vplay.in.th</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <div>
+      <h1>💎 Accessories (เครื่องประดับ)</h1>
+      <p class="lead">อุปกรณ์/เครื่องประดับใหม่จาก vplay.in.th (เซิร์ฟ TH) — หมวด GM Note · กางดูตารางสเตตัสเต็มทุกออปชั่น</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">4</div><div class="lbl">โพสต์</div></div>
+      <div class="hero-stat"><div class="num">7</div><div class="lbl">ชิ้น/ชุด</div></div>
+      <div class="hero-stat"><div class="num">TH</div><div class="lbl">เซิร์ฟ</div></div>
+    </div>
+  </div>
+
+  <div class="note">💡 ทุกชิ้นคราฟต์ที่ NPC <b>&lt;ผลิตไอเทม&gt;</b> ใน <b>D-เทอร์มินัล</b> โดยใช้วัตถุดิบที่ดรอปจากดันเจี้ยน · เครื่องประดับให้สเตตัสแบบ <b>สุ่มในช่วง (random option)</b> ส่วนชุดอุปกรณ์ตัวละครให้ค่าตามระดับตีบวก +0 → +15</div>
+
+  <div class="timeline">
+
+    <!-- ===================== APRIL 2026 ===================== -->
+    <div class="tl-month"><span class="tl-month-label">April 2026</span><span class="tl-month-count">1 post</span></div>
+
+    <article class="card tl-entry" id="th-necklace-radiance" data-server="TH">
+      <h2 class="card-title acc-card-title">สร้อยคอปาฏิหาริย์ที่เปล่งประกาย</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%9B%E0%B8%B2%E0%B8%8F/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">23.04.2026</span></span>
+      </div>
+      <div class="acc-sub">สร้อยคอ (Necklace) · ออปชั่นแบบสุ่ม 5 สล็อตกำหนดตายตัว</div>
+      <div class="acc-craft">
+        <div>คราฟต์ที่ NPC <span class="npc">&lt;ผลิตไอเทม&gt; เท็นโตมอน</span> @ D-เทอร์มินัล</div>
+        <div class="craft-row"><span class="craft-label">วัตถุดิบ</span>
+          <span class="mat-pill">ข้อมูลของคุรามอน <b>×100</b></span>
+          <span class="mat-pill">สร้อยคอซีโร่ยูนิตที่ถูกปิดผนึก [5 ออปชั่น] <b>×1</b></span>
+          <span class="mat-pill"><b>100T</b> Bit</span>
+        </div>
+      </div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (5 ออปชั่น)</summary>
+        <div class="acc-cap"><span class="item-kind">สร้อยคอ</span> ออปชั่นที่ 1</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>HP</td><td>600~1200</td></tr>
+          <tr><td>DS</td><td>600~1200</td></tr>
+          <tr><td>ป้องกัน</td><td>50~100</td></tr>
+          <tr><td>คริติคอล</td><td>5%~10%</td></tr>
+          <tr><td>ความเร็วในการโจมตี</td><td>15%</td></tr>
+          <tr><td>ความเสียหายคริติคอล</td><td>15%~30%</td></tr>
+          <tr><td>ความเสียหายธาตุ</td><td>1%~8%</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">สร้อยคอ</span> ออปชั่นที่ 2</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>HP</td><td>600~1200</td></tr>
+          <tr><td>DS</td><td>600~1200</td></tr>
+          <tr><td>ป้องกัน</td><td>50~100</td></tr>
+          <tr><td>คริติคอล</td><td>5%~10%</td></tr>
+          <tr><td>พลังโจมตี</td><td>150~300</td></tr>
+          <tr><td>พลังโจมตีสกิล</td><td>200~500</td></tr>
+          <tr><td>ความเสียหายธาตุ</td><td>1%~8%</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">สร้อยคอ</span> ออปชั่นที่ 3</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>HP</td><td>600~1200</td></tr>
+          <tr><td>DS</td><td>600~1200</td></tr>
+          <tr><td>ป้องกัน</td><td>50~100</td></tr>
+          <tr><td>พลังโจมตี</td><td>150~300</td></tr>
+          <tr><td>พลังโจมตี (%)</td><td>2.5%~5%</td></tr>
+          <tr><td>ป้องกัน (%)</td><td>25%~50%</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">สร้อยคอ</span> ออปชั่นที่ 4</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>HP (%)</td><td>5%~15%</td></tr>
+          <tr><td>DS (%)</td><td>25%~50%</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">สร้อยคอ</span> ออปชั่นที่ 5</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>HP</td><td>600~1200</td></tr>
+          <tr><td>DS</td><td>600~1200</td></tr>
+        </table></div>
+      </details>
+    </article>
+
+    <!-- ===================== FEBRUARY 2026 ===================== -->
+    <div class="tl-month"><span class="tl-month-label">February 2026</span><span class="tl-month-count">1 post · 2 ชิ้น</span></div>
+
+    <article class="card tl-entry" id="th-true-digivice-earring" data-server="TH">
+      <h2 class="card-title acc-card-title">ดิจิไวซ์ที่แท้จริง &amp; ต่างหูแห่งความเมตตาที่เปล่งประกาย</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%94%E0%B8%B4%E0%B8%88%E0%B8%B4%E0%B9%84%E0%B8%A7%E0%B8%8B%E0%B9%8C%E0%B8%97%E0%B8%B5/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">26.02.2026</span></span>
+      </div>
+      <div class="acc-sub">ดิจิไวซ์ + ต่างหู · ออปชั่นแบบสุ่ม</div>
+      <div class="acc-craft">
+        <div>คราฟต์ที่ NPC <span class="npc">&lt;ผลิตไอเทม&gt; พาตามอน</span> @ D-เทอร์มินัล</div>
+        <div class="craft-row"><span class="craft-label">วัตถุดิบ</span>
+          <span class="mat-pill">พลังชั่วร้ายของคิเมรามอน</span>
+          <span class="mat-pill">แหวนนิลของไกเซอร์</span>
+        </div>
+        <div class="craft-row"><span class="craft-label">ดรอป</span>
+          <span class="mat-pill">ดันเจี้ยน: ฐานทัพของไกเซอร์</span>
+        </div>
+      </div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (ดิจิไวซ์ + ต่างหู)</summary>
+        <div class="acc-cap"><span class="item-kind">ดิจิไวซ์</span> ดิจิไวซ์ที่แท้จริง — 14 ออปชั่น</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>ประเภท / ธาตุ</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>ดาต้า</td><td>8%~15%</td></tr>
+          <tr><td>วัคซีน</td><td>8%~15%</td></tr>
+          <tr><td>ไวรัส</td><td>8%~15%</td></tr>
+          <tr><td>ไม่ระบุประเภท</td><td>7%~12%</td></tr>
+          <tr><td>น้ำแข็ง</td><td>10%~20%</td></tr>
+          <tr><td>น้ำ</td><td>10%~20%</td></tr>
+          <tr><td>ไฟ</td><td>10%~20%</td></tr>
+          <tr><td>ดิน</td><td>10%~20%</td></tr>
+          <tr><td>ลม</td><td>10%~20%</td></tr>
+          <tr><td>ไม้</td><td>10%~20%</td></tr>
+          <tr><td>แสง</td><td>10%~20%</td></tr>
+          <tr><td>ความมืด</td><td>10%~20%</td></tr>
+          <tr><td>สายฟ้า</td><td>10%~20%</td></tr>
+          <tr><td>เหล็ก</td><td>10%~20%</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">ต่างหู</span> ต่างหูแห่งความเมตตาที่เปล่งประกาย — 14 ออปชั่น</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>ป้องกัน</td><td>100~200</td></tr>
+          <tr><td>HP</td><td>750~1500</td></tr>
+          <tr><td>DS</td><td>750~1500</td></tr>
+          <tr><td>พลังโจมตีสกิล</td><td>300~600</td></tr>
+          <tr><td>พลังโจมตีคุณลักษณะ</td><td>6%~12%</td></tr>
+          <tr><td>คริติคอล</td><td>6%~12%</td></tr>
+          <tr><td>ความเสียหายคริติคอล</td><td>10%~30%</td></tr>
+          <tr><td>หลบหลีก</td><td>1%~10%</td></tr>
+          <tr><td>บล็อก</td><td>1%~10%</td></tr>
+          <tr><td>อัตราโจมตี</td><td>500~1000</td></tr>
+          <tr><td>เพิ่มพลังป้องกันสูงสุด</td><td>25%~50%</td></tr>
+          <tr><td>เพิ่ม HP สูงสุด</td><td>15%~30%</td></tr>
+          <tr><td>เพิ่ม DS สูงสุด</td><td>25%~50%</td></tr>
+          <tr><td>เพิ่มพลังโจมตีสกิลสูงสุด</td><td>5%~10%</td></tr>
+        </table></div>
+      </details>
+    </article>
+
+    <!-- ===================== SEPTEMBER 2025 ===================== -->
+    <div class="tl-month"><span class="tl-month-label">September 2025</span><span class="tl-month-count">1 post · 2 ชิ้น</span></div>
+
+    <article class="card tl-entry" id="th-vitalbreath-ghostkeyring" data-server="TH">
+      <h2 class="card-title acc-card-title">ไวทัล เบรธ ดิจิไวซ์ -v- (กำไล) &amp; โกสท์ คีย์ริง</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B9%84%E0%B8%A7%E0%B8%97%E0%B8%B1%E0%B8%A5-%E0%B9%80%E0%B8%9A%E0%B8%A3%E0%B8%98/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">25.09.2025</span></span>
+      </div>
+      <div class="acc-sub">กำไล (ออปชั่นสุ่ม) + พวงกุญแจ (ตีบวก Lv.0–15)</div>
+      <div class="acc-craft">
+        <div>คราฟต์ที่ NPC <span class="npc">&lt;ผลิตไอเทม&gt; คิโยโนะ รูริ</span> @ D-เทอร์มินัล · เสริมพลังที่ NPC <span class="npc">ดอลฟิน</span></div>
+        <div class="craft-row"><span class="craft-label">วัตถุดิบ</span>
+          <span class="mat-pill">ดิจิโค๊ดที่ปนเปื้อน</span>
+          <span class="mat-pill">มีดของเพชฌฆาต</span>
+          <span class="mat-pill">กำไลซีโร่ยูนิต [5 ออปชั่น]</span>
+        </div>
+        <div class="craft-row"><span class="craft-label">ดรอป</span>
+          <span class="mat-pill">ดันเจี้ยน</span>
+        </div>
+      </div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (กำไล + คีย์ริง)</summary>
+        <div class="acc-cap"><span class="item-kind">กำไล</span> ไวทัล เบรธ ดิจิไวซ์ -V- — ออปชั่นสุ่ม</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>โจมตี</td><td>1000~1500</td></tr>
+          <tr><td>ป้องกัน</td><td>300~500</td></tr>
+          <tr><td>HP</td><td>2000~3000</td></tr>
+          <tr><td>DS</td><td>1500~2500</td></tr>
+          <tr><td>พลังโจมตี</td><td>2000~2500</td></tr>
+          <tr><td>คริติคอล</td><td>5%~10%</td></tr>
+          <tr><td>พลังโจมตีคริติคอล</td><td>25%~40%</td></tr>
+          <tr><td>อัตราการหลบหลีก</td><td>10%~15%</td></tr>
+          <tr><td>อัตราโจมตี</td><td>800~1200</td></tr>
+          <tr><td>ป้องกัน (%)</td><td>15%~20%</td></tr>
+          <tr><td>DS (%)</td><td>5%~10%</td></tr>
+          <tr><td>HP (%)</td><td>5%~10%</td></tr>
+          <tr><td>พลังโจมตี (%)</td><td>3%~7%</td></tr>
+          <tr><td>ผลรวมความสำเร็จโจมตี</td><td>1%~5%</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">พวงกุญแจ</span> โกสท์ คีย์ริง — ตารางตีบวก Lv.0–15</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>เลเวล</th><th>อัตราโจมตี</th><th>HP สูงสุด</th><th>พลังโจมตีสกิล</th></tr>
+          <tr><td>+0</td><td>100</td><td>1</td><td class="dash">—</td></tr>
+          <tr><td>+1</td><td>150</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+2</td><td>175</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+3</td><td>200</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+4</td><td>225</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+5</td><td>250</td><td>500</td><td class="dash">—</td></tr>
+          <tr><td>+6</td><td>300</td><td>600</td><td class="dash">—</td></tr>
+          <tr><td>+7</td><td>350</td><td>700</td><td class="dash">—</td></tr>
+          <tr><td>+8</td><td>400</td><td>800</td><td class="dash">—</td></tr>
+          <tr><td>+9</td><td>450</td><td>900</td><td class="dash">—</td></tr>
+          <tr><td>+10</td><td>500</td><td>1000</td><td>30%</td></tr>
+          <tr><td>+11</td><td>550</td><td>1500</td><td>32%</td></tr>
+          <tr><td>+12</td><td>600</td><td>2000</td><td>35%</td></tr>
+          <tr><td>+13</td><td>650</td><td>2500</td><td>37%</td></tr>
+          <tr><td>+14</td><td>750</td><td>3000</td><td>40%</td></tr>
+          <tr><td>+15</td><td>1000</td><td>5000</td><td>50%</td></tr>
+        </table></div>
+      </details>
+    </article>
+
+    <!-- ===================== JULY 2025 ===================== -->
+    <div class="tl-month"><span class="tl-month-label">July 2025</span><span class="tl-month-count">1 post · ชุด 3 ตัวละคร</span></div>
+
+    <article class="card tl-entry" id="th-courage-hope-love" data-server="TH">
+      <h2 class="card-title acc-card-title">พลังแห่งความกล้า · แสงแห่งความหวัง · จิตใจแห่งรัก</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%84/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">31.07.2025</span></span>
+      </div>
+      <div class="acc-sub">ชุดอุปกรณ์ตัวละคร ไดสุเกะ / ทาเครุ / มิยาโกะ · ชุดละ 6 ช่องสวม (หัว · เครื่องประดับ · เสื้อ · กางเกง · มือ · รองเท้า) · ค่าตามระดับตีบวก +0 → +15</div>
+      <div class="acc-craft">
+        <div>คราฟต์ที่ NPC <span class="npc">&lt;ผลิตไอเทม&gt; พาตามอน</span> @ D-เทอร์มินัล · อัตราสำเร็จ 100%</div>
+        <div class="craft-row"><span class="craft-label">วัตถุดิบ</span>
+          <span class="mat-pill">พลังชั่วร้าย <b>×25</b> /ชิ้น</span>
+          <span class="mat-pill"><b>10T</b> Bit /ชิ้น</span>
+        </div>
+        <div class="craft-row"><span class="craft-label">ดรอป</span>
+          <span class="mat-pill">ดันเจี้ยนดิจิมอนไกเซอร์</span>
+        </div>
+      </div>
+      <details class="acc-detail"><summary>📋 ดูตารางตีบวกเต็ม (6 ช่องสวม · +0 → +15)</summary>
+        <div class="acc-cap"><span class="item-kind">ส่วนหัว</span> หัว — คริติคอล</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>+Lv</th><th>โจมตีคริติคอล</th><th>ความเสียหายคริติคอล</th><th>โจมตีคริติคอล (2)</th></tr>
+          <tr><td>+0</td><td>5%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+1</td><td>5.25%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+2</td><td>5.5%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+3</td><td>5.75%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+4</td><td>6.25%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+5</td><td>6.5%</td><td>10%</td><td class="dash">—</td></tr>
+          <tr><td>+6</td><td>6.75%</td><td>11%</td><td class="dash">—</td></tr>
+          <tr><td>+7</td><td>7%</td><td>12%</td><td class="dash">—</td></tr>
+          <tr><td>+8</td><td>7.25%</td><td>13%</td><td class="dash">—</td></tr>
+          <tr><td>+9</td><td>7.5%</td><td>14%</td><td class="dash">—</td></tr>
+          <tr><td>+10</td><td>7.75%</td><td>15%</td><td>5%</td></tr>
+          <tr><td>+11</td><td>8%</td><td>18%</td><td>5.5%</td></tr>
+          <tr><td>+12</td><td>8.5%</td><td>21%</td><td>6%</td></tr>
+          <tr><td>+13</td><td>9%</td><td>25%</td><td>6.5%</td></tr>
+          <tr><td>+14</td><td>10%</td><td>30%</td><td>7%</td></tr>
+          <tr><td>+15</td><td>15%</td><td>40%</td><td>10%</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">เครื่องประดับ</span> กระเป๋า — อัตราโจมตี / โจมตี</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>+Lv</th><th>อัตราโจมตี</th><th>โจมตี</th><th>อัตราโจมตี (2)</th></tr>
+          <tr><td>+0</td><td>500</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+1</td><td>550</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+2</td><td>600</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+3</td><td>650</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+4</td><td>750</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+5</td><td>800</td><td>500</td><td class="dash">—</td></tr>
+          <tr><td>+6</td><td>850</td><td>550</td><td class="dash">—</td></tr>
+          <tr><td>+7</td><td>900</td><td>600</td><td class="dash">—</td></tr>
+          <tr><td>+8</td><td>950</td><td>650</td><td class="dash">—</td></tr>
+          <tr><td>+9</td><td>1000</td><td>700</td><td class="dash">—</td></tr>
+          <tr><td>+10</td><td>1100</td><td>750</td><td>500</td></tr>
+          <tr><td>+11</td><td>1200</td><td>800</td><td>600</td></tr>
+          <tr><td>+12</td><td>1300</td><td>850</td><td>700</td></tr>
+          <tr><td>+13</td><td>1400</td><td>900</td><td>800</td></tr>
+          <tr><td>+14</td><td>1500</td><td>1000</td><td>1000</td></tr>
+          <tr><td>+15</td><td>2000</td><td>1500</td><td>1500</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">เสื้อ</span> เสื้อ/แจ็กเก็ต — HP / ป้องกัน</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>+Lv</th><th>HP สูงสุด</th><th>ป้องกัน</th><th>HP สูงสุด (2)</th></tr>
+          <tr><td>+0</td><td>1000</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+1</td><td>1050</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+2</td><td>1100</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+3</td><td>1150</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+4</td><td>1250</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+5</td><td>1300</td><td>200</td><td class="dash">—</td></tr>
+          <tr><td>+6</td><td>1350</td><td>225</td><td class="dash">—</td></tr>
+          <tr><td>+7</td><td>1400</td><td>250</td><td class="dash">—</td></tr>
+          <tr><td>+8</td><td>1450</td><td>275</td><td class="dash">—</td></tr>
+          <tr><td>+9</td><td>1500</td><td>300</td><td class="dash">—</td></tr>
+          <tr><td>+10</td><td>1600</td><td>350</td><td>1000</td></tr>
+          <tr><td>+11</td><td>1700</td><td>400</td><td>1100</td></tr>
+          <tr><td>+12</td><td>1800</td><td>500</td><td>1200</td></tr>
+          <tr><td>+13</td><td>1900</td><td>600</td><td>1300</td></tr>
+          <tr><td>+14</td><td>2000</td><td>700</td><td>1500</td></tr>
+          <tr><td>+15</td><td>2500</td><td>1000</td><td>2000</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">กางเกง</span> กางเกง — DS / พลังโจมตีสกิล</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>+Lv</th><th>DS สูงสุด</th><th>พลังโจมตีสกิล</th><th>DS สูงสุด (2)</th></tr>
+          <tr><td>+0</td><td>1000</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+1</td><td>1050</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+2</td><td>1100</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+3</td><td>1150</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+4</td><td>1250</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+5</td><td>1300</td><td>5%</td><td class="dash">—</td></tr>
+          <tr><td>+6</td><td>1350</td><td>6%</td><td class="dash">—</td></tr>
+          <tr><td>+7</td><td>1400</td><td>7%</td><td class="dash">—</td></tr>
+          <tr><td>+8</td><td>1450</td><td>8%</td><td class="dash">—</td></tr>
+          <tr><td>+9</td><td>1500</td><td>9%</td><td class="dash">—</td></tr>
+          <tr><td>+10</td><td>1600</td><td>12%</td><td>1000</td></tr>
+          <tr><td>+11</td><td>1700</td><td>15%</td><td>1100</td></tr>
+          <tr><td>+12</td><td>1800</td><td>18%</td><td>1200</td></tr>
+          <tr><td>+13</td><td>1900</td><td>21%</td><td>1300</td></tr>
+          <tr><td>+14</td><td>2000</td><td>25%</td><td>1500</td></tr>
+          <tr><td>+15</td><td>2500</td><td>30%</td><td>2000</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">มือ</span> ถุงมือ/แส้ — โจมตี / ความเร็ว</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>+Lv</th><th>โจมตี</th><th>ความเร็วในการโจมตี</th><th>โจมตี (2)</th></tr>
+          <tr><td>+0</td><td>500</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+1</td><td>550</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+2</td><td>600</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+3</td><td>650</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+4</td><td>750</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+5</td><td>800</td><td>1%</td><td class="dash">—</td></tr>
+          <tr><td>+6</td><td>850</td><td>1%</td><td class="dash">—</td></tr>
+          <tr><td>+7</td><td>900</td><td>1%</td><td class="dash">—</td></tr>
+          <tr><td>+8</td><td>950</td><td>1%</td><td class="dash">—</td></tr>
+          <tr><td>+9</td><td>1000</td><td>1%</td><td class="dash">—</td></tr>
+          <tr><td>+10</td><td>1100</td><td>2%</td><td>300</td></tr>
+          <tr><td>+11</td><td>1200</td><td>2%</td><td>350</td></tr>
+          <tr><td>+12</td><td>1300</td><td>2%</td><td>400</td></tr>
+          <tr><td>+13</td><td>1400</td><td>2%</td><td>450</td></tr>
+          <tr><td>+14</td><td>1500</td><td>2%</td><td>500</td></tr>
+          <tr><td>+15</td><td>2000</td><td>3%</td><td>700</td></tr>
+        </table></div>
+        <div class="acc-cap"><span class="item-kind">รองเท้า</span> รองเท้า — ความเร็ว / EXP</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>+Lv</th><th>ความเร็ว</th><th>ความเป็นมิตร</th><th>EXP</th></tr>
+          <tr><td>+0</td><td>20%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+1</td><td>20%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+2</td><td>20%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+3</td><td>20%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+4</td><td>20%</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>+5</td><td>20%</td><td>30</td><td class="dash">—</td></tr>
+          <tr><td>+6</td><td>20%</td><td>30</td><td class="dash">—</td></tr>
+          <tr><td>+7</td><td>20%</td><td>30</td><td class="dash">—</td></tr>
+          <tr><td>+8</td><td>20%</td><td>30</td><td class="dash">—</td></tr>
+          <tr><td>+9</td><td>25%</td><td>30</td><td class="dash">—</td></tr>
+          <tr><td>+10</td><td>25%</td><td>30</td><td>1000%</td></tr>
+          <tr><td>+11</td><td>25%</td><td>30</td><td>1100%</td></tr>
+          <tr><td>+12</td><td>25%</td><td>30</td><td>1200%</td></tr>
+          <tr><td>+13</td><td>25%</td><td>30</td><td>1300%</td></tr>
+          <tr><td>+14</td><td>25%</td><td>30</td><td>1500%</td></tr>
+          <tr><td>+15</td><td>30%</td><td>30</td><td>2000%</td></tr>
+        </table></div>
+      </details>
+    </article>
+
+  </div>
+
+  <div class="note" style="margin-top:24px">📌 ข้อมูลดึงจากหมวด <a href="https://www.vplay.in.th/category/news/gm-note/" target="_blank">GM Note (vplay.in.th)</a> · แหล่งดรอปวัตถุดิบระบุชัดเฉพาะโพสต์ ก.พ. 2026 (ดันเจี้ยนฐานทัพของไกเซอร์) ส่วนโพสต์อื่นโพสต์ต้นทางบอกแค่ "ดรอปจากดันเจี้ยน" · ค่าสเตตัสเครื่องประดับเป็นแบบสุ่มในช่วง min~max</div>
+
+</main>
+
+<footer class="site-footer">
+  Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
+  &nbsp;·&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
+  &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+  &nbsp;·&nbsp; <a href="styleguide.html">Style Guide</a>
+</footer>
+
+</body>
+</html>

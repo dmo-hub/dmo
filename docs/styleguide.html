@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMO Tracker — Style Guide</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<!--
+  Living design system for DMO Tracker. Renders every shared component from
+  css/site.css so a new page (or builder) can copy markup that's guaranteed to
+  match. Toggle the theme button (top-right) to check both light & dark.
+  When you add/rename a component class in site.css, add a section here too.
+  Each block shows the LIVE component above its copy-paste markup.
+-->
+<style>
+  /* style-guide chrome only — not part of the design system */
+  .sg-section{margin:40px 0;padding-top:8px;border-top:1px solid var(--hairline-soft)}
+  .sg-section > h2{font-size:13px;text-transform:uppercase;letter-spacing:1px;
+    color:var(--muted);margin:0 0 4px;font-weight:600}
+  .sg-section > p{margin:0 0 16px;font-size:13px;color:var(--body)}
+  .sg-demo{padding:18px;border:1px dashed var(--hairline);border-radius:var(--radius-lg);
+    background:var(--surface-soft);margin-bottom:10px}
+  details.sg-code{font-size:12px}
+  details.sg-code summary{cursor:pointer;color:var(--primary);font-weight:500;
+    font-size:12px;padding:4px 0;list-style:none}
+  details.sg-code summary::before{content:'‹/›  markup'}
+  details.sg-code[open] summary::before{content:'‹/›  hide markup'}
+  details.sg-code pre{margin:6px 0 0;padding:12px 14px;background:var(--surface-card);
+    border:1px solid var(--hairline);border-radius:var(--radius);overflow:auto;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;line-height:1.5;
+    color:var(--body)}
+  .sg-toc{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 8px}
+  .sg-toc a{font-size:12px;padding:4px 11px;border:1px solid var(--hairline);
+    border-radius:999px;color:var(--body);text-decoration:none}
+  .sg-toc a:hover{border-color:var(--primary);color:var(--primary)}
+  .swatch-row{display:flex;flex-wrap:wrap;gap:10px}
+  .swatch{width:96px;font-size:10.5px;color:var(--muted)}
+  .swatch .chip{height:44px;border-radius:var(--radius);border:1px solid var(--hairline);margin-bottom:4px}
+  .swatch code{font-size:10px;color:var(--muted-soft)}
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="breakthrough.html">Breakthrough</a>
+    </nav>
+    <span class="nav-meta">style guide</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <div>
+      <h1>🎨 Style Guide</h1>
+      <p class="lead">ทุก component ที่ใช้ซ้ำใน DMO Tracker — copy markup ไปใช้ในหน้าใหม่ได้เลย กด 🌓 มุมขวาบนเพื่อเช็ค light/dark</p>
+    </div>
+  </div>
+
+  <div class="sg-toc">
+    <a href="#color">Color tokens</a>
+    <a href="#hero">Hero + stats</a>
+    <a href="#feature">Feature grid</a>
+    <a href="#timeline">Timeline + card</a>
+    <a href="#sources">Source pills</a>
+    <a href="#filter">Filter bar</a>
+    <a href="#chips">Attribute chips</a>
+    <a href="#table">Tables</a>
+    <a href="#note">Note callout</a>
+  </div>
+
+  <!-- ===== COLOR ===== -->
+  <section class="sg-section" id="color">
+    <h2>Color tokens</h2>
+    <p>CSS variables from <code>css/site.css</code>. ใช้ <code>var(--name)</code> เสมอ — อย่า hard-code hex (ไม่งั้น dark theme พัง)</p>
+    <div class="sg-demo">
+      <div class="swatch-row">
+        <div class="swatch"><div class="chip" style="background:var(--canvas)"></div>canvas<br><code>--canvas</code></div>
+        <div class="swatch"><div class="chip" style="background:var(--surface-soft)"></div>soft<br><code>--surface-soft</code></div>
+        <div class="swatch"><div class="chip" style="background:var(--surface-card)"></div>card<br><code>--surface-card</code></div>
+        <div class="swatch"><div class="chip" style="background:var(--surface-strong)"></div>strong<br><code>--surface-strong</code></div>
+        <div class="swatch"><div class="chip" style="background:var(--primary)"></div>primary<br><code>--primary</code></div>
+        <div class="swatch"><div class="chip" style="background:var(--teal)"></div>teal<br><code>--teal</code></div>
+        <div class="swatch"><div class="chip" style="background:var(--amber)"></div>amber<br><code>--amber</code></div>
+        <div class="swatch"><div class="chip" style="background:var(--ink)"></div>ink<br><code>--ink</code></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HERO ===== -->
+  <section class="sg-section" id="hero">
+    <h2>Hero + stats</h2>
+    <p>หัวเรื่องบนสุดของทุก report page</p>
+    <div class="sg-demo">
+      <div class="hero">
+        <div>
+          <h1>Page Title</h1>
+          <p class="lead">คำอธิบายสั้นๆ ของหน้านี้</p>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num">42</div><div class="lbl">โพสต์</div></div>
+          <div class="hero-stat"><div class="num">12</div><div class="lbl">เดือน</div></div>
+        </div>
+      </div>
+    </div>
+    <details class="sg-code"><summary></summary><pre>&lt;div class="hero"&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Page Title&lt;/h1&gt;
+    &lt;p class="lead"&gt;คำอธิบายสั้นๆ&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="hero-stats"&gt;
+    &lt;div class="hero-stat"&gt;&lt;div class="num"&gt;42&lt;/div&gt;&lt;div class="lbl"&gt;โพสต์&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></details>
+  </section>
+
+  <!-- ===== FEATURE GRID ===== -->
+  <section class="sg-section" id="feature">
+    <h2>Feature grid</h2>
+    <p>การ์ดลิงก์ไปหน้าต่างๆ บน <code>index.html</code></p>
+    <div class="sg-demo">
+      <div class="feature-grid">
+        <a href="#" class="feature">
+          <div class="icon">📊</div>
+          <h3>Feature name</h3>
+          <p>คำอธิบายฟีเจอร์สองสามบรรทัด</p>
+          <div class="feature-stats">
+            <div class="stat"><b>22</b>โพสต์</div>
+            <div class="stat"><b>35</b>item</div>
+          </div>
+        </a>
+        <a href="#" class="feature">
+          <div class="icon">🐉</div>
+          <h3>Another one</h3>
+          <p>อีกการ์ดเพื่อดู grid layout</p>
+          <div class="feature-stats"><div class="stat"><b>19</b>โพสต์</div></div>
+        </a>
+      </div>
+    </div>
+    <details class="sg-code"><summary></summary><pre>&lt;a href="topic.html" class="feature"&gt;
+  &lt;div class="icon"&gt;📊&lt;/div&gt;
+  &lt;h3&gt;Feature name&lt;/h3&gt;
+  &lt;p&gt;คำอธิบาย&lt;/p&gt;
+  &lt;div class="feature-stats"&gt;
+    &lt;div class="stat"&gt;&lt;b&gt;22&lt;/b&gt;โพสต์&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;</pre></details>
+  </section>
+
+  <!-- ===== TIMELINE + CARD ===== -->
+  <section class="sg-section" id="timeline">
+    <h2>Timeline + card</h2>
+    <p>โครงหลักของ feed (digimon/decks/system) — month divider + การ์ด</p>
+    <div class="sg-demo">
+      <div class="timeline">
+        <div class="tl-month">
+          <span class="tl-month-label">May 2026</span>
+          <span class="tl-month-count">1 post</span>
+        </div>
+        <article class="card tl-entry">
+          <h2 class="card-title">Card title goes here</h2>
+          <div class="sources">
+            <span class="src-item is-na"><a class="src-label" href="#">NA</a><span class="src-date">20.05.2026</span></span>
+          </div>
+          <div class="card-body">
+            <p style="color:var(--body);font-size:14px;margin:0">เนื้อหาในการ์ด — รูป / ลิสต์ / ตาราง</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <details class="sg-code"><summary></summary><pre>&lt;div class="timeline"&gt;
+  &lt;div class="tl-month"&gt;
+    &lt;span class="tl-month-label"&gt;May 2026&lt;/span&gt;
+    &lt;span class="tl-month-count"&gt;1 post&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;article class="card tl-entry" id="p4148"&gt;
+    &lt;h2 class="card-title"&gt;Title&lt;/h2&gt;
+    &lt;div class="sources"&gt;…&lt;/div&gt;
+    &lt;div class="card-body"&gt;…&lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</pre></details>
+  </section>
+
+  <!-- ===== SOURCES ===== -->
+  <section class="sg-section" id="sources">
+    <h2>Source pills (NA / KR / TH)</h2>
+    <p>ลิงก์ไปโพสต์ต้นทางแต่ละเซิร์ฟ — สีต่างกันต่อเซิร์ฟ (NA=amber, KR=blue, TH=teal)</p>
+    <div class="sg-demo">
+      <div class="sources">
+        <span class="src-item is-na"><a class="src-label" href="#">NA</a><span class="src-date">20.05.2026</span></span>
+        <span class="src-item is-kr"><a class="src-label" href="#">KR</a><span class="src-date">14.05.2026</span></span>
+        <span class="src-item is-th"><a class="src-label" href="#">TH</a><span class="src-date">—</span></span>
+      </div>
+    </div>
+    <details class="sg-code"><summary></summary><pre>&lt;div class="sources"&gt;
+  &lt;span class="src-item is-na"&gt;&lt;a class="src-label" href="…"&gt;NA&lt;/a&gt;&lt;span class="src-date"&gt;20.05.2026&lt;/span&gt;&lt;/span&gt;
+  &lt;span class="src-item is-kr"&gt;…&lt;/span&gt;
+  &lt;span class="src-item is-th"&gt;…&lt;/span&gt;
+&lt;/div&gt;</pre></details>
+  </section>
+
+  <!-- ===== FILTER BAR ===== -->
+  <section class="sg-section" id="filter">
+    <h2>Filter bar + pills</h2>
+    <p>แถบกรองด้านบน feed (digimon ใช้ filter ตาม attribute/element/family)</p>
+    <div class="sg-demo">
+      <div class="filter-bar">
+        <h4>Change type</h4>
+        <div class="filter-group">
+          <button class="filter-pill">Balance</button>
+          <button class="filter-pill">Feature</button>
+          <button class="filter-pill">QoL</button>
+          <button class="filter-reset">reset</button>
+          <span class="filter-count">3 / 12</span>
+        </div>
+      </div>
+    </div>
+    <details class="sg-code"><summary></summary><pre>&lt;div class="filter-bar"&gt;
+  &lt;h4&gt;Change type&lt;/h4&gt;
+  &lt;div class="filter-group"&gt;
+    &lt;button class="filter-pill" data-filter="kind" data-value="balance"&gt;Balance&lt;/button&gt;
+    &lt;button class="filter-reset" id="filter-reset"&gt;reset&lt;/button&gt;
+    &lt;span class="filter-count" id="filter-count"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></details>
+  </section>
+
+  <!-- ===== CHIPS ===== -->
+  <section class="sg-section" id="chips">
+    <h2>Attribute chips (icon rows)</h2>
+    <p>แสดง Attribute / Element / Families ด้วยไอคอน (จาก <code>img/icons/</code>)</p>
+    <div class="sg-demo">
+      <ul class="digimon-list"><li>
+        <span class="digimon-name">Omegamon X Extreme</span>
+        <div class="chips-row"><span class="chips-label">Attribute</span><img class="chip-icon-only" src="img/icons/attr-Vaccine.png" alt="Vaccine" title="Vaccine"></div>
+        <div class="chips-row"><span class="chips-label">Element</span><img class="chip-icon-only" src="img/icons/elem-Light.png" alt="Light" title="Light"></div>
+        <div class="chips-row"><span class="chips-label">Families</span><img class="chip-icon-only" src="img/icons/field-Metal_Empire.png" alt="Metal Empire" title="Metal Empire"><img class="chip-icon-only" src="img/icons/field-Virus_Busters.png" alt="Virus Busters" title="Virus Busters"></div>
+      </li></ul>
+    </div>
+    <details class="sg-code"><summary></summary><pre>&lt;div class="chips-row"&gt;
+  &lt;span class="chips-label"&gt;Attribute&lt;/span&gt;
+  &lt;img class="chip-icon-only" src="img/icons/attr-Vaccine.png" title="Vaccine"&gt;
+&lt;/div&gt;</pre></details>
+  </section>
+
+  <!-- ===== TABLES ===== -->
+  <section class="sg-section" id="table">
+    <h2>Tables (gk-table)</h2>
+    <p>ตาราง Digimon List / Effect ในหน้า decks + ตารางแลกซีล</p>
+    <div class="sg-demo">
+      <table class="gk-table digimon-table">
+        <thead><tr><th>ซีล</th><th>เรท</th><th>จำนวน</th></tr></thead>
+        <tbody>
+          <tr><td>Omegamon</td><td>1.5%</td><td>1</td></tr>
+          <tr><td>Imperialdramon</td><td>2.0%</td><td>1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="sg-code"><summary></summary><pre>&lt;table class="gk-table digimon-table"&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th&gt;ซีล&lt;/th&gt;&lt;th&gt;เรท&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Omegamon&lt;/td&gt;&lt;td&gt;1.5%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!-- variants: .digimon-table (min 280px) · .effect-table (min 560px) --&gt;</pre></details>
+  </section>
+
+  <!-- ===== NOTE ===== -->
+  <section class="sg-section" id="note">
+    <h2>Note callout</h2>
+    <p>กล่องหมายเหตุ / คำเตือน</p>
+    <div class="sg-demo">
+      <div class="note">⚠️ Thai server ช้ากว่า NA/KR ราว 10–12 เดือน — โพสต์ NA ล่าสุดยังไม่มีฝั่ง TH เป็นเรื่องปกติ</div>
+    </div>
+    <details class="sg-code"><summary></summary><pre>&lt;div class="note"&gt;⚠️ ข้อความหมายเหตุ&lt;/div&gt;</pre></details>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
+  &nbsp;·&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
+  &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+  &nbsp;·&nbsp; <a href="styleguide.html">Style Guide</a>
+</footer>
+
+</body>
+</html>

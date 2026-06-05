@@ -452,6 +452,7 @@ def render() -> str:
   Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
   &nbsp;·&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
   &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+  &nbsp;·&nbsp; <a href="styleguide.html">Style Guide</a>
 </footer>
 
 {filter_js}

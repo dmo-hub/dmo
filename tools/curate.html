@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMO Curate — scan_result_digimon.json editor</title>
+<!--
+  Throwaway micro-UI for hand-curating data/scan_result_digimon.json.
+  Open this file directly in a browser (file://) — NO server needed.
+  1. Drag-drop (or pick) data/scan_result_digimon.json
+  2. Edit image / image_th / image_kr / source* / aliases / Rank-U skip visually
+  3. Click "Download JSON" → save back over data/scan_result_digimon.json
+  This file is intentionally self-contained (inline CSS, no build dep) so it
+  travels independently of the published docs/ site. It does NOT run any
+  pipeline — it only round-trips the JSON so you stop hand-editing it raw.
+-->
+<style>
+:root{
+  --canvas:#fff; --surface-soft:#f7f9fc; --surface-card:#f1f5fb; --surface-strong:#e3ebf5;
+  --ink:#0b1220; --body:#3d4a60; --muted:#6b7891; --muted-soft:#94a0b3;
+  --primary:#2563eb; --primary-active:#1d4ed8; --primary-soft:#dbeafe; --on-primary:#fff;
+  --teal:#0891b2; --amber:#d97706; --red:#dc2626; --green:#059669;
+  --hairline:#d4def0; --hairline-soft:#e8edf5;
+  --radius:8px; --radius-lg:12px; --shadow:0 2px 8px rgba(20,20,19,.06);
+  --shadow-lg:0 8px 24px rgba(20,20,19,.08);
+  --font:"Prompt","Segoe UI",sans-serif;
+}
+:root[data-theme="dark"]{
+  --canvas:#0a0a0f; --surface-soft:#11151c; --surface-card:#1a1f2e; --surface-strong:#232838;
+  --ink:#f5f7fa; --body:#c2c9d4; --muted:#9aa3b1; --muted-soft:#828b99;
+  --primary:#0070d1; --primary-active:#005ba8; --primary-soft:#1a3a6e;
+  --teal:#00d9c0; --amber:#f5a623; --red:#ef4444; --green:#34d399;
+  --hairline:#2a2f3d; --hairline-soft:#1c2230;
+  --shadow:0 2px 8px rgba(0,0,0,.4); --shadow-lg:0 8px 24px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font);background:var(--canvas);color:var(--ink);
+  font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.45}
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;
+  padding:12px 22px;background:var(--canvas);border-bottom:1px solid var(--hairline)}
+.brand{font-weight:600;font-size:15px;letter-spacing:-.3px;display:flex;align-items:center;gap:8px}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+header .spacer{flex:1}
+.btn{font-family:inherit;font-size:13px;font-weight:500;cursor:pointer;border-radius:var(--radius);
+  padding:8px 14px;border:1px solid var(--hairline);background:var(--surface-card);color:var(--ink);
+  transition:.12s}
+.btn:hover{border-color:var(--primary)}
+.btn.primary{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}
+.btn.primary:hover{background:var(--primary-active)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.icon{padding:8px 10px}
+
+main{max-width:1080px;margin:0 auto;padding:24px 22px 80px}
+
+#drop{margin:40px auto;max-width:560px;padding:48px 28px;text-align:center;
+  border:2px dashed var(--hairline);border-radius:var(--radius-lg);background:var(--surface-soft);
+  color:var(--muted);transition:.15s}
+#drop.over{border-color:var(--primary);background:var(--primary-soft);color:var(--ink)}
+#drop h2{margin:0 0 6px;font-size:18px;font-weight:600;color:var(--ink)}
+#drop p{margin:4px 0;font-size:13px}
+#drop label{color:var(--primary);text-decoration:underline;cursor:pointer;font-weight:500}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+.toolbar input[type=search]{flex:1;min-width:180px;font-family:inherit;font-size:13px;
+  padding:9px 12px;border:1px solid var(--hairline);border-radius:var(--radius);
+  background:var(--surface-card);color:var(--ink)}
+.toolbar .count{font-size:12px;color:var(--muted);white-space:nowrap}
+.toolbar .filter{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px;cursor:pointer}
+
+.card{border:1px solid var(--hairline);border-radius:var(--radius-lg);background:var(--surface-card);
+  margin-bottom:14px;overflow:hidden;box-shadow:var(--shadow)}
+.card.dirty{border-color:var(--amber)}
+.card-head{display:flex;align-items:center;gap:10px;padding:12px 16px;cursor:pointer;
+  background:var(--surface-soft);border-bottom:1px solid var(--hairline-soft)}
+.card-head .idx{font-family:ui-monospace,monospace;font-size:12px;color:var(--muted);
+  background:var(--surface-strong);padding:2px 8px;border-radius:999px}
+.card-head .grp{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted-soft)}
+.card-head .names{font-weight:500;font-size:15px;flex:1}
+.card-head .date{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.card-head .badge{font-size:10px;padding:2px 7px;border-radius:999px;font-weight:500}
+.badge.b-na{background:var(--primary-soft);color:var(--primary-active)}
+.badge.b-kr{background:rgba(8,145,178,.15);color:var(--teal)}
+.badge.b-th{background:rgba(217,119,6,.15);color:var(--amber)}
+.badge.b-dirty{background:rgba(217,119,6,.18);color:var(--amber)}
+.card-head .chev{color:var(--muted-soft);transition:.15s}
+.card.open .chev{transform:rotate(90deg)}
+
+.card-body{display:none;padding:16px;gap:18px;grid-template-columns:160px 1fr}
+.card.open .card-body{display:grid}
+@media(max-width:640px){.card.open .card-body{grid-template-columns:1fr}}
+
+.thumbs{display:flex;flex-direction:column;gap:8px}
+.thumb{position:relative;border:1px solid var(--hairline);border-radius:var(--radius);
+  overflow:hidden;background:var(--surface-soft);aspect-ratio:1;display:flex;align-items:center;
+  justify-content:center}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb .ph{font-size:11px;color:var(--muted-soft);padding:8px;text-align:center}
+.thumb .tag{position:absolute;top:4px;left:4px;font-size:9px;font-weight:600;letter-spacing:.4px;
+  padding:1px 6px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff}
+.thumb.primary{outline:2px solid var(--primary);outline-offset:-2px}
+.thumb .pick{position:absolute;bottom:4px;right:4px;font-size:9px}
+
+.fields{display:flex;flex-direction:column;gap:11px}
+.fld{display:grid;grid-template-columns:120px 1fr;gap:10px;align-items:center}
+.fld label{font-size:12px;color:var(--muted);font-weight:500}
+.fld input[type=text]{width:100%;font-family:inherit;font-size:12.5px;padding:7px 10px;
+  border:1px solid var(--hairline);border-radius:var(--radius);background:var(--canvas);color:var(--ink)}
+.fld input:focus{outline:none;border-color:var(--primary)}
+.fld .check{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--body)}
+.fld a{font-size:11px;color:var(--primary);text-decoration:none}
+.fld a:hover{text-decoration:underline}
+.fld.aliases input{font-family:ui-monospace,monospace;font-size:11.5px}
+.attr-tags{display:flex;flex-wrap:wrap;gap:5px}
+.attr-tags span{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--surface-strong);color:var(--body)}
+.hint{grid-column:1/-1;font-size:11px;color:var(--muted-soft);margin-top:-4px}
+
+body[data-mode="decks"] .only-digimon{display:none}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(120%);
+  background:var(--ink);color:var(--canvas);padding:11px 20px;border-radius:999px;font-size:13px;
+  box-shadow:var(--shadow-lg);transition:.25s;z-index:50}
+.toast.show{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="brand"><span class="dot"></span>DMO Curate</span>
+  <span class="grp" style="font-size:11px;color:var(--muted-soft)">scan_result_digimon.json</span>
+  <span class="spacer"></span>
+  <button class="btn icon" id="theme" title="Toggle theme">🌓</button>
+  <button class="btn" id="reload" disabled>Load another…</button>
+  <button class="btn primary" id="download" disabled>⬇ Download JSON</button>
+</header>
+
+<main>
+  <div id="drop">
+    <h2>🐉 ลากไฟล์ JSON มาวางตรงนี้</h2>
+    <p>หรือ <label for="file">เลือกไฟล์</label> — รองรับ:</p>
+    <p style="font-size:12.5px;color:var(--body)">
+      <code>data/scan_result_digimon.json</code> → แก้ + export กลับได้ &nbsp;·&nbsp;
+      <code>data/scan_result.json</code> → ดู deck drift (read-only)</p>
+    <p style="margin-top:14px;font-size:12px;color:var(--muted-soft)">
+      ทำงานในเบราว์เซอร์ล้วน · ไม่อัปโหลดที่ไหน · ไม่ต้องมี server</p>
+    <input type="file" id="file" accept=".json,application/json" hidden>
+  </div>
+
+  <div id="editor" hidden>
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="ค้นหา idx หรือชื่อ…">
+      <label class="filter"><input type="checkbox" id="onlyMissing"> <span id="missingLabel">เฉพาะที่ยังไม่ครบ (ขาด TH)</span></label>
+      <label class="filter only-digimon"><input type="checkbox" id="onlyDirty"> เฉพาะที่แก้แล้ว</label>
+      <span class="count" id="count"></span>
+    </div>
+    <div id="list"></div>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+
+// ---- theme (mirrors docs/js/theme.js, standalone) ----
+(function(){
+  var KEY='dmo-theme', root=document.documentElement;
+  var saved; try{saved=localStorage.getItem(KEY)}catch(e){}
+  if(saved!=='dark'&&saved!=='light'){
+    saved=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+  }
+  root.setAttribute('data-theme',saved);
+  document.getElementById('theme').addEventListener('click',function(){
+    var n=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',n); try{localStorage.setItem(KEY,n)}catch(e){}
+  });
+})();
+
+// ---- state ----
+var DATA=null;          // full parsed JSON
+var MODE='digimon';     // 'digimon' (editable) | 'decks' (read-only inspector)
+var FILENAME='scan_result_digimon.json';
+var DIRTY=new Set();    // "group/idx" keys that changed
+var IMG_FIELDS=['image','image_th','image_kr'];
+var IMG_LABEL={image:'NA',image_th:'TH',image_kr:'KR'};
+
+// detect which JSON was dropped in by its shape
+function detectMode(d){
+  // deck scan_result.json: {matches:[{new_decks,existing_decks,...}], ...}
+  if(Array.isArray(d.matches)) return 'decks';
+  // digimon: {event:{<idx>:{digimon:[...]}}, patch:{...}}
+  if(d.event||d.patch) return 'digimon';
+  return null;
+}
+
+// ---- file load ----
+var drop=document.getElementById('drop'),
+    fileInput=document.getElementById('file');
+['dragenter','dragover'].forEach(function(ev){
+  drop.addEventListener(ev,function(e){e.preventDefault();drop.classList.add('over')});
+});
+['dragleave','drop'].forEach(function(ev){
+  drop.addEventListener(ev,function(e){e.preventDefault();drop.classList.remove('over')});
+});
+drop.addEventListener('drop',function(e){
+  var f=e.dataTransfer.files[0]; if(f) readFile(f);
+});
+fileInput.addEventListener('change',function(e){
+  var f=e.target.files[0]; if(f) readFile(f);
+});
+document.getElementById('reload').addEventListener('click',function(){
+  document.getElementById('editor').hidden=true;
+  drop.style.display='';
+  fileInput.value='';
+});
+
+function readFile(f){
+  FILENAME=f.name;
+  var r=new FileReader();
+  r.onload=function(){
+    var d;
+    try{ d=JSON.parse(r.result); }
+    catch(err){ toast('JSON พัง: '+err.message); return; }
+    var mode=detectMode(d);
+    if(!mode){ toast('ไม่รู้จักไฟล์นี้ — ต้องเป็น scan_result_digimon.json หรือ scan_result.json'); return; }
+    DATA=d; MODE=mode; DIRTY.clear();
+    drop.style.display='none';
+    document.getElementById('editor').hidden=false;
+    document.getElementById('reload').disabled=false;
+    // decks mode is read-only — no JSON to write back (decks.html is hand-curated)
+    document.getElementById('download').disabled=(MODE!=='digimon');
+    document.body.setAttribute('data-mode',MODE);
+    render();
+    toast('โหลด '+entryCount()+' รายการ ('+(MODE==='decks'?'Decks · read-only':'Digimon')+')');
+  };
+  r.readAsText(f,'utf-8');
+}
+
+function entries(){
+  var out=[];
+  if(MODE==='decks'){
+    (DATA.matches||[]).forEach(function(m){
+      out.push({group:m.kind,idx:String(m.idx),e:m});
+    });
+  } else {
+    ['event','patch'].forEach(function(g){
+      var grp=DATA[g]||{};
+      Object.keys(grp).forEach(function(idx){ out.push({group:g,idx:idx,e:grp[idx]}); });
+    });
+  }
+  return out;
+}
+function entryCount(){ return entries().length; }
+function key(group,idx){ return group+'/'+idx; }
+
+// a deck post still needs hand-adding to decks.html if scan found decks on it.
+// (we can't see decks.html from file://, so "pending" = has any deck markers —
+//  the diff.json the user pairs this with shows what's truly missed.)
+function deckPending(m){
+  return (m.new_decks&&m.new_decks.length)||(m.existing_decks&&m.existing_decks.length);
+}
+
+// ---- render ----
+var listEl=document.getElementById('list'),
+    qEl=document.getElementById('q'),
+    onlyMissing=document.getElementById('onlyMissing'),
+    onlyDirty=document.getElementById('onlyDirty');
+[qEl,onlyMissing,onlyDirty].forEach(function(el){el.addEventListener('input',render)});
+
+function render(){
+  document.getElementById('missingLabel').textContent=
+    MODE==='decks'?'เฉพาะที่มี deck markers (น่าจะค้าง curate)':'เฉพาะที่ยังไม่ครบ (ขาด TH)';
+  var q=qEl.value.trim().toLowerCase();
+  var rows=entries().filter(function(r){
+    if(MODE==='decks'){
+      if(onlyMissing.checked && !deckPending(r.e)) return false;
+      if(!q) return true;
+      var names=(r.e.new_decks||[]).concat(r.e.existing_decks||[]).join(' ');
+      return (r.idx+' '+names).toLowerCase().indexOf(q)>=0;
+    }
+    if(onlyMissing.checked && r.e.image_th) return false;
+    if(onlyDirty.checked && !DIRTY.has(key(r.group,r.idx))) return false;
+    if(!q) return true;
+    var hay=(r.idx+' '+(r.e.digimon||[]).join(' ')).toLowerCase();
+    return hay.indexOf(q)>=0;
+  });
+  document.getElementById('count').textContent=
+    rows.length+' / '+entryCount()+' รายการ'+(DIRTY.size?' · '+DIRTY.size+' แก้แล้ว':'');
+  listEl.innerHTML='';
+  rows.forEach(function(r){ listEl.appendChild(MODE==='decks'?deckCard(r):cardFor(r)); });
+}
+
+function cardFor(r){
+  var e=r.e, k=key(r.group,r.idx), dirty=DIRTY.has(k);
+  var card=document.createElement('div');
+  card.className='card'+(dirty?' dirty':'');
+
+  // ---- head ----
+  var head=document.createElement('div'); head.className='card-head';
+  head.innerHTML=
+    '<span class="chev">▸</span>'+
+    '<span class="idx">'+r.idx+'</span>'+
+    '<span class="grp">'+r.group+'</span>'+
+    '<span class="names">'+(e.digimon||[]).map(esc).join(', ')+'</span>'+
+    badges(e,dirty)+
+    '<span class="date">'+(e.date||'')+'</span>';
+  head.addEventListener('click',function(){ card.classList.toggle('open'); });
+  card.appendChild(head);
+
+  // ---- body ----
+  var body=document.createElement('div'); body.className='card-body';
+  body.appendChild(thumbsFor(r));
+  body.appendChild(fieldsFor(r));
+  card.appendChild(body);
+  return card;
+}
+
+// ---- decks: read-only drift inspector card ----
+function deckCard(r){
+  var m=r.e;
+  var nd=m.new_decks||[], ed=m.existing_decks||[];
+  var card=document.createElement('div'); card.className='card';
+  var head=document.createElement('div'); head.className='card-head';
+  head.innerHTML=
+    '<span class="chev">▸</span>'+
+    '<span class="idx">'+r.idx+'</span>'+
+    '<span class="grp">'+r.group+'</span>'+
+    '<span class="names">'+nd.concat(ed).map(esc).join(', ')+'</span>'+
+    (nd.length?'<span class="badge b-na">'+nd.length+' new</span>':'')+
+    (ed.length?'<span class="badge b-th">'+ed.length+' changed</span>':'')+
+    '<span class="date">'+(m.date||'')+'</span>';
+  head.addEventListener('click',function(){ card.classList.toggle('open'); });
+  card.appendChild(head);
+
+  var body=document.createElement('div'); body.className='card-body';
+  body.style.display='block';
+  var html='';
+  if(nd.length) html+='<div class="fld"><label>new decks</label><div class="attr-tags">'+
+    nd.map(function(x){return '<span>'+esc(x)+'</span>'}).join('')+'</div></div>';
+  if(ed.length) html+='<div class="fld"><label>existing changed</label><div class="attr-tags">'+
+    ed.map(function(x){return '<span>'+esc(x)+'</span>'}).join('')+'</div></div>';
+  html+='<div class="fld"><label>source</label><a href="'+esc(m.url)+'" target="_blank">เปิดโพสต์ '+r.group+' '+r.idx+' ↗</a></div>';
+  body.innerHTML=html;
+
+  // copy a ready-to-paste decks.html <section> skeleton
+  var btn=document.createElement('button'); btn.className='btn'; btn.textContent='📋 ก็อป snippet ไป decks.html';
+  btn.style.marginTop='8px';
+  btn.addEventListener('click',function(){
+    var snip=deckSnippet(r.group,r.idx,m,nd,ed);
+    navigator.clipboard.writeText(snip).then(function(){toast('ก็อปแล้ว — แปะใน decks.html')},
+      function(){toast('ก็อปไม่สำเร็จ (clipboard ถูกบล็อก)')});
+  });
+  body.appendChild(btn);
+  card.appendChild(body);
+  return card;
+}
+
+// build a decks.html <section> skeleton from a scan match (tables left as TODO
+// for human review — that's why decks stays hand-curated)
+function deckSnippet(group,idx,m,nd,ed){
+  var anchor=(group==='event'?'e':'p')+idx;
+  var lines=[];
+  lines.push('<section id="'+anchor+'">');
+  lines.push('  <h2 class="card-title">'+ (nd.concat(ed)[0]||'TODO title') +'</h2>');
+  lines.push('  <div class="sources"><span class="src-item is-na"><a class="src-label" href="'+(m.url||'#')+'" target="_blank">NA</a><span class="src-date">'+(m.date||'')+'</span></span></div>');
+  nd.forEach(function(d){
+    lines.push('  <div class="deck"><div class="deck-name">'+d+'</div>');
+    lines.push('    <!-- TODO: paste Digimon List + Effect tables (.gk-table) -->');
+    lines.push('  </div>');
+  });
+  ed.forEach(function(d){
+    lines.push('  <div class="deck"><div class="deck-name">'+d+' <span class="gk-label">(changed)</span></div></div>');
+  });
+  lines.push('</section>');
+  return lines.join('\n');
+}
+
+function badges(e,dirty){
+  var b='';
+  if(e.image) b+='<span class="badge b-na">NA</span>';
+  if(e.source_kr) b+='<span class="badge b-kr">KR</span>';
+  if(e.image_th||e.source_th) b+='<span class="badge b-th">TH</span>';
+  if(dirty) b+='<span class="badge b-dirty">แก้แล้ว</span>';
+  return b;
+}
+
+// resolve a docs-relative image path to one viewable from tools/
+function imgSrc(p){ return p? '../docs/'+p : ''; }
+
+function thumbsFor(r){
+  var e=r.e, wrap=document.createElement('div'); wrap.className='thumbs';
+  // builder image priority is TH > NA > KR — mark the effective primary
+  var primary = e.image_th?'image_th': e.image?'image': e.image_kr?'image_kr': null;
+  IMG_FIELDS.forEach(function(f){
+    var p=e[f];
+    var t=document.createElement('div');
+    t.className='thumb'+(f===primary?' primary':'');
+    t.innerHTML='<span class="tag">'+IMG_LABEL[f]+'</span>'+
+      (p?'<img src="'+esc(imgSrc(p))+'" alt="" onerror="this.replaceWith(Object.assign(document.createElement(\'div\'),{className:\'ph\',textContent:\'ไฟล์หาย: '+esc(p)+'\'}))">'
+        :'<span class="ph">— ไม่มี —</span>')+
+      (f===primary?'<span class="tag pick" style="top:auto;bottom:4px;left:4px;background:var(--primary)">PRIMARY</span>':'');
+    wrap.appendChild(t);
+  });
+  return wrap;
+}
+
+function fieldsFor(r){
+  var e=r.e, k=key(r.group,r.idx);
+  var box=document.createElement('div'); box.className='fields';
+
+  // text fields to edit
+  var SPEC=[
+    {f:'image',     label:'image (NA)'},
+    {f:'image_th',  label:'image_th'},
+    {f:'image_kr',  label:'image_kr'},
+    {f:'source',    label:'source (EN)', link:true},
+    {f:'source_kr', label:'source_kr',   link:true},
+    {f:'source_th', label:'source_th',   link:true},
+  ];
+  SPEC.forEach(function(s){
+    var row=document.createElement('div'); row.className='fld';
+    var lab=document.createElement('label'); lab.textContent=s.label;
+    var inp=document.createElement('input'); inp.type='text';
+    inp.value=e[s.f]||''; inp.placeholder='—';
+    inp.addEventListener('input',function(){
+      var v=inp.value.trim();
+      if(v) e[s.f]=v; else delete e[s.f];
+      markDirty(k);
+    });
+    row.appendChild(lab);
+    if(s.link){
+      var col=document.createElement('div');
+      col.style.display='flex'; col.style.flexDirection='column'; col.style.gap='3px';
+      col.appendChild(inp);
+      var a=document.createElement('a'); a.target='_blank'; a.textContent='เปิดลิงก์ ↗';
+      a.style.display=e[s.f]?'inline':'none'; a.href=e[s.f]||'#';
+      inp.addEventListener('input',function(){a.href=inp.value;a.style.display=inp.value?'inline':'none'});
+      col.appendChild(a);
+      row.appendChild(col);
+    } else {
+      row.appendChild(inp);
+    }
+    box.appendChild(row);
+  });
+
+  // digimon names (editable, comma-separated) — used for matching/aliases
+  var nrow=document.createElement('div'); nrow.className='fld aliases';
+  nrow.innerHTML='<label>digimon[]</label>';
+  var ninp=document.createElement('input'); ninp.type='text';
+  ninp.value=(e.digimon||[]).join(' | ');
+  ninp.addEventListener('input',function(){
+    e.digimon=ninp.value.split('|').map(function(s){return s.trim()}).filter(Boolean);
+    markDirty(k);
+  });
+  nrow.appendChild(ninp);
+  box.appendChild(nrow);
+  var hint=document.createElement('div'); hint.className='hint';
+  hint.textContent='คั่นหลายชื่อด้วย | — แก้ชื่อตรงนี้แล้ว ENG↔KR/TH matching จะ map ตามนี้';
+  box.appendChild(hint);
+
+  // read-only attributes summary (don't edit here — comes from enrichers)
+  if(e.attributes){
+    Object.keys(e.attributes).forEach(function(name){
+      var a=e.attributes[name]||{};
+      var arow=document.createElement('div'); arow.className='fld';
+      arow.innerHTML='<label>attr · '+esc(name)+'</label>';
+      var tags=document.createElement('div'); tags.className='attr-tags';
+      if(a.attribute) tags.innerHTML+='<span>'+esc(a.attribute)+'</span>';
+      if(a.natural_attribute) tags.innerHTML+='<span>'+esc(a.natural_attribute)+'</span>';
+      (a.families||[]).forEach(function(fam){tags.innerHTML+='<span>'+esc(fam)+'</span>'});
+      arow.appendChild(tags);
+      box.appendChild(arow);
+    });
+  }
+  return box;
+}
+
+function markDirty(k){
+  DIRTY.add(k);
+  // update only the count + this card's dirty styling without full re-render
+  // (full re-render would steal focus from the input being typed in)
+  document.getElementById('count').textContent=
+    listEl.children.length+' รายการแสดงอยู่ · '+DIRTY.size+' แก้แล้ว';
+}
+
+// ---- export ----
+document.getElementById('download').addEventListener('click',function(){
+  // pretty-print with 2-space indent + ensure non-ASCII stays as-is (UTF-8 file)
+  var txt=JSON.stringify(DATA,null,2)+'\n';
+  var blob=new Blob([txt],{type:'application/json;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a'); a.href=url; a.download=FILENAME; a.click();
+  setTimeout(function(){URL.revokeObjectURL(url)},1000);
+  toast('ดาวน์โหลดแล้ว — เซฟทับ data/'+FILENAME);
+});
+
+// ---- util ----
+function esc(s){ return String(s==null?'':s)
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+var toastEl=document.getElementById('toast'),toastT;
+function toast(m){ toastEl.textContent=m; toastEl.classList.add('show');
+  clearTimeout(toastT); toastT=setTimeout(function(){toastEl.classList.remove('show')},2600); }
+</script>
+</body>
+</html>
