@@ -48,18 +48,6 @@
     text-align: left; font-weight: 500; }
   table.acc-tbl tr:last-child td { border-bottom: 0; }
   table.acc-tbl td.dash { color: var(--muted-soft); }
-  /* craft / material recipe block */
-  .acc-craft { margin: 4px 20px 6px; font-size: 13px; color: var(--body);
-    line-height: 1.7; }
-  .acc-craft .npc { font-weight: 600; color: var(--ink); }
-  .acc-craft .mat-pill { display: inline-flex; align-items: center; gap: 5px;
-    font-size: 12px; padding: 2px 10px; margin: 2px 4px 2px 0;
-    border: 1px solid var(--hairline); border-radius: 9999px;
-    background: var(--surface-soft); color: var(--body); white-space: nowrap; }
-  .acc-craft .mat-pill b { color: var(--ink); font-variant-numeric: tabular-nums; }
-  .acc-craft .craft-row { margin: 6px 0 0; }
-  .acc-craft .craft-label { font-size: 11px; font-weight: 600; color: var(--muted-soft);
-    text-transform: uppercase; letter-spacing: .5px; margin-right: 6px; }
   /* item title inside a card (when a card has >1 item) */
   .card-title.acc-card-title { margin-bottom: 4px; }
   .acc-sub { margin: 0 20px 10px; font-size: 13px; color: var(--muted);
@@ -67,6 +55,71 @@
   .mockup-banner { background: var(--amber); color: var(--on-primary);
     text-align: center; font-weight: 700; padding: 7px; font-size: 13px;
     letter-spacing: .3px; }
+  /* ---- enhance simulator ---- */
+  .acc-sim { margin: 4px 20px 18px; border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg); background: var(--surface-soft);
+    overflow: hidden; }
+  .acc-sim-head { display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px; border-bottom: 1px solid var(--hairline);
+    font-size: 12.5px; font-weight: 600; color: var(--ink); }
+  .acc-sim-head .sim-badge { font-size: 9.5px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; padding: 2px 9px; border-radius: 9999px;
+    background: var(--teal); color: var(--on-primary); }
+  .acc-sim-slots { display: grid; gap: 9px; padding: 12px 14px; }
+  .sim-slot { display: grid; grid-template-columns: minmax(110px, 1fr) auto;
+    align-items: center; gap: 10px; }
+  .sim-slot-name { font-size: 12.5px; font-weight: 600; color: var(--body); }
+  .sim-slot-name small { display: block; font-size: 10.5px; font-weight: 500;
+    color: var(--muted-soft); }
+  .sim-ctrl { display: inline-flex; align-items: center; gap: 8px; }
+  .sim-ctrl input[type=range] { width: 130px; accent-color: var(--teal); cursor: pointer; }
+  .sim-lv-badge { min-width: 42px; text-align: center; font-size: 12px;
+    font-weight: 700; font-variant-numeric: tabular-nums; color: var(--teal);
+    padding: 3px 9px; border: 1px solid var(--hairline); border-radius: 9999px;
+    background: var(--canvas); }
+  .sim-slot-out { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 5px;
+    padding: 2px 0 2px; }
+  .sim-stat-pill { font-size: 11.5px; padding: 2px 9px; border-radius: 9999px;
+    background: var(--canvas); border: 1px solid var(--hairline-soft); color: var(--body);
+    white-space: nowrap; }
+  .sim-stat-pill b { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .sim-stat-pill.zero { opacity: .4; }
+  .acc-sim-total { border-top: 1px solid var(--hairline); background: var(--surface-card);
+    padding: 11px 14px; }
+  .acc-sim-total .tot-label { font-size: 11px; font-weight: 700; letter-spacing: .6px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+  .acc-sim-total .tot-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .acc-sim-total .sim-stat-pill { font-size: 12px; border-color: var(--hairline);
+    background: var(--canvas); }
+  /* ---- build simulator (global, top of page) ---- */
+  .build-sim { margin: 0 0 20px; border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg); background: var(--surface-soft); overflow: hidden; }
+  .build-sim-head { display: flex; align-items: center; gap: 9px; flex-wrap: wrap;
+    padding: 12px 16px; border-bottom: 1px solid var(--hairline);
+    font-size: 14px; font-weight: 700; color: var(--ink); }
+  .build-sim-head .sim-badge { font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; padding: 3px 10px; border-radius: 9999px;
+    background: var(--teal); color: var(--on-primary); }
+  .build-sim-head .sim-sub { font-size: 11.5px; font-weight: 500; color: var(--muted); }
+  .build-slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px; padding: 14px 16px; }
+  .build-slot { display: flex; flex-direction: column; gap: 4px; }
+  .build-slot label { font-size: 11.5px; font-weight: 600; color: var(--body); }
+  .build-slot select { font-family: inherit; font-size: 12.5px; padding: 7px 10px;
+    border: 1px solid var(--hairline); border-radius: var(--radius);
+    background: var(--canvas); color: var(--ink); cursor: pointer; }
+  .build-total { border-top: 1px solid var(--hairline); background: var(--surface-card);
+    padding: 13px 16px; }
+  .build-total .tot-label { font-size: 11.5px; font-weight: 700; letter-spacing: .6px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 9px;
+    display: flex; align-items: center; gap: 8px; }
+  .build-total .tot-count { font-size: 10.5px; font-weight: 600; color: var(--teal);
+    padding: 1px 8px; border: 1px solid var(--hairline); border-radius: 9999px;
+    background: var(--canvas); }
+  .build-total .tot-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+  .build-total .sim-stat-pill { font-size: 12.5px; padding: 3px 11px;
+    border-color: var(--hairline); background: var(--canvas); }
+  .build-note { font-size: 11px; color: var(--muted-soft); margin-top: 9px; line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -93,36 +146,28 @@
   <div class="hero">
     <div>
       <h1>💎 Accessories (เครื่องประดับ)</h1>
-      <p class="lead">อุปกรณ์/เครื่องประดับใหม่จาก vplay.in.th (เซิร์ฟ TH) — หมวด GM Note · กางดูตารางสเตตัสเต็มทุกออปชั่น</p>
+      <p class="lead">เครื่องประดับ/อุปกรณ์จาก vplay.in.th (เซิร์ฟ TH) — แยกตามชนิดชิ้น · กางดูตารางสเตตัสเต็ม + จำลองค่าตีบวก</p>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="num">4</div><div class="lbl">โพสต์</div></div>
-      <div class="hero-stat"><div class="num">7</div><div class="lbl">ชิ้น/ชุด</div></div>
+      <div class="hero-stat"><div class="num">7</div><div class="lbl">ชนิด</div></div>
+      <div class="hero-stat"><div class="num">12</div><div class="lbl">ชิ้น</div></div>
       <div class="hero-stat"><div class="num">TH</div><div class="lbl">เซิร์ฟ</div></div>
     </div>
   </div>
 
-  <div class="note">💡 ทุกชิ้นคราฟต์ที่ NPC <b>&lt;ผลิตไอเทม&gt;</b> ใน <b>D-เทอร์มินัล</b> โดยใช้วัตถุดิบที่ดรอปจากดันเจี้ยน · เครื่องประดับให้สเตตัสแบบ <b>สุ่มในช่วง (random option)</b> ส่วนชุดอุปกรณ์ตัวละครให้ค่าตามระดับตีบวก +0 → +15</div>
+  <div class="note">💡 <b>BUILD SIM</b> ด้านล่าง — เลือกชิ้นสวมแต่ละช่อง (สร้อยคอ/ต่างหู/ดิจิไวซ์/กำไล/คีย์ริง/สวมหัว + ชุด 6 ช่อง) เพื่อรวมสเตตัสทั้งตัว · ดิจิไวซ์/คีย์ริงมีหลายแบบ เลือกได้ 1 · ค่าสุ่มแสดงเพดานสูงสุด ชิ้นตีบวกใช้ +15</div>
 
   <div class="timeline">
 
-    <!-- ===================== APRIL 2026 ===================== -->
-    <div class="tl-month"><span class="tl-month-label">April 2026</span><span class="tl-month-count">1 post</span></div>
+    <!-- ===================== สร้อยคอ ===================== -->
+    <div class="tl-month"><span class="tl-month-label">📿 สร้อยคอ</span><span class="tl-month-count">1 ชิ้น · สุ่ม 5 ออปชั่น</span></div>
 
-    <article class="card tl-entry" id="th-necklace-radiance" data-server="TH">
+    <article class="card tl-entry" id="th-necklace-radiance" data-server="TH" data-build-slot="สร้อยคอ" data-build-item="สร้อยคอปาฏิหาริย์" data-build-mode="random">
       <h2 class="card-title acc-card-title">สร้อยคอปาฏิหาริย์ที่เปล่งประกาย</h2>
       <div class="sources">
         <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%9B%E0%B8%B2%E0%B8%8F/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">23.04.2026</span></span>
       </div>
       <div class="acc-sub">สร้อยคอ (Necklace) · ออปชั่นแบบสุ่ม 5 สล็อตกำหนดตายตัว</div>
-      <div class="acc-craft">
-        <div>คราฟต์ที่ NPC <span class="npc">&lt;ผลิตไอเทม&gt; เท็นโตมอน</span> @ D-เทอร์มินัล</div>
-        <div class="craft-row"><span class="craft-label">วัตถุดิบ</span>
-          <span class="mat-pill">ข้อมูลของคุรามอน <b>×100</b></span>
-          <span class="mat-pill">สร้อยคอซีโร่ยูนิตที่ถูกปิดผนึก [5 ออปชั่น] <b>×1</b></span>
-          <span class="mat-pill"><b>100T</b> Bit</span>
-        </div>
-      </div>
       <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (5 ออปชั่น)</summary>
         <div class="acc-cap"><span class="item-kind">สร้อยคอ</span> ออปชั่นที่ 1</div>
         <div class="acc-tbl-wrap"><table class="acc-tbl">
@@ -171,44 +216,16 @@
       </details>
     </article>
 
-    <!-- ===================== FEBRUARY 2026 ===================== -->
-    <div class="tl-month"><span class="tl-month-label">February 2026</span><span class="tl-month-count">1 post · 2 ชิ้น</span></div>
+    <!-- ===================== ต่างหู ===================== -->
+    <div class="tl-month"><span class="tl-month-label">👂 ต่างหู</span><span class="tl-month-count">1 ชิ้น · สุ่ม 14 ออปชั่น</span></div>
 
-    <article class="card tl-entry" id="th-true-digivice-earring" data-server="TH">
-      <h2 class="card-title acc-card-title">ดิจิไวซ์ที่แท้จริง &amp; ต่างหูแห่งความเมตตาที่เปล่งประกาย</h2>
+    <article class="card tl-entry" id="th-earring-grace" data-server="TH" data-build-slot="ต่างหู" data-build-item="ต่างหูแห่งความเมตตา" data-build-mode="random">
+      <h2 class="card-title acc-card-title">ต่างหูแห่งความเมตตาที่เปล่งประกาย</h2>
       <div class="sources">
         <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%94%E0%B8%B4%E0%B8%88%E0%B8%B4%E0%B9%84%E0%B8%A7%E0%B8%8B%E0%B9%8C%E0%B8%97%E0%B8%B5/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">26.02.2026</span></span>
       </div>
-      <div class="acc-sub">ดิจิไวซ์ + ต่างหู · ออปชั่นแบบสุ่ม</div>
-      <div class="acc-craft">
-        <div>คราฟต์ที่ NPC <span class="npc">&lt;ผลิตไอเทม&gt; พาตามอน</span> @ D-เทอร์มินัล</div>
-        <div class="craft-row"><span class="craft-label">วัตถุดิบ</span>
-          <span class="mat-pill">พลังชั่วร้ายของคิเมรามอน</span>
-          <span class="mat-pill">แหวนนิลของไกเซอร์</span>
-        </div>
-        <div class="craft-row"><span class="craft-label">ดรอป</span>
-          <span class="mat-pill">ดันเจี้ยน: ฐานทัพของไกเซอร์</span>
-        </div>
-      </div>
-      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (ดิจิไวซ์ + ต่างหู)</summary>
-        <div class="acc-cap"><span class="item-kind">ดิจิไวซ์</span> ดิจิไวซ์ที่แท้จริง — 14 ออปชั่น</div>
-        <div class="acc-tbl-wrap"><table class="acc-tbl">
-          <tr><th>ประเภท / ธาตุ</th><th>ค่า (สุ่ม)</th></tr>
-          <tr><td>ดาต้า</td><td>8%~15%</td></tr>
-          <tr><td>วัคซีน</td><td>8%~15%</td></tr>
-          <tr><td>ไวรัส</td><td>8%~15%</td></tr>
-          <tr><td>ไม่ระบุประเภท</td><td>7%~12%</td></tr>
-          <tr><td>น้ำแข็ง</td><td>10%~20%</td></tr>
-          <tr><td>น้ำ</td><td>10%~20%</td></tr>
-          <tr><td>ไฟ</td><td>10%~20%</td></tr>
-          <tr><td>ดิน</td><td>10%~20%</td></tr>
-          <tr><td>ลม</td><td>10%~20%</td></tr>
-          <tr><td>ไม้</td><td>10%~20%</td></tr>
-          <tr><td>แสง</td><td>10%~20%</td></tr>
-          <tr><td>ความมืด</td><td>10%~20%</td></tr>
-          <tr><td>สายฟ้า</td><td>10%~20%</td></tr>
-          <tr><td>เหล็ก</td><td>10%~20%</td></tr>
-        </table></div>
+      <div class="acc-sub">ต่างหู · ออปชั่นแบบสุ่ม</div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (14 ออปชั่น)</summary>
         <div class="acc-cap"><span class="item-kind">ต่างหู</span> ต่างหูแห่งความเมตตาที่เปล่งประกาย — 14 ออปชั่น</div>
         <div class="acc-tbl-wrap"><table class="acc-tbl">
           <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
@@ -230,27 +247,103 @@
       </details>
     </article>
 
-    <!-- ===================== SEPTEMBER 2025 ===================== -->
-    <div class="tl-month"><span class="tl-month-label">September 2025</span><span class="tl-month-count">1 post · 2 ชิ้น</span></div>
+    <!-- ===================== ดิจิไวซ์ ===================== -->
+    <div class="tl-month"><span class="tl-month-label">📟 ดิจิไวซ์</span><span class="tl-month-count">3 ชิ้น · สุ่ม 14 ออปชั่น</span></div>
 
-    <article class="card tl-entry" id="th-vitalbreath-ghostkeyring" data-server="TH">
-      <h2 class="card-title acc-card-title">ไวทัล เบรธ ดิจิไวซ์ -v- (กำไล) &amp; โกสท์ คีย์ริง</h2>
+    <article class="card tl-entry" id="th-true-digivice" data-server="TH" data-build-slot="ดิจิไวซ์" data-build-item="ดิจิไวซ์ที่แท้จริง" data-build-mode="random">
+      <h2 class="card-title acc-card-title">ดิจิไวซ์ที่แท้จริง</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%94%E0%B8%B4%E0%B8%88%E0%B8%B4%E0%B9%84%E0%B8%A7%E0%B8%8B%E0%B9%8C%E0%B8%97%E0%B8%B5/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">26.02.2026</span></span>
+      </div>
+      <div class="acc-sub">ดิจิไวซ์ · ออปชั่นแบบสุ่ม (โบนัสตามประเภท/ธาตุ)</div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (14 ออปชั่น)</summary>
+        <div class="acc-cap"><span class="item-kind">ดิจิไวซ์</span> ดิจิไวซ์ที่แท้จริง — 14 ออปชั่น</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>ประเภท / ธาตุ</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>ดาต้า</td><td>8%~15%</td></tr>
+          <tr><td>วัคซีน</td><td>8%~15%</td></tr>
+          <tr><td>ไวรัส</td><td>8%~15%</td></tr>
+          <tr><td>ไม่ระบุประเภท</td><td>7%~12%</td></tr>
+          <tr><td>น้ำแข็ง</td><td>10%~20%</td></tr>
+          <tr><td>น้ำ</td><td>10%~20%</td></tr>
+          <tr><td>ไฟ</td><td>10%~20%</td></tr>
+          <tr><td>ดิน</td><td>10%~20%</td></tr>
+          <tr><td>ลม</td><td>10%~20%</td></tr>
+          <tr><td>ไม้</td><td>10%~20%</td></tr>
+          <tr><td>แสง</td><td>10%~20%</td></tr>
+          <tr><td>ความมืด</td><td>10%~20%</td></tr>
+          <tr><td>สายฟ้า</td><td>10%~20%</td></tr>
+          <tr><td>เหล็ก</td><td>10%~20%</td></tr>
+        </table></div>
+      </details>
+    </article>
+
+    <article class="card tl-entry" id="th-darkness-loader" data-server="TH" data-build-slot="ดิจิไวซ์" data-build-item="ดาร์คเนส โหลดเดอร์" data-build-mode="random">
+      <h2 class="card-title acc-card-title">ดาร์คเนส โหลดเดอร์</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%94%e0%b8%b4%e0%b8%88%e0%b8%b4%e0%b9%84%e0%b8%a7%e0%b8%8b%e0%b9%8c-%e0%b8%94%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%84%e0%b9%80%e0%b8%99%e0%b8%aa-%e0%b9%82%e0%b8%ab%e0%b8%a5%e0%b8%94%e0%b9%80/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">26.03.2026</span></span>
+      </div>
+      <div class="acc-sub">ดิจิไวซ์ · ออปชั่นแบบสุ่ม (14 ธาตุ) · คราฟต์อัปเลเวล Lv.0→10</div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (14 ออปชั่น · ค่าที่ Lv สูงสุด)</summary>
+        <div class="acc-cap"><span class="item-kind">ดิจิไวซ์</span> ดาร์คเนส โหลดเดอร์ — 14 ออปชั่น</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>ประเภท / ธาตุ</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>ดาต้า</td><td>8%~15%</td></tr>
+          <tr><td>วัคซีน</td><td>8%~15%</td></tr>
+          <tr><td>ไวรัส</td><td>8%~15%</td></tr>
+          <tr><td>ไม่ระบุประเภท</td><td>7%~12%</td></tr>
+          <tr><td>น้ำแข็ง</td><td>10%~20%</td></tr>
+          <tr><td>น้ำ</td><td>10%~20%</td></tr>
+          <tr><td>ไฟ</td><td>10%~20%</td></tr>
+          <tr><td>ดิน</td><td>10%~20%</td></tr>
+          <tr><td>ลม</td><td>10%~20%</td></tr>
+          <tr><td>ไม้</td><td>10%~20%</td></tr>
+          <tr><td>แสง</td><td>10%~20%</td></tr>
+          <tr><td>ความมืด</td><td>10%~20%</td></tr>
+          <tr><td>สายฟ้า</td><td>10%~20%</td></tr>
+          <tr><td>เหล็ก</td><td>10%~20%</td></tr>
+        </table></div>
+      </details>
+    </article>
+
+    <article class="card tl-entry" id="th-cross-fusion-loader" data-server="TH" data-build-slot="ดิจิไวซ์" data-build-item="ครอส/ฟิวชันโหลดเดอร์" data-build-mode="random">
+      <h2 class="card-title acc-card-title">ครอสโหลดเดอร์ &amp; ฟิวชันโหลดเดอร์</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%94%e0%b8%b4%e0%b8%88%e0%b8%b4%e0%b9%84%e0%b8%a7%e0%b8%8b%e0%b9%8c-%e0%b8%84%e0%b8%a3%e0%b8%ad%e0%b8%aa%e0%b9%82%e0%b8%ab%e0%b8%a5%e0%b8%94%e0%b9%80%e0%b8%94%e0%b8%ad%e0%b8%a3%e0%b9%8c/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">25.07.2025</span></span>
+      </div>
+      <div class="acc-sub">ดิจิไวซ์ · ออปชั่นแบบสุ่ม (14 ธาตุ) · คราฟต์อัปเลเวล Lv.0→10 · ครอส/ฟิวชันค่าเท่ากัน</div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (14 ออปชั่น · ค่าที่ Lv สูงสุด)</summary>
+        <div class="acc-cap"><span class="item-kind">ดิจิไวซ์</span> ครอส/ฟิวชันโหลดเดอร์ — 14 ออปชั่น (Lv max)</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>ประเภท / ธาตุ</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>ดาต้า</td><td>8%~15%</td></tr>
+          <tr><td>วัคซีน</td><td>8%~15%</td></tr>
+          <tr><td>ไวรัส</td><td>8%~15%</td></tr>
+          <tr><td>ไม่ระบุประเภท</td><td>7%~12%</td></tr>
+          <tr><td>น้ำแข็ง</td><td>10%~20%</td></tr>
+          <tr><td>น้ำ</td><td>10%~20%</td></tr>
+          <tr><td>ไฟ</td><td>10%~20%</td></tr>
+          <tr><td>ดิน</td><td>10%~20%</td></tr>
+          <tr><td>ลม</td><td>10%~20%</td></tr>
+          <tr><td>ไม้</td><td>10%~20%</td></tr>
+          <tr><td>แสง</td><td>10%~20%</td></tr>
+          <tr><td>ความมืด</td><td>10%~20%</td></tr>
+          <tr><td>สายฟ้า</td><td>10%~20%</td></tr>
+          <tr><td>เหล็ก</td><td>10%~20%</td></tr>
+        </table></div>
+      </details>
+    </article>
+
+    <!-- ===================== กำไล ===================== -->
+    <div class="tl-month"><span class="tl-month-label">⛓️ กำไล</span><span class="tl-month-count">1 ชิ้น · สุ่ม</span></div>
+
+    <article class="card tl-entry" id="th-vitalbreath-bangle" data-server="TH" data-build-slot="กำไล" data-build-item="ไวทัล เบรธ" data-build-mode="random">
+      <h2 class="card-title acc-card-title">ไวทัล เบรธ ดิจิไวซ์ -V- (กำไล)</h2>
       <div class="sources">
         <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B9%84%E0%B8%A7%E0%B8%97%E0%B8%B1%E0%B8%A5-%E0%B9%80%E0%B8%9A%E0%B8%A3%E0%B8%98/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">25.09.2025</span></span>
       </div>
-      <div class="acc-sub">กำไล (ออปชั่นสุ่ม) + พวงกุญแจ (ตีบวก Lv.0–15)</div>
-      <div class="acc-craft">
-        <div>คราฟต์ที่ NPC <span class="npc">&lt;ผลิตไอเทม&gt; คิโยโนะ รูริ</span> @ D-เทอร์มินัล · เสริมพลังที่ NPC <span class="npc">ดอลฟิน</span></div>
-        <div class="craft-row"><span class="craft-label">วัตถุดิบ</span>
-          <span class="mat-pill">ดิจิโค๊ดที่ปนเปื้อน</span>
-          <span class="mat-pill">มีดของเพชฌฆาต</span>
-          <span class="mat-pill">กำไลซีโร่ยูนิต [5 ออปชั่น]</span>
-        </div>
-        <div class="craft-row"><span class="craft-label">ดรอป</span>
-          <span class="mat-pill">ดันเจี้ยน</span>
-        </div>
-      </div>
-      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (กำไล + คีย์ริง)</summary>
+      <div class="acc-sub">กำไล · ออปชั่นแบบสุ่ม</div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (ออปชั่นสุ่ม)</summary>
         <div class="acc-cap"><span class="item-kind">กำไล</span> ไวทัล เบรธ ดิจิไวซ์ -V- — ออปชั่นสุ่ม</div>
         <div class="acc-tbl-wrap"><table class="acc-tbl">
           <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
@@ -269,8 +362,21 @@
           <tr><td>พลังโจมตี (%)</td><td>3%~7%</td></tr>
           <tr><td>ผลรวมความสำเร็จโจมตี</td><td>1%~5%</td></tr>
         </table></div>
+      </details>
+    </article>
+
+    <!-- ===================== คีย์ริง ===================== -->
+    <div class="tl-month"><span class="tl-month-label">🔑 คีย์ริง</span><span class="tl-month-count">3 ชิ้น · ตีบวก + สุ่ม</span></div>
+
+    <article class="card tl-entry" id="th-ghost-keyring" data-server="TH" data-build-slot="คีย์ริง" data-build-item="โกสท์ คีย์ริง (+15)" data-build-mode="enhance">
+      <h2 class="card-title acc-card-title">โกสท์ คีย์ริง</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B9%84%E0%B8%A7%E0%B8%97%E0%B8%B1%E0%B8%A5-%E0%B9%80%E0%B8%9A%E0%B8%A3%E0%B8%98/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">25.09.2025</span></span>
+      </div>
+      <div class="acc-sub">พวงกุญแจ · ค่าตามระดับตีบวก +0 → +15</div>
+      <details class="acc-detail"><summary>📋 ดูตารางตีบวกเต็ม (+0 → +15)</summary>
         <div class="acc-cap"><span class="item-kind">พวงกุญแจ</span> โกสท์ คีย์ริง — ตารางตีบวก Lv.0–15</div>
-        <div class="acc-tbl-wrap"><table class="acc-tbl">
+        <div class="acc-tbl-wrap" data-sim-enhance data-sim-name="โกสท์ คีย์ริง" data-sim-kind="พวงกุญแจ"><table class="acc-tbl">
           <tr><th>เลเวล</th><th>อัตราโจมตี</th><th>HP สูงสุด</th><th>พลังโจมตีสกิล</th></tr>
           <tr><td>+0</td><td>100</td><td>1</td><td class="dash">—</td></tr>
           <tr><td>+1</td><td>150</td><td class="dash">—</td><td class="dash">—</td></tr>
@@ -292,28 +398,52 @@
       </details>
     </article>
 
-    <!-- ===================== JULY 2025 ===================== -->
-    <div class="tl-month"><span class="tl-month-label">July 2025</span><span class="tl-month-count">1 post · ชุด 3 ตัวละคร</span></div>
+    <article class="card tl-entry" id="th-digi-keyring" data-server="TH" data-build-slot="คีย์ริง" data-build-item="DIGI-คีย์ริง" data-build-mode="random">
+      <h2 class="card-title acc-card-title">DIGI-คีย์ริง</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/digi-%e0%b8%84%e0%b8%b5%e0%b8%a2%e0%b9%8c%e0%b8%a3%e0%b8%b4%e0%b8%87/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">21.12.2023</span></span>
+      </div>
+      <div class="acc-sub">พวงกุญแจ · ออปชั่นแบบสุ่ม · มี 11 ตระกูล (DA/DR/DS/JT/ME/NSO/NSP/VB/WG/TBD/UK) ค่าเท่ากันทุกตระกูล</div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (ออปชั่นสุ่ม)</summary>
+        <div class="acc-cap"><span class="item-kind">พวงกุญแจ</span> DIGI-คีย์ริง — ออปชั่นสุ่ม</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>สเตตัส</th><th>ค่า (สุ่ม)</th></tr>
+          <tr><td>HP</td><td>388~1940</td></tr>
+          <tr><td>โจมตี (AT)</td><td>55~278</td></tr>
+          <tr><td>พลังโจมตีสกิล</td><td>2%~10%</td></tr>
+        </table></div>
+      </details>
+    </article>
 
-    <article class="card tl-entry" id="th-courage-hope-love" data-server="TH">
+    <article class="card tl-entry" id="th-spiral-keyring" data-server="TH" data-build-slot="คีย์ริง" data-build-item="สไปรอล คีย์ริง (Lv.1)" data-build-mode="random">
+      <h2 class="card-title acc-card-title">สไปรอล คีย์ริง</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b8%aa%e0%b9%84%e0%b8%9b%e0%b8%a3%e0%b8%ad%e0%b8%a5-%e0%b8%84%e0%b8%b5%e0%b8%a2%e0%b9%8c%e0%b8%a3%e0%b8%b4%e0%b8%87/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">23.02.2023</span></span>
+      </div>
+      <div class="acc-sub">พวงกุญแจ · ออปชั่นแบบสุ่ม (Lv.1→7 + Lv max) · มี 10 ตระกูล · NPC นาโนมอน @ DATS</div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสเต็ม (ออปชั่นสุ่ม)</summary>
+        <div class="acc-cap"><span class="item-kind">พวงกุญแจ</span> สไปรอล คีย์ริง — ออปชั่นสุ่ม (Lv.1)</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>สเตตัส</th><th>ค่า (สุ่ม · Lv.1)</th></tr>
+          <tr><td>HP</td><td>25~50</td></tr>
+          <tr><td>โจมตี (AT)</td><td>4~8</td></tr>
+        </table></div>
+        <div class="acc-sub" style="margin-top:8px;font-size:11.5px">⚠️ โพสต์ต้นทางให้ค่าชัดเฉพาะ Lv.1 — Lv.2–7 + Lv max ค่าสูงขึ้นแต่ไม่ระบุตัวเลขครบ</div>
+      </details>
+    </article>
+
+    <!-- ===================== ชุดอุปกรณ์ตัวละคร ===================== -->
+    <div class="tl-month"><span class="tl-month-label">🛡️ ชุดอุปกรณ์ตัวละคร</span><span class="tl-month-count">6 ช่องสวม · ตีบวก +0→+15</span></div>
+
+    <article class="card tl-entry" id="th-courage-hope-love" data-server="TH" data-build-multi="ชุด" data-build-mode="enhance">
       <h2 class="card-title acc-card-title">พลังแห่งความกล้า · แสงแห่งความหวัง · จิตใจแห่งรัก</h2>
       <div class="sources">
         <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%84/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">31.07.2025</span></span>
       </div>
       <div class="acc-sub">ชุดอุปกรณ์ตัวละคร ไดสุเกะ / ทาเครุ / มิยาโกะ · ชุดละ 6 ช่องสวม (หัว · เครื่องประดับ · เสื้อ · กางเกง · มือ · รองเท้า) · ค่าตามระดับตีบวก +0 → +15</div>
-      <div class="acc-craft">
-        <div>คราฟต์ที่ NPC <span class="npc">&lt;ผลิตไอเทม&gt; พาตามอน</span> @ D-เทอร์มินัล · อัตราสำเร็จ 100%</div>
-        <div class="craft-row"><span class="craft-label">วัตถุดิบ</span>
-          <span class="mat-pill">พลังชั่วร้าย <b>×25</b> /ชิ้น</span>
-          <span class="mat-pill"><b>10T</b> Bit /ชิ้น</span>
-        </div>
-        <div class="craft-row"><span class="craft-label">ดรอป</span>
-          <span class="mat-pill">ดันเจี้ยนดิจิมอนไกเซอร์</span>
-        </div>
-      </div>
       <details class="acc-detail"><summary>📋 ดูตารางตีบวกเต็ม (6 ช่องสวม · +0 → +15)</summary>
         <div class="acc-cap"><span class="item-kind">ส่วนหัว</span> หัว — คริติคอล</div>
-        <div class="acc-tbl-wrap"><table class="acc-tbl">
+        <div class="acc-tbl-wrap" data-sim-enhance data-sim-name="หัว" data-sim-kind="ส่วนหัว"><table class="acc-tbl">
           <tr><th>+Lv</th><th>โจมตีคริติคอล</th><th>ความเสียหายคริติคอล</th><th>โจมตีคริติคอล (2)</th></tr>
           <tr><td>+0</td><td>5%</td><td class="dash">—</td><td class="dash">—</td></tr>
           <tr><td>+1</td><td>5.25%</td><td class="dash">—</td><td class="dash">—</td></tr>
@@ -333,7 +463,7 @@
           <tr><td>+15</td><td>15%</td><td>40%</td><td>10%</td></tr>
         </table></div>
         <div class="acc-cap"><span class="item-kind">เครื่องประดับ</span> กระเป๋า — อัตราโจมตี / โจมตี</div>
-        <div class="acc-tbl-wrap"><table class="acc-tbl">
+        <div class="acc-tbl-wrap" data-sim-enhance data-sim-name="กระเป๋า" data-sim-kind="เครื่องประดับ"><table class="acc-tbl">
           <tr><th>+Lv</th><th>อัตราโจมตี</th><th>โจมตี</th><th>อัตราโจมตี (2)</th></tr>
           <tr><td>+0</td><td>500</td><td class="dash">—</td><td class="dash">—</td></tr>
           <tr><td>+1</td><td>550</td><td class="dash">—</td><td class="dash">—</td></tr>
@@ -353,7 +483,7 @@
           <tr><td>+15</td><td>2000</td><td>1500</td><td>1500</td></tr>
         </table></div>
         <div class="acc-cap"><span class="item-kind">เสื้อ</span> เสื้อ/แจ็กเก็ต — HP / ป้องกัน</div>
-        <div class="acc-tbl-wrap"><table class="acc-tbl">
+        <div class="acc-tbl-wrap" data-sim-enhance data-sim-name="เสื้อ/แจ็กเก็ต" data-sim-kind="เสื้อ"><table class="acc-tbl">
           <tr><th>+Lv</th><th>HP สูงสุด</th><th>ป้องกัน</th><th>HP สูงสุด (2)</th></tr>
           <tr><td>+0</td><td>1000</td><td class="dash">—</td><td class="dash">—</td></tr>
           <tr><td>+1</td><td>1050</td><td class="dash">—</td><td class="dash">—</td></tr>
@@ -373,7 +503,7 @@
           <tr><td>+15</td><td>2500</td><td>1000</td><td>2000</td></tr>
         </table></div>
         <div class="acc-cap"><span class="item-kind">กางเกง</span> กางเกง — DS / พลังโจมตีสกิล</div>
-        <div class="acc-tbl-wrap"><table class="acc-tbl">
+        <div class="acc-tbl-wrap" data-sim-enhance data-sim-name="กางเกง" data-sim-kind="กางเกง"><table class="acc-tbl">
           <tr><th>+Lv</th><th>DS สูงสุด</th><th>พลังโจมตีสกิล</th><th>DS สูงสุด (2)</th></tr>
           <tr><td>+0</td><td>1000</td><td class="dash">—</td><td class="dash">—</td></tr>
           <tr><td>+1</td><td>1050</td><td class="dash">—</td><td class="dash">—</td></tr>
@@ -393,7 +523,7 @@
           <tr><td>+15</td><td>2500</td><td>30%</td><td>2000</td></tr>
         </table></div>
         <div class="acc-cap"><span class="item-kind">มือ</span> ถุงมือ/แส้ — โจมตี / ความเร็ว</div>
-        <div class="acc-tbl-wrap"><table class="acc-tbl">
+        <div class="acc-tbl-wrap" data-sim-enhance data-sim-name="ถุงมือ/แส้" data-sim-kind="มือ"><table class="acc-tbl">
           <tr><th>+Lv</th><th>โจมตี</th><th>ความเร็วในการโจมตี</th><th>โจมตี (2)</th></tr>
           <tr><td>+0</td><td>500</td><td class="dash">—</td><td class="dash">—</td></tr>
           <tr><td>+1</td><td>550</td><td class="dash">—</td><td class="dash">—</td></tr>
@@ -413,7 +543,7 @@
           <tr><td>+15</td><td>2000</td><td>3%</td><td>700</td></tr>
         </table></div>
         <div class="acc-cap"><span class="item-kind">รองเท้า</span> รองเท้า — ความเร็ว / EXP</div>
-        <div class="acc-tbl-wrap"><table class="acc-tbl">
+        <div class="acc-tbl-wrap" data-sim-enhance data-sim-name="รองเท้า" data-sim-kind="รองเท้า"><table class="acc-tbl">
           <tr><th>+Lv</th><th>ความเร็ว</th><th>ความเป็นมิตร</th><th>EXP</th></tr>
           <tr><td>+0</td><td>20%</td><td class="dash">—</td><td class="dash">—</td></tr>
           <tr><td>+1</td><td>20%</td><td class="dash">—</td><td class="dash">—</td></tr>
@@ -435,11 +565,220 @@
       </details>
     </article>
 
+    <!-- ===================== สวมหัว (แว่น) ===================== -->
+    <div class="tl-month"><span class="tl-month-label">🥽 สวมหัว (แว่น)</span><span class="tl-month-count">1 ชิ้น · ตีบวก Lv.0→สมบูรณ์</span></div>
+
+    <article class="card tl-entry" id="th-adventure-glasses" data-server="TH" data-build-slot="สวมหัว" data-build-item="แว่นนิรภัยฯ" data-build-mode="glasses">
+      <h2 class="card-title acc-card-title">แว่นนิรภัยแอดเวนเจอร์</h2>
+      <div class="sources">
+        <span class="src-item is-th"><a class="src-label" href="https://www.vplay.in.th/%e0%b9%81%e0%b8%a7%e0%b9%88%e0%b8%99%e0%b8%99%e0%b8%b4%e0%b8%a3%e0%b8%a0%e0%b8%b1%e0%b8%a2%e0%b9%81%e0%b8%ad%e0%b8%94%e0%b9%80%e0%b8%a7%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b9%8c/" target="_blank" title="vplay.in.th GM Note">TH</a><span class="src-date">25.04.2024</span></span>
+      </div>
+      <div class="acc-sub">อุปกรณ์สวมหัว · เลือก stat หลัก 1 ตัว (HT/EV/AT/CT/HP) · ตีบวก 17 ระดับ (Lv.0 → สมบูรณ์)</div>
+      <details class="acc-detail"><summary>📋 ดูตารางสเตตัสหลัก (Lv.0 → สมบูรณ์)</summary>
+        <div class="acc-cap"><span class="item-kind">สวมหัว</span> แว่นนิรภัยแอดเวนเจอร์ — stat หลัก (เลือก 1)</div>
+        <div class="acc-tbl-wrap"><table class="acc-tbl">
+          <tr><th>stat หลัก</th><th>Lv.0</th><th>สมบูรณ์</th></tr>
+          <tr><td>HT (ฮิต)</td><td>25</td><td>750</td></tr>
+          <tr><td>EV (หลบ)</td><td>50</td><td>1000</td></tr>
+          <tr><td>AT (โจมตี)</td><td>300</td><td>1200</td></tr>
+          <tr><td>CT (คริติคอล)</td><td>450</td><td>1500</td></tr>
+          <tr><td>HP</td><td>200</td><td>2000</td></tr>
+        </table></div>
+        <div class="acc-sub" style="margin-top:8px;font-size:11.5px">⚠️ โพสต์ต้นทางให้ตัวเลขชัดเฉพาะ Lv.0 และ Lv.สมบูรณ์ — ค่าระดับกลาง (Lv.1–14) ไต่ขึ้นแต่ไม่ระบุครบ · secondary stat (ออปชั่น 1–3) ช่วง 10–1500 แล้วแต่คู่</div>
+      </details>
+    </article>
+
   </div>
 
-  <div class="note" style="margin-top:24px">📌 ข้อมูลดึงจากหมวด <a href="https://www.vplay.in.th/category/news/gm-note/" target="_blank">GM Note (vplay.in.th)</a> · แหล่งดรอปวัตถุดิบระบุชัดเฉพาะโพสต์ ก.พ. 2026 (ดันเจี้ยนฐานทัพของไกเซอร์) ส่วนโพสต์อื่นโพสต์ต้นทางบอกแค่ "ดรอปจากดันเจี้ยน" · ค่าสเตตัสเครื่องประดับเป็นแบบสุ่มในช่วง min~max</div>
+  <div class="note" style="margin-top:24px">📌 ข้อมูลดึงจากหมวด <a href="https://www.vplay.in.th/category/news/gm-note/" target="_blank">GM Note (vplay.in.th)</a> · ค่าสเตตัสเครื่องประดับเป็นแบบสุ่มในช่วง min~max · คีย์ริง/ชุดอุปกรณ์ให้ค่าคงที่ตามระดับตีบวก — เลื่อน SIM เพื่อจำลองค่าแต่ละเลเวลและยอดรวมทั้งชุด</div>
 
 </main>
+
+<script>
+/* ============================================================
+   Build simulator — one global panel at the top of the page.
+   Each equipment slot has a dropdown to pick one item; the panel
+   sums every picked item's stats into a total build.
+   Item stats are resolved to a single value per mode:
+     random  : "min~max" / "x%~y%"  -> take the MAX (potential ceiling)
+     enhance  : "+Lv | cols" table  -> take the +15 (max level) row
+     glasses : "stat | Lv0 | สมบูรณ์" -> take the "สมบูรณ์" column, all stats
+   Data source = the existing tables on this page (single source of truth).
+   ============================================================ */
+(function () {
+  "use strict";
+
+  // "1200" -> {val:1200, unit:""} · "10%" -> {val:10, unit:"%"} · "—" -> null
+  function parseNum(text) {
+    var t = (text || "").trim();
+    if (!t || t === "—" || t === "-") return null;
+    var unit = t.indexOf("%") >= 0 ? "%" : "";
+    var num = parseFloat(t.replace(/[^0-9.]/g, ""));
+    if (isNaN(num)) return null;
+    return { val: num, unit: unit };
+  }
+
+  // From a "min~max" / "x%~y%" / single value cell, take the MAX side.
+  function parseMax(text) {
+    var t = (text || "").trim();
+    if (!t || t === "—" || t === "-") return null;
+    var parts = t.split("~");
+    return parseNum(parts[parts.length - 1]); // last side = max
+  }
+
+  function normName(s) { return s.replace(/\s*\(\d+\)\s*$/, "").trim(); } // drop "(2)" suffix
+
+  // Resolve one item (a list of acc-tbl-wrap tables) to a flat stat set.
+  // tables = NodeList/array of .acc-tbl-wrap elements that belong to the item.
+  function resolveItem(tables, mode) {
+    var out = []; // [{name, val, unit}]
+    tables.forEach(function (wrap) {
+      var trs = Array.prototype.slice.call(wrap.querySelector("table").rows);
+      if (trs.length < 2) return;
+
+      if (mode === "enhance") {
+        // header: +Lv | col1 | col2 ...  -> use the highest-Lv row
+        var stats = Array.prototype.slice.call(trs[0].cells).slice(1).map(function (c) { return c.textContent.trim(); });
+        var best = null, bestLv = -Infinity;
+        for (var i = 1; i < trs.length; i++) {
+          var lv = parseInt(trs[i].cells[0].textContent.replace(/[^0-9]/g, ""), 10);
+          if (!isNaN(lv) && lv > bestLv) { bestLv = lv; best = trs[i]; }
+        }
+        if (best) {
+          var cells = Array.prototype.slice.call(best.cells).slice(1);
+          for (var j = 0; j < stats.length; j++) {
+            var c = parseNum(cells[j] ? cells[j].textContent : "");
+            if (c) out.push({ name: stats[j], val: c.val, unit: c.unit });
+          }
+        }
+      } else if (mode === "glasses") {
+        // rows: statName | Lv0 | สมบูรณ์  -> take last column (สมบูรณ์), all rows
+        for (var k = 1; k < trs.length; k++) {
+          var cs = trs[k].cells;
+          var v = parseNum(cs[cs.length - 1].textContent);
+          if (v) out.push({ name: cs[0].textContent.trim(), val: v.val, unit: v.unit });
+        }
+      } else {
+        // random: rows = statName | "min~max"  -> take max
+        for (var m = 1; m < trs.length; m++) {
+          var r = trs[m].cells;
+          var mv = parseMax(r[1] ? r[1].textContent : "");
+          if (mv) out.push({ name: r[0].textContent.trim(), val: mv.val, unit: mv.unit });
+        }
+      }
+    });
+    return out;
+  }
+
+  // Sum stat lists; key by name+unit so flat vs % never mix.
+  function combineTotals(statLists) {
+    var map = new Map();
+    statLists.forEach(function (stats) {
+      stats.forEach(function (st) {
+        var name = normName(st.name);
+        var key = name + "|" + st.unit;
+        if (map.has(key)) map.get(key).val += st.val;
+        else map.set(key, { name: name, val: st.val, unit: st.unit });
+      });
+    });
+    return Array.from(map.values()).filter(function (t) { return t.val !== 0; });
+  }
+
+  function pill(name, val, unit) {
+    var num = Number.isInteger(val) ? val : Math.round(val * 100) / 100;
+    return '<span class="sim-stat-pill"><span>' + name + '</span> <b>' + num + unit + '</b></span>';
+  }
+
+  // Discover all build items on the page. Returns slots grouped for dropdowns.
+  // slot -> [{key, label, stats:[...]}]
+  function discoverItems() {
+    var slots = new Map(); // slotName -> [item...]
+    function add(slotName, label, tables, mode) {
+      var stats = resolveItem(tables, mode);
+      if (!slots.has(slotName)) slots.set(slotName, []);
+      slots.get(slotName).push({ key: label, label: label, stats: stats });
+    }
+
+    Array.prototype.slice.call(document.querySelectorAll("[data-build-slot]")).forEach(function (card) {
+      var tables = Array.prototype.slice.call(card.querySelectorAll(".acc-tbl-wrap"));
+      add(card.getAttribute("data-build-slot"), card.getAttribute("data-build-item"),
+          tables, card.getAttribute("data-build-mode"));
+    });
+
+    // multi-slot card (the costume set): each acc-tbl-wrap = its own slot
+    Array.prototype.slice.call(document.querySelectorAll("[data-build-multi]")).forEach(function (card) {
+      var mode = card.getAttribute("data-build-mode");
+      var groupLabel = card.getAttribute("data-build-multi");
+      Array.prototype.slice.call(card.querySelectorAll(".acc-tbl-wrap")).forEach(function (wrap) {
+        var slotName = (groupLabel + ": " + (wrap.getAttribute("data-sim-kind") || "?"));
+        add(slotName, (wrap.getAttribute("data-sim-name") || wrap.getAttribute("data-sim-kind")) + " (+15)", [wrap], mode);
+      });
+    });
+
+    return slots;
+  }
+
+  function init() {
+    var slots = discoverItems();
+    if (!slots.size) return;
+
+    var panel = document.createElement("div");
+    panel.className = "build-sim";
+    panel.innerHTML =
+      '<div class="build-sim-head"><span class="sim-badge">BUILD SIM</span> จำลองสเตตัสรวมทั้งตัว ' +
+      '<span class="sim-sub">— เลือกชิ้นสวมแต่ละช่อง (ค่าสุ่ม = ค่าสูงสุด · ตีบวก = +15)</span></div>' +
+      '<div class="build-slots"></div>' +
+      '<div class="build-total"><div class="tot-label">สเตตัสรวม (Total Build) <span class="tot-count"></span></div>' +
+      '<div class="tot-pills"></div>' +
+      '<div class="build-note">ค่าสุ่มแสดงเป็น "เพดานสูงสุด" (max ของช่วง min~max) — ของจริงในเกมสุ่มได้ต่ำกว่า · ชิ้นตีบวกใช้ค่าที่ +15</div></div>';
+
+    var slotsWrap = panel.querySelector(".build-slots");
+    var totPills = panel.querySelector(".tot-pills");
+    var totCount = panel.querySelector(".tot-count");
+    var selection = new Map(); // slotName -> item|null
+
+    function render() {
+      var picked = [];
+      selection.forEach(function (item) { if (item) picked.push(item.stats); });
+      var totals = combineTotals(picked);
+      totCount.textContent = picked.length + " ชิ้น";
+      totPills.innerHTML = totals.length
+        ? totals.map(function (t) { return pill(t.name, t.val, t.unit); }).join("")
+        : '<span class="sim-stat-pill zero">— เลือกชิ้นสวมเพื่อดูสเตตัสรวม —</span>';
+    }
+
+    slots.forEach(function (items, slotName) {
+      var slot = document.createElement("div");
+      slot.className = "build-slot";
+      var opts = '<option value="">— ไม่ใส่ —</option>' +
+        items.map(function (it, i) { return '<option value="' + i + '">' + it.label + '</option>'; }).join("");
+      slot.innerHTML = '<label>' + slotName + '</label><select>' + opts + '</select>';
+      slotsWrap.appendChild(slot);
+
+      var sel = slot.querySelector("select");
+      selection.set(slotName, null);
+      sel.addEventListener("change", function () {
+        var v = sel.value;
+        selection.set(slotName, v === "" ? null : items[parseInt(v, 10)]);
+        render();
+      });
+    });
+
+    render();
+
+    // insert at top of <main>, right after the hero + intro note
+    var main = document.querySelector("main.page");
+    var timeline = main.querySelector(".timeline");
+    main.insertBefore(panel, timeline);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
 
 <footer class="site-footer">
   Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
