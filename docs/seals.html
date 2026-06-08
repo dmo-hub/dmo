@@ -2390,6 +2390,10 @@
   const STAT_TIERS = [[3000, 1], [1000, 0.8], [500, 0.6], [200, 0.4], [50, 0.2], [1, 0.1]];
   const statFracFor = w => { for (const [n, f] of STAT_TIERS) if (w >= n) return f; return 0; };
   const statGained = (w, max) => max > 0 ? Math.round(max * statFracFor(w)) : 0;
+  // CT/BL/EV are percentage stats: the table value is value×100, so show it as
+  // (value/100) with 2 decimals + a % sign. The rest are flat point values.
+  const PCT_STATS = new Set(['CT', 'BL', 'EV']);
+  const fmtStat = (stat, v) => PCT_STATS.has(stat) ? (v / 100).toFixed(2) + '%' : fmt(v);
   const applyFilter = card => {
     const sel = filterState[card.dataset.tkey];
     card.querySelectorAll('tr[data-seal]').forEach(tr =>
@@ -2408,7 +2412,7 @@
         const tk = ticketsFor(w, +tr.dataset.e, +tr.dataset.f);
         tr.querySelector('.tk').textContent = tk ? fmt(tk) : '–'; sub += tk;
         const got = statGained(w, +tr.dataset.max);
-        tr.querySelector('.got').textContent = got ? fmt(got) : '–'; subGot += got;
+        tr.querySelector('.got').textContent = got ? fmtStat(tr.dataset.stat, got) : '–'; subGot += got;
         if (got) statTot[tr.dataset.stat] = (statTot[tr.dataset.stat] || 0) + got;
       });
       card.querySelector('.sub .tk').textContent = fmt(sub); grand += sub;
@@ -2419,7 +2423,7 @@
     document.getElementById('tot-packs').textContent = fmt2(grand / PACK);
     document.getElementById('tot-price').textContent = fmt2(grand / PACK * price);
     document.getElementById('tot-stats').innerHTML = STAT_ORDER.map(s =>
-      `<span class="st"><span class="k">${s}</span><span class="n">${fmt(statTot[s] || 0)}</span></span>`).join('');
+      `<span class="st"><span class="k">${s}</span><span class="n">${fmtStat(s, statTot[s] || 0)}</span></span>`).join('');
   }
   function render() {
     const counts = starCounts();
@@ -2446,7 +2450,7 @@
         return `<tr data-seal="${ne}" data-e="${r[1]}" data-f="${r[2]}" data-stat="${r[3]}" data-max="${r[4] || 0}">
           <td>${name}</td><td>${r[3]}</td><td>${r[1]}</td><td>${r[2]}</td>
           <td><input class="want" type="number" min="0" step="1" value="${saved}"></td>
-          <td class="tk">–</td><td class="got">–</td><td class="mx">${r[4] || '–'}</td><td class="rm-cell"><button class="rm-seal" type="button" title="ลบซีลนี้">✕</button></td></tr>`;
+          <td class="tk">–</td><td class="got">–</td><td class="mx">${r[4] ? fmtStat(r[3], +r[4]) : '–'}</td><td class="rm-cell"><button class="rm-seal" type="button" title="ลบซีลนี้">✕</button></td></tr>`;
       }).join('');
       const nRm = (removed[k] || []).length;
       const card = document.createElement('div');
