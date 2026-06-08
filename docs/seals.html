@@ -164,10 +164,13 @@
     white-space: nowrap; }
   .export-btn:hover { color: var(--on-primary); background: var(--primary); border-color: var(--primary); }
   .export-btn:disabled { opacity: .5; cursor: default; }
-  /* off-screen wrapper used only while building the export PNG */
-  .export-shot { position: fixed; left: -10000px; top: 0; z-index: -1;
-    background: var(--canvas); padding: 16px; box-sizing: content-box; }
-  .export-shot .calc-total { position: static; margin-bottom: 14px; }
+  /* wrapper rendered on-screen only while building the export PNG (must be
+     painted, so it can't be moved off-screen or hidden) — pinned top-left
+     above everything, removed the instant the snapshot is taken */
+  .export-shot { position: fixed; left: 0; top: 0; z-index: 9999;
+    background: var(--canvas); padding: 16px; box-sizing: content-box;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,.25); }
+  .export-shot .calc-total { position: static; margin: 0 0 14px; }
   .export-shot .calc-card { margin: 0; }
   .calc-tbl-wrap { overflow-x: auto; }
   table.calc-tbl { border-collapse: collapse; width: 100%; font-size: 12px; min-width: 420px; }
@@ -2381,25 +2384,37 @@
     s.src = 'https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.js';
     s.onload = () => res(window.htmlToImage); s.onerror = rej; document.head.appendChild(s);
   }));
-  // Snapshot the total bar + one tracked table as a single PNG. Clones both
-  // into an off-screen wrapper so the live DOM is untouched; .no-export chrome
-  // is dropped from the clone and the wrapper gets a clean padded backdrop.
+  // Snapshot the total bar + one tracked table as a single PNG. Builds a
+  // visible (briefly on-screen, so the browser actually paints it) wrapper
+  // holding clones of both, strips .no-export chrome from the clone, captures,
+  // then removes it — the live DOM is untouched.
   async function exportCard(card, filename, btn) {
     let lib;
     try { lib = await loadH2I(); }
     catch (e) { alert('โหลดตัวสร้างรูปไม่สำเร็จ (ต้องต่อเน็ต)'); return; }
     const prev = btn && btn.textContent;
     if (btn) { btn.disabled = true; btn.textContent = '⏳ กำลังสร้าง…'; }
+    const w = card.offsetWidth;
     const wrap = document.createElement('div');
     wrap.className = 'export-shot';
-    wrap.style.width = card.offsetWidth + 'px';
+    wrap.style.width = w + 'px';
+    const cardClone = card.cloneNode(true);
+    // cloneNode copies the value ATTRIBUTE, not the live input .value the user
+    // typed — mirror each one onto the clone so "ต้องการ" shows the real number
+    const srcInputs = card.querySelectorAll('input.want');
+    cardClone.querySelectorAll('input.want').forEach((inp, i) => {
+      if (srcInputs[i]) inp.setAttribute('value', srcInputs[i].value);
+    });
     wrap.appendChild(totalBar.cloneNode(true));
-    wrap.appendChild(card.cloneNode(true));
+    wrap.appendChild(cardClone);
     wrap.querySelectorAll('.no-export').forEach(n => n.remove());
     document.body.appendChild(wrap);
+    // wait two frames so layout/paint of the freshly-inserted node completes
+    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
     try {
       const bg = getComputedStyle(document.body).backgroundColor;
-      const url = await lib.toPng(wrap, {pixelRatio: 2, backgroundColor: bg, cacheBust: true});
+      const url = await lib.toPng(wrap, {pixelRatio: 2, backgroundColor: bg,
+        width: wrap.offsetWidth, height: wrap.offsetHeight, cacheBust: true});
       const a = document.createElement('a'); a.href = url; a.download = filename + '.png'; a.click();
     } catch (e) { alert('สร้างรูปไม่สำเร็จ: ' + e); }
     finally { wrap.remove(); if (btn) { btn.disabled = false; btn.textContent = prev; } }
