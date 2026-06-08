@@ -2395,7 +2395,8 @@
     card.querySelectorAll('tr[data-seal]').forEach(tr =>
       tr.style.display = (!sel || !sel.size || sel.has(tr.dataset.stat)) ? '' : 'none');
   };
-  const STAT_ORDER = ['AT', 'BL', 'CT', 'DE', 'DS', 'EV', 'HP', 'HT'];
+  // grid is 4 cols: top row AT HT CT HP, bottom row DE BL EV DS
+  const STAT_ORDER = ['AT', 'HT', 'CT', 'HP', 'DE', 'BL', 'EV', 'DS'];
   function recalc() {
     let grand = 0;
     const statTot = {};                       // stat type -> total status gained
