@@ -129,6 +129,11 @@
   .calc-controls input[type=number] { width: 90px; padding: 6px 9px; font: inherit;
     font-size: 13px; border: 1px solid var(--hairline); border-radius: var(--radius-xs);
     background: var(--canvas); color: var(--ink); text-align: right; }
+  /* hide the native number-input spinner (up/down arrows) everywhere on the page */
+  .calc-panel input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+  .calc-panel input[type=number]::-webkit-outer-spin-button,
+  .calc-panel input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none; appearance: none; margin: 0; }
   .calc-controls .fixed { color: var(--muted-soft); font-size: 12.5px; }
   .calc-controls .spacer { flex: 1 1 auto; }
   .calc-controls button { appearance: none; border: 1px solid var(--hairline); cursor: pointer;
