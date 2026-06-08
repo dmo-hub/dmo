@@ -164,11 +164,11 @@
     white-space: nowrap; }
   .export-btn:hover { color: var(--on-primary); background: var(--primary); border-color: var(--primary); }
   .export-btn:disabled { opacity: .5; cursor: default; }
-  .calc-total { position: relative; }
-  #export-total { position: absolute; top: 6px; right: 6px; z-index: 3; }
-  /* during capture: hide chrome + give the snapshot a clean padded backdrop */
-  .exporting .no-export { display: none !important; }
-  .exporting { background: var(--canvas); padding: 16px; border-radius: var(--radius); }
+  /* off-screen wrapper used only while building the export PNG */
+  .export-shot { position: fixed; left: -10000px; top: 0; z-index: -1;
+    background: var(--canvas); padding: 16px; box-sizing: content-box; }
+  .export-shot .calc-total { position: static; margin-bottom: 14px; }
+  .export-shot .calc-card { margin: 0; }
   .calc-tbl-wrap { overflow-x: auto; }
   table.calc-tbl { border-collapse: collapse; width: 100%; font-size: 12px; min-width: 420px; }
   table.calc-tbl th, table.calc-tbl td { padding: 6px 11px; text-align: center;
@@ -271,7 +271,6 @@
         <button id="clear-want" type="button">ล้างค่าที่กรอก</button>
       </div>
       <div class="calc-total" id="calc-total" hidden>
-        <button class="export-btn no-export" id="export-total" type="button" title="บันทึกสรุปเป็นรูป">🖼️ บันทึกรูป</button>
         <div class="ct-row"><span class="t">🎟️ รวมตั๋วที่ใช้</span><span class="vw"><span class="v" id="tot-tickets">0</span><span class="u">ใบ</span></span></div>
         <div class="ct-row"><span class="t">📦 คิดเป็น</span><span class="vw"><span class="v" id="tot-packs">0</span><span class="u">แพ็ค</span></span></div>
         <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v" id="tot-price">0</span></span></div>
@@ -2382,20 +2381,28 @@
     s.src = 'https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.js';
     s.onload = () => res(window.htmlToImage); s.onerror = rej; document.head.appendChild(s);
   }));
-  // Snapshot `node` (minus .no-export chrome) to a downloaded PNG.
-  async function exportNode(node, filename, btn) {
+  // Snapshot the total bar + one tracked table as a single PNG. Clones both
+  // into an off-screen wrapper so the live DOM is untouched; .no-export chrome
+  // is dropped from the clone and the wrapper gets a clean padded backdrop.
+  async function exportCard(card, filename, btn) {
     let lib;
     try { lib = await loadH2I(); }
     catch (e) { alert('โหลดตัวสร้างรูปไม่สำเร็จ (ต้องต่อเน็ต)'); return; }
     const prev = btn && btn.textContent;
     if (btn) { btn.disabled = true; btn.textContent = '⏳ กำลังสร้าง…'; }
-    node.classList.add('exporting');
+    const wrap = document.createElement('div');
+    wrap.className = 'export-shot';
+    wrap.style.width = card.offsetWidth + 'px';
+    wrap.appendChild(totalBar.cloneNode(true));
+    wrap.appendChild(card.cloneNode(true));
+    wrap.querySelectorAll('.no-export').forEach(n => n.remove());
+    document.body.appendChild(wrap);
     try {
       const bg = getComputedStyle(document.body).backgroundColor;
-      const url = await lib.toPng(node, {pixelRatio: 2, backgroundColor: bg, cacheBust: true});
+      const url = await lib.toPng(wrap, {pixelRatio: 2, backgroundColor: bg, cacheBust: true});
       const a = document.createElement('a'); a.href = url; a.download = filename + '.png'; a.click();
     } catch (e) { alert('สร้างรูปไม่สำเร็จ: ' + e); }
-    finally { node.classList.remove('exporting'); if (btn) { btn.disabled = false; btn.textContent = prev; } }
+    finally { wrap.remove(); if (btn) { btn.disabled = false; btn.textContent = prev; } }
   }
 
   const jget = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } };
@@ -2508,7 +2515,7 @@
         ${nRm ? `<div class="calc-removed">ลบไป ${nRm} ซีล · <a class="restore">คืนค่าทั้งหมด</a></div>` : ''}`;
       card.querySelector('.rm').addEventListener('click', () => { setStars(stars().filter(x => x !== k)); paintStars(); render(); });
       card.querySelector('.export-btn').addEventListener('click', e =>
-        exportNode(card, `seal-${t.server}-${k}`, e.currentTarget));
+        exportCard(card, `seal-${t.server}-${k}`, e.currentTarget));
       card.querySelectorAll('.calc-chip').forEach(chip => chip.addEventListener('click', () => {
         const set = filterState[k] = filterState[k] || new Set(); const s = chip.dataset.stat;
         if (set.has(s)) { set.delete(s); chip.classList.remove('on'); } else { set.add(s); chip.classList.add('on'); }
@@ -2545,8 +2552,6 @@
   document.getElementById('clear-want').addEventListener('click', () => {
     want = {}; saveWant(); document.querySelectorAll('input.want').forEach(i => i.value = ''); recalc();
   });
-  document.getElementById('export-total').addEventListener('click', e =>
-    exportNode(totalBar, 'seal-budget-' + (activeServer || 'all'), e.currentTarget));
 
   // feed star buttons
   function paintStars() {
