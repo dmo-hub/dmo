@@ -178,6 +178,14 @@
   .calc-total .ct-price { background: var(--surface-card); }
   .calc-total .ct-price .t { color: var(--body); font-weight: 600; }
   .calc-total .ct-price .v { font-size: 15.5px; color: var(--ink); }
+  .calc-total .ct-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
+    padding: 8px; border-top: 1px solid var(--hairline); }
+  .calc-total .ct-stats .st { display: flex; align-items: baseline; justify-content: space-between;
+    gap: 6px; padding: 5px 10px; background: var(--surface-soft); border-radius: var(--radius-xs); }
+  .calc-total .ct-stats .st .k { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: .3px; }
+  .calc-total .ct-stats .st .n { font-size: 13px; font-weight: 700; color: var(--ink);
+    font-variant-numeric: tabular-nums; font-family: var(--display-font); }
+  @media (max-width: 520px) { .calc-total .ct-stats { grid-template-columns: repeat(2, 1fr); } }
   .calc-empty { text-align: center; color: var(--muted-soft); padding: 30px 20px;
     border: 1px dashed var(--hairline); border-radius: var(--radius); font-size: 13.5px; line-height: 1.7; }
   .calc-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 5px;
@@ -248,6 +256,7 @@
         <div class="ct-row"><span class="t">🎟️ รวมตั๋วที่ใช้</span><span class="vw"><span class="v" id="tot-tickets">0</span><span class="u">ใบ</span></span></div>
         <div class="ct-row"><span class="t">📦 คิดเป็น</span><span class="vw"><span class="v" id="tot-packs">0</span><span class="u">แพ็ค</span></span></div>
         <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v" id="tot-price">0</span></span></div>
+        <div class="ct-stats" id="tot-stats"></div>
       </div>
       <div id="calc-root"></div>
     </div>
@@ -2381,8 +2390,10 @@
     card.querySelectorAll('tr[data-seal]').forEach(tr =>
       tr.style.display = (!sel || !sel.size || sel.has(tr.dataset.stat)) ? '' : 'none');
   };
+  const STAT_ORDER = ['AT', 'BL', 'CT', 'DE', 'DS', 'EV', 'HP', 'HT'];
   function recalc() {
     let grand = 0;
+    const statTot = {};                       // stat type -> total status gained
     document.querySelectorAll('.calc-card').forEach(card => {
       let sub = 0, subGot = 0;
       card.querySelectorAll('tr[data-seal]').forEach(tr => {
@@ -2392,6 +2403,7 @@
         tr.querySelector('.tk').textContent = tk ? fmt(tk) : '–'; sub += tk;
         const got = statGained(w, +tr.dataset.max);
         tr.querySelector('.got').textContent = got ? fmt(got) : '–'; subGot += got;
+        if (got) statTot[tr.dataset.stat] = (statTot[tr.dataset.stat] || 0) + got;
       });
       card.querySelector('.sub .tk').textContent = fmt(sub); grand += sub;
       card.querySelector('.sub .got').textContent = fmt(subGot);
@@ -2400,6 +2412,8 @@
     document.getElementById('tot-tickets').textContent = fmt(grand);
     document.getElementById('tot-packs').textContent = fmt2(grand / PACK);
     document.getElementById('tot-price').textContent = fmt2(grand / PACK * price);
+    document.getElementById('tot-stats').innerHTML = STAT_ORDER.map(s =>
+      `<span class="st"><span class="k">${s}</span><span class="n">${fmt(statTot[s] || 0)}</span></span>`).join('');
   }
   function render() {
     const counts = starCounts();
