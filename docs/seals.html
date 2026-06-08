@@ -121,25 +121,26 @@
   .calc-srvtab.on.s-kr { background: var(--coral); }
   .calc-srvtab.on.s-th { background: var(--teal); }
   .calc-srvtab.on .n { background: rgba(255,255,255,.25); color: var(--on-primary); }
-  .calc-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
-    margin: 0 0 16px; padding: 12px 14px; background: var(--canvas);
-    border: 1px solid var(--hairline); border-radius: var(--radius); }
-  .calc-controls label { font-size: 13px; color: var(--body); font-weight: 500;
+  /* price/pack + actions row, now living at the bottom of the total bar */
+  .ct-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
+    padding: 11px 14px; border-top: 1px solid var(--hairline); }
+  .ct-controls label { font-size: 13px; color: var(--body); font-weight: 500;
     display: inline-flex; align-items: center; gap: 8px; }
-  .calc-controls input[type=number] { width: 90px; padding: 6px 9px; font: inherit;
+  .ct-controls input[type=number] { width: 84px; padding: 6px 9px; font: inherit;
     font-size: 13px; border: 1px solid var(--hairline); border-radius: var(--radius-xs);
     background: var(--canvas); color: var(--ink); text-align: right; }
+  .ct-controls .cc-unit { color: var(--muted-soft); font-size: 12.5px; margin-left: -3px; }
   /* hide the native number-input spinner (up/down arrows) everywhere on the page */
   .calc-panel input[type=number] { -moz-appearance: textfield; appearance: textfield; }
   .calc-panel input[type=number]::-webkit-outer-spin-button,
   .calc-panel input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none; appearance: none; margin: 0; }
-  .calc-controls .fixed { color: var(--muted-soft); font-size: 12.5px; }
-  .calc-controls .spacer { flex: 1 1 auto; }
-  .calc-controls button { appearance: none; border: 1px solid var(--hairline); cursor: pointer;
+  .ct-controls .fixed { color: var(--muted-soft); font-size: 12.5px; }
+  .ct-controls .spacer { flex: 1 1 auto; }
+  .ct-controls button { appearance: none; border: 1px solid var(--hairline); cursor: pointer;
     background: var(--canvas); color: var(--body); font: inherit; font-size: 12.5px;
     padding: 6px 12px; border-radius: 9999px; }
-  .calc-controls button:hover { background: var(--surface-card); }
+  .ct-controls button:hover { background: var(--surface-card); }
   .calc-card { border: 1px solid var(--hairline); border-radius: var(--radius);
     background: var(--canvas); margin: 0 0 14px; overflow: hidden; }
   .calc-card-head { display: flex; align-items: center; gap: 10px; padding: 9px 13px;
@@ -272,19 +273,19 @@
     <summary>💰 Seal Budget <span class="pill-count" id="calc-count">0</span></summary>
     <div class="calc-body">
       <div class="calc-srvtabs no-export" id="calc-srvtabs"></div>
-      <div class="calc-controls no-export">
-        <label>ราคา/แพ็ค <input type="number" id="price-pack" min="0" step="1" value="240"></label>
-        <span class="fixed">· 1 แพ็ค = 3,000 ตั๋ว (คงที่)</span>
-        <span class="spacer"></span>
-        <button id="set-master" type="button">ตั้งทุกแถว = 3000 (ถึง Master)</button>
-        <button id="clear-want" type="button">ล้างค่าที่กรอก</button>
-      </div>
       <div class="calc-total" id="calc-total" hidden>
-        <div class="ct-row export-only"><span class="t">🏷️ ราคา/แพ็ค</span><span class="vw"><span class="v" id="tot-pricepack">0</span></span></div>
+        <div class="ct-row export-only"><span class="t">🏷️ ราคา/แพ็ค</span><span class="vw"><span class="v" id="tot-pricepack">0</span><span class="u">฿</span></span></div>
         <div class="ct-row"><span class="t">🎟️ รวมตั๋วที่ใช้</span><span class="vw"><span class="v" id="tot-tickets">0</span><span class="u">ใบ</span></span></div>
         <div class="ct-row"><span class="t">📦 คิดเป็น</span><span class="vw"><span class="v" id="tot-packs">0</span><span class="u">แพ็ค</span></span></div>
-        <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v" id="tot-price">0</span></span></div>
+        <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v" id="tot-price">0</span><span class="u">฿</span></span></div>
         <div class="ct-stats" id="tot-stats"></div>
+        <div class="ct-controls no-export">
+          <label>ราคา/แพ็ค <input type="number" id="price-pack" min="0" step="1" value="240"><span class="cc-unit">฿</span></label>
+          <span class="fixed">· 1 แพ็ค = 3,000 ตั๋ว (คงที่)</span>
+          <span class="spacer"></span>
+          <button id="set-master" type="button">ตั้งทุกแถว = 3000 (ถึง Master)</button>
+          <button id="clear-want" type="button">ล้างค่าที่กรอก</button>
+        </div>
       </div>
       <div id="calc-root"></div>
     </div>
