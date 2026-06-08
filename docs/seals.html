@@ -2424,9 +2424,9 @@
       const rowsHtml = rows.map(r => {
         const name = r[0], ne = name.replace(/"/g, '&quot;'), saved = (want[k] && want[k][name]) || '';
         return `<tr data-seal="${ne}" data-e="${r[1]}" data-f="${r[2]}" data-stat="${r[3]}" data-max="${r[4] || 0}">
-          <td>${name}</td><td>${r[3]}</td><td>${r[1]}</td><td>${r[2]}</td><td class="mx">${r[4] || '–'}</td>
+          <td>${name}</td><td>${r[3]}</td><td>${r[1]}</td><td>${r[2]}</td>
           <td><input class="want" type="number" min="0" step="1" value="${saved}"></td>
-          <td class="tk">–</td><td class="got">–</td><td class="rm-cell"><button class="rm-seal" type="button" title="ลบซีลนี้">✕</button></td></tr>`;
+          <td class="tk">–</td><td class="got">–</td><td class="mx">${r[4] || '–'}</td><td class="rm-cell"><button class="rm-seal" type="button" title="ลบซีลนี้">✕</button></td></tr>`;
       }).join('');
       const nRm = (removed[k] || []).length;
       const card = document.createElement('div');
@@ -2437,9 +2437,9 @@
           <button class="rm" type="button" title="เลิกติดตามตารางนี้">✕ เลิกติดตาม</button></div>
         ${statsList.length > 1 ? `<div class="calc-filter"><span class="lbl">Stat:</span>${chips}</div>` : ''}
         <div class="calc-tbl-wrap"><table class="calc-tbl">
-          <tr><th>ซีล</th><th>Stat</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>สเตตัสสูงสุด</th><th>อยากได้</th><th>ใช้ตั๋ว</th><th>Status ได้</th><th class="rm-cell"></th></tr>
+          <tr><th>ซีล</th><th>Stat</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>อยากได้</th><th>ใช้ตั๋ว</th><th>Status ที่ได้</th><th>สเตตัสสูงสุด</th><th class="rm-cell"></th></tr>
           ${rowsHtml}
-          <tr class="sub"><td colspan="6">รวมตารางนี้</td><td class="tk">0</td><td class="got">0</td><td class="rm-cell"></td></tr>
+          <tr class="sub"><td colspan="5">รวมตารางนี้</td><td class="tk">0</td><td class="got">0</td><td></td><td class="rm-cell"></td></tr>
         </table></div>
         ${nRm ? `<div class="calc-removed">ลบไป ${nRm} ซีล · <a class="restore">คืนค่าทั้งหมด</a></div>` : ''}`;
       card.querySelector('.rm').addEventListener('click', () => { setStars(stars().filter(x => x !== k)); paintStars(); render(); });
