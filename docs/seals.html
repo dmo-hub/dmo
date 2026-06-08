@@ -2371,6 +2371,11 @@
   }
 
   const ticketsFor = (w, e, f) => (w > 0 && e > 0) ? Math.ceil(w / e) * f : 0;
+  // status gained from owning `w` seals: a step function of the seal count
+  // (the in-game tiers), times the seal's max stat. Floors to the tier reached.
+  const STAT_TIERS = [[3000, 1], [1000, 0.8], [500, 0.6], [200, 0.4], [50, 0.2], [1, 0.1]];
+  const statFracFor = w => { for (const [n, f] of STAT_TIERS) if (w >= n) return f; return 0; };
+  const statGained = (w, max) => max > 0 ? Math.round(max * statFracFor(w)) : 0;
   const applyFilter = card => {
     const sel = filterState[card.dataset.tkey];
     card.querySelectorAll('tr[data-seal]').forEach(tr =>
@@ -2379,14 +2384,17 @@
   function recalc() {
     let grand = 0;
     document.querySelectorAll('.calc-card').forEach(card => {
-      let sub = 0;
+      let sub = 0, subGot = 0;
       card.querySelectorAll('tr[data-seal]').forEach(tr => {
         if (tr.style.display === 'none') return;
         const w = parseInt(tr.querySelector('input.want').value, 10) || 0;
         const tk = ticketsFor(w, +tr.dataset.e, +tr.dataset.f);
         tr.querySelector('.tk').textContent = tk ? fmt(tk) : '–'; sub += tk;
+        const got = statGained(w, +tr.dataset.max);
+        tr.querySelector('.got').textContent = got ? fmt(got) : '–'; subGot += got;
       });
       card.querySelector('.sub .tk').textContent = fmt(sub); grand += sub;
+      card.querySelector('.sub .got').textContent = fmt(subGot);
     });
     const price = +priceInput.value || 0;
     document.getElementById('tot-tickets').textContent = fmt(grand);
@@ -2415,10 +2423,10 @@
       const chips = statsList.map(s => `<button class="calc-chip" data-stat="${s}" type="button">${s}</button>`).join('');
       const rowsHtml = rows.map(r => {
         const name = r[0], ne = name.replace(/"/g, '&quot;'), saved = (want[k] && want[k][name]) || '';
-        return `<tr data-seal="${ne}" data-e="${r[1]}" data-f="${r[2]}" data-stat="${r[3]}">
-          <td>${name}</td><td>${r[3]}</td><td>${r[1]}</td><td>${r[2]}</td>
+        return `<tr data-seal="${ne}" data-e="${r[1]}" data-f="${r[2]}" data-stat="${r[3]}" data-max="${r[4] || 0}">
+          <td>${name}</td><td>${r[3]}</td><td>${r[1]}</td><td>${r[2]}</td><td class="mx">${r[4] || '–'}</td>
           <td><input class="want" type="number" min="0" step="1" value="${saved}"></td>
-          <td class="tk">–</td><td class="rm-cell"><button class="rm-seal" type="button" title="ลบซีลนี้">✕</button></td></tr>`;
+          <td class="tk">–</td><td class="got">–</td><td class="rm-cell"><button class="rm-seal" type="button" title="ลบซีลนี้">✕</button></td></tr>`;
       }).join('');
       const nRm = (removed[k] || []).length;
       const card = document.createElement('div');
@@ -2429,9 +2437,9 @@
           <button class="rm" type="button" title="เลิกติดตามตารางนี้">✕ เลิกติดตาม</button></div>
         ${statsList.length > 1 ? `<div class="calc-filter"><span class="lbl">Stat:</span>${chips}</div>` : ''}
         <div class="calc-tbl-wrap"><table class="calc-tbl">
-          <tr><th>ซีล</th><th>Stat</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>อยากได้</th><th>ใช้ตั๋ว</th><th class="rm-cell"></th></tr>
+          <tr><th>ซีล</th><th>Stat</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>สเตตัสสูงสุด</th><th>อยากได้</th><th>ใช้ตั๋ว</th><th>Status ได้</th><th class="rm-cell"></th></tr>
           ${rowsHtml}
-          <tr class="sub"><td colspan="5">รวมตั๋วตารางนี้</td><td class="tk">0</td><td class="rm-cell"></td></tr>
+          <tr class="sub"><td colspan="6">รวมตารางนี้</td><td class="tk">0</td><td class="got">0</td><td class="rm-cell"></td></tr>
         </table></div>
         ${nRm ? `<div class="calc-removed">ลบไป ${nRm} ซีล · <a class="restore">คืนค่าทั้งหมด</a></div>` : ''}`;
       card.querySelector('.rm').addEventListener('click', () => { setStars(stars().filter(x => x !== k)); paintStars(); render(); });
