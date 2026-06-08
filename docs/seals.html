@@ -175,6 +175,9 @@
   /* no scrollbars in the snapshot — let every table render at full size */
   .export-shot, .export-shot * { overflow: visible !important; max-height: none !important; }
   .export-shot table.calc-tbl { min-width: 0; width: 100%; }
+  /* .export-only rows are hidden in the live UI, shown only in the snapshot */
+  .export-only { display: none; }
+  .export-shot .export-only { display: flex; }
   .calc-tbl-wrap { overflow-x: auto; }
   table.calc-tbl { border-collapse: collapse; width: 100%; font-size: 12px; min-width: 420px; }
   table.calc-tbl th, table.calc-tbl td { padding: 6px 11px; text-align: center;
@@ -277,6 +280,7 @@
         <button id="clear-want" type="button">ล้างค่าที่กรอก</button>
       </div>
       <div class="calc-total" id="calc-total" hidden>
+        <div class="ct-row export-only"><span class="t">🏷️ ราคา/แพ็ค</span><span class="vw"><span class="v" id="tot-pricepack">0</span></span></div>
         <div class="ct-row"><span class="t">🎟️ รวมตั๋วที่ใช้</span><span class="vw"><span class="v" id="tot-tickets">0</span><span class="u">ใบ</span></span></div>
         <div class="ct-row"><span class="t">📦 คิดเป็น</span><span class="vw"><span class="v" id="tot-packs">0</span><span class="u">แพ็ค</span></span></div>
         <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v" id="tot-price">0</span></span></div>
@@ -2482,6 +2486,7 @@
       card.querySelector('.sub .got').textContent = fmt(subGot);
     });
     const price = +priceInput.value || 0;
+    document.getElementById('tot-pricepack').textContent = fmt(price);
     document.getElementById('tot-tickets').textContent = fmt(grand);
     document.getElementById('tot-packs').textContent = fmt2(grand / PACK);
     document.getElementById('tot-price').textContent = fmt2(grand / PACK * price);
