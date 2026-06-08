@@ -151,11 +151,24 @@
   .calc-srv.s-na { background: var(--amber); color: var(--on-primary); }
   .calc-card-head .cap { font-size: 12.5px; color: var(--ink); font-weight: 500; }
   .calc-card-head .dt { font-size: 11px; color: var(--muted-soft); font-family: "JetBrains Mono", monospace; }
-  .calc-card-head .rm { margin-left: auto; appearance: none; cursor: pointer;
+  .calc-card-head .head-btns { margin-left: auto; display: inline-flex; gap: 7px; }
+  .calc-card-head .rm { appearance: none; cursor: pointer;
     font: inherit; font-size: 11.5px; font-weight: 600; color: var(--muted);
     background: var(--canvas); border: 1px solid var(--hairline);
     border-radius: 9999px; padding: 4px 12px; white-space: nowrap; }
   .calc-card-head .rm:hover { color: var(--on-primary); background: var(--coral); border-color: var(--coral); }
+  /* export-to-image buttons (calc total bar + each tracked table) */
+  .export-btn { appearance: none; cursor: pointer; font: inherit; font-size: 11.5px;
+    font-weight: 600; color: var(--primary); background: var(--canvas);
+    border: 1px solid var(--hairline); border-radius: 9999px; padding: 4px 12px;
+    white-space: nowrap; }
+  .export-btn:hover { color: var(--on-primary); background: var(--primary); border-color: var(--primary); }
+  .export-btn:disabled { opacity: .5; cursor: default; }
+  .calc-total { position: relative; }
+  #export-total { position: absolute; top: 6px; right: 6px; z-index: 3; }
+  /* during capture: hide chrome + give the snapshot a clean padded backdrop */
+  .exporting .no-export { display: none !important; }
+  .exporting { background: var(--canvas); padding: 16px; border-radius: var(--radius); }
   .calc-tbl-wrap { overflow-x: auto; }
   table.calc-tbl { border-collapse: collapse; width: 100%; font-size: 12px; min-width: 420px; }
   table.calc-tbl th, table.calc-tbl td { padding: 6px 11px; text-align: center;
@@ -249,8 +262,8 @@
   <details class="calc-panel" id="calc-panel">
     <summary>💰 Seal Budget <span class="pill-count" id="calc-count">0</span></summary>
     <div class="calc-body">
-      <div class="calc-srvtabs" id="calc-srvtabs"></div>
-      <div class="calc-controls">
+      <div class="calc-srvtabs no-export" id="calc-srvtabs"></div>
+      <div class="calc-controls no-export">
         <label>ราคา/แพ็ค <input type="number" id="price-pack" min="0" step="1" value="240"></label>
         <span class="fixed">· 1 แพ็ค = 3,000 ตั๋ว (คงที่)</span>
         <span class="spacer"></span>
@@ -258,6 +271,7 @@
         <button id="clear-want" type="button">ล้างค่าที่กรอก</button>
       </div>
       <div class="calc-total" id="calc-total" hidden>
+        <button class="export-btn no-export" id="export-total" type="button" title="บันทึกสรุปเป็นรูป">🖼️ บันทึกรูป</button>
         <div class="ct-row"><span class="t">🎟️ รวมตั๋วที่ใช้</span><span class="vw"><span class="v" id="tot-tickets">0</span><span class="u">ใบ</span></span></div>
         <div class="ct-row"><span class="t">📦 คิดเป็น</span><span class="vw"><span class="v" id="tot-packs">0</span><span class="u">แพ็ค</span></span></div>
         <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v" id="tot-price">0</span></span></div>
@@ -2360,6 +2374,30 @@
   const priceInput = document.getElementById('price-pack');
   const fmt = n => n.toLocaleString('en-US');
   const fmt2 = n => n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+  // Lazily load html-to-image from CDN only when the user first exports.
+  let _h2iP = null;
+  const loadH2I = () => _h2iP || (_h2iP = new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.js';
+    s.onload = () => res(window.htmlToImage); s.onerror = rej; document.head.appendChild(s);
+  }));
+  // Snapshot `node` (minus .no-export chrome) to a downloaded PNG.
+  async function exportNode(node, filename, btn) {
+    let lib;
+    try { lib = await loadH2I(); }
+    catch (e) { alert('โหลดตัวสร้างรูปไม่สำเร็จ (ต้องต่อเน็ต)'); return; }
+    const prev = btn && btn.textContent;
+    if (btn) { btn.disabled = true; btn.textContent = '⏳ กำลังสร้าง…'; }
+    node.classList.add('exporting');
+    try {
+      const bg = getComputedStyle(document.body).backgroundColor;
+      const url = await lib.toPng(node, {pixelRatio: 2, backgroundColor: bg, cacheBust: true});
+      const a = document.createElement('a'); a.href = url; a.download = filename + '.png'; a.click();
+    } catch (e) { alert('สร้างรูปไม่สำเร็จ: ' + e); }
+    finally { node.classList.remove('exporting'); if (btn) { btn.disabled = false; btn.textContent = prev; } }
+  }
+
   const jget = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } };
   const stars = () => jget(STARS_KEY, []);
   const setStars = a => localStorage.setItem(STARS_KEY, JSON.stringify(a));
@@ -2450,23 +2488,27 @@
         return `<tr data-seal="${ne}" data-e="${r[1]}" data-f="${r[2]}" data-stat="${r[3]}" data-max="${r[4] || 0}">
           <td>${name}</td><td>${r[3]}</td><td>${r[1]}</td><td>${r[2]}</td>
           <td><input class="want" type="number" min="0" step="1" value="${saved}"></td>
-          <td class="tk">–</td><td class="got">–</td><td class="mx">${r[4] ? fmtStat(r[3], +r[4]) : '–'}</td><td class="rm-cell"><button class="rm-seal" type="button" title="ลบซีลนี้">✕</button></td></tr>`;
+          <td class="tk">–</td><td class="got">–</td><td class="mx">${r[4] ? fmtStat(r[3], +r[4]) : '–'}</td><td class="rm-cell no-export"><button class="rm-seal" type="button" title="ลบซีลนี้">✕</button></td></tr>`;
       }).join('');
       const nRm = (removed[k] || []).length;
       const card = document.createElement('div');
       card.className = 'calc-card'; card.dataset.tkey = k;
       card.innerHTML = `
         <div class="calc-card-head"><span class="calc-srv s-${t.server}">${t.server.toUpperCase()}</span>
-          <span class="dt">${t.date}</span><span class="cap">${t.caption}</span>
-          <button class="rm" type="button" title="เลิกติดตามตารางนี้">✕ เลิกติดตาม</button></div>
-        ${statsList.length > 1 ? `<div class="calc-filter"><span class="lbl">Stat:</span>${chips}</div>` : ''}
+          <span class="dt no-export">${t.date}</span><span class="cap no-export">${t.caption}</span>
+          <span class="head-btns no-export">
+            <button class="export-btn" type="button" title="บันทึกตารางนี้เป็นรูป">🖼️ บันทึกรูป</button>
+            <button class="rm" type="button" title="เลิกติดตามตารางนี้">✕ เลิกติดตาม</button></span></div>
+        ${statsList.length > 1 ? `<div class="calc-filter no-export"><span class="lbl">Stat:</span>${chips}</div>` : ''}
         <div class="calc-tbl-wrap"><table class="calc-tbl">
-          <tr><th>ซีล</th><th>Stat</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>ต้องการ</th><th>ใช้ตั๋ว</th><th>Status ที่ได้</th><th>สเตตัสสูงสุด</th><th class="rm-cell"></th></tr>
+          <tr><th>ซีล</th><th>Stat</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>ต้องการ</th><th>ใช้ตั๋ว</th><th>Status ที่ได้</th><th>สเตตัสสูงสุด</th><th class="rm-cell no-export"></th></tr>
           ${rowsHtml}
-          <tr class="sub"><td colspan="5">รวมตารางนี้</td><td class="tk">0</td><td class="got">0</td><td></td><td class="rm-cell"></td></tr>
+          <tr class="sub no-export"><td colspan="5">รวมตารางนี้</td><td class="tk">0</td><td class="got">0</td><td></td><td class="rm-cell"></td></tr>
         </table></div>
         ${nRm ? `<div class="calc-removed">ลบไป ${nRm} ซีล · <a class="restore">คืนค่าทั้งหมด</a></div>` : ''}`;
       card.querySelector('.rm').addEventListener('click', () => { setStars(stars().filter(x => x !== k)); paintStars(); render(); });
+      card.querySelector('.export-btn').addEventListener('click', e =>
+        exportNode(card, `seal-${t.server}-${k}`, e.currentTarget));
       card.querySelectorAll('.calc-chip').forEach(chip => chip.addEventListener('click', () => {
         const set = filterState[k] = filterState[k] || new Set(); const s = chip.dataset.stat;
         if (set.has(s)) { set.delete(s); chip.classList.remove('on'); } else { set.add(s); chip.classList.add('on'); }
@@ -2503,6 +2545,8 @@
   document.getElementById('clear-want').addEventListener('click', () => {
     want = {}; saveWant(); document.querySelectorAll('input.want').forEach(i => i.value = ''); recalc();
   });
+  document.getElementById('export-total').addEventListener('click', e =>
+    exportNode(totalBar, 'seal-budget-' + (activeServer || 'all'), e.currentTarget));
 
   // feed star buttons
   function paintStars() {
