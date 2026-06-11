@@ -35,7 +35,14 @@ CSS = """
      beneath it */
   .tl-entry > .sources:first-child { padding-top: 16px; }
   .tl-entry .sources { padding-bottom: 8px; }
-  .seal-detail { margin: 0 20px 16px; }
+  /* meta row (♾️ badge + match links) and actions row (star + toggle) —
+     two balanced flex lines instead of four stacked blocks */
+  .seal-meta { display: flex; flex-wrap: wrap; align-items: center;
+    gap: 6px 10px; margin: 2px 20px 10px; }
+  .seal-actions { display: flex; flex-wrap: wrap; align-items: flex-start;
+    gap: 8px; margin: 0 20px 16px; }
+  .seal-detail { margin: 0; }
+  .seal-detail[open] { flex-basis: 100%; }
   .seal-detail > summary {
     cursor: pointer; list-style: none; user-select: none;
     display: inline-flex; align-items: center; gap: 7px;
@@ -47,11 +54,9 @@ CSS = """
   .seal-detail > summary::before { content: "▸"; font-size: 9px; }
   .seal-detail[open] > summary::before { content: "▾"; }
   .seal-detail[open] > summary { margin-bottom: 12px; }
-  .seal-cap { font-size: 11.5px; font-weight: 600; color: var(--muted);
-    margin: 14px 2px 6px; }
-  .seal-cap:first-of-type { margin-top: 4px; }
   .seal-tbl-wrap { overflow-x: auto; border: 1px solid var(--hairline);
     border-radius: var(--radius); background: var(--canvas); }
+  .seal-tbl-wrap + .seal-tbl-wrap, .seal-tbl-wrap + .seal-match { margin-top: 14px; }
   table.seal-tbl { border-collapse: collapse; width: 100%;
     font-size: 12px; min-width: 360px; }
   table.seal-tbl th, table.seal-tbl td {
@@ -64,7 +69,7 @@ CSS = """
   table.seal-tbl td:first-child, table.seal-tbl th:first-child {
     text-align: left; font-weight: 500; }
   table.seal-tbl tr:last-child td { border-bottom: 0; }
-  .seal-match { margin: 2px 20px 14px; font-size: 12px; color: var(--muted); }
+  .seal-match { margin: 0; font-size: 12px; color: var(--muted); }
   .seal-match .lbl { color: var(--muted-soft); }
   .seal-match a { color: var(--body); text-decoration: none; font-weight: 500;
     border: 1px solid var(--hairline); border-radius: 9999px; padding: 2px 9px;
@@ -74,10 +79,10 @@ CSS = """
   .seal-match a.tw-na { color: var(--amber); border-color: var(--amber); }
   .seal-match a.tw-kr { color: var(--coral); border-color: var(--coral); }
   .seal-match a.tw-th { color: var(--teal); border-color: var(--teal); }
-  /* per-table notes live inside the details, aligned with the caption */
-  .seal-detail .seal-match { margin: -2px 2px 12px; }
-  /* NA standing-list note */
-  .seal-note { margin: 2px 20px 12px; font-size: 11.5px; font-weight: 500;
+  /* per-table notes live inside the details, above their table */
+  .seal-detail .seal-match { margin: 0 2px 10px; }
+  /* NA/KR standing-list badge (full text in its tooltip) */
+  .seal-note { margin: 0; font-size: 11.5px; font-weight: 500; cursor: help;
     color: var(--amber); display: inline-flex; align-items: center; gap: 5px;
     padding: 4px 11px; border: 1px solid var(--amber); border-radius: 9999px;
     background: var(--surface-soft); }
@@ -167,18 +172,21 @@ def _twin_link(k, dates):
 
 
 def standing_note(key):
-    """NA/KR seal exchange is a standing list: the NA posts state the previously
-    available list "will remain unchanged" and the KR posts state the list
-    exchangeable from 오유민 "유지됩니다" — seals don't rotate out, they
-    accumulate. TH posts instead say the NPC exists "ในระยะเวลากิจกรรม"
-    (event-period only; TH hasn't reached the standing-list patch), so TH
-    gets no note. Used on the feed cards AND passed to the Budget calc via
-    seal_data.json."""
+    """Short ♾️ badge for NA/KR cards. The full explanation lives in
+    standing_note_full() and is shown as the badge's tooltip — every row also
+    carries its own ♾️, so the badge stays compact. NA/KR seal exchange is a
+    standing list (NA: "will remain unchanged"; KR: 오유민 list "유지됩니다");
+    TH posts say the NPC exists "ในระยะเวลากิจกรรม" (event-only), so TH gets
+    no badge. Also shipped to the Budget calc via seal_data.json."""
+    return "♾️ ลิสต์ถาวร · ไม่หายไป" if key.split("-")[0] in ("na", "kr") else ""
+
+
+def standing_note_full(key):
     srv = key.split("-")[0]
     if srv not in ("na", "kr"):
         return ""
     npc = "Takato" if srv == "na" else "โอยูมิน (오유민)"
-    return (f'♾️ ซีลที่แลกกับ {npc} ไม่หายไป — '
+    return (f'ซีลที่แลกกับ {npc} ไม่หายไป — '
             f'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)')
 
 
@@ -242,26 +250,33 @@ def block_for(key, data, tmatch=None, dates=None, standing=None):
 
     single = len(tables) == 1
     inner = [f"<!--ST:{key}-->"]
+    # meta row: compact ♾️ badge (full text in tooltip) + cross-server match
+    meta = []
     if standing_note(key):
-        inner.append(f'<div class="seal-note">{standing_note(key)}</div>')
-    if single and tmatch.get(0):          # one table -> note above the toggle
-        inner.append(note(tmatch[0]))
-    # visible star bar — add a table to the calculator without expanding it
+        meta.append(f'<span class="seal-note" title="{standing_note_full(key)}">'
+                    f'{standing_note(key)}</span>')
+    if single and tmatch.get(0):          # one table -> note in the meta row
+        meta.append(note(tmatch[0]))
+    if meta:
+        inner.append('<div class="seal-meta">' + "".join(meta) + "</div>")
+    # actions row: star button(s) + the table toggle side by side
     bar = "".join(
         f'<button class="seal-star" data-tkey="{key}#{ti}" type="button" '
         f'title="เพิ่มเข้ารายการติดตาม">'
         f'<span class="ic">☆</span>{"รายการติดตาม" if single else f"รายการติดตาม #{ti + 1}"}</button>'
         for ti in range(len(tables)))
+    inner.append('<div class="seal-actions">')
     inner.append(f'<div class="seal-starbar">{bar}</div>')
     label = "ดูตารางแลกซีล" + (f" · {len(tables)} ตาราง" if not single else "")
     inner.append(f'<details class="seal-detail"><summary>📋 {label}</summary>')
     for ti, t in enumerate(tables):
-        inner.append(f'<div class="seal-cap">{t["caption"]}</div>')
+        # no caption line — the table itself says what it is
         if not single and tmatch.get(ti):  # many tables -> note per table
             inner.append(note(tmatch[ti]))
         thtml = _mark_standing(t["html"], key.split("-")[0], standing)
         inner.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
     inner.append("</details>")
+    inner.append("</div>")
     inner.append("<!--/ST-->")
     return "\n        " + "\n        ".join(inner)
 
