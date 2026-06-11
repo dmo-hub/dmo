@@ -178,13 +178,18 @@ def block_for(key, data, tmatch=None, dates=None):
 
     single = len(tables) == 1
     inner = [f"<!--ST:{key}-->"]
-    # NA Seal-Exchange Takato is a standing list: every patch's post states the
-    # previously-available seals "will remain unchanged", so seals exchanged via
-    # Takato don't disappear — they accumulate. Flag that on every NA card.
-    if key.split("-")[0] == "na":
+    # NA/KR seal exchange is a standing list: the NA posts state the previously
+    # available list "will remain unchanged" and the KR posts state the list
+    # exchangeable from 오유민 "유지됩니다" — seals don't rotate out, they
+    # accumulate. TH posts instead say the NPC exists "ในระยะเวลากิจกรรม"
+    # (event-period only, TH hasn't reached the standing-list patch yet),
+    # so TH cards deliberately get NO note.
+    srv = key.split("-")[0]
+    if srv in ("na", "kr"):
+        npc = "Takato" if srv == "na" else "โอยูมิน (오유민)"
         inner.append(
-            '<div class="seal-note">♾️ ซีลที่แลกกับ Takato ไม่หายไป — '
-            'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)</div>')
+            f'<div class="seal-note">♾️ ซีลที่แลกกับ {npc} ไม่หายไป — '
+            f'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)</div>')
     if single and tmatch.get(0):          # one table -> note above the toggle
         inner.append(note(tmatch[0]))
     # visible star bar — add a table to the calculator without expanding it
