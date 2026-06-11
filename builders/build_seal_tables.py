@@ -171,21 +171,33 @@ def _twin_link(k, dates):
     return f'<a class="tw-{srv}" href="#{k}">{srv.upper()} {label}</a>'
 
 
+# Posts whose list is CONFIRMED standing ("doesn't disappear"), per the posts'
+# own wording — NA: "The Seal exchange list previously available ... will
+# remain unchanged" (patch 4110/4114/4118/4121/4129); KR: "기존에 <씰 교환
+# 이벤트> 오유민에게서 교환가능 했던 씰 교환 리스트는 유지됩니다"
+# (o813439..o814935). Each statement also confirms the IMMEDIATELY PRECEDING
+# list, so na-4100 (+ its event twin na-810) and kr-812989 are included.
+# Older NA/KR posts and all TH posts describe event-period NPCs with no such
+# wording, so they get no badge.
+STANDING_KEYS = {
+    "na-4100", "na-810", "na-4110", "na-4114", "na-4118", "na-4121", "na-4129",
+    "kr-812989", "kr-813439", "kr-813810", "kr-814064", "kr-814269",
+    "kr-814493", "kr-814605", "kr-814707", "kr-814935",
+}
+
+
 def standing_note(key):
-    """Short ♾️ badge for NA/KR cards. The full explanation lives in
-    standing_note_full() and is shown as the badge's tooltip — every row also
-    carries its own ♾️, so the badge stays compact. NA/KR seal exchange is a
-    standing list (NA: "will remain unchanged"; KR: 오유민 list "유지됩니다");
-    TH posts say the NPC exists "ในระยะเวลากิจกรรม" (event-only), so TH gets
-    no badge. Also shipped to the Budget calc via seal_data.json."""
-    return "♾️ ลิสต์ถาวร · ไม่หายไป" if key.split("-")[0] in ("na", "kr") else ""
+    """Short ♾️ badge for posts in STANDING_KEYS. The full explanation lives
+    in standing_note_full() (the badge's tooltip) — every standing seal's row
+    also carries its own ♾️, so the badge stays compact. Also shipped to the
+    Budget calc via seal_data.json."""
+    return "♾️ ลิสต์ถาวร · ไม่หายไป" if key in STANDING_KEYS else ""
 
 
 def standing_note_full(key):
-    srv = key.split("-")[0]
-    if srv not in ("na", "kr"):
+    if key not in STANDING_KEYS:
         return ""
-    npc = "Takato" if srv == "na" else "โอยูมิน (오유민)"
+    npc = "Takato" if key.startswith("na") else "โอยูมิน (오유민)"
     return (f'ซีลที่แลกกับ {npc} ไม่หายไป — '
             f'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)')
 
@@ -206,14 +218,15 @@ def _seal_key(raw, srv):
 
 
 def _standing_set(data):
-    """Normalized names of every seal in the NA/KR standing lists. Those
-    lists never rotate out, so any seal in them — on ANY server's table —
-    is permanently exchangeable somewhere."""
+    """Normalized names of every seal in the CONFIRMED standing lists
+    (STANDING_KEYS). Those lists never rotate out, so any seal in them —
+    wherever it appears, old NA/KR posts and TH included — is permanently
+    exchangeable somewhere."""
     s = set()
     for key, v in data.items():
-        srv = key.split("-")[0]
-        if srv not in ("na", "kr"):
+        if key not in STANDING_KEYS:
             continue
+        srv = key.split("-")[0]
         for t in v.get("tables", []):
             for r in _table_rows_only(t["html"]):
                 if r and r[0]:
