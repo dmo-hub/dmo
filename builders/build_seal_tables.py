@@ -165,6 +165,22 @@ def _twin_link(k, dates):
     return f'<a class="tw-{srv}" href="#{k}">{srv.upper()} {label}</a>'
 
 
+def standing_note(key):
+    """NA/KR seal exchange is a standing list: the NA posts state the previously
+    available list "will remain unchanged" and the KR posts state the list
+    exchangeable from 오유민 "유지됩니다" — seals don't rotate out, they
+    accumulate. TH posts instead say the NPC exists "ในระยะเวลากิจกรรม"
+    (event-period only; TH hasn't reached the standing-list patch), so TH
+    gets no note. Used on the feed cards AND passed to the Budget calc via
+    seal_data.json."""
+    srv = key.split("-")[0]
+    if srv not in ("na", "kr"):
+        return ""
+    npc = "Takato" if srv == "na" else "โอยูมิน (오유민)"
+    return (f'♾️ ซีลที่แลกกับ {npc} ไม่หายไป — '
+            f'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)')
+
+
 def block_for(key, data, tmatch=None, dates=None):
     tables = data.get("tables", [])
     if not tables:
@@ -178,18 +194,8 @@ def block_for(key, data, tmatch=None, dates=None):
 
     single = len(tables) == 1
     inner = [f"<!--ST:{key}-->"]
-    # NA/KR seal exchange is a standing list: the NA posts state the previously
-    # available list "will remain unchanged" and the KR posts state the list
-    # exchangeable from 오유민 "유지됩니다" — seals don't rotate out, they
-    # accumulate. TH posts instead say the NPC exists "ในระยะเวลากิจกรรม"
-    # (event-period only, TH hasn't reached the standing-list patch yet),
-    # so TH cards deliberately get NO note.
-    srv = key.split("-")[0]
-    if srv in ("na", "kr"):
-        npc = "Takato" if srv == "na" else "โอยูมิน (오유민)"
-        inner.append(
-            f'<div class="seal-note">♾️ ซีลที่แลกกับ {npc} ไม่หายไป — '
-            f'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)</div>')
+    if standing_note(key):
+        inner.append(f'<div class="seal-note">{standing_note(key)}</div>')
     if single and tmatch.get(0):          # one table -> note above the toggle
         inner.append(note(tmatch[0]))
     # visible star bar — add a table to the calculator without expanding it
@@ -238,6 +244,7 @@ def emit_seal_data(data, html):
                 "server": srv,
                 "date": dates.get(key, ""),
                 "caption": t.get("caption", ""),
+                "note": standing_note(key),
                 "rows": _table_rows_only(t["html"]),
             }
     SEAL_DATA_OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1),
