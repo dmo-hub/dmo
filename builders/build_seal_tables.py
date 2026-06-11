@@ -186,20 +186,54 @@ _INF_MARK = (' <span class="inf" title="ไม่หายไป — ลิส�
              '(สะสมเพิ่มทุกแพท)">♾️</span>')
 
 
-def _mark_standing(html):
-    """Append ♾️ to the seal-name cell of every data row. Header rows use
+def _seal_key(raw, srv):
+    """Normalized cross-server seal key for a name cell, or None if a TH name
+    has no English mapping (it then can't be matched against the NA/KR set)."""
+    raw = re.sub(r"\[[^\]]*\]", "", raw).strip()
+    if srv == "th":
+        base = re.sub(r"\s*ซีล.*$", "", raw).strip()
+        en = TH_EN.get(base)
+        return _norm_seal(en) if en else None
+    return _norm_seal(raw)
+
+
+def _standing_set(data):
+    """Normalized names of every seal in the NA/KR standing lists. Those
+    lists never rotate out, so any seal in them — on ANY server's table —
+    is permanently exchangeable somewhere."""
+    s = set()
+    for key, v in data.items():
+        srv = key.split("-")[0]
+        if srv not in ("na", "kr"):
+            continue
+        for t in v.get("tables", []):
+            for r in _table_rows_only(t["html"]):
+                if r and r[0]:
+                    k = _seal_key(r[0], srv)
+                    if k:
+                        s.add(k)
+    return s
+
+
+def _mark_standing(html, srv, standing):
+    """Append ♾️ to the seal-name cell of each data row whose seal is in the
+    standing set (TH names are translated to English first). Header rows use
     <th> so the <tr><td> pattern only touches data rows. Applied at inject
     time only — data/seal_tables.json stays clean for matching/calc."""
-    return re.sub(r"(<tr><td>)(.*?)(</td>)",
-                  lambda m: m.group(1) + m.group(2) + _INF_MARK + m.group(3),
-                  html)
+    def mark(m):
+        name = re.sub(r"<[^>]+>", "", m.group(2)).strip()
+        k = _seal_key(name, srv)
+        if k and k in standing:
+            return m.group(1) + m.group(2) + _INF_MARK + m.group(3)
+        return m.group(0)
+    return re.sub(r"(<tr><td>)(.*?)(</td>)", mark, html)
 
 
-def block_for(key, data, tmatch=None, dates=None):
+def block_for(key, data, tmatch=None, dates=None, standing=None):
     tables = data.get("tables", [])
     if not tables:
         return ""   # posts without a table get nothing injected
-    dates, tmatch = dates or {}, tmatch or {}
+    dates, tmatch, standing = dates or {}, tmatch or {}, standing or set()
 
     def note(tw):
         links = " ".join(_twin_link(x, dates) for x in tw)
@@ -225,7 +259,7 @@ def block_for(key, data, tmatch=None, dates=None):
         inner.append(f'<div class="seal-cap">{t["caption"]}</div>')
         if not single and tmatch.get(ti):  # many tables -> note per table
             inner.append(note(tmatch[ti]))
-        thtml = _mark_standing(t["html"]) if standing_note(key) else t["html"]
+        thtml = _mark_standing(t["html"], key.split("-")[0], standing)
         inner.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
     inner.append("</details>")
     inner.append("<!--/ST-->")
@@ -243,9 +277,12 @@ def _table_rows_only(html):
     return out
 
 
-def emit_seal_data(data, html):
+def emit_seal_data(data, html, standing=None):
     """Write docs/seal_data.json — one entry per table, keyed key#index, so
-    calc.html can fetch the seals a user stars and run the ticket/price calc."""
+    calc.html can fetch the seals a user stars and run the ticket/price calc.
+    `inf` carries a per-row 0/1 flag: the seal is in the NA/KR standing set
+    (never rotates out), so the calc can ♾️-mark it on ANY server's table."""
+    standing = standing or set()
     dates = dict(re.findall(
         r'<article\b[^>]*\bid="([^"]+)"[^>]*>.*?<span class="src-date">([^<]+)</span>',
         html, re.S))
@@ -255,12 +292,15 @@ def emit_seal_data(data, html):
             continue
         srv = key.split("-")[0]
         for ti, t in enumerate(v["tables"]):
+            rows = _table_rows_only(t["html"])
             out[f"{key}#{ti}"] = {
                 "server": srv,
                 "date": dates.get(key, ""),
                 "caption": t.get("caption", ""),
                 "note": standing_note(key),
-                "rows": _table_rows_only(t["html"]),
+                "inf": [1 if (r and r[0] and (_seal_key(r[0], srv) or "") in standing) else 0
+                        for r in rows],
+                "rows": rows,
             }
     SEAL_DATA_OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1),
                              encoding="utf-8")
@@ -322,6 +362,7 @@ def main():
 
     # 3) inject a block before each matching card's </article>
     matches = compute_matches(data)
+    standing = _standing_set(data)        # seals that never rotate out (NA/KR)
     # key -> card date (DD.MM.YYYY), read from each card's src-date span, so
     # twin links can be labelled by date rather than the opaque post id
     dates = dict(re.findall(
@@ -336,7 +377,7 @@ def main():
         if not pat.search(html):
             print(f"  !! card not found: {key}", file=sys.stderr)
             continue
-        blk = block_for(key, d, matches.get(key, {}), dates)
+        blk = block_for(key, d, matches.get(key, {}), dates, standing)
         html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2),
                        html, count=1)
         injected += 1
@@ -356,7 +397,7 @@ def main():
     html = update_counts(html, data)
 
     HTML.write_text(html, encoding="utf-8")
-    emit_seal_data(data, html)            # per-table data for calc.html
+    emit_seal_data(data, html, standing)  # per-table data for calc.html
     n_tbl = sum(len(v.get("tables", [])) for v in data.values())
     print(f"Injected into {injected} cards, removed {removed} no-table cards "
           f"({n_tbl} tables total) -> {HTML}")
