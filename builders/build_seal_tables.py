@@ -86,7 +86,13 @@ CSS = """
     color: var(--amber); display: inline-flex; align-items: center; gap: 5px;
     padding: 4px 11px; border: 1px solid var(--amber); border-radius: 9999px;
     background: var(--surface-soft); }
-  .seal-tbl .inf { font-size: 10px; cursor: help; }
+  .seal-tbl .inf { font-size: 12px; }
+  /* ♾ markers + badge wear their server's colour (same palette as twin links) */
+  .inf { font-weight: 700; cursor: help; }
+  .inf.s-na { color: var(--amber); }
+  .inf.s-kr { color: var(--coral); }
+  .inf.s-th { color: var(--teal); }
+  .seal-note.s-kr { color: var(--coral); border-color: var(--coral); }
   /* visible "add to calculator" star bar (sits above the table toggle) */
   .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 20px 10px; }
   .seal-star { appearance: none; cursor: pointer; font: inherit; font-size: 12px;
@@ -191,7 +197,7 @@ def standing_note(key):
     in standing_note_full() (the badge's tooltip) — every standing seal's row
     also carries its own ♾️, so the badge stays compact. Also shipped to the
     Budget calc via seal_data.json."""
-    return "♾️ ลิสต์ถาวร · ไม่หายไป" if key in STANDING_KEYS else ""
+    return f"{INF_GLYPH} ลิสต์ถาวร · ไม่หายไป" if key in STANDING_KEYS else ""
 
 
 def standing_note_full(key):
@@ -202,8 +208,14 @@ def standing_note_full(key):
             f'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)')
 
 
-_INF_MARK = (' <span class="inf" title="ไม่หายไป — ลิสต์เก่ายังแลกได้ต่อ '
-             '(สะสมเพิ่มทุกแพท)">♾️</span>')
+# text-presentation infinity (U+267E U+FE0E) so CSS can colour it per server —
+# the emoji form ♾️ ignores `color`
+INF_GLYPH = "♾︎"
+
+
+def _inf_mark(srv):
+    return (f' <span class="inf s-{srv}" title="ไม่หายไป — ลิสต์เก่ายังแลกได้ต่อ '
+            f'(สะสมเพิ่มทุกแพท)">{INF_GLYPH}</span>')
 
 
 def _seal_key(raw, srv):
@@ -245,7 +257,7 @@ def _mark_standing(html, srv, standing):
         name = re.sub(r"<[^>]+>", "", m.group(2)).strip()
         k = _seal_key(name, srv)
         if k and k in standing:
-            return m.group(1) + m.group(2) + _INF_MARK + m.group(3)
+            return m.group(1) + m.group(2) + _inf_mark(srv) + m.group(3)
         return m.group(0)
     return re.sub(r"(<tr><td>)(.*?)(</td>)", mark, html)
 
@@ -266,8 +278,8 @@ def block_for(key, data, tmatch=None, dates=None, standing=None):
     # meta row: compact ♾️ badge (full text in tooltip) + cross-server match
     meta = []
     if standing_note(key):
-        meta.append(f'<span class="seal-note" title="{standing_note_full(key)}">'
-                    f'{standing_note(key)}</span>')
+        meta.append(f'<span class="seal-note s-{key.split("-")[0]}" '
+                    f'title="{standing_note_full(key)}">{standing_note(key)}</span>')
     if single and tmatch.get(0):          # one table -> note in the meta row
         meta.append(note(tmatch[0]))
     if meta:
