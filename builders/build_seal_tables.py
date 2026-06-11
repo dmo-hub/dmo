@@ -76,6 +76,11 @@ CSS = """
   .seal-match a.tw-th { color: var(--teal); border-color: var(--teal); }
   /* per-table notes live inside the details, aligned with the caption */
   .seal-detail .seal-match { margin: -2px 2px 12px; }
+  /* NA standing-list note */
+  .seal-note { margin: 2px 20px 12px; font-size: 11.5px; font-weight: 500;
+    color: var(--amber); display: inline-flex; align-items: center; gap: 5px;
+    padding: 4px 11px; border: 1px solid var(--amber); border-radius: 9999px;
+    background: var(--surface-soft); }
   /* visible "add to calculator" star bar (sits above the table toggle) */
   .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 20px 10px; }
   .seal-star { appearance: none; cursor: pointer; font: inherit; font-size: 12px;
@@ -173,6 +178,13 @@ def block_for(key, data, tmatch=None, dates=None):
 
     single = len(tables) == 1
     inner = [f"<!--ST:{key}-->"]
+    # NA Seal-Exchange Takato is a standing list: every patch's post states the
+    # previously-available seals "will remain unchanged", so seals exchanged via
+    # Takato don't disappear — they accumulate. Flag that on every NA card.
+    if key.split("-")[0] == "na":
+        inner.append(
+            '<div class="seal-note">♾️ ซีลที่แลกกับ Takato ไม่หายไป — '
+            'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)</div>')
     if single and tmatch.get(0):          # one table -> note above the toggle
         inner.append(note(tmatch[0]))
     # visible star bar — add a table to the calculator without expanding it
