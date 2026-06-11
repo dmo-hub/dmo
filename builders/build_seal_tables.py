@@ -81,6 +81,7 @@ CSS = """
     color: var(--amber); display: inline-flex; align-items: center; gap: 5px;
     padding: 4px 11px; border: 1px solid var(--amber); border-radius: 9999px;
     background: var(--surface-soft); }
+  .seal-tbl .inf { font-size: 10px; cursor: help; }
   /* visible "add to calculator" star bar (sits above the table toggle) */
   .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 20px 10px; }
   .seal-star { appearance: none; cursor: pointer; font: inherit; font-size: 12px;
@@ -181,6 +182,19 @@ def standing_note(key):
             f'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)')
 
 
+_INF_MARK = (' <span class="inf" title="ไม่หายไป — ลิสต์เก่ายังแลกได้ต่อ '
+             '(สะสมเพิ่มทุกแพท)">♾️</span>')
+
+
+def _mark_standing(html):
+    """Append ♾️ to the seal-name cell of every data row. Header rows use
+    <th> so the <tr><td> pattern only touches data rows. Applied at inject
+    time only — data/seal_tables.json stays clean for matching/calc."""
+    return re.sub(r"(<tr><td>)(.*?)(</td>)",
+                  lambda m: m.group(1) + m.group(2) + _INF_MARK + m.group(3),
+                  html)
+
+
 def block_for(key, data, tmatch=None, dates=None):
     tables = data.get("tables", [])
     if not tables:
@@ -211,7 +225,8 @@ def block_for(key, data, tmatch=None, dates=None):
         inner.append(f'<div class="seal-cap">{t["caption"]}</div>')
         if not single and tmatch.get(ti):  # many tables -> note per table
             inner.append(note(tmatch[ti]))
-        inner.append(f'<div class="seal-tbl-wrap">{t["html"]}</div>')
+        thtml = _mark_standing(t["html"]) if standing_note(key) else t["html"]
+        inner.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
     inner.append("</details>")
     inner.append("<!--/ST-->")
     return "\n        " + "\n        ".join(inner)
