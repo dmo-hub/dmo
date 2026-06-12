@@ -60,7 +60,7 @@ KR_IDS = [816593, 814935, 814707, 814605, 814493, 814269, 814064, 813810,
           794497, 792682, 789333, 788597, 787646, 783755, 782119, 780048, 708817]
 NA_IDS = [4129, 4121, 4118, 4114, 4110, 4100, 810, 789, 784, 782, 759, 743,
           683, 673, 636, 551, 530, 352]
-TH_SUFFIXES = [83, 78, 76, 66, 64, 59, 56, 49, 42, 28, 24, 21, 15, 12]
+TH_SUFFIXES = [88, 83, 78, 76, 66, 64, 59, 56, 49, 42, 28, 24, 21, 15, 12]
 
 SEAL_PHRASES = ("씰 교환", "씰 마스터", "씰교환", "seal exchange", "seal master",
                 "แลกซีล", "แลกเปลี่ยนซีล", "รายการซีล", "ซีล>", "ผลิตซีล",
@@ -159,7 +159,8 @@ NORM_HEADER = ["รายการซีล", "จำนวนซีลที่
 _STAT = re.compile(r"\b(AT|HP|HT|DS|DE|BL|EV|CT|SCD|MS|DEX|EXP)\b")
 
 KW_NAME = ("제작 씰", "제작 아이템", "craft seal", "craft item",
-           "รายการซีล", "ไอเทมที่ได้รับ", "รายการไอเทม", "รายการผลิต")
+           "รายการซีล", "ไอเทมที่ได้รับ", "รายการไอเทม", "รายการผลิต",
+           "ซีลที่ได้รับ")   # th-88 layout: the seal you RECEIVE is the name col
 KW_GIVEN = ("씰 지급", "씰 획득", "seals given", "seal obtained", "seal given",
             "จำนวนซีลที่ได้รับ", "จำนวนที่ได้รับ", "จำนวน ที่ได้รับ")
 KW_TICKET = ("교환권", "재료", "seal exchange ticket", "needed seal exchange",
@@ -231,10 +232,13 @@ def _embedded_qty(s):
 
 
 def _role_of(cell):
-    if _has(cell, KW_NAME):
-        return "name"
+    # given BEFORE name: th-88's name col is "ซีลที่ได้รับ" but the legacy
+    # given col is "จำนวนซีลที่ได้รับ" (a superstring) — checking given first
+    # keeps the legacy column a count, while bare "ซีลที่ได้รับ" falls to name.
     if _has(cell, KW_GIVEN):
         return "given"
+    if _has(cell, KW_NAME):
+        return "name"
     if _has(cell, KW_MAX):
         return "max"
     if _has(cell, KW_TICKET):
@@ -295,6 +299,11 @@ def normalize_table(tb, server):
     out.append("</tr>")
     for row in rows[hi + 1:]:
         if len(row) <= iname or not row[iname].strip():
+            continue
+        # skip in-table category-title rows: a colspan banner (e.g. th-88's
+        # "หมวดผลิตตั๋วแลกซีลแบบพิเศษ") expands to the same text in every cell.
+        cell_vals = [c.strip() for c in row if c.strip()]
+        if len(set(cell_vals)) == 1:
             continue
         eq, name = _embedded_qty(row[iname])
         if server == "KR":

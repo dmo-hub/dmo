@@ -1,10 +1,10 @@
 {
-  "scan_date": "2026-05-26 03:14:53 (re-parsed from cache)",
+  "scan_date": "2026-06-12 19:06:18",
   "scanned": {
-    "event": 0,
-    "patch": 0
+    "event": 639,
+    "patch": 764
   },
-  "matched_posts": 22,
+  "matched_posts": 21,
   "new_deck_count": 35,
   "existing_deck_count": 1,
   "matches": [
@@ -12,7 +12,7 @@
       "kind": "event",
       "idx": 622,
       "date": "05-02-2023",
-      "subject": "",
+      "subject": "02.05.2023 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=622",
       "new_decks": [
         "D5 and Ultimate DigiXros"
@@ -25,7 +25,7 @@
       "kind": "event",
       "idx": 635,
       "date": "07-25-2023",
-      "subject": "",
+      "subject": "25.07.2023 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=635",
       "new_decks": [
         "Knights of Vaccine"
@@ -38,7 +38,7 @@
       "kind": "event",
       "idx": 663,
       "date": "03-05-2024",
-      "subject": "",
+      "subject": "05.03.2024 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=663",
       "new_decks": [
         "White Wings: Gurei Tou of Courage",
@@ -52,7 +52,7 @@
       "kind": "event",
       "idx": 673,
       "date": "06-11-2024",
-      "subject": "",
+      "subject": "11.06.2024 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=673",
       "new_decks": [
         "God’s Will",
@@ -66,7 +66,7 @@
       "kind": "event",
       "idx": 683,
       "date": "08-20-2024",
-      "subject": "",
+      "subject": "20.08.2024 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=683",
       "new_decks": [
         "Divine Spear and Sacred Sword of Light",
@@ -80,7 +80,7 @@
       "kind": "event",
       "idx": 692,
       "date": "11-12-2024",
-      "subject": "",
+      "subject": "12.11.2024 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=692",
       "new_decks": [
         "The Goddess of the False Neverland"
@@ -91,20 +91,9 @@
     },
     {
       "kind": "event",
-      "idx": 705,
-      "date": "02-25-2025",
-      "subject": "",
-      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=705",
-      "new_decks": [],
-      "existing_decks": [],
-      "has_new_marker": false,
-      "has_existing_marker": false
-    },
-    {
-      "kind": "event",
       "idx": 708,
       "date": "03-18-2025",
-      "subject": "",
+      "subject": "18.03.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=708",
       "new_decks": [
         "The End, The Ultimate Holy War!"
@@ -117,7 +106,7 @@
       "kind": "event",
       "idx": 731,
       "date": "05-13-2025",
-      "subject": "",
+      "subject": "13.05.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=731",
       "new_decks": [
         "White Wings: Sorrow and Determination"
@@ -130,7 +119,7 @@
       "kind": "event",
       "idx": 734,
       "date": "05-27-2025",
-      "subject": "",
+      "subject": "27.05.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=734",
       "new_decks": [
         "Justice Veiled in Darkness",
@@ -147,7 +136,7 @@
       "kind": "event",
       "idx": 743,
       "date": "06-17-2025",
-      "subject": "",
+      "subject": "17.06.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=743",
       "new_decks": [
         "Reunion"
@@ -160,7 +149,7 @@
       "kind": "event",
       "idx": 759,
       "date": "07-22-2025",
-      "subject": "",
+      "subject": "22.07.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=759",
       "new_decks": [
         "Invasion of the Real World"
@@ -173,7 +162,7 @@
       "kind": "event",
       "idx": 770,
       "date": "08-19-2025",
-      "subject": "",
+      "subject": "19.08.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=770",
       "new_decks": [
         "Last Evolution: Kizuna"
@@ -186,7 +175,7 @@
       "kind": "event",
       "idx": 782,
       "date": "09-23-2025",
-      "subject": "",
+      "subject": "09.23.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=782",
       "new_decks": [
         "Our hope, our light"
@@ -199,7 +188,7 @@
       "kind": "event",
       "idx": 784,
       "date": "10-01-2025",
-      "subject": "",
+      "subject": "01.10.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=784",
       "new_decks": [
         "Transcending Time, The Beginning of a Legend!",
@@ -214,7 +203,7 @@
       "kind": "event",
       "idx": 791,
       "date": "11-11-2025",
-      "subject": "",
+      "subject": "11.11.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=791",
       "new_decks": [
         "Wings of Temptation and Wings of Justice"
@@ -227,7 +216,7 @@
       "kind": "event",
       "idx": 798,
       "date": "12-10-2025",
-      "subject": "",
+      "subject": "10.12.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=798",
       "new_decks": [
         "Demon of the Final Phase",
@@ -242,7 +231,7 @@
       "kind": "event",
       "idx": 810,
       "date": "01-14-2026",
-      "subject": "",
+      "subject": "14.1.2026 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=810",
       "new_decks": [
         "Fear of the Abyss"
@@ -255,7 +244,7 @@
       "kind": "patch",
       "idx": 4110,
       "date": "02-25-2026",
-      "subject": "",
+      "subject": "25.2.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4110",
       "new_decks": [
         "Abyssal Fear",
@@ -269,7 +258,7 @@
       "kind": "patch",
       "idx": 4114,
       "date": "03-04-2026",
-      "subject": "",
+      "subject": "4.3.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4114",
       "new_decks": [
         "The True Form of the Destroyer"
@@ -282,7 +271,7 @@
       "kind": "patch",
       "idx": 4121,
       "date": "03-17-2026",
-      "subject": "",
+      "subject": "17.3.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4121",
       "new_decks": [
         "Wings of Justice",
@@ -297,7 +286,7 @@
       "kind": "patch",
       "idx": 4148,
       "date": "05-20-2026",
-      "subject": "",
+      "subject": "20.5.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4148",
       "new_decks": [
         "One who resides in Lark",

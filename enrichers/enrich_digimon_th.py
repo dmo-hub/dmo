@@ -41,7 +41,7 @@ EN_TO_TH_KEYWORDS: list[tuple[str, str, str | None]] = [
     ("Alphamon Ouryuken [Extreme]", "อัลฟามอน โอริวเคน", "เอ็กซ์ตรีม"),
     ("Alphamon Ouryuken", "อัลฟามอน โอริวเคน", None),  # fallback for non-Extreme
     ("Last Evolution: Kizuna", "ลาสต์ อีโวลูชัน", None),
-    ("Lucemon: Satan Mode (Extreme)", "ลูเจมอน ซาตาน", "เอ็กซ์ตรีม"),
+    ("Lucemon: Satan Mode (Extreme)", "ซาตานโหมด", "เอ็กซ์ตรีม"),
     ("Omegamon – Merciful Mode", "เมอซิฟูล", None),
     ("Omegamon X Extreme", "โอเมกามอน X", "เอ็กซ์ตรีม"),
     # Single-name digimon (Thai transliterations)
