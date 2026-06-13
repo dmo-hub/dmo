@@ -276,37 +276,6 @@ def _recur_after(seal_key, after_iso, rec_index):
             if iso > after_iso]
 
 
-def _merge_status_col(html):
-    """Collapse the normalized 5-column table [name, ได้รับ, ตั๋ว, ความสามารถ,
-    สูงสุด] into 4 columns by merging "จำนวนซีลที่ได้รับ" (got) and "สเตตัส
-    สูงสุด" (max) into one "Status" cell shown as got/max (e.g. 40/100; 0/200
-    when got is blank). Column order becomes [name, ตั๋ว, ความสามารถ, Status].
-    Display-only — seal_tables.json / seal_data.json keep the 5 raw columns so
-    the budget calc still reads got (r[1]) and max (r[4]) separately."""
-    def cells(row, tag):
-        return re.findall(rf"<{tag}[^>]*>(.*?)</{tag}>", row, re.S)
-
-    def num(s):
-        m = re.search(r"\d[\d,]*", re.sub(r"<[^>]+>", "", s))
-        return m.group(0).replace(",", "") if m else ""
-
-    def conv(m):
-        row = m.group(0)
-        is_hdr = "<th>" in row or "<th " in row
-        tag = "th" if is_hdr else "td"
-        c = cells(row, tag)
-        if len(c) < 5:                    # not a 5-col normalized row — leave it
-            return row
-        name, got, ticket, ability, mx = c[0], c[1], c[2], c[3], c[4]
-        if is_hdr:
-            status = "Status (ได้รับ/สูงสุด)"
-        else:
-            status = f"{num(got) or '0'}/{num(mx) or '0'}"
-        return (f"<tr><{tag}>{name}</{tag}><{tag}>{ticket}</{tag}>"
-                f"<{tag}>{ability}</{tag}><{tag} class=\"status-cell\">{status}</{tag}></tr>")
-    return re.sub(r"<tr>.*?</tr>", conv, html, flags=re.S)
-
-
 def _mark_recurrence(html, srv, twin_iso, rec_index):
     """For a TH table matched to a twin dated `twin_iso`, add TWO trailing
     columns — "มาซ้ำ KR" and "มาซ้ำ NA" — listing, per seal, the later patches
@@ -393,7 +362,6 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index):
                f'<span class="ic">☆</span>ติดตาม</button></div>')
     out.append('<details class="seal-detail"><summary>📋 ดูตาราง</summary>')
     thtml = _mark_standing(t["html"], srv, standing)
-    thtml = _merge_status_col(thtml)      # ได้รับ + สูงสุด -> one "Status" col
     # TH list matched to a NA/KR twin: flag each seal that recurs in a later
     # NA/KR patch (the date of the earliest twin in the match is the cutoff).
     if srv == "th" and tmatch.get(ti):
