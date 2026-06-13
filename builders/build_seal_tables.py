@@ -91,6 +91,9 @@ CSS = """
     padding: 4px 11px; border: 1px solid var(--amber); border-radius: 9999px;
     background: var(--surface-soft); }
   .seal-note.s-kr { color: var(--coral); border-color: var(--coral); }
+  /* per-seal recurrence: later NA/KR patches that still offer this seal */
+  .seal-recur { display: inline-block; margin-left: 6px; font-size: 10.5px;
+    font-weight: 600; color: var(--teal); cursor: help; white-space: nowrap; }
   /* visible "add to calculator" star bar (sits above the table toggle) */
   .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
   .seal-star { appearance: none; cursor: pointer; font: inherit; font-size: 12px;
@@ -227,6 +230,67 @@ def _seal_key(raw, srv):
     return _norm_seal(raw)
 
 
+def _iso(ddmmyyyy):
+    """'DD.MM.YYYY' -> 'YYYY-MM-DD' (sortable); '' for missing/garbage."""
+    if not ddmmyyyy or ddmmyyyy.count(".") != 2:
+        return ""
+    dd, mm, yy = ddmmyyyy.split(".")
+    return f"{yy}-{mm}-{dd}"
+
+
+def _recurrence_index(data, dates):
+    """seal_key -> sorted list of (iso, srv, 'DD.MM.YYYY') for every NA/KR
+    exchange list that contains that seal. Used to tell, for a TH card matched
+    to a KR/NA twin, whether each of its seals shows up AGAIN in a later NA/KR
+    patch (it's still exchangeable on the source server after that patch)."""
+    from collections import defaultdict
+    idx = defaultdict(list)
+    for key, v in data.items():
+        srv = key.split("-")[0]
+        if srv not in ("na", "kr"):
+            continue
+        d = dates.get(key)
+        if not d:
+            continue
+        seen = set()
+        for t in v.get("tables", []):
+            for r in _table_rows_only(t["html"]):
+                if r and r[0]:
+                    k = _seal_key(r[0], srv)
+                    if k and k not in seen:
+                        seen.add(k)
+                        idx[k].append((_iso(d), srv.upper(), d))
+    for k in idx:
+        idx[k].sort()
+    return idx
+
+
+def _recur_after(seal_key, after_iso, rec_index):
+    """Patches (srv, 'DD.MM.YYYY') that still carry `seal_key` strictly AFTER
+    `after_iso`, in date order."""
+    if not seal_key:
+        return []
+    return [(srv, d) for (iso, srv, d) in rec_index.get(seal_key, [])
+            if iso > after_iso]
+
+
+def _mark_recurrence(html, srv, twin_iso, rec_index):
+    """For a TH table matched to a twin dated `twin_iso`, append a small badge
+    to each seal-name cell listing the later NA/KR patches that still offer it
+    ("↻ KR 17.03.2026 · NA 01.04.2026"). Header rows use <th>, so the <tr><td>
+    pattern only hits data rows. Inject-time only — the JSON stays clean."""
+    def mark(m):
+        name = re.sub(r"<[^>]+>", "", m.group(2)).strip()
+        later = _recur_after(_seal_key(name, srv), twin_iso, rec_index)
+        if not later:
+            return m.group(0)
+        chips = " · ".join(f"{s} {d}" for s, d in later)
+        badge = (f' <span class="seal-recur" title="ซีลนี้ยังมาแลกซ้ำในแพท '
+                 f'หลังจากแพทที่แมทกัน ({len(later)} แพท)">↻ {chips}</span>')
+        return m.group(1) + m.group(2) + badge + m.group(3)
+    return re.sub(r"(<tr><td>)(.*?)(</td>)", mark, html)
+
+
 def _standing_set(data):
     """The ♾️ standing-seal markers are disabled — return an empty set so no
     row is marked and the seal_data `inf` flags are all 0. (The build-from-
@@ -261,7 +325,7 @@ def _mark_standing(html, srv, standing):
     return re.sub(r"(<tr><td>)(.*?)(</td>)", mark, html)
 
 
-def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total):
+def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index):
     """The injected body for a SINGLE table: standing badge + match link +
     star + the collapsible table. `total` is how many tables the post has, so
     the card can show "ตารางที่ 1/2" when split across cards."""
@@ -287,13 +351,20 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total):
                f'<span class="ic">☆</span>ติดตาม</button></div>')
     out.append('<details class="seal-detail"><summary>📋 ดูตาราง</summary>')
     thtml = _mark_standing(t["html"], srv, standing)
+    # TH list matched to a NA/KR twin: flag each seal that recurs in a later
+    # NA/KR patch (the date of the earliest twin in the match is the cutoff).
+    if srv == "th" and tmatch.get(ti):
+        twin_isos = [_iso(dates.get(x)) for x in tmatch[ti] if dates.get(x)]
+        if twin_isos:
+            thtml = _mark_recurrence(thtml, srv, min(twin_isos), rec_index)
     out.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
     out.append("</details>")
     out.append("</div>")
     return out
 
 
-def block_for(key, data, tmatch=None, dates=None, standing=None, sources=""):
+def block_for(key, data, tmatch=None, dates=None, standing=None, sources="",
+              rec_index=None):
     """Injected content for a card. A post with ONE table fills its own card.
     A post with N tables is rendered as N cards: this returns the body for the
     first table, then closes the <article> and opens a fresh sibling
@@ -303,11 +374,13 @@ def block_for(key, data, tmatch=None, dates=None, standing=None, sources=""):
     if not tables:
         return ""   # posts without a table get nothing injected
     dates, tmatch, standing = dates or {}, tmatch or {}, standing or set()
+    rec_index = rec_index or {}
     srv = key.split("-")[0]
     total = len(tables)
 
     inner = [f"<!--ST:{key}-->"]
-    inner += _one_table_body(key, 0, tables[0], srv, tmatch, dates, standing, total)
+    inner += _one_table_body(key, 0, tables[0], srv, tmatch, dates, standing,
+                             total, rec_index)
     # further tables become sibling cards inside the same ST block
     for ti in range(1, total):
         inner.append("</article>")
@@ -316,7 +389,7 @@ def block_for(key, data, tmatch=None, dates=None, standing=None, sources=""):
         if sources:
             inner.append(sources)
         inner += _one_table_body(key, ti, tables[ti], srv, tmatch, dates,
-                                 standing, total)
+                                 standing, total, rec_index)
     inner.append("<!--/ST-->")
     return "\n        " + "\n        ".join(inner)
 
@@ -423,6 +496,9 @@ def main():
     dates = dict(re.findall(
         r'<article\b[^>]*\bid="([^"]+)"[^>]*>.*?<span class="src-date">([^<]+)</span>',
         html, re.S))
+    # seal -> every NA/KR patch that offers it, so a TH card can flag seals
+    # that recur in a NA/KR patch later than its matched twin
+    rec_index = _recurrence_index(data, dates)
     injected = 0
     for key, d in data.items():
         if not d.get("tables"):
@@ -437,7 +513,8 @@ def main():
         # multi-table post is split across several <article>s
         sm = re.search(r'<div class="sources">.*?</div>', m0.group(1), re.S)
         sources = sm.group(0) if sm else ""
-        blk = block_for(key, d, matches.get(key, {}), dates, standing, sources)
+        blk = block_for(key, d, matches.get(key, {}), dates, standing, sources,
+                        rec_index)
         html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2),
                        html, count=1)
         injected += 1
