@@ -86,6 +86,12 @@ CSS = """
   .seal-match a.tw-th { color: var(--teal); border-color: var(--teal); }
   /* per-table notes live inside the details, above their table */
   .seal-detail .seal-match { margin: 0 2px 10px; }
+  /* NA/KR standing-list badge ("ลิสต์ถาวร · ไม่หายไป", full text in tooltip) */
+  .seal-note { margin: 0; font-size: 11.5px; font-weight: 500; cursor: help;
+    color: var(--amber); display: inline-flex; align-items: center; gap: 5px;
+    padding: 4px 11px; border: 1px solid var(--amber); border-radius: 9999px;
+    background: var(--surface-soft); }
+  .seal-note.s-kr { color: var(--coral); border-color: var(--coral); }
   /* visible "add to calculator" star bar (sits above the table toggle) */
   .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 20px 10px; }
   .seal-star { appearance: none; cursor: pointer; font: inherit; font-size: 12px;
@@ -186,9 +192,11 @@ STANDING_KEYS = {
 
 
 def standing_note(key):
-    """The ♾️ standing-list badge is disabled — return nothing so no card
-    renders one. (STANDING_KEYS / standing_note_full kept for reference.)"""
-    return ""
+    """Short standing-list badge ("ลิสต์ถาวร · ไม่หายไป") for posts in
+    STANDING_KEYS — the full explanation lives in standing_note_full() (the
+    badge's tooltip). The ♾ glyph was dropped; the wording stays. Also shipped
+    to the Budget calc via seal_data.json."""
+    return "ลิสต์ถาวร · ไม่หายไป" if key in STANDING_KEYS else ""
 
 
 def standing_note_full(key):
@@ -254,50 +262,64 @@ def _mark_standing(html, srv, standing):
     return re.sub(r"(<tr><td>)(.*?)(</td>)", mark, html)
 
 
-def block_for(key, data, tmatch=None, dates=None, standing=None):
-    tables = data.get("tables", [])
-    if not tables:
-        return ""   # posts without a table get nothing injected
-    dates, tmatch, standing = dates or {}, tmatch or {}, standing or set()
-
+def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total):
+    """The injected body for a SINGLE table: standing badge + match link +
+    star + the collapsible table. `total` is how many tables the post has, so
+    the card can show "ตารางที่ 1/2" when split across cards."""
     def note(tw):
         links = " ".join(_twin_link(x, dates) for x in tw)
         return (f'<div class="seal-match"><span class="lbl">🔗 ลิสต์เดียวกับ:</span> '
                 f'{links}</div>')
 
-    single = len(tables) == 1
-    inner = [f"<!--ST:{key}-->"]
-    # meta row: compact ♾️ badge (full text in tooltip) + cross-server match
+    out = []
+    # meta row: standing badge (full text in tooltip) + cross-server match
     meta = []
     if standing_note(key):
-        meta.append(f'<span class="seal-note s-{key.split("-")[0]}" '
+        meta.append(f'<span class="seal-note s-{srv}" '
                     f'title="{standing_note_full(key)}">{standing_note(key)}</span>')
-    if single and tmatch.get(0):          # one table -> note in the meta row
-        meta.append(note(tmatch[0]))
+    if tmatch.get(ti):
+        meta.append(note(tmatch[ti]))
     if meta:
-        inner.append('<div class="seal-meta">' + "".join(meta) + "</div>")
-    # actions row: star button(s) + the table toggle side by side
-    bar = "".join(
-        f'<button class="seal-star" data-tkey="{key}#{ti}" type="button" '
-        f'title="เพิ่มเข้ารายการติดตาม">'
-        f'<span class="ic">☆</span>{"รายการติดตาม" if single else f"รายการติดตาม #{ti + 1}"}</button>'
-        for ti in range(len(tables)))
-    inner.append('<div class="seal-actions">')
-    inner.append(f'<div class="seal-starbar">{bar}</div>')
-    label = "ดูตารางแลกซีล" + (f" · {len(tables)} ตาราง" if not single else "")
-    inner.append(f'<details class="seal-detail"><summary>📋 {label}</summary>')
-    for ti, t in enumerate(tables):
-        # a split section (e.g. th-88) names its own category — show it as a
-        # heading so the two stacked tables read as distinct lists. Otherwise
-        # no caption line — the table itself says what it is.
-        if t.get("cat_title"):
-            inner.append(f'<h4 class="seal-cat">{H.escape(t["cat_title"])}</h4>')
-        if not single and tmatch.get(ti):  # many tables -> note per table
-            inner.append(note(tmatch[ti]))
-        thtml = _mark_standing(t["html"], key.split("-")[0], standing)
-        inner.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
-    inner.append("</details>")
-    inner.append("</div>")
+        out.append('<div class="seal-meta">' + "".join(meta) + "</div>")
+    # actions row: star button + the table toggle
+    out.append('<div class="seal-actions">')
+    out.append(f'<div class="seal-starbar"><button class="seal-star" '
+               f'data-tkey="{key}#{ti}" type="button" title="เพิ่มเข้ารายการติดตาม">'
+               f'<span class="ic">☆</span>รายการติดตาม</button></div>')
+    out.append('<details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>')
+    if t.get("cat_title"):
+        out.append(f'<h4 class="seal-cat">{H.escape(t["cat_title"])}</h4>')
+    thtml = _mark_standing(t["html"], srv, standing)
+    out.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
+    out.append("</details>")
+    out.append("</div>")
+    return out
+
+
+def block_for(key, data, tmatch=None, dates=None, standing=None, sources=""):
+    """Injected content for a card. A post with ONE table fills its own card.
+    A post with N tables is rendered as N cards: this returns the body for the
+    first table, then closes the <article> and opens a fresh sibling
+    <article id="key#2" ...> (cloning the post's source-links row) for each
+    further table — all inside one ST block so re-runs strip it cleanly."""
+    tables = data.get("tables", [])
+    if not tables:
+        return ""   # posts without a table get nothing injected
+    dates, tmatch, standing = dates or {}, tmatch or {}, standing or set()
+    srv = key.split("-")[0]
+    total = len(tables)
+
+    inner = [f"<!--ST:{key}-->"]
+    inner += _one_table_body(key, 0, tables[0], srv, tmatch, dates, standing, total)
+    # further tables become sibling cards inside the same ST block
+    for ti in range(1, total):
+        inner.append("</article>")
+        inner.append(f'<article class="card tl-entry" id="{key}#{ti + 1}" '
+                     f'data-server="{srv.upper()}">')
+        if sources:
+            inner.append(sources)
+        inner += _one_table_body(key, ti, tables[ti], srv, tmatch, dates,
+                                 standing, total)
     inner.append("<!--/ST-->")
     return "\n        " + "\n        ".join(inner)
 
@@ -410,10 +432,15 @@ def main():
             continue   # no-table posts are removed below, not injected
         pat = re.compile(r'(<article\b[^>]*\bid="%s"[^>]*>.*?)(</article>)'
                          % re.escape(key), re.S)
-        if not pat.search(html):
+        m0 = pat.search(html)
+        if not m0:
             print(f"  !! card not found: {key}", file=sys.stderr)
             continue
-        blk = block_for(key, d, matches.get(key, {}), dates, standing)
+        # the card's source-links row, cloned into sibling cards when a
+        # multi-table post is split across several <article>s
+        sm = re.search(r'<div class="sources">.*?</div>', m0.group(1), re.S)
+        sources = sm.group(0) if sm else ""
+        blk = block_for(key, d, matches.get(key, {}), dates, standing, sources)
         html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2),
                        html, count=1)
         injected += 1
