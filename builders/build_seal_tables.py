@@ -277,25 +277,28 @@ def _recur_after(seal_key, after_iso, rec_index):
 
 
 def _mark_recurrence(html, srv, twin_iso, rec_index):
-    """For a TH table matched to a twin dated `twin_iso`, add a trailing
-    "มาซ้ำ (KR/NA)" COLUMN listing, per seal, the later NA/KR patches that still
-    offer it ("↻ KR 17.03.2026 · NA 01.04.2026"). The header row (its first cell
-    is a <th>) gets the extra <th>; every data row (<tr><td>…) gets the extra
-    <td>. Inject-time only — the JSON stays clean."""
+    """For a TH table matched to a twin dated `twin_iso`, add TWO trailing
+    columns — "มาซ้ำ KR" and "มาซ้ำ NA" — listing, per seal, the later patches
+    on each server that still offer it. The header row (its first cell is a
+    <th>) gets the two <th>; every data row (<tr><td>…) gets the two <td> (dates
+    for that server, or "—"). Inject-time only — the JSON stays clean."""
+    def cell_for(name, want_srv):
+        later = [d for s, d in _recur_after(_seal_key(name, srv), twin_iso,
+                                            rec_index) if s == want_srv]
+        if not later:
+            return '<td class="recur-cell">—</td>'
+        chips = " · ".join(later)
+        return (f'<td class="recur-cell"><span class="seal-recur" '
+                f'title="ซีลนี้ยังมาแลกซ้ำใน {want_srv} {len(later)} แพท '
+                f'หลังจากแพทที่แมทกัน">↻ {chips}</span></td>')
+
     def add_cell(m):
         row = m.group(1)
-        if "<th>" in row:                       # header row -> new column title
-            return row + "<th>มาซ้ำ (KR/NA)</th></tr>"
+        if "<th>" in row:                       # header row -> two column titles
+            return row + "<th>มาซ้ำ KR</th><th>มาซ้ำ NA</th></tr>"
         name = re.sub(r"<[^>]+>", "", row.split("</td>", 1)[0]).strip()
         name = re.sub(r"^<tr><td>", "", name)
-        later = _recur_after(_seal_key(name, srv), twin_iso, rec_index)
-        if not later:
-            return row + '<td class="recur-cell">—</td></tr>'
-        chips = " · ".join(f"{s} {d}" for s, d in later)
-        cell = (f'<td class="recur-cell"><span class="seal-recur" '
-                f'title="ซีลนี้ยังมาแลกซ้ำในแพทหลังจากแพทที่แมทกัน '
-                f'({len(later)} แพท)">↻ {chips}</span></td>')
-        return row + cell + "</tr>"
+        return row + cell_for(name, "KR") + cell_for(name, "NA") + "</tr>"
     return re.sub(r"(<tr>.*?)</tr>", add_cell, html, flags=re.S)
 
 
