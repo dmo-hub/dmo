@@ -40,8 +40,11 @@ CSS = """
      two balanced flex lines instead of four stacked blocks */
   .seal-meta { display: flex; flex-wrap: wrap; align-items: center;
     gap: 6px 10px; margin: 2px 20px 10px; }
-  .seal-actions { display: flex; flex-wrap: wrap; align-items: flex-start;
+  .seal-actions { display: flex; flex-wrap: wrap; align-items: center;
     gap: 8px; margin: 0 20px 16px; }
+  /* star + toggle share one row; only an OPEN table wraps to its own line */
+  .seal-actions > .seal-starbar, .seal-actions > .seal-detail:not([open]) {
+    flex: 0 0 auto; }
   .seal-detail { margin: 0; }
   .seal-detail[open] { flex-basis: 100%; }
   .seal-detail > summary {
@@ -281,8 +284,8 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total):
     out.append('<div class="seal-actions">')
     out.append(f'<div class="seal-starbar"><button class="seal-star" '
                f'data-tkey="{key}#{ti}" type="button" title="เพิ่มเข้ารายการติดตาม">'
-               f'<span class="ic">☆</span>รายการติดตาม</button></div>')
-    out.append('<details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>')
+               f'<span class="ic">☆</span>ติดตาม</button></div>')
+    out.append('<details class="seal-detail"><summary>📋 ดูตาราง</summary>')
     thtml = _mark_standing(t["html"], srv, standing)
     out.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
     out.append("</details>")
