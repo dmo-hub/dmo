@@ -91,9 +91,11 @@ CSS = """
     padding: 4px 11px; border: 1px solid var(--amber); border-radius: 9999px;
     background: var(--surface-soft); }
   .seal-note.s-kr { color: var(--coral); border-color: var(--coral); }
-  /* per-seal recurrence: later NA/KR patches that still offer this seal */
-  .seal-recur { display: inline-block; margin-left: 6px; font-size: 10.5px;
-    font-weight: 600; color: var(--teal); cursor: help; white-space: nowrap; }
+  /* per-seal recurrence column: later NA/KR patches that still offer the seal */
+  table.seal-tbl td.recur-cell { text-align: left; white-space: normal;
+    min-width: 150px; color: var(--muted); }
+  .seal-recur { font-size: 10.5px; font-weight: 600; color: var(--teal);
+    cursor: help; }
   /* visible "add to calculator" star bar (sits above the table toggle) */
   .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
   .seal-star { appearance: none; cursor: pointer; font: inherit; font-size: 12px;
@@ -275,20 +277,26 @@ def _recur_after(seal_key, after_iso, rec_index):
 
 
 def _mark_recurrence(html, srv, twin_iso, rec_index):
-    """For a TH table matched to a twin dated `twin_iso`, append a small badge
-    to each seal-name cell listing the later NA/KR patches that still offer it
-    ("↻ KR 17.03.2026 · NA 01.04.2026"). Header rows use <th>, so the <tr><td>
-    pattern only hits data rows. Inject-time only — the JSON stays clean."""
-    def mark(m):
-        name = re.sub(r"<[^>]+>", "", m.group(2)).strip()
+    """For a TH table matched to a twin dated `twin_iso`, add a trailing
+    "มาซ้ำ (KR/NA)" COLUMN listing, per seal, the later NA/KR patches that still
+    offer it ("↻ KR 17.03.2026 · NA 01.04.2026"). The header row (its first cell
+    is a <th>) gets the extra <th>; every data row (<tr><td>…) gets the extra
+    <td>. Inject-time only — the JSON stays clean."""
+    def add_cell(m):
+        row = m.group(1)
+        if "<th>" in row:                       # header row -> new column title
+            return row + "<th>มาซ้ำ (KR/NA)</th></tr>"
+        name = re.sub(r"<[^>]+>", "", row.split("</td>", 1)[0]).strip()
+        name = re.sub(r"^<tr><td>", "", name)
         later = _recur_after(_seal_key(name, srv), twin_iso, rec_index)
         if not later:
-            return m.group(0)
+            return row + '<td class="recur-cell">—</td></tr>'
         chips = " · ".join(f"{s} {d}" for s, d in later)
-        badge = (f' <span class="seal-recur" title="ซีลนี้ยังมาแลกซ้ำในแพท '
-                 f'หลังจากแพทที่แมทกัน ({len(later)} แพท)">↻ {chips}</span>')
-        return m.group(1) + m.group(2) + badge + m.group(3)
-    return re.sub(r"(<tr><td>)(.*?)(</td>)", mark, html)
+        cell = (f'<td class="recur-cell"><span class="seal-recur" '
+                f'title="ซีลนี้ยังมาแลกซ้ำในแพทหลังจากแพทที่แมทกัน '
+                f'({len(later)} แพท)">↻ {chips}</span></td>')
+        return row + cell + "</tr>"
+    return re.sub(r"(<tr>.*?)</tr>", add_cell, html, flags=re.S)
 
 
 def _standing_set(data):
