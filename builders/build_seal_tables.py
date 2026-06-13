@@ -241,10 +241,10 @@ def _iso(ddmmyyyy):
 
 
 def _recurrence_index(data, dates):
-    """seal_key -> sorted list of (iso, srv, 'DD.MM.YYYY') for every NA/KR
-    exchange list that contains that seal. Used to tell, for a TH card matched
-    to a KR/NA twin, whether each of its seals shows up AGAIN in a later NA/KR
-    patch (it's still exchangeable on the source server after that patch)."""
+    """seal_key -> sorted list of (iso, srv, 'DD.MM.YYYY', card_key) for every
+    NA/KR exchange list that contains that seal. Used to tell, for a TH card
+    matched to a KR/NA twin, whether each of its seals shows up AGAIN in a later
+    NA/KR patch (the card_key lets callers exclude the matched twins themselves)."""
     from collections import defaultdict
     idx = defaultdict(list)
     for key, v in data.items():
@@ -261,30 +261,32 @@ def _recurrence_index(data, dates):
                     k = _seal_key(r[0], srv)
                     if k and k not in seen:
                         seen.add(k)
-                        idx[k].append((_iso(d), srv.upper(), d))
+                        idx[k].append((_iso(d), srv.upper(), d, key))
     for k in idx:
         idx[k].sort()
     return idx
 
 
-def _recur_after(seal_key, after_iso, rec_index):
+def _recur_after(seal_key, after_iso, rec_index, exclude=()):
     """Patches (srv, 'DD.MM.YYYY') that still carry `seal_key` strictly AFTER
-    `after_iso`, in date order."""
+    `after_iso`, in date order — excluding the cards in `exclude` (the matched
+    twins themselves, which would otherwise count as a "recurrence")."""
     if not seal_key:
         return []
-    return [(srv, d) for (iso, srv, d) in rec_index.get(seal_key, [])
-            if iso > after_iso]
+    return [(srv, d) for (iso, srv, d, ck) in rec_index.get(seal_key, [])
+            if iso > after_iso and ck not in exclude]
 
 
-def _mark_recurrence(html, srv, twin_iso, rec_index):
+def _mark_recurrence(html, srv, twin_iso, rec_index, twins=()):
     """For a TH table matched to a twin dated `twin_iso`, add TWO trailing
     columns — "มาซ้ำ KR" and "มาซ้ำ NA" — listing, per seal, the later patches
-    on each server that still offer it. The header row (its first cell is a
-    <th>) gets the two <th>; every data row (<tr><td>…) gets the two <td> (dates
-    for that server, or "—"). Inject-time only — the JSON stays clean."""
+    on each server that still offer it. The matched twin cards (`twins`) are
+    NOT counted (a cross-list match isn't a recurrence). The header row (its
+    first cell is a <th>) gets the two <th>; every data row (<tr><td>…) gets
+    the two <td> (dates for that server, or "—"). Inject-time only."""
     def cell_for(name, want_srv):
         later = [d for s, d in _recur_after(_seal_key(name, srv), twin_iso,
-                                            rec_index) if s == want_srv]
+                                            rec_index, twins) if s == want_srv]
         if not later:
             return '<td class="recur-cell">—</td>'
         chips = " · ".join(later)
@@ -363,11 +365,13 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index):
     out.append('<details class="seal-detail"><summary>📋 ดูตาราง</summary>')
     thtml = _mark_standing(t["html"], srv, standing)
     # TH list matched to a NA/KR twin: flag each seal that recurs in a later
-    # NA/KR patch (the date of the earliest twin in the match is the cutoff).
+    # NA/KR patch (cutoff = earliest twin date; the matched twins themselves
+    # are excluded so a cross-list match doesn't count as a recurrence).
     if srv == "th" and tmatch.get(ti):
-        twin_isos = [_iso(dates.get(x)) for x in tmatch[ti] if dates.get(x)]
+        twins = set(tmatch[ti])
+        twin_isos = [_iso(dates.get(x)) for x in twins if dates.get(x)]
         if twin_isos:
-            thtml = _mark_recurrence(thtml, srv, min(twin_isos), rec_index)
+            thtml = _mark_recurrence(thtml, srv, min(twin_isos), rec_index, twins)
     out.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
     out.append("</details>")
     out.append("</div>")
