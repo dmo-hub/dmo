@@ -294,6 +294,8 @@ def normalize_table(tb, server):
     else:
         ticket_q = qty_after(iticket) or iticket   # count is the qty beside it
 
+    norm_header = [h.strip() for h in header]
+
     out = ['<table class="seal-tbl">', "<tr>"]
     out += [f"<th>{H.escape(c)}</th>" for c in NORM_HEADER]
     out.append("</tr>")
@@ -304,6 +306,12 @@ def normalize_table(tb, server):
         # "หมวดผลิตตั๋วแลกซีลแบบพิเศษ") expands to the same text in every cell.
         cell_vals = [c.strip() for c in row if c.strip()]
         if len(set(cell_vals)) == 1:
+            continue
+        # skip a REPEATED header row: th-88 packs two sub-tables into one
+        # <table>, so the second section's column header ("ไอเทมวัตถุดิบ |
+        # ... | ซีลที่ได้รับ | ...") reappears mid-table — identical to the
+        # header we already consumed. Drop it instead of emitting a junk row.
+        if [c.strip() for c in row] == norm_header:
             continue
         eq, name = _embedded_qty(row[iname])
         if server == "KR":
