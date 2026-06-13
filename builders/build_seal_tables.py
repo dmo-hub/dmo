@@ -9,6 +9,7 @@ re-run.
 Run: python builders/build_seal_tables.py
 """
 
+import html as H
 import io
 import json
 import re
@@ -35,7 +36,7 @@ CSS = """
      beneath it */
   .tl-entry > .sources:first-child { padding-top: 16px; }
   .tl-entry .sources { padding-bottom: 8px; }
-  /* meta row (♾️ badge + match links) and actions row (star + toggle) —
+  /* meta row (cross-server match links) and actions row (star + toggle) —
      two balanced flex lines instead of four stacked blocks */
   .seal-meta { display: flex; flex-wrap: wrap; align-items: center;
     gap: 6px 10px; margin: 2px 20px 10px; }
@@ -57,6 +58,10 @@ CSS = """
   .seal-tbl-wrap { overflow-x: auto; border: 1px solid var(--hairline);
     border-radius: var(--radius); background: var(--canvas); }
   .seal-tbl-wrap + .seal-tbl-wrap, .seal-tbl-wrap + .seal-match { margin-top: 14px; }
+  /* category heading above a split sub-table (e.g. th-88's two sections) */
+  .seal-cat { margin: 16px 2px 8px; font-size: 13px; font-weight: 700;
+    color: var(--coral); }
+  .seal-cat:first-of-type { margin-top: 2px; }
   table.seal-tbl { border-collapse: collapse; width: 100%;
     font-size: 12px; min-width: 360px; }
   table.seal-tbl th, table.seal-tbl td {
@@ -81,18 +86,6 @@ CSS = """
   .seal-match a.tw-th { color: var(--teal); border-color: var(--teal); }
   /* per-table notes live inside the details, above their table */
   .seal-detail .seal-match { margin: 0 2px 10px; }
-  /* NA/KR standing-list badge (full text in its tooltip) */
-  .seal-note { margin: 0; font-size: 11.5px; font-weight: 500; cursor: help;
-    color: var(--amber); display: inline-flex; align-items: center; gap: 5px;
-    padding: 4px 11px; border: 1px solid var(--amber); border-radius: 9999px;
-    background: var(--surface-soft); }
-  .seal-tbl .inf { font-size: 12px; }
-  /* ♾ markers + badge wear their server's colour (same palette as twin links) */
-  .inf { font-weight: 700; cursor: help; }
-  .inf.s-na { color: var(--amber); }
-  .inf.s-kr { color: var(--coral); }
-  .inf.s-th { color: var(--teal); }
-  .seal-note.s-kr { color: var(--coral); border-color: var(--coral); }
   /* visible "add to calculator" star bar (sits above the table toggle) */
   .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 20px 10px; }
   .seal-star { appearance: none; cursor: pointer; font: inherit; font-size: 12px;
@@ -193,11 +186,9 @@ STANDING_KEYS = {
 
 
 def standing_note(key):
-    """Short ♾️ badge for posts in STANDING_KEYS. The full explanation lives
-    in standing_note_full() (the badge's tooltip) — every standing seal's row
-    also carries its own ♾️, so the badge stays compact. Also shipped to the
-    Budget calc via seal_data.json."""
-    return f"{INF_GLYPH} ลิสต์ถาวร · ไม่หายไป" if key in STANDING_KEYS else ""
+    """The ♾️ standing-list badge is disabled — return nothing so no card
+    renders one. (STANDING_KEYS / standing_note_full kept for reference.)"""
+    return ""
 
 
 def standing_note_full(key):
@@ -230,22 +221,23 @@ def _seal_key(raw, srv):
 
 
 def _standing_set(data):
-    """Normalized names of every seal in the CONFIRMED standing lists
-    (STANDING_KEYS). Those lists never rotate out, so any seal in them —
-    wherever it appears, old NA/KR posts and TH included — is permanently
-    exchangeable somewhere."""
-    s = set()
-    for key, v in data.items():
-        if key not in STANDING_KEYS:
-            continue
-        srv = key.split("-")[0]
-        for t in v.get("tables", []):
-            for r in _table_rows_only(t["html"]):
-                if r and r[0]:
-                    k = _seal_key(r[0], srv)
-                    if k:
-                        s.add(k)
-    return s
+    """The ♾️ standing-seal markers are disabled — return an empty set so no
+    row is marked and the seal_data `inf` flags are all 0. (The build-from-
+    STANDING_KEYS logic is kept below, commented, for easy reinstatement.)"""
+    return set()
+    # --- former logic (re-enable by removing the early return above) ---
+    # s = set()
+    # for key, v in data.items():
+    #     if key not in STANDING_KEYS:
+    #         continue
+    #     srv = key.split("-")[0]
+    #     for t in v.get("tables", []):
+    #         for r in _table_rows_only(t["html"]):
+    #             if r and r[0]:
+    #                 k = _seal_key(r[0], srv)
+    #                 if k:
+    #                     s.add(k)
+    # return s
 
 
 def _mark_standing(html, srv, standing):
@@ -295,7 +287,11 @@ def block_for(key, data, tmatch=None, dates=None, standing=None):
     label = "ดูตารางแลกซีล" + (f" · {len(tables)} ตาราง" if not single else "")
     inner.append(f'<details class="seal-detail"><summary>📋 {label}</summary>')
     for ti, t in enumerate(tables):
-        # no caption line — the table itself says what it is
+        # a split section (e.g. th-88) names its own category — show it as a
+        # heading so the two stacked tables read as distinct lists. Otherwise
+        # no caption line — the table itself says what it is.
+        if t.get("cat_title"):
+            inner.append(f'<h4 class="seal-cat">{H.escape(t["cat_title"])}</h4>')
         if not single and tmatch.get(ti):  # many tables -> note per table
             inner.append(note(tmatch[ti]))
         thtml = _mark_standing(t["html"], key.split("-")[0], standing)

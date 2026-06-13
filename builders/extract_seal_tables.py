@@ -442,6 +442,35 @@ def is_exchange_header(htxt, head2, body_score, server):
     return server == "TH" and body_score >= 12
 
 
+# a full-width category banner: a <tr> with a single colspan cell, e.g. th-88's
+# "หมวดผลิตซีลมาสเตอร์" / "หมวดผลิตตั๋วแลกซีลแบบพิเศษ".
+_BANNER_TR = re.compile(
+    r'<tr\b[^>]*>\s*<t[dh]\b[^>]*\bcolspan="?(\d+)"?[^>]*>(.*?)</t[dh]>\s*</tr>',
+    re.S | re.I)
+
+
+def split_category_tables(tb):
+    """Split one <table> that stacks several category sections (each introduced
+    by a full-width colspan banner row) into one <table> per section, returning
+    [(category_title_or_None, table_html), ...]. A table with 0-1 banners is
+    returned unchanged as a single (None, tb) entry, so existing single-section
+    cards are untouched."""
+    trs = re.findall(r"<tr\b.*?</tr>", tb, re.S)
+    banners = [i for i, tr in enumerate(trs)
+               if (m := _BANNER_TR.fullmatch(tr.strip())) and int(m.group(1)) >= 2]
+    if len(banners) < 2:
+        return [(None, tb)]
+    open_tag = re.match(r"<table\b[^>]*>", tb, re.S).group(0)
+    out = []
+    for n, start in enumerate(banners):
+        end = banners[n + 1] if n + 1 < len(banners) else len(trs)
+        title = strip_text(_BANNER_TR.fullmatch(trs[start].strip()).group(2))
+        # drop the banner row itself; the section's own header row follows it
+        section = open_tag + "".join(trs[start + 1:end]) + "</table>"
+        out.append((title, section))
+    return out
+
+
 def extract(post):
     raw = get_html(post)
     if not raw:
@@ -457,20 +486,26 @@ def extract(post):
             continue
         if not uses_exchange_ticket(tb):
             continue                  # keep only Seal-Exchange-Ticket exchanges
-        normalized = normalize_table(tb, server)
-        if normalized and _is_trivial_craft(normalized):
-            continue                  # skip redundant 1-ticket->1-seal craft lists
-        cleaned = normalized or clean_table(tb)
-        if cleaned in seen:           # drop exact-duplicate tables
-            continue
-        seen.add(cleaned)
-        tables.append({
-            "header": htxt[:160],
-            "score": body_score,
-            "rows": tb.count("<tr"),
-            "normalized": bool(normalized),
-            "html": cleaned,
-        })
+        # one <table> may stack several category sections (th-88) — emit each
+        # as its own table; single-section tables come back unchanged.
+        for cat_title, sub in split_category_tables(tb):
+            normalized = normalize_table(sub, server)
+            if normalized and _is_trivial_craft(normalized):
+                continue              # skip redundant 1-ticket->1-seal craft lists
+            cleaned = normalized or clean_table(sub)
+            if cleaned in seen:       # drop exact-duplicate tables
+                continue
+            seen.add(cleaned)
+            entry = {
+                "header": (cat_title or htxt)[:160],
+                "score": body_score,
+                "rows": sub.count("<tr"),
+                "normalized": bool(normalized),
+                "html": cleaned,
+            }
+            if cat_title:                 # only split sections carry a title
+                entry["cat_title"] = cat_title
+            tables.append(entry)
     # Fall back to a vision-OCR'd table for posts whose list is image-only.
     if not tables and "rows" in OCR_DATA.get(post["key"], {}):
         tables.append({
@@ -481,7 +516,12 @@ def extract(post):
         })
     cap = CAPTION[server]
     for i, t in enumerate(tables):
-        base = cap if len(tables) == 1 else f"{cap} ({i + 1})"
+        if t.get("cat_title"):                      # split section -> its own name
+            base = f"{cap} · {t['cat_title']}"
+        elif len(tables) == 1:
+            base = cap
+        else:
+            base = f"{cap} ({i + 1})"
         t["caption"] = base + (" · ดึงจากรูปภาพ" if t.get("ocr") else "")
     note = "" if tables else "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
     return {"tables": tables, "note": note}
