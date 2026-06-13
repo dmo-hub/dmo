@@ -290,7 +290,7 @@ def _mark_recurrence(html, srv, twin_iso, rec_index):
         chips = " · ".join(later)
         return (f'<td class="recur-cell"><span class="seal-recur" '
                 f'title="ซีลนี้ยังมาแลกซ้ำใน {want_srv} {len(later)} แพท '
-                f'หลังจากแพทที่แมทกัน">↻ {chips}</span></td>')
+                f'หลังจากแพทที่แมทกัน">{chips}</span></td>')
 
     def add_cell(m):
         row = m.group(1)
