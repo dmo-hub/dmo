@@ -58,10 +58,6 @@ CSS = """
   .seal-tbl-wrap { overflow-x: auto; border: 1px solid var(--hairline);
     border-radius: var(--radius); background: var(--canvas); }
   .seal-tbl-wrap + .seal-tbl-wrap, .seal-tbl-wrap + .seal-match { margin-top: 14px; }
-  /* category heading above a split sub-table (e.g. th-88's two sections) */
-  .seal-cat { margin: 16px 2px 8px; font-size: 13px; font-weight: 700;
-    color: var(--coral); }
-  .seal-cat:first-of-type { margin-top: 2px; }
   table.seal-tbl { border-collapse: collapse; width: 100%;
     font-size: 12px; min-width: 360px; }
   table.seal-tbl th, table.seal-tbl td {
@@ -93,7 +89,7 @@ CSS = """
     background: var(--surface-soft); }
   .seal-note.s-kr { color: var(--coral); border-color: var(--coral); }
   /* visible "add to calculator" star bar (sits above the table toggle) */
-  .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 20px 10px; }
+  .seal-starbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
   .seal-star { appearance: none; cursor: pointer; font: inherit; font-size: 12px;
     font-weight: 600; display: inline-flex; align-items: center; gap: 6px;
     padding: 5px 13px; border-radius: 9999px;
@@ -287,8 +283,6 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total):
                f'data-tkey="{key}#{ti}" type="button" title="เพิ่มเข้ารายการติดตาม">'
                f'<span class="ic">☆</span>รายการติดตาม</button></div>')
     out.append('<details class="seal-detail"><summary>📋 ดูตารางแลกซีล</summary>')
-    if t.get("cat_title"):
-        out.append(f'<h4 class="seal-cat">{H.escape(t["cat_title"])}</h4>')
     thtml = _mark_standing(t["html"], srv, standing)
     out.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
     out.append("</details>")
