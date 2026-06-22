@@ -1,0 +1,20 @@
+# Ruff configuration only. This repo is "not a package — just scripts run
+# directly from the repo root" (see CLAUDE.md), so there is no [build-system]
+# or [project] table — pyproject.toml exists purely to configure tooling.
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["__pycache__", "cache", "data", "docs"]
+
+[tool.ruff.lint]
+# Sane default rule set for a script repo:
+#   E/W  pycodestyle   F  pyflakes   I  isort
+#   UP   pyupgrade     B  flake8-bugbear
+select = ["E", "W", "F", "I", "UP", "B"]
+# E501 (line too long) is reported by `ruff format`, not the linter, to avoid
+# double-flagging; long centralized config strings in scan_decks are expected.
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"

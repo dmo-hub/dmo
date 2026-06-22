@@ -1,0 +1,158 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan — Full CI/CD Pipeline (dmo)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { darkMode: 'class' };
+  function toggleTheme(){ document.documentElement.classList.toggle('dark'); }
+</script>
+<style>
+  .num{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:.5rem;font-size:.8rem;font-weight:700}
+  code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85em}
+</style>
+
+<div class="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200">
+<div class="max-w-4xl mx-auto px-5 py-8">
+
+  <div class="flex items-start justify-between gap-4 mb-6">
+    <div>
+      <p class="text-xs font-semibold tracking-widest text-sky-600 dark:text-sky-400 uppercase">Plan Spec · Template A (feature)</p>
+      <h1 class="text-2xl sm:text-3xl font-bold mt-1">Full CI/CD Pipeline — <span class="text-sky-600 dark:text-sky-400">dmo</span></h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Python scrape→static-HTML repo · GitHub Pages from <code>/docs</code></p>
+    </div>
+    <button onclick="toggleTheme()" class="shrink-0 text-xs px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">◐ theme</button>
+  </div>
+
+  <!-- STATS -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-sky-600 dark:text-sky-400">5</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">files added/changed</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-sky-600 dark:text-sky-400">2</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">runtime deps pinned</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-amber-500">warn</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">ruff mode (non-blocking)</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-emerald-500">native</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">Pages deploy (/docs)</div>
+    </div>
+  </div>
+
+  <!-- GOAL -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300">G</span>Goal</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm leading-relaxed">
+      เพิ่ม <b>full CI/CD</b> บน existing 2 workflows โดย<b>ไม่รื้อ</b> data pipeline เดิม:
+      pin deps ให้ reproducible, เพิ่ม <b>Ruff</b> lint+format (warn-first), แสดงผล CI เป็น
+      <b>Job Summary table</b> + <b>README badges</b>. Pages ยังคง serve native จาก <code>main /docs</code> — ไม่เพิ่ม deploy workflow.
+    </div>
+  </section>
+
+  <!-- CONTEXT -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200">C</span>Current state (audited)</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+          <tr><td class="px-4 py-2 font-medium w-44">Deps จริง</td><td class="px-4 py-2"><code>requests</code> (11 files) + <code>playwright</code> (4 files) + stdlib</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Dep manifest</td><td class="px-4 py-2 text-rose-500">ไม่มี — CI ติดตั้งแบบ <code>pip install requests</code> ดิบ</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Lint config</td><td class="px-4 py-2 text-rose-500">ไม่มี</td></tr>
+          <tr><td class="px-4 py-2 font-medium">CI ที่มี</td><td class="px-4 py-2"><code>validate.yml</code> (push/PR gate) · <code>refresh.yml</code> (manual→PR)</td></tr>
+          <tr><td class="px-4 py-2 font-medium">validate.py</td><td class="px-4 py-2">JSON parse · HTML balance · inline-JS <code>node --check</code> · builder idempotency</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Deploy</td><td class="px-4 py-2">GitHub Pages serve <code>main /docs</code> ตรง — ไม่มี build step</td></tr>
+          <tr><td class="px-4 py-2 font-medium">README</td><td class="px-4 py-2 text-rose-500">ไม่มีที่ root</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BUILD STEPS -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-3"><span class="num bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300">B</span>Build steps</h2>
+    <div class="space-y-3">
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-emerald-600 text-white text-xs">1</span><b>requirements.txt</b> <span class="text-xs text-slate-400">(new)</span></div>
+        <p class="text-sm text-slate-600 dark:text-slate-300">Pin runtime deps: <code>requests</code> + <code>playwright</code>. Single source ให้ CI + local install. Floor versions, ไม่ lock exact (project เล็ก ไม่ต้อง hash-pin).</p>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-emerald-600 text-white text-xs">2</span><b>pyproject.toml</b> <span class="text-xs text-slate-400">(new)</span></div>
+        <p class="text-sm text-slate-600 dark:text-slate-300">Ruff config เท่านั้น (ไม่ทำเป็น installable package — ตรงตาม "not a package" ใน CLAUDE.md). target-version py311, line-length 100, select rule set พื้นฐาน (E/F/I/UP/B) แบบ sane defaults สำหรับ script repo. exclude <code>__pycache__</code>, <code>cache/</code>.</p>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-emerald-600 text-white text-xs">3</span><b>.github/workflows/validate.yml</b> <span class="text-xs text-slate-400">(edit)</span></div>
+        <ul class="text-sm text-slate-600 dark:text-slate-300 list-disc ml-5 space-y-1">
+          <li>install จาก <code>requirements.txt</code> แทน <code>pip install requests</code> ดิบ</li>
+          <li>เพิ่ม step <code>ruff check</code> + <code>ruff format --check</code> — <code>continue-on-error: true</code> (warn-first)</li>
+          <li>เพิ่ม step เขียน <b>Job Summary</b> markdown table ลง <code>$GITHUB_STEP_SUMMARY</code> — สรุป pass/fail ของ validate + ruff finding count</li>
+          <li>คง <code>validate.py --no-build</code> เดิมไว้</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-emerald-600 text-white text-xs">4</span><b>.github/workflows/refresh.yml</b> <span class="text-xs text-slate-400">(edit, ขั้นต่ำ)</span></div>
+        <p class="text-sm text-slate-600 dark:text-slate-300">เปลี่ยน install เป็น <code>requirements.txt</code> ให้สอดคล้อง. ไม่แตะ logic อื่น (ยังคง manual-only, ยังคง PR-not-push).</p>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-emerald-600 text-white text-xs">5</span><b>README.md</b> <span class="text-xs text-slate-400">(new)</span></div>
+        <p class="text-sm text-slate-600 dark:text-slate-300">Root README: <b>status badges</b> (validate · refresh), 1-para project summary, layout map (จาก CLAUDE.md), quick-start commands, Pages URL. Badge = <code>![validate](…/workflows/validate.yml/badge.svg)</code>.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UI / OUTPUT -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-300">U</span>"UI" — ที่เห็นผลจริง</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm space-y-2">
+      <p>ไม่ host dashboard นอก — ใช้ UI ในตัว GitHub:</p>
+      <ul class="list-disc ml-5 space-y-1 text-slate-600 dark:text-slate-300">
+        <li><b>Job Summary</b> — ตาราง ✅/❌ โผล่หน้า Actions run แต่ละครั้ง (JSON · HTML · inline-JS · ruff)</li>
+        <li><b>Status badges</b> — ป้าย live บนหน้า repo (README) เห็นสถานะ workflow ล่าสุดทันที</li>
+        <li><b>Actions tab</b> — มีอยู่แล้วในตัว GitHub (run history, log, re-run)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- NON-GOALS -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-rose-100 text-rose-700 dark:bg-rose-900 dark:text-rose-300">N</span>Non-goals (ไม่ทำ)</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm">
+      <ul class="list-disc ml-5 space-y-1 text-slate-600 dark:text-slate-300">
+        <li>ไม่เพิ่ม deploy workflow — Pages native /docs พอ</li>
+        <li>ไม่ทำ blocking ruff (warn-first ก่อน — เปลี่ยนทีหลังได้)</li>
+        <li>ไม่ใส่ mypy (codebase ไม่มี type hint → noise)</li>
+        <li>ไม่ทำเป็น installable package</li>
+        <li>ไม่แตะ scrape logic / scan_digimon.py / playwright fetchers</li>
+        <li>ไม่ commit/push — รอ user สั่ง</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- VERIFY -->
+  <section class="mb-4">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200">V</span>Verify</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm">
+      <ul class="list-disc ml-5 space-y-1 text-slate-600 dark:text-slate-300">
+        <li><code>pip install -r requirements.txt</code> สำเร็จ local</li>
+        <li><code>ruff check .</code> + <code>ruff format --check .</code> รันได้ (เห็น finding แต่ exit ไม่ทำ CI แดง)</li>
+        <li><code>python tools/validate.py --no-build</code> ยังผ่าน</li>
+        <li>YAML lint ผ่าน (workflow syntax ถูก)</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="text-xs text-slate-400 dark:text-slate-500 mt-6 border-t border-slate-200 dark:border-slate-800 pt-3">
+    Spec นี้ = สื่อสาร intent · code จริงไปอยู่ใน edit หลัง confirm · ไฟล์คงไว้เป็น record
+  </p>
+
+</div>
+</div>
