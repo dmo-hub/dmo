@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>เทียบความคุ้มค่าแพ็คซีล · 3,600 ×4 vs 3,800 ×4 · vplay</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+  :root {
+    --ground:#0B0A07; --ground-2:#12100A; --panel:#1A1710; --panel-2:#221D13;
+    --line:#3A3220; --text:#F3ECD9; --muted:#A0937A;
+    --gold:#F2C14E; --gold-dim:#B5872A; --blue:#E0B84A; --green:#5FBF7E; --red:#C0392B;
+    --r:14px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0;
+    background:
+      radial-gradient(1100px 620px at 78% -8%, rgba(192,57,43,.14), transparent 60%),
+      radial-gradient(880px 520px at 8% 108%, rgba(242,193,78,.12), transparent 55%),
+      var(--ground);
+    color: var(--text);
+    font-family:'IBM Plex Sans Thai', system-ui, sans-serif; line-height:1.5;
+    -webkit-font-smoothing: antialiased; padding: clamp(16px,4vw,48px);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+
+  .topline { display:flex; align-items:center; gap:12px; font-family:'IBM Plex Mono',monospace;
+    font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--blue); }
+  .topline .dot { width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 12px var(--green); }
+  .topline .sep { flex:1; height:1px; background:linear-gradient(90deg,var(--line),transparent); }
+
+  h1 { font-family:'Kanit',sans-serif; font-weight:800; font-size:clamp(28px,5.2vw,50px);
+    line-height:1.04; margin:14px 0 6px; letter-spacing:-.01em; }
+  h1 .g { background:linear-gradient(180deg,#FFE08A,var(--gold) 55%,var(--gold-dim));
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .subtitle { color:var(--muted); font-size:15px; max-width:62ch; margin:0 0 26px; }
+
+  /* hero winner banner */
+  .winner {
+    background: radial-gradient(700px 280px at 16% -30%, rgba(67,224,160,.16), transparent 62%),
+      linear-gradient(180deg,var(--panel-2),var(--ground-2));
+    border:1px solid var(--line); border-radius:var(--r);
+    padding:26px clamp(20px,4vw,34px); margin-bottom:22px; position:relative; overflow:hidden;
+    display:flex; align-items:center; gap:clamp(18px,4vw,40px); flex-wrap:wrap;
+  }
+  .winner::before { content:""; position:absolute; inset:0; border-radius:var(--r); padding:1px; pointer-events:none;
+    background:linear-gradient(120deg, rgba(67,224,160,.5), transparent 45%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor; mask-composite:exclude; }
+  .winner .lead { flex:1; min-width:240px; }
+  .winner-tag { display:inline-flex; align-items:center; gap:7px; font-family:'IBM Plex Mono',monospace;
+    font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--green);
+    border:1px solid currentColor; padding:5px 13px; border-radius:999px; margin-bottom:14px; }
+  .winner h2 { font-family:'Kanit',sans-serif; font-weight:600; font-size:clamp(20px,3.6vw,30px); margin:0 0 4px; line-height:1.15; }
+  .winner .why { color:var(--muted); font-size:14px; margin:0; }
+  .winner .save { text-align:right; min-width:190px; }
+  .winner .save .big { font-family:'Kanit',sans-serif; font-weight:800; font-size:clamp(40px,9vw,68px); line-height:.9;
+    background:linear-gradient(180deg,#9CFFD4,var(--green)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .winner .save .lbl { color:var(--muted); font-size:13px; margin-top:4px; }
+  @media (max-width:560px){ .winner .save{ text-align:left; } }
+
+  /* options */
+  .opts { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:stretch; }
+  @media (max-width:780px){ .opts{ grid-template-columns:1fr; } }
+  .opt { background:linear-gradient(180deg,var(--panel),var(--ground-2)); border:1px solid var(--line);
+    border-radius:var(--r); padding:22px; position:relative; display:flex; flex-direction:column; }
+  .opt.best { border-color:rgba(67,224,160,.45); box-shadow:0 0 0 1px rgba(67,224,160,.25), 0 14px 40px -22px rgba(67,224,160,.6); }
+  .opt .badge { position:absolute; top:-11px; left:20px; font-family:'IBM Plex Mono',monospace; font-size:11px;
+    letter-spacing:.12em; text-transform:uppercase; padding:4px 11px; border-radius:999px;
+    background:var(--panel-2); color:var(--muted); border:1px solid var(--line); }
+  .opt .badge.win { background:var(--green); color:#04331F; border-color:transparent; font-weight:600; }
+  .opt h3 { font-family:'Kanit',sans-serif; font-weight:600; font-size:18px; margin:6px 0 2px; }
+  .opt .desc { font-size:13px; color:var(--muted); margin:0 0 16px; min-height:34px; }
+
+  .opt .cost { font-family:'Kanit',sans-serif; font-weight:800; font-size:clamp(32px,5.5vw,44px); line-height:1;
+    background:linear-gradient(180deg,#FFE08A,var(--gold) 60%,var(--gold-dim));
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .opt .cost .u { font-size:.4em; -webkit-text-fill-color:var(--gold); margin-left:4px; }
+  .opt .cost-lbl { font-size:12px; color:var(--muted); margin:2px 0 18px; }
+
+  .opt .stats { margin-top:16px; padding-top:14px; border-top:1px dashed var(--line); }
+  .opt .stat { display:flex; justify-content:space-between; align-items:baseline; padding:6px 0; font-size:14px; gap:12px; }
+  .opt .stat .k { color:var(--muted); }
+  .opt .stat .v { font-family:'IBM Plex Mono',monospace; font-weight:600; }
+  .opt .spacer { flex:1; }
+
+  /* per-100C compare */
+  .panel { background:linear-gradient(180deg,var(--panel),var(--ground-2)); border:1px solid var(--line);
+    border-radius:var(--r); padding:22px; margin-top:20px; }
+  .panel-h { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 16px; } .panel-h b{ color:var(--blue); font-weight:600; }
+  table.cmp { width:100%; border-collapse:collapse; font-size:14px; }
+  table.cmp th, table.cmp td { padding:11px 12px; text-align:right; border-bottom:1px solid var(--line); }
+  table.cmp th:first-child, table.cmp td:first-child { text-align:left; color:var(--muted); }
+  table.cmp thead th { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--muted); font-weight:600; }
+  table.cmp tbody td { font-family:'IBM Plex Mono',monospace; font-weight:600; }
+  table.cmp .diff { color:var(--green); }
+  table.cmp .diff.bad { color:var(--red); }
+  .table-scroll { overflow-x:auto; }
+
+  .note { margin-top:22px; background:rgba(61,169,252,.06); border:1px solid rgba(61,169,252,.28);
+    border-radius:12px; padding:16px 18px; font-size:13px; color:#BBD6F5; }
+  .note b { color:#E2F0FF; } .note ul { margin:8px 0 0; padding-left:20px; } .note li { margin:4px 0; }
+  .verified { display:inline-flex; align-items:center; gap:6px; color:var(--green);
+    font-family:'IBM Plex Mono',monospace; font-size:12px; margin-top:6px; }
+
+  /* ---- guild credit ---- */
+  .credit { margin-top:34px; display:flex; align-items:center; justify-content:center; gap:18px;
+    padding:22px; border:1px solid var(--line); border-radius:var(--r);
+    background:
+      radial-gradient(420px 180px at 50% -40%, rgba(242,193,78,.10), transparent 60%),
+      linear-gradient(180deg, var(--panel), var(--ground-2)); }
+  /* Donquixote jolly roger logo */
+  .jolly { width:64px; height:64px; flex:none; border-radius:50%; object-fit:cover;
+    border:2px solid var(--gold); box-shadow:0 0 20px rgba(242,193,78,.4); }
+  .credit-text { text-align:left; }
+  .credit-text .by { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--muted); }
+  .credit-text .guild { font-family:'Kanit',sans-serif; font-weight:800; font-size:26px; letter-spacing:.02em;
+    background:linear-gradient(180deg,#FBE6A6,var(--gold) 55%,var(--gold-dim));
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+  .footer { margin-top:18px; text-align:center; font-size:12px; color:var(--muted);
+    font-family:'IBM Plex Mono',monospace; letter-spacing:.05em; }
+  .footer a { color:var(--gold); text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topline">
+    <span class="dot"></span><span>DONQUIXOTE GUILD</span>
+    <span class="sep"></span><span>SEAL VALUE ANALYZER</span>
+  </div>
+
+  <h1>ซื้อแพ็ค <span class="g">3,600 ×4</span> หรือ <span class="g">3,800 ×4</span> คุ้มกว่า?</h1>
+  <p class="subtitle">ซื้อแพ็ค 3,600 ครบ 4 ครั้งได้เหรียญซีลแบบพิเศษ 4 อัน เอาไปแลกแพ็ค 3,800 ฟรี 1 แพ็ค — เทียบกับการกดแพ็ค 3,800 ตรง ๆ 4 แพ็ค ตั๋วทั้ง 2 แบบแลกกันได้ 1:1 จึงนับรวมเป็นกองเดียว</p>
+
+  <!-- HERO winner -->
+  <div class="winner">
+    <div class="lead">
+      <span class="winner-tag">● ตัวเลือกที่คุ้มกว่า</span>
+      <h2 id="winTitle">Option 1 · ซื้อ 3,600 ×4 แล้วแลกแพ็คฟรี</h2>
+      <p class="why" id="winWhy">จ่ายน้อยกว่า แถมได้ตั๋ว + การ์ดเปิดผนึกมากกว่า</p>
+    </div>
+    <div class="save">
+      <div class="big" id="saveAmt">800</div>
+      <div class="lbl" id="saveLbl">VG ที่ประหยัดได้ · ได้ของมากกว่าด้วย</div>
+    </div>
+  </div>
+
+  <!-- TWO OPTIONS -->
+  <div class="opts">
+    <div class="opt best" id="opt1">
+      <span class="badge win" id="badge1">★ คุ้มสุด</span>
+      <h3>Option 1 — สะสมเหรียญ</h3>
+      <p class="desc">ซื้อแพ็ค 3,600 จำนวน <b id="o1packsLbl">4</b> แพ็ค → ได้เหรียญ <b id="o1coinsLbl">4</b> อัน → แลกแพ็ค 3,800 ฟรี 1 แพ็ค</p>
+      <div class="cost"><span id="o1cost">14,400</span><span class="u">VG</span></div>
+      <div class="cost-lbl">ยอดเงินที่ต้องจ่าย</div>
+      <div class="spacer"></div>
+      <div class="stats">
+        <div class="stat"><span class="k">ตั๋วแลกซีลรวม</span><span class="v" id="o1tk">13,000</span></div>
+        <div class="stat"><span class="k">การ์ดเปิดผนึก</span><span class="v" id="o1op">1,050</span></div>
+        <div class="stat"><span class="k">ตั๋วต่อ 100 VG</span><span class="v" id="o1rate">90.28</span></div>
+      </div>
+    </div>
+
+    <div class="opt" id="opt2">
+      <span class="badge" id="badge2">Option 2</span>
+      <h3>Option 2 — กดตรง ๆ</h3>
+      <p class="desc">ซื้อแพ็ค 3,800 จำนวน <b id="o2packsLbl">4</b> แพ็ค ตรง ๆ ไม่ได้รับเหรียญแถม</p>
+      <div class="cost"><span id="o2cost">15,200</span><span class="u">VG</span></div>
+      <div class="cost-lbl">ยอดเงินที่ต้องจ่าย</div>
+      <div class="spacer"></div>
+      <div class="stats">
+        <div class="stat"><span class="k">ตั๋วแลกซีลรวม</span><span class="v" id="o2tk">12,000</span></div>
+        <div class="stat"><span class="k">การ์ดเปิดผนึก</span><span class="v" id="o2op">1,000</span></div>
+        <div class="stat"><span class="k">ตั๋วต่อ 100 VG</span><span class="v" id="o2rate">78.95</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARE TABLE -->
+  <div class="panel">
+    <p class="panel-h">▸ <b>ตารางเปรียบเทียบ</b> · Option 1 vs Option 2</p>
+    <div class="table-scroll">
+      <table class="cmp">
+        <thead>
+          <tr><th>รายการ</th><th>Option 1<br>(3,600 ×4 + ฟรี)</th><th>Option 2<br>(3,800 ×4)</th><th>ต่าง</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🪙 เงินที่จ่าย</td><td id="t_c1">14,400</td><td id="t_c2">15,200</td><td class="diff" id="t_cd">−800</td></tr>
+          <tr><td>🎫 ตั๋วแลกซีลรวม</td><td id="t_t1">13,000</td><td id="t_t2">12,000</td><td class="diff" id="t_td">+1,000</td></tr>
+          <tr><td>🔓 การ์ดเปิดผนึก</td><td id="t_o1">1,050</td><td id="t_o2">1,000</td><td class="diff" id="t_od">+50</td></tr>
+          <tr><td>📊 ตั๋วต่อ 100 VG</td><td id="t_r1">90.28</td><td id="t_r2">78.95</td><td class="diff" id="t_rd">+11.33</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="verified">✔ ตัวเลขผ่านการตรวจสอบ (fact-checked)</div>
+  </div>
+
+  <div class="note">
+    <b>หมายเหตุ &amp; ข้อควรระวัง</b>
+    <ul>
+      <li>คำนวณบนสมมติฐานว่า <b>ตั๋วแลกซีลการ์ด</b> และ <b>ตั๋วแลกซีลแบบพิเศษ [กิจกรรม]</b> แลกกันได้ 1:1 จึงนับรวมกอง — ถ้าจริง ๆ ใช้แทนกันไม่ได้ ให้ดูตั๋วแยกประเภท</li>
+      <li>เหรียญซีลแบบพิเศษ 1 อัน ≈ มูลค่า <b>950 VG</b> (3,800 ÷ 4)</li>
+      <li>ตั๋ว [กิจกรรม] อาจมีวันหมดอายุ — เช็คในตู้แลก/NPC ก่อนสะสม</li>
+      <li>ถ้าไม่ได้ต้องใช้ตั๋วซีลทั้งหมด การซื้อเยอะเพื่อความคุ้ม "ต่อหน่วย" อาจไม่คุ้มจริงในทางปฏิบัติ</li>
+    </ul>
+    การวิเคราะห์นี้เป็นเพียงการรวบรวมข้อมูลเพื่อการศึกษาเท่านั้น
+  </div>
+
+  <div class="credit">
+    <img class="jolly" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCACgAKADASIAAhEBAxEB/8QAHQAAAgIDAQEBAAAAAAAAAAAABwgFBgADBAECCf/EAEIQAAEDAgQEBAQEAwUGBwAAAAECAwQFEQAGEiEHEzFBCCJRYRQycYEVQpGhI1KxJDNiY4IWQ3KywdEXNERTc7Ph/8QAGwEAAQUBAQAAAAAAAAAAAAAABAABAgMFBgf/xAAzEQABAwIEAwUHBQEBAAAAAAABAAIDBBEFEiExQVFhBhMicYEUMpGhsdHwFULB4fGCov/aAAwDAQACEQMRAD8AVTGYzGYSSzGY+kIU4rSlJUfQC5x6ppSLagRcXF+49cJJfGMx6BfE1mTKdQyo5FYqgbZlPsh4xgq7jKSfLrFrDULKFibgjDEgGxSUJjoRAlLiLmJjvGM2oIW8EHlpUegKugJ9MfCGHHAooQpQSNRt2Hri1MVDO2WKE9R9VUplNlFMxUdxkoS/YDzjUncW0k722BxFxIta3qnCrDECVJALDDj1yU/w0lRuBfoPa5x20PLVTzDW4tEp8VS58twNNNLIQSoi+5NrbeuLrkmVmKp1lctMlIcZhOymG0vNoDikJBCSB5jcA+577EgkvJ2Tf9rqAt/MSKoioRHUx2JLiuXNhNpBXZKgLkkrTYdgCNr2wJV1radpc78v0U44i82CXR+myY05cF1ATIQstqTqGygbEX6Y5im2Dg5wLfm1unU9xUhpp9x5Cpk15CS8Bp06G03IUBdVj82ntfbRmHhLEYlyYE6pJXVBPaaTNU82005HsrWtxKjdDltAt0uUb+bCbiMDiGh1za/psk6Jw3CC2PMFqTwT/FKDRJGW5nxVVnh5bsN1QsEJWUhSVISU7Wsq6gLjbHCrw85/QhanKXGbUnUSlc1kEgdx5t74f9Rpho54B5E2OmnFN3buSGeMxMZly+/l2pvwpDL7C0LIS28BqKOytSbpUD6pJG2IfBgIIuFBZjMZjMOksxmMxmEksxmMx6N8JJboUx+BKalRX3GH2lBbbrailSFDoQR0OC67xVytmOnrFdya1VqtLQIwLbxa5WlAShSNilJ2ubW7bYEDkdxlxKHUlBICt/Qi4P6HEvlyHSl1NX42mcqA1bWqKACLqABUSCUpsT0BPTA89OyWxcDcciQflZSaSNl2Gi06fS1v01ioGU0GGw15XOa4pJ1nSm5HmBAHoRffYmThTwIjV6irn53jVYKKeXEivqLPLQRuoblWxuADYd7YrLlRapTsSVlWdPy3S3ZTbTkOPKSt5A1hOt226QoeYFVwdNxhhKnm+Dkeg/H5vqMRh6+nmsjeYodFNt3JuRbbt6gY5zH8QqmRtiph4nn/AK0/NdSiII23JdwUHlzgXlPLNfFeb+Nly0K1tpfcTy0KIIPkAsevQ9MXCs1emU2MtdcmQ6dGsRqluoSFJ6HZXX6YW7PPibrtXW5FywyKNE3AkKsuSset/lR9rn3wH59Sn1mWqTPlyJklw7uPuFxaj9TvgCDs7XVjhNXy2PDiR/A+asNQxmjAmDr2duGcN5KGK+paWnnnCzSqeUtvIcFuWskAKAHoQPbHqPETlSG7ZlqvvN8xS1BbLPmBAASDquAm23f1vgKUnhtnCupDkDL1ReQei1NFCT91WGLCz4fs/upuqlMNey5bQP8AXG4+ioWtDJ5L25kf0oNll3a35ItRvEfkqQpPNZq0ffquOlWn32UcdGX5vCDMqJ8VVcjqTU1J58aY8tpb5FjdS3Be9wDYKt5U4CszgVn+GCfwMvgd2JDa/wBtV8Var5YrmXzpq1JnQR2MhlSEn6EixxW3CqR4IppS0nk4FO+eT97fknsoVJpNDgIh0WNGjRLakpY3Sq5ve+97k9bnEfmDLFNlvs1oUGJVKtAbUmKl9em9zci5uPW2oG1z0vhMMsZ+zLkx4O0Sryoib3LIVqaX9UG6T+mD7w+8TlNqq2oObozdNkqsBNZuY6z/AI07lH1Fx9MczXdnK6leZ4Xd5z3ued+fobqxlQxwsRZUHxC5wnVio0+g1SjRKdNpgLjgYcLgAcSkpQFWF7DckbXO3TcO4a7NHh+pmbadKqTWYH5dbmuqloqLtnEugp8rQANg30sRci3pthfkcOMwLnRIy6TMDklzl8tplSlNnYHV6WuCb9PbHW4NXUj6fu4SBk3Go147623QsrHZrniqnbHmGCT4UKgmnx1nMMITibPtLZUWUg33StJuSBbqLE97YD2dsmTcjVxyjVF+I7JbAUr4dZUEg9L3AsSN7YMpMUpKtxZA8OIUXROaLuCr2Mx1zIC4bcZajdMhoOpNu1yLfqk45MHqtZj0Ak4+0AKBFgCN7k4LHBOh02sZofD0Z1yiqWAhqU1q5jqAVoBcAACgd9I63FxbFU8oijMh2Ckxpc4NCH9By+5XHHVcxpllhIU5dYC1f8CTutXew7A4NvAbLFFzZlCazX6cxJLJ5UckELSys6irUk3/ALwd/Tba+CZQ+H+WsvhxMCksjmP/ABA5t3ShenTdJVe2xI29TjRnbMtE4XZXlVZuNERLcQmJFjNNJQXyLlKTYXCE3Kj6fU45Wtxk1bfZ6YEOcRY7I5tL3fjeVG58z/lXhBRosWm0qI/V/hkR4rBSCpLTYshTq/m0je3cm9u5wrmZs01jONWcqdYmOS5LmwKtkoT2SlPRKR6DGir1ao5nrD9QnPOSpsty6lWuVE7AAenQAD2GGG4R8FmcuMsVzMTCHqsqy2YyxqTE9CR0Ln7J+u+D44afCIe9kOZ548SeQ5BU2dO7K3QKl8OfDlWs0ttVHMDi6NTlgLS2U3kvJ9Qk/ID6q39sMLlbhhlLJzQTSKMw2/psZbo5r599aun2tiypdSgISoqU4QLi1z9Tjbjg8Sx2rq3Wc7K3kNB680XHA1nmouZGTHKSXFLUo/m641JBUdKQSfQYlVIStZ1I2HQ+uNcdhDSypIIvci/bfATauzLHUokOUc7EcSQQApV7Wx2MsF1j4SUyh1i1yhaQpKgexB2+2OhVmW1HzHv/ADHHPVqvDoNIlVWoPciHEZLzqj1AHb6nYAepGIGaSUhrRrw81FzrjVLv4kcrZHy1GhqplNRBrs1ZXy4qtDXJHVam+gudha3Q+mAIlCyCpINh1IHTE/nnN03PmaZtbmXCn12aavcMtDZKB9B+pue+GU4T8M6flzIK4lapzMmbWQHJzbyQQlFvK16jTe5/xE+mPTm1BwqijFQS9/n8fQLLDDM85dkD+FfGKqcPJrcd8LqFFUu7kRSt2r9VtE/Kfbof3w3FEzPS8xU+LUaXLTJiy0akOI/dKh1BB2IPQ4U/i9wjfyNJ/EqaHJFDfXZKjuqKo9ELPceiu/Q79ebg5xRf4e15CJS1OUaUsCU1a/KPTmpH8w7+o29MA4tg8GJRe103v2+PQ9VZFIYnZHpzNY1FJ26d8UmrZAynCrVTzrmJJnnk2WZ6ec1Fb76EWNhY2AsbXPrizuVBLsJl9h1p5LwC0LRukpIuCPqCD98a5UCNmajy6bUWy5HktlhwDa6VenuOuOCpnS05zXLQdHW3tfVHPZmbdJBmqZRXM01V6iw1IpS33fg2nCpPLQT5TbqLdQD9DiBOL3njK8HL+bKlDlSY/JiPJ0x4huS1c3QXCAC4lOm5sbk/W1Urb8SZMclU+npp8NRCW2A6pzTYAG6lbknqe1ztj2WFzSxpbqLDVYzt9VOZay2/JpDdfNIdlU+HPSzMe1JUjlqCfKG7glQuTe9twMXXh6KLC4nQ15ddqsui/GaGA+zfQpTZGtXYEebewVYdRiqN5kpVIoZpVCdqLZlBSKlIfKOVMSDqQkMHVpsRbVfe5v6YYzhWaBmjKlOdgNhLsVSn3dKdHKkqP8RSdICbE32G1iBYdMZOK1Zp4XPe05TceQPE+uyIgaHOFjsrsy0XFabhItcqPRI9cKBxezyvO+bX3WHCqnQyY8RIOxSDuv6qO/0t6YYTjfmR7KeQpqkq5cqd/YmCDYjVfUoW9EhX64VvKWXpGa8yU+jR765byWyQL6E9VK+yQT9sZvZyna1jqt+2w8huURWyEkRhGLw8cNW3gM41RnUlCimntrGxUNlPfY7J97nsMGbM2bsu5OhiXmCoCKhX90hI1uOn0Skbn+nvj7qjkLIOUHZq2g1TaVD8jSdjZIshA9ybD74TTNmaqnnCtSKrVHy486bBIPlaT2Qkdkj/APcDU9OcZndO91mDQW+g/lO54p2Brd0fJvivpcd4t0/LEqQyDst2Sloq97AKt+uJ3LHibylW5CY1Vjy6ItZAS68Q6zf3UndP1IthTb4wHfGpL2Xw97coaQedzf56fJCipkve6/Q9h9qSyh9h1DrTiQpDiFBSVA9CCNiPfHt/Pb2wr/hw4myKXW2soVF9S6dPUREK1f8Al3+oSPRK+lvWx7nDQ488xbDH4fP3TjcHUHmEdFIJG3WYW7xN8RviZTeSqc7/AAo5S9UFJPzOdUt/6Qbn3I9MGXidnuPw9ylKqyyhUtX8GG0r/ePEbbeg+Y+w98JBNmP1CW9LlOrefeWpxxxZuVqJuSfqcdD2SwrvHmskGjfd8+fp9fJUVUthkCm8i1ej0HMsSqVyFInRop5qWGSnzuD5dWrawO/2GGGoPiFybV30sy1TaUtZsFymwW7+6kk2+pGFYxgNsdpW4bDVm8l7jqh4qh8WjU9MuNT8wUpyO+lmbAmNaVAEKQ6g9wR+xGFB4kZHkZBzM9TVlTkZX8WI+R/eNE7X9x0PuPfFt4GcS5GXK0xl+e+pdInuctAWdozqj5VJ9Ek7EdN79sFbjtlBOZclPTWmgZ1JvJbNty3/ALxP6C/1TjCpQ/DKsQPN2P2P58Ci5LVEecbhQ3hpzuavCdyrOcUuRARzYl7HWxcakb/yki3sfbBH4rVOp0XI9SeoTzjUiMhC3uSgc0sKUQrlk7JUBc3sSAOnfCi5BzQ7kvOFLrbZOmK+C6B+do7LT90k4c3MM1lCqYEuUUxJspAeTUV2DzQGoKaubKX8pAsevtjNxyj9nxGOcNu12tuFxv8AEfNQhkLoy08EmObahWKk+zIqkl97mNpcbS+4krAKepA7n1O5Fr4rxBHXDGcY4mS6YV5op86m1CpyJjcWbGaUhxDjZ8yrJF7KskXPcHtfC/1UKVLddDHJbWtWgBNk2Cj0tsbdNsdlQ1TamESNaW9CLIJ7cpsrtQMsUuC/CdzW1VKPQ6vTC63P5XMUVpI3QE3GhSgB5h0PuDg48IcrvZQzNVors2E6zV4rVTjGnI0xlIBIOgkk7aunTAGdznDmVKgUlBqDuVqdJZeEGcUvqBOkPAaQCUqsqyb9D74aKgPUKrZvcqGXprgjx6aiG8yiOpDGkOEtpRqSPMmygQOmw9cc/wBoJpWwlrwbOab6aCxFvIn1CIpwM1wg34qa4ZFXolHbcTy2I65JSnpdatKf2Sf1xp8K9AVLzLVK5oQr4GOllBX2U6Tcj30pP64rviOeSvilOZT8rEeO3b0/hhR/dWCl4UkRRlCrqS6hUtU8cxsKGpKA2nSSOwJKrH64jVO9mwEZOLR/6Ov1Tt8U6kvEtUHUcMywhQVzaiy09ovYABagD90j9MKWeuHe4tZSczpkKq0qK3qmBKZMdI/M6g6gn6kah98JG62ptakqSUqSbEEWIPpizsjMx9GWN3BN/VNVg57r4xmMxmOqQqkKBKdg1uBKYJDrMlpxBHqFgjD81CW5HFwgI1EkqPRO/wD2wlvCDKb+as7wG0tqMWGtMyUsDZLaCDb7qsPvg8eIbiIvLOVkZejvXqtXQS4tJ3ZYv5j9VfKPbVjje0VN7ZWQUzNTrfoDb7I2mdkYXnZBjjjxFOfc2rTEdKqRTtTEQDo5v53f9RG3sBgb4smSMk1LPdXVTacEpUhlby3FjyoAGwP1Nkj6+2ICTHdivuMPNqbdbUULQoWKVA2IP3x1VNFFAwU8X7QNPzmhXZj4jxWrGYzGYIUF9tOKbWFoUUqTuCOxGHqpCDWaVEW+klEuM2Xgr0WgFV/1OEvyTleVnLM9PokRBK5TwStQGzbY3Wo+wTc4eZUaPBjJSjUltICEgdQALD6bDHG9rKlrO6jafFqUfQ31SKZsoist5nqlIXf+xynGRfukKIB+4thi8n5Na4mZMyvXH3n1PMxBAWoKSEs8pSkKUQblZUmwAFreu+BJ4g4bcTinVVNCyJCGHx/qaTf+mCt4ds3wqJw5e/FXFMRGaitsP6SpKFL5elJt0uVbbYOxWad9BHU0/v6H4jVUxNHeFrtlDcXuH9SzLXFP0nLc+nUemJMRIixNQeSAtxbyUAi11aUiwurqTtgFRZfLcbbnfEOxWwpPJSoCwJuQnUCEXI3IF8NJmbjlU6XLqi6NltmZAppCXZMqQWi2b21Edwr8qR5tr98L5meS1KjVCfL5Meo1GaJSGGUpILZ5msq07J8xSUjqQb+5IwSSq7rJUMDQALa3PqoTBt7tKrEZbqtDKCAArWLAar/Xrf0Hrhn+EMWVluvSYL9Ydq7T0FuVGdJI0s61DStKrlKypRNgbeVV9xgS8OaHVs3/AIVQ6nFcXlwPFxDzLDILa1KIupzZekkKBF77bYaJlhthtCG0JQltISkAWsBgXtBWNEfsxHvA/wBIijizHNySr+IVJ/8AFWquFCkc1uOsA+nJT/2xXsry805QaZzjRPiI0dp8xTKR5myuwJbcHoQRsdj23GLt4lqeqPnWHOsdEuCjc91IUpJ/a2LV4W5USqUrMuWpzLMhhwtSVMugKS4ggoVcHqNk/rgk1Qp8KZKW5mhoBHTQFVOjvMW7K9cM+PFCzwhqBUlNUitGyeStVmpB/wAtR7/4Tv6XxEcWfD7GzdNdrWXXWoNVdOt+O4ClmQr+a4+RR77WPt1xVOJXhslRlvVXJIMmOTqVTVru4j/41H5h/hJv9cVbJ3HbOWQXhS6oldTiMHQqJP1JeZt2Ss+ZP0Nx7YwoKAF3tmCSWPFh+n++hVhk/ZMPVV+o8F8/018tO5WqLtiQFx0B5B+hSTiWyx4fc616ahqZBFGjnzLfmmxCfUIF1H9vrg95U4/5HzOENvzjRpatuTPGlN/ZweU/e2CLGdYksh+O82+yrcONKC0n6EbYqrO02I04LJYQ13PX5cE7KeN2oN1S8v5ZyxwcyZLcTdLEdsvzZbo/iSVAbfuQEpGwJ+pwomdc2Tc7Zlm1ycbOSV3S2Ds02NkoHsBYYLvia4jfH1BGTac7eNCUHJyknZb1vKj6JBufc+2Bpk3hVmrPkF+dQoKH2I7qWVrcdS2Coi9hq62Fr+lxjWwKn7iE19a7xv4ngOHx+yrndmORmwR84D5cp9IyIxUIbrcmTUiXZLyPylJsGvbT39yT6Y18UOAjOdkmu0B1mJWF3L7Tnlalehv+Vfv0Pe3XFz4Q5Bk8P8oM0qdIbfluOrkPhs3QlSrDSPUAJG/rfF1BQALWFxsBjlavG5Yq181M++u/Aj7IwMDogxwSM1fhbnWhvqZm5YqqSPzNx1OoP0Ui4OO3LvBnPOZH0Nx8vzIzajYvzUFhtHuSrc/YE4dd+SzAYU/JfbjMpFy464EJH3Nhgb5u8QmSstpW3FmKrcxPRqFugH3cPl/S+Nin7T19UMlPT3dz1t+eqGdTMbq5y6+E/CCBw0iOO8xM6ryUhL8vSQEp68tA7JuLk9T39MQ/FDj5R8nc6m0j4esVUApKArUxHV/jUPmI/lH3IwGs3ca868R5BpNNQ5AivnQmDTgouPD0UseZX0Fh7YuvC7w4BQZq+dLFF9TdMbV1P+aof8qfue2Ivw1kLjXYzJdx2aPp/Q06pxIT4IR6oFZjzDU801Z+rVeUuVMfN1uK22AsAANgANgB0wb+BS6azkblVRUFCJVZVyfjBdBUhtB2vsCNrE7A272wKOKdQjVPiFXXoTbbcVMpTDKG0hKUobshIAGwFk4JMbL8mNwNy9IS066iTLfkPRgbNr1LCW3FHtp03AsdV7WIG3T1uR8EcZ8OYgDppf8AhUREteTvZfHiEjxZjtJrUeVFUysct1hpeor8yrO3T5SNim977dx0DbskRJNoj5eaSQpJWiwv/wAJJ6dMFSsz2KBkuo0gR6dEgVdxDrEdSVLlNWslSgT5Q2Fo2WSNVzp74ocvL6F0FMqPBlMvxLmY684ClZUoctKEaQpO11XNwRvfBNCwxRCM7DQH8+CjMbuusyNVYtBrcSruOumVGktcphHlDgJIWSu/lsOnW5PoDhu6XXm59XkUMIQ9NZCXS4z/AHJaWCtGlRPmUEWuRsSduhwkcdh6S7y2WlursTpQkqNgLnYe2GD4HZmroV+FVicpdLQlv4eOfOtRCAAgK+YpSgX0J7+mM7HaLvou9G7R+f581bTTFhspHxI5eNRylErDaLuUx+yyB0bc2P6KCf1wBMm5zq+Ra03VqNIDT6QULQpOpDqD1QsdwbD+ow5VRozOZqDJhPsu/BzmFIUHE6VBCk7G3qL3H0wleY6FMyxXJtIntlEmI6W13Fr26KHsRYj64o7P1DJ6d1LJrbh0P9qdY2zhI3im84bcacv8QWWompNOrJACoDqtnD6tK/OPb5h6d8B2vU1ni54hpFLdKzTmXFR3VskJVymEWUQbdSoEX98c8TL+WuIvDqfmluWKPmegMa5waTZuUEjyOaRbSpVgNSfzdRvis8LM9y+HFYdzG5RV1GLJSYbj6ipOkkhSglyxGvYXB64opcLjp3VEtDcPsWhp4E66HiNiFB0hcGh+yvma/CvVIxW9lirMTmuojTP4To9goeU/e2BXOZzjwxrBgvP1KhzkpDmhl8o1JPRQ0mxBsf0w1uVeOGSM1JQhuropspXWNUbMqB9lHyq+xwsHGDNsfOvECp1SEoqh6kx46j+ZDadIV9yCfvh8DrMRnldT1zNANyLH7FNM2MDMwqnyJD0uQ5IfdU664orWtarlaibkk9yTgjZT4+ZoyZQotFpkOjCJHvp5kZWtZJuVKIULk+uCV4euElPXQHcyZjpkaYainRDYlNBaUMg7uWPdRG3sPfFb8TWWKFluZl8USkQqaZDb5d+Gb0BwgotcD0uf1wVJidFWVf6a9ma3wuBf+kwjexveAqPe8UWfF3CGKKyCPyxCbfqo4hKlx+4iVFCm/wDaBUZB2KYrLbR/UC/74Y6PwmyczDZKMo0nUhts61M6ys6Rc7k98UzjplGmwOG0l2BR4UFUZ9l8FiOhB06tJ3Av+bGdR1+FyTNiigAJNtgrnQS5S4uQRiZc4gcRFJkCPWashW4kSnFFv6hazp/TFkrfh+reXMkzsyVKoxOfEQl34FgFxWgqAUVL2Ate+18F7glV23+FlLelOoSiGp2MpTirJTpWSBc7DZQx8cReM+Ro2WahRWp34rImRnI6o8NOtCNSSN3D5RY+hOLpcVrTVCnp4/CHWNhfS/wGiXcRiPM46lffhqjUh7h+3LhwIzVSRIdjS5CEDmukEKTdR3tpUNum2Pvihx6omTGH6ZRHG6nWtKkDlKuzFUdrqUOpH8o9NyMAThsxnTMiJuUcsVRUOHJAlTRzeWnSmydRI8xG4GlPXviO4g0ahZaqTdDpEh2dIhJKJ01Rsl149UISNglPTuSSfTCOAQS4g+WofmubhvIdTyvsFDv3CMZRbqq9DiyKvUWIsdKnZMp1LaB1KlqNh+5w6GaYVHy5wwfo0qQI0eBT+Q26I5eLa0IAC9Njfzb7+uAL4bsn/ima1ZikslUSkDU1cbLkKHkH+kXV9dODbxNy4vNOXnAAp1+Nd1pkvlplxW395Yi6QLn1FtsQxudstbDATZrSCT14fnVSgjIjc5LCc21VyY29Ilx35vOv8c/GbdCBtp+dHS9je+wtYbY4szZmqtaqkyoTqi9UH5AS27L1EBdhZNrAACw2SR0OJipTqDGUlM1UmsQA2sxmmVpaLKyQeWVgWsm56Ag+2KrUJBjsqp0d55UQrS/ocTpOsptuO5AJF/r0vjq2tbe4CDK44r647wdQpSVDoUmx/XBsyTXoFBp6KwwXfxxpClNuSF+R2JoXqBSb3cCg4Eq72F7dCD0i56X9sWCkONtPBpgSnJBWjyM/IpOkhRINySLkW6dcRqIWysyO2SBsbpz8nVaPUaWxGS28y/BbbQ40+AVJ1ICknym1yk3sCbXscDTxGcMF5ipgzXSmFLqEBvTLbSLqeYH5/co3+qfpjl4Z55rFDNKyk3TE1TSXAgNFDY3UVqUHCdKdIN9JFyFdthg3NvrW6thxCUuIGpVlg2BvY26jp3H6481qWT4RX9/Htva+44/H82Wi0tljylfn6xNkxEPNMPutIfRy3UoUQHEXBsq3UXANvYYbjgLCo0rhNDgsqi1EOrcVPZUkLCXVKPlWlXokJtcbjpgYccODCaTIfzLlhkrp6yXJcNtO8U91pHdsne35fp0GWSc91rIFYTUqPI0KNkvMr3akIv8AKsdx79R2x2FdEMYoQaZ9jcH1HAoVt4X+MIleIjKOSMoPQ2qHDch1eWS65HZduw2zuNWk3sSroAQLA7YGWUMj13PU1+HQYXxTzDRecu4lCUpvb5lEC5J2HfHPm7NM/OeYJlcqSwZEpeopT8raRslCfYCwGD34aKV8NlOo1JSbKmTA2k+qW0j/AKrOLnPlw7DxndneLanXU/wEmME0thoFCsZt485SitR36JLkx2UJQ2F01DyUpSAAAW+1gMUHifnvNGdpVOOZqY3AehIWlpCYy2SoKIJJCyb9B0w4USYphxIUo6Olr9PfAE8VRU9mjK7RUT/Z19/V0DGJhOIRy1oYYGtcQTmGn5dX1EJY33tFzo4+cUZTSWoWU4xskJBbp0hZ2H/FjhzLWON+daFNj1GjTGKUppS5KBBQwkoT5zurzbWvse2GmSpaEhOtewA+Y41vsJlsOx1i6XkKaVf0UCD/AFxiM7QU8UgdFStBB334+Sn3DiNXFJ5wo4VVDiixMQmutwIEB1HMaUlTiiVgnUlFwnonqTg95U8P+ScrLakPRF1iWk3D09QKEn2bHl/W+Bn4aKmzlzNGaaZUJLMZpEbW448sISksu6SSTa2yjiV4q+I6KGnKRks853ouqqTZKD/kpPU/4jt6DvjbxT9Tqq11LTuIj0NxpoRxKpi7prMzt0O891Gdwy4sZjVQVtxFul1CdKQQ228gEgAfKRfb0sMUeg0SoZprUal09pT8uU5pSP6qUfQC5Jx8QYNTzPWG4sVmRUKhMdslKbrcdWdyST+pJ+pw1XCnhQ1w6g82WlEiuS0gPupFw0n/ANpB9PU9z7DG7WVseHQjMQZLAeduJ6KuKMyusNlZMlZTh5Ky5EokLzhkXcdtYvOH5ln6np6AAYHfGrOFdpUmlwaVIcREqAUhsR44dMhy+gtrCzYjcWSBv74n6xxBm5YzH8LXQ3BioDqwypglx9oqPLeQpJPlASdYtcbG2+w8ztxkpFWiTWDSZIS5HR8C8Gw2qy/nQSb6U9CFJAV1A2Nzh4dRTmpFRK3MDrfzRc0jMmRpsgtU1zJEx56WdT1xrItb0FrbW9LY4iSeuNyZIQw6zym1BwpIWQdSLX6b23vvjRjtFmL1Kik3GOr8QfUlKdWnSkICk7HT6Y5MejrhJK25eqMh6ZBZRKbYEdfMQ6ogFo2A1X7bD9bYJtKzhXqXzmKPMfRBcGtyQlAdkSBewKlEFWr9OybC9yJGZVBjxWFpTOkVDyqWtxLaWGyOwTZRWOxva9u2JmJU26s+eYqGtCGURkvSrI0+ayXFabElKdSr22sLk2AwNNAyUWe0EdQpAkbJmst5hZnQyHfxFgsO/DOCpMhtzmEgBJOwJvcbDvbtgfcSOAEStKdqmVuVCmKupyGrysun1QfyH2+X6Yj6PnzL+Wcqwp8aXVZNRhENLjyC4Y6AtZ/jbgXuk3TYgkbHocXrJfFek5o5zK+a0+1KLAUlsrQ4CCpKklN+wO3XbHKvgqqSQz0wNuP+cuq0w+ORoZJulUrNBqeXpy4NVgvwpKOrbyLE+47Ee42xZ8lcXczZHjJgwHmH4CVFfwshvUkEm5IIsoX+uGez7KyiYbMXMkRiREeUtDaFsF1V0p1KUCN02SL3BGA7XOEmRqw7zcuVioU0KCVH4hrmx29SygAqJCk+YW3vudr41afE46uIe0REA9LhCugdG7wO1+alKR4nqcvR+L5flMqBGpUR1Lif0VY/vim8ZuJtF4g5kolRpTcxuPCZCHRIbCVX5mo2AJvt749n+HHOUd0ohLplQH5eXI0KP2WB/XEU9wD4ks3vleQoD8yHmlD9lYaCDC45hNG8B2v7ufQppHzOGV4RxneKPI7CSqPFrUpXZIjoR+5XimV/xYVBwKRQMvx4p/K9MdLqh76U2H6k4o8Lw+8RpirHL/w4/mfktJH/ADYtVG8KuYZCx+L1qmwh1KI+p9y37J/fGa3D8Bpjmc4OPV1/kE+edyDFQqEiqVCVOklKn5Tq3nSlISCpRudhsNzi15D4TZm4gOhyBDLEAH+JPkgpZSO9j1WfZN/tg+0LgPlDK76Piae/VZCE8wyJ6gUJIIsA0kafXrfpi/pWlpjQghLTQsEI6JA7ADp9MEVXaNuTLSNv1O3w+9lZFQk6vKhOG/DrLPDiIUQQZNRdGl+oPostz2T/ACJ9h9ycS3EPM0nKeVZtXgNx33oyEuqDlyUNFQSpwJHzEXvYkD1OBpVuNsJb0tNELK2Y7Vi/LYd0B/UmyV6AdKCnUAr+b0tjMycbKFKhRn1RBMpclxEaVuu4SUJJKdPy6b7pUbq6e+MP9Gq5qltRUNLrnW/06K0yRNaWsNkIaxmiZmmr0+bVZjUDmvlSp/wym0uJWmxWQArYWUk22UO218QOcHocDMMyPTKg3VYqEchLxjlDYFrWbQsqKQnoDe+2xtjXmmuQ6pmZ2bGZUuCFgIYWA0goB2SlCLBtPokdLnck3xX1G6iRsMegRxhoFtBbbgswleHfHmMxmLUyzGYzGYSSzG6NIVHdS4LHSQbHobG9jjTjMJJTicz1iRFbpaKg63E5qHA2pfkC09FEnoASTboLmwwwGS6jS+FvDtqTU0M/jVW5s2HFSjS8+0lskLcO5SCEqN+2oAbk4WvmIZZAbJK1/wB5cbWvsP2vibZzVNq1bbnV2oyJRbiOxkLdJVoTylpQgDsLqH64CrKP2loYTZt7m3Hp91ZHJkOYbrvq3EKq5sryKnXJSFoBS18OEENIZKwVIAG9vWxur1xcKNxEq0MsOU2lQZsWnyXVvqTHSyXUWWWjcm4SE3ISeigNr9RC26ponTp3FjdIP9cd0GvzoD7TzbpPKVqbQonSg6tVwARbe/T1xc+mjLMmUWHBMJHA3umUoPEekZggVStRPi2J9NjqXJjhalIVZFw8lr5lIBvfYFOq5HcQGQ87vZi4jLkTwVymC+63DLoQhpITutbmrQQEm3RRAvYdMAFue62/zkKKDcm6etidxc/9cWBrM0JrLUiAiBHEt2WHlOKYSStsbpF7eWxuCkABQUP5bEA4TEGva39wt5BTM7nWvwTZUHjFlOv06bOjzrJhuKQttQ0rcASV6kJVYqGkH32PtgI1LinVczyqhKqcmmR0R2HWmKeA8lcppabq08voqwCgskW026XwPaLWmXUtU9iGGD/aZDznMuHVfDrSmybeUJuq1v5vYYgY1SdjSW3xe6UFtQBI1IKSki/a4JGKKDs/S0j3PYNTtfh5ead9Q5wsUX6rxSqsvK0CoOVZyHLjuRwy2yCtsJF9a0m4JcsEhSCVbE7+baMezzX1UuZClVJkOTWpct2GwLJjJ5I5YAt5DfzCx7+uKTLzBS3cqxqXHorbU9DhU7OU8pRULDZKPlTfubX2677ceX1EvzLn/wBDI/8ArONGOkiaNGAa8h+dVAyO5rZDr0gtS4LkuQzDkoWVMNvKQyp2wspSRcHcDa3piazAlLeTqa4a/EkqkOBaoTGpTiSlAQFOflBCRp23O1/UUs9cYSSLdsFFtzooXW2U+JMhbwZaZCzfQ0LJT9BjTjMe2xJMvMZj2xx5hJL/2Q==" alt="Donquixote Jolly Roger" />
+    <div class="credit-text">
+      <div class="by">จัดทำโดยกิลด์</div>
+      <div class="guild">DONQUIXOTE</div>
+    </div>
+  </div>
+
+  <p class="footer">ข้อมูลแพ็คจาก <a href="https://www.vplay.in.th/" target="_blank" rel="noopener">vplay.in.th</a> · รายละเอียดการอัพเดทแพทช์ 88</p>
+
+</div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt = n => Math.round(n).toLocaleString('en-US');
+  const fmt2 = n => n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+
+  // ===== ค่าฟิกตายตัว จาก vplay แพทช์ 88 =====
+  const N    = 4;      // จำนวนรอบ (แพ็คต่อ option)
+  const p36  = 3600;   // ราคาแพ็ค 3,600
+  const tk36 = 2500;   // ตั๋วต่อแพ็ค 3,600
+  const op36 = 200;    // การ์ดต่อแพ็ค 3,600
+  const need = 4;      // เหรียญที่ต้องแลกแพ็คฟรี
+  const p38  = 3800;   // ราคาแพ็ค 3,800
+  const tk38 = 3000;   // ตั๋วต่อแพ็ค 3,800
+  const op38 = 250;    // การ์ดต่อแพ็ค 3,800
+
+  function render(){
+
+    // Option 1: buy N packs of 3600 (1 coin each). Free 3800 packs = floor(coins / need)
+    const coins      = N;                      // 1 coin per 3600 pack
+    const freePacks  = Math.floor(coins / need);
+    const o1cost = N * p36;
+    const o1tk   = N * tk36 + freePacks * tk38;
+    const o1op   = N * op36 + freePacks * op38;
+    const o1rate = o1cost > 0 ? o1tk / o1cost * 100 : 0;
+
+    // Option 2: buy N packs of 3800 straight
+    const o2cost = N * p38;
+    const o2tk   = N * tk38;
+    const o2op   = N * op38;
+    const o2rate = o2cost > 0 ? o2tk / o2cost * 100 : 0;
+
+    // cards
+    $('o1cost').textContent = fmt(o1cost); $('o1tk').textContent = fmt(o1tk);
+    $('o1op').textContent = fmt(o1op);     $('o1rate').textContent = fmt2(o1rate);
+    $('o2cost').textContent = fmt(o2cost); $('o2tk').textContent = fmt(o2tk);
+    $('o2op').textContent = fmt(o2op);     $('o2rate').textContent = fmt2(o2rate);
+    $('o1packsLbl').textContent = N; $('o1coinsLbl').textContent = coins; $('o2packsLbl').textContent = N;
+
+    // table
+    $('t_c1').textContent = fmt(o1cost); $('t_c2').textContent = fmt(o2cost);
+    $('t_t1').textContent = fmt(o1tk);   $('t_t2').textContent = fmt(o2tk);
+    $('t_o1').textContent = fmt(o1op);   $('t_o2').textContent = fmt(o2op);
+    $('t_r1').textContent = fmt2(o1rate);$('t_r2').textContent = fmt2(o2rate);
+
+    const sign = v => (v > 0 ? '+' : v < 0 ? '−' : '') + fmt(Math.abs(v));
+    const setDiff = (el, v, goodWhenNeg) => {
+      el.textContent = sign(v);
+      const good = goodWhenNeg ? v < 0 : v > 0;
+      el.className = 'diff' + (v === 0 ? '' : good ? '' : ' bad');
+    };
+    setDiff($('t_cd'), o1cost - o2cost, true);   // cheaper = good
+    setDiff($('t_td'), o1tk - o2tk, false);      // more = good
+    setDiff($('t_od'), o1op - o2op, false);
+    const rd = o1rate - o2rate;
+    $('t_rd').textContent = (rd>0?'+':rd<0?'−':'') + fmt2(Math.abs(rd));
+    $('t_rd').className = 'diff' + (rd===0?'':rd>0?'':' bad');
+
+    // winner: by value efficiency (tickets per cost). Tie-break by lower cost.
+    const o1Better = (o1rate > o2rate) || (o1rate === o2rate && o1cost <= o2cost);
+
+    $('opt1').classList.toggle('best', o1Better);
+    $('opt2').classList.toggle('best', !o1Better);
+    $('badge1').className = 'badge' + (o1Better ? ' win' : '');
+    $('badge2').className = 'badge' + (!o1Better ? ' win' : '');
+    $('badge1').textContent = o1Better ? '★ คุ้มสุด' : 'Option 1';
+    $('badge2').textContent = !o1Better ? '★ คุ้มสุด' : 'Option 2';
+
+    const moneyDiff = Math.abs(o1cost - o2cost);
+    const tkDiff    = Math.abs(o1tk - o2tk);
+    if (o1Better) {
+      $('winTitle').textContent = 'Option 1 · ซื้อ 3,600 ×' + N + ' แล้วแลกแพ็คฟรี';
+      $('winWhy').textContent = 'จ่าย' + (o1cost<o2cost?'น้อยกว่า ':'') + 'แต่ได้ตั๋วมากกว่า +' + fmt(tkDiff) + ' ใบ';
+      $('saveAmt').textContent = fmt(o1cost < o2cost ? moneyDiff : tkDiff);
+      $('saveLbl').textContent = o1cost < o2cost
+        ? 'VG ที่ประหยัดได้ · ได้ของมากกว่าด้วย'
+        : 'ตั๋วที่ได้มากกว่า (ใบ)';
+    } else {
+      $('winTitle').textContent = 'Option 2 · กดแพ็ค 3,800 ×' + N + ' ตรง ๆ';
+      $('winWhy').textContent = 'คุ้มต่อหน่วยมากกว่าในเงื่อนไขนี้';
+      $('saveAmt').textContent = fmt2(o2rate - o1rate);
+      $('saveLbl').textContent = 'ตั๋วต่อ 100 VG ที่มากกว่า';
+    }
+  }
+
+  render();
+</script>
+</body>
+</html>
