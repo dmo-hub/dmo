@@ -9,14 +9,13 @@ re-run.
 Run: python builders/build_seal_tables.py
 """
 
-import html as H
 import io
 import json
 import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))   # for `import aliases`
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # for `import aliases`
 import aliases  # noqa: E402  central dub/JP name canonicaliser
 
 try:
@@ -27,7 +26,7 @@ except Exception:
 PROJ = Path(__file__).resolve().parent.parent
 HTML = PROJ / "docs" / "seals.html"
 DATA = PROJ / "data" / "seal_tables.json"
-SEAL_DATA_OUT = PROJ / "docs" / "seal_data.json"   # per-table data for calc.html
+SEAL_DATA_OUT = PROJ / "docs" / "seal_data.json"  # per-table data for calc.html
 
 CSS = """
   /* injected by build_seal_tables.py — seal exchange tables */
@@ -116,8 +115,7 @@ ST_RE = re.compile(r"\n?[ \t]*<!--ST:[^>]*?-->.*?<!--/ST-->[ \t]*\n?[ \t]*", re.
 
 _SRV_ORDER = {"na": 0, "kr": 1, "th": 2}
 _TH_EN_PATH = PROJ / "data" / "th_seal_en.json"
-TH_EN = (json.loads(_TH_EN_PATH.read_text(encoding="utf-8"))
-         if _TH_EN_PATH.exists() else {})
+TH_EN = json.loads(_TH_EN_PATH.read_text(encoding="utf-8")) if _TH_EN_PATH.exists() else {}
 
 
 def _norm_seal(s):
@@ -130,10 +128,13 @@ def _name_multiset(html, server):
     """Multiset of canonical English seal names. TH names are translated via
     TH_EN; an untranslated TH name is namespaced so it never matches by chance."""
     from collections import Counter
+
     ms = Counter()
     for tr in re.findall(r"<tr>(.*?)</tr>", html, re.S)[1:]:
-        cells = [re.sub(r"<[^>]+>", "", x).strip()
-                 for x in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
+        cells = [
+            re.sub(r"<[^>]+>", "", x).strip()
+            for x in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)
+        ]
         if not cells or not cells[0]:
             continue
         raw = re.sub(r"\[[^\]]*\]", "", cells[0]).strip()
@@ -152,21 +153,24 @@ def compute_matches(data):
     """Map each post-key to the keys on OTHER servers whose exchange list has
     the SAME seals (English-name multiset, order-independent; TH via TH_EN)."""
     from collections import defaultdict
-    seqs = defaultdict(list)              # name-multiset -> [(key, table_index)]
+
+    seqs = defaultdict(list)  # name-multiset -> [(key, table_index)]
     for key, v in data.items():
         srv = key.split("-")[0]
         for ti, t in enumerate(v.get("tables", [])):
             ms = _name_multiset(t["html"], srv)
             if ms:
                 seqs[frozenset(ms.items())].append((key, ti))
-    res = defaultdict(dict)               # key -> {table_index: [twin keys]}
+    res = defaultdict(dict)  # key -> {table_index: [twin keys]}
     for members in seqs.values():
         for key, ti in members:
             srv = key.split("-")[0]
             # cross-server only — a list recurring in another post on the SAME
             # server is not a server comparison, so skip same-server twins.
-            twins = sorted({o for o, _ in members if o.split("-")[0] != srv},
-                           key=lambda x: (_SRV_ORDER.get(x.split("-")[0], 9), x))
+            twins = sorted(
+                {o for o, _ in members if o.split("-")[0] != srv},
+                key=lambda x: (_SRV_ORDER.get(x.split("-")[0], 9), x),
+            )
             if twins:
                 res[key][ti] = twins
     return res
@@ -189,9 +193,22 @@ def _twin_link(k, dates):
 # Older NA/KR posts and all TH posts describe event-period NPCs with no such
 # wording, so they get no badge.
 STANDING_KEYS = {
-    "na-4100", "na-810", "na-4110", "na-4114", "na-4118", "na-4121", "na-4129",
-    "kr-812989", "kr-813439", "kr-813810", "kr-814064", "kr-814269",
-    "kr-814493", "kr-814605", "kr-814707", "kr-814935",
+    "na-4100",
+    "na-810",
+    "na-4110",
+    "na-4114",
+    "na-4118",
+    "na-4121",
+    "na-4129",
+    "kr-812989",
+    "kr-813439",
+    "kr-813810",
+    "kr-814064",
+    "kr-814269",
+    "kr-814493",
+    "kr-814605",
+    "kr-814707",
+    "kr-814935",
 }
 
 
@@ -207,8 +224,7 @@ def standing_note_full(key):
     if key not in STANDING_KEYS:
         return ""
     npc = "Takato" if key.startswith("na") else "โอยูมิน (오유민)"
-    return (f'ซีลที่แลกกับ {npc} ไม่หายไป — '
-            f'ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)')
+    return f"ซีลที่แลกกับ {npc} ไม่หายไป — ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)"
 
 
 # text-presentation infinity (U+267E U+FE0E) so CSS can colour it per server —
@@ -217,8 +233,10 @@ INF_GLYPH = "♾︎"
 
 
 def _inf_mark(srv):
-    return (f' <span class="inf s-{srv}" title="ไม่หายไป — ลิสต์เก่ายังแลกได้ต่อ '
-            f'(สะสมเพิ่มทุกแพท)">{INF_GLYPH}</span>')
+    return (
+        f' <span class="inf s-{srv}" title="ไม่หายไป — ลิสต์เก่ายังแลกได้ต่อ '
+        f'(สะสมเพิ่มทุกแพท)">{INF_GLYPH}</span>'
+    )
 
 
 def _seal_key(raw, srv):
@@ -246,6 +264,7 @@ def _recurrence_index(data, dates):
     matched to a KR/NA twin, whether each of its seals shows up AGAIN in a later
     NA/KR patch (the card_key lets callers exclude the matched twins themselves)."""
     from collections import defaultdict
+
     idx = defaultdict(list)
     for key, v in data.items():
         srv = key.split("-")[0]
@@ -273,8 +292,11 @@ def _recur_after(seal_key, after_iso, rec_index, exclude=()):
     twins themselves, which would otherwise count as a "recurrence")."""
     if not seal_key:
         return []
-    return [(srv, d) for (iso, srv, d, ck) in rec_index.get(seal_key, [])
-            if iso > after_iso and ck not in exclude]
+    return [
+        (srv, d)
+        for (iso, srv, d, ck) in rec_index.get(seal_key, [])
+        if iso > after_iso and ck not in exclude
+    ]
 
 
 def _mark_recurrence(html, srv, twin_iso, rec_index, twins=()):
@@ -284,23 +306,30 @@ def _mark_recurrence(html, srv, twin_iso, rec_index, twins=()):
     NOT counted (a cross-list match isn't a recurrence). The header row (its
     first cell is a <th>) gets the two <th>; every data row (<tr><td>…) gets
     the two <td> (dates for that server, or "—"). Inject-time only."""
+
     def cell_for(name, want_srv):
-        later = [d for s, d in _recur_after(_seal_key(name, srv), twin_iso,
-                                            rec_index, twins) if s == want_srv]
+        later = [
+            d
+            for s, d in _recur_after(_seal_key(name, srv), twin_iso, rec_index, twins)
+            if s == want_srv
+        ]
         if not later:
             return '<td class="recur-cell">—</td>'
         chips = " · ".join(later)
-        return (f'<td class="recur-cell"><span class="seal-recur" '
-                f'title="ซีลนี้ยังมาแลกซ้ำใน {want_srv} {len(later)} แพท '
-                f'หลังจากแพทที่แมทกัน">{chips}</span></td>')
+        return (
+            f'<td class="recur-cell"><span class="seal-recur" '
+            f'title="ซีลนี้ยังมาแลกซ้ำใน {want_srv} {len(later)} แพท '
+            f'หลังจากแพทที่แมทกัน">{chips}</span></td>'
+        )
 
     def add_cell(m):
         row = m.group(1)
-        if "<th>" in row:                       # header row -> two column titles
+        if "<th>" in row:  # header row -> two column titles
             return row + "<th>มาซ้ำ KR</th><th>มาซ้ำ NA</th></tr>"
         name = re.sub(r"<[^>]+>", "", row.split("</td>", 1)[0]).strip()
         name = re.sub(r"^<tr><td>", "", name)
         return row + cell_for(name, "KR") + cell_for(name, "NA") + "</tr>"
+
     return re.sub(r"(<tr>.*?)</tr>", add_cell, html, flags=re.S)
 
 
@@ -329,12 +358,14 @@ def _mark_standing(html, srv, standing):
     standing set (TH names are translated to English first). Header rows use
     <th> so the <tr><td> pattern only touches data rows. Applied at inject
     time only — data/seal_tables.json stays clean for matching/calc."""
+
     def mark(m):
         name = re.sub(r"<[^>]+>", "", m.group(2)).strip()
         k = _seal_key(name, srv)
         if k and k in standing:
             return m.group(1) + m.group(2) + _inf_mark(srv) + m.group(3)
         return m.group(0)
+
     return re.sub(r"(<tr><td>)(.*?)(</td>)", mark, html)
 
 
@@ -342,26 +373,30 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index):
     """The injected body for a SINGLE table: standing badge + match link +
     star + the collapsible table. `total` is how many tables the post has, so
     the card can show "ตารางที่ 1/2" when split across cards."""
+
     def note(tw):
         links = " ".join(_twin_link(x, dates) for x in tw)
-        return (f'<div class="seal-match"><span class="lbl">🔗 ลิสต์เดียวกับ:</span> '
-                f'{links}</div>')
+        return f'<div class="seal-match"><span class="lbl">🔗 ลิสต์เดียวกับ:</span> {links}</div>'
 
     out = []
     # meta row: standing badge (full text in tooltip) + cross-server match
     meta = []
     if standing_note(key):
-        meta.append(f'<span class="seal-note s-{srv}" '
-                    f'title="{standing_note_full(key)}">{standing_note(key)}</span>')
+        meta.append(
+            f'<span class="seal-note s-{srv}" '
+            f'title="{standing_note_full(key)}">{standing_note(key)}</span>'
+        )
     if tmatch.get(ti):
         meta.append(note(tmatch[ti]))
     if meta:
         out.append('<div class="seal-meta">' + "".join(meta) + "</div>")
     # actions row: star button + the table toggle
     out.append('<div class="seal-actions">')
-    out.append(f'<div class="seal-starbar"><button class="seal-star" '
-               f'data-tkey="{key}#{ti}" type="button" title="เพิ่มเข้ารายการติดตาม">'
-               f'<span class="ic">☆</span>ติดตาม</button></div>')
+    out.append(
+        f'<div class="seal-starbar"><button class="seal-star" '
+        f'data-tkey="{key}#{ti}" type="button" title="เพิ่มเข้ารายการติดตาม">'
+        f'<span class="ic">☆</span>ติดตาม</button></div>'
+    )
     out.append('<details class="seal-detail"><summary>📋 ดูตาราง</summary>')
     thtml = _mark_standing(t["html"], srv, standing)
     # TH list matched to a NA/KR twin: flag each seal that recurs in a later
@@ -378,8 +413,7 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index):
     return out
 
 
-def block_for(key, data, tmatch=None, dates=None, standing=None, sources="",
-              rec_index=None):
+def block_for(key, data, tmatch=None, dates=None, standing=None, sources="", rec_index=None):
     """Injected content for a card. A post with ONE table fills its own card.
     A post with N tables is rendered as N cards: this returns the body for the
     first table, then closes the <article> and opens a fresh sibling
@@ -387,24 +421,25 @@ def block_for(key, data, tmatch=None, dates=None, standing=None, sources="",
     further table — all inside one ST block so re-runs strip it cleanly."""
     tables = data.get("tables", [])
     if not tables:
-        return ""   # posts without a table get nothing injected
+        return ""  # posts without a table get nothing injected
     dates, tmatch, standing = dates or {}, tmatch or {}, standing or set()
     rec_index = rec_index or {}
     srv = key.split("-")[0]
     total = len(tables)
 
     inner = [f"<!--ST:{key}-->"]
-    inner += _one_table_body(key, 0, tables[0], srv, tmatch, dates, standing,
-                             total, rec_index)
+    inner += _one_table_body(key, 0, tables[0], srv, tmatch, dates, standing, total, rec_index)
     # further tables become sibling cards inside the same ST block
     for ti in range(1, total):
         inner.append("</article>")
-        inner.append(f'<article class="card tl-entry" id="{key}#{ti + 1}" '
-                     f'data-server="{srv.upper()}">')
+        inner.append(
+            f'<article class="card tl-entry" id="{key}#{ti + 1}" data-server="{srv.upper()}">'
+        )
         if sources:
             inner.append(sources)
-        inner += _one_table_body(key, ti, tables[ti], srv, tmatch, dates,
-                                 standing, total, rec_index)
+        inner += _one_table_body(
+            key, ti, tables[ti], srv, tmatch, dates, standing, total, rec_index
+        )
     inner.append("<!--/ST-->")
     return "\n        " + "\n        ".join(inner)
 
@@ -413,8 +448,9 @@ def _table_rows_only(html):
     """Data rows (no header) of a normalized seal table as lists of cells."""
     out = []
     for tr in re.findall(r"<tr>(.*?)</tr>", html, re.S)[1:]:
-        cells = [re.sub(r"<[^>]+>", "", x).strip()
-                 for x in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+        cells = [
+            re.sub(r"<[^>]+>", "", x).strip() for x in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)
+        ]
         if cells:
             out.append(cells)
     return out
@@ -426,9 +462,13 @@ def emit_seal_data(data, html, standing=None):
     `inf` carries a per-row 0/1 flag: the seal is in the NA/KR standing set
     (never rotates out), so the calc can ♾️-mark it on ANY server's table."""
     standing = standing or set()
-    dates = dict(re.findall(
-        r'<article\b[^>]*\bid="([^"]+)"[^>]*>.*?<span class="src-date">([^<]+)</span>',
-        html, re.S))
+    dates = dict(
+        re.findall(
+            r'<article\b[^>]*\bid="([^"]+)"[^>]*>.*?<span class="src-date">([^<]+)</span>',
+            html,
+            re.S,
+        )
+    )
     out = {}
     for key, v in data.items():
         if not v.get("tables"):
@@ -441,12 +481,13 @@ def emit_seal_data(data, html, standing=None):
                 "date": dates.get(key, ""),
                 "caption": t.get("caption", ""),
                 "note": standing_note(key),
-                "inf": [1 if (r and r[0] and (_seal_key(r[0], srv) or "") in standing) else 0
-                        for r in rows],
+                "inf": [
+                    1 if (r and r[0] and (_seal_key(r[0], srv) or "") in standing) else 0
+                    for r in rows
+                ],
                 "rows": rows,
             }
-    SEAL_DATA_OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1),
-                             encoding="utf-8")
+    SEAL_DATA_OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"  wrote {SEAL_DATA_OUT.name} ({len(out)} tables)")
 
 
@@ -455,21 +496,22 @@ def drop_empty_months(html):
     op = '<div class="timeline">'
     oi = html.index(op)
     note = html.index('<p style="max-width:760px', oi)
-    ci = html.rindex("</div>", oi, note)          # timeline's closing </div>
-    inner = html[oi + len(op):ci]
+    ci = html.rindex("</div>", oi, note)  # timeline's closing </div>
+    inner = html[oi + len(op) : ci]
     parts = re.split(r'(<div class="tl-month">.*?</div>)', inner, flags=re.S)
     out = parts[0]
     for i in range(1, len(parts), 2):
         content = parts[i + 1] if i + 1 < len(parts) else ""
         if "<article" in content:
             out += parts[i] + content
-    return html[:oi + len(op)] + out + html[ci:]
+    return html[: oi + len(op)] + out + html[ci:]
 
 
 def update_counts(html, data):
     """Set hero total / earliest-year / per-server tab counts from the cards
     that actually remain in the page."""
     from collections import Counter
+
     kept = [k for k, v in data.items() if v.get("tables")]
     c = Counter(k.split("-")[0] for k in kept)
     labels = {"NA": "NA · gameking", "KR": "KR · digimonmasters", "TH": "TH · vplay"}
@@ -477,14 +519,22 @@ def update_counts(html, data):
         html = re.sub(
             r'(data-server="%s"[^>]*>%s <span class="tab-count">)\d+(</span>)'
             % (srv, re.escape(lab)),
-            lambda m, n=c[srv.lower()]: f"{m.group(1)}{n}{m.group(2)}", html)
-    html = re.sub(r'(<div class="num">)\d+(</div><div class="lbl">โพสต์)',
-                  lambda m: f"{m.group(1)}{len(kept)}{m.group(2)}", html)
+            lambda m, n=c[srv.lower()]: f"{m.group(1)}{n}{m.group(2)}",  # noqa: B008
+            html,
+        )
+    html = re.sub(
+        r'(<div class="num">)\d+(</div><div class="lbl">โพสต์)',
+        lambda m: f"{m.group(1)}{len(kept)}{m.group(2)}",
+        html,
+    )
     years = re.findall(r'<span class="src-date">\d{2}\.\d{2}\.(\d{4})</span>', html)
     if years:
         lo = min(years)
-        html = re.sub(r'(<div class="num">)\d{4}(</div><div class="lbl">ตั้งแต่)',
-                      lambda m: f"{m.group(1)}{lo}{m.group(2)}", html)
+        html = re.sub(
+            r'(<div class="num">)\d{4}(</div><div class="lbl">ตั้งแต่)',
+            lambda m: f"{m.group(1)}{lo}{m.group(2)}",
+            html,
+        )
     return html
 
 
@@ -498,28 +548,32 @@ def main():
     # 2) (re)inject CSS once, inside the existing <style>
     css_block = f"{CSS_START}{CSS}{CSS_END}"
     if CSS_START in html:
-        html = re.sub(re.escape(CSS_START) + r".*?" + re.escape(CSS_END),
-                      css_block, html, flags=re.S)
+        html = re.sub(
+            re.escape(CSS_START) + r".*?" + re.escape(CSS_END), css_block, html, flags=re.S
+        )
     else:
         html = html.replace("</style>", css_block + "\n</style>", 1)
 
     # 3) inject a block before each matching card's </article>
     matches = compute_matches(data)
-    standing = _standing_set(data)        # seals that never rotate out (NA/KR)
+    standing = _standing_set(data)  # seals that never rotate out (NA/KR)
     # key -> card date (DD.MM.YYYY), read from each card's src-date span, so
     # twin links can be labelled by date rather than the opaque post id
-    dates = dict(re.findall(
-        r'<article\b[^>]*\bid="([^"]+)"[^>]*>.*?<span class="src-date">([^<]+)</span>',
-        html, re.S))
+    dates = dict(
+        re.findall(
+            r'<article\b[^>]*\bid="([^"]+)"[^>]*>.*?<span class="src-date">([^<]+)</span>',
+            html,
+            re.S,
+        )
+    )
     # seal -> every NA/KR patch that offers it, so a TH card can flag seals
     # that recur in a NA/KR patch later than its matched twin
     rec_index = _recurrence_index(data, dates)
     injected = 0
     for key, d in data.items():
         if not d.get("tables"):
-            continue   # no-table posts are removed below, not injected
-        pat = re.compile(r'(<article\b[^>]*\bid="%s"[^>]*>.*?)(</article>)'
-                         % re.escape(key), re.S)
+            continue  # no-table posts are removed below, not injected
+        pat = re.compile(r'(<article\b[^>]*\bid="%s"[^>]*>.*?)(</article>)' % re.escape(key), re.S)
         m0 = pat.search(html)
         if not m0:
             print(f"  !! card not found: {key}", file=sys.stderr)
@@ -528,10 +582,8 @@ def main():
         # multi-table post is split across several <article>s
         sm = re.search(r'<div class="sources">.*?</div>', m0.group(1), re.S)
         sources = sm.group(0) if sm else ""
-        blk = block_for(key, d, matches.get(key, {}), dates, standing, sources,
-                        rec_index)
-        html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2),
-                       html, count=1)
+        blk = block_for(key, d, matches.get(key, {}), dates, standing, sources, rec_index)
+        html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2), html, count=1)  # noqa: B023 — sub is eager (count=1), blk not deferred
         injected += 1
     print(f"  cross-server matches: {len(matches)} cards link a twin")
 
@@ -540,8 +592,13 @@ def main():
     for key, d in data.items():
         if d.get("tables"):
             continue
-        html, n = re.subn(r'\n?\s*<article\b[^>]*\bid="%s"[^>]*>.*?</article>'
-                          % re.escape(key), "", html, flags=re.S, count=1)
+        html, n = re.subn(
+            r'\n?\s*<article\b[^>]*\bid="%s"[^>]*>.*?</article>' % re.escape(key),
+            "",
+            html,
+            flags=re.S,
+            count=1,
+        )
         removed += n
     html = drop_empty_months(html)
 
@@ -551,8 +608,10 @@ def main():
     HTML.write_text(html, encoding="utf-8")
     emit_seal_data(data, html, standing)  # per-table data for calc.html
     n_tbl = sum(len(v.get("tables", [])) for v in data.values())
-    print(f"Injected into {injected} cards, removed {removed} no-table cards "
-          f"({n_tbl} tables total) -> {HTML}")
+    print(
+        f"Injected into {injected} cards, removed {removed} no-table cards "
+        f"({n_tbl} tables total) -> {HTML}"
+    )
 
 
 if __name__ == "__main__":

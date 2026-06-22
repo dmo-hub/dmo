@@ -2,18 +2,17 @@
 
 Usage: python extract_deck_detail.py event 635 770 patch 4148 ...
 """
+
 import io
 import re
 import sys
-from pathlib import Path
 from html import unescape
+from pathlib import Path
 
 try:
     sys.stdout.reconfigure(encoding="utf-8")
 except Exception:
-    sys.stdout = io.TextIOWrapper(
-        sys.stdout.buffer, encoding="utf-8", errors="replace"
-    )
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 PROJ = Path(__file__).resolve().parent.parent
 CACHE = PROJ / "cache"
@@ -68,19 +67,15 @@ def extract_text_table(html, deck_name, kind):
     if not rm:
         return None
     # The next <table>...</table> after this is the table
-    rest = html[rm.end():]
+    rest = html[rm.end() :]
     tm = re.search(r"<table[^>]*>([\s\S]*?)</table>", rest, re.IGNORECASE)
     if not tm:
         return None
     table_html = tm.group(1)
     rows = []
-    for trm in re.finditer(
-        r"<tr[^>]*>([\s\S]*?)</tr>", table_html, re.IGNORECASE
-    ):
+    for trm in re.finditer(r"<tr[^>]*>([\s\S]*?)</tr>", table_html, re.IGNORECASE):
         row_html = trm.group(1)
-        cells = re.findall(
-            r"<t[dh][^>]*>([\s\S]*?)</t[dh]>", row_html, re.IGNORECASE
-        )
+        cells = re.findall(r"<t[dh][^>]*>([\s\S]*?)</t[dh]>", row_html, re.IGNORECASE)
         cleaned = []
         for c in cells:
             t = re.sub(r"<[^>]+>", "", c)
@@ -113,13 +108,13 @@ def main(targets):
             digi = extract_text_table(html, d, "Digimon List")
             eff = extract_text_table(html, d, "Effect")
             print(f"\n  [{d}]")
-            print(f"  Digimon List:")
+            print("  Digimon List:")
             if digi:
                 for row in digi:
                     print(f"    {row}")
             else:
                 print("    (not found)")
-            print(f"  Effect:")
+            print("  Effect:")
             if eff:
                 for row in eff:
                     print(f"    {row}")

@@ -36,9 +36,9 @@ def _strip_decoration(s: str) -> str:
 
 def _load():
     raw = json.loads(_ALIAS_PATH.read_text(encoding="utf-8"))
-    norm_to_canon = {}     # normalized alt key -> canonical display name
+    norm_to_canon = {}  # normalized alt key -> canonical display name
     for canon, alts in raw.items():
-        if canon.startswith("_"):          # skip _README etc.
+        if canon.startswith("_"):  # skip _README etc.
             continue
         norm_to_canon[_norm_key(canon)] = canon
         for alt in alts:

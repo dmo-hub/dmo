@@ -36,35 +36,98 @@ OUT = PROJ / "data" / "seal_tables.json"
 OCR_PATH = PROJ / "data" / "seal_ocr.json"
 # Vision-OCR'd exchange tables for gameking posts that ship the list as an
 # image instead of an HTML table (rows already in canonical column order).
-OCR_DATA = ({k: v for k, v in json.loads(OCR_PATH.read_text(encoding="utf-8")).items()
-             if not k.startswith("_")} if OCR_PATH.exists() else {})
+OCR_DATA = (
+    {
+        k: v
+        for k, v in json.loads(OCR_PATH.read_text(encoding="utf-8")).items()
+        if not k.startswith("_")
+    }
+    if OCR_PATH.exists()
+    else {}
+)
 # Korean seal-name -> official English name, so KR tables show English data.
 KR_EN_PATH = PROJ / "data" / "kr_seal_en.json"
-KR_EN = (json.loads(KR_EN_PATH.read_text(encoding="utf-8"))
-         if KR_EN_PATH.exists() else {})
+KR_EN = json.loads(KR_EN_PATH.read_text(encoding="utf-8")) if KR_EN_PATH.exists() else {}
 
-UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                    "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
+UA = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+}
 
 # NA idx that are PatchNote (rest are EventView)
 NA_PATCH = {4100, 4110, 4114, 4118, 4121, 4129}
 
 # TH system page (permanent Seal Master explainer) — encoded permalink
-TH_SYSTEM_URL = ("https://www.vplay.in.th/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A"
-                 "%E0%B8%8B%E0%B8%B5%E0%B8%A5%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B9%80"
-                 "%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/")
+TH_SYSTEM_URL = (
+    "https://www.vplay.in.th/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A"
+    "%E0%B8%8B%E0%B8%B5%E0%B8%A5%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B9%80"
+    "%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/"
+)
 
 # All 56 seal posts, keyed by their docs/seals.html card id.
-KR_IDS = [816593, 814935, 814707, 814605, 814493, 814269, 814064, 813810,
-          813439, 812989, 811713, 811362, 810828, 808363, 807402, 797955,
-          794497, 792682, 789333, 788597, 787646, 783755, 782119, 780048, 708817]
-NA_IDS = [4129, 4121, 4118, 4114, 4110, 4100, 810, 789, 784, 782, 759, 743,
-          683, 673, 636, 551, 530, 352]
+KR_IDS = [
+    816593,
+    814935,
+    814707,
+    814605,
+    814493,
+    814269,
+    814064,
+    813810,
+    813439,
+    812989,
+    811713,
+    811362,
+    810828,
+    808363,
+    807402,
+    797955,
+    794497,
+    792682,
+    789333,
+    788597,
+    787646,
+    783755,
+    782119,
+    780048,
+    708817,
+]
+NA_IDS = [
+    4129,
+    4121,
+    4118,
+    4114,
+    4110,
+    4100,
+    810,
+    789,
+    784,
+    782,
+    759,
+    743,
+    683,
+    673,
+    636,
+    551,
+    530,
+    352,
+]
 TH_SUFFIXES = [88, 83, 78, 76, 66, 64, 59, 56, 49, 42, 28, 24, 21, 15, 12]
 
-SEAL_PHRASES = ("씰 교환", "씰 마스터", "씰교환", "seal exchange", "seal master",
-                "แลกซีล", "แลกเปลี่ยนซีล", "รายการซีล", "ซีล>", "ผลิตซีล",
-                "seal exchange ticket", "씰 교환권")
+SEAL_PHRASES = (
+    "씰 교환",
+    "씰 마스터",
+    "씰교환",
+    "seal exchange",
+    "seal master",
+    "แลกซีล",
+    "แลกเปลี่ยนซีล",
+    "รายการซีล",
+    "ซีล>",
+    "ผลิตซีล",
+    "seal exchange ticket",
+    "씰 교환권",
+)
 
 
 def fetch(url, cache_name):
@@ -100,9 +163,11 @@ def get_html(post):
         cf = CACHE / f"{kind}_{ident}.html"
         if cf.exists():
             return cf.read_text(encoding="utf-8", errors="ignore")
-        view = (f"https://dmo.gameking.com/News/PatchNoteView.aspx?idx={ident}"
-                if kind == "patch"
-                else f"https://dmo.gameking.com/news/EventView.aspx?idx={ident}")
+        view = (
+            f"https://dmo.gameking.com/News/PatchNoteView.aspx?idx={ident}"
+            if kind == "patch"
+            else f"https://dmo.gameking.com/news/EventView.aspx?idx={ident}"
+        )
         return fetch(view, f"{kind}_{ident}.html")
     # TH
     if ident == "system":
@@ -154,23 +219,73 @@ def clean_table(tb):
 # Every seal-exchange table, whatever its native column order/wording, is
 # remapped to the canonical layout using the Thai-server column names:
 # [seal | seals given | tickets used | stat | max @ Master].
-NORM_HEADER = ["รายการซีล", "จำนวนซีลที่ได้รับ",
-               "จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต", "ความสามารถ", "สเตตัสสูงสุด"]
+NORM_HEADER = ["รายการซีล", "จำนวนซีลที่ได้รับ", "จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต", "ความสามารถ", "สเตตัสสูงสุด"]
 _STAT = re.compile(r"\b(AT|HP|HT|DS|DE|BL|EV|CT|SCD|MS|DEX|EXP)\b")
 
-KW_NAME = ("제작 씰", "제작 아이템", "craft seal", "craft item",
-           "รายการซีล", "ไอเทมที่ได้รับ", "รายการไอเทม", "รายการผลิต",
-           "ซีลที่ได้รับ")   # th-88 layout: the seal you RECEIVE is the name col
-KW_GIVEN = ("씰 지급", "씰 획득", "seals given", "seal obtained", "seal given",
-            "จำนวนซีลที่ได้รับ", "จำนวนที่ได้รับ", "จำนวน ที่ได้รับ")
-KW_TICKET = ("교환권", "재료", "seal exchange ticket", "needed seal exchange",
-             "required number of seal", "material", "ตั๋วแลกการ์ดซีล",
-             "ตั๋วแลกซีล", "ไอเทมวัตถุดิบ", "วัตถุดิบ", "ที่ใช้ผลิต", "ในการผลิต")
-KW_MAX = ("최대", "마스터 수치", "마스터 능력치", "수치", "master value", "max value",
-          "stat value", "value (master)", "master attribute", "final ability",
-          "สเตตัสสูงสุด", "ค่าความสามารถสูงสุด", "ค่าสเตตัสสูงสุด", "สูงสุด")
-KW_STAT = ("능력치", "stat", "attribute", "ความสามารถ", "ประเภทสเตตัส",
-           "ประเภท", "คุณสมบัติ", "seal stat", "ค่าความสามารถ", "ค่าสเตตัส", "สเตตัส")
+KW_NAME = (
+    "제작 씰",
+    "제작 아이템",
+    "craft seal",
+    "craft item",
+    "รายการซีล",
+    "ไอเทมที่ได้รับ",
+    "รายการไอเทม",
+    "รายการผลิต",
+    "ซีลที่ได้รับ",
+)  # th-88 layout: the seal you RECEIVE is the name col
+KW_GIVEN = (
+    "씰 지급",
+    "씰 획득",
+    "seals given",
+    "seal obtained",
+    "seal given",
+    "จำนวนซีลที่ได้รับ",
+    "จำนวนที่ได้รับ",
+    "จำนวน ที่ได้รับ",
+)
+KW_TICKET = (
+    "교환권",
+    "재료",
+    "seal exchange ticket",
+    "needed seal exchange",
+    "required number of seal",
+    "material",
+    "ตั๋วแลกการ์ดซีล",
+    "ตั๋วแลกซีล",
+    "ไอเทมวัตถุดิบ",
+    "วัตถุดิบ",
+    "ที่ใช้ผลิต",
+    "ในการผลิต",
+)
+KW_MAX = (
+    "최대",
+    "마스터 수치",
+    "마스터 능력치",
+    "수치",
+    "master value",
+    "max value",
+    "stat value",
+    "value (master)",
+    "master attribute",
+    "final ability",
+    "สเตตัสสูงสุด",
+    "ค่าความสามารถสูงสุด",
+    "ค่าสเตตัสสูงสุด",
+    "สูงสุด",
+)
+KW_STAT = (
+    "능력치",
+    "stat",
+    "attribute",
+    "ความสามารถ",
+    "ประเภทสเตตัส",
+    "ประเภท",
+    "คุณสมบัติ",
+    "seal stat",
+    "ค่าความสามารถ",
+    "ค่าสเตตัส",
+    "สเตตัส",
+)
 KW_QTY = ("개수", "จำนวน", "amount")
 
 
@@ -186,24 +301,32 @@ def table_rows(tb):
     rowspan-collapsed rows (common in TH material tables) keep their columns
     aligned."""
     tb = re.sub(r"<colgroup.*?</colgroup>", "", tb, flags=re.S)
-    grid, carry = [], {}            # carry: col -> [text, remaining_rows]
+    grid, carry = [], {}  # carry: col -> [text, remaining_rows]
     for tr in re.findall(r"<tr\b.*?</tr>", tb, re.S):
         cells = []
         for m in re.finditer(r"<(t[dh])\b([^>]*)>(.*?)</\1>", tr, re.S):
             a = m.group(2)
             cs = re.search(r'colspan="?(\d+)"?', a)
             rs = re.search(r'rowspan="?(\d+)"?', a)
-            cells.append((strip_text(m.group(3)),
-                          int(cs.group(1)) if cs else 1,
-                          int(rs.group(1)) if rs else 1))
+            cells.append(
+                (
+                    strip_text(m.group(3)),
+                    int(cs.group(1)) if cs else 1,
+                    int(rs.group(1)) if rs else 1,
+                )
+            )
         if not cells and not any(v[1] > 0 for v in carry.values()):
             continue
         line, col, si = [], 0, 0
         while True:
             if carry.get(col, [None, 0])[1] > 0:
-                line.append(carry[col][0]); carry[col][1] -= 1; col += 1; continue
+                line.append(carry[col][0])
+                carry[col][1] -= 1
+                col += 1
+                continue
             if si < len(cells):
-                txt, cs, rs = cells[si]; si += 1
+                txt, cs, rs = cells[si]
+                si += 1
                 for _ in range(cs):
                     line.append(txt)
                     if rs > 1:
@@ -213,7 +336,8 @@ def table_rows(tb):
             future = [k for k, v in carry.items() if v[1] > 0 and k >= col]
             if future:
                 while col < min(future):
-                    line.append(""); col += 1
+                    line.append("")
+                    col += 1
                 continue
             break
         grid.append(line)
@@ -262,19 +386,18 @@ def normalize_table(tb, server):
     # header = the row among the first 3 whose cells match the most column
     # keywords (skips colspan title rows like na-789's "Seal Exchangement"
     # and avoids data rows when the real header has duplicate column names)
-    hi = max(range(min(3, len(rows))),
-             key=lambda i: sum(1 for c in rows[i] if _role_of(c)))
+    hi = max(range(min(3, len(rows))), key=lambda i: sum(1 for c in rows[i] if _role_of(c)))
     header = rows[hi]
     role = _classify(header)
     if "name" not in role:
-        return None                          # can't map confidently -> fall back
+        return None  # can't map confidently -> fall back
     iname = role.index("name")
     iticket = role.index("ticket") if "ticket" in role else None
     igiven = role.index("given") if "given" in role else None
     stat_idxs = [i for i, r in enumerate(role) if r == "stat"]
     istat = stat_idxs[0] if stat_idxs else None
     imax = role.index("max") if "max" in role else None
-    if imax is None and len(stat_idxs) >= 2:   # 1st stat col = type, 2nd = value
+    if imax is None and len(stat_idxs) >= 2:  # 1st stat col = type, 2nd = value
         imax = stat_idxs[-1]
 
     def qty_after(idx):
@@ -288,18 +411,20 @@ def normalize_table(tb, server):
     given_q = igiven if igiven is not None else qty_after(iname)
     if iticket is None:
         ticket_q = None
-    elif _has(header[iticket], ("개수", "필요", "quantity", "required number",
-              "needed", "จำนวน", "ที่ต้องการ", "ตั๋วแลกซีล")):
-        ticket_q = iticket                   # the ticket column is itself a count
+    elif _has(
+        header[iticket],
+        ("개수", "필요", "quantity", "required number", "needed", "จำนวน", "ที่ต้องการ", "ตั๋วแลกซีล"),
+    ):
+        ticket_q = iticket  # the ticket column is itself a count
     else:
-        ticket_q = qty_after(iticket) or iticket   # count is the qty beside it
+        ticket_q = qty_after(iticket) or iticket  # count is the qty beside it
 
     norm_header = [h.strip() for h in header]
 
     out = ['<table class="seal-tbl">', "<tr>"]
     out += [f"<th>{H.escape(c)}</th>" for c in NORM_HEADER]
     out.append("</tr>")
-    for row in rows[hi + 1:]:
+    for row in rows[hi + 1 :]:
         if len(row) <= iname or not row[iname].strip():
             continue
         # skip in-table category-title rows: a colspan banner (e.g. th-88's
@@ -315,8 +440,8 @@ def normalize_table(tb, server):
             continue
         eq, name = _embedded_qty(row[iname])
         if server == "KR":
-            name = KR_EN.get(name, name)     # show KR seal names in English
-        given = (row[given_q] if given_q is not None and given_q < len(row) else "")
+            name = KR_EN.get(name, name)  # show KR seal names in English
+        given = row[given_q] if given_q is not None and given_q < len(row) else ""
         given = _num(given) or eq
         ticket = _num(row[ticket_q]) if ticket_q is not None and ticket_q < len(row) else ""
         if not ticket and iticket is not None and iticket < len(row):
@@ -326,7 +451,7 @@ def normalize_table(tb, server):
         sm = _STAT.search(statcell) or _STAT.search(maxcell)
         stat = sm.group(1) if sm else statcell.strip()
         mx = _num(maxcell)
-        if not mx:                            # stat & max combined e.g. "AT +150"
+        if not mx:  # stat & max combined e.g. "AT +150"
             mx = _num(statcell)
         cells = [name, given or "—", ticket or "—", stat or "—", mx or "—"]
         out.append("<tr>" + "".join(f"<td>{H.escape(c)}</td>" for c in cells) + "</tr>")
@@ -349,8 +474,8 @@ def emit_norm_rows(rows):
 # The exchange currency must be a Seal Exchange Ticket — not a material
 # (Kaiser Trace, firecracker) or a special coin (Tamer / Special Exchanger).
 TICKET_RE = re.compile(
-    r"씰\s*교환권|교환권|seal exchange ticket|ตั๋วแลกการ์ดซีล|ตั๋วแลกซีล|ตั๋วแลก\S*ซีล",
-    re.I)
+    r"씰\s*교환권|교환권|seal exchange ticket|ตั๋วแลกการ์ดซีล|ตั๋วแลกซีล|ตั๋วแลก\S*ซีล", re.I
+)
 
 
 def uses_exchange_ticket(tb):
@@ -358,16 +483,15 @@ def uses_exchange_ticket(tb):
     rows = table_rows(tb)
     if len(rows) < 2:
         return False
-    hi = max(range(min(3, len(rows))),
-             key=lambda i: sum(1 for c in rows[i] if _role_of(c)))
+    hi = max(range(min(3, len(rows))), key=lambda i: sum(1 for c in rows[i] if _role_of(c)))
     header = rows[hi]
     role = _classify(header)
     if "ticket" not in role:
         return False
     it = role.index("ticket")
-    if TICKET_RE.search(header[it]):          # forward tables name it in the header
+    if TICKET_RE.search(header[it]):  # forward tables name it in the header
         return True
-    for r in rows[hi + 1:hi + 4]:             # material tables name it in the cells
+    for r in rows[hi + 1 : hi + 4]:  # material tables name it in the cells
         if it < len(r) and TICKET_RE.search(r[it]):
             return True
     return False
@@ -381,10 +505,8 @@ def _is_trivial_craft(html):
     if not data:
         return False
     for r in data:
-        c = [re.sub(r"<[^>]+>", "", x).strip()
-             for x in re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)]
-        if len(c) < 5 or not (c[1] == "1" and c[2] == "1"
-                              and c[3] == "—" and c[4] == "—"):
+        c = [re.sub(r"<[^>]+>", "", x).strip() for x in re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)]
+        if len(c) < 5 or not (c[1] == "1" and c[2] == "1" and c[3] == "—" and c[4] == "—"):
             return False
     return True
 
@@ -398,9 +520,11 @@ EXCHANGE_HINT_RE = re.compile(r"exchange|obtain|craft|ticket", re.I)
 EXCHANGE_HINT_KR = ("교환", "획득", "제작")
 EXCHANGE_HINT_TH = ("แลก", "ผลิต", "ได้รับ", "ตั๋ว")
 
-CAPTION = {"KR": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
-           "NA": "Seal Exchange Ticket — Craft List",
-           "TH": "รายการแลกซีล (Seal Exchange List)"}
+CAPTION = {
+    "KR": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+    "NA": "Seal Exchange Ticket — Craft List",
+    "TH": "รายการแลกซีล (Seal Exchange List)",
+}
 
 
 def header_text(tb):
@@ -410,8 +534,17 @@ def header_text(tb):
 
 # Headers that look seal-ish but are NOT exchange lists: shop packages / sale
 # promos, and new-seal stat-reference tables ("how to obtain" / "획득처").
-EXCLUDE_HINT = ("package", "sale", "패키지", "판매", "แพ็คเกจ", "ลดราคา",
-                "วิธีการได้รับ", "วิธีได้รับ", "획득처")
+EXCLUDE_HINT = (
+    "package",
+    "sale",
+    "패키지",
+    "판매",
+    "แพ็คเกจ",
+    "ลดราคา",
+    "วิธีการได้รับ",
+    "วิธีได้รับ",
+    "획득처",
+)
 
 
 # KR exchange tables always carry an "you obtain N seals" column. Requiring
@@ -426,9 +559,11 @@ def is_exchange_header(htxt, head2, body_score, server):
         return False
     if any(x in h for x in ("package", "sale")) or any(x in htxt for x in EXCLUDE_HINT):
         return False
-    hint = (bool(EXCHANGE_HINT_RE.search(htxt))
-            or any(x in htxt for x in EXCHANGE_HINT_KR)
-            or any(x in htxt for x in EXCHANGE_HINT_TH))
+    hint = (
+        bool(EXCHANGE_HINT_RE.search(htxt))
+        or any(x in htxt for x in EXCHANGE_HINT_KR)
+        or any(x in htxt for x in EXCHANGE_HINT_TH)
+    )
     if not hint:
         return False
     if server == "KR":
@@ -445,8 +580,8 @@ def is_exchange_header(htxt, head2, body_score, server):
 # a full-width category banner: a <tr> with a single colspan cell, e.g. th-88's
 # "หมวดผลิตซีลมาสเตอร์" / "หมวดผลิตตั๋วแลกซีลแบบพิเศษ".
 _BANNER_TR = re.compile(
-    r'<tr\b[^>]*>\s*<t[dh]\b[^>]*\bcolspan="?(\d+)"?[^>]*>(.*?)</t[dh]>\s*</tr>',
-    re.S | re.I)
+    r'<tr\b[^>]*>\s*<t[dh]\b[^>]*\bcolspan="?(\d+)"?[^>]*>(.*?)</t[dh]>\s*</tr>', re.S | re.I
+)
 
 
 def split_category_tables(tb):
@@ -456,8 +591,11 @@ def split_category_tables(tb):
     returned unchanged as a single (None, tb) entry, so existing single-section
     cards are untouched."""
     trs = re.findall(r"<tr\b.*?</tr>", tb, re.S)
-    banners = [i for i, tr in enumerate(trs)
-               if (m := _BANNER_TR.fullmatch(tr.strip())) and int(m.group(1)) >= 2]
+    banners = [
+        i
+        for i, tr in enumerate(trs)
+        if (m := _BANNER_TR.fullmatch(tr.strip())) and int(m.group(1)) >= 2
+    ]
     if len(banners) < 2:
         return [(None, tb)]
     open_tag = re.match(r"<table\b[^>]*>", tb, re.S).group(0)
@@ -466,7 +604,7 @@ def split_category_tables(tb):
         end = banners[n + 1] if n + 1 < len(banners) else len(trs)
         title = strip_text(_BANNER_TR.fullmatch(trs[start].strip()).group(2))
         # drop the banner row itself; the section's own header row follows it
-        section = open_tag + "".join(trs[start + 1:end]) + "</table>"
+        section = open_tag + "".join(trs[start + 1 : end]) + "</table>"
         out.append((title, section))
     return out
 
@@ -485,15 +623,15 @@ def extract(post):
         if not is_exchange_header(htxt, head2, body_score, server):
             continue
         if not uses_exchange_ticket(tb):
-            continue                  # keep only Seal-Exchange-Ticket exchanges
+            continue  # keep only Seal-Exchange-Ticket exchanges
         # one <table> may stack several category sections (th-88) — emit each
         # as its own table; single-section tables come back unchanged.
         for cat_title, sub in split_category_tables(tb):
             normalized = normalize_table(sub, server)
             if normalized and _is_trivial_craft(normalized):
-                continue              # skip redundant 1-ticket->1-seal craft lists
+                continue  # skip redundant 1-ticket->1-seal craft lists
             cleaned = normalized or clean_table(sub)
-            if cleaned in seen:       # drop exact-duplicate tables
+            if cleaned in seen:  # drop exact-duplicate tables
                 continue
             seen.add(cleaned)
             entry = {
@@ -503,20 +641,24 @@ def extract(post):
                 "normalized": bool(normalized),
                 "html": cleaned,
             }
-            if cat_title:                 # only split sections carry a title
+            if cat_title:  # only split sections carry a title
                 entry["cat_title"] = cat_title
             tables.append(entry)
     # Fall back to a vision-OCR'd table for posts whose list is image-only.
     if not tables and "rows" in OCR_DATA.get(post["key"], {}):
-        tables.append({
-            "header": "OCR", "score": -1, "ocr": True,
-            "rows": len(OCR_DATA[post["key"]]["rows"]) + 1,
-            "normalized": True,
-            "html": emit_norm_rows(OCR_DATA[post["key"]]["rows"]),
-        })
+        tables.append(
+            {
+                "header": "OCR",
+                "score": -1,
+                "ocr": True,
+                "rows": len(OCR_DATA[post["key"]]["rows"]) + 1,
+                "normalized": True,
+                "html": emit_norm_rows(OCR_DATA[post["key"]]["rows"]),
+            }
+        )
     cap = CAPTION[server]
     for i, t in enumerate(tables):
-        if t.get("cat_title"):                      # split section -> its own name
+        if t.get("cat_title"):  # split section -> its own name
             base = f"{cap} · {t['cat_title']}"
         elif len(tables) == 1:
             base = cap
@@ -555,18 +697,29 @@ def main():
             print(f"  !! alias source missing for {key}: {meta['alias']}", file=sys.stderr)
             continue
         srv = key.split("-")[0].upper()
-        result[key] = {"tables": [{
-            "header": "ALIAS", "score": -1, "ocr": True, "alias": meta["alias"],
-            "rows": src[0]["rows"], "normalized": True, "html": src[0]["html"],
-            "caption": CAPTION[srv] + " · " + meta.get("tag", "ลิสต์มาตรฐาน"),
-        }], "note": ""}
+        result[key] = {
+            "tables": [
+                {
+                    "header": "ALIAS",
+                    "score": -1,
+                    "ocr": True,
+                    "alias": meta["alias"],
+                    "rows": src[0]["rows"],
+                    "normalized": True,
+                    "html": src[0]["html"],
+                    "caption": CAPTION[srv] + " · " + meta.get("tag", "ลิสต์มาตรฐาน"),
+                }
+            ],
+            "note": "",
+        }
         print(f"{key:<12} tables=1 (alias -> {meta['alias']})")
 
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     n_tbl = sum(len(v.get("tables", [])) for v in result.values())
     n_none = sum(1 for v in result.values() if not v.get("tables"))
-    print(f"\nWrote {OUT}  ({n_tbl} tables across {len(posts)} posts; "
-          f"{n_none} posts with no table)")
+    print(
+        f"\nWrote {OUT}  ({n_tbl} tables across {len(posts)} posts; {n_none} posts with no table)"
+    )
 
 
 if __name__ == "__main__":

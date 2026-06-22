@@ -87,12 +87,14 @@ def find_th_matches(th_kw: str, required_mod: str | None, th_posts: list[dict]) 
 
 def pick_best(matches: list[dict], na_date: str) -> dict:
     """Prefer TH date >= NA date (Thai usually lags NA), closest distance."""
+
     def sort_key(p: dict) -> tuple[int, int]:
         if not p["date"]:
             return (1, 0)
         # negative diff means TH is BEFORE NA — penalize
-        diff_days = (p["date"] >= na_iso(na_date))
+        diff_days = p["date"] >= na_iso(na_date)
         return (0 if diff_days else 1, abs_iso_diff(p["date"], na_iso(na_date)))
+
     return min(matches, key=sort_key)
 
 
@@ -103,7 +105,9 @@ def na_iso(mmddyyyy: str) -> str:
 
 def abs_iso_diff(a: str, b: str) -> int:
     from datetime import date
-    ya, ma, da = a.split("-"); yb, mb, db = b.split("-")
+
+    ya, ma, da = a.split("-")
+    yb, mb, db = b.split("-")
     return abs((date(int(ya), int(ma), int(da)) - date(int(yb), int(mb), int(db))).days)
 
 
@@ -138,7 +142,9 @@ def main() -> None:
                 post["_th_image_url"] = th_post["image_url"]
                 matched += 1
                 tag = f" [{via[3]} candidates]" if via[3] > 1 else ""
-                print(f"  {kind} {idx} ({post['date']}) → TH {th_post['date']}{tag}: {th_post['th_name']}")
+                print(
+                    f"  {kind} {idx} ({post['date']}) → TH {th_post['date']}{tag}: {th_post['th_name']}"
+                )
             else:
                 for k in ("source_th", "date_th", "_th_name", "_th_image_url"):
                     post.pop(k, None)

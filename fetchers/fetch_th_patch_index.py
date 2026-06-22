@@ -33,8 +33,10 @@ OUT = PROJ / "data" / "th_patch_index.json"
 LIST_URL_FIRST = "https://www.vplay.in.th/category/news/patch-note/"
 LIST_URL_PAGE = "https://www.vplay.in.th/category/news/patch-note/page/{page}/"
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
 
 # vplay.in.th uses a custom WP theme; posts are wrapped in
 #   <div id="post-N" class="seil-blog-post ... category-XXX ...">…</div>
@@ -49,10 +51,35 @@ TITLE_RE = re.compile(
 )
 DATE_TIME_RE = re.compile(r'datetime="(\d{4}-\d{2}-\d{2})')
 # Fallback: Thai date string like "21 พ.ค. 2569" (Buddhist year)
-THAI_DATE_RE = re.compile(r'(\d{1,2})\s*(ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?)\s*(\d{4})')
-THAI_MONTH = {"ม.ค.":1,"มค":1,"ก.พ.":2,"กพ":2,"มี.ค.":3,"มีค":3,"เม.ย.":4,"เมย":4,
-              "พ.ค.":5,"พค":5,"มิ.ย.":6,"มิย":6,"ก.ค.":7,"กค":7,"ส.ค.":8,"สค":8,
-              "ก.ย.":9,"กย":9,"ต.ค.":10,"ตค":10,"พ.ย.":11,"พย":11,"ธ.ค.":12,"ธค":12}
+THAI_DATE_RE = re.compile(
+    r"(\d{1,2})\s*(ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?)\s*(\d{4})"
+)
+THAI_MONTH = {
+    "ม.ค.": 1,
+    "มค": 1,
+    "ก.พ.": 2,
+    "กพ": 2,
+    "มี.ค.": 3,
+    "มีค": 3,
+    "เม.ย.": 4,
+    "เมย": 4,
+    "พ.ค.": 5,
+    "พค": 5,
+    "มิ.ย.": 6,
+    "มิย": 6,
+    "ก.ค.": 7,
+    "กค": 7,
+    "ส.ค.": 8,
+    "สค": 8,
+    "ก.ย.": 9,
+    "กย": 9,
+    "ต.ค.": 10,
+    "ตค": 10,
+    "พ.ย.": 11,
+    "พย": 11,
+    "ธ.ค.": 12,
+    "ธค": 12,
+}
 
 
 def parse_thai_date(s: str) -> str | None:
@@ -112,15 +139,17 @@ def parse_page(html: str) -> list[dict]:
         title = title_m.group("title").strip()
         date_m = DATE_TIME_RE.search(block)
         date = date_m.group(1) if date_m else parse_thai_date(block)
-        out.append({
-            "id": m.group("id"),
-            "slug": slug,
-            "url": url,
-            "title": title,
-            "date": date,
-            "type": classify_slug(url),
-            "classes": m.group("classes")[:200],
-        })
+        out.append(
+            {
+                "id": m.group("id"),
+                "slug": slug,
+                "url": url,
+                "title": title,
+                "date": date,
+                "type": classify_slug(url),
+                "classes": m.group("classes")[:200],
+            }
+        )
     return out
 
 
@@ -141,7 +170,9 @@ def main(max_pages: int = 30, force_first: bool = True) -> None:
         for p in posts:
             seen[p["id"]] = p
         dates = [p["date"] for p in posts if p["date"]]
-        print(f"page {page}: {len(posts)} posts ({dates[-1] if dates else '?'} … {dates[0] if dates else '?'})")
+        print(
+            f"page {page}: {len(posts)} posts ({dates[-1] if dates else '?'} … {dates[0] if dates else '?'})"
+        )
         page += 1
         time.sleep(0.3)
 

@@ -1,6 +1,7 @@
 """Re-parse cached HTML files (no network) using current scan_decks.py logic.
 Used to refresh scan_result.json after parser tweaks without re-hitting the server.
 """
+
 import io
 import json
 import re
@@ -11,9 +12,7 @@ from pathlib import Path
 try:
     sys.stdout.reconfigure(encoding="utf-8")
 except Exception:
-    sys.stdout = io.TextIOWrapper(
-        sys.stdout.buffer, encoding="utf-8", errors="replace"
-    )
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 from scan_decks import (
     CACHE,
@@ -38,9 +37,7 @@ if sr.exists():
 
 DATE_RE = re.compile(r">\s*(\d{2}-\d{2}-\d{4})\s*<")
 SUBJ_RE = re.compile(r"FINISHED([^<]+?)</")
-SUBJ_RE2 = re.compile(
-    r"<title[^>]*>[^<]*</title>", re.IGNORECASE
-)  # fallback
+SUBJ_RE2 = re.compile(r"<title[^>]*>[^<]*</title>", re.IGNORECASE)  # fallback
 
 
 def extract_meta(html):

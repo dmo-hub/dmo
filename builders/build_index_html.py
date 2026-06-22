@@ -23,8 +23,20 @@ DECKS = PROJ / "data" / "scan_result.json"
 DIGIMON = PROJ / "data" / "scan_result_digimon.json"
 OUT = PROJ / "docs" / "index.html"
 
-MONTH_NAMES = ["January","February","March","April","May","June",
-               "July","August","September","October","November","December"]
+MONTH_NAMES = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+]
 
 
 def date_key(mmddyyyy):
@@ -49,7 +61,7 @@ def month_key(mmddyyyy):
 
 
 def month_label(ym):
-    return f"{MONTH_NAMES[int(ym[4:6])-1]} {ym[:4]}"
+    return f"{MONTH_NAMES[int(ym[4:6]) - 1]} {ym[:4]}"
 
 
 def main() -> None:
@@ -61,35 +73,37 @@ def main() -> None:
     for m in decks["matches"]:
         if not m.get("new_decks"):
             continue
-        activity.append({
-            "kind_label": "Decks · " + ("EventView" if m["kind"] == "event" else "PatchNote"),
-            "topic": "decks",
-            "idx": m["idx"],
-            "date": m["date"],
-            "title": ", ".join(m["new_decks"][:2]) + (
-                f" + {len(m['new_decks'])-2} more" if len(m["new_decks"]) > 2 else ""
-            ),
-            "href": f"decks.html#{'e' if m['kind']=='event' else 'p'}{m['idx']}",
-            "n_items": len(m["new_decks"]),
-        })
-    for kind, posts in (("event", digimon.get("event", {})),
-                        ("patch", digimon.get("patch", {}))):
+        activity.append(
+            {
+                "kind_label": "Decks · " + ("EventView" if m["kind"] == "event" else "PatchNote"),
+                "topic": "decks",
+                "idx": m["idx"],
+                "date": m["date"],
+                "title": ", ".join(m["new_decks"][:2])
+                + (f" + {len(m['new_decks']) - 2} more" if len(m["new_decks"]) > 2 else ""),
+                "href": f"decks.html#{'e' if m['kind'] == 'event' else 'p'}{m['idx']}",
+                "n_items": len(m["new_decks"]),
+            }
+        )
+    for kind, posts in (("event", digimon.get("event", {})), ("patch", digimon.get("patch", {}))):
         for idx, p in posts.items():
-            activity.append({
-                "kind_label": "Digimon · " + ("EventView" if kind == "event" else "PatchNote"),
-                "topic": "digimon",
-                "idx": idx,
-                "date": p["date"],
-                "title": ", ".join(p["digimon"]),
-                "href": f"digimon.html#{'e' if kind=='event' else 'p'}{idx}",
-                "n_items": len(p["digimon"]),
-            })
+            activity.append(
+                {
+                    "kind_label": "Digimon · " + ("EventView" if kind == "event" else "PatchNote"),
+                    "topic": "digimon",
+                    "idx": idx,
+                    "date": p["date"],
+                    "title": ", ".join(p["digimon"]),
+                    "href": f"digimon.html#{'e' if kind == 'event' else 'p'}{idx}",
+                    "n_items": len(p["digimon"]),
+                }
+            )
 
     activity.sort(key=lambda a: (date_key(a["date"]), int(a["idx"])), reverse=True)
 
     # Group most-recent 12 by month for the preview feed
     preview = activity[:12]
-    grouped: "OrderedDict[str, list[dict]]" = OrderedDict()
+    grouped: OrderedDict[str, list[dict]] = OrderedDict()
     for a in preview:
         grouped.setdefault(month_key(a["date"]), []).append(a)
 
@@ -97,9 +111,10 @@ def main() -> None:
     deck_posts = decks.get("matched_posts", 0)
     deck_count = decks.get("new_deck_count", 0)
     digimon_posts = len(digimon.get("event", {})) + len(digimon.get("patch", {}))
-    digimon_count = sum(len(p["digimon"]) for p in
-                        list(digimon.get("event", {}).values()) +
-                        list(digimon.get("patch", {}).values()))
+    digimon_count = sum(
+        len(p["digimon"])
+        for p in list(digimon.get("event", {}).values()) + list(digimon.get("patch", {}).values())
+    )
     total_activity = len(activity)
 
     # --- Activity feed render ------------------------------------------
@@ -109,7 +124,7 @@ def main() -> None:
             f'''        <a class="card tl-entry feed-card" href="{a["href"]}">
           <div class="card-head">
             <span class="card-date">{fmt_date(a["date"])}</span>
-            <span class="card-kind-badge {"is-digimon" if a["topic"]=="digimon" else "is-decks"}">{a["kind_label"]}</span>
+            <span class="card-kind-badge {"is-digimon" if a["topic"] == "digimon" else "is-decks"}">{a["kind_label"]}</span>
             <span class="card-idx">idx {a["idx"]}</span>
           </div>
           <div class="feed-title">{a["title"]}</div>
@@ -117,11 +132,11 @@ def main() -> None:
             for a in items
         )
         feed_blocks.append(
-            f'''      <div class="tl-month">
+            f"""      <div class="tl-month">
         <span class="tl-month-label">{month_label(ym)}</span>
-        <span class="tl-month-count">{len(items)} update{"" if len(items)==1 else "s"}</span>
+        <span class="tl-month-count">{len(items)} update{"" if len(items) == 1 else "s"}</span>
       </div>
-{cards}'''
+{cards}"""
         )
     feed_html = "\n".join(feed_blocks)
 
@@ -242,7 +257,9 @@ def main() -> None:
 """
 
     OUT.write_text(html, encoding="utf-8")
-    print(f"Wrote {OUT.relative_to(PROJ)} — {total_activity} activity items, {len(preview)} in preview")
+    print(
+        f"Wrote {OUT.relative_to(PROJ)} — {total_activity} activity items, {len(preview)} in preview"
+    )
 
 
 if __name__ == "__main__":

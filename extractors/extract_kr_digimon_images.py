@@ -121,11 +121,13 @@ def main() -> None:
             out.write_bytes(blob)
             post["image_kr"] = f"img/digimon/{out.name}"
             extracted += 1
-            print(f"{kind}_{idx}: {out.name} ({len(blob)//1024} KB)")
+            print(f"{kind}_{idx}: {out.name} ({len(blob) // 1024} KB)")
 
     SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\nExtracted: {extracted}, kept existing: {skipped_existing}, "
-          f"no source_kr: {no_source}, no image: {no_image}")
+    print(
+        f"\nExtracted: {extracted}, kept existing: {skipped_existing}, "
+        f"no source_kr: {no_source}, no image: {no_image}"
+    )
 
 
 if __name__ == "__main__":

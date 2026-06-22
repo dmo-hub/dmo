@@ -8,8 +8,10 @@ Setup before running this:
   4. Click the CAPTCHA. Wait until the actual wiki page (with the Pages-in-category list) is visible.
   5. Run this script.
 """
+
 import sys
 from pathlib import Path
+
 from playwright.sync_api import sync_playwright
 
 sys.stdout.reconfigure(encoding="utf-8")

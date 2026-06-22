@@ -19,10 +19,11 @@ so we union with whatever was already on the record. Names are matched
 case-insensitively after stripping spaces / punctuation (e.g. gameking
 "BloomLordmon" → JSON "Bloomlordmon", "Kuzuhamon Miko Mode" → "Kuzuhamon MikoMode").
 """
+
+import glob
 import json
 import re
 import sys
-import glob
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -105,8 +106,9 @@ def main() -> None:
                 name_index[norm(json_name)] = (kind, idx, json_name)
 
     updated, skipped = 0, []
-    for fname in sorted(glob.glob(str(CACHE / "event_*.html"))
-                        + glob.glob(str(CACHE / "patch_*.html"))):
+    for fname in sorted(
+        glob.glob(str(CACHE / "event_*.html")) + glob.glob(str(CACHE / "patch_*.html"))
+    ):
         text = html_to_text(Path(fname).read_text(encoding="utf-8"))
         entries = parse_entries(text)
         if not entries:
@@ -121,11 +123,10 @@ def main() -> None:
                 skipped.append(parsed_name)
                 continue
             kind, idx, json_name = hit
-            attrs = data[kind][idx].setdefault("attributes", {}) \
-                                   .setdefault(json_name, {})
+            attrs = data[kind][idx].setdefault("attributes", {}).setdefault(json_name, {})
             # Skip if the rebalance post IS the digimon's own announcement
             # (no point linking back to itself).
-            self_source = (kind == src_kind and idx == src_idx)
+            self_source = kind == src_kind and idx == src_idx
             current = list(attrs.get("families", []))
             before = list(current)
             for f in new_families:
@@ -138,24 +139,26 @@ def main() -> None:
             if not self_source:
                 sources = attrs.setdefault("rebalance_sources", [])
                 # Dedupe by (kind, idx) — one post can only contribute once.
-                if not any(s["kind"] == src_kind and s["idx"] == src_idx
-                           for s in sources):
-                    sources.append({
-                        "kind": src_kind,
-                        "idx": src_idx,
-                        "url": source_url(src_kind, src_idx),
-                        "families": new_families,
-                    })
+                if not any(s["kind"] == src_kind and s["idx"] == src_idx for s in sources):
+                    sources.append(
+                        {
+                            "kind": src_kind,
+                            "idx": src_idx,
+                            "url": source_url(src_kind, src_idx),
+                            "families": new_families,
+                        }
+                    )
 
             if current != before:
                 updated += 1
                 print(f"  ✓ {json_name}: {before} → {current}  (from {src_kind}_{src_idx})")
             else:
-                print(f"  · {json_name}: already has {new_families}  "
-                      f"(source recorded: {src_kind}_{src_idx})")
+                print(
+                    f"  · {json_name}: already has {new_families}  "
+                    f"(source recorded: {src_kind}_{src_idx})"
+                )
 
-    SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2),
-                    encoding="utf-8")
+    SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n--- updated {updated} entries, {len(skipped)} unmatched ---")
     if skipped:
         for s in skipped:

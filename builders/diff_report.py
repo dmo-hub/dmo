@@ -61,10 +61,7 @@ def main():
     print(f"Scanned:     {scan.get('scanned')}")
     print(f"Matched posts in scan:   {scan.get('matched_posts')}")
     print(f"New decks total in scan: {scan.get('new_deck_count')}")
-    print(
-        f"Posts in current report: "
-        f"event={len(report['event'])} patch={len(report['patch'])}"
-    )
+    print(f"Posts in current report: event={len(report['event'])} patch={len(report['patch'])}")
     print()
 
     # Build idx sets per kind
@@ -89,14 +86,12 @@ def main():
         for i in missed:
             r = scan_by_kind[kind][i]
             decks = " / ".join(r["new_decks"])
-            print(
-                f"    idx {i:>5} ({r['date']}) [{r['subject'][:60]}] -> {decks}"
-            )
+            print(f"    idx {i:>5} ({r['date']}) [{r['subject'][:60]}] -> {decks}")
         if extra:
             print(f"  In report but missing in scan ({len(extra)}):")
             for i in extra:
                 rep = report[kind][i]
-                print(f"    idx {i:>5} - {rep.get('name','')}")
+                print(f"    idx {i:>5} - {rep.get('name', '')}")
         print()
 
     # Save concise comparison json

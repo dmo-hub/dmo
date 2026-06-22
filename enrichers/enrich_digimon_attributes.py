@@ -41,13 +41,28 @@ ABBR = {"Vaccine": "VA", "Virus": "VI", "Data": "DA", "Free": "FR"}
 
 BASIC_ATTRS = {"Vaccine", "Virus", "Data", "Free"}
 NATURAL_ATTRS = {
-    "Fire", "Water", "Earth", "Wind", "Wood", "Light",
-    "Steel", "Thunder", "Pitch Black", "Neutral",
+    "Fire",
+    "Water",
+    "Earth",
+    "Wind",
+    "Wood",
+    "Light",
+    "Steel",
+    "Thunder",
+    "Pitch Black",
+    "Neutral",
 }
 FAMILIES = {
-    "Virus Busters", "Wind Guardians", "Nightmare Soldiers", "Jungle Troopers",
-    "Nature Spirits", "Deep Savers", "Metal Empire", "Dragon's Roar",
-    "Unknown", "Dark Area",
+    "Virus Busters",
+    "Wind Guardians",
+    "Nightmare Soldiers",
+    "Jungle Troopers",
+    "Nature Spirits",
+    "Deep Savers",
+    "Metal Empire",
+    "Dragon's Roar",
+    "Unknown",
+    "Dark Area",
 }
 
 
@@ -60,6 +75,7 @@ def parse_infobox(html: str) -> dict | None:
     digimon infobox. Both dmowiki and (formerly) dmw use the same scraper-*
     ids — this still works for the dmowiki cache we keep.
     """
+
     def cell_by_id(id_: str) -> str | None:
         m = re.search(rf'id="{id_}"[^>]*>(.*?)</td>', html, re.S)
         if not m:
@@ -70,8 +86,7 @@ def parse_infobox(html: str) -> dict | None:
     natural = cell_by_id("scraper-digimon-naturalattribute")
 
     families: list[str] = []
-    m = re.search(r"Families:\s*</a>\s*</b>\s*</td>\s*<td[^>]*>(.*?)</td>",
-                  html, re.S)
+    m = re.search(r"Families:\s*</a>\s*</b>\s*</td>\s*<td[^>]*>(.*?)</td>", html, re.S)
     if m:
         cell = m.group(1)
         for fm in re.finditer(
@@ -145,7 +160,7 @@ def lookup(name: str) -> tuple[dict, str] | None:
         lookup._rank_map = build_rank_u_map()  # type: ignore[attr-defined]
     slug = resolve_slug(name, lookup._rank_map)  # type: ignore[attr-defined]
     if not slug:
-        print(f"    ✗ no slug mapping (run fetch_dmowiki_digimon.py first)")
+        print("    ✗ no slug mapping (run fetch_dmowiki_digimon.py first)")
         return None
     f = CACHE / f"dmowiki_{safe_filename(slug)}.html"
     if not f.exists():
@@ -182,8 +197,7 @@ def main() -> None:
             if new_attrs:
                 post["attributes"] = new_attrs
 
-    SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2),
-                    encoding="utf-8")
+    SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n--- Updated {updated} digimon entries in {SCAN.name} ---")
     if missing:
         print(f"--- {len(missing)} entries had no dmowiki match: ---")

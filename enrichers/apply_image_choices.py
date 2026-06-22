@@ -38,7 +38,10 @@ CHOICES: dict[tuple[str, str], tuple] = {
     ("event", "784"): ("EN",),
     ("event", "791"): ("URL", "https://dmowiki.com/images/5/52/Lilithmon_X.png"),
     ("event", "798"): ("KR",),
-    ("event", "810"): ("URL", "https://static.wikia.nocookie.net/digimon/images/7/7c/Abbadomon_core_101.jpg/revision/latest?cb=20210928124811&path-prefix=zh"),
+    ("event", "810"): (
+        "URL",
+        "https://static.wikia.nocookie.net/digimon/images/7/7c/Abbadomon_core_101.jpg/revision/latest?cb=20210928124811&path-prefix=zh",
+    ),
     ("patch", "4110"): ("EN",),
     ("patch", "4121"): ("URL", "https://wikimon.net/images/d/d7/Omegamonx.jpg"),
     ("patch", "4148"): ("EN",),
@@ -122,7 +125,9 @@ def apply(kind: str, idx: str, post: dict, action: tuple) -> None:
         new_file.write_bytes(r.content)
         post["image"] = f"img/digimon/{new_file.name}"
         post.pop("image_kr", None)
-        print(f"  {kind} {idx}: downloaded {new_file.name} ({len(r.content)//1024} KB) from {url[:60]}")
+        print(
+            f"  {kind} {idx}: downloaded {new_file.name} ({len(r.content) // 1024} KB) from {url[:60]}"
+        )
 
     elif action[0] == "REMOVE":
         delete_existing(prefix, idx)

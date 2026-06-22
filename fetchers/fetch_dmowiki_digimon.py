@@ -21,6 +21,7 @@ the script:
 After fetching, run  python enrich_digimon_attributes.py  to parse the new
 cache files into scan_result_digimon.json.
 """
+
 import json
 import re
 import sys
@@ -64,9 +65,7 @@ def build_rank_u_map() -> dict[str, str]:
     """Parse rank_u.html for (title, href) pairs → {title: slug}."""
     html = RANK_U.read_text(encoding="utf-8")
     out: dict[str, str] = {}
-    for href, title in re.findall(
-        r'<li><a href="([^"]+)" title="([^"]+)">', html
-    ):
+    for href, title in re.findall(r'<li><a href="([^"]+)" title="([^"]+)">', html):
         slug = href.rsplit("/", 1)[-1]
         out[title] = slug
     return out
@@ -79,9 +78,11 @@ def resolve_slug(name: str, rank_map: dict[str, str]) -> str | None:
     # Exact match against rank_u titles
     if name in rank_map:
         return rank_map[name]
+
     # Normalize: collapse spaces/punctuation, try fuzzy contains both ways
     def norm(s: str) -> str:
         return re.sub(r"[^a-z0-9]", "", s.lower())
+
     n = norm(name)
     for title, slug in rank_map.items():
         t = norm(title)
@@ -119,7 +120,7 @@ def fetch_one(page, slug: str, out: Path) -> bool:
         return False
 
     # Wait up to 60s for the page to render past Cloudflare / for firstHeading.
-    for i in range(30):
+    for _ in range(30):
         title = page.title()
         if "Just a moment" in title:
             time.sleep(2)
@@ -168,10 +169,13 @@ def main() -> None:
         # Reuse an existing dmowiki tab if there is one (CF cookies already set
         # in this context, so a fresh page would work too — but reusing is
         # friendlier on the user).
-        page = next(
-            (pg for pg in ctx.pages if "dmowiki.com" in pg.url),
-            None,
-        ) or ctx.new_page()
+        page = (
+            next(
+                (pg for pg in ctx.pages if "dmowiki.com" in pg.url),
+                None,
+            )
+            or ctx.new_page()
+        )
         print(f"\nUsing tab: {page.url}")
 
         # Sanity-check Cloudflare clearance.

@@ -111,8 +111,10 @@ def find_kr_matches(kr_kw: str, releases: list[dict]) -> list[dict]:
 
 def pick_closest(matches: list[dict], en_date: date) -> dict:
     """Closest KR date to en_date; ties prefer KR <= EN (gameking translates from KR)."""
-    return min(matches, key=lambda r: (abs((en_date - parse_iso(r["date"])).days),
-                                       parse_iso(r["date"]) > en_date))
+    return min(
+        matches,
+        key=lambda r: (abs((en_date - parse_iso(r["date"])).days), parse_iso(r["date"]) > en_date),
+    )
 
 
 def main() -> None:
@@ -138,8 +140,10 @@ def main() -> None:
                     o, f"https://www.digimonmasters.com/news/newsBoard_sub.aspx?o={o}&Btype=Update"
                 )
                 overridden += 1
-                print(f"  {kind} {idx} ({post['date']}) → KR o={o} [OVERRIDE]: "
-                      f"{', '.join(post['digimon'])}")
+                print(
+                    f"  {kind} {idx} ({post['date']}) → KR o={o} [OVERRIDE]: "
+                    f"{', '.join(post['digimon'])}"
+                )
                 continue
 
             en_date = parse_mmddyyyy(post["date"])
@@ -160,8 +164,10 @@ def main() -> None:
                 post["source_kr"] = kr_post["url"]
                 matched += 1
                 tag = f" [{via_kw[2]} candidates]" if via_kw[2] > 1 else ""
-                print(f"  {kind} {idx} ({post['date']}) → KR o={kr_post['o']} "
-                      f"({kr_post['date']}){tag}: {', '.join(kr_post['kr_names'])}")
+                print(
+                    f"  {kind} {idx} ({post['date']}) → KR o={kr_post['o']} "
+                    f"({kr_post['date']}){tag}: {', '.join(kr_post['kr_names'])}"
+                )
             else:
                 unmatched.append(f"{kind} {idx} ({post['date']}): {post['digimon']}")
                 post.pop("source_kr", None)

@@ -96,7 +96,7 @@ def main() -> None:
             out.write_bytes(blob)
             # Path relative to docs/ (used as <img src=...> from docs/digimon.html)
             post["image"] = f"img/digimon/{out.name}"
-            print(f"{kind}_{idx}: {out.name} ({len(blob)//1024} KB)")
+            print(f"{kind}_{idx}: {out.name} ({len(blob) // 1024} KB)")
 
     SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\nUpdated {SCAN.name}")

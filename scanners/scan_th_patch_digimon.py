@@ -26,8 +26,10 @@ CACHE = PROJ / "cache"
 INDEX = PROJ / "data" / "th_patch_index.json"
 OUT = PROJ / "data" / "th_patch_digimon.json"
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
 
 # "ดิจิมอนใหม่ : <name>" — capture up to a sentence break / next section keyword
 NEW_DIGIMON_RE = re.compile(
@@ -36,13 +38,20 @@ NEW_DIGIMON_RE = re.compile(
 )
 
 THAI_MONTHS = {
-    "มกราคม": 1, "กุมภาพันธ์": 2, "มีนาคม": 3, "เมษายน": 4,
-    "พฤษภาคม": 5, "มิถุนายน": 6, "กรกฎาคม": 7, "สิงหาคม": 8,
-    "กันยายน": 9, "ตุลาคม": 10, "พฤศจิกายน": 11, "ธันวาคม": 12,
+    "มกราคม": 1,
+    "กุมภาพันธ์": 2,
+    "มีนาคม": 3,
+    "เมษายน": 4,
+    "พฤษภาคม": 5,
+    "มิถุนายน": 6,
+    "กรกฎาคม": 7,
+    "สิงหาคม": 8,
+    "กันยายน": 9,
+    "ตุลาคม": 10,
+    "พฤศจิกายน": 11,
+    "ธันวาคม": 12,
 }
-THAI_DATE_RE = re.compile(
-    r"(\d{1,2})\s+(" + "|".join(THAI_MONTHS) + r")\s+(\d{4})"
-)
+THAI_DATE_RE = re.compile(r"(\d{1,2})\s+(" + "|".join(THAI_MONTHS) + r")\s+(\d{4})")
 
 # Banner image: wp-content/uploads/YYYY/MM/<name>.<ext>, original (not -WxH suffixed).
 IMG_RE = re.compile(

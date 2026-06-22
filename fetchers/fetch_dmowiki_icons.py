@@ -16,6 +16,7 @@ Filenames written under docs/img/icons/:
 Run with the same Chrome-with-CDP session used by fetch_dmowiki_digimon.py
 (must have a valid CF cookie — solve CAPTCHA on any dmowiki page first).
 """
+
 import sys
 from pathlib import Path
 
@@ -40,29 +41,29 @@ ICONS: dict[str, str] = {
     "/images/e/e5/NO1.png": "attr-Free.png",
     "/images/f/fd/UN1.png": "attr-Unknown.png",
     # Natural attributes (elements) — flat /images/<X>/<XX>/<Name>.png paths
-    "/images/3/30/Fire.png":          "elem-Fire.png",
-    "/images/a/a6/Light.png":         "elem-Light.png",
-    "/images/d/df/Wood.png":          "elem-Wood.png",
-    "/images/b/bf/Wind.png":          "elem-Wind.png",
-    "/images/c/c9/Steel.png":         "elem-Steel.png",
-    "/images/3/3d/Thunder.png":       "elem-Thunder.png",
-    "/images/9/9d/Water.png":         "elem-Water.png",
-    "/images/a/ae/Land.png":          "elem-Earth.png",      # wiki "Land" = game "Earth"
-    "/images/7/77/Ice.png":           "elem-Ice.png",
-    "/images/1/10/Pitch_Black.png":   "elem-Pitch_Black.png",
-    "/images/b/b3/Neutral.png":       "elem-Neutral.png",
+    "/images/3/30/Fire.png": "elem-Fire.png",
+    "/images/a/a6/Light.png": "elem-Light.png",
+    "/images/d/df/Wood.png": "elem-Wood.png",
+    "/images/b/bf/Wind.png": "elem-Wind.png",
+    "/images/c/c9/Steel.png": "elem-Steel.png",
+    "/images/3/3d/Thunder.png": "elem-Thunder.png",
+    "/images/9/9d/Water.png": "elem-Water.png",
+    "/images/a/ae/Land.png": "elem-Earth.png",  # wiki "Land" = game "Earth"
+    "/images/7/77/Ice.png": "elem-Ice.png",
+    "/images/1/10/Pitch_Black.png": "elem-Pitch_Black.png",
+    "/images/b/b3/Neutral.png": "elem-Neutral.png",
     # Field / family icons
-    "/images/5/56/Virus_Busters.png":      "field-Virus_Busters.png",
-    "/images/f/fa/Wind_Guardians.png":     "field-Wind_Guardians.png",
+    "/images/5/56/Virus_Busters.png": "field-Virus_Busters.png",
+    "/images/f/fa/Wind_Guardians.png": "field-Wind_Guardians.png",
     "/images/3/30/Nightmare_Soldiers.png": "field-Nightmare_Soldiers.png",
-    "/images/e/e5/Jungle_Troopers.png":    "field-Jungle_Troopers.png",
-    "/images/e/e1/Nature_Spirits.png":     "field-Nature_Spirits.png",
-    "/images/b/b1/Deep_Savers.png":        "field-Deep_Savers.png",
-    "/images/7/70/Metal_Empire.png":       "field-Metal_Empire.png",
-    "/images/9/95/Dragons_Roar.png":       "field-Dragons_Roar.png",
-    "/images/d/dd/Unknown.png":            "field-Unknown.png",
-    "/images/3/36/Dark_Area.png":          "field-Dark_Area.png",
-    "/images/b/bb/TBD_Icon.png":           "field-TBD.png",
+    "/images/e/e5/Jungle_Troopers.png": "field-Jungle_Troopers.png",
+    "/images/e/e1/Nature_Spirits.png": "field-Nature_Spirits.png",
+    "/images/b/b1/Deep_Savers.png": "field-Deep_Savers.png",
+    "/images/7/70/Metal_Empire.png": "field-Metal_Empire.png",
+    "/images/9/95/Dragons_Roar.png": "field-Dragons_Roar.png",
+    "/images/d/dd/Unknown.png": "field-Unknown.png",
+    "/images/3/36/Dark_Area.png": "field-Dark_Area.png",
+    "/images/b/bb/TBD_Icon.png": "field-TBD.png",
 }
 
 

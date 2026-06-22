@@ -24,8 +24,18 @@ OUT = PROJ / "docs" / "digimon.html"
 
 
 MONTH_NAMES = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
 ]
 
 
@@ -90,18 +100,36 @@ def canonical_src_key(url: str) -> tuple[str, str]:
     return ("other", url)
 
 
-ATTR_ABBR_MAP = {"Vaccine": "VA", "Virus": "VI", "Data": "DA",
-                 "Free": "FR", "Unknown": "UN"}
+ATTR_ABBR_MAP = {"Vaccine": "VA", "Virus": "VI", "Data": "DA", "Free": "FR", "Unknown": "UN"}
 
 ELEM_ICON = {
-    "Light": "Light", "Fire": "Fire", "Water": "Water", "Wind": "Wind",
-    "Wood": "Wood", "Earth": "Earth", "Steel": "Steel", "Thunder": "Thunder",
-    "Ice": "Ice", "Neutral": "Neutral", "Pitch Black": "Pitch_Black",
+    "Light": "Light",
+    "Fire": "Fire",
+    "Water": "Water",
+    "Wind": "Wind",
+    "Wood": "Wood",
+    "Earth": "Earth",
+    "Steel": "Steel",
+    "Thunder": "Thunder",
+    "Ice": "Ice",
+    "Neutral": "Neutral",
+    "Pitch Black": "Pitch_Black",
 }
 # Full Natural-Attribute set, shown in the filter even when no digimon has
 # that element yet (ordered by element, not by what's present in the data).
-ELEM_ORDER = ["Fire", "Water", "Ice", "Wind", "Wood", "Earth",
-              "Steel", "Thunder", "Light", "Pitch Black", "Neutral"]
+ELEM_ORDER = [
+    "Fire",
+    "Water",
+    "Ice",
+    "Wind",
+    "Wood",
+    "Earth",
+    "Steel",
+    "Thunder",
+    "Light",
+    "Pitch Black",
+    "Neutral",
+]
 FAMILY_ICON = {
     "Virus Busters": "Virus_Busters",
     "Wind Guardians": "Wind_Guardians",
@@ -117,10 +145,19 @@ FAMILY_ICON = {
 }
 # Full Families set, shown in the filter even when no digimon has that family
 # yet. Real fields first (canonical order), placeholders (Unknown/TBD) last.
-FAMILY_ORDER = ["Nature Spirits", "Deep Savers", "Nightmare Soldiers",
-                "Wind Guardians", "Metal Empire", "Virus Busters",
-                "Dragon's Roar", "Dark Area", "Jungle Troopers",
-                "Unknown", "TBD"]
+FAMILY_ORDER = [
+    "Nature Spirits",
+    "Deep Savers",
+    "Nightmare Soldiers",
+    "Wind Guardians",
+    "Metal Empire",
+    "Virus Busters",
+    "Dragon's Roar",
+    "Dark Area",
+    "Jungle Troopers",
+    "Unknown",
+    "TBD",
+]
 
 
 def elem_slug(value: str) -> str:
@@ -159,7 +196,7 @@ def render_digimon(name: str, attrs: dict | None, show_name: bool = True) -> str
             src_links = "".join(
                 f'<a class="rebalance-src" href="{s["url"]}" target="_blank" '
                 f'title="Families updated in {s["kind"]}_{s["idx"]}">'
-                f'updated&nbsp;{s["kind"][0]}{s["idx"]}</a>'
+                f"updated&nbsp;{s['kind'][0]}{s['idx']}</a>"
                 for s in attrs.get("rebalance_sources", [])
             )
             rows.append(
@@ -196,7 +233,7 @@ def render() -> str:
     )
 
     # Group by month
-    by_month: "OrderedDict[str, list[tuple[str, str, dict]]]" = OrderedDict()
+    by_month: OrderedDict[str, list[tuple[str, str, dict]]] = OrderedDict()
     for kind, idx, p in merged:
         ym = month_key(p.get("date"))
         by_month.setdefault(ym, []).append((kind, idx, p))
@@ -225,7 +262,7 @@ def render() -> str:
                 f'<a class="src-label" href="{u}" target="_blank" '
                 f'title="{_link_text(u, kind)}">{label}</a>'
                 f'<span class="src-date">{date_str}</span>'
-                f'</span>'
+                f"</span>"
             )
         return "".join(parts)
 
@@ -245,12 +282,15 @@ def render() -> str:
         img_block = (
             f'<a href="{img_path}" target="_blank">'
             f'<img class="card-image" src="{img_path}" alt="idx {idx}" loading="lazy">'
-            f'</a>'
-            if img_path else ""
+            f"</a>"
+            if img_path
+            else ""
         )
 
         all_attrs = sorted({a.get("attribute") for a in attrs_map.values() if a.get("attribute")})
-        all_elems = sorted({a.get("natural_attribute") for a in attrs_map.values() if a.get("natural_attribute")})
+        all_elems = sorted(
+            {a.get("natural_attribute") for a in attrs_map.values() if a.get("natural_attribute")}
+        )
         all_fams = sorted({f for a in attrs_map.values() for f in a.get("families", [])})
 
         return f"""        <article class="card tl-entry" id="{prefix}{idx}"
@@ -272,11 +312,11 @@ def render() -> str:
     for ym, entries in by_month.items():
         cards = "\n".join(render_entry(idx, p, kind) for kind, idx, p in entries)
         timeline_blocks.append(
-            f'''      <div class="tl-month">
+            f"""      <div class="tl-month">
         <span class="tl-month-label">{month_label(ym)}</span>
         <span class="tl-month-count">{len(entries)} post{"" if len(entries) == 1 else "s"}</span>
       </div>
-{cards}'''
+{cards}"""
         )
     timeline_html = "\n".join(timeline_blocks)
 
@@ -314,13 +354,11 @@ def render() -> str:
     # plus any data element not in the canonical order (future-proofing).
     elem_values = ELEM_ORDER + [e for e in seen_elems if e not in ELEM_ORDER]
     elem_pills = "".join(
-        filter_pill("elem", v, elem_slug(v), "chip-elem", "elem")
-        for v in elem_values
+        filter_pill("elem", v, elem_slug(v), "chip-elem", "elem") for v in elem_values
     )
     fam_values = FAMILY_ORDER + [f for f in seen_fams if f not in FAMILY_ORDER]
     fam_pills = "".join(
-        filter_pill("family", v, family_slug(v), "chip-families", "field")
-        for v in fam_values
+        filter_pill("family", v, family_slug(v), "chip-families", "field") for v in fam_values
     )
 
     filter_bar = f"""<div class="filter-bar">
