@@ -256,6 +256,52 @@
   .calc-removed { padding: 7px 13px; font-size: 11.5px; color: var(--muted-soft);
     border-top: 1px solid var(--hairline); background: var(--surface-soft); }
   .calc-removed a { color: var(--coral); cursor: pointer; text-decoration: none; }
+
+  /* ===== sponsored ad: floating (desktop) → inline footer (mobile) ===== */
+  .ad-label { font-size: 9.5px; letter-spacing: .8px; text-transform: uppercase;
+    color: var(--muted-soft); font-weight: 600; }
+
+  /* desktop: floating thumbnail bottom-right */
+  .ad-float { position: fixed; right: 18px; bottom: 18px; z-index: 40;
+    width: 200px; background: var(--canvas); border: 1px solid var(--hairline);
+    border-radius: var(--radius); box-shadow: 0 6px 24px rgba(0,0,0,.18);
+    overflow: hidden; }
+  .ad-float[hidden] { display: none; }
+  .ad-float .ad-head { display: flex; align-items: center; justify-content: space-between;
+    padding: 5px 6px 5px 10px; border-bottom: 1px solid var(--hairline); background: var(--surface-strong); }
+  .ad-float .ad-close { appearance: none; border: 0; background: none; cursor: pointer;
+    color: var(--muted-soft); font-size: 16px; line-height: 1; padding: 2px 6px; border-radius: var(--radius-xs); }
+  .ad-float .ad-close:hover { color: var(--coral); background: var(--surface-card); }
+  .ad-float .ad-thumb { display: block; width: 100%; cursor: zoom-in; padding: 0; border: 0;
+    background: none; }
+  .ad-float .ad-thumb img { display: block; width: 100%; height: auto; }
+
+  /* lightbox (shared) */
+  .ad-box { position: fixed; inset: 0; z-index: 60; display: none;
+    align-items: center; justify-content: center; padding: 24px;
+    background: rgba(0,0,0,.62); }
+  .ad-box.open { display: flex; }
+  .ad-box .ad-stage { position: relative; max-width: min(92vw, 560px); max-height: 88vh; }
+  .ad-box .ad-link { display: block; cursor: pointer; border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,.4); }
+  .ad-box .ad-link img { display: block; width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
+  .ad-box .ad-cta { display: block; text-align: center; margin-top: 10px; color: #fff;
+    font-size: 13px; font-weight: 600; text-decoration: none; }
+  .ad-box .ad-cta:hover { text-decoration: underline; }
+  .ad-box .ad-x { position: absolute; top: -14px; right: -14px; width: 32px; height: 32px;
+    border-radius: 50%; border: 0; cursor: pointer; background: var(--canvas); color: var(--ink);
+    font-size: 17px; line-height: 32px; box-shadow: 0 2px 10px rgba(0,0,0,.3); }
+
+  /* inline footer ad — hidden on desktop, shown on mobile */
+  .ad-inline { display: none; }
+  @media (max-width: 720px) {
+    .ad-float { display: none !important; }
+    .ad-inline { display: block; margin: 26px auto 8px; max-width: 360px; text-align: center; }
+    .ad-inline .ad-label { display: block; margin-bottom: 6px; }
+    .ad-inline a { display: block; border: 1px solid var(--hairline); border-radius: var(--radius);
+      overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+    .ad-inline img { display: block; width: 100%; height: auto; }
+  }
 </style>
 </head>
 <body>
@@ -300,13 +346,13 @@
     <div class="calc-body">
       <div class="calc-srvtabs no-export" id="calc-srvtabs"></div>
       <div class="calc-total" id="calc-total" hidden>
-        <div class="ct-row export-only"><span class="t">🏷️ ราคา/แพ็ค</span><span class="vw"><span class="v" id="tot-pricepack">0</span><span class="u">฿</span></span></div>
+        <div class="ct-row export-only"><span class="t">🏷️ ราคา/แพ็ค</span><span class="vw"><span class="v" id="tot-pricepack">0</span><span class="u">VG</span></span></div>
         <div class="ct-row"><span class="t">🎟️ รวมตั๋วที่ใช้</span><span class="vw"><span class="v" id="tot-tickets">0</span><span class="u">ใบ</span></span></div>
         <div class="ct-row"><span class="t">📦 คิดเป็น</span><span class="vw"><span class="v" id="tot-packs">0</span><span class="u">แพ็ค</span></span></div>
-        <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v" id="tot-price">0</span><span class="u">฿</span></span></div>
+        <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v" id="tot-price">0</span><span class="u">VG</span></span></div>
         <div class="ct-stats" id="tot-stats"></div>
         <div class="ct-controls no-export">
-          <label>ราคา/แพ็ค <input type="number" id="price-pack" min="0" step="1" value="240"><span class="cc-unit">฿</span></label>
+          <label>ราคา/แพ็ค <input type="number" id="price-pack" min="0" step="1" value="240"><span class="cc-unit">VG</span></label>
           <span class="fixed">· 1 แพ็ค = 3,000 ตั๋ว</span>
           <span class="spacer"></span>
           <button id="set-master" type="button">ตั้งทุกแถว = 3000 (ถึง Master)</button>
@@ -2443,7 +2489,35 @@
     เว็บ KR/TH เป็น .aspx/WordPress ที่ search index ได้ไม่ครบ — โพสต์อีเวนต์เก่า (KR 2018–2022, NA ก่อน 2021) อาจมีเพิ่มที่ต้องไล่ archive ทีละหน้า.
   </p>
 
+  <!-- mobile-only inline ad (footer) -->
+  <div class="ad-inline">
+    <span class="ad-label">service</span>
+    <a href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">
+      <img src="img/ads/kaisers-lab.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
+    </a>
+  </div>
+
 </main>
+
+<!-- desktop floating ad (bottom-right) -->
+<aside class="ad-float" id="ad-float">
+  <div class="ad-head"><span class="ad-label">service</span>
+    <button class="ad-close" id="ad-close" type="button" title="ปิด service" aria-label="ปิด service">✕</button></div>
+  <button class="ad-thumb" id="ad-thumb" type="button" aria-label="ขยายดู service">
+    <img src="img/ads/kaisers-lab.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
+  </button>
+</aside>
+
+<!-- shared lightbox -->
+<div class="ad-box" id="ad-box" role="dialog" aria-modal="true" aria-label="โฆษณา Kaiser's Lab">
+  <div class="ad-stage">
+    <button class="ad-x" id="ad-x" type="button" title="ปิด" aria-label="ปิด">✕</button>
+    <a class="ad-link" href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">
+      <img src="img/ads/kaisers-lab.png" alt="Kaiser's Lab — Dungeon Service">
+    </a>
+    <a class="ad-cta" href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">เปิดดูใน Facebook ↗</a>
+  </div>
+</div>
 
 <footer class="site-footer">
   Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
@@ -2740,6 +2814,20 @@
 
   fetch('seal_data.json').then(r => r.json()).then(d => { DATA = d; render(); })
     .catch(() => { root.innerHTML = '<div class="calc-empty">โหลดข้อมูลไม่ได้ — เปิดผ่านเว็บ (Pages) ไม่ใช่ไฟล์ตรง ๆ</div>'; });
+})();
+
+// sponsored floating ad: close (this load only — returns on refresh) + click-to-zoom lightbox
+(() => {
+  const float = document.getElementById('ad-float');
+  const box = document.getElementById('ad-box');
+
+  document.getElementById('ad-close').addEventListener('click', () => { float.hidden = true; });
+  const openBox = () => box.classList.add('open');
+  const closeBox = () => box.classList.remove('open');
+  document.getElementById('ad-thumb').addEventListener('click', openBox);
+  document.getElementById('ad-x').addEventListener('click', closeBox);
+  box.addEventListener('click', e => { if (e.target === box) closeBox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBox(); });
 })();
 </script>
 </body>
