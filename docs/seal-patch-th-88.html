@@ -112,6 +112,12 @@
   table.calc-tbl .status .mx { color: var(--muted); }
   table.calc-tbl tr.sub td { background: var(--surface-card); font-weight: 600; border-top: 2px solid var(--hairline); }
 
+  /* in-game pack-price banner shown atop each category */
+  .pack-banner { padding: 12px 13px; border-bottom: 1px solid var(--hairline);
+    background: var(--surface-soft); text-align: center; }
+  .pack-banner img { display: inline-block; max-width: 100%; height: auto;
+    border-radius: var(--radius-xs); }
+
   /* ===== sponsored ad: floating (desktop) → inline footer (mobile) ===== */
   .ad-label { font-size: 9.5px; letter-spacing: .8px; text-transform: uppercase;
     color: var(--muted-soft); font-weight: 600; }
@@ -123,7 +129,7 @@
     overflow: hidden; }
   .ad-float[hidden] { display: none; }
   .ad-float .ad-head { display: flex; align-items: center; justify-content: space-between;
-    padding: 5px 6px 5px 10px; border-bottom: 1px solid var(--hairline); background: var(--surface-soft); }
+    padding: 5px 6px 5px 10px; border-bottom: 1px solid var(--hairline); background: var(--surface-strong); }
   .ad-float .ad-close { appearance: none; border: 0; background: none; cursor: pointer;
     color: var(--muted-soft); font-size: 16px; line-height: 1; padding: 2px 6px; border-radius: var(--radius-xs); }
   .ad-float .ad-close:hover { color: var(--coral); background: var(--surface-card); }
@@ -193,7 +199,7 @@
 
   <!-- mobile-only inline ad (footer) -->
   <div class="ad-inline">
-    <span class="ad-label">โฆษณา</span>
+    <span class="ad-label">service</span>
     <a href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">
       <img src="img/ads/kaisers-lab.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
     </a>
@@ -203,9 +209,9 @@
 
 <!-- desktop floating ad (bottom-right) -->
 <aside class="ad-float" id="ad-float">
-  <div class="ad-head"><span class="ad-label">โฆษณา</span>
-    <button class="ad-close" id="ad-close" type="button" title="ปิดโฆษณา" aria-label="ปิดโฆษณา">✕</button></div>
-  <button class="ad-thumb" id="ad-thumb" type="button" aria-label="ขยายดูโฆษณา">
+  <div class="ad-head"><span class="ad-label">service</span>
+    <button class="ad-close" id="ad-close" type="button" title="ปิด service" aria-label="ปิด service">✕</button></div>
+  <button class="ad-thumb" id="ad-thumb" type="button" aria-label="ขยายดู service">
     <img src="img/ads/kaisers-lab.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
   </button>
 </aside>
@@ -233,6 +239,7 @@
       key: 'th-88#0',
       caption: 'รายการแลกซีล (Seal Exchange List) · หมวดผลิตซีลมาสเตอร์',
       date: '11.06.2026',
+      pack: { img: 'img/ads/pack-master.png', alt: 'แพ็คเกจซีลมาสเตอร์ [แบบพิเศษ] · 1 EA = 3,800' },
       rows: [
         ["นูเมมอน ซีล", "10", "1", "AT", "100"],
         ["โอดิเนมอน (อะเวคเค่น) ซีล", "1", "10", "AT", "250"],
@@ -263,6 +270,7 @@
       caption: 'รายการแลกซีล (Seal Exchange List) · หมวดผลิตตั๋วแลกซีลแบบพิเศษ',
       date: '11.06.2026',
       noStats: true,
+      pack: { img: 'img/ads/pack-special.png', alt: '[จำกัดเวลา] แพ็คเกจซีลมาสเตอร์แบบพิเศษ · 1 EA = 3,600' },
       rows: [
         ["ซีลแห่งความกระตือรือร้น [กิจกรรม]", "1", "1", "AT", "150"],
         ["ซีลผู้พิทักษ์สิ่งแวดล้อม [กิจกรรม]", "1", "1", "AT", "150"],
@@ -373,12 +381,13 @@
           <span class="head-btns">
             <button class="set-master" type="button">ตั้งทุกแถว = 3000 (ถึง Master)</button>
             <button class="clear-want" type="button">ล้างค่าที่กรอก</button></span></div>
+        ${t.pack ? `<div class="pack-banner"><img src="${t.pack.img}" alt="${t.pack.alt}" loading="lazy"></div>` : ''}
         ${statsList.length > 1 ? `<div class="calc-filter"><span class="lbl">Stat:</span>${chips}</div>` : ''}
         <div class="calc-total">
           <div class="ct-row"><span class="t">🎟️ รวมตั๋วที่ใช้ (หมวดนี้)</span><span class="vw"><span class="v tot-tickets">0</span><span class="u">ใบ</span></span></div>
           <div class="ct-row"><span class="t">📦 คิดเป็น</span><span class="vw"><span class="v tot-packs">0</span><span class="u">แพ็ค</span></span></div>
-          <div class="ct-row ct-pricein"><span class="t">🏷️ ราคา/แพ็ค (หมวดนี้)</span><span class="vw"><input class="price-pack" type="number" min="0" step="1" value="${price[k] ?? 0}"><span class="u">฿</span></span></div>
-          <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v tot-price">0</span><span class="u">฿</span></span></div>
+          <div class="ct-row ct-pricein"><span class="t">🏷️ ราคา/แพ็ค (หมวดนี้)</span><span class="vw"><input class="price-pack" type="number" min="0" step="1" value="${price[k] ?? 0}"><span class="u">VG</span></span></div>
+          <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v tot-price">0</span><span class="u">VG</span></span></div>
           ${t.noStats ? '' : '<div class="ct-stats tot-stats"></div>'}
         </div>
         <div class="calc-tbl-wrap"><table class="calc-tbl">
