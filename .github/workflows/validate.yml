@@ -1,8 +1,9 @@
 name: validate
 
-# Lightweight gate on every push / PR: parse all JSON and check that every
-# published HTML page has balanced tags. No network, no scrape, no commit —
-# just keeps a broken page from reaching GitHub Pages.
+# Lightweight gate on every push / PR: parse all JSON, check that every
+# published HTML page has balanced tags, syntax-check inline JS, and lint the
+# Python (warn-only). No network, no scrape, no commit — just keeps a broken
+# page from reaching GitHub Pages. A run summary is written to the Actions UI.
 
 on:
   push:
@@ -15,8 +16,49 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: JSON + HTML checks
-        run: python tools/validate.py --no-build
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Static checks (JSON + HTML + inline JS)
+        id: checks
+        run: python tools/validate.py --no-build | tee validate.out
+
+      # Ruff is advisory for now (warn-first) — findings show in the summary but
+      # never fail the build. Flip continue-on-error to false to make it a gate.
+      - name: Ruff lint
+        id: ruff_lint
+        continue-on-error: true
+        run: pipx run ruff check . | tee ruff_lint.out
+
+      - name: Ruff format check
+        id: ruff_format
+        continue-on-error: true
+        run: pipx run ruff format --check . | tee ruff_format.out
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "## Validate run"
+            echo ""
+            echo "| Check | Result |"
+            echo "|---|---|"
+            echo "| Static checks (JSON / HTML / inline JS) | ${{ steps.checks.outcome == 'success' && '✅ pass' || '❌ fail' }} |"
+            echo "| Ruff lint (advisory) | ${{ steps.ruff_lint.outcome == 'success' && '✅ clean' || '⚠️ findings' }} |"
+            echo "| Ruff format (advisory) | ${{ steps.ruff_format.outcome == 'success' && '✅ formatted' || '⚠️ needs format' }} |"
+            echo ""
+            if [ "${{ steps.ruff_lint.outcome }}" != "success" ] || [ "${{ steps.ruff_format.outcome }}" != "success" ]; then
+              echo "<details><summary>Ruff output</summary>"
+              echo ""
+              echo '```'
+              cat ruff_lint.out ruff_format.out 2>/dev/null || true
+              echo '```'
+              echo ""
+              echo "</details>"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
