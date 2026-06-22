@@ -111,58 +111,6 @@
   table.calc-tbl .status .got { font-weight: 600; color: var(--ink); }
   table.calc-tbl .status .mx { color: var(--muted); }
   table.calc-tbl tr.sub td { background: var(--surface-card); font-weight: 600; border-top: 2px solid var(--hairline); }
-
-  /* in-game pack-price banner shown atop each category */
-  .pack-banner { padding: 12px 13px; border-bottom: 1px solid var(--hairline);
-    background: var(--surface-soft); text-align: center; }
-  .pack-banner img { display: inline-block; max-width: 100%; height: auto;
-    border-radius: var(--radius-xs); }
-
-  /* ===== sponsored ad: floating (desktop) → inline footer (mobile) ===== */
-  .ad-label { font-size: 9.5px; letter-spacing: .8px; text-transform: uppercase;
-    color: var(--muted-soft); font-weight: 600; }
-
-  /* desktop: floating thumbnail bottom-right */
-  .ad-float { position: fixed; right: 18px; bottom: 18px; z-index: 40;
-    width: 200px; background: var(--canvas); border: 1px solid var(--hairline);
-    border-radius: var(--radius); box-shadow: 0 6px 24px rgba(0,0,0,.18);
-    overflow: hidden; }
-  .ad-float[hidden] { display: none; }
-  .ad-float .ad-head { display: flex; align-items: center; justify-content: space-between;
-    padding: 5px 6px 5px 10px; border-bottom: 1px solid var(--hairline); background: var(--surface-strong); }
-  .ad-float .ad-close { appearance: none; border: 0; background: none; cursor: pointer;
-    color: var(--muted-soft); font-size: 16px; line-height: 1; padding: 2px 6px; border-radius: var(--radius-xs); }
-  .ad-float .ad-close:hover { color: var(--coral); background: var(--surface-card); }
-  .ad-float .ad-thumb { display: block; width: 100%; cursor: zoom-in; padding: 0; border: 0;
-    background: none; }
-  .ad-float .ad-thumb img { display: block; width: 100%; height: auto; }
-
-  /* lightbox (shared) */
-  .ad-box { position: fixed; inset: 0; z-index: 60; display: none;
-    align-items: center; justify-content: center; padding: 24px;
-    background: rgba(0,0,0,.62); }
-  .ad-box.open { display: flex; }
-  .ad-box .ad-stage { position: relative; max-width: min(92vw, 560px); max-height: 88vh; }
-  .ad-box .ad-link { display: block; cursor: pointer; border-radius: var(--radius); overflow: hidden;
-    box-shadow: 0 12px 40px rgba(0,0,0,.4); }
-  .ad-box .ad-link img { display: block; width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
-  .ad-box .ad-cta { display: block; text-align: center; margin-top: 10px; color: #fff;
-    font-size: 13px; font-weight: 600; text-decoration: none; }
-  .ad-box .ad-cta:hover { text-decoration: underline; }
-  .ad-box .ad-x { position: absolute; top: -14px; right: -14px; width: 32px; height: 32px;
-    border-radius: 50%; border: 0; cursor: pointer; background: var(--canvas); color: var(--ink);
-    font-size: 17px; line-height: 32px; box-shadow: 0 2px 10px rgba(0,0,0,.3); }
-
-  /* inline footer ad — hidden on desktop, shown on mobile */
-  .ad-inline { display: none; }
-  @media (max-width: 720px) {
-    .ad-float { display: none !important; }
-    .ad-inline { display: block; margin: 26px auto 8px; max-width: 360px; text-align: center; }
-    .ad-inline .ad-label { display: block; margin-bottom: 6px; }
-    .ad-inline a { display: block; border: 1px solid var(--hairline); border-radius: var(--radius);
-      overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
-    .ad-inline img { display: block; width: 100%; height: auto; }
-  }
 </style>
 </head>
 <body>
@@ -201,7 +149,7 @@
   <div class="ad-inline">
     <span class="ad-label">service</span>
     <a href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">
-      <img src="img/ads/kaisers-lab.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
+      <img src="img/ads/dmo-dungeon-service.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
     </a>
   </div>
 
@@ -212,7 +160,7 @@
   <div class="ad-head"><span class="ad-label">service</span>
     <button class="ad-close" id="ad-close" type="button" title="ปิด service" aria-label="ปิด service">✕</button></div>
   <button class="ad-thumb" id="ad-thumb" type="button" aria-label="ขยายดู service">
-    <img src="img/ads/kaisers-lab.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
+    <img src="img/ads/dmo-dungeon-service.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
   </button>
 </aside>
 
@@ -221,7 +169,7 @@
   <div class="ad-stage">
     <button class="ad-x" id="ad-x" type="button" title="ปิด" aria-label="ปิด">✕</button>
     <a class="ad-link" href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">
-      <img src="img/ads/kaisers-lab.png" alt="Kaiser's Lab — Dungeon Service">
+      <img src="img/ads/dmo-dungeon-service.png" alt="Kaiser's Lab — Dungeon Service">
     </a>
     <a class="ad-cta" href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">เปิดดูใน Facebook ↗</a>
   </div>
@@ -239,7 +187,6 @@
       key: 'th-88#0',
       caption: 'รายการแลกซีล (Seal Exchange List) · หมวดผลิตซีลมาสเตอร์',
       date: '11.06.2026',
-      pack: { img: 'img/ads/pack-master.png', alt: 'แพ็คเกจซีลมาสเตอร์ [แบบพิเศษ] · 1 EA = 3,800' },
       rows: [
         ["นูเมมอน ซีล", "10", "1", "AT", "100"],
         ["โอดิเนมอน (อะเวคเค่น) ซีล", "1", "10", "AT", "250"],
@@ -270,7 +217,6 @@
       caption: 'รายการแลกซีล (Seal Exchange List) · หมวดผลิตตั๋วแลกซีลแบบพิเศษ',
       date: '11.06.2026',
       noStats: true,
-      pack: { img: 'img/ads/pack-special.png', alt: '[จำกัดเวลา] แพ็คเกจซีลมาสเตอร์แบบพิเศษ · 1 EA = 3,600' },
       rows: [
         ["ซีลแห่งความกระตือรือร้น [กิจกรรม]", "1", "1", "AT", "150"],
         ["ซีลผู้พิทักษ์สิ่งแวดล้อม [กิจกรรม]", "1", "1", "AT", "150"],
@@ -364,10 +310,8 @@
       const chips = statsList.map(s => `<button class="calc-chip" data-stat="${s}" type="button">${s}</button>`).join('');
       const rowsHtml = rows.map(r => {
         const name = r[0], ne = name.replace(/"/g, '&quot;'), saved = (want[k] && want[k][name]) || '';
-        const maxTxt = r[4] ? fmtStat(r[3], +r[4]) : '–';
-        const statusCell = t.noStats
-          ? `<td class="status"><span class="mx">${maxTxt}</span></td>`
-          : `<td class="status"><span class="got">0</span>/<span class="mx">${maxTxt}</span></td>`;
+        const statusCell = t.noStats ? '' :
+          `<td class="status"><span class="got">0</span>/<span class="mx">${r[4] ? fmtStat(r[3], +r[4]) : '–'}</span></td>`;
         return `<tr data-seal="${ne}" data-e="${r[1]}" data-f="${r[2]}" data-stat="${r[3]}" data-max="${r[4] || 0}">
           <td>${name}</td><td>${r[3]}</td><td>${r[1]}</td><td>${r[2]}</td>
           <td><input class="want" type="number" min="0" step="1" value="${saved}"></td>
@@ -381,19 +325,18 @@
           <span class="head-btns">
             <button class="set-master" type="button">ตั้งทุกแถว = 3000 (ถึง Master)</button>
             <button class="clear-want" type="button">ล้างค่าที่กรอก</button></span></div>
-        ${t.pack ? `<div class="pack-banner"><img src="${t.pack.img}" alt="${t.pack.alt}" loading="lazy"></div>` : ''}
         ${statsList.length > 1 ? `<div class="calc-filter"><span class="lbl">Stat:</span>${chips}</div>` : ''}
         <div class="calc-total">
           <div class="ct-row"><span class="t">🎟️ รวมตั๋วที่ใช้ (หมวดนี้)</span><span class="vw"><span class="v tot-tickets">0</span><span class="u">ใบ</span></span></div>
           <div class="ct-row"><span class="t">📦 คิดเป็น</span><span class="vw"><span class="v tot-packs">0</span><span class="u">แพ็ค</span></span></div>
-          <div class="ct-row ct-pricein"><span class="t">🏷️ ราคา/แพ็ค (หมวดนี้)</span><span class="vw"><input class="price-pack" type="number" min="0" step="1" value="${price[k] ?? 0}"><span class="u">VG</span></span></div>
-          <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v tot-price">0</span><span class="u">VG</span></span></div>
+          <div class="ct-row ct-pricein"><span class="t">🏷️ ราคา/แพ็ค (หมวดนี้)</span><span class="vw"><input class="price-pack" type="number" min="0" step="1" value="${price[k] ?? 0}"><span class="u">฿</span></span></div>
+          <div class="ct-row ct-price"><span class="t">💵 ราคารวม</span><span class="vw"><span class="v tot-price">0</span><span class="u">฿</span></span></div>
           ${t.noStats ? '' : '<div class="ct-stats tot-stats"></div>'}
         </div>
         <div class="calc-tbl-wrap"><table class="calc-tbl">
-          <tr><th>ซีล</th><th>Stat</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>ต้องการ</th><th>ใช้ตั๋ว</th><th>${t.noStats ? 'Status สูงสุด' : 'Status (ได้/สูงสุด)'}</th></tr>
+          <tr><th>ซีล</th><th>Stat</th><th>ได้/ครั้ง</th><th>ตั๋ว/ครั้ง</th><th>ต้องการ</th><th>ใช้ตั๋ว</th>${t.noStats ? '' : '<th>Status (ได้/สูงสุด)</th>'}</tr>
           ${rowsHtml}
-          <tr class="sub"><td colspan="5">รวมตั๋วตารางนี้</td><td class="tk">0</td><td>${t.noStats ? '' : 'ดู Status แยกตาม Stat ด้านบน ↑'}</td></tr>
+          <tr class="sub"><td colspan="5">รวมตั๋วตารางนี้</td><td class="tk">0</td>${t.noStats ? '' : '<td>ดู Status แยกตาม Stat ด้านบน ↑</td>'}</tr>
         </table></div>`;
       card.querySelectorAll('.calc-chip').forEach(chip => chip.addEventListener('click', () => {
         const set = filterState[k] = filterState[k] || new Set(); const s = chip.dataset.stat;
@@ -427,20 +370,6 @@
   }
 
   render();
-})();
-
-// sponsored floating ad: close (this load only — returns on refresh) + click-to-zoom lightbox
-(() => {
-  const float = document.getElementById('ad-float');
-  const box = document.getElementById('ad-box');
-
-  document.getElementById('ad-close').addEventListener('click', () => { float.hidden = true; });
-  const openBox = () => box.classList.add('open');
-  const closeBox = () => box.classList.remove('open');
-  document.getElementById('ad-thumb').addEventListener('click', openBox);
-  document.getElementById('ad-x').addEventListener('click', closeBox);
-  box.addEventListener('click', e => { if (e.target === box) closeBox(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBox(); });
 })();
 </script>
 </body>
