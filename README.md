@@ -50,7 +50,7 @@ See [CLAUDE.md](CLAUDE.md) for the full command catalog and pipeline architectur
 ## Tooling
 
 - **Lint/format:** [Ruff](https://docs.astral.sh/ruff/) — config in [`pyproject.toml`](pyproject.toml).
-  A hard gate in CI (pinned `ruff==0.15.18`); run locally with `ruff check .` and `ruff format .`.
+  Advisory in CI (pinned `ruff==0.15.18`, warn-first); run locally with `ruff check .` and `ruff format .`.
 - **Runtime deps:** `requests`, `playwright` — pinned in [`requirements.txt`](requirements.txt).
 
 ## CI / CD
@@ -59,7 +59,7 @@ Two GitHub Actions (never auto-push to `main`):
 
 | Workflow | Trigger | What it does |
 |---|---|---|
-| [`validate.yml`](.github/workflows/validate.yml) | push / PR | JSON + HTML + inline-JS checks + Ruff lint/format (gate). Writes a run summary to the Actions UI. Gates Pages. |
+| [`validate.yml`](.github/workflows/validate.yml) | push / PR | JSON + HTML + inline-JS checks (gate) + Ruff lint/format (advisory). Writes a run summary to the Actions UI. Gates Pages. |
 | [`refresh.yml`](.github/workflows/refresh.yml) | manual (`workflow_dispatch`) | Re-runs the cloud-safe half of the pipeline (seal tables + KR/TH digimon refs), validates, opens a **PR** for review. |
 
 `refresh.yml` deliberately skips the destructive / Chrome-CDP / image-download

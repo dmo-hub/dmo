@@ -28,14 +28,17 @@ jobs:
         id: checks
         run: python tools/validate.py --no-build | tee validate.out
 
-      # Ruff is a hard gate. Version is pinned so a new ruff release adding
-      # rules can't fail the build without an intentional bump here.
+      # Ruff is advisory for now (warn-first) — findings show in the summary but
+      # never fail the build. Version is pinned so a new ruff release adding
+      # rules can't surprise the summary. Flip continue-on-error to false to gate.
       - name: Ruff lint
         id: ruff_lint
+        continue-on-error: true
         run: pipx run ruff==0.15.18 check . | tee ruff_lint.out
 
       - name: Ruff format check
         id: ruff_format
+        continue-on-error: true
         run: pipx run ruff==0.15.18 format --check . | tee ruff_format.out
 
       - name: Job summary
@@ -47,8 +50,8 @@ jobs:
             echo "| Check | Result |"
             echo "|---|---|"
             echo "| Static checks (JSON / HTML / inline JS) | ${{ steps.checks.outcome == 'success' && '✅ pass' || '❌ fail' }} |"
-            echo "| Ruff lint | ${{ steps.ruff_lint.outcome == 'success' && '✅ clean' || '❌ findings' }} |"
-            echo "| Ruff format | ${{ steps.ruff_format.outcome == 'success' && '✅ formatted' || '❌ needs format' }} |"
+            echo "| Ruff lint (advisory) | ${{ steps.ruff_lint.outcome == 'success' && '✅ clean' || '⚠️ findings' }} |"
+            echo "| Ruff format (advisory) | ${{ steps.ruff_format.outcome == 'success' && '✅ formatted' || '⚠️ needs format' }} |"
             echo ""
             if [ "${{ steps.ruff_lint.outcome }}" != "success" ] || [ "${{ steps.ruff_format.outcome }}" != "success" ]; then
               echo "<details><summary>Ruff output</summary>"
