@@ -1,6 +1,8 @@
 """Fetch dmowiki Rank U page via Playwright with real Chrome + anti-detection."""
+
 import sys
 from pathlib import Path
+
 from playwright.sync_api import sync_playwright
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -50,7 +52,7 @@ with sync_playwright() as p:
             title = page.title()
             url = page.url
             if i % 5 == 0:
-                print(f"[{i*2}s] title={title!r}")
+                print(f"[{i * 2}s] title={title!r}")
             if "Just a moment" in title:
                 continue
             has_pages = page.locator("#mw-pages").count() > 0
@@ -69,7 +71,7 @@ with sync_playwright() as p:
                 saved = True
                 break
         except Exception as e:
-            print(f"[{i*2}s] err: {e}")
+            print(f"[{i * 2}s] err: {e}")
 
     if not saved:
         try:

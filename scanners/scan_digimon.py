@@ -4,9 +4,9 @@ Reads only from cache/ (no network). Run scan_decks.py first to populate cache.
 Output: scan_result_digimon.json with {kind: {idx: {date, source, digimon: [name, ...]}}}.
 """
 
+import html
 import json
 import re
-import html
 import sys
 from pathlib import Path
 

@@ -100,7 +100,7 @@ def main() -> None:
                 for slug in name_candidates(name):
                     result = try_fetch(slug)
                     if result:
-                        print(f"  ✓ {slug}.{result[1]} ({len(result[0])//1024} KB)")
+                        print(f"  ✓ {slug}.{result[1]} ({len(result[0]) // 1024} KB)")
                         blob_ext = result
                         break
                     else:

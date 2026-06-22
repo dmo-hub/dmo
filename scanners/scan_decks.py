@@ -48,16 +48,12 @@ CONFIGS = {
     },
 }
 
-NEW_MARKER_RE = re.compile(
-    r"\[\s*New\s+Deck\s+Add(?:ed)?\b[^\]]*\]", re.IGNORECASE
-)
+NEW_MARKER_RE = re.compile(r"\[\s*New\s+Deck\s+Add(?:ed)?\b[^\]]*\]", re.IGNORECASE)
 EXISTING_MARKER_RE = re.compile(
     r"\[\s*(?:Existing\s+Deck\s+Effect\s+Changed|Modify\s+Existing\s+Deck)\b[^\]]*\]",
     re.IGNORECASE,
 )
-DIGIMON_LIST_RE = re.compile(
-    r"\[\s*([^\]]{3,90}?)\s*\]\s*Digimon\s*List", re.IGNORECASE
-)
+DIGIMON_LIST_RE = re.compile(r"\[\s*([^\]]{3,90}?)\s*\]\s*Digimon\s*List", re.IGNORECASE)
 
 
 def make_session():
@@ -106,20 +102,14 @@ def enumerate_idx(session, kind, max_pages=1000):
             break
         if page % 20 == 0:
             print(
-                f"  {kind} page {page}: total={len(items)} "
-                f"min_idx={min(seen)} max_idx={max(seen)}"
+                f"  {kind} page {page}: total={len(items)} min_idx={min(seen)} max_idx={max(seen)}"
             )
         time.sleep(0.15)
     return items
 
 
 def html_to_text(html):
-    text = (
-        html.replace("&nbsp;", " ")
-        .replace("–", "-")
-        .replace("—", "-")
-        .replace("−", "-")
-    )
+    text = html.replace("&nbsp;", " ").replace("–", "-").replace("—", "-").replace("−", "-")
     text = re.sub(r"<[^>]+>", " ", text)
     text = re.sub(r"\s+", " ", text)
     return text
@@ -134,9 +124,7 @@ def parse_decks(text):
       3. Each deck's classification = whichever marker preceded it most recently.
     """
     new_marker_positions = [m.end() for m in NEW_MARKER_RE.finditer(text)]
-    existing_marker_positions = [
-        m.end() for m in EXISTING_MARKER_RE.finditer(text)
-    ]
+    existing_marker_positions = [m.end() for m in EXISTING_MARKER_RE.finditer(text)]
 
     new_decks, existing_decks = [], []
     for m in DIGIMON_LIST_RE.finditer(text):
@@ -187,7 +175,7 @@ def fetch_detail(session, kind, idx):
             return r.text, False
         except Exception as e:
             last_err = e
-            time.sleep(1.5 ** attempt)
+            time.sleep(1.5**attempt)
     raise last_err
 
 
@@ -229,16 +217,12 @@ def main():
     events = enumerate_idx(session, "event")
     if events:
         idxs = [int(e["idx"]) for e in events]
-        print(
-            f"  -> {len(events)} posts, idx range {min(idxs)}..{max(idxs)}"
-        )
+        print(f"  -> {len(events)} posts, idx range {min(idxs)}..{max(idxs)}")
     print("PatchNote:")
     patches = enumerate_idx(session, "patch")
     if patches:
         idxs = [int(p["idx"]) for p in patches]
-        print(
-            f"  -> {len(patches)} posts, idx range {min(idxs)}..{max(idxs)}"
-        )
+        print(f"  -> {len(patches)} posts, idx range {min(idxs)}..{max(idxs)}")
 
     print("\n=== Step 2: Fetch detail pages (parallel) ===")
     all_tasks = [("event", e) for e in events] + [("patch", p) for p in patches]
@@ -247,10 +231,7 @@ def main():
 
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
-        futs = {
-            ex.submit(process_one, session, k, it): (k, int(it["idx"]))
-            for k, it in all_tasks
-        }
+        futs = {ex.submit(process_one, session, k, it): (k, int(it["idx"])) for k, it in all_tasks}
         done = 0
         for fut in as_completed(futs):
             done += 1
@@ -273,9 +254,7 @@ def main():
 
     results.sort(key=lambda r: (r["kind"], r["idx"]))
     new_deck_total = sum(len(r.get("new_decks", [])) for r in results)
-    existing_deck_total = sum(
-        len(r.get("existing_decks", [])) for r in results
-    )
+    existing_deck_total = sum(len(r.get("existing_decks", [])) for r in results)
 
     out = {
         "scan_date": time.strftime("%Y-%m-%d %H:%M:%S"),
@@ -288,9 +267,7 @@ def main():
     }
 
     out_file = PROJ / "data" / "scan_result.json"
-    out_file.write_text(
-        json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
+    out_file.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
 
     print("\n=== Result ===")
     print(f"Scanned: {len(events)} EventView + {len(patches)} PatchNote = {total}")

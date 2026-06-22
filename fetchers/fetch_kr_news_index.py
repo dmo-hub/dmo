@@ -67,14 +67,16 @@ def fetch_page(page: int, force: bool = False) -> str:
 def parse_page(html: str) -> list[dict]:
     posts = []
     for m in POST_RE.finditer(html):
-        posts.append({
-            "o": m.group("o"),
-            "num": int(m.group("num")),
-            "date": m.group("date"),
-            "type": classify(m.group("title")),
-            "title": m.group("title").strip(),
-            "url": VIEW_URL.format(o=m.group("o")),
-        })
+        posts.append(
+            {
+                "o": m.group("o"),
+                "num": int(m.group("num")),
+                "date": m.group("date"),
+                "type": classify(m.group("title")),
+                "title": m.group("title").strip(),
+                "url": VIEW_URL.format(o=m.group("o")),
+            }
+        )
     return posts
 
 
@@ -115,8 +117,10 @@ def main(stop_date: str = "2024-01-01", force_first: bool = True) -> None:
         "posts": sorted_posts,
     }
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\nWrote {OUT.name}: {out['total']} posts ({out['update_count']} update, "
-          f"{out['total'] - out['update_count']} other)")
+    print(
+        f"\nWrote {OUT.name}: {out['total']} posts ({out['update_count']} update, "
+        f"{out['total'] - out['update_count']} other)"
+    )
 
 
 if __name__ == "__main__":

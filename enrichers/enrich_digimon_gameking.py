@@ -34,33 +34,44 @@ CACHE = PROJ / "cache"
 
 # Basic-attribute abbreviation → full name (matches gameking + DMW conventions).
 ATTR_MAP = {
-    "Va": "Vaccine", "Vi": "Virus", "Da": "Data",
-    "Fr": "Free",    "Un": "Unknown",
+    "Va": "Vaccine",
+    "Vi": "Virus",
+    "Da": "Data",
+    "Fr": "Free",
+    "Un": "Unknown",
 }
 ATTR_ABBR = {v: k.upper() for k, v in ATTR_MAP.items()}
 
 # gameking element terms → DMW Wiki canonical names (so chips render consistently).
 ELEMENT_MAP = {
     "Darkness": "Pitch Black",
-    "Lightning": "Thunder",   # e784 shows "Thunder (Lightning)" — Thunder wins
+    "Lightning": "Thunder",  # e784 shows "Thunder (Lightning)" — Thunder wins
     # passthrough for already-canonical names
-    "Light": "Light", "Fire": "Fire", "Water": "Water", "Wind": "Wind",
-    "Wood": "Wood", "Earth": "Earth", "Steel": "Steel", "Thunder": "Thunder",
-    "Neutral": "Neutral", "Pitch Black": "Pitch Black",
+    "Light": "Light",
+    "Fire": "Fire",
+    "Water": "Water",
+    "Wind": "Wind",
+    "Wood": "Wood",
+    "Earth": "Earth",
+    "Steel": "Steel",
+    "Thunder": "Thunder",
+    "Neutral": "Neutral",
+    "Pitch Black": "Pitch Black",
 }
 
 # Affiliated-field abbreviation → full family name.
 FIELD_MAP = {
-    "VB":  "Virus Busters",
-    "WG":  "Wind Guardians",
-    "NSp": "Nature Spirits",  "NS":  "Nature Spirits",
-    "DS":  "Deep Savers",
-    "JT":  "Jungle Troopers",
-    "ME":  "Metal Empire",
-    "DR":  "Dragon's Roar",
+    "VB": "Virus Busters",
+    "WG": "Wind Guardians",
+    "NSp": "Nature Spirits",
+    "NS": "Nature Spirits",
+    "DS": "Deep Savers",
+    "JT": "Jungle Troopers",
+    "ME": "Metal Empire",
+    "DR": "Dragon's Roar",
     "NSo": "Nightmare Soldiers",
-    "UK":  "Unknown",
-    "DA":  "Dark Area",
+    "UK": "Unknown",
+    "DA": "Dark Area",
     "TBD": "TBD",
 }
 
@@ -93,12 +104,10 @@ SEP = r"[\s◎]*"  # any whitespace or `◎` glyph between fields
 STAT_BLOCK = re.compile(
     r"(?:Basic\s+)?Attribute\s*:\s*"
     r"(?P<basic>(?:[A-Za-z]+\s*)?(?:\([A-Za-z]{2,3}\))?)"
-    + SEP +
-    r"(?:Natural\s+Attribute|Elemental|Element)\s*:\s*"
+    + SEP
+    + r"(?:Natural\s+Attribute|Elemental|Element)\s*:\s*"
     r"(?P<elem>(?:\([A-Za-z]+\)|[A-Za-z]+))"
-    r"(?:\s*\([A-Za-z ]+\))?"
-    + SEP +
-    r"(?:Affiliated\s+[Ff]ield|Field|Family)\s*:?\s*"
+    r"(?:\s*\([A-Za-z ]+\))?" + SEP + r"(?:Affiliated\s+[Ff]ield|Field|Family)\s*:?\s*"
     r"(?P<field>[A-Za-z, /]+?)"
     r"(?=\s*(?:[-•]|Stat|Skill|How|&|$|\[))",
     re.IGNORECASE,
@@ -275,12 +284,14 @@ def main() -> None:
             # Single-block posts apply to every name.
             names = post["digimon"]
             if len(blocks) == len(names):
-                pairs = list(zip(names, blocks))
+                pairs = list(zip(names, blocks, strict=True))
             elif len(blocks) == 1:
                 pairs = [(n, blocks[0]) for n in names]
             else:
                 # Count mismatch — apply the first block to every name; warn.
-                print(f"  ! {kind}_{idx}: {len(blocks)} blocks vs {len(names)} digimon — using first")
+                print(
+                    f"  ! {kind}_{idx}: {len(blocks)} blocks vs {len(names)} digimon — using first"
+                )
                 pairs = [(n, blocks[0]) for n in names]
 
             print(f"{kind}_{idx}: {origin} → {len(blocks)} block(s)")
@@ -296,8 +307,7 @@ def main() -> None:
                         augmented += 1
                     attrs_map[name] = merged
 
-    SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2),
-                    encoding="utf-8")
+    SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n--- filled {filled} new, augmented {augmented} existing ---")
     if missed:
         print(f"--- {len(missed)} skipped: ---")

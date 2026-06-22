@@ -22,8 +22,10 @@ PROJ = Path(__file__).resolve().parent.parent
 SCAN = PROJ / "data" / "scan_result_digimon.json"
 IMG_DIR = PROJ / "docs" / "img" / "digimon"
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
 
 
 def ext_from(url: str, content_type: str = "") -> str:
@@ -78,7 +80,7 @@ def main() -> None:
             out.write_bytes(r.content)
             post["image_th"] = f"img/digimon/{out.name}"
             extracted += 1
-            print(f"{kind}_{idx}: {out.name} ({len(r.content)//1024} KB)")
+            print(f"{kind}_{idx}: {out.name} ({len(r.content) // 1024} KB)")
 
     SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\nExtracted: {extracted}, kept existing: {skipped_existing}, no TH image URL: {no_url}")

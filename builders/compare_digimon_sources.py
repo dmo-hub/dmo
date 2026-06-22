@@ -13,6 +13,7 @@ has been auto-enriched.
 Run:  python compare_digimon_sources.py        # all digimon
       python compare_digimon_sources.py 663    # just one event idx
 """
+
 import json
 import re
 import sys
@@ -26,14 +27,18 @@ CACHE = PROJ / "cache"
 
 # Re-use parsers we already wrote.
 sys.path.insert(0, str(PROJ))
-from enrich_digimon_gameking import (  # type: ignore
-    html_to_text, parse_stat_blocks, parse_kr_stat_blocks,
-)
 from enrich_digimon_attributes import (  # type: ignore
     parse_dmowiki,
 )
+from enrich_digimon_gameking import (  # type: ignore
+    html_to_text,
+    parse_kr_stat_blocks,
+    parse_stat_blocks,
+)
 from fetch_dmowiki_digimon import (  # type: ignore
-    build_rank_u_map, resolve_slug, safe_filename,
+    build_rank_u_map,
+    resolve_slug,
+    safe_filename,
 )
 
 
@@ -92,7 +97,7 @@ def main() -> None:
     rank_map = build_rank_u_map()
 
     divergences = 0
-    print(f'{"idx":>6}  {"digimon":42s}  {"source":>9}  {"attr":8s} {"element":12s} {"families"}')
+    print(f"{'idx':>6}  {'digimon':42s}  {'source':>9}  {'attr':8s} {'element':12s} {'families'}")
     print("-" * 130)
     for kind in ("event", "patch"):
         for idx, post in data.get(kind, {}).items():
@@ -110,16 +115,15 @@ def main() -> None:
                 # base-form data that disagrees with the game.
                 rows = [
                     ("gameking", gk),
-                    ("kr",       kr),
-                    ("dmowiki",  dmowiki),
+                    ("kr", kr),
+                    ("dmowiki", dmowiki),
                 ]
                 # Decide if there's a non-trivial divergence (ignore None
                 # and ignore order for families).
                 attrs = {r[1].get("attribute") for r in rows if r[1]}
                 elems = {r[1].get("natural_attribute") for r in rows if r[1]}
                 fam_sets = {
-                    frozenset(r[1]["families"])
-                    for r in rows if r[1] and r[1].get("families")
+                    frozenset(r[1]["families"]) for r in rows if r[1] and r[1].get("families")
                 }
                 flag = ""
                 if len({a for a in attrs if a and a != "Unknown"}) > 1:
@@ -131,11 +135,13 @@ def main() -> None:
                 if flag:
                     divergences += 1
 
-                print(f'{(kind[0]+idx):>6}  {name[:42]:42s}                                            {flag}')
+                print(
+                    f"{(kind[0] + idx):>6}  {name[:42]:42s}                                            {flag}"
+                )
                 for src, b in rows:
                     a, e, f = fmt(b)
                     marker = " " if b else "·"
-                    print(f'        {"":42s} {marker} {src:>9s}  {a:8s} {e:12s} {f}')
+                    print(f"        {'':42s} {marker} {src:>9s}  {a:8s} {e:12s} {f}")
                 print()
 
     print(f"-- {divergences} digimon have a non-trivial divergence across sources --")

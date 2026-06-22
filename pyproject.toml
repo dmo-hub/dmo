@@ -14,7 +14,12 @@ extend-exclude = ["__pycache__", "cache", "data", "docs"]
 select = ["E", "W", "F", "I", "UP", "B"]
 # E501 (line too long) is reported by `ruff format`, not the linter, to avoid
 # double-flagging; long centralized config strings in scan_decks are expected.
-ignore = ["E501"]
+# E402 — scripts intentionally call sys.stdout.reconfigure("utf-8") BEFORE any
+#        import, because the repo path contains Thai characters and the default
+#        Windows console encoding crashes on prints (see CLAUDE.md "Conventions").
+# UP031 — the `pattern % (...)` sites are regex templates with literal %s; the
+#        printf form keeps the regex readable, .format would need brace-escaping.
+ignore = ["E501", "E402", "UP031"]
 
 [tool.ruff.format]
 quote-style = "double"

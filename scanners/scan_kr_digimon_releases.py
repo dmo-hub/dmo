@@ -14,7 +14,6 @@ import html
 import json
 import re
 import sys
-import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -86,7 +85,7 @@ def extract_releases(raw_html: str) -> list[str]:
             pos = m.end()
             continue
         # name = everything between the dash and the closing `]`
-        name = text[m.end():end - 1].strip()
+        name = text[m.end() : end - 1].strip()
         if name:
             out.append(name)
         pos = end
@@ -113,13 +112,15 @@ def main() -> None:
                 # shouldn't happen — process() writes the cache
                 continue
             if kr_names:
-                releases.append({
-                    "o": post["o"],
-                    "date": post["date"],
-                    "num": post["num"],
-                    "kr_names": kr_names,
-                    "url": post["url"],
-                })
+                releases.append(
+                    {
+                        "o": post["o"],
+                        "date": post["date"],
+                        "num": post["num"],
+                        "kr_names": kr_names,
+                        "url": post["url"],
+                    }
+                )
 
     releases.sort(key=lambda x: -x["num"])
     out = {

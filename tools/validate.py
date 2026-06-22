@@ -31,8 +31,21 @@ except Exception:
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 PROJ = Path(__file__).resolve().parent.parent
-VOID = {"br", "img", "col", "meta", "link", "input", "hr", "area",
-        "base", "embed", "source", "track", "wbr"}
+VOID = {
+    "br",
+    "img",
+    "col",
+    "meta",
+    "link",
+    "input",
+    "hr",
+    "area",
+    "base",
+    "embed",
+    "source",
+    "track",
+    "wbr",
+}
 
 # Deterministic, cache/data-only builders safe to re-run in CI (no network).
 # Order matters: th_seal_en feeds build_seal_tables.
@@ -45,11 +58,10 @@ IDEMPOTENT_BUILDS = [
 
 def check_json():
     bad = []
-    for p in sorted([*(PROJ / "data").glob("*.json"),
-                     *(PROJ / "docs").glob("*.json")]):
+    for p in sorted([*(PROJ / "data").glob("*.json"), *(PROJ / "docs").glob("*.json")]):
         try:
             json.loads(p.read_text(encoding="utf-8"))
-        except Exception as e:                       # noqa: BLE001
+        except Exception as e:  # noqa: BLE001
             bad.append(f"{p.relative_to(PROJ)}: {e}")
     return bad
 
@@ -85,8 +97,9 @@ def check_html():
         b = _Balance()
         b.feed(p.read_text(encoding="utf-8"))
         if b.stack or b.stray:
-            bad.append(f"{p.relative_to(PROJ)}: "
-                       f"{len(b.stack)} unclosed {b.stack[:5]}, {b.stray} stray")
+            bad.append(
+                f"{p.relative_to(PROJ)}: {len(b.stack)} unclosed {b.stack[:5]}, {b.stray} stray"
+            )
     return bad
 
 
@@ -99,18 +112,18 @@ def _git_state():
     edits (e.g. an uncommitted CLAUDE.md) are filtered out, so the check no
     longer false-fails just because the working tree was dirty when it ran.
     """
-    r = subprocess.run(["git", "status", "--porcelain", "-z"], cwd=PROJ,
-                       capture_output=True, text=True)
+    r = subprocess.run(
+        ["git", "status", "--porcelain", "-z"], cwd=PROJ, capture_output=True, text=True
+    )
     state = {}
     for rec in r.stdout.split("\0"):
         if len(rec) > 3:
-            state[rec[3:]] = rec[:2]   # path -> "XY" status code
+            state[rec[3:]] = rec[:2]  # path -> "XY" status code
     return state
 
 
 # inline <script>…</script> with NO src= attribute (captures the JS body)
-_INLINE_SCRIPT = re.compile(
-    r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", re.S | re.I)
+_INLINE_SCRIPT = re.compile(r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", re.S | re.I)
 
 
 def check_scripts():
@@ -129,14 +142,12 @@ def check_scripts():
         blocks = _INLINE_SCRIPT.findall(p.read_text(encoding="utf-8"))
         if not blocks:
             continue
-        js = "\n;\n".join(blocks)   # ; guards against ASI joining two blocks
-        with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False,
-                                         encoding="utf-8") as f:
+        js = "\n;\n".join(blocks)  # ; guards against ASI joining two blocks
+        with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as f:
             f.write(js)
             tmp = f.name
         try:
-            r = subprocess.run([node, "--check", tmp],
-                               capture_output=True, text=True)
+            r = subprocess.run([node, "--check", tmp], capture_output=True, text=True)
             if r.returncode != 0:
                 msg = (r.stderr.strip().splitlines() or ["syntax error"])[0]
                 bad.append(f"{p.relative_to(PROJ)}: {msg[:200]}")
@@ -149,25 +160,31 @@ def check_idempotent():
     bad = []
     before = _git_state()
     for cmd in IDEMPOTENT_BUILDS:
-        r = subprocess.run([sys.executable, *cmd], cwd=PROJ,
-                           capture_output=True, text=True,
-                           encoding="utf-8", errors="replace")
+        r = subprocess.run(
+            [sys.executable, *cmd],
+            cwd=PROJ,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
         if r.returncode != 0:
             bad.append(f"{cmd[0]} exited {r.returncode}: {r.stderr.strip()[:300]}")
     after = _git_state()
     # a path the builders touched: newly dirty, or whose status code changed
     touched = sorted(p for p, code in after.items() if before.get(p) != code)
     if touched:
-        bad.append("builders are non-idempotent — rebuild changed: "
-                   + ", ".join(touched))
+        bad.append("builders are non-idempotent — rebuild changed: " + ", ".join(touched))
     return bad
 
 
 def main():
     no_build = "--no-build" in sys.argv
-    checks = [("JSON parses", check_json),
-              ("HTML balanced", check_html),
-              ("inline JS syntax", check_scripts)]
+    checks = [
+        ("JSON parses", check_json),
+        ("HTML balanced", check_html),
+        ("inline JS syntax", check_scripts),
+    ]
     if not no_build:
         checks.append(("builders idempotent", check_idempotent))
 
@@ -185,7 +202,7 @@ def main():
         elif skips:
             print(f"skip  {label}")
             for p in skips:
-                print(f"      - {p[len('__skip__:'):].strip()}")
+                print(f"      - {p[len('__skip__:') :].strip()}")
         else:
             print(f"ok    {label}")
 
