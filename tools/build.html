@@ -63,6 +63,11 @@
       <p>regen seal + digimon HTML จาก data ที่มี — ไม่ network, ปลอดภัย</p>
       <button onclick="run('pages')">รัน</button>
     </div>
+    <div class="step" id="s-pages-main">
+      <h3><span class="dot"></span>Build จาก main</h3>
+      <p>build จาก origin/main ใน worktree แยก → copy docs/ กลับ. ไม่แตะไฟล์ที่กำลังแก้</p>
+      <button onclick="run('pages-main')">รัน</button>
+    </div>
     <div class="step" id="s-validate">
       <h3><span class="dot"></span>Validate</h3>
       <p>full check: JSON + HTML balance + inline JS + builder idempotency</p>
