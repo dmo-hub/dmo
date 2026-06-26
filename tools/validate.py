@@ -53,6 +53,7 @@ IDEMPOTENT_BUILDS = [
     ["builders/build_th_seal_en.py"],
     ["builders/build_seal_tables.py"],
     ["builders/build_digimon_html.py"],
+    ["builders/build_nametag_html.py"],
 ]
 
 
