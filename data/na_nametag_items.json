@@ -1,0 +1,1037 @@
+{
+  "source": "dmo.gameking.com NA PatchNote + EventView",
+  "items_tracked": [
+    "Name Tag Enhancement Backup Chip",
+    "Name Tag Enhancement Hacking Tool",
+    "Name Tag Reinforcement Backup Chip",
+    "Name Tag Reinforcement Hacking Tool",
+    "Equipment Data: Name Tag"
+  ],
+  "total_posts": 14,
+  "posts": [
+    {
+      "kind": "patch",
+      "idx": 4157,
+      "date": "",
+      "subject": "10.6.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4157",
+      "items": {
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Glory Pendant Exchange List",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "1",
+              "Glory Shard",
+              "10",
+              "-",
+              "0",
+              "Event"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Glory Pendant Exchange List",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1",
+              "Glory Shard",
+              "25",
+              "-",
+              "0",
+              "Event"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4146,
+      "date": "",
+      "subject": "13.5.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4146",
+      "items": {
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "10ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "10ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "2ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "2ea"
+            ]
+          },
+          {
+            "amount": "5",
+            "source": "exchange",
+            "header": "Exchangement list",
+            "row": [
+              "Letter ‘N’",
+              "1",
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "5",
+              "-"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1ea"
+            ]
+          },
+          {
+            "amount": "3",
+            "source": "exchange",
+            "header": "Exchangement list",
+            "row": [
+              "NADMO R-Conncect",
+              "Letter ‘N’",
+              "Letter ‘N’",
+              "1",
+              "Name Tag Enhancement Backup Chip [Event]",
+              "3",
+              "-"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4136,
+      "date": "",
+      "subject": "15.4.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4136",
+      "items": {
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "1",
+            "source": "box",
+            "header": "Equipment Data Part Random Box",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "1"
+            ]
+          },
+          {
+            "amount": "30 ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package- Heaven Wings 3 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30 ea"
+            ]
+          },
+          {
+            "amount": "30 ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Time Ruler 3 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30 ea"
+            ]
+          },
+          {
+            "amount": "30 ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package - Digimon King 3 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30 ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "5 ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package- Heaven Wings 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "5 ea"
+            ]
+          },
+          {
+            "amount": "5 ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Time Ruler 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "5 ea"
+            ]
+          },
+          {
+            "amount": "5 ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package - Digimon King 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "5 ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "20 ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package- Heaven Wings 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "20 ea"
+            ]
+          },
+          {
+            "amount": "20 ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Time Ruler 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "20 ea"
+            ]
+          },
+          {
+            "amount": "20 ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package - Digimon King 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "20 ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4126,
+      "date": "",
+      "subject": "25.3.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4126",
+      "items": {
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "10ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "10ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "2ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "2ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4118,
+      "date": "",
+      "subject": "11.3.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4118",
+      "items": {
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1",
+            "source": "craft",
+            "header": "New Semester Flame Jumping (Limited) Craft",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1",
+              "New Semester Jumping Coin",
+              "5",
+              "Dazzling New Semester Jumping Coin",
+              "1",
+              "Limited",
+              "10"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "5",
+            "source": "craft",
+            "header": "New Semester Flame Jumping (Normal) Craft",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "5",
+              "New Semester Jumping Coin",
+              "2",
+              "-",
+              "-",
+              "-",
+              "-"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4100,
+      "date": "",
+      "subject": "28.1.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4100",
+      "items": {
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "12ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "12ea"
+            ]
+          },
+          {
+            "amount": "10ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "10ea"
+            ]
+          },
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package – Time Ruler – 5 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          },
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Heaven Wing - 5 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          },
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package – Digimon King – 5 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "1ea"
+            ]
+          },
+          {
+            "amount": "2ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "2ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1ea"
+            ]
+          },
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1ea"
+            ]
+          }
+        ],
+        "Name Tag Reinforcement Backup Chip": [
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package – Time Ruler – 5 Times per account",
+            "row": [
+              "Name Tag Reinforcement Backup Chip [Event]",
+              "5ea"
+            ]
+          },
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Heaven Wing - 5 Times per account",
+            "row": [
+              "Name Tag Reinforcement Backup Chip [Event]",
+              "5ea"
+            ]
+          },
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package – Digimon King – 5 Times per account",
+            "row": [
+              "Name Tag Reinforcement Backup Chip [Event]",
+              "5ea"
+            ]
+          }
+        ],
+        "Name Tag Reinforcement Hacking Tool": [
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package – Time Ruler – 5 Times per account",
+            "row": [
+              "Name Tag Reinforcement Hacking Tool [Event]",
+              "20ea"
+            ]
+          },
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Heaven Wing - 5 Times per account",
+            "row": [
+              "Name Tag Reinforcement Hacking Tool [Event]",
+              "20ea"
+            ]
+          },
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package – Digimon King – 5 Times per account",
+            "row": [
+              "Name Tag Reinforcement Hacking Tool [Event]",
+              "20ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "event",
+      "idx": 810,
+      "date": "",
+      "subject": "14.1.2026 Update",
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=810",
+      "items": {
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Craft item Amount Material Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "1",
+              "Ultimate Mileage Coupon",
+              "2"
+            ]
+          },
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Craft item Amount Material Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool",
+              "1",
+              "Ultimate Mileage Coupon",
+              "4"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Craft item Amount Material Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1",
+              "Ultimate Mileage Coupon",
+              "5"
+            ]
+          },
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Craft item Amount Material Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip",
+              "1",
+              "Ultimate Mileage Coupon",
+              "10"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "event",
+      "idx": 798,
+      "date": "",
+      "subject": "10.12.2025 Update",
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=798",
+      "items": {
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package - Digimon King – 5 Times per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "5ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package - Digimon King – 5 Times per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "20ea"
+            ]
+          }
+        ],
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package - Digimon King – 5 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "event",
+      "idx": 797,
+      "date": "",
+      "subject": "3.12.2025 Update",
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=797",
+      "items": {
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "1ea 1ea 20ea 1ea",
+            "source": "summon",
+            "header": "- New Data Summon - Costume",
+            "row": [
+              "Breakthrough Option Dice Lucky Pouch Equipment Data: Name Tag Option Change Stone Raremon DigiEgg-Lv.5[Champion]",
+              "1ea 1ea 20ea 1ea"
+            ]
+          },
+          {
+            "amount": "100ea",
+            "source": "package",
+            "header": "- Ghost Game Premium Package - One time per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "100ea"
+            ]
+          },
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Reinfoced Magnetic Package - Time Ruler - 3 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          },
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Reinfoced Magnetic Package – Heaven Wing - 3 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          },
+          {
+            "amount": "50ea",
+            "source": "package",
+            "header": "- Tamer Skill improvement Celebration Package [Event] - One time per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "50ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Ghost Game Premium Package - One time per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "5ea"
+            ]
+          },
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Reinfoced Magnetic Package - Time Ruler - 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "5ea"
+            ]
+          },
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Reinfoced Magnetic Package – Heaven Wing - 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "5ea"
+            ]
+          },
+          {
+            "amount": "10ea",
+            "source": "package",
+            "header": "- Tamer Skill improvement Celebration Package [Event] - One time per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "10ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Ghost Game Premium Package - One time per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "20ea"
+            ]
+          },
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Reinfoced Magnetic Package - Time Ruler - 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "20ea"
+            ]
+          },
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Reinfoced Magnetic Package – Heaven Wing - 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "20ea"
+            ]
+          },
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Tamer Skill improvement Celebration Package [Event] - One time per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "30ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "event",
+      "idx": 793,
+      "date": "",
+      "subject": "26.11.2025 Update",
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=793",
+      "items": {
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "12ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "12ea"
+            ]
+          },
+          {
+            "amount": "10ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "10ea"
+            ]
+          },
+          {
+            "amount": "3ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "3ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "1ea"
+            ]
+          },
+          {
+            "amount": "2ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "2ea"
+            ]
+          },
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Craft List Amount Material 1 Amount 1 Material 2 Amount 2 Craft limit",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "1",
+              "15",
+              "-",
+              "-",
+              "Limited to 10 times"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1ea"
+            ]
+          },
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "event",
+      "idx": 784,
+      "date": "",
+      "subject": "01.10.2025 Update",
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=784",
+      "items": {
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "12ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "12ea"
+            ]
+          },
+          {
+            "amount": "10ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "10ea"
+            ]
+          },
+          {
+            "amount": "3ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "3ea"
+            ]
+          },
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package Plus - 10 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "20ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "1ea"
+            ]
+          },
+          {
+            "amount": "2ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "2ea"
+            ]
+          },
+          {
+            "amount": "10ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package Plus - 10 Times per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "10ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1ea"
+            ]
+          },
+          {
+            "amount": "1ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1ea"
+            ]
+          },
+          {
+            "amount": "10ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package Plus - 10 Times per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "10ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "event",
+      "idx": 779,
+      "date": "",
+      "subject": "09.16.2025 Update",
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=779",
+      "items": {
+        "Name Tag Reinforcement Backup Chip": [
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package – Time Ruler – 5 Times per account",
+            "row": [
+              "Name Tag Reinforcement Backup Chip [Event]",
+              "5ea"
+            ]
+          }
+        ],
+        "Name Tag Reinforcement Hacking Tool": [
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package – Time Ruler – 5 Times per account",
+            "row": [
+              "Name Tag Reinforcement Hacking Tool [Event]",
+              "20ea"
+            ]
+          }
+        ],
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package – Time Ruler – 5 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "event",
+      "idx": 774,
+      "date": "",
+      "subject": "26.08.2025 Update",
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=774",
+      "items": {
+        "Name Tag Reinforcement Backup Chip": [
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package – 5 Times per account",
+            "row": [
+              "Name Tag Reinforced Backup Chip [Event]",
+              "5ea"
+            ]
+          },
+          {
+            "amount": "11ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Material Package",
+            "row": [
+              "Name Tag Reinforced Backup Chip [Event]",
+              "11ea"
+            ]
+          }
+        ],
+        "Name Tag Reinforcement Hacking Tool": [
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package – 5 Times per account",
+            "row": [
+              "Name Tag Reinforced Hacking Tool [Event]",
+              "20ea"
+            ]
+          },
+          {
+            "amount": "11ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Material Package",
+            "row": [
+              "Name Tag Reinforced Hacking Tool [Event]",
+              "11ea"
+            ]
+          }
+        ],
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package – 5 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "event",
+      "idx": 765,
+      "date": "",
+      "subject": "05.08.2025 Update",
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=765",
+      "items": {
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "10ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package – 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "10ea"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package – 3 Times per account",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "30ea"
+            ]
+          }
+        ],
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "100ea",
+            "source": "package",
+            "header": "- Reinforced Magnetic Package – 3 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "100ea"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

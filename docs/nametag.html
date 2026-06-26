@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMO Name Tag Items — NA Patch Matrix</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<style>
+  .nt-wrap { overflow-x: auto; border: 1px solid var(--hairline);
+    border-radius: var(--radius); background: var(--canvas); margin-top: 6px; }
+  table.nt { border-collapse: collapse; width: 100%; font-size: 13px;
+    min-width: 640px; font-variant-numeric: tabular-nums; }
+  table.nt th, table.nt td { padding: 8px 12px; text-align: center;
+    border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+  table.nt thead th { background: var(--surface-card); color: var(--ink);
+    font-weight: 600; position: sticky; top: 0; }
+  table.nt thead .nt-grp { border-bottom: 1px solid var(--hairline);
+    border-left: 1px solid var(--hairline); font-size: 11px;
+    letter-spacing: .5px; text-transform: uppercase; color: var(--muted-soft); }
+  .nt-upd-h, .nt-upd { text-align: left !important; }
+  .nt-upd { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+  .nt-kind { font-size: 9.5px; font-weight: 700; letter-spacing: .5px;
+    padding: 2px 7px; border-radius: 9999px; }
+  .nt-kind-patch { background: var(--coral); color: var(--on-primary); }
+  .nt-kind-event { background: var(--teal); color: var(--on-primary); }
+  .nt-src-link { font-size: 11px; font-weight: 500; color: var(--muted-soft);
+    margin-left: auto; }
+  .nt-has { font-weight: 700; color: var(--ink); }
+  .nt-none { color: var(--muted-soft); }
+  /* source sub-row label cell */
+  .nt-srccol, .nt-srccol-h { text-align: left !important; font-size: 12px;
+    font-weight: 600; white-space: nowrap; }
+  .nt-srccol { border-left: 3px solid var(--hairline); }
+  .nt-src-box { border-left-color: var(--teal); }
+  .nt-src-package { border-left-color: var(--coral); }
+  .nt-src-summon { border-left-color: #c084fc; }
+  .nt-src-exchange { border-left-color: var(--accent, #6b7cff); }
+  .nt-src-craft { border-left-color: var(--muted-soft); }
+  /* group rows of one update with a top divider */
+  .nt-post-top td, .nt-post-top th { border-top: 2px solid var(--hairline); }
+  .nt-upd { vertical-align: top; padding-top: 12px !important; }
+  /* reference table */
+  table.nt-ref th, table.nt-ref td { text-align: left; white-space: normal; }
+  table.nt-ref .nt-ref-upd { display: flex; align-items: center; gap: 8px;
+    font-weight: 600; white-space: nowrap; }
+  .nt-ref-yes { line-height: 1.9; }
+  .nt-ref-link a { font-size: 11.5px; color: var(--coral); word-break: break-all; }
+  .nt-srctag { display: inline-block; font-size: 10.5px; font-weight: 600;
+    padding: 1px 8px; margin: 1px 2px; border-radius: 9999px;
+    background: var(--surface-soft); border-left: 3px solid var(--hairline); }
+  tr.nt-ref-grp td { background: var(--surface-card); font-weight: 700;
+    font-size: 11.5px; letter-spacing: .3px; color: var(--muted-soft);
+    text-transform: uppercase; padding: 7px 12px; }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="breakthrough.html">Breakthrough</a>
+      <a href="nametag.html" class="is-active">Name Tag</a>
+    </nav>
+    <span class="nav-meta">scrape: dmo.gameking.com</span>
+  </div>
+</header>
+
+<main class="page">
+  <section>
+    <div class="hero">
+      <div>
+        <h1>Name Tag Items — NA Patch Matrix</h1>
+        <p class="lead">แพท NA (gameking) ที่แจกของกลุ่ม Name Tag —
+          กลุ่มแรกครบทั้ง 2 item, กลุ่มสองพูดถึงบางส่วน ·
+          แยกแถวตามที่มา (Box/Drop · Package ขาย · Summon กาชา · Exchange แลก · Craft) ·
+          ค่า = จำนวนรวมของที่มานั้น</p>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">14</div><div class="lbl">โพสต์</div></div>
+        <div class="hero-stat"><div class="num">6</div><div class="lbl">patch</div></div>
+        <div class="hero-stat"><div class="num">8</div><div class="lbl">event</div></div>
+      </div>
+    </div>
+
+    <div class="nt-wrap">
+      <table class="nt">
+        <thead><tr><th rowspan="2" class="nt-upd-h">NA Update</th><th rowspan="2" class="nt-srccol-h">Source</th><th colspan="2" class="nt-grp">Enhancement</th><th colspan="2" class="nt-grp">Reinforcement</th><th colspan="1" class="nt-grp">Equipment</th></tr><tr><th>Hacking Tool</th><th>Backup Chip</th><th>Hacking Tool</th><th>Backup Chip</th><th>Data: Name Tag</th></tr></thead>
+        <tbody>
+<tr class="nt-ref-grp nt-post-top"><td colspan="7">ครบทั้ง 2 item (9 แพท)</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="2" class="nt-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>13.5.2026</span><a class="nt-src-link" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4146" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-box">Box / Drop</td><td class="nt-has">2</td><td class="nt-has">1</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">10</td></tr>
+<tr class="nt-row"><td class="nt-srccol nt-src-exchange">Exchange (แลก)</td><td class="nt-has">5</td><td class="nt-has">3</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="2" class="nt-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>15.4.2026</span><a class="nt-src-link" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4136" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-box">Box / Drop</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">1</td></tr>
+<tr class="nt-row"><td class="nt-srccol nt-src-package">Package (ขาย)</td><td class="nt-has">60</td><td class="nt-has">15</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">90</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="1" class="nt-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>25.3.2026</span><a class="nt-src-link" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4126" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-box">Box / Drop</td><td class="nt-has">2</td><td class="nt-has">1</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">10</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="2" class="nt-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>28.1.2026</span><a class="nt-src-link" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4100" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-box">Box / Drop</td><td class="nt-has">3</td><td class="nt-has">2</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">22</td></tr>
+<tr class="nt-row"><td class="nt-srccol nt-src-package">Package (ขาย)</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">60</td><td class="nt-has">15</td><td class="nt-has">90</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="1" class="nt-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>10.12.2025</span><a class="nt-src-link" href="https://dmo.gameking.com/news/EventView.aspx?idx=798" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-package">Package (ขาย)</td><td class="nt-has">20</td><td class="nt-has">5</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">30</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="2" class="nt-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>3.12.2025</span><a class="nt-src-link" href="https://dmo.gameking.com/news/EventView.aspx?idx=797" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-package">Package (ขาย)</td><td class="nt-has">90</td><td class="nt-has">25</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">210</td></tr>
+<tr class="nt-row"><td class="nt-srccol nt-src-summon">Summon (กาชา)</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">1</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="2" class="nt-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>26.11.2025</span><a class="nt-src-link" href="https://dmo.gameking.com/news/EventView.aspx?idx=793" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-box">Box / Drop</td><td class="nt-has">3</td><td class="nt-has">2</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">25</td></tr>
+<tr class="nt-row"><td class="nt-srccol nt-src-exchange">Exchange (แลก)</td><td class="nt-has">1</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="2" class="nt-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>01.10.2025</span><a class="nt-src-link" href="https://dmo.gameking.com/news/EventView.aspx?idx=784" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-box">Box / Drop</td><td class="nt-has">3</td><td class="nt-has">2</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">25</td></tr>
+<tr class="nt-row"><td class="nt-srccol nt-src-package">Package (ขาย)</td><td class="nt-has">10</td><td class="nt-has">10</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">20</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="1" class="nt-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>05.08.2025</span><a class="nt-src-link" href="https://dmo.gameking.com/news/EventView.aspx?idx=765" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-package">Package (ขาย)</td><td class="nt-has">30</td><td class="nt-has">10</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">100</td></tr>
+<tr class="nt-ref-grp nt-post-top"><td colspan="7">พูดถึงบางส่วน — ไม่ครบ 2 item (5 แพท)</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="1" class="nt-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>10.6.2026</span><a class="nt-src-link" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4157" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-exchange">Exchange (แลก)</td><td class="nt-has">1</td><td class="nt-has">1</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="1" class="nt-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>11.3.2026</span><a class="nt-src-link" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4118" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-craft">Craft</td><td class="nt-has">5</td><td class="nt-has">1</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="1" class="nt-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>14.1.2026</span><a class="nt-src-link" href="https://dmo.gameking.com/news/EventView.aspx?idx=810" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-exchange">Exchange (แลก)</td><td class="nt-has">2</td><td class="nt-has">2</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-none">—</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="1" class="nt-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>26.08.2025</span><a class="nt-src-link" href="https://dmo.gameking.com/news/EventView.aspx?idx=774" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-package">Package (ขาย)</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">31</td><td class="nt-has">16</td><td class="nt-has">30</td></tr>
+<tr class="nt-row nt-post-top"><th scope="row" rowspan="1" class="nt-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>09.16.2025</span><a class="nt-src-link" href="https://dmo.gameking.com/news/EventView.aspx?idx=779" target="_blank" rel="noopener">post ↗</a></th><td class="nt-srccol nt-src-package">Package (ขาย)</td><td class="nt-none">—</td><td class="nt-none">—</td><td class="nt-has">20</td><td class="nt-has">5</td><td class="nt-has">30</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lead" style="margin-top:14px;font-size:12px">
+      ช่วงเวลา: Aug 2025 – Jun 2026 · ที่มา: dmo.gameking.com PatchNote + EventView ·
+      แสดงทุกแพทที่ scan เจอ Name Tag item — แยกกลุ่มครบ 2 / บางส่วน
+    </p>
+  </section>
+
+  <section style="margin-top:34px">
+    <h2 style="font-size:18px;margin:0 0 4px">แหล่งอ้างอิง (Reference Links)</h2>
+    <p class="lead" style="font-size:12.5px;margin-bottom:10px">
+      แพททั้งหมดที่ scan เจอ — กลุ่มแรกครบทั้ง 2 item (ตรงกับตารางบน)
+      กลุ่มสองพูดถึงบางส่วน · พร้อมลิงก์ post ต้นทาง และที่มาของแต่ละ item
+    </p>
+    <div class="nt-wrap">
+      <table class="nt nt-ref">
+        <thead><tr><th>NA Update</th><th>Equip. Data: Name Tag</th><th>Enh. Backup Chip</th><th>แหล่งอ้างอิง (gameking post)</th></tr></thead>
+        <tbody>
+<tr class="nt-ref-grp"><td colspan="4">ครบทั้ง 2 item (9 แพท — แสดงในตารางบน)</td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>13.5.2026</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span> <span class="nt-srctag nt-src-exchange">Exchange (แลก)</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4146" target="_blank" rel="noopener">dmo.gameking.com/News/PatchNoteView.aspx?idx=4146 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>15.4.2026</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span> <span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4136" target="_blank" rel="noopener">dmo.gameking.com/News/PatchNoteView.aspx?idx=4136 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>25.3.2026</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4126" target="_blank" rel="noopener">dmo.gameking.com/News/PatchNoteView.aspx?idx=4126 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>28.1.2026</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span> <span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4100" target="_blank" rel="noopener">dmo.gameking.com/News/PatchNoteView.aspx?idx=4100 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>10.12.2025</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=798" target="_blank" rel="noopener">dmo.gameking.com/news/EventView.aspx?idx=798 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>3.12.2025</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-package">Package (ขาย)</span> <span class="nt-srctag nt-src-summon">Summon (กาชา)</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=797" target="_blank" rel="noopener">dmo.gameking.com/news/EventView.aspx?idx=797 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>26.11.2025</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=793" target="_blank" rel="noopener">dmo.gameking.com/news/EventView.aspx?idx=793 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>01.10.2025</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span> <span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-box">Box / Drop</span> <span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=784" target="_blank" rel="noopener">dmo.gameking.com/news/EventView.aspx?idx=784 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>05.08.2025</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=765" target="_blank" rel="noopener">dmo.gameking.com/news/EventView.aspx?idx=765 ↗</a></td></tr>
+<tr class="nt-ref-grp"><td colspan="4">พูดถึงบางส่วน — ไม่ครบ 2 item (5 แพท)</td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>10.6.2026</span></td><td class="nt-none">—</td><td class="nt-ref-yes"><span class="nt-srctag nt-src-exchange">Exchange (แลก)</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4157" target="_blank" rel="noopener">dmo.gameking.com/News/PatchNoteView.aspx?idx=4157 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-patch">PATCH</span><span>11.3.2026</span></td><td class="nt-none">—</td><td class="nt-ref-yes"><span class="nt-srctag nt-src-craft">Craft</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4118" target="_blank" rel="noopener">dmo.gameking.com/News/PatchNoteView.aspx?idx=4118 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>14.1.2026</span></td><td class="nt-none">—</td><td class="nt-ref-yes"><span class="nt-srctag nt-src-exchange">Exchange (แลก)</span></td><td class="nt-ref-link"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=810" target="_blank" rel="noopener">dmo.gameking.com/news/EventView.aspx?idx=810 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>26.08.2025</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-none">—</td><td class="nt-ref-link"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=774" target="_blank" rel="noopener">dmo.gameking.com/news/EventView.aspx?idx=774 ↗</a></td></tr>
+<tr><td class="nt-ref-upd"><span class="nt-kind nt-kind-event">EVENT</span><span>09.16.2025</span></td><td class="nt-ref-yes"><span class="nt-srctag nt-src-package">Package (ขาย)</span></td><td class="nt-none">—</td><td class="nt-ref-link"><a href="https://dmo.gameking.com/news/EventView.aspx?idx=779" target="_blank" rel="noopener">dmo.gameking.com/news/EventView.aspx?idx=779 ↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
