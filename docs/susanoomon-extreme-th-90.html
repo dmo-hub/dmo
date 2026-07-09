@@ -221,6 +221,35 @@
     .tip:hover .pop,.tip:focus .pop{transform:translate(-50%,0)}
     .tip .pop img{width:min(280px,74vw)}
   }
+
+  /* ═══ SPONSORED AD: floating (desktop) → inline footer (mobile) ═══ */
+  .ad-label{font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:600}
+  .ad-float{position:fixed; right:18px; bottom:18px; z-index:40; width:200px;
+    background:var(--panel); border:1px solid rgba(0,180,255,.35); box-shadow:0 6px 24px rgba(2,9,18,.7); overflow:hidden}
+  .ad-float[hidden]{display:none}
+  .ad-float .ad-head{display:flex; align-items:center; justify-content:space-between; padding:5px 6px 5px 10px;
+    border-bottom:1px solid rgba(0,180,255,.25); background:rgba(0,0,0,.3)}
+  .ad-float .ad-close{appearance:none; border:0; background:none; cursor:pointer; color:var(--mut); font-size:16px; line-height:1; padding:2px 6px}
+  .ad-float .ad-close:hover{color:var(--red)}
+  .ad-float .ad-thumb{display:block; width:100%; cursor:zoom-in; padding:0; border:0; background:none}
+  .ad-float .ad-thumb img{display:block; width:100%; height:auto}
+  .ad-box{position:fixed; inset:0; z-index:60; display:none; align-items:center; justify-content:center; padding:24px; background:rgba(0,0,0,.72)}
+  .ad-box.open{display:flex}
+  .ad-box .ad-stage{position:relative; max-width:min(92vw,560px); max-height:88vh}
+  .ad-box .ad-link{display:block; cursor:pointer; overflow:hidden; border:1px solid var(--blue); box-shadow:0 12px 40px rgba(0,0,0,.5)}
+  .ad-box .ad-link img{display:block; width:100%; height:auto; max-height:80vh; object-fit:contain}
+  .ad-box .ad-cta{display:block; text-align:center; margin-top:10px; color:var(--blue); font-size:13px; font-weight:600; text-decoration:none}
+  .ad-box .ad-cta:hover{color:#BFE9FF; text-decoration:underline}
+  .ad-box .ad-x{position:absolute; top:-14px; right:-14px; width:32px; height:32px; border-radius:50%; border:0; cursor:pointer;
+    background:var(--panel); color:var(--txt); font-size:17px; line-height:32px; box-shadow:0 2px 10px rgba(0,0,0,.4)}
+  .ad-inline{display:none}
+  @media(max-width:720px){
+    .ad-float{display:none !important}
+    .ad-inline{display:block; margin:26px auto 8px; max-width:360px; text-align:center}
+    .ad-inline .ad-label{display:block; margin-bottom:6px}
+    .ad-inline a{display:block; border:1px solid rgba(0,180,255,.3); overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,.3)}
+    .ad-inline img{display:block; width:100%; height:auto}
+  }
 </style>
 </head>
 <body>
@@ -354,6 +383,34 @@
     <div class="pf">
       ตัวเลขจาก <a href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-90/" target="_blank" rel="noopener">ประกาศอัพเดทแพทช์ 90 · vplay.in.th</a> + ตรวจกับ tooltip ในเกมจริง<br>
       <span class="en">DIGIMON MASTERS ONLINE · ข้อมูลเพื่อการอ้างอิงเท่านั้น</span>
+    </div>
+
+    <!-- mobile-only inline ad (footer) -->
+    <div class="ad-inline">
+      <span class="ad-label">service</span>
+      <a href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">
+        <img src="img/ads/dmo-dungeon-service.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
+      </a>
+    </div>
+  </div>
+
+  <!-- desktop floating ad (bottom-right) -->
+  <aside class="ad-float" id="ad-float">
+    <div class="ad-head"><span class="ad-label">service</span>
+      <button class="ad-close" id="ad-close" type="button" title="ปิด service" aria-label="ปิด service">✕</button></div>
+    <button class="ad-thumb" id="ad-thumb" type="button" aria-label="ขยายดู service">
+      <img src="img/ads/dmo-dungeon-service.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
+    </button>
+  </aside>
+
+  <!-- shared lightbox -->
+  <div class="ad-box" id="ad-box" role="dialog" aria-modal="true" aria-label="โฆษณา Kaiser's Lab">
+    <div class="ad-stage">
+      <button class="ad-x" id="ad-x" type="button" title="ปิด" aria-label="ปิด">✕</button>
+      <a class="ad-link" href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">
+        <img src="img/ads/dmo-dungeon-service.png" alt="Kaiser's Lab — Dungeon Service">
+      </a>
+      <a class="ad-cta" href="https://web.facebook.com/groups/244114362448211/posts/3177082085818076" target="_blank" rel="noopener noreferrer">เปิดดูใน Facebook ↗</a>
     </div>
   </div>
 
@@ -515,6 +572,19 @@
       if (t.matches(':hover, :focus')) place();
     });
   });
+})();
+
+// sponsored floating ad: close (this load only) + click-to-zoom lightbox
+(() => {
+  const float = document.getElementById('ad-float');
+  const box = document.getElementById('ad-box');
+  document.getElementById('ad-close').addEventListener('click', () => { float.hidden = true; });
+  const openBox = () => box.classList.add('open');
+  const closeBox = () => box.classList.remove('open');
+  document.getElementById('ad-thumb').addEventListener('click', openBox);
+  document.getElementById('ad-x').addEventListener('click', closeBox);
+  box.addEventListener('click', e => { if (e.target === box) closeBox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBox(); });
 })();
 </script>
 </body>
