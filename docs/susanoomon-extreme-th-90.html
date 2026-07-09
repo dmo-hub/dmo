@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="[เอ็กซ์ตรีม] ซูซาโนะโอมอน TH แพทช์ 90 — อินโฟกราฟิกสรุปวัตถุดิบ 2 ชิ้น + เครื่องคำนวณงบแก่นทั้งอีเวนต์">
+<meta property="og:title" content="DMO · [เอ็กซ์ตรีม] ซูซาโนะโอมอน — ไกด์วัตถุดิบ + คำนวณ">
+<meta property="og:description" content="ต้องใช้อะไรบ้าง ฟาร์มทันไหม ซื้อเท่าไหร่ — สรุปจบในหน้าเดียว">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚔️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Share+Tech+Mono&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>DMO · [เอ็กซ์ตรีม] ซูซาโนะโอมอน — ไกด์วัตถุดิบ + คำนวณ</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --deep:#020912; --panel:rgba(8,16,36,.82);
+    --blue:#00B4FF; --gold:#FFD700; --grn:#3FDD7A; --red:#FF4D6A;
+    --txt:#DCEEFF; --mut:#7488B0; --grid:rgba(0,180,255,.05);
+    --amber:#FF9D2E; --amber-acc:#FFB85C; --amber-dim:rgba(255,157,46,.5); --amber-soft:rgba(255,157,46,.14);
+    --vio:#8C6BFF; --vio-acc:#B79DFF; --vio-dim:rgba(140,107,255,.5); --vio-soft:rgba(140,107,255,.15);
+    --num:'Share Tech Mono','Orbitron',monospace;
+  }
+  body{
+    background:#020912; color:var(--txt); font-family:'Kanit',sans-serif;
+    display:flex; justify-content:center; padding:24px 12px; min-height:100vh;
+  }
+  .poster{
+    position:relative; width:1080px; max-width:100%;
+    background:radial-gradient(ellipse 90% 42% at 50% 0%,#12264d 0%,#0a1830 45%,#06122a 100%);
+    border:1px solid rgba(0,180,255,.3);
+    padding:34px 34px 28px; display:flex; flex-direction:column; gap:24px;
+  }
+  .poster::before{
+    content:''; position:absolute; inset:0;
+    background-image:
+      linear-gradient(0deg,var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:46px 46px; pointer-events:none; z-index:0;
+  }
+  .poster > *{position:relative; z-index:1}
+  .frame-c{position:absolute; width:34px; height:34px; border:2px solid var(--blue); z-index:5; pointer-events:none; opacity:.7}
+  .frame-c.tl{top:12px;left:12px;border-right:none;border-bottom:none}
+  .frame-c.tr{top:12px;right:12px;border-left:none;border-bottom:none}
+  .frame-c.bl{bottom:12px;left:12px;border-right:none;border-top:none}
+  .frame-c.br{bottom:12px;right:12px;border-left:none;border-top:none}
+
+  /* ═══ HEADER ═══ */
+  .ph{text-align:center; border-bottom:1px solid rgba(0,180,255,.25); padding-bottom:18px}
+  .ph .eyebrow{font-family:'Orbitron',sans-serif; font-size:11px; font-weight:600; letter-spacing:.3em; color:var(--mut)}
+  .ph .eyebrow::before{content:'— '} .ph .eyebrow::after{content:' —'}
+  .ph .t1{font-family:'Kanit'; font-size:40px; font-weight:900; letter-spacing:.01em; line-height:1.1; margin-top:8px;
+    background:linear-gradient(180deg,#BFE9FF 0%,#00B4FF 55%,#0077B0 100%); -webkit-background-clip:text; background-clip:text; color:transparent;
+    filter:drop-shadow(0 2px 4px rgba(0,0,0,.55))}
+  .ph .t2{font-family:'Orbitron',sans-serif; font-size:13px; font-weight:700; letter-spacing:.24em; color:var(--gold); margin-top:8px}
+  .ph .t2::before{content:'// '} .ph .t2::after{content:' //'}
+  .ph .sub{margin-top:8px; font-size:13px; color:var(--mut)}
+
+  /* ═══ GOAL STRIP ═══ */
+  .synth{display:grid; grid-template-columns:1fr auto 1fr auto 1.15fr; align-items:center; gap:14px;
+    border:1px solid rgba(255,215,0,.4); background:radial-gradient(ellipse 100% 80% at 50% 0%,rgba(255,215,0,.08),transparent 65%),var(--panel);
+    box-shadow:inset 0 0 55px rgba(0,0,0,.5); padding:20px 24px}
+  .synth .part{text-align:center; display:flex; flex-direction:column; gap:4px}
+  .synth .k{font-family:'Orbitron',sans-serif; font-size:9px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mut)}
+  .synth .n{font-size:15px; font-weight:700; line-height:1.3}
+  .synth .part.a .n{color:var(--amber-acc)} .synth .part.b .n{color:var(--vio-acc)}
+  .synth .s{font-size:11.5px; color:var(--mut)}
+  .synth .op{font-family:'Orbitron',sans-serif; font-size:30px; font-weight:800; color:var(--blue); text-shadow:0 0 12px rgba(0,180,255,.6)}
+  .synth .goal .n{font-size:19px; font-weight:800;
+    background:linear-gradient(180deg,#FFE9A8,#FFD700 55%,#C99700); -webkit-background-clip:text; background-clip:text; color:transparent;
+    filter:drop-shadow(0 0 14px rgba(255,215,0,.3))}
+
+  /* ═══ BRANCHES ═══ */
+  .branches{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  .branch{--tone:var(--amber); --tacc:var(--amber-acc); --tdim:var(--amber-dim); --tsoft:var(--amber-soft);
+    position:relative; border:1px solid var(--tdim);
+    background:radial-gradient(ellipse 100% 50% at 50% 0%,var(--tsoft),transparent 60%),var(--panel);
+    box-shadow:inset 0 0 45px rgba(0,0,0,.45); display:flex; flex-direction:column}
+  .branch::after{content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--tone); box-shadow:0 0 13px var(--tone)}
+  .branch.cash{--tone:var(--vio); --tacc:var(--vio-acc); --tdim:var(--vio-dim); --tsoft:var(--vio-soft)}
+  .branch-head{display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:14px 18px 12px; border-bottom:1px solid var(--tdim)}
+  .branch-head h3{font-size:16px; font-weight:800; color:var(--tacc)}
+  .branch-tag{font-family:'Orbitron',sans-serif; font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+    color:#0a1422; background:var(--tone); padding:3px 11px; border-radius:3px; white-space:nowrap}
+  .branch-body{padding:14px 18px; display:flex; flex-direction:column; gap:11px; flex:1}
+  .step{display:flex; gap:10px; font-size:13px; color:var(--txt); line-height:1.55}
+  .step .no{flex:none; width:21px; height:21px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;
+    font-family:var(--num); font-size:11px; font-weight:700; color:#0a1422; background:var(--tone); margin-top:2px}
+  .step b{color:var(--tacc); font-variant-numeric:tabular-nums}
+  .branch-foot{padding:11px 18px; border-top:1px dashed var(--tdim); background:rgba(0,0,0,.3);
+    font-size:12px; color:var(--mut); line-height:1.6}
+  .branch-foot b{color:var(--gold); font-variant-numeric:tabular-nums; font-weight:600}
+
+  /* ═══ ITEM ICON ═══ */
+  img.ic{width:26px; height:26px; vertical-align:middle; transform:translateY(-2px); margin-right:6px;
+    border:1px solid rgba(0,180,255,.3); border-radius:4px; background:#04101F}
+  img.ic.lg{width:32px; height:32px}
+  img.ic.sm{width:22px; height:22px; margin-right:4px}
+
+  /* ═══ TIP HOVER ═══ */
+  .tip{position:relative; display:inline; border-bottom:1px dotted var(--mut); cursor:help}
+  .tip:hover,.tip:focus{color:#fff; border-bottom-color:var(--blue); outline:none}
+  .tip .pop{position:absolute; left:0; bottom:calc(100% + 8px); z-index:30;
+    opacity:0; visibility:hidden; transform:translateY(4px);
+    transition:opacity .13s ease,transform .13s ease,visibility .13s; pointer-events:none;
+    border:1px solid var(--blue); box-shadow:0 12px 34px rgba(0,0,0,.85),0 0 18px rgba(0,180,255,.25); background:#04101F}
+  .tip:hover .pop,.tip:focus .pop{opacity:1; visibility:visible; transform:translateY(0)}
+  .tip .pop img{display:block; width:280px; height:auto}
+  .tip .pop.pop-wide img{width:min(400px,80vw); padding:10px; background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,180,255,.14),transparent 70%)}
+  /* JS วางพิกัดเอง (fixed) เพื่อหนี overflow clip ของ .table-scroll + sticky controls */
+  .tip .pop.fixed{position:fixed; bottom:auto; transform:translateY(4px)}
+  .tip:hover .pop.fixed,.tip:focus .pop.fixed{transform:translateY(0)}
+  @media(prefers-reduced-motion:reduce){.tip .pop{transition:none}}
+
+  /* ═══ WARNING ═══ */
+  .warn{display:flex; gap:14px; align-items:flex-start; border:1px solid rgba(255,77,106,.45);
+    background:linear-gradient(90deg,rgba(255,77,106,.12),rgba(255,77,106,.03)); padding:15px 20px}
+  .warn .ic{font-size:24px; line-height:1.2; align-self:center}
+  .warn .wtitle{font-family:'Orbitron',sans-serif; font-size:11px; font-weight:700; letter-spacing:.12em; color:var(--red); margin-bottom:3px}
+  .warn .wtxt{font-size:13px; color:var(--txt); line-height:1.7}
+  .warn .wtxt b{color:var(--gold); font-weight:600; font-variant-numeric:tabular-nums}
+
+  /* ═══ SECTION TITLE ═══ */
+  .sec-title{font-family:'Orbitron',sans-serif; font-size:13px; font-weight:700; letter-spacing:.2em; color:var(--blue); text-align:center}
+  .sec-title::before{content:'▸ '} .sec-title::after{content:' ◂'}
+  .sec-note{text-align:center; font-size:12.5px; color:var(--mut); margin-top:-14px}
+  .sec-note b{color:var(--txt)}
+
+  /* ═══ CALC CONTROLS ═══ */
+  .calc-controls{display:flex; flex-wrap:wrap; gap:10px 24px; align-items:center; justify-content:center;
+    padding:13px 18px; border:1px solid rgba(0,180,255,.35); background:var(--panel);
+    position:sticky; top:8px; z-index:6; box-shadow:0 6px 24px rgba(2,9,18,.8)}
+  .calc-controls label{font-size:13px; color:var(--txt); display:inline-flex; align-items:center; gap:8px}
+  .calc-controls input[type=number]{width:62px; padding:5px 8px; font:inherit; font-size:13px; text-align:right;
+    font-variant-numeric:tabular-nums; border:1px solid rgba(0,180,255,.4); background:rgba(0,0,0,.45); color:var(--txt);
+    -moz-appearance:textfield; appearance:textfield}
+  .calc-controls input::-webkit-outer-spin-button,.calc-controls input::-webkit-inner-spin-button,
+  .qty::-webkit-outer-spin-button,.qty::-webkit-inner-spin-button{-webkit-appearance:none; appearance:none; margin:0}
+  .calc-controls input:focus,.qty:focus{outline:none; border-color:var(--blue); box-shadow:0 0 8px rgba(0,180,255,.35)}
+  .calc-controls .u{color:var(--mut); font-size:11.5px; margin-left:-4px}
+  .calc-controls button{font:inherit; font-size:12.5px; color:var(--blue); cursor:pointer;
+    border:1px solid rgba(0,180,255,.4); border-radius:30px; background:rgba(0,180,255,.08); padding:5px 15px}
+  .calc-controls button:hover{background:rgba(0,180,255,.2); color:#BFE9FF}
+
+  /* ═══ CALC CARDS ═══ */
+  .calc-card{--tone:var(--amber); --tacc:var(--amber-acc); --tdim:var(--amber-dim); --tsoft:var(--amber-soft);
+    position:relative; border:1px solid var(--tdim);
+    background:radial-gradient(ellipse 100% 40% at 50% 0%,var(--tsoft),transparent 55%),var(--panel);
+    box-shadow:inset 0 0 45px rgba(0,0,0,.45)}
+  .calc-card::after{content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--tone); box-shadow:0 0 13px var(--tone)}
+  .calc-card.cash{--tone:var(--vio); --tacc:var(--vio-acc); --tdim:var(--vio-dim); --tsoft:var(--vio-soft)}
+  .calc-card > h3{padding:13px 18px 11px; font-size:15px; font-weight:800; color:var(--tacc);
+    border-bottom:1px solid var(--tdim); display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+  .calc-card > h3 .sub{font-size:11.5px; font-weight:400; color:var(--mut)}
+
+  .own-row{display:flex; justify-content:space-between; align-items:center; gap:12px;
+    padding:10px 18px; border-bottom:1px solid var(--tdim); background:rgba(0,0,0,.42); font-size:13px; color:var(--txt)}
+  .own-row .own-note{font-size:11.5px; color:var(--mut)}
+  .own-row .qty{width:72px}
+
+  .budget{padding:12px 18px; border-bottom:1px solid var(--tdim); background:rgba(0,0,0,.3)}
+  .budget .row{display:flex; justify-content:space-between; align-items:baseline; gap:12px;
+    font-size:13px; color:var(--txt); padding:2px 0}
+  .budget .row b{font-family:var(--num); font-size:15px; font-variant-numeric:tabular-nums; color:var(--tacc)}
+  .budget .row b.over{color:var(--red)}
+  .bar{height:9px; background:rgba(0,0,0,.55); border:1px solid var(--tdim); overflow:hidden; margin:8px 0 4px}
+  .bar > i{display:block; height:100%; background:var(--tone); box-shadow:0 0 10px var(--tone); transition:width .2s ease}
+  .bar > i.warn{background:var(--gold); box-shadow:0 0 10px var(--gold)}
+  .bar > i.over{background:var(--red); box-shadow:0 0 10px var(--red)}
+  .budget .hint{font-size:12px; color:var(--mut); margin-top:7px; line-height:1.6}
+  .budget .hint b{color:var(--gold); font-variant-numeric:tabular-nums; font-weight:600}
+  .budget .hint .bad{color:var(--red); font-weight:700}
+
+  .table-scroll{overflow-x:auto}
+  table.plan{width:100%; border-collapse:collapse; font-size:13px; min-width:600px}
+  table.plan th{font-family:'Orbitron',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--tacc); text-align:left; padding:10px 14px; background:rgba(0,0,0,.35); border-bottom:1px solid var(--tdim)}
+  table.plan th.r{text-align:right}
+  table.plan td{padding:9px 14px; border-bottom:1px solid rgba(0,180,255,.08); color:var(--txt)}
+  table.plan tbody tr:last-child td{border-bottom:none}
+  table.plan tbody tr:nth-child(even){background:rgba(0,0,0,.22)}
+  table.plan td.num{font-family:var(--num); font-variant-numeric:tabular-nums; text-align:right; color:var(--txt)}
+  table.plan td.cost{font-family:var(--num); font-weight:700; font-variant-numeric:tabular-nums; text-align:right; color:var(--tacc)}
+  table.plan .lim{font-size:11px; color:var(--mut); white-space:nowrap}
+  .qty{width:56px; padding:5px 8px; font:inherit; font-size:13px; text-align:right; font-variant-numeric:tabular-nums;
+    border:1px solid var(--tdim); background:rgba(0,0,0,.45); color:var(--txt);
+    -moz-appearance:textfield; appearance:textfield}
+  tr.headline td{background:rgba(255,215,0,.07)}
+  tr.headline td:first-child{font-weight:700}
+  tr.headline .tip{color:var(--gold)}
+
+  /* ═══ STATUS ═══ */
+  .status{display:flex; gap:13px; align-items:flex-start; padding:16px 20px;
+    border:1px solid var(--grn); background:linear-gradient(90deg,rgba(63,221,122,.12),rgba(63,221,122,.02));
+    font-size:14px; color:var(--txt); line-height:1.65}
+  .status b{color:var(--gold)}
+  .status .ic{font-size:22px; line-height:1.2}
+  .status.bad{border-color:var(--red); background:linear-gradient(90deg,rgba(255,77,106,.12),rgba(255,77,106,.02))}
+
+  /* ═══ FOOTER ═══ */
+  .pf{text-align:center; font-size:12px; color:var(--mut); line-height:1.8; padding-top:14px; border-top:1px solid rgba(0,180,255,.2)}
+  .pf a{color:var(--blue); text-decoration:none}
+  .pf a:hover{color:#BFE9FF}
+  .pf .en{font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:.18em}
+
+  @media(max-width:820px){
+    .synth{grid-template-columns:1fr}
+    .synth .op{text-align:center}
+    .branches{grid-template-columns:1fr}
+    .tip .pop{left:50%; transform:translate(-50%,4px)}
+    .tip:hover .pop,.tip:focus .pop{transform:translate(-50%,0)}
+    .tip .pop img{width:min(280px,74vw)}
+  }
+</style>
+</head>
+<body>
+  <div class="poster">
+    <span class="frame-c tl"></span><span class="frame-c tr"></span>
+    <span class="frame-c bl"></span><span class="frame-c br"></span>
+
+    <!-- HEADER -->
+    <div class="ph">
+      <div class="eyebrow">DMO TH · อัพเดทแพทช์ 90 · 09.07.2026</div>
+      <div class="t1">[เอ็กซ์ตรีม] ซูซาโนะโอมอน</div>
+      <div class="t2">MATERIAL GUIDE + CALCULATOR</div>
+      <div class="sub">ปลดร่างต้องใช้วัตถุดิบ 2 ชิ้นจากคนละสาย — สายหนึ่งฟาร์ม สายหนึ่งซื้อ · เอาเมาส์ชี้ชื่อไอเทมที่มี<span style="border-bottom:1px dotted var(--mut)">เส้นประ</span>เพื่อดูรูปในเกม</div>
+    </div>
+
+    <!-- GOAL -->
+    <div class="synth">
+      <div class="part a">
+        <div class="k">ชิ้นที่ 1 · สายฟาร์ม</div>
+        <div class="n"><img class="ic lg" src="img/tooltips/icon-god-aura-destruction.png" alt=""><span class="tip" tabindex="0">ก็อด : ออร่า ออฟ เดสทรัคชัน<span class="pop"><img src="img/tooltips/god-aura-destruction.png" alt="ก็อด : ออร่า ออฟ เดสทรัคชัน" loading="lazy"></span></span></div>
+        <div class="s">ปลดร่างฝั่ง ไคเซอร์เกรย์มอน</div>
+      </div>
+      <div class="op">+</div>
+      <div class="part b">
+        <div class="k">ชิ้นที่ 2 · สายซื้อ</div>
+        <div class="n"><img class="ic lg" src="img/tooltips/icon-god-aura-rebirth.png" alt=""><span class="tip" tabindex="0">ก็อด : ออร่า ออฟ รีเบิร์ธ<span class="pop"><img src="img/tooltips/god-aura-rebirth.png" alt="ก็อด : ออร่า ออฟ รีเบิร์ธ" loading="lazy"></span></span></div>
+        <div class="s">ปลดร่างฝั่ง แมคนาการูรูมอน</div>
+      </div>
+      <div class="op">=</div>
+      <div class="part goal">
+        <div class="k">รวมกันปลดร่าง</div>
+        <div class="n"><span class="tip" tabindex="0">[เอ็กซ์ตรีม] ซูซาโนะโอมอน<span class="pop pop-wide"><img src="img/tooltips/susanoomon.png" alt="[เอ็กซ์ตรีม] ซูซาโนะโอมอน" loading="lazy"></span></span></div>
+        <div class="s">ขาดชิ้นใดชิ้นหนึ่งไม่ได้</div>
+      </div>
+    </div>
+
+    <!-- BRANCHES -->
+    <div class="branches">
+      <div class="branch">
+        <div class="branch-head">
+          <h3>ชิ้นที่ 1 — สายฟาร์ม</h3>
+          <span class="branch-tag">ฟาร์มในเกม</span>
+        </div>
+        <div class="branch-body">
+          <div class="step"><span class="no">1</span><span>เก็บ <img class="ic sm" src="img/tooltips/icon-recovery-fragment.png" alt=""><span class="tip" tabindex="0">ชิ้นส่วนของการฟื้นฟู<span class="pop"><img src="img/tooltips/recovery-fragment.png" alt="ชิ้นส่วนของการฟื้นฟู" loading="lazy"></span></span> จากกิจกรรม (&lt;ฟื้นฟู&gt; วูล์ฟมอน · ศูนย์บัญชาการ DATS)</span></div>
+          <div class="step"><span class="no">2</span><span>คราฟต์ <b>25 ชิ้นส่วน</b> → <img class="ic sm" src="img/tooltips/icon-recovery-core.png" alt=""><span class="tip" tabindex="0">แก่นของการฟื้นฟู<span class="pop"><img src="img/tooltips/recovery-core.png" alt="แก่นของการฟื้นฟู" loading="lazy"></span></span> <b>5 ชิ้น</b> — จำกัด <b>50 ครั้ง/สัปดาห์</b> (250 แก่น/สัปดาห์)</span></div>
+          <div class="step"><span class="no">3</span><span>สะสมแก่นครบ <b>300</b> → แลก <b>ก็อด : ออร่า ออฟ เดสทรัคชัน</b> (แลกได้ 1 ครั้ง)</span></div>
+        </div>
+        <div class="branch-foot">
+          ทั้งสาย = ชิ้นส่วน <b>1,500</b> · คราฟต์ <b>60 ครั้ง</b> → เร็วสุด <b>2 สัปดาห์</b> เพราะติดลิมิตคราฟต์
+        </div>
+      </div>
+
+      <div class="branch cash">
+        <div class="branch-head">
+          <h3>ชิ้นที่ 2 — สายซื้อ</h3>
+          <span class="branch-tag">แคชช้อปเท่านั้น</span>
+        </div>
+        <div class="branch-body">
+          <div class="step"><span class="no">1</span><span>ซื้อ <img class="ic sm" src="img/tooltips/icon-shop-transcendence-core-box.png" alt=""><span class="tip" tabindex="0">กล่องแก่นการอยู่เหนือขีดจำกัด<span class="pop"><img src="img/tooltips/shop-transcendence-core-box.png" alt="กล่องแก่นการอยู่เหนือขีดจำกัด" loading="lazy"></span></span> กล่องละ <b>9,900 VG</b> → ได้ <img class="ic sm" src="img/tooltips/icon-transcendence-core.png" alt=""><span class="tip" tabindex="0">แก่นการอยู่เหนือขีดจำกัด<span class="pop"><img src="img/tooltips/transcendence-core.png" alt="แก่นการอยู่เหนือขีดจำกัด" loading="lazy"></span></span> <b>50 ชิ้น</b> (ซื้อได้ <b>10 ครั้ง/ไอดี</b>)</span></div>
+          <div class="step"><span class="no">2</span><span>ครบ 10 กล่อง = แก่น <b>500 ชิ้น</b> พอดีเป๊ะ — <b>ไม่มีสูตรคราฟต์ ไม่ดรอปจากกิจกรรม</b></span></div>
+          <div class="step"><span class="no">3</span><span>แลกแก่น <b>500</b> → <b>ก็อด : ออร่า ออฟ รีเบิร์ธ</b> (แลกได้ 1 ครั้ง)</span></div>
+        </div>
+        <div class="branch-foot">
+          ทั้งสาย = <b>99,000 VG</b> · ทางเสริม: <img class="ic sm" src="img/tooltips/icon-shop-genuine-core-pack.png" alt=""><span class="tip" tabindex="0">แพ็คเกจแก่นแท้<span class="pop"><img src="img/tooltips/shop-genuine-core-pack.png" alt="แพ็คเกจแก่นแท้" loading="lazy"></span></span> 12,500 VG = แก่นอยู่เหนือ 50 + แก่นฟื้นฟู 25 (ซื้อได้ 5 ครั้ง)
+        </div>
+      </div>
+    </div>
+
+    <!-- WARNING -->
+    <div class="warn">
+      <div class="ic">⏳</div>
+      <div>
+        <div class="wtitle">BOTTLENECK · คอขวดของอีเวนต์</div>
+        <div class="wtxt">สายฟาร์มติดลิมิตคราฟต์ <b>250 แก่น/สัปดาห์</b> → ต้องเริ่มตั้งแต่สัปดาห์แรกถึงจะทัน · สายซื้อลิมิตกล่อง <b>10 ครั้ง/ไอดี</b> ให้แก่นพอดี <b>500</b> — อยากแลกของอื่นในสายซื้อด้วยต้องพึ่งแพ็คเกจแก่นแท้ · ร้านค้านับถอยหลัง <b>~13 วัน</b>จากวันเปิดแพทช์</div>
+      </div>
+    </div>
+
+    <!-- CALCULATOR -->
+    <div class="sec-title">BUDGET PLANNER · เครื่องคำนวณงบแก่น</div>
+    <div class="sec-note">กรอกจำนวน<b>ครั้งที่จะแลก</b>แต่ละไอเทม (ไม่เกินลิมิตจริง) — ระบบรวมแก่นที่ใช้ เทียบกับที่หาได้ทั้งอีเวนต์ แล้วบอกพอ/ขาด</div>
+
+    <div class="calc-controls">
+      <label>ฟาร์มได้ <input type="number" id="cWeeks" min="0" max="4" value="2"> <span class="u">สัปดาห์</span></label>
+      <button type="button" id="cReset">รีเซ็ตเป็นเป้าหลัก</button>
+    </div>
+
+    <!-- line A -->
+    <div class="calc-card">
+      <h3>สายฟาร์ม — ใช้แก่นของการฟื้นฟู <span class="sub">ลิมิต "ครั้ง/สัปดาห์" คูณจำนวนสัปดาห์ให้อัตโนมัติ</span></h3>
+      <div class="budget" id="budgetA"></div>
+      <div class="table-scroll">
+        <table class="plan">
+          <thead><tr><th>ไอเทมที่แลก</th><th class="r">แก่น/ครั้ง</th><th class="r">ได้/ครั้ง</th><th>ลิมิต</th><th class="r">แลก (ครั้ง)</th><th class="r">ใช้แก่น</th></tr></thead>
+          <tbody id="rowsA"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- line B -->
+    <div class="calc-card cash">
+      <h3>สายซื้อ — ใช้แก่นการอยู่เหนือขีดจำกัด <span class="sub">แก่นมาจากกล่อง + แพ็คเกจ + ที่กรอกเพิ่มเอง</span></h3>
+      <div class="own-row">
+        <span><img class="ic sm" src="img/tooltips/icon-shop-transcendence-core-box.png" alt=""><b>กล่องแก่นการอยู่เหนือขีดจำกัด</b> <span class="own-note">9,900 VG/กล่อง · ได้แก่น ×50</span></span>
+        <span><input class="qty" type="number" id="cBox" min="0" max="10" value="10"> <span class="own-note">/10 กล่อง</span></span>
+      </div>
+      <div class="own-row">
+        <span><img class="ic sm" src="img/tooltips/icon-shop-genuine-core-pack.png" alt=""><b>แพ็คเกจแก่นแท้</b> <span class="own-note">12,500 VG/แพ็ค · แก่นอยู่เหนือ ×50 + แก่นฟื้นฟู ×25</span></span>
+        <span><input class="qty" type="number" id="cPack" min="0" max="5" value="0"> <span class="own-note">/5 แพ็ค</span></span>
+      </div>
+      <div class="budget" id="budgetB"></div>
+      <div class="table-scroll">
+        <table class="plan">
+          <thead><tr><th>ไอเทมที่แลก</th><th class="r">แก่น/ครั้ง</th><th class="r">ได้/ครั้ง</th><th>ลิมิต</th><th class="r">แลก (ครั้ง)</th><th class="r">ใช้แก่น</th></tr></thead>
+          <tbody id="rowsB"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="status" id="statusBox"></div>
+
+    <!-- FOOTER -->
+    <div class="pf">
+      ตัวเลขจาก <a href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-90/" target="_blank" rel="noopener">ประกาศอัพเดทแพทช์ 90 · vplay.in.th</a> + ตรวจกับ tooltip ในเกมจริง<br>
+      <span class="en">DIGIMON MASTERS ONLINE · ข้อมูลเพื่อการอ้างอิงเท่านั้น</span>
+    </div>
+  </div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const fmt = n => n.toLocaleString('en-US');
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  // limit: {week:n} = n ครั้ง/สัปดาห์ · {fix:n} = จำกัด n ครั้งทั้งอีเวนต์
+  const LINE_A = [
+    {name:'ก็อด : ออร่า ออฟ เดสทรัคชัน', use:300, per:1, limit:{fix:1},  tip:'god-aura-destruction', headline:true, def:1},
+    {name:'ไข่สุ่มดิจิทามะ–แร์มอน [ระดับ 4-5]', use:20, per:1, limit:{week:5}, tip:'digitama-random-egg-4-5'},
+    {name:'แร์มอนดิจิทามะ ระดับ 5 [ร่างเต็มวัย]', use:20, per:1, limit:{fix:10}, tip:'rareamon-digitama-lv5'},
+    {name:'ลูกเต๋าออพชั่นปลดขีดจำกัด', use:10, per:1, limit:{fix:35}, tip:'unlock-option-dice'},
+    {name:'แพ็คดิจิโคลนชั้นดี', use:30, per:1, limit:{week:3}, tip:'digiclone-pack-fine'},
+    {name:'กล่องเลือกสกิลเทมเมอร์ชั้นสุดยอด (7วัน)', use:20, per:1, limit:{week:5}, tip:'tamer-skill-box-7d'},
+    {name:'หินเปลี่ยนออพชั่น', use:10, per:3, limit:{fix:50}, tip:'option-change-stone'},
+    {name:'หินเปลี่ยนค่าออพชั่น', use:10, per:3, limit:{fix:50}, tip:'option-value-stone'},
+    {name:'ช่องเก็บซีลส่วนขยาย +1', use:4, per:1, limit:{week:5}, tip:'seal-slot-expand'},
+    {name:'ช่องเมอร์เชนารีส่วนขยาย', use:4, per:1, limit:{week:5}, tip:'mercenary-slot-expand'},
+    {name:'ทูน่ากระป๋องของแมวที่แสนพิเศษ', use:20, per:1, limit:{week:2}, tip:'special-cat-tuna-can'},
+  ];
+  const LINE_B = [
+    {name:'ก็อด : ออร่า ออฟ รีเบิร์ธ', use:500, per:1, limit:{fix:1}, tip:'god-aura-rebirth', headline:true, def:1},
+    {name:'ผลไม้แห่งปฐมกาล', use:300, per:1, limit:{fix:1}, tip:'genesis-fruit'},
+    {name:'กล่องดิจิครอส ชิป [ถาวร]', use:25, per:1, limit:{fix:1}, tip:'digicross-chip-box'},
+    {name:'ดิจิครอส ชิป [ถาวร]', use:25, per:1, limit:{fix:1}, ico:'icon-digicross-chip'},
+    {name:'กล้วยหอมระดับแพลตตินัม', use:20, per:1000, limit:{fix:1}, tip:'banana-platinum'},
+    {name:'กล้วยหอมระดับแพลตตินัมแสนอร่อย', use:20, per:800, limit:{fix:1}, tip:'banana-platinum-tasty'},
+    {name:'กล้วยหอมระดับแพลตตินัมแสนอร่อยระดับพรีเมี่ยม', use:20, per:600, limit:{fix:1}, tip:'banana-platinum-premium'},
+    {name:'ชุดไก่อิ่มจุใจ', use:20, per:300, limit:{fix:1}, tip:'chicken-set'},
+    {name:'ดิจิตอลเอ็นเนอร์จี้ดริงค์แบบจำกัดเวลา', use:5, per:1, limit:{week:1}, tip:'energy-drink'},
+  ];
+
+  const weeks = () => Math.max(0, +$('cWeeks').value || 0);
+  const maxOf = it => it.limit.week != null ? it.limit.week * weeks() : it.limit.fix;
+  const limText = it => it.limit.week != null ? `${it.limit.week} ครั้ง/สัปดาห์` : `จำกัด ${it.limit.fix} ครั้ง`;
+
+  function buildRows(items, tbodyId, prefix) {
+    $(tbodyId).innerHTML = items.map((it, i) => {
+      const icon = it.tip ? `icon-${it.tip}` : it.ico;
+      const icImg = icon ? `<img class="ic" src="img/tooltips/${icon}.png" alt="">` : '';
+      const nm = it.tip
+        ? `${icImg}<span class="tip" tabindex="0">${esc(it.name)}<span class="pop"><img src="img/tooltips/${it.tip}.png" alt="${esc(it.name)}" loading="lazy"></span></span>`
+        : icImg + esc(it.name);
+      return `<tr${it.headline ? ' class="headline"' : ''}>
+        <td>${nm}</td>
+        <td class="num">${it.use}</td>
+        <td class="num">${fmt(it.per)}</td>
+        <td class="lim">${limText(it)} <span data-max="${prefix}${i}"></span></td>
+        <td style="text-align:right"><input class="qty" type="number" min="0" id="${prefix}${i}" value="${it.def || 0}"></td>
+        <td class="cost" data-cost="${prefix}${i}">0</td>
+      </tr>`;
+    }).join('');
+  }
+  buildRows(LINE_A, 'rowsA', 'a');
+  buildRows(LINE_B, 'rowsB', 'b');
+
+  function sumLine(items, prefix) {
+    let used = 0;
+    items.forEach((it, i) => {
+      const el = $(prefix + i);
+      const max = maxOf(it);
+      el.max = max;
+      document.querySelector(`[data-max="${prefix}${i}"]`).textContent = max !== 1 ? `(สูงสุด ${max})` : '';
+      let q = Math.max(0, Math.min(+el.value || 0, max));
+      if (+el.value !== q) el.value = q;
+      const cost = q * it.use;
+      document.querySelector(`[data-cost="${prefix}${i}"]`).textContent = cost ? fmt(cost) : '0';
+      used += cost;
+    });
+    return used;
+  }
+
+  function budgetHTML(used, have, extraHint) {
+    const pct = have > 0 ? Math.min(100, used / have * 100) : (used > 0 ? 100 : 0);
+    const cls = used > have ? 'over' : pct > 85 ? 'warn' : '';
+    const left = have - used;
+    return `
+      <div class="row"><span>ใช้ไป / แก่นที่หาได้</span><b class="${used > have ? 'over' : ''}">${fmt(used)} / ${fmt(have)}</b></div>
+      <div class="bar"><i class="${cls}" style="width:${pct}%"></i></div>
+      <div class="row"><span>${left >= 0 ? 'เหลือแลกของอื่นได้อีก' : 'เกินงบ'}</span><b class="${left < 0 ? 'over' : ''}">${fmt(Math.abs(left))} แก่น</b></div>
+      ${extraHint || ''}`;
+  }
+
+  function render() {
+    const w = weeks();
+    const box = Math.max(0, Math.min(+$('cBox').value || 0, 10));
+    const pack = Math.max(0, Math.min(+$('cPack').value || 0, 5));
+    if (+$('cBox').value !== box) $('cBox').value = box;
+    if (+$('cPack').value !== pack) $('cPack').value = pack;
+
+    const usedA = sumLine(LINE_A, 'a');
+    const usedB = sumLine(LINE_B, 'b');
+
+    const haveA = w * 50 * 5 + pack * 25;   // craft cap + แพ็คเกจ
+    const haveB = box * 50 + pack * 50;
+
+    // สายฟาร์ม: ส่วนที่ต้องคราฟต์เอง (หลังหักแก่นจากแพ็คเกจ) -> จำนวนครั้ง + ชิ้นส่วน
+    const fromFarm = Math.max(0, usedA - pack * 25);
+    const crafts = Math.ceil(fromFarm / 5);
+    const frags = crafts * 25;
+    const craftCap = w * 50;
+    const craftHint = usedA === 0 ? '' : `
+      <div class="hint">ต้องคราฟต์ <b>${fmt(crafts)}</b> ครั้ง (ลิมิต ${fmt(craftCap)} ครั้งใน ${w} สัปดาห์)
+      = ฟาร์มชิ้นส่วนของการฟื้นฟู <b>${fmt(frags)}</b> ชิ้น
+      ${crafts > craftCap ? '<span class="bad">— เกินลิมิตคราฟต์ ทำไม่ทัน!</span>' : ''}</div>`;
+
+    const vg = box * 9900 + pack * 12500;
+    const cashHint = `<div class="hint">งบแคชช้อป = กล่อง ${box} × 9,900 + แพ็คเกจ ${pack} × 12,500 = <b>${fmt(vg)}</b> VG</div>`;
+
+    $('budgetA').innerHTML = budgetHTML(usedA, haveA, craftHint);
+    $('budgetB').innerHTML = budgetHTML(usedB, haveB, cashHint);
+
+    // เป้าหลัก: ครบ 2 ชิ้นไหม
+    const gotA = +$('a0').value >= 1 && usedA <= haveA && crafts <= craftCap;
+    const gotB = +$('b0').value >= 1 && usedB <= haveB;
+    const box_ = $('statusBox');
+    if (gotA && gotB) {
+      box_.className = 'status';
+      box_.innerHTML = `<span class="ic">✅</span><span><b>แผนนี้ได้ครบทั้ง ออร่า ออฟ เดสทรัคชัน และ ออร่า ออฟ รีเบิร์ธ</b> → ปลดร่าง [เอ็กซ์ตรีม] ซูซาโนะโอมอน ได้ · ใช้เวลาฟาร์ม ${w} สัปดาห์ + งบ ${fmt(vg)} VG</span>`;
+    } else {
+      const miss = [];
+      if (!gotA) miss.push('ออร่า ออฟ เดสทรัคชัน (สายฟาร์ม' + (crafts > craftCap ? ' — คราฟต์ไม่ทัน' : usedA > haveA ? ' — แก่นไม่พอ' : ' — ยังไม่ได้เลือกแลก') + ')');
+      if (!gotB) miss.push('ออร่า ออฟ รีเบิร์ธ (สายซื้อ' + (usedB > haveB ? ' — แก่นไม่พอ' : ' — ยังไม่ได้เลือกแลก') + ')');
+      box_.className = 'status bad';
+      box_.innerHTML = `<span class="ic">⛔</span><span><b>แผนนี้ยังไม่ครบ 2 ชิ้น</b> — ขาด: ${miss.join(' · ')}</span>`;
+    }
+  }
+
+  $('cReset').addEventListener('click', () => {
+    $('cWeeks').value = 2; $('cBox').value = 10; $('cPack').value = 0; $('cOwnBox').value = 0; $('cOwnPack').value = 0;
+    LINE_A.forEach((it, i) => $('a' + i).value = it.def || 0);
+    LINE_B.forEach((it, i) => $('b' + i).value = it.def || 0);
+    render();
+  });
+  document.querySelectorAll('.calc-controls input, .qty').forEach(el => el.addEventListener('input', render));
+  render();
+
+  // hover pop: ใช้ fixed + คำนวณพิกัด เพื่อหนี clip ของ .table-scroll (overflow-x:auto ตัด overflow แนวตั้งด้วย)
+  document.querySelectorAll('.tip').forEach(t => {
+    const pop = t.querySelector('.pop');
+    if (!pop) return;
+    const place = () => {
+      pop.classList.add('fixed');
+      const r = t.getBoundingClientRect();
+      const w = pop.offsetWidth, h = pop.offsetHeight;
+      const left = Math.min(Math.max(r.left, 8), window.innerWidth - w - 8);
+      let top = r.top - h - 8;
+      if (top < 8) top = r.bottom + 8;
+      pop.style.left = left + 'px';
+      pop.style.top = top + 'px';
+    };
+    t.addEventListener('mouseenter', place);
+    t.addEventListener('focus', place);
+    const img = pop.querySelector('img');
+    if (img && !img.complete) img.addEventListener('load', () => {
+      if (t.matches(':hover, :focus')) place();
+    });
+  });
+})();
+</script>
+</body>
+</html>
