@@ -67,9 +67,11 @@
   .synth .part.a .n{color:var(--amber-acc)} .synth .part.b .n{color:var(--vio-acc)}
   .synth .s{font-size:11.5px; color:var(--mut)}
   .synth .op{font-family:'Orbitron',sans-serif; font-size:30px; font-weight:800; color:var(--blue); text-shadow:0 0 12px rgba(0,180,255,.6)}
+  /* หมายเหตุ: ห้ามใช้ filter/transform ที่ .n — มันสร้าง containing block ทำให้ .pop (position:fixed ของ tooltip) เทียบ .n แทน viewport → หลุดขอบจอ เกิด scroll แนวนอน */
   .synth .goal .n{font-size:19px; font-weight:800;
-    background:linear-gradient(180deg,#FFE9A8,#FFD700 55%,#C99700); -webkit-background-clip:text; background-clip:text; color:transparent;
-    filter:drop-shadow(0 0 14px rgba(255,215,0,.3))}
+    background:linear-gradient(180deg,#FFE9A8,#FFD700 55%,#C99700); -webkit-background-clip:text; background-clip:text; color:transparent}
+  /* text จริงอยู่ใน .tip (child) — bg ไม่ inherit ทำให้ transparent text หาย → ยก gradient clip มาที่ .tip เอง */
+  .synth .goal .n .tip{background:linear-gradient(180deg,#FFE9A8,#FFD700 55%,#C99700); -webkit-background-clip:text; background-clip:text; color:transparent}
 
   /* ═══ BRANCHES ═══ */
   .branches{display:grid; grid-template-columns:1fr 1fr; gap:16px}
@@ -96,23 +98,26 @@
   /* ═══ ITEM ICON ═══ */
   img.ic{width:26px; height:26px; vertical-align:middle; transform:translateY(-2px); margin-right:6px;
     border:1px solid rgba(0,180,255,.3); border-radius:4px; background:#04101F}
-  img.ic.lg{width:32px; height:32px}
-  img.ic.sm{width:22px; height:22px; margin-right:4px}
+  img.ic.lg{width:40px; height:40px}
+  img.ic.xl{width:40px; height:40px; margin-right:9px}
+  img.ic.sm{width:28px; height:28px; margin-right:5px}
 
   /* ═══ TIP HOVER ═══ */
   .tip{position:relative; display:inline; border-bottom:1px dotted var(--mut); cursor:help}
   .tip:hover,.tip:focus{color:#fff; border-bottom-color:var(--blue); outline:none}
-  .tip .pop{position:absolute; left:0; bottom:calc(100% + 8px); z-index:30;
+  .pop{position:absolute; left:0; bottom:calc(100% + 8px); z-index:30;
     opacity:0; visibility:hidden; transform:translateY(4px);
     transition:opacity .13s ease,transform .13s ease,visibility .13s; pointer-events:none;
     border:1px solid var(--blue); box-shadow:0 12px 34px rgba(0,0,0,.85),0 0 18px rgba(0,180,255,.25); background:#04101F}
   .tip:hover .pop,.tip:focus .pop{opacity:1; visibility:visible; transform:translateY(0)}
-  .tip .pop img{display:block; width:280px; height:auto}
-  .tip .pop.pop-wide img{width:min(400px,80vw); padding:10px; background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,180,255,.14),transparent 70%)}
-  /* JS วางพิกัดเอง (fixed) เพื่อหนี overflow clip ของ .table-scroll + sticky controls */
-  .tip .pop.fixed{position:fixed; bottom:auto; transform:translateY(4px)}
-  .tip:hover .pop.fixed,.tip:focus .pop.fixed{transform:translateY(0)}
-  @media(prefers-reduced-motion:reduce){.tip .pop{transition:none}}
+  .pop img{display:block; width:280px; height:auto}
+  .pop.pop-wide img{width:min(400px,80vw); padding:10px; background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,180,255,.14),transparent 70%)}
+  /* JS วางพิกัดเอง (fixed) เพื่อหนี overflow clip ของ .table-scroll */
+  .pop.fixed{position:fixed; bottom:auto; transform:translateY(4px)}
+  /* .poster > * ตั้ง z-index:1 ให้ทุก sibling card เท่ากัน → pop nested อยู่ข้างในถูก sibling ถัดมาทับ.
+     ยก card ที่มี tip กำลัง hover/focus ให้ z สูงกว่า sibling ผ่าน :has() → pop โผล่พ้นทุกอย่าง */
+  .poster > *:has(.tip:hover),.poster > *:has(.tip:focus){z-index:40}
+  @media(prefers-reduced-motion:reduce){.pop{transition:none}}
 
   /* ═══ WARNING ═══ */
   .warn{display:flex; gap:14px; align-items:flex-start; border:1px solid rgba(255,77,106,.45);
@@ -120,6 +125,9 @@
   .warn .ic{font-size:24px; line-height:1.2; align-self:center}
   .warn .wtitle{font-family:'Orbitron',sans-serif; font-size:11px; font-weight:700; letter-spacing:.12em; color:var(--red); margin-bottom:3px}
   .warn .wtxt{font-size:13px; color:var(--txt); line-height:1.7}
+  .tip-note{border-color:rgba(63,221,122,.45);
+    background:linear-gradient(90deg,rgba(63,221,122,.12),rgba(63,221,122,.03))}
+  .tip-note .wtitle{color:var(--grn)}
   .warn .wtxt b{color:var(--gold); font-weight:600; font-variant-numeric:tabular-nums}
 
   /* ═══ SECTION TITLE ═══ */
@@ -291,18 +299,26 @@
       </div>
     </div>
 
+    <!-- TIP: เร่งสายฟาร์มด้วยแพ็คเกจ -->
+    <div class="warn tip-note">
+      <div class="ic">💡</div>
+      <div>
+        <div class="wtitle">TIP · อยากได้ [เอ็กซ์ตรีม] ซูซาโนะโอมอน ให้ไวขึ้น</div>
+        <div class="wtxt">ถ้าซื้อ <b>แพ็คเกจแก่นแท้ 5 แพ็ค</b> จะได้แก่นฟื้นฟูแถมมา <b>125</b> (25×5) แบบได้ทันทีไม่ติดลิมิตสัปดาห์ → เหลือคราฟต์เองแค่ <b>175 แก่น = 35 ครั้ง</b> ซึ่ง<b>ไม่เกินลิมิต 50 ครั้ง/สัปดาห์</b> จึงมีโอกาสปิดจบใน<b>สัปดาห์แรก</b>ได้ · คอขวดที่เหลือย้ายไปอยู่ที่การฟาร์ม<b>ชิ้นส่วน 875 ชิ้น</b>ให้ทัน — ลองกดปรับ "แพ็คเกจแก่นแท้" ในเครื่องคำนวณด้านล่างเทียบดูได้</div>
+      </div>
+    </div>
+
     <!-- CALCULATOR -->
     <div class="sec-title">BUDGET PLANNER · เครื่องคำนวณงบแก่น</div>
     <div class="sec-note">กรอกจำนวน<b>ครั้งที่จะแลก</b>แต่ละไอเทม (ไม่เกินลิมิตจริง) — ระบบรวมแก่นที่ใช้ เทียบกับที่หาได้ทั้งอีเวนต์ แล้วบอกพอ/ขาด</div>
 
-    <div class="calc-controls">
-      <label>ฟาร์มได้ <input type="number" id="cWeeks" min="0" max="4" value="2"> <span class="u">สัปดาห์</span></label>
-      <button type="button" id="cReset">รีเซ็ตเป็นเป้าหลัก</button>
-    </div>
-
     <!-- line A -->
     <div class="calc-card">
-      <h3>สายฟาร์ม — ใช้แก่นของการฟื้นฟู <span class="sub">ลิมิต "ครั้ง/สัปดาห์" คูณจำนวนสัปดาห์ให้อัตโนมัติ</span></h3>
+      <h3>สายฟาร์ม — ใช้แก่นของการฟื้นฟู <span class="sub">ลิมิต "ครั้ง/สัปดาห์" คูณ 2 สัปดาห์ให้อัตโนมัติ</span></h3>
+      <div class="own-row">
+        <span><img class="ic sm" src="img/tooltips/icon-shop-genuine-core-pack.png" alt=""><b>แพ็คเกจแก่นแท้</b> <span class="own-note">ได้แก่นฟื้นฟู ×25/แพ็ค · sync กับสายซื้อ</span></span>
+        <span><input class="qty" type="number" id="cPackA" min="0" max="5" value="0"> <span class="own-note">/5 แพ็ค</span></span>
+      </div>
       <div class="budget" id="budgetA"></div>
       <div class="table-scroll">
         <table class="plan">
@@ -353,10 +369,10 @@
     {name:'ไข่สุ่มดิจิทามะ–แร์มอน [ระดับ 4-5]', use:20, per:1, limit:{week:5}, tip:'digitama-random-egg-4-5'},
     {name:'แร์มอนดิจิทามะ ระดับ 5 [ร่างเต็มวัย]', use:20, per:1, limit:{fix:10}, tip:'rareamon-digitama-lv5'},
     {name:'ลูกเต๋าออพชั่นปลดขีดจำกัด', use:10, per:1, limit:{fix:35}, tip:'unlock-option-dice'},
-    {name:'แพ็คดิจิโคลนชั้นดี', use:30, per:1, limit:{week:3}, tip:'digiclone-pack-fine'},
-    {name:'กล่องเลือกสกิลเทมเมอร์ชั้นสุดยอด (7วัน)', use:20, per:1, limit:{week:5}, tip:'tamer-skill-box-7d'},
+    {name:'แพ็คดิจิโคลนชั้นดี', use:20, per:1, limit:{week:3}, tip:'digiclone-pack-fine'},
+    {name:'กล่องเลือกสกิลเทมเมอร์ชั้นสุดยอด (7วัน)', use:10, per:1, limit:{week:5}, tip:'tamer-skill-box-7d'},
     {name:'หินเปลี่ยนออพชั่น', use:10, per:3, limit:{fix:50}, tip:'option-change-stone'},
-    {name:'หินเปลี่ยนค่าออพชั่น', use:10, per:3, limit:{fix:50}, tip:'option-value-stone'},
+    {name:'หินเปลี่ยนค่าออพชั่น', use:4, per:3, limit:{fix:50}, tip:'option-value-stone'},
     {name:'ช่องเก็บซีลส่วนขยาย +1', use:4, per:1, limit:{week:5}, tip:'seal-slot-expand'},
     {name:'ช่องเมอร์เชนารีส่วนขยาย', use:4, per:1, limit:{week:5}, tip:'mercenary-slot-expand'},
     {name:'ทูน่ากระป๋องของแมวที่แสนพิเศษ', use:20, per:1, limit:{week:2}, tip:'special-cat-tuna-can'},
@@ -365,7 +381,7 @@
     {name:'ก็อด : ออร่า ออฟ รีเบิร์ธ', use:500, per:1, limit:{fix:1}, tip:'god-aura-rebirth', headline:true, def:1},
     {name:'ผลไม้แห่งปฐมกาล', use:300, per:1, limit:{fix:1}, tip:'genesis-fruit'},
     {name:'กล่องดิจิครอส ชิป [ถาวร]', use:25, per:1, limit:{fix:1}, tip:'digicross-chip-box'},
-    {name:'ดิจิครอส ชิป [ถาวร]', use:25, per:1, limit:{fix:1}, ico:'icon-digicross-chip'},
+    {name:'ดิจิครอส ชิป [ถาวร]', use:25, per:1, limit:{fix:1}, tip:'digicross-chip'},
     {name:'กล้วยหอมระดับแพลตตินัม', use:20, per:1000, limit:{fix:1}, tip:'banana-platinum'},
     {name:'กล้วยหอมระดับแพลตตินัมแสนอร่อย', use:20, per:800, limit:{fix:1}, tip:'banana-platinum-tasty'},
     {name:'กล้วยหอมระดับแพลตตินัมแสนอร่อยระดับพรีเมี่ยม', use:20, per:600, limit:{fix:1}, tip:'banana-platinum-premium'},
@@ -373,14 +389,14 @@
     {name:'ดิจิตอลเอ็นเนอร์จี้ดริงค์แบบจำกัดเวลา', use:5, per:1, limit:{week:1}, tip:'energy-drink'},
   ];
 
-  const weeks = () => Math.max(0, +$('cWeeks').value || 0);
+  const weeks = () => 2;   // ล็อกตายตัว = ระยะอีเวนต์ในเกม 2 สัปดาห์
   const maxOf = it => it.limit.week != null ? it.limit.week * weeks() : it.limit.fix;
   const limText = it => it.limit.week != null ? `${it.limit.week} ครั้ง/สัปดาห์` : `จำกัด ${it.limit.fix} ครั้ง`;
 
   function buildRows(items, tbodyId, prefix) {
     $(tbodyId).innerHTML = items.map((it, i) => {
       const icon = it.tip ? `icon-${it.tip}` : it.ico;
-      const icImg = icon ? `<img class="ic" src="img/tooltips/${icon}.png" alt="">` : '';
+      const icImg = icon ? `<img class="ic xl" src="img/tooltips/${icon}.png" alt="">` : '';
       const nm = it.tip
         ? `${icImg}<span class="tip" tabindex="0">${esc(it.name)}<span class="pop"><img src="img/tooltips/${it.tip}.png" alt="${esc(it.name)}" loading="lazy"></span></span>`
         : icImg + esc(it.name);
@@ -429,7 +445,9 @@
     const box = Math.max(0, Math.min(+$('cBox').value || 0, 10));
     const pack = Math.max(0, Math.min(+$('cPack').value || 0, 5));
     if (+$('cBox').value !== box) $('cBox').value = box;
+    // แพ็คเกจแก่นแท้ = โควตาเดียว input 2 จุด (สายฟาร์ม + สายซื้อ) → echo ให้ตรงกันเสมอ
     if (+$('cPack').value !== pack) $('cPack').value = pack;
+    if (+$('cPackA').value !== pack) $('cPackA').value = pack;
 
     const usedA = sumLine(LINE_A, 'a');
     const usedB = sumLine(LINE_B, 'b');
@@ -469,16 +487,14 @@
     }
   }
 
-  $('cReset').addEventListener('click', () => {
-    $('cWeeks').value = 2; $('cBox').value = 10; $('cPack').value = 0; $('cOwnBox').value = 0; $('cOwnPack').value = 0;
-    LINE_A.forEach((it, i) => $('a' + i).value = it.def || 0);
-    LINE_B.forEach((it, i) => $('b' + i).value = it.def || 0);
-    render();
-  });
-  document.querySelectorAll('.calc-controls input, .qty').forEach(el => el.addEventListener('input', render));
+  // cPackA (สายฟาร์ม) แก้ → push ค่าไป cPack (source ที่ render อ่าน) ก่อน
+  $('cPackA').addEventListener('input', () => { $('cPack').value = $('cPackA').value; });
+  document.querySelectorAll('.qty').forEach(el => el.addEventListener('input', render));
   render();
 
-  // hover pop: ใช้ fixed + คำนวณพิกัด เพื่อหนี clip ของ .table-scroll (overflow-x:auto ตัด overflow แนวตั้งด้วย)
+  // hover pop: portal ไป body + fixed + คำนวณพิกัด
+  // — หนีทั้ง clip ของ .table-scroll (overflow) และ stacking context ของ .synth/.branch
+  //   (.poster > * มี z-index:1 → pop ที่ nested อยู่ข้างใน z สูงแค่ไหนก็ถูก sibling card ทับ)
   document.querySelectorAll('.tip').forEach(t => {
     const pop = t.querySelector('.pop');
     if (!pop) return;
