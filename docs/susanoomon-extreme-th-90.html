@@ -385,32 +385,32 @@
       <span class="en">DIGIMON MASTERS ONLINE · ข้อมูลเพื่อการอ้างอิงเท่านั้น</span>
     </div>
 
-    <!-- mobile-only inline ad (footer) -->
+    <!-- mobile-only inline ad (footer) — src/href/label เซ็ตโดย JS (rotate) -->
     <div class="ad-inline">
-      <span class="ad-label">service</span>
-      <a href="https://web.facebook.com/groups/244114362448211/posts/3185424211650530" target="_blank" rel="noopener noreferrer">
-        <img src="img/ads/dmo-dungeon-service.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
+      <span class="ad-label" data-ad-label></span>
+      <a data-ad-link href="#" target="_blank" rel="noopener noreferrer">
+        <img data-ad-img src="" alt="โฆษณา" loading="lazy" width="1080" height="1080">
       </a>
     </div>
   </div>
 
   <!-- desktop floating ad (bottom-right) -->
   <aside class="ad-float" id="ad-float">
-    <div class="ad-head"><span class="ad-label">service</span>
-      <button class="ad-close" id="ad-close" type="button" title="ปิด service" aria-label="ปิด service">✕</button></div>
-    <button class="ad-thumb" id="ad-thumb" type="button" aria-label="ขยายดู service">
-      <img src="img/ads/dmo-dungeon-service.png" alt="Kaiser's Lab — Dungeon Service" loading="lazy" width="1080" height="1080">
+    <div class="ad-head"><span class="ad-label" data-ad-label></span>
+      <button class="ad-close" id="ad-close" type="button" title="ปิด" aria-label="ปิด">✕</button></div>
+    <button class="ad-thumb" id="ad-thumb" type="button" aria-label="ขยายดูโฆษณา">
+      <img data-ad-img src="" alt="โฆษณา" loading="lazy" width="1080" height="1080">
     </button>
   </aside>
 
   <!-- shared lightbox -->
-  <div class="ad-box" id="ad-box" role="dialog" aria-modal="true" aria-label="โฆษณา Kaiser's Lab">
+  <div class="ad-box" id="ad-box" role="dialog" aria-modal="true" aria-label="โฆษณา">
     <div class="ad-stage">
       <button class="ad-x" id="ad-x" type="button" title="ปิด" aria-label="ปิด">✕</button>
-      <a class="ad-link" href="https://web.facebook.com/groups/244114362448211/posts/3185424211650530" target="_blank" rel="noopener noreferrer">
-        <img src="img/ads/dmo-dungeon-service.png" alt="Kaiser's Lab — Dungeon Service">
+      <a class="ad-link" data-ad-link href="#" target="_blank" rel="noopener noreferrer">
+        <img data-ad-img src="" alt="โฆษณา">
       </a>
-      <a class="ad-cta" href="https://web.facebook.com/groups/244114362448211/posts/3185424211650530" target="_blank" rel="noopener noreferrer">เปิดดูใน Facebook ↗</a>
+      <a class="ad-cta" data-ad-link href="#" target="_blank" rel="noopener noreferrer">เปิดดูใน Facebook ↗</a>
     </div>
   </div>
 
@@ -574,8 +574,19 @@
   });
 })();
 
-// sponsored floating ad: close (this load only) + click-to-zoom lightbox
+// sponsored floating ad: rotate 2 สินค้า (สุ่มต่อ load) + close (this load only) + click-to-zoom lightbox
 (() => {
+  const ADS = [
+    {img:'img/ads/dmo-dungeon-service.png', label:'service',
+     link:'https://web.facebook.com/groups/244114362448211/posts/3185424211650530'},
+    {img:'img/ads/726548819_2462184690968077_7780691861906989290_n.jpg', label:'promo',
+     link:'https://web.facebook.com/photo/?fbid=2462184687634744&set=gm.3185826914943593&idorvanity=244114362448211'},
+  ];
+  const ad = ADS[Math.floor(Math.random() * ADS.length)];
+  document.querySelectorAll('[data-ad-img]').forEach(el => { el.src = ad.img; el.alt = ad.label; });
+  document.querySelectorAll('[data-ad-link]').forEach(el => { el.href = ad.link; });
+  document.querySelectorAll('[data-ad-label]').forEach(el => { el.textContent = ad.label; });
+
   const float = document.getElementById('ad-float');
   const box = document.getElementById('ad-box');
   document.getElementById('ad-close').addEventListener('click', () => { float.hidden = true; });
