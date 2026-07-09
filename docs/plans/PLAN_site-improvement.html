@@ -1,0 +1,175 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan — Site Improvement (dmo)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { darkMode: 'class' };
+  function toggleTheme(){ document.documentElement.classList.toggle('dark'); }
+</script>
+<style>
+  .num{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:.5rem;font-size:.8rem;font-weight:700}
+  code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85em}
+  .sev{font-size:.65rem;font-weight:700;letter-spacing:.05em;padding:.15rem .5rem;border-radius:9999px;text-transform:uppercase}
+</style>
+
+<div class="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200">
+<div class="max-w-4xl mx-auto px-5 py-8">
+
+  <div class="flex items-start justify-between gap-4 mb-6">
+    <div>
+      <p class="text-xs font-semibold tracking-widest text-sky-600 dark:text-sky-400 uppercase">Plan Spec · Site Improvement (audit → fix)</p>
+      <h1 class="text-2xl sm:text-3xl font-bold mt-1">DMO Tracker — ปรับปรุงเว็บ <span class="text-sky-600 dark:text-sky-400">4 เฟส</span></h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">เนื้อหา · จัดหมวดหมู่ · UX/UI mobile · ค้นหา cross-server (NA·KR·TH) · audited 09.07.2026</p>
+    </div>
+    <button onclick="toggleTheme()" class="shrink-0 text-xs px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">◐ theme</button>
+  </div>
+
+  <!-- STATS -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-rose-500">5</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">หน้าหลักไม่มี viewport meta (mobile พัง)</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-rose-500">12</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">สำเนา nav ที่ drift ไม่ตรงกัน</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-amber-500">3</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">หน้า orphan (ไม่มีลิงก์เข้า)</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-emerald-500">1</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">หน้าใหม่: Cross-server Lookup</div>
+    </div>
+  </div>
+
+  <!-- GOAL -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300">G</span>Goal</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm leading-relaxed">
+      แก้ <b>mobile ที่พังจริง</b> (viewport + nav ล้นจอ), จัด <b>IA ใหม่</b> ให้ nav ทุกหน้าตรงกันและหมวดหมู่ชัด
+      (Feed / Tool / Item DB), sync <b>ตัวเลข stat</b> ที่ drift ระหว่าง index กับหน้าจริง,
+      และเพิ่ม <b>Cross-server Lookup</b> — ค้นชื่อไอเทม/ซีล/ดิจิมอน EN·KR·TH หน้าเดียว alias-aware
+      แทนการ hand-craft หน้า lookup ทีละ patch (แบบ seal-lookup-89).
+    </div>
+  </section>
+
+  <!-- AUDIT FINDINGS -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200">A</span>Audit findings (ตรวจจากไฟล์จริง + เปิด browser จริง)</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+          <tr><td class="px-4 py-2 w-20"><span class="sev bg-rose-100 text-rose-700 dark:bg-rose-900 dark:text-rose-300">P0</span></td>
+              <td class="px-4 py-2"><b>viewport meta หาย 5 หน้าหลัก</b> — <code>index, decks, digimon, seals, seal-lookup-89</code> → มือถือจริง render กว้าง ~980px ตัวหนังสือจิ๋ว (อีก 9 ไฟล์มีครบ — หลุดเฉพาะหน้าเก่า/หน้า generate)</td></tr>
+          <tr><td class="px-4 py-2"><span class="sev bg-rose-100 text-rose-700 dark:bg-rose-900 dark:text-rose-300">P0</span></td>
+              <td class="px-4 py-2"><b>nav ล้นจอ mobile</b> — screenshot 375px: เมนู "Breakth..." โดนตัด + ทั้งหน้ามี horizontal scroll. <code>site.css</code> มี media query แค่ 2 จุดทั้งไฟล์</td></tr>
+          <tr><td class="px-4 py-2"><span class="sev bg-rose-100 text-rose-700 dark:bg-rose-900 dark:text-rose-300">P0</span></td>
+              <td class="px-4 py-2"><b>nav drift 12 สำเนา</b> — แต่ละหน้าเมนูไม่เท่ากัน: index มี 7 ลิงก์, digimon มี 4, nametag มี 5, ไม่มีหน้าไหนลิงก์ Accessories เลย</td></tr>
+          <tr><td class="px-4 py-2"><span class="sev bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300">P1</span></td>
+              <td class="px-4 py-2"><b>orphan 3 หน้า</b> — <code>accessories.html</code> (57KB ทำเสร็จแล้ว!), <code>seal-patch-th-88.html</code>, <code>seal-deal-calculator.html</code> ไม่มีลิงก์เข้าจากหน้าใดเลย</td></tr>
+          <tr><td class="px-4 py-2"><span class="sev bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300">P1</span></td>
+              <td class="px-4 py-2"><b>หมวดหมู่ปน</b> — nav เอา Feed (Decks/Digimon/Seal), Tool (Breakthrough/Seal Lookup), Item DB (Name Tag/Accessories) มาเรียงแบน ๆ; <code>seal-lookup-89</code> เป็นหน้า one-off ผูก patch #89 แต่อยู่ global nav → จะ rot ตอน #90 ออก</td></tr>
+          <tr><td class="px-4 py-2"><span class="sev bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300">P1</span></td>
+              <td class="px-4 py-2"><b>stat drift</b> — index บอก Seal <b>56</b> โพสต์ / หน้า seals จริงบอก <b>53</b>; index บอก deck 21/35 / หน้า decks จริง 20/34 (เลข seal hardcode ใน <code>build_index_html.py</code>)</td></tr>
+          <tr><td class="px-4 py-2"><span class="sev bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300">P1</span></td>
+              <td class="px-4 py-2"><b>Recent activity stale</b> — จบที่ May 2026 ทั้งที่มีความเคลื่อนไหว seal มิ.ย.–ก.ค. 2026 (feed รวมแค่ decks+digimon ไม่รวม seal)</td></tr>
+          <tr><td class="px-4 py-2"><span class="sev bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300">P2</span></td>
+              <td class="px-4 py-2"><b>ค้นหา cross-server ไม่มี</b> — ข้อมูล mapping มีครบใน repo (<code>kr_seal_en.json, th_seal_en.json, digimon_aliases.json, seal_data.json</code>) แต่ user ค้นไม่ได้ ต้องรอ hand-craft หน้า lookup ทีละ patch</td></tr>
+          <tr><td class="px-4 py-2"><span class="sev bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300">P2</span></td>
+              <td class="px-4 py-2"><b>SEO/share เป็นศูนย์</b> — ไม่มี meta description / OG tags / favicon สักหน้า; font โหลดผ่าน <code>@import</code> ใน CSS (render-blocking chain)</td></tr>
+          <tr><td class="px-4 py-2"><span class="sev bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-300">note</span></td>
+              <td class="px-4 py-2"><b>รูป 34MB รวม</b> ใน <code>docs/img/</code> — decks.html ไม่มี <code>loading="lazy"</code> เลย (digimon.html มีแล้ว 19 จุด)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BUILD STEPS -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-3"><span class="num bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300">B</span>Build steps</h2>
+    <div class="space-y-3">
+
+      <div class="rounded-xl border border-rose-200 dark:border-rose-900 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-rose-600 text-white text-xs">1</span><b>Phase 0 — Mobile fix</b> <span class="text-xs text-slate-400">(viewport + responsive nav)</span></div>
+        <ul class="text-sm mt-2 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+          <li>เติม <code>&lt;meta viewport&gt;</code> ใน 5 หน้าที่หาย <b>และ</b> ใน template ของ <code>build_index_html.py</code> + <code>build_digimon_html.py</code> (ไม่งั้นโดน overwrite รอบ build หน้า)</li>
+          <li><code>site.css</code>: mobile ≤720px → nav เลื่อนแนวนอนได้ (<code>overflow-x:auto</code> ไม่ wrap, ซ่อน scrollbar), ซ่อน <code>.nav-meta</code>, ลด hero padding/font, กัน horizontal overflow ทั้ง body</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-amber-200 dark:border-amber-900 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-amber-500 text-white text-xs">2</span><b>Phase 1 — IA / จัดหมวดหมู่ + sync nav</b></div>
+        <ul class="text-sm mt-2 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+          <li>Canonical nav ชุดเดียวทุกหน้า: <b>Home · Decks · Digimon · Seal · Items · Tools</b> — "Items" = Name Tag + Accessories (2 ลิงก์แยก หรือ dropdown), "Tools" = Breakthrough + Lookup ใหม่. <span class="text-amber-600 dark:text-amber-400">← ยืนยันชุดสุดท้ายตอน confirm</span></li>
+          <li>ถอด <code>seal-lookup-89</code> ออกจาก global nav → ไปเป็น card "Related" บนหน้า seals พร้อม <code>seal-patch-th-88</code> + <code>seal-deal-calculator</code> (เลิก orphan)</li>
+          <li>เพิ่ม Accessories card ใน index feature grid</li>
+          <li>แก้ nav ทั้งใน 10 ไฟล์ static + 2 builder templates ให้ตรงกัน</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-amber-200 dark:border-amber-900 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-amber-500 text-white text-xs">3</span><b>Phase 1.5 — Content sync</b> <span class="text-xs text-slate-400">(stat + feed)</span></div>
+        <ul class="text-sm mt-2 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+          <li><code>build_index_html.py</code>: อ่านจำนวน seal posts จริงจาก <code>docs/seal_data.json</code> แทน hardcode 56 → เลขตรงกับหน้า seals เสมอ</li>
+          <li>Recent activity: ดึง seal posts ล่าสุด (จาก seal_data.json) รวมเข้า timeline → feed ไม่ stale</li>
+          <li>รัน builder → index.html ใหม่ → เลขตรงทุกหน้า</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-sky-200 dark:border-sky-900 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-sky-600 text-white text-xs">4</span><b>Phase 2 — Cross-server Lookup</b> <span class="text-xs text-slate-400">(หน้าใหม่ lookup.html — ตอบโจทย์ความละเอียด/แม่นยำการค้นข้อมูลแต่ละเซิร์ฟ)</span></div>
+        <ul class="text-sm mt-2 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+          <li>Builder ใหม่ <code>builders/build_search_index.py</code> → gen <code>docs/search_index.json</code> จาก: <code>seal_data.json</code> (ตาราง seal ทุกเซิร์ฟ) + <code>kr_seal_en.json</code> + <code>th_seal_en.json</code> + <code>digimon_aliases.json</code> + <code>scan_result_digimon.json</code> — ทุก entry เก็บ: ชื่อ EN/KR/TH, เซิร์ฟที่พบ, โพสต์ที่มา (URL+วันที่), rate/qty ถ้ามี, normalized key (ผ่าน logic เดียวกับ <code>aliases.py norm()</code> — precompute ฝั่ง Python เพื่อความแม่นยำ ไม่ port ไป JS)</li>
+          <li>หน้า <code>docs/lookup.html</code> (mockup-first ตาม convention repo): ช่องค้นหาเดียว พิมพ์ EN/KR/TH ได้หมด → ผลลัพธ์เป็น card สไตล์ seal-lookup-89: badge <b>NA พบ / KR พบ / TH ไม่พบ</b> + ลิงก์โพสต์ต้นทาง + วันที่ sweep ล่าสุด ("ไม่พบ" บอกขอบเขต sweep ไม่ใช่แค่เงียบ — ความแม่นยำอยู่ตรง provenance นี้)</li>
+          <li>Alias-aware: ค้น "Anomalocarimon" เจอ "Scorpiomon", ค้นชื่อไทยเจอสะกด KR/NA ผ่าน th_seal_en mapping</li>
+          <li>seal-lookup-89 ยังอยู่เป็น snapshot — หน้าใหม่ทำให้ patch ต่อไปไม่ต้อง hand-craft อีก</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-slate-500 text-white text-xs">5</span><b>Phase 3 — Meta + perf polish</b></div>
+        <ul class="text-sm mt-2 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+          <li>meta description + OG title/description + favicon (SVG inline emoji) ทุกหน้า + templates</li>
+          <li>ย้าย font Prompt จาก <code>@import</code> ใน CSS → <code>&lt;link rel="preconnect"&gt;+stylesheet</code> ใน head (ตัด render-blocking chain)</li>
+          <li>เติม <code>loading="lazy"</code> รูปทั้งหมดใน decks.html</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FILES -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-violet-100 text-violet-700 dark:bg-violet-900 dark:text-violet-300">F</span>Files touched</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+          <tr><td class="px-4 py-2 font-medium w-64"><code>docs/css/site.css</code></td><td class="px-4 py-2">responsive nav + mobile media queries</td></tr>
+          <tr><td class="px-4 py-2 font-medium"><code>docs/*.html</code> (10 static)</td><td class="px-4 py-2">viewport, canonical nav, meta/OG/favicon, lazy img (decks)</td></tr>
+          <tr><td class="px-4 py-2 font-medium"><code>builders/build_index_html.py</code></td><td class="px-4 py-2">viewport+nav ใน template, seal stat จาก data จริง, feed รวม seal</td></tr>
+          <tr><td class="px-4 py-2 font-medium"><code>builders/build_digimon_html.py</code></td><td class="px-4 py-2">viewport+nav ใน template</td></tr>
+          <tr><td class="px-4 py-2 font-medium text-emerald-600"><code>builders/build_search_index.py</code> (new)</td><td class="px-4 py-2">gen search_index.json (alias-aware, precomputed norm)</td></tr>
+          <tr><td class="px-4 py-2 font-medium text-emerald-600"><code>docs/lookup.html</code> (new)</td><td class="px-4 py-2">Cross-server Lookup — mockup ก่อน แล้วค่อยต่อ search_index.json</td></tr>
+          <tr><td class="px-4 py-2 font-medium"><code>tools/validate.py</code></td><td class="px-4 py-2">รับรู้ไฟล์ใหม่ (search_index.json + lookup.html หลัง builder เสร็จ)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- RISKS -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-rose-100 text-rose-700 dark:bg-rose-900 dark:text-rose-300">R</span>Risks / constraints</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm leading-relaxed space-y-2">
+      <p>• <b>index.html + digimon.html เป็นไฟล์ generate</b> — ห้ามแก้ HTML ตรง ต้องแก้ที่ builder แล้ว re-run (seals.html แก้ head ตรงได้ — builder inject เฉพาะส่วนตาราง). decks.html hand-curated แก้ตรงได้.</p>
+      <p>• <b>validate.py idempotency</b> — หลังแก้ builder ต้องรัน builder + validate ให้ผ่าน (re-run แล้ว git diff ต้องว่าง)</p>
+      <p>• ตาม repo convention: <b>ไม่ inline CSS ใหม่</b> — responsive rules ลง site.css เท่านั้น; หน้า lookup ใช้ mockup-first</p>
+      <p>• <b>Out of scope:</b> แปลงรูป 34MB เป็น WebP (เสนอทีหลังได้), ตัดสินใจ unhide Seal Deal, redesign theme</p>
+    </div>
+  </section>
+
+  <p class="text-xs text-slate-400 dark:text-slate-500 mt-8">PLAN_site-improvement.html · dmo repo · generated 09.07.2026 — awaiting confirm ก่อนแก้โค้ด</p>
+
+</div>
+</div>

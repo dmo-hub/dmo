@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ค้นชื่อซีล/ดิจิมอน EN · KR · TH ช่องเดียว — เช็คว่าเซิร์ฟไหนมี พร้อมลิงก์โพสต์ต้นทาง">
+<meta property="og:title" content="DMO Tracker — Cross-server Lookup">
+<meta property="og:description" content="ค้นชื่อซีล/ดิจิมอน EN · KR · TH ช่องเดียว — เช็คว่าเซิร์ฟไหนมี พร้อมลิงก์โพสต์ต้นทาง">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>DMO Tracker — Cross-server Lookup</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<style>
+  /* lookup-only tweaks (server badge style shared with seal-lookup-89) */
+  .search-box {
+    display: flex; gap: 10px; align-items: center;
+    background: var(--canvas); border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg); padding: 12px 16px; margin-bottom: 10px;
+  }
+  .search-box input {
+    flex: 1; border: none; outline: none; background: transparent;
+    font-family: inherit; font-size: 16px; color: var(--ink);
+  }
+  .search-box .hint-key {
+    font-size: 11px; color: var(--muted-soft);
+    font-family: "JetBrains Mono", "Consolas", monospace;
+  }
+  .lookup-card { padding: 0 0 4px; margin-bottom: 14px; }
+  .lookup-card .card-head { padding: 16px 20px 0; }
+  .lookup-body { margin: 6px 20px 16px; }
+  .lookup-body p { margin: 4px 0; font-size: 13.5px; color: var(--body); line-height: 1.6; }
+  .lookup-body .lbl { color: var(--muted-soft); font-weight: 500; margin-right: 6px; }
+  .server-line { display: flex; align-items: flex-start; gap: 8px; margin: 8px 0 2px; flex-wrap: wrap; }
+  .server-badge { font-size: 10.5px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+    padding: 2px 9px; border-radius: 9999px; flex-shrink: 0; margin-top: 2px; }
+  .server-badge.s-na { background: var(--amber); color: var(--on-primary); }
+  .server-badge.s-kr { background: var(--coral); color: var(--on-primary); }
+  .server-badge.s-th { background: var(--teal); color: var(--on-primary); }
+  .server-badge.s-none { background: var(--surface-soft); color: var(--muted-soft); border: 1px solid var(--hairline); }
+  .not-found { font-size: 12.5px; color: var(--muted); font-style: italic; }
+  .stat-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 2px; }
+  .stat-pill { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 9999px;
+    background: var(--surface-soft); color: var(--muted-soft); border: 1px solid var(--hairline); }
+  .src-link { font-size: 12px; color: var(--muted); }
+  .src-link a { color: var(--body); text-decoration: none; font-weight: 500;
+    border: 1px solid var(--hairline); border-radius: 9999px; padding: 2px 9px; margin: 2px 4px 2px 0;
+    display: inline-block; }
+  .src-link a:hover { background: var(--surface-soft); }
+  .type-badge { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 9999px;
+    letter-spacing: 1.2px; text-transform: uppercase; }
+  .type-badge.t-seal { background: var(--teal); color: var(--on-primary); }
+  .type-badge.t-digimon { background: var(--coral); color: var(--on-primary); }
+  .type-badge.t-patch { background: var(--amber); color: var(--on-primary); }
+  .note-box { margin: 18px 0 0; padding: 11px 14px; border: 1px solid var(--hairline);
+    border-radius: var(--radius); background: var(--surface-soft); font-size: 12.5px;
+    color: var(--muted); line-height: 1.6; }
+  .empty-state { text-align: center; color: var(--muted); padding: 40px 0; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="breakthrough.html">Breakthrough</a>
+      <a href="nametag.html">Name Tag</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="lookup.html" class="is-active">Lookup</a>
+    </nav>
+    <span class="nav-meta">search: NA · KR · TH</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <div>
+      <h1>🔎 Cross-server Lookup</h1>
+      <p class="lead">พิมพ์ชื่อซีล/ดิจิมอน ภาษาไหนก็ได้ (EN · 한국어 · ไทย) — เช็คว่าเซิร์ฟไหนมี พร้อมที่มา</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num" id="stat-entries">–</div><div class="lbl">รายการ</div></div>
+      <div class="hero-stat"><div class="num">3</div><div class="lbl">เซิร์ฟ</div></div>
+      <div class="hero-stat"><div class="num">3</div><div class="lbl">ภาษา</div></div>
+    </div>
+  </div>
+
+  <div class="search-box">
+    <span aria-hidden="true">🔎</span>
+    <input id="q" type="search" placeholder="เช่น Scorpiomon · 스콜피온몬 · นูเมมอน · dungeon masters…" autocomplete="off" autofocus>
+    <span class="hint-key" id="result-count"></span>
+  </div>
+
+  <div class="filter-bar">
+    <h4>ชนิด</h4>
+    <div class="filter-group">
+      <button class="filter-pill active" data-type="">ทั้งหมด</button>
+      <button class="filter-pill" data-type="seal">Seal item</button>
+      <button class="filter-pill" data-type="patch">แพทซีล (โพสต์)</button>
+      <button class="filter-pill" data-type="digimon">Digimon</button>
+    </div>
+    <h4>เซิร์ฟ</h4>
+    <div class="filter-group">
+      <button class="filter-pill active" data-server="">ทุกเซิร์ฟ</button>
+      <button class="filter-pill" data-server="na">NA</button>
+      <button class="filter-pill" data-server="kr">KR</button>
+      <button class="filter-pill" data-server="th">TH</button>
+    </div>
+    <h4>สเตตัสซีล <span class="hint">(เฉพาะ seal item)</span></h4>
+    <div class="filter-group" id="stat-pills">
+      <button class="filter-pill active" data-stat="">ทุกสเตตัส</button>
+      <button class="filter-pill" data-stat="HP">HP</button>
+      <button class="filter-pill" data-stat="DS">DS</button>
+      <button class="filter-pill" data-stat="AT">AT</button>
+      <button class="filter-pill" data-stat="CT">CT</button>
+      <button class="filter-pill" data-stat="HT">HT</button>
+      <button class="filter-pill" data-stat="DE">DE</button>
+      <button class="filter-pill" data-stat="BL">BL</button>
+      <button class="filter-pill" data-stat="EV">EV</button>
+    </div>
+  </div>
+
+  <div id="results"></div>
+
+  <div class="note-box">
+    <b>ขอบเขตข้อมูล:</b> ซีลมาจาก<b>ตารางแลก Seal-Exchange-Ticket</b> ที่ sweep จากโพสต์ NA · KR · TH
+    (ซีลที่แจกทางเควส/กล่อง/เช็คชื่อ ไม่อยู่ในตาราง จะไม่เจอที่นี่) + ดิจิมอนใหม่จาก New Digimon tracker.
+    "ไม่พบ" หมายถึงไม่อยู่ในข้อมูลที่ sweep ถึง <span id="coverage-note">…</span> —
+    การจับคู่ชื่อข้ามเซิร์ฟใช้ alias map (เช่น Scorpiomon = Anomalocarimon) + ตารางเทียบชื่อ KR/TH → EN.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
+  &nbsp;·&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
+  &nbsp;·&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+  &nbsp;·&nbsp; <a href="styleguide.html">Style Guide</a>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var DATA = null;
+  var typeFilter = "";
+  var serverFilter = "";
+  var statFilter = "";
+  var MAX_SHOWN = 50;
+  var SERVERS = ["na", "kr", "th"];
+  var SERVER_LABEL = { na: "NA", kr: "KR", th: "TH" };
+
+  var $q = document.getElementById("q");
+  var $results = document.getElementById("results");
+  var $count = document.getElementById("result-count");
+
+  function squash(s) { return s.toLowerCase().replace(/\s+/g, ""); }
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function allNames(e) {
+    var out = [e.display];
+    ["en", "kr", "th"].forEach(function (l) { out = out.concat(e.names[l] || []); });
+    return out;
+  }
+
+  function entryStats(e) {
+    var out = {};
+    SERVERS.forEach(function (s) {
+      (e.servers[s] || []).forEach(function (h) { if (h.stat) out[h.stat] = true; });
+    });
+    return out;
+  }
+
+  function passesFilters(e) {
+    if (typeFilter && e.type !== typeFilter) return false;
+    if (serverFilter && !(e.servers && e.servers[serverFilter] && e.servers[serverFilter].length)) return false;
+    if (statFilter && (e.type !== "seal" || !entryStats(e)[statFilter])) return false;
+    return true;
+  }
+
+  // Ranked match: exact > prefix > substring > all-tokens-in-any-order.
+  // Query and names are compared space-squashed + lowercased, so
+  // "dungeon masters2" == "Dungeon Masters 2". Returns 0 when no match.
+  function score(e, rawQ) {
+    if (!passesFilters(e)) return 0;
+
+    var sq = squash(rawQ);
+    var tokens = rawQ.toLowerCase().split(/\s+/).filter(Boolean);
+    var best = 0;
+    allNames(e).forEach(function (n) {
+      var sn = squash(n);
+      var sc = 0;
+      if (sn === sq) sc = 100;
+      else if (sn.indexOf(sq) === 0) sc = 80;
+      else if (sn.indexOf(sq) !== -1) sc = 60;
+      else if (tokens.length > 1 && tokens.every(function (t) { return sn.indexOf(squash(t)) !== -1; })) sc = 40;
+      if (sc > best) best = sc;
+    });
+    return best;
+  }
+
+  function serverLine(e, s) {
+    var hits = (e.servers || {})[s];
+    if (!hits || !hits.length) {
+      var cov = DATA.coverage[s] || "?";
+      return '<div class="server-line"><span class="server-badge s-none">' + SERVER_LABEL[s] +
+        ' — ไม่พบ</span><span class="not-found">ไม่อยู่ในข้อมูลที่ sweep ถึง ' + esc(cov) + "</span></div>";
+    }
+    var links = hits.slice(0, 4).map(function (h) {
+      if (h.url) {
+        var host = h.url.indexOf("digimonmasters") !== -1 ? "KR post" :
+                   h.url.indexOf("vplay") !== -1 ? "TH post" : "NA post";
+        return '<a href="' + esc(h.url) + '" target="_blank">' + host + (h.date ? " · " + esc(h.date) : "") + "</a>";
+      }
+      return '<a href="seals.html#' + esc(h.post) + '">' + esc(h.post) + (h.date ? " · " + esc(h.date) : "") + "</a>";
+    }).join("");
+    var pills = "";
+    var first = hits[0];
+    if (first && first.stat) {
+      pills = '<div class="stat-row">' + hits.slice(0, 6).map(function (h) {
+        return '<span class="stat-pill">' + esc(h.stat) + " +" + esc(h.value) +
+          " · ×" + esc(h.qty) + " / " + esc(h.tickets) + " ตั๋ว</span>";
+      }).join("") + "</div>";
+    }
+    return '<div class="server-line"><span class="server-badge s-' + s + '">' + SERVER_LABEL[s] +
+      ' — พบ</span><span class="src-link">' + links + "</span></div>" + pills;
+  }
+
+  function card(e) {
+    if (e.type === "patch") {
+      var s = Object.keys(e.servers)[0];
+      var h = e.servers[s][0];
+      return '<div class="card lookup-card">' +
+        '<div class="card-head">' +
+          '<span class="type-badge t-patch">แพทซีล</span>' +
+          '<span class="server-badge s-' + s + '">' + SERVER_LABEL[s] + "</span>" +
+          '<span class="card-date">' + esc(h.date) + "</span>" +
+          '<span class="card-idx">' + esc(e.key) + "</span>" +
+        "</div>" +
+        '<div class="lookup-body">' +
+          '<p>' + esc(e.names.en.slice(1).join(" · ")) + "</p>" +
+          '<div class="stat-row">' +
+            '<span class="stat-pill">' + e.n_tables + " ตาราง</span>" +
+            '<span class="stat-pill">' + e.n_rows + " รายการซีล</span>" +
+          "</div>" +
+          '<p class="src-link"><a href="' + esc(e.anchor) + '">เปิดตารางเต็มใน Seal feed →</a></p>' +
+        "</div></div>";
+    }
+    var spell = [];
+    if (e.names.en.length) spell.push("EN: " + e.names.en.join(" / "));
+    if (e.names.kr.length) spell.push("KR: " + e.names.kr.join(" / "));
+    if (e.names.th.length) spell.push("TH: " + e.names.th.join(" / "));
+    var anchor = e.anchor ? ' · <a href="' + esc(e.anchor) + '">ดูใน Digimon feed</a>' : "";
+    return '<div class="card lookup-card">' +
+      '<div class="card-head">' +
+        '<span class="type-badge t-' + e.type + '">' + e.type + "</span>" +
+        '<span class="card-idx">' + esc(e.display) + "</span>" +
+      "</div>" +
+      '<div class="lookup-body">' +
+        '<p><span class="lbl">สะกด:</span>' + esc(spell.join("  ·  ")) + anchor + "</p>" +
+        SERVERS.map(function (s) { return serverLine(e, s); }).join("") +
+      "</div></div>";
+  }
+
+  function render() {
+    if (!DATA) return;
+    var rawQ = $q.value.trim();
+    if (!rawQ && !typeFilter && !serverFilter && !statFilter) {
+      $results.innerHTML = '<div class="empty-state">พิมพ์อย่างน้อย 1 ตัวอักษรเพื่อค้นหา — รองรับ EN · 한국어 · ไทย · ชื่อโพสต์ (kr-807742)</div>';
+      $count.textContent = "";
+      return;
+    }
+    var hits;
+    if (rawQ) {
+      hits = DATA.entries
+        .map(function (e) { return { e: e, s: score(e, rawQ) }; })
+        .filter(function (x) { return x.s > 0; })
+        .sort(function (a, b) { return b.s - a.s || a.e.display.localeCompare(b.e.display); })
+        .map(function (x) { return x.e; });
+    } else {
+      // filters only, no query — browse mode
+      hits = DATA.entries.filter(passesFilters);
+    }
+    $count.textContent = hits.length + " รายการ";
+    if (!hits.length) {
+      $results.innerHTML = '<div class="empty-state">ไม่พบ "' + esc($q.value) +
+        '" ในข้อมูลที่ sweep — ลองสะกดแบบอื่น หรือดูขอบเขตข้อมูลด้านล่าง</div>';
+      return;
+    }
+    $results.innerHTML = hits.slice(0, MAX_SHOWN).map(card).join("") +
+      (hits.length > MAX_SHOWN
+        ? '<div class="empty-state">แสดง ' + MAX_SHOWN + " จาก " + hits.length + " — พิมพ์ให้เจาะจงขึ้น</div>"
+        : "");
+  }
+
+  var t = null;
+  $q.addEventListener("input", function () {
+    clearTimeout(t);
+    t = setTimeout(render, 120);
+  });
+
+  function wirePills(attr, setter) {
+    var sel = ".filter-pill[" + attr + "]";
+    document.querySelectorAll(sel).forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        document.querySelectorAll(sel).forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        setter(btn.getAttribute(attr));
+        render();
+      });
+    });
+  }
+  wirePills("data-type", function (v) { typeFilter = v; });
+  wirePills("data-server", function (v) { serverFilter = v; });
+  wirePills("data-stat", function (v) { statFilter = v; });
+
+  fetch("search_index.json")
+    .then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
+    .then(function (d) {
+      DATA = d;
+      document.getElementById("stat-entries").textContent = d.entries.length;
+      document.getElementById("coverage-note").textContent =
+        "NA " + (d.coverage.na || "?") + " · KR " + (d.coverage.kr || "?") + " · TH " + (d.coverage.th || "?");
+      render();
+    })
+    .catch(function (err) {
+      $results.innerHTML = '<div class="empty-state">โหลด search_index.json ไม่ได้ (' + esc(err.message) +
+        ") — ถ้าเปิดแบบ file:// ให้รัน local server เช่น python -m http.server</div>";
+    });
+})();
+</script>
+
+</body>
+</html>

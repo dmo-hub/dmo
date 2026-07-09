@@ -6,7 +6,8 @@
    See DESIGN-dmo.md for the dark-theme token reference.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+/* Prompt font loads via <link rel="preconnect"> + stylesheet in each page's
+   <head> — no @import here (render-blocking CSS chain). */
 
 /* ============================================================
    LIGHT theme (default) — Minimal white + blue
@@ -320,6 +321,10 @@ h2, h3, h4 {
   border-color: var(--coral);
 }
 .filter-pill img { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; }
+/* filter-pill used as a plain link (related-tools rows) */
+a.filter-pill { padding: 5px 12px; text-decoration: none; }
+a.filter-pill:hover { text-decoration: none; color: var(--ink); }
+
 .filter-reset {
   background: transparent; color: var(--coral); border: none;
   padding: 4px 8px; font-size: 12px; cursor: pointer;
@@ -652,3 +657,39 @@ h2, h3, h4 {
 .theme-toggle .icon-moon { display: block; }
 .theme-toggle[data-current="dark"] .icon-sun { display: block; }
 .theme-toggle[data-current="dark"] .icon-moon { display: none; }
+
+/* --- Mobile ------------------------------------------------------------ */
+
+body { overflow-x: hidden; }
+
+@media (max-width: 720px) {
+  .site-nav-inner {
+    gap: 10px; padding: 10px 14px; height: auto; min-height: 56px;
+  }
+  /* nav row scrolls sideways instead of overflowing the page */
+  .site-nav nav {
+    overflow-x: auto; flex-wrap: nowrap; white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* fade hint that more links exist to the right */
+    mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent);
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent);
+  }
+  .site-nav nav::-webkit-scrollbar { display: none; }
+  .site-nav nav a { padding: 8px 10px; font-size: 13px; flex-shrink: 0; }
+  .site-nav .nav-meta { display: none; }
+  .site-nav .brand { flex-shrink: 0; }
+
+  .page { padding: 20px 14px 48px; }
+  .hero { padding: 24px 20px; }
+  .hero h1 { font-size: 27px; }
+  .hero-stats { gap: 18px; }
+  .hero-stat .num { font-size: 26px; }
+  .feature { padding: 20px; }
+  .timeline { padding-left: 24px; }
+  .tl-month { margin-left: -24px; padding-left: 24px; }
+  .tl-entry::before { left: -17px; }
+
+  /* wide tables scroll inside the card, not the page */
+  .card-body { overflow-x: auto; }
+}
