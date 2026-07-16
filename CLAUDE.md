@@ -117,7 +117,21 @@ python builders/extract_seal_tables.py
 python builders/build_th_seal_en.py
 python builders/build_seal_tables.py
 
-# 16. Static site checks (no network). Run before committing / in CI:
+# 16. Post-release "Family Attributes" rebalance blocks — merge additions into
+#     scan_result_digimon.json (3rd content enricher alongside #10 KR / #10c TH).
+python enrichers/enrich_digimon_rebalance.py
+
+# 17. NA Name-Tag-set exchange tracking: scan gameking posts for Name-Tag item
+#     tables → data/na_nametag_items.json, then render the item × patch matrix.
+python scanners/scan_na_nametag.py
+python builders/build_nametag_html.py
+
+# 18. Site-wide builders: hub page (hero totals + feature cards + recent
+#     activity) and the Cross-server Lookup dataset for docs/lookup.html.
+python builders/build_index_html.py
+python builders/build_search_index.py
+
+# 19. Static site checks (no network). Run before committing / in CI:
 #     - every data/*.json + docs/*.json parses
 #     - every docs/*.html has balanced tags
 #     - the deterministic builders are idempotent (re-running them leaves no
@@ -125,6 +139,12 @@ python builders/build_seal_tables.py
 python tools/validate.py              # all checks
 python tools/validate.py --no-build   # skip the rebuild/idempotency check
 ```
+
+**Shared helper modules** (not runnable): `enrichers/_content_match.py`
+(normalize / keyword lookup / substring match + date parse — used by the KR/TH
+enrichers) and `extractors/_image_common.py` (paths, scan JSON round-trip,
+base64-first image extraction core — used by all three image extractors).
+`builders/aliases.py` is the third one (digimon name aliasing).
 
 ⚠️ **`scanners/scan_digimon.py` is destructive.** It rewrites
 `data/scan_result_digimon.json` from cache, blowing away manually-curated fields

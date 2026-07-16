@@ -16,24 +16,13 @@ skipped.
 Run after enrich_digimon_kr.py. Pass --force to re-extract overwriting existing.
 """
 
-import base64
-import json
 import re
 import sys
 from pathlib import Path
 
-import requests
+from _image_common import CACHE, IMG_DIR, extract_image, load_scan, save_scan
 
 sys.stdout.reconfigure(encoding="utf-8")
-
-PROJ = Path(__file__).resolve().parent.parent
-CACHE = PROJ / "cache"
-SCAN = PROJ / "data" / "scan_result_digimon.json"
-IMG_DIR = PROJ / "docs" / "img" / "digimon"
-
-HEADERS = {"User-Agent": "Mozilla/5.0 (dmoDeck/1.0)"}
-DATA_URL_RE = re.compile(r'src=["\'](data:image/(\w+);base64,([^"\']+))["\']', re.IGNORECASE)
-IMG_RE = re.compile(r'<img[^>]+src=["\']([^"\']+)["\']', re.IGNORECASE)
 
 # Filter out chrome (logos, footer icons, etc.) — KR pages embed several of these.
 SKIP_URL_KEYWORDS = ("logo", "icon", "/footer/", "/header/", "btn_", "violent", "renewal_main/")
@@ -53,39 +42,10 @@ def kr_cache_file(source_kr: str) -> Path | None:
     return f if f.exists() else None
 
 
-def extract_image(raw: str) -> tuple[bytes, str] | None:
-    """Pick the first non-chrome image. Prefers inline base64 (the digimon graphic)."""
-    # 1. Inline base64 — usually the digimon banner
-    m = DATA_URL_RE.search(raw)
-    if m:
-        ext = m.group(2).lower()
-        try:
-            return base64.b64decode(m.group(3), validate=False), ext
-        except Exception as e:
-            print(f"  WARN: base64 decode failed: {e}")
-
-    # 2. External URL — skip header/footer chrome
-    for src in IMG_RE.findall(raw):
-        if src.startswith("data:") or is_chrome(src):
-            continue
-        url = src if src.startswith("http") else f"https://www.digimonmasters.com{src}"
-        try:
-            r = requests.get(url, headers=HEADERS, timeout=15)
-            r.raise_for_status()
-            ext = url.rsplit(".", 1)[-1].lower().split("?")[0]
-            if ext not in ("jpg", "jpeg", "png", "gif", "webp"):
-                ext = "jpg"
-            return r.content, ext
-        except Exception as e:
-            print(f"  WARN: fetch {url[:60]} failed: {e}")
-            continue
-    return None
-
-
 def main() -> None:
     force = "--force" in sys.argv
     IMG_DIR.mkdir(parents=True, exist_ok=True)
-    data = json.loads(SCAN.read_text(encoding="utf-8"))
+    data = load_scan()
 
     extracted = 0
     skipped_existing = 0
@@ -110,7 +70,11 @@ def main() -> None:
                 print(f"skip {kind}_{idx}: no KR cache for {source_kr}")
                 continue
 
-            result = extract_image(cf.read_text(encoding="utf-8"))
+            result = extract_image(
+                cf.read_text(encoding="utf-8"),
+                url_ok=lambda s: not is_chrome(s),
+                absolutize=lambda s: s if s.startswith("http") else f"https://www.digimonmasters.com{s}",
+            )
             if result is None:
                 print(f"{kind}_{idx}: no image in KR cache")
                 no_image += 1
@@ -123,7 +87,7 @@ def main() -> None:
             extracted += 1
             print(f"{kind}_{idx}: {out.name} ({len(blob) // 1024} KB)")
 
-    SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    save_scan(data)
     print(
         f"\nExtracted: {extracted}, kept existing: {skipped_existing}, "
         f"no source_kr: {no_source}, no image: {no_image}"

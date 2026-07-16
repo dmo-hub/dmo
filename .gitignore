@@ -20,3 +20,7 @@ cache/
 # OS
 .DS_Store
 Thumbs.db
+
+# Nested repos / separate systems (each has its own git)
+poster-studio/
+backoffice/

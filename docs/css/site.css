@@ -693,3 +693,27 @@ body { overflow-x: hidden; }
   /* wide tables scroll inside the card, not the page */
   .card-body { overflow-x: auto; }
 }
+
+/* ============================================================
+   Poster promo — sections injected by backoffice/publish_posters.py
+   (markers POSTERS:top / POSTERS:bottom in each page)
+   ============================================================ */
+.poster-promo { margin: 28px 0; }
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 420px));
+  justify-content: center;
+  gap: 16px;
+}
+.poster-item {
+  display: block; margin: 0;
+  border: 1px solid var(--hairline); border-radius: 12px;
+  background: var(--surface-card); overflow: hidden;
+  text-decoration: none; color: inherit;
+}
+a.poster-item:hover { border-color: var(--primary); }
+.poster-item img { display: block; width: 100%; height: auto; }
+.poster-caption {
+  margin: 0; padding: 10px 14px;
+  font-size: 13px; color: var(--body); text-align: center;
+}

@@ -8,7 +8,8 @@ from playwright.sync_api import sync_playwright
 sys.stdout.reconfigure(encoding="utf-8")
 
 URL = "https://dmowiki.com/Category:Digimon_Rank_U"
-OUT = Path(__file__).parent / "rank_u.html"
+# PROJ root — build_rank_u_map() in fetch_dmowiki_digimon.py reads it from there
+OUT = Path(__file__).resolve().parent.parent / "rank_u.html"
 
 STEALTH = """
 Object.defineProperty(navigator, 'webdriver', {get: () => undefined});

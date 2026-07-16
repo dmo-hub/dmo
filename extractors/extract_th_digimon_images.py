@@ -9,19 +9,16 @@ banner becomes the primary image for posts with a TH equivalent (per the user's
 Run after enrich_digimon_th.py. Pass --force to re-download existing.
 """
 
-import json
 import re
 import sys
-from pathlib import Path
 
 import requests
 
+from _image_common import IMG_DIR, load_scan, save_scan
+
 sys.stdout.reconfigure(encoding="utf-8")
 
-PROJ = Path(__file__).resolve().parent.parent
-SCAN = PROJ / "data" / "scan_result_digimon.json"
-IMG_DIR = PROJ / "docs" / "img" / "digimon"
-
+# vplay.in.th ต้องการ browser UA เต็ม — ไม่ใช้ HEADERS กลางของ _image_common
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -48,7 +45,7 @@ def delete_existing(prefix: str, idx: str, suffix: str = "") -> None:
 def main() -> None:
     force = "--force" in sys.argv
     IMG_DIR.mkdir(parents=True, exist_ok=True)
-    data = json.loads(SCAN.read_text(encoding="utf-8"))
+    data = load_scan()
 
     extracted = 0
     skipped_existing = 0
@@ -82,7 +79,7 @@ def main() -> None:
             extracted += 1
             print(f"{kind}_{idx}: {out.name} ({len(r.content) // 1024} KB)")
 
-    SCAN.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    save_scan(data)
     print(f"\nExtracted: {extracted}, kept existing: {skipped_existing}, no TH image URL: {no_url}")
 
 

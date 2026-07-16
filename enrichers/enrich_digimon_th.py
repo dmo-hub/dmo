@@ -14,7 +14,10 @@ entry to EN_TO_TH_KEYWORDS below.
 
 import json
 import sys
+from datetime import date
 from pathlib import Path
+
+from _content_match import find_matches, lookup_keyword, parse_iso, parse_mmddyyyy
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -59,56 +62,17 @@ EN_TO_TH_KEYWORDS: list[tuple[str, str, str | None]] = [
 ]
 
 
-def normalize(s: str) -> str:
-    return "".join(s.split()).lower()
-
-
-def lookup_th(en_name: str) -> tuple[str, str | None] | None:
-    """(th_keyword, required_modifier_or_None) for the most specific match."""
-    en_low = en_name.lower()
-    for en_kw, th_kw, modifier in EN_TO_TH_KEYWORDS:
-        if en_kw.lower() in en_low:
-            return th_kw, modifier
-    return None
-
-
-def find_th_matches(th_kw: str, required_mod: str | None, th_posts: list[dict]) -> list[dict]:
-    norm_kw = normalize(th_kw)
-    out = []
-    for p in th_posts:
-        name_norm = normalize(p["th_name"])
-        if norm_kw not in name_norm:
-            continue
-        if required_mod and normalize(required_mod) not in name_norm:
-            continue
-        out.append(p)
-    return out
-
-
-def pick_best(matches: list[dict], na_date: str) -> dict:
+def pick_best(matches: list[dict], na_date: date) -> dict:
     """Prefer TH date >= NA date (Thai usually lags NA), closest distance."""
 
     def sort_key(p: dict) -> tuple[int, int]:
         if not p["date"]:
             return (1, 0)
-        # negative diff means TH is BEFORE NA — penalize
-        diff_days = p["date"] >= na_iso(na_date)
-        return (0 if diff_days else 1, abs_iso_diff(p["date"], na_iso(na_date)))
+        th_date = parse_iso(p["date"])
+        # TH BEFORE NA gets penalized to the back
+        return (0 if th_date >= na_date else 1, abs((th_date - na_date).days))
 
     return min(matches, key=sort_key)
-
-
-def na_iso(mmddyyyy: str) -> str:
-    mm, dd, yyyy = mmddyyyy.split("-")
-    return f"{yyyy}-{mm}-{dd}"
-
-
-def abs_iso_diff(a: str, b: str) -> int:
-    from datetime import date
-
-    ya, ma, da = a.split("-")
-    yb, mb, db = b.split("-")
-    return abs((date(int(ya), int(ma), int(da)) - date(int(yb), int(mb), int(db))).days)
 
 
 def main() -> None:
@@ -124,14 +88,14 @@ def main() -> None:
             th_post = None
             via = None
             for name in post["digimon"]:
-                hit = lookup_th(name)
-                if not hit:
+                row = lookup_keyword(name, EN_TO_TH_KEYWORDS)
+                if not row:
                     continue
-                th_kw, required_mod = hit
-                matches = find_th_matches(th_kw, required_mod, th_posts)
+                _, th_kw, required_mod = row
+                matches = find_matches(th_kw, th_posts, lambda p: [p["th_name"]], required_mod)
                 if not matches:
                     continue
-                th_post = pick_best(matches, post["date"]) if len(matches) > 1 else matches[0]
+                th_post = pick_best(matches, parse_mmddyyyy(post["date"])) if len(matches) > 1 else matches[0]
                 via = (name, th_kw, required_mod, len(matches))
                 break
 

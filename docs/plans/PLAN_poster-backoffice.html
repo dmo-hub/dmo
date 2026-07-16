@@ -1,0 +1,175 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan — Poster Backoffice (dmo)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { darkMode: 'class' };
+  function toggleTheme(){ document.documentElement.classList.toggle('dark'); }
+</script>
+<style>
+  .num{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:.5rem;font-size:.8rem;font-weight:700}
+  code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85em}
+  .sev{font-size:.65rem;font-weight:700;letter-spacing:.05em;padding:.15rem .5rem;border-radius:9999px;text-transform:uppercase}
+  pre{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;line-height:1.5;overflow-x:auto}
+</style>
+
+<div class="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200">
+<div class="max-w-4xl mx-auto px-5 py-8">
+
+  <div class="flex items-start justify-between gap-4 mb-6">
+    <div>
+      <p class="text-xs font-semibold tracking-widest text-sky-600 dark:text-sky-400 uppercase">Plan Spec · Feature ใหม่</p>
+      <h1 class="text-2xl sm:text-3xl font-bold mt-1">Poster Backoffice — <span class="text-sky-600 dark:text-sky-400">คุมรูปโปสเตอร์ขึ้นเว็บ</span></h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">folder ใหม่ <code>backoffice/</code> ใน dmo · standalone HTML UI · แทรกรูปในหน้าเว็บที่มีอยู่ · 16.07.2026</p>
+    </div>
+    <button onclick="toggleTheme()" class="shrink-0 text-xs px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">◐ theme</button>
+  </div>
+
+  <!-- STATS -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-sky-500">3</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">ไฟล์ใหม่ (UI + 2 script)</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-emerald-500">10</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">poster PNG ใน dist/ พร้อมคุม</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-amber-500">0</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">server ที่ต้องรัน (file:// ล้วน)</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-slate-400">git</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">แยก 3 ระบบ: dmo / poster-studio / backoffice</div>
+    </div>
+  </div>
+
+  <!-- GOAL -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300">G</span>Goal</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm leading-relaxed">
+      poster-studio ผลิตโปสเตอร์โฆษณา (PNG ใน <code>dist/</code>) — ต้องการ<b>ระบบหลังบ้านแยก</b>
+      ที่คุมว่า<b>รูปไหน approve ขึ้นเว็บ dmo ได้</b> และ<b>ขึ้นหน้าไหน</b> (แทรกใน
+      <code>index / decks / digimon / seals …</code> ที่มีอยู่ — ไม่สร้างหน้า gallery ใหม่).
+      หลังบ้านเป็น standalone HTML เปิดจากไฟล์ตรง ๆ ตาม pattern <code>tools/curate.html</code>
+      ที่พิสูจน์แล้วใน repo นี้ + script publish ที่ idempotent.
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200">A</span>Architecture — 3 ระบบแยก git</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+      <pre class="text-slate-700 dark:text-slate-300">
+dmo/                          ← git #1 (เว็บ GitHub Pages)
+├── docs/                     ← หน้าเว็บ publish
+│   └── img/posters/          ← รูปที่ approve แล้ว (publish โดย script)
+├── poster-studio/            ← git #2 (โรงงานผลิตโปสเตอร์ — ไม่แตะ)
+│   └── dist/*.png            ← source รูปทั้งหมด
+└── backoffice/               ← git #3 ใหม่ (ระบบหลังบ้าน)
+    ├── backoffice.html       ← UI คุม approve + เลือกหน้า (เปิด file:// ตรง ๆ)
+    ├── data/placements.json  ← manifest = source of truth
+    ├── scan_posters.py       ← สแกน dist/ → เติมรูปใหม่เข้า manifest
+    └── publish_posters.py    ← copy รูป approve + แทรก section ลงหน้าเว็บ</pre>
+      <div class="text-sm mt-3 text-slate-600 dark:text-slate-300">
+        <b>Flow:</b> export poster ใน studio → <code>scan_posters.py</code> เจอรูปใหม่ →
+        เปิด <code>backoffice.html</code> ติ๊ก approve + เลือกหน้า/ตำแหน่ง → Download JSON ทับ manifest →
+        <code>publish_posters.py</code> → review <code>git diff</code> ใน dmo → commit/push เอง (ตาม policy)
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA MODEL -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-violet-100 text-violet-700 dark:bg-violet-900 dark:text-violet-300">D</span>Data model — <code>placements.json</code></h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+      <pre class="text-slate-700 dark:text-slate-300">{
+  "pages": ["index.html", "decks.html", "digimon.html", "seals.html", "system.html"],
+  "posters": [
+    {
+      "id": "dungeon-kaiser",                      // = ชื่อไฟล์ ไม่มีนามสกุล
+      "src": "poster-studio/dist/dungeon-kaiser.png",
+      "added": "2026-07-16",                       // วันที่ scan เจอ
+      "approved": true,                            // false = ห้ามขึ้นเว็บ
+      "caption": "รับเซอร์วิส Kaiser's Lab",        // ข้อความใต้รูป (ว่างได้)
+      "link": "",                                  // คลิกรูปแล้วไปไหน (ว่าง = ไม่ลิงก์)
+      "placements": [
+        { "page": "index.html",  "slot": "bottom" },   // top = ใต้ hero, bottom = ท้ายหน้า
+        { "page": "system.html", "slot": "top" }
+      ]
+    }
+  ]
+}</pre>
+      <ul class="text-sm mt-3 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+        <li><b>scan เก็บทุกรูป, default <code>approved:false</code></b> — รูปใหม่ไม่มีทางหลุดขึ้นเว็บเองจนกว่าจะติ๊กใน UI</li>
+        <li>รูปเดียวขึ้นได้หลายหน้า (placements เป็น array)</li>
+        <li>scan ซ้ำ<b>ไม่ทับ</b> curation เดิม (merge by id — pattern เดียวกับ enrichers ของ dmo)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BUILD STEPS -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-3"><span class="num bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300">B</span>Build steps</h2>
+    <div class="space-y-3">
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-emerald-600 text-white text-xs">1</span><b>scan_posters.py</b> <span class="text-xs text-slate-400">(backoffice/)</span></div>
+        <ul class="text-sm mt-2 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+          <li>glob <code>poster-studio/dist/*.png</code> → เทียบกับ manifest → เติมเฉพาะ id ใหม่ (<code>approved:false</code>)</li>
+          <li>รายงานรูปที่หายจาก dist แต่ยังอยู่ใน manifest (ไม่ลบเอง — แจ้งเฉย ๆ)</li>
+          <li>UTF-8 stdout ตาม convention dmo (path มีอักษรไทย)</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-emerald-600 text-white text-xs">2</span><b>backoffice.html</b> <span class="text-xs text-slate-400">(standalone file:// — pattern curate.html)</span></div>
+        <ul class="text-sm mt-2 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+          <li>drag-drop <code>placements.json</code> → grid รูป preview (โหลดรูปด้วย relative path <code>../poster-studio/dist/…</code>)</li>
+          <li>ต่อรูป: toggle <b>approve</b> / เลือก<b>หน้า + slot</b> (checkbox ต่อหน้า, top·bottom) / แก้ caption·link</li>
+          <li>filter: ทั้งหมด · approve แล้ว · ยังไม่ approve · รูปใหม่</li>
+          <li>ปุ่ม <b>Download JSON</b> save กลับทับ manifest — ไม่มี server, ไม่มี dependency</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-emerald-600 text-white text-xs">3</span><b>publish_posters.py</b> <span class="text-xs text-slate-400">(backoffice/ — idempotent)</span></div>
+        <ul class="text-sm mt-2 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+          <li>copy รูป <code>approved:true</code> → <code>dmo/docs/img/posters/&lt;id&gt;.png</code> — ลบรูปใน posters/ ที่ไม่ approve แล้ว</li>
+          <li>แทรก section ต่อหน้า ด้วย marker guard <code>&lt;!-- POSTERS:&lt;slot&gt;:START --&gt; … END --&gt;</code> (pattern ST-marker ของ build_seal_tables.py) — รันซ้ำ = แทนที่ block เดิม, ไม่ accumulate</li>
+          <li>slot <code>top</code> = หลังปิด <code>.hero</code>, slot <code>bottom</code> = ก่อน <code>&lt;footer&gt;</code>/ท้าย body — หน้าไหนไม่มี placement = ถอด block ออกเกลี้ยง</li>
+          <li>markup ใช้ class เดิมของ site (<code>.card</code> + <code>site.css</code>) — ไม่ inline CSS ใหม่ ตาม convention dmo</li>
+          <li>ผ่าน <code>tools/validate.py</code> (HTML balance + idempotency) ได้</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+        <div class="flex items-center gap-2 mb-1"><span class="num bg-emerald-600 text-white text-xs">4</span><b>เอกสาร + git</b></div>
+        <ul class="text-sm mt-2 space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+          <li><code>backoffice/README.md</code> — flow 4 ขั้น + คำสั่ง</li>
+          <li><code>dmo/.gitignore</code> เติม <code>backoffice/</code> (กันซ้อน git เหมือนที่ poster-studio ควรถูก ignore) — <b>ตรวจก่อนว่า ignore poster-studio อยู่แล้วหรือยัง</b></li>
+          <li><code>git init</code> ใน backoffice/ — <b>รอ user สั่ง</b> (ตาม git policy)</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OUT OF SCOPE -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-rose-100 text-rose-700 dark:bg-rose-900 dark:text-rose-300">X</span>ไม่ทำในรอบนี้</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm">
+      <ul class="space-y-1 list-disc pl-5 text-slate-600 dark:text-slate-300">
+        <li>โพสต์ FB อัตโนมัติ / เชื่อม social API</li>
+        <li>แก้อะไรใน poster-studio (โรงงานผลิตอยู่ดีแล้ว)</li>
+        <li>server backend / database — GitHub Pages เป็น static, manifest JSON พอ</li>
+        <li>auto-commit / auto-push — user review diff เองเสมอ</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="text-xs text-slate-400 dark:text-slate-500 text-center mt-8">PLAN_poster-backoffice.html · dmo/docs/plans/ · 16.07.2026</p>
+
+</div>
+</div>

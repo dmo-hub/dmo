@@ -48,7 +48,8 @@
       "date_th": "2024-07-25",
       "_th_name": "เชาท์มอน X7 ซูพีเรียร์ โหมด",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/07/13.jpg",
-      "image_th": "img/digimon/e664_th.jpeg"
+      "image_th": "img/digimon/e664_th.jpeg",
+      "image_kr": "img/digimon/e664_kr.jpeg"
     },
     "673": {
       "date": "06-11-2024",
@@ -86,7 +87,8 @@
       "date_th": "2024-09-26",
       "_th_name": "คุสุฮะมอน มิโกะ โหมด",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/09/10.jpg",
-      "image_th": "img/digimon/e673_th.jpeg"
+      "image_th": "img/digimon/e673_th.jpeg",
+      "image_kr": "img/digimon/e673_kr.png"
     },
     "683": {
       "date": "08-20-2024",
@@ -112,7 +114,8 @@
       "date_th": "2025-06-26",
       "_th_name": "ดุ๊คมอน คริมสันโหมด (อะเวคเค่น)",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/06/4.png",
-      "image_th": "img/digimon/e683_th.png"
+      "image_th": "img/digimon/e683_th.png",
+      "image_kr": "img/digimon/e683_kr.png"
     },
     "692": {
       "date": "11-12-2024",
@@ -148,7 +151,8 @@
       "date_th": "2025-09-25",
       "_th_name": "อีออสมอน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/09/873659259779.png",
-      "image_th": "img/digimon/e692_th.png"
+      "image_th": "img/digimon/e692_th.png",
+      "image_kr": "img/digimon/e692_kr.png"
     },
     "705": {
       "date": "02-25-2025",
@@ -184,7 +188,8 @@
       "date_th": "2026-02-26",
       "_th_name": "บลูมลอร์ดมอน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/02/20.png",
-      "image_th": "img/digimon/e705_th.png"
+      "image_th": "img/digimon/e705_th.png",
+      "image_kr": "img/digimon/e705_kr.png"
     },
     "708": {
       "date": "03-18-2025",
@@ -203,7 +208,8 @@
             "Dark Area"
           ]
         }
-      }
+      },
+      "image_kr": "img/digimon/e708_kr.png"
     },
     "731": {
       "date": "05-13-2025",
@@ -229,7 +235,8 @@
       "date_th": "2026-04-23",
       "_th_name": "อิมพีเรียลดรามอน พาราดินโหมด [อะเวคเค่น]",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/04/j22.png",
-      "image_th": "img/digimon/e731_th.png"
+      "image_th": "img/digimon/e731_th.png",
+      "image_kr": "img/digimon/e731_kr.png"
     },
     "743": {
       "date": "06-17-2025",
@@ -253,7 +260,8 @@
       "date_th": "2026-05-21",
       "_th_name": "[เอ็กซ์ตรีม] อัลฟามอน โอริวเคน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/05/7.png",
-      "image_th": "img/digimon/e743_th.png"
+      "image_th": "img/digimon/e743_th.png",
+      "image_kr": "img/digimon/e743_kr.jpeg"
     },
     "759": {
       "date": "07-22-2025",
@@ -279,7 +287,8 @@
       "date_th": "2026-06-11",
       "_th_name": "[เอ็กซ์ตรีม] ลูเจมอน : ซาตานโหมด",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/06/3.png",
-      "image_th": "img/digimon/e759_th.png"
+      "image_th": "img/digimon/e759_th.png",
+      "image_kr": "img/digimon/e759_kr.png"
     },
     "770": {
       "date": "08-19-2025",
@@ -300,7 +309,8 @@
             "TBD"
           ]
         }
-      }
+      },
+      "image_kr": "img/digimon/e770_kr.png"
     },
     "782": {
       "date": "09-23-2025",
@@ -332,7 +342,8 @@
             "Nature Spirits"
           ]
         }
-      }
+      },
+      "image_kr": "img/digimon/e782_kr.png"
     },
     "784": {
       "date": "10-01-2025",
@@ -353,7 +364,8 @@
             "Nature Spirits"
           ]
         }
-      }
+      },
+      "image_kr": "img/digimon/e784_kr.png"
     },
     "791": {
       "date": "11-11-2025",
@@ -392,7 +404,8 @@
             "Nightmare Soldiers"
           ]
         }
-      }
+      },
+      "image_kr": "img/digimon/e798_kr.png"
     },
     "810": {
       "date": "01-14-2026",
@@ -434,7 +447,8 @@
             "TBD"
           ]
         }
-      }
+      },
+      "image_kr": "img/digimon/p4110_kr.png"
     },
     "4121": {
       "date": "03-17-2026",
@@ -476,7 +490,8 @@
             "TBD"
           ]
         }
-      }
+      },
+      "image_kr": "img/digimon/p4148_kr.png"
     }
   }
 }

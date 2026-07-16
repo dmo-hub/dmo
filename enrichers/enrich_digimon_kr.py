@@ -29,6 +29,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from _content_match import find_matches, lookup_keyword, parse_iso, parse_mmddyyyy
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 PROJ = Path(__file__).resolve().parent.parent
@@ -75,40 +77,6 @@ OVERRIDES: dict[tuple[str, str], str] = {
 }
 
 
-def parse_mmddyyyy(s: str) -> date:
-    mm, dd, yyyy = s.split("-")
-    return date(int(yyyy), int(mm), int(dd))
-
-
-def parse_iso(s: str) -> date:
-    y, m, d = s.split("-")
-    return date(int(y), int(m), int(d))
-
-
-def normalize(s: str) -> str:
-    return "".join(s.split())
-
-
-def lookup_kr_keyword(en_name: str) -> str | None:
-    en_low = en_name.lower()
-    for en_kw, kr_kw in EN_TO_KR_KEYWORDS:
-        if en_kw.lower() in en_low:
-            return kr_kw
-    return None
-
-
-def find_kr_matches(kr_kw: str, releases: list[dict]) -> list[dict]:
-    """All KR release posts whose `kr_names` list contains the keyword."""
-    norm_kw = normalize(kr_kw)
-    out = []
-    for r in releases:
-        for n in r["kr_names"]:
-            if norm_kw in normalize(n):
-                out.append(r)
-                break
-    return out
-
-
 def pick_closest(matches: list[dict], en_date: date) -> dict:
     """Closest KR date to en_date; ties prefer KR <= EN (gameking translates from KR)."""
     return min(
@@ -150,10 +118,11 @@ def main() -> None:
             kr_post = None
             via_kw = None
             for name in post["digimon"]:
-                kr_kw = lookup_kr_keyword(name)
-                if not kr_kw:
+                row = lookup_keyword(name, EN_TO_KR_KEYWORDS)
+                if not row:
                     continue
-                matches = find_kr_matches(kr_kw, releases)
+                _, kr_kw = row
+                matches = find_matches(kr_kw, releases, lambda r: r["kr_names"])
                 if not matches:
                     continue
                 kr_post = pick_closest(matches, en_date) if len(matches) > 1 else matches[0]
