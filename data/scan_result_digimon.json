@@ -6,8 +6,13 @@
       "digimon": [
         "Omegamon – Merciful Mode"
       ],
-      "image": "img/digimon/e663.jpeg",
+      "image": "img/digimon/e663.jpg",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=780048&Btype=Update",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-60/",
+      "date_th": "2024-03-21",
+      "_th_name": "โอเมกามอน-เมอซิฟูล โหมด",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/03/8.jpg",
+      "image_th": "img/digimon/e663_th.jpeg",
       "attributes": {
         "Omegamon – Merciful Mode": {
           "attribute": "Vaccine",
@@ -19,12 +24,7 @@
             "Wind Guardians"
           ]
         }
-      },
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-60/",
-      "date_th": "2024-03-21",
-      "_th_name": "โอเมกามอน-เมอซิฟูล โหมด",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/03/8.jpg",
-      "image_th": "img/digimon/e663_th.jpeg"
+      }
     },
     "664": {
       "date": "04-16-2024",
@@ -59,11 +59,14 @@
       ],
       "image": "img/digimon/e673.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787200&Btype=Update",
+      "image_kr": "img/digimon/e673_kr.png",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-66/",
+      "date_th": "2024-09-26",
+      "_th_name": "คุสุฮะมอน มิโกะ โหมด",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/09/10.jpg",
+      "image_th": "img/digimon/e673_th.jpeg",
       "attributes": {
         "Kuzuhamon MikoMode": {
-          "attribute": "Data",
-          "attribute_abbr": "DA",
-          "natural_attribute": "Pitch Black",
           "families": [
             "Nightmare Soldiers",
             "Unknown",
@@ -82,13 +85,7 @@
             }
           ]
         }
-      },
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-66/",
-      "date_th": "2024-09-26",
-      "_th_name": "คุสุฮะมอน มิโกะ โหมด",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/09/10.jpg",
-      "image_th": "img/digimon/e673_th.jpeg",
-      "image_kr": "img/digimon/e673_kr.png"
+      }
     },
     "683": {
       "date": "08-20-2024",
@@ -98,6 +95,12 @@
       ],
       "image": "img/digimon/e683.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=789668&Btype=Update",
+      "image_kr": "img/digimon/e683_kr.png",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-75/",
+      "date_th": "2025-06-26",
+      "_th_name": "ดุ๊คมอน คริมสันโหมด (อะเวคเค่น)",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/06/4.png",
+      "image_th": "img/digimon/e683_th.png",
       "attributes": {
         "Gallantmon Crimson Mode": {
           "attribute": "Virus",
@@ -109,13 +112,7 @@
             "Wind Guardians"
           ]
         }
-      },
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-75/",
-      "date_th": "2025-06-26",
-      "_th_name": "ดุ๊คมอน คริมสันโหมด (อะเวคเค่น)",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/06/4.png",
-      "image_th": "img/digimon/e683_th.png",
-      "image_kr": "img/digimon/e683_kr.png"
+      }
     },
     "692": {
       "date": "11-12-2024",
@@ -125,11 +122,14 @@
       ],
       "image": "img/digimon/e692.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=794497&Btype=Update",
+      "image_kr": "img/digimon/e692_kr.png",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-78/",
+      "date_th": "2025-09-25",
+      "_th_name": "อีออสมอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/09/873659259779.png",
+      "image_th": "img/digimon/e692_th.png",
       "attributes": {
         "Eosmon": {
-          "attribute": "Unknown",
-          "natural_attribute": "Thunder",
-          "attribute_abbr": "UN",
           "families": [
             "TBD",
             "Unknown"
@@ -146,27 +146,19 @@
             }
           ]
         }
-      },
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-78/",
-      "date_th": "2025-09-25",
-      "_th_name": "อีออสมอน",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/09/873659259779.png",
-      "image_th": "img/digimon/e692_th.png",
-      "image_kr": "img/digimon/e692_kr.png"
+      }
     },
     "705": {
       "date": "02-25-2025",
       "source": "https://dmo.gameking.com/news/EventView.aspx?idx=705",
       "digimon": [
-        "Bloomlordmon"
+        "BloomLordMon"
       ],
       "image": "img/digimon/e705.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=797630&Btype=Update",
+      "image_kr": "img/digimon/e705_kr.png",
       "attributes": {
-        "Bloomlordmon": {
-          "attribute": "Vaccine",
-          "attribute_abbr": "VA",
-          "natural_attribute": "Wood",
+        "BloomLordMon": {
           "families": [
             "Unknown",
             "TBD"
@@ -184,21 +176,17 @@
           ]
         }
       },
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-84/",
-      "date_th": "2026-02-26",
-      "_th_name": "บลูมลอร์ดมอน",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/02/20.png",
-      "image_th": "img/digimon/e705_th.png",
-      "image_kr": "img/digimon/e705_kr.png"
+      "image_th": "img/digimon/e705_th.png"
     },
     "708": {
       "date": "03-18-2025",
       "source": "https://dmo.gameking.com/news/EventView.aspx?idx=708",
       "digimon": [
-        "ZeedMillenniummon (Awaken)"
+        "ZeedMillenniummon"
       ],
       "image": "img/digimon/e708.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=798287&Btype=Update",
+      "image_kr": "img/digimon/e708_kr.png",
       "attributes": {
         "ZeedMillenniummon (Awaken)": {
           "attribute": "Virus",
@@ -208,17 +196,22 @@
             "Dark Area"
           ]
         }
-      },
-      "image_kr": "img/digimon/e708_kr.png"
+      }
     },
     "731": {
       "date": "05-13-2025",
       "source": "https://dmo.gameking.com/news/EventView.aspx?idx=731",
       "digimon": [
-        "Imperialdramon Paladin Mode (Awaken)"
+        "Imperialdramon PaladinMode"
       ],
       "image": "img/digimon/e731.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=801540&Btype=Update",
+      "image_kr": "img/digimon/e731_kr.png",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86/",
+      "date_th": "2026-04-23",
+      "_th_name": "อิมพีเรียลดรามอน พาราดินโหมด [อะเวคเค่น]",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/04/j22.png",
+      "image_th": "img/digimon/e731_th.png",
       "attributes": {
         "Imperialdramon Paladin Mode (Awaken)": {
           "attribute": "Vaccine",
@@ -230,13 +223,7 @@
             "Wind Guardians"
           ]
         }
-      },
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86/",
-      "date_th": "2026-04-23",
-      "_th_name": "อิมพีเรียลดรามอน พาราดินโหมด [อะเวคเค่น]",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/04/j22.png",
-      "image_th": "img/digimon/e731_th.png",
-      "image_kr": "img/digimon/e731_kr.png"
+      }
     },
     "743": {
       "date": "06-17-2025",
@@ -244,8 +231,14 @@
       "digimon": [
         "Alphamon Ouryuken [Extreme]"
       ],
-      "image": "img/digimon/e743.jpeg",
+      "image": "img/digimon/e743.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=804377&Btype=Update",
+      "image_kr": "img/digimon/e743_kr.jpeg",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-87/",
+      "date_th": "2026-05-21",
+      "_th_name": "[เอ็กซ์ตรีม] อัลฟามอน โอริวเคน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/05/7.png",
+      "image_th": "img/digimon/e743_th.png",
       "attributes": {
         "Alphamon Ouryuken [Extreme]": {
           "attribute": "Vaccine",
@@ -255,22 +248,16 @@
             "Virus Busters"
           ]
         }
-      },
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-87/",
-      "date_th": "2026-05-21",
-      "_th_name": "[เอ็กซ์ตรีม] อัลฟามอน โอริวเคน",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/05/7.png",
-      "image_th": "img/digimon/e743_th.png",
-      "image_kr": "img/digimon/e743_kr.jpeg"
+      }
     },
     "759": {
       "date": "07-22-2025",
       "source": "https://dmo.gameking.com/news/EventView.aspx?idx=759",
       "digimon": [
-        "Lucemon: Satan Mode (Extreme)"
+        "[Extreme] Lucemon : Satan Mode"
       ],
-      "image": "img/digimon/e759.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=808086&Btype=Update",
+      "image_kr": "img/digimon/e759_kr.png",
       "attributes": {
         "Lucemon: Satan Mode (Extreme)": {
           "attribute": "Virus",
@@ -283,12 +270,8 @@
           ]
         }
       },
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/",
-      "date_th": "2026-06-11",
-      "_th_name": "[เอ็กซ์ตรีม] ลูเจมอน : ซาตานโหมด",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/06/3.png",
-      "image_th": "img/digimon/e759_th.png",
-      "image_kr": "img/digimon/e759_kr.png"
+      "image": "img/digimon/e759.png",
+      "image_th": "img/digimon/e759_th.png"
     },
     "770": {
       "date": "08-19-2025",
@@ -298,6 +281,7 @@
       ],
       "image": "img/digimon/e770.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=809411&Btype=Update",
+      "image_kr": "img/digimon/e770_kr.png",
       "attributes": {
         "Last Evolution: Kizuna": {
           "attribute": "Unknown",
@@ -309,18 +293,18 @@
             "TBD"
           ]
         }
-      },
-      "image_kr": "img/digimon/e770_kr.png"
+      }
     },
     "782": {
       "date": "09-23-2025",
       "source": "https://dmo.gameking.com/news/EventView.aspx?idx=782",
       "digimon": [
         "Goddramon",
-        "Holydramon (Awaken)"
+        "Holydramon"
       ],
       "image": "img/digimon/e782.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810885&Btype=Update",
+      "image_kr": "img/digimon/e782_kr.png",
       "attributes": {
         "Goddramon": {
           "attribute": "Vaccine",
@@ -342,8 +326,7 @@
             "Nature Spirits"
           ]
         }
-      },
-      "image_kr": "img/digimon/e782_kr.png"
+      }
     },
     "784": {
       "date": "10-01-2025",
@@ -353,6 +336,12 @@
       ],
       "image": "img/digimon/e784.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810988&Btype=Update",
+      "image_kr": "img/digimon/e784_kr.png",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-90/",
+      "date_th": "2026-07-09",
+      "_th_name": "[เอ็กซ์ตรีม] ซูซาโนะโอมอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/07/2.png",
+      "image_th": "img/digimon/e784_th.png",
       "attributes": {
         "[Extreme] Susanoomon": {
           "attribute": "Vaccine",
@@ -364,14 +353,13 @@
             "Nature Spirits"
           ]
         }
-      },
-      "image_kr": "img/digimon/e784_kr.png"
+      }
     },
     "791": {
       "date": "11-11-2025",
       "source": "https://dmo.gameking.com/news/EventView.aspx?idx=791",
       "digimon": [
-        "Lilithmon X (Awaken)"
+        "Awakened Lilithmon (Resistance)"
       ],
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811713&Btype=Update",
       "attributes": {
@@ -395,6 +383,7 @@
       ],
       "image": "img/digimon/e798.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812305&Btype=Update",
+      "image_kr": "img/digimon/e798_kr.png",
       "attributes": {
         "DoneDevimon": {
           "attribute": "Virus",
@@ -404,13 +393,14 @@
             "Nightmare Soldiers"
           ]
         }
-      },
-      "image_kr": "img/digimon/e798_kr.png"
+      }
     },
     "810": {
       "date": "01-14-2026",
       "source": "https://dmo.gameking.com/news/EventView.aspx?idx=810",
       "digimon": [
+        "Negamon",
+        "Negamon (Evolved Form)",
         "Abbadomon"
       ],
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812989&Btype=Update",
@@ -437,6 +427,7 @@
       ],
       "image": "img/digimon/p4110.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814493&Btype=Update",
+      "image_kr": "img/digimon/p4110_kr.png",
       "attributes": {
         "Abbadomon Core": {
           "attribute": "Unknown",
@@ -447,16 +438,15 @@
             "TBD"
           ]
         }
-      },
-      "image_kr": "img/digimon/p4110_kr.png"
+      }
     },
     "4121": {
       "date": "03-17-2026",
       "source": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4121",
       "digimon": [
-        "Omegamon X Extreme"
+        "(Extreme) Omegamon(Resistance)"
       ],
-      "image": "img/digimon/p4121.jpeg",
+      "image": "img/digimon/p4121.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814935&Btype=Update",
       "attributes": {
         "Omegamon X Extreme": {
@@ -478,7 +468,6 @@
         "QUANTUMON"
       ],
       "image": "img/digimon/p4148.png",
-      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=816756&Btype=Update",
       "attributes": {
         "QUANTUMON": {
           "attribute": "Data",
@@ -492,6 +481,13 @@
         }
       },
       "image_kr": "img/digimon/p4148_kr.png"
+    },
+    "4171": {
+      "date": "07-15-2026",
+      "source": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4171",
+      "digimon": [
+        "Apollomon"
+      ]
     }
   }
 }

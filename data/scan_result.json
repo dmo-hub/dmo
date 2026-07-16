@@ -1,11 +1,11 @@
 {
-  "scan_date": "2026-06-12 19:06:18",
+  "scan_date": "2026-07-17 04:06:55",
   "scanned": {
-    "event": 639,
-    "patch": 764
+    "event": 642,
+    "patch": 769
   },
-  "matched_posts": 21,
-  "new_deck_count": 35,
+  "matched_posts": 22,
+  "new_deck_count": 37,
   "existing_deck_count": 1,
   "matches": [
     {
@@ -292,6 +292,20 @@
         "One who resides in Lark",
         "A being that sends Digimon to the human world",
         "Neutral type Digimon"
+      ],
+      "existing_decks": [],
+      "has_new_marker": true,
+      "has_existing_marker": false
+    },
+    {
+      "kind": "patch",
+      "idx": 4171,
+      "date": "07-15-2026",
+      "subject": "15.7.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4171",
+      "new_decks": [
+        "The One Who Descended in Radiance",
+        "Radiance Against Despair"
       ],
       "existing_decks": [],
       "has_new_marker": true,
