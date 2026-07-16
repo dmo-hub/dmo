@@ -238,6 +238,43 @@ def main() -> None:
     </a>
   </div>
 
+  <div class="section-header">
+    <h2>Patch highlights</h2>
+    <span class="see-all">หน้าเจาะลึกรายแพทช์ เซิร์ฟ TH</span>
+  </div>
+
+  <div class="feature-grid">
+    <a href="susanoomon-extreme-th-90.html" class="feature">
+      <div class="icon">⚡</div>
+      <h3>[Extreme] Susanoomon</h3>
+      <p>TH แพทช์ #90 — ไกด์วัตถุดิบ 2 ชิ้น + เครื่องคำนวณงบแก่นทั้งอีเวนต์</p>
+      <div class="feature-stats">
+        <div class="stat"><b>#90</b>แพทช์</div>
+        <div class="stat"><b>TH</b>เซิร์ฟ</div>
+      </div>
+    </a>
+
+    <a href="seal-lookup-89.html" class="feature">
+      <div class="icon">🔖</div>
+      <h3>Seal Lookup #89</h3>
+      <p>เทียบไอเทม TH update #89 กับชื่อ NA · KR — ที่มา + สถานะ effect</p>
+      <div class="feature-stats">
+        <div class="stat"><b>#89</b>แพทช์</div>
+        <div class="stat"><b>3</b>เซิร์ฟ</div>
+      </div>
+    </a>
+
+    <a href="seal-patch-th-88.html" class="feature">
+      <div class="icon">📜</div>
+      <h3>ซีลแพทช์ TH #88</h3>
+      <p>ซีลแพทช์ 11.06.2026 — รายละเอียดตารางแลก + เครื่องคำนวณ</p>
+      <div class="feature-stats">
+        <div class="stat"><b>#88</b>แพทช์</div>
+        <div class="stat"><b>TH</b>เซิร์ฟ</div>
+      </div>
+    </a>
+  </div>
+
 </main>
 
 <footer class="site-footer">
