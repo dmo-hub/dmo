@@ -25,45 +25,11 @@ DIGIMON = PROJ / "data" / "scan_result_digimon.json"
 SEALS = PROJ / "docs" / "seal_data.json"
 OUT = PROJ / "docs" / "index.html"
 
-MONTH_NAMES = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-]
-
-
 def date_key(mmddyyyy):
     if not mmddyyyy:
         return "00000000"
     mm, dd, yyyy = mmddyyyy.split("-")
     return f"{yyyy}{mm}{dd}"
-
-
-def fmt_date(mmddyyyy):
-    if not mmddyyyy:
-        return ""
-    mm, dd, yyyy = mmddyyyy.split("-")
-    return f"{dd}.{mm}.{yyyy}"
-
-
-def month_key(mmddyyyy):
-    if not mmddyyyy:
-        return "000000"
-    mm, _dd, yyyy = mmddyyyy.split("-")
-    return f"{yyyy}{mm}"
-
-
-def month_label(ym):
-    return f"{MONTH_NAMES[int(ym[4:6]) - 1]} {ym[:4]}"
 
 
 SERVER_LABEL = {"na": "NA", "kr": "KR", "th": "TH"}
@@ -142,12 +108,6 @@ def main() -> None:
 
     activity.sort(key=lambda a: (date_key(a["date"]), idx_key(a["idx"])), reverse=True)
 
-    # Group most-recent 12 by month for the preview feed
-    preview = activity[:12]
-    grouped: OrderedDict[str, list[dict]] = OrderedDict()
-    for a in preview:
-        grouped.setdefault(month_key(a["date"]), []).append(a)
-
     # --- Stats ----------------------------------------------------------
     deck_posts = decks.get("matched_posts", 0)
     deck_count = decks.get("new_deck_count", 0)
@@ -159,29 +119,6 @@ def main() -> None:
     seal_post_count = len(seals)
     seal_servers = len({s["server"] for s in seals})
     total_activity = len(activity)
-
-    # --- Activity feed render ------------------------------------------
-    feed_blocks: list[str] = []
-    for ym, items in grouped.items():
-        cards = "\n".join(
-            f'''        <a class="card tl-entry feed-card" href="{a["href"]}">
-          <div class="card-head">
-            <span class="card-date">{fmt_date(a["date"])}</span>
-            <span class="card-kind-badge is-{a["topic"]}">{a["kind_label"]}</span>
-            <span class="card-idx">idx {a["idx"]}</span>
-          </div>
-          <div class="feed-title">{a["title"]}</div>
-        </a>'''
-            for a in items
-        )
-        feed_blocks.append(
-            f"""      <div class="tl-month">
-        <span class="tl-month-label">{month_label(ym)}</span>
-        <span class="tl-month-count">{len(items)} update{"" if len(items) == 1 else "s"}</span>
-      </div>
-{cards}"""
-        )
-    feed_html = "\n".join(feed_blocks)
 
     html = f"""<!DOCTYPE html>
 <html lang="th">
@@ -199,21 +136,6 @@ def main() -> None:
 <title>DMO Tracker — Home</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/site.css">
-<style>
-  /* Index-only tweaks */
-  .feed-card {{ display: block; padding-bottom: 14px; }}
-  .feed-card .card-head {{ padding-top: 14px; }}
-  .feed-card .feed-title {{
-    margin: 6px 20px 8px; font-size: 16px; font-weight: 500; color: var(--ink);
-    line-height: 1.4;
-    font-family: var(--display-font);
-    letter-spacing: -0.2px;
-  }}
-  .feed-card:hover {{ transform: translateY(-1px); border-color: var(--coral); }}
-  .card-kind-badge.is-digimon {{ background: var(--surface-card); color: var(--ink); }}
-  .card-kind-badge.is-decks {{ background: var(--coral); color: var(--on-primary); }}
-  .card-kind-badge.is-seal {{ background: var(--teal); color: var(--on-primary); }}
-</style>
 </head>
 <body>
 
@@ -225,10 +147,6 @@ def main() -> None:
       <a href="decks.html">Decks</a>
       <a href="digimon.html">Digimon</a>
       <a href="seals.html">Seal</a>
-      <a href="breakthrough.html">Breakthrough</a>
-      <a href="nametag.html">Name Tag</a>
-      <a href="accessories.html">Accessories</a>
-      <a href="lookup.html">Lookup</a>
     </nav>
     <span class="nav-meta">scrape: dmo.gameking.com</span>
   </div>
@@ -320,15 +238,6 @@ def main() -> None:
     </a>
   </div>
 
-  <div class="section-header">
-    <h2>Recent activity</h2>
-    <span class="see-all">{total_activity} updates tracked</span>
-  </div>
-
-  <div class="timeline">
-{feed_html}
-  </div>
-
 </main>
 
 <footer class="site-footer">
@@ -343,9 +252,7 @@ def main() -> None:
 """
 
     OUT.write_text(html, encoding="utf-8")
-    print(
-        f"Wrote {OUT.relative_to(PROJ)} — {total_activity} activity items, {len(preview)} in preview"
-    )
+    print(f"Wrote {OUT.relative_to(PROJ)} — {total_activity} activity items tracked")
 
 
 if __name__ == "__main__":

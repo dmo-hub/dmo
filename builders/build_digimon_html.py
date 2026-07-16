@@ -465,10 +465,6 @@ def render() -> str:
       <a href="decks.html">Decks</a>
       <a href="digimon.html" class="is-active">Digimon</a>
       <a href="seals.html">Seal</a>
-      <a href="breakthrough.html">Breakthrough</a>
-      <a href="nametag.html">Name Tag</a>
-      <a href="accessories.html">Accessories</a>
-      <a href="lookup.html">Lookup</a>
     </nav>
     <span class="nav-meta">scrape: dmo.gameking.com</span>
   </div>

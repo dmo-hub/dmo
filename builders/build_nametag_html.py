@@ -295,8 +295,6 @@ TEMPLATE = """<!DOCTYPE html>
       <a href="decks.html">Decks</a>
       <a href="digimon.html">Digimon</a>
       <a href="seals.html">Seal</a>
-      <a href="breakthrough.html">Breakthrough</a>
-      <a href="nametag.html" class="is-active">Name Tag</a>
     </nav>
     <span class="nav-meta">scrape: dmo.gameking.com</span>
   </div>
