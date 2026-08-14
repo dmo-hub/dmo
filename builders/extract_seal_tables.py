@@ -64,7 +64,12 @@ TH_SYSTEM_URL = (
     "%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/"
 )
 
-# All 56 seal posts, keyed by their docs/seals.html card id.
+# Curated seal posts, keyed by their docs/seals.html card id. This list is
+# the verified baseline — entries here always get an output entry, even when
+# the post has no HTML table (na-352, th-system, ...), because their cards
+# already exist in seals.html. NEW posts are found by discover_new() below;
+# a discovered post only survives into the output if the extractor actually
+# finds a seal table in it, so the list no longer needs manual growth.
 KR_IDS = [
     816593,
     814935,
@@ -670,13 +675,71 @@ def extract(post):
     return {"tables": tables, "note": note}
 
 
+# Per-server phrase hints for discovery. Looser than SEAL_PHRASES on purpose —
+# a hit only nominates a candidate; the table-scoring pass decides for real.
+_DISCOVER_HINTS = {
+    "KR": ("씰 교환", "씰교환", "씰 교환권"),
+    "NA": ("seal exchange", "seal master"),
+    "TH": ("แลกซีล", "แลกเปลี่ยนซีล", "รายการซีล", "ผลิตซีล"),
+}
+
+
+def discover_new():
+    """Scan cache/ for seal posts missing from the curated lists.
+
+    Returns extra post dicts (same shape as the curated ones). A candidate is
+    any cached post whose text contains a seal-exchange hint; the extractor's
+    own table criteria then keep or drop it, so false positives cost nothing
+    but a log line.
+    """
+    extra = []
+    kr_known, na_known, th_known = set(KR_IDS), set(NA_IDS), set(TH_SUFFIXES)
+
+    def hit(text, server):
+        low = text.lower()
+        return any(p in low for p in _DISCOVER_HINTS[server])
+
+    for f in CACHE.glob("kr_view_o*.html"):
+        m = re.match(r"kr_view_o(\d+)\.html$", f.name)
+        if not m or int(m.group(1)) in kr_known:
+            continue
+        if hit(f.read_text(encoding="utf-8", errors="ignore"), "KR"):
+            extra.append({"key": f"kr-{int(m.group(1))}", "server": "KR", "id": int(m.group(1))})
+
+    for f in list(CACHE.glob("event_*.html")) + list(CACHE.glob("patch_*.html")):
+        m = re.match(r"(event|patch)_(\d+)\.html$", f.name)
+        if not m or int(m.group(2)) in na_known:
+            continue
+        if hit(f.read_text(encoding="utf-8", errors="ignore"), "NA"):
+            idx = int(m.group(2))
+            if m.group(1) == "patch":
+                NA_PATCH.add(idx)  # so get_html builds the right URL/cache name
+            extra.append({"key": f"na-{idx}", "server": "NA", "id": idx})
+
+    for f in CACHE.glob("th_view_*.html"):
+        m = re.search(r"-(\d+)\.html$", f.name)
+        if not m or int(m.group(1)) in th_known:
+            continue
+        if hit(f.read_text(encoding="utf-8", errors="ignore"), "TH"):
+            extra.append({"key": f"th-{int(m.group(1))}", "server": "TH", "id": int(m.group(1))})
+
+    return sorted(extra, key=lambda p: str(p["id"]), reverse=True)
+
+
 def main():
-    posts = (
+    curated = (
         [{"key": f"kr-{i}", "server": "KR", "id": i} for i in KR_IDS]
         + [{"key": f"na-{i}", "server": "NA", "id": i} for i in NA_IDS]
         + [{"key": f"th-{s}", "server": "TH", "id": s} for s in TH_SUFFIXES]
         + [{"key": "th-system", "server": "TH", "id": "system"}]
     )
+    curated_keys = {p["key"] for p in curated}
+    discovered = discover_new()
+    if discovered:
+        print(f"Discovered {len(discovered)} candidate post(s) not in the curated lists:")
+        for p in discovered:
+            print(f"    {p['key']}")
+    posts = curated + discovered
     result = {}
     print(f"Extracting seal tables from {len(posts)} posts...\n")
     for p in posts:
@@ -715,11 +778,25 @@ def main():
         }
         print(f"{key:<12} tables=1 (alias -> {meta['alias']})")
 
+    # Discovered candidates only earn an entry by producing a table; curated
+    # keys always stay (their empty entries drive card upkeep in seals.html).
+    dropped = [
+        k for k, v in result.items() if k not in curated_keys and not v.get("tables")
+    ]
+    for k in dropped:
+        del result[k]
+    if dropped:
+        print(f"\nDropped {len(dropped)} discovered candidate(s) with no seal table:")
+        print("    " + ", ".join(dropped))
+    kept_new = [k for k in result if k not in curated_keys]
+    if kept_new:
+        print(f"\n!! NEW seal post(s) discovered — add a card to docs/seals.html: {kept_new}")
+
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     n_tbl = sum(len(v.get("tables", [])) for v in result.values())
     n_none = sum(1 for v in result.values() if not v.get("tables"))
     print(
-        f"\nWrote {OUT}  ({n_tbl} tables across {len(posts)} posts; {n_none} posts with no table)"
+        f"\nWrote {OUT}  ({n_tbl} tables across {len(result)} posts; {n_none} posts with no table)"
     )
 
 
