@@ -681,6 +681,25 @@ def ensure_cards(html, data):
     return html
 
 
+def _fix_month_counts(html):
+    """Recount every month header's "N posts" from the cards actually in its
+    section (distinct posts — sibling cards like th-88#2 belong to the same
+    post). The counts were hand-maintained and had drifted (November 2025
+    said 3 with 2 posts; October 2025 said 2 with 1)."""
+    hdr_re = re.compile(
+        r'(<div class="tl-month"><span class="tl-month-label">[^<]+</span>'
+        r'<span class="tl-month-count">)(\d+) posts?(</span></div>)'
+    )
+    parts = hdr_re.split(html)
+    # parts = [pre, g1, g2, g3, body, g1, g2, g3, body, ...]
+    out = [parts[0]]
+    for i in range(1, len(parts), 4):
+        pre, old_n, post, body = parts[i], parts[i + 1], parts[i + 2], parts[i + 3]
+        n = len(set(re.findall(r'<article\b[^>]*\bid="([^"#]+)"', body)))
+        out.append(f"{pre}{n} post{'s' if n != 1 else ''}{post}{body}")
+    return "".join(out)
+
+
 def main():
     html = HTML.read_text(encoding="utf-8")
     data = json.loads(DATA.read_text(encoding="utf-8"))
@@ -754,6 +773,7 @@ def main():
 
     # 5) refresh hero total / year / tab counts to match remaining cards
     html = update_counts(html, data)
+    html = _fix_month_counts(html)
 
     HTML.write_text(html, encoding="utf-8")
     emit_seal_data(data, html, standing)  # per-table data for calc.html
