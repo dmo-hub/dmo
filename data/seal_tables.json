@@ -439,6 +439,19 @@
     ],
     "note": ""
   },
+  "na-792": {
+    "tables": [
+      {
+        "header": "Craft item Seal provision amount Required number of Seal Exchange Ticket Master amount Stat Master figure",
+        "score": 22,
+        "rows": 21,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gerbemon Seal</td><td>10</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>Megadramon Seal</td><td>10</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>SkullKnightmon Seal</td><td>5</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>Omegamon Alter-B Seal</td><td>1</td><td>10</td><td>AT</td><td>—</td></tr><tr><td>Anomalocarimon Seal</td><td>5</td><td>1</td><td>BL</td><td>—</td></tr><tr><td>Baristamon Seal</td><td>5</td><td>1</td><td>BL</td><td>—</td></tr><tr><td>LadyDevimon Seal</td><td>5</td><td>1</td><td>CT</td><td>—</td></tr><tr><td>Birdramon Seal</td><td>1</td><td>1</td><td>CT</td><td>—</td></tr><tr><td>DeadlyAxemon Seal</td><td>1</td><td>1</td><td>CT</td><td>—</td></tr><tr><td>Lilithmon X [Awaken] Seal</td><td>1</td><td>10</td><td>CT</td><td>—</td></tr><tr><td>Okuwamon Seal</td><td>5</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>SpiderMon Seal</td><td>1</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>Dorulumon Seal</td><td>1</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>Eosmon_LV5 Seal</td><td>10</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>TeslaJellymon Seal</td><td>5</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>MetalEtemon Seal</td><td>5</td><td>1</td><td>EV</td><td>—</td></tr><tr><td>Groundramon Seal</td><td>1</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>Wendimon Seal</td><td>5</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>Symbareangoramon Seal</td><td>5</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>Omegamon Zwart D Seal</td><td>1</td><td>10</td><td>HT</td><td>—</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List"
+      }
+    ],
+    "note": ""
+  },
   "na-789": {
     "tables": [],
     "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
@@ -559,6 +572,32 @@
   "na-352": {
     "tables": [],
     "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
+  },
+  "th-92": {
+    "tables": [
+      {
+        "header": "ซีลที่ได้รับ จำนวนซีลที่ได้รับ จำนวนตั๋วแลกการ์ดซีลที่ต้องการ ความสามารถ สเตตัสสูงสุด(เมื่อถึงระดับซีลมาสเตอร์)",
+        "score": 21,
+        "rows": 20,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>กาบีมอน ซีล</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>เมก้าดรามอน ซีล</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>สกัลไนท์มอน ซีล</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>โอเมกามอน อัลเทอร์-B</td><td>1</td><td>10</td><td>AT</td><td>300</td></tr><tr><td>สกอเปี้ยนมอน ซีล</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>บาริสตามอน ซีล</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>เลดี้เดวีมอน ซีล</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>เบิร์ดดรามอน ซีล</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>เดดลี่แอ็กซ์มอน ซีล</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>โอคุวามอน ซีล</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>โดคุกูมอน ซีล</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>โดรูรูมอน ซีล</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>อีออสมอน(ร่างสมบูรณ์) ซีล</td><td>10</td><td>1</td><td>DS</td><td>150</td></tr><tr><td>เทสลามอน เจลลีมอน ซีล</td><td>5</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>เมทัลเอเทมอน ซีล</td><td>5</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>กราวด์ดรามอน ซีล</td><td>1</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>เวนดีมอน ซีล</td><td>5</td><td>1</td><td>HT</td><td>150</td></tr><tr><td>ซิมบาเรอังโกรามอน ซีล</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>โอเมกามอน สวอร์ธ D</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table>",
+        "caption": "รายการแลกซีล (Seal Exchange List)"
+      }
+    ],
+    "note": ""
+  },
+  "th-91": {
+    "tables": [
+      {
+        "header": "ไอเทมวัตถุดิบ จำนวน ไอเทมที่ได้รับ จำนวน",
+        "score": 24,
+        "rows": 24,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>ซีลเติบโตมาอย่างดี [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>คลื่นความร้อน ซีล [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งความกระตือรือร้น [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งความเย็นยะเยือก [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งความแข็งแกร่ง [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลเทพธนู [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งชัยชนะ [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>อาร์มเมอร์ ซีล [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งการสำรวจ [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งความหวัง [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งความสุข [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลผู้พิทักษ์สิ่งแวดล้อม [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งมิตรภาพ [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งความรู้ [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งความซื่อสัตย์ [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งความกล้า [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลมังกร [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งการเริ่มต้น [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลเปิดเทอมใหม่ [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งฤดูใบไม้ผลิ [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลแห่งครอบครัว [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลอากาศร้อน [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr><tr><td>ซีลซัมเมอร์ [กิจกรรม]</td><td>10</td><td>10</td><td>—</td><td>—</td></tr></table>",
+        "caption": "รายการแลกซีล (Seal Exchange List)"
+      }
+    ],
+    "note": ""
   },
   "th-88": {
     "tables": [

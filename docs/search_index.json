@@ -2,7 +2,7 @@
  "coverage": {
   "na": "2026-07-15",
   "kr": "2026-03-17",
-  "th": "2026-07-09"
+  "th": "2026-08-13"
  },
  "entries": [
   {
@@ -411,6 +411,174 @@
       "tickets": "1",
       "stat": "DS",
       "value": "200"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -1607,6 +1775,14 @@
       "tickets": "1",
       "stat": "BL",
       "value": "150"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "—"
      }
     ]
    }
@@ -2398,6 +2574,14 @@
       "tickets": "1",
       "stat": "BL",
       "value": "150"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "—"
      }
     ]
    }
@@ -2781,6 +2965,14 @@
       "tickets": "1",
       "stat": "CT",
       "value": "200"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "—"
      }
     ]
    }
@@ -4714,6 +4906,14 @@
       "tickets": "1",
       "stat": "CT",
       "value": "200"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "—"
      }
     ]
    }
@@ -5324,6 +5524,14 @@
       "tickets": "1",
       "stat": "DE",
       "value": "200"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
      }
     ]
    }
@@ -6591,6 +6799,14 @@
       "tickets": "1",
       "stat": "DS",
       "value": "150"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "—"
      }
     ]
    }
@@ -8825,6 +9041,14 @@
       "tickets": "1",
       "stat": "AT",
       "value": "100"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "—"
      }
     ]
    }
@@ -9475,6 +9699,14 @@
       "tickets": "1",
       "stat": "HP",
       "value": "200"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "—"
      }
     ]
    }
@@ -10034,6 +10266,14 @@
       "tickets": "1",
       "stat": "DS",
       "value": "200"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -11625,6 +11865,14 @@
       "tickets": "1",
       "stat": "CT",
       "value": "150"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "—"
      }
     ]
    }
@@ -12141,6 +12389,14 @@
       "tickets": "1",
       "stat": "DS",
       "value": "300"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "CT",
+      "value": "—"
      }
     ],
     "th": [
@@ -13205,6 +13461,14 @@
       "tickets": "1",
       "stat": "AT",
       "value": "150"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "—"
      }
     ]
    }
@@ -13653,6 +13917,14 @@
       "tickets": "1",
       "stat": "EV",
       "value": "100"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "—"
      }
     ]
    }
@@ -14964,6 +15236,16 @@
       "stat": "DE",
       "value": "150"
      }
+    ],
+    "na": [
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
+     }
     ]
    }
   },
@@ -15087,6 +15369,14 @@
       "tickets": "10",
       "stat": "AT",
       "value": "300"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "AT",
+      "value": "—"
      }
     ]
    }
@@ -15308,6 +15598,14 @@
       "tickets": "10",
       "stat": "HT",
       "value": "300"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HT",
+      "value": "—"
      }
     ]
    }
@@ -18772,6 +19070,14 @@
       "tickets": "1",
       "stat": "AT",
       "value": "200"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "—"
      }
     ]
    }
@@ -19016,6 +19322,14 @@
       "tickets": "1",
       "stat": "DE",
       "value": "200"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
      }
     ]
    }
@@ -19286,7 +19600,8 @@
    "display": "SymbareAngoramon",
    "names": {
     "en": [
-     "SymbareAngoramon"
+     "SymbareAngoramon",
+     "Symbareangoramon"
     ],
     "kr": [
      "진바앙고라몬 씰"
@@ -19312,6 +19627,14 @@
       "tickets": "1",
       "stat": "HT",
       "value": "200"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "—"
      }
     ]
    }
@@ -19507,6 +19830,14 @@
       "tickets": "1",
       "stat": "DS",
       "value": "200"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "—"
      }
     ]
    }
@@ -20894,6 +21225,14 @@
       "tickets": "1",
       "stat": "HT",
       "value": "150"
+     },
+     {
+      "post": "na-792",
+      "date": "18.11.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "—"
      }
     ]
    }
@@ -21629,6 +21968,150 @@
   },
   {
    "type": "seal",
+   "key": "th:กราวด์ดรามอน",
+   "display": "กราวด์ดรามอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "กราวด์ดรามอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:กาบีมอน",
+   "display": "กาบีมอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "กาบีมอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "100"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:ซิมบาเรอังโกรามอน",
+   "display": "ซิมบาเรอังโกรามอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "ซิมบาเรอังโกรามอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:บาริสตามอน",
+   "display": "บาริสตามอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "บาริสตามอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "150"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:สกอเปี้ยนมอน",
+   "display": "สกอเปี้ยนมอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "สกอเปี้ยนมอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "150"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:สกัลไนท์มอน",
+   "display": "สกัลไนท์มอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "สกัลไนท์มอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "th:อาร์มเมอร์",
    "display": "อาร์มเมอร์",
    "names": {
@@ -21647,6 +22130,326 @@
       "tickets": "1",
       "stat": "DE",
       "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:อีออสมอน(ร่างสมบูรณ์)",
+   "display": "อีออสมอน(ร่างสมบูรณ์)",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "อีออสมอน(ร่างสมบูรณ์)"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "150"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:เดดลี่แอ็กซ์มอน",
+   "display": "เดดลี่แอ็กซ์มอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "เดดลี่แอ็กซ์มอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:เทสลามอน เจลลีมอน",
+   "display": "เทสลามอน เจลลีมอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "เทสลามอน เจลลีมอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:เบิร์ดดรามอน",
+   "display": "เบิร์ดดรามอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "เบิร์ดดรามอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:เมก้าดรามอน",
+   "display": "เมก้าดรามอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "เมก้าดรามอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:เมทัลเอเทมอน",
+   "display": "เมทัลเอเทมอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "เมทัลเอเทมอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:เลดี้เดวีมอน",
+   "display": "เลดี้เดวีมอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "เลดี้เดวีมอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "150"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:เวนดีมอน",
+   "display": "เวนดีมอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "เวนดีมอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "150"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:โดคุกูมอน",
+   "display": "โดคุกูมอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "โดคุกูมอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:โดรูรูมอน",
+   "display": "โดรูรูมอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "โดรูรูมอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:โอคุวามอน",
+   "display": "โอคุวามอน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "โอคุวามอน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "150"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:โอเมกามอน สวอร์ธ D",
+   "display": "โอเมกามอน สวอร์ธ D",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "โอเมกามอน สวอร์ธ D"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HT",
+      "value": "300"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:โอเมกามอน อัลเทอร์-B",
+   "display": "โอเมกามอน อัลเทอร์-B",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "โอเมกามอน อัลเทอร์-B"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "AT",
+      "value": "300"
      }
     ]
    }
@@ -22546,6 +23349,30 @@
   },
   {
    "type": "patch",
+   "key": "na-792",
+   "display": "na-792 — Seal Exchange Ticket — Craft List",
+   "names": {
+    "en": [
+     "na-792",
+     "Seal Exchange Ticket — Craft List"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-792",
+   "n_tables": 1,
+   "n_rows": 20,
+   "servers": {
+    "na": [
+     {
+      "post": "na-792",
+      "date": "18.11.2025"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
    "key": "na-810",
    "display": "na-810 — Seal Exchange Ticket — Craft List · ลิสต์ Takato มาตรฐาน (เดียวกับ idx 4100)",
    "names": {
@@ -22930,6 +23757,54 @@
    }
   },
   {
+   "type": "patch",
+   "key": "th-91",
+   "display": "th-91 — รายการแลกซีล (Seal Exchange List)",
+   "names": {
+    "en": [
+     "th-91",
+     "รายการแลกซีล (Seal Exchange List)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#th-91",
+   "n_tables": 1,
+   "n_rows": 23,
+   "servers": {
+    "th": [
+     {
+      "post": "th-91",
+      "date": "23.07.2026"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "th-92",
+   "display": "th-92 — รายการแลกซีล (Seal Exchange List)",
+   "names": {
+    "en": [
+     "th-92",
+     "รายการแลกซีล (Seal Exchange List)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#th-92",
+   "n_tables": 1,
+   "n_rows": 19,
+   "servers": {
+    "th": [
+     {
+      "post": "th-92",
+      "date": "13.08.2026"
+     }
+    ]
+   }
+  },
+  {
    "type": "digimon",
    "key": "extremeomegamonresistance",
    "display": "(Extreme) Omegamon(Resistance)",
@@ -23044,12 +23919,6 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=804377&Btype=Update",
       "date": ""
      }
-    ],
-    "th": [
-     {
-      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-87/",
-      "date": "2026-05-21"
-     }
     ]
    }
   },
@@ -23061,7 +23930,9 @@
     "en": [
      "Apollomon"
     ],
-    "kr": [],
+    "kr": [
+     "아폴로몬"
+    ],
     "th": []
    },
    "anchor": "digimon.html#p4171",
@@ -23070,6 +23941,12 @@
      {
       "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4171",
       "date": "07-15-2026"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=818643&Btype=Update",
+      "date": ""
      }
     ]
    }
@@ -23257,6 +24134,12 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810885&Btype=Update",
       "date": ""
      }
+    ],
+    "th": [
+     {
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-91/",
+      "date": "2026-07-23"
+     }
     ]
    }
   },
@@ -23286,6 +24169,12 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810885&Btype=Update",
       "date": ""
      }
+    ],
+    "th": [
+     {
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-91/",
+      "date": "2026-07-23"
+     }
     ]
    }
   },
@@ -23314,12 +24203,6 @@
      {
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=801540&Btype=Update",
       "date": ""
-     }
-    ],
-    "th": [
-     {
-      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86/",
-      "date": "2026-04-23"
      }
     ]
    }
