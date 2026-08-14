@@ -185,7 +185,11 @@
           "natural_attribute": "Wood"
         }
       },
-      "image_th": "img/digimon/e705_th.png"
+      "image_th": "img/digimon/e705_th.png",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-84/",
+      "date_th": "2026-02-26",
+      "_th_name": "บลูมลอร์ดมอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/02/20.png"
     },
     "708": {
       "date": "03-18-2025",
@@ -246,7 +250,11 @@
             "Wind Guardians"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86/",
+      "date_th": "2026-04-23",
+      "_th_name": "อิมพีเรียลดรามอน พาราดินโหมด [อะเวคเค่น]",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/04/j22.png"
     },
     "743": {
       "date": "06-17-2025",
@@ -267,7 +275,11 @@
             "Virus Busters"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-87/",
+      "date_th": "2026-05-21",
+      "_th_name": "[เอ็กซ์ตรีม] อัลฟามอน โอริวเคน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/05/7.png"
     },
     "759": {
       "date": "07-22-2025",
@@ -300,7 +312,11 @@
         }
       },
       "image": "img/digimon/e759.png",
-      "image_th": "img/digimon/e759_th.png"
+      "image_th": "img/digimon/e759_th.png",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/",
+      "date_th": "2026-06-11",
+      "_th_name": "[เอ็กซ์ตรีม] ลูเจมอน : ซาตานโหมด",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/06/3.png"
     },
     "770": {
       "date": "08-19-2025",
@@ -562,7 +578,8 @@
         }
       },
       "image_kr": "img/digimon/p4148_kr.png",
-      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=816756&Btype=Update"
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=816756&Btype=Update",
+      "date_kr": "2026-05-19"
     },
     "4171": {
       "date": "07-15-2026",

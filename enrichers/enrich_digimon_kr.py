@@ -71,14 +71,18 @@ EN_TO_KR_KEYWORDS: list[tuple[str, str]] = [
 
 # Digimon released only via deck/event posts (no `신규 디지몬` marker exists).
 # Key = (kind, idx), value = KR `o` id.
-OVERRIDES: dict[tuple[str, str], str] = {
+# value = (o id, ISO date or None). A date is only needed when the post is
+# absent from BOTH kr_digimon_releases and kr_news_index — the builder falls
+# back to those for dating, and an unknown o would render an empty date badge.
+OVERRIDES: dict[tuple[str, str], tuple[str, str | None]] = {
     # Omegamon Merciful Mode: introduced via deck "하얀 날개 : 용기의 우령도"
-    # in o=780048 (2023-12-13). No dedicated 신규 디지몬 marker.
-    ("event", "663"): "780048",
+    # in o=780048 (2023-12-13). No dedicated 신규 디지몬 marker. Post IS in
+    # kr_news_index, so the builder dates it from there.
+    ("event", "663"): ("780048", None),
     # Quantumon: KR post o=816756 HAS the standard marker but is not a
-    # Btype=Update post, so it never appears in kr_news_index / the release
-    # scan. The Btype=Update URL still serves it (verified live).
-    ("patch", "4148"): "816756",
+    # Btype=Update post, so it appears in NO index — date pinned here
+    # (from the post body; NA translation followed one day later).
+    ("patch", "4148"): ("816756", "2026-05-19"),
 }
 
 
@@ -108,10 +112,12 @@ def main() -> None:
         for idx, post in data.get(kind, {}).items():
             key = (kind, idx)
             if key in OVERRIDES:
-                o = OVERRIDES[key]
+                o, o_date = OVERRIDES[key]
                 post["source_kr"] = o_to_url.get(
                     o, f"https://www.digimonmasters.com/news/newsBoard_sub.aspx?o={o}&Btype=Update"
                 )
+                if o_date:
+                    post["date_kr"] = o_date
                 overridden += 1
                 print(
                     f"  {kind} {idx} ({post['date']}) → KR o={o} [OVERRIDE]: "

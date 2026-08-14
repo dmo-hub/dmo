@@ -252,7 +252,8 @@ def render() -> str:
             cls = {"kr": "is-kr", "th": "is-th", "na": "is-na"}.get(kind, "is-na")
             label = {"kr": "KR", "th": "TH", "na": "NA"}.get(kind, "?")
             if kind == "kr":
-                date_str = fmt_iso_date(kr_dates.get(oid))
+                # date_kr = enricher-pinned date for posts in no KR index
+                date_str = fmt_iso_date(p.get("date_kr") or kr_dates.get(oid))
             elif kind == "th":
                 date_str = fmt_iso_date(p.get("date_th"))
             else:
