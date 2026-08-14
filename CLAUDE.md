@@ -31,6 +31,13 @@ subfolder prefix (e.g. `python scanners/scan_digimon.py`).
 ## Common commands
 
 ```powershell
+# 0. THE usual entry point — run the whole refresh (fetch all 3 servers,
+#    enrich, rebuild every page, validate) in the right order:
+python tools/refresh.py                     # everything
+python tools/refresh.py --servers th        # one server's fetch leg only
+python tools/refresh.py --no-fetch          # re-run enrich/build only (no network)
+#    (Chrome-CDP steps — dmowiki attributes #11-12 — stay manual.)
+
 # 1. Full scrape + parse (network) — populates cache/ and writes data/scan_result.json
 python scanners/scan_decks.py
 
@@ -113,9 +120,21 @@ python builders/compare_digimon_sources.py 731          # just one idx
 #     localStorage "Seal Budget" calculator (per-table ⭐, per-server sub-tabs,
 #     ticket = ceil(want/qty)*tickets, packs = /3000, price = *editable/pack)
 #     fed by docs/seal_data.json.
+#     New seal posts are AUTO-DISCOVERED from cache/ (phrase scan + the
+#     extractor's own table criteria); the hardcoded id lists are only the
+#     curated baseline. A kept discovery prints "!! NEW seal post(s)" — add a
+#     card to docs/seals.html for it, then re-run build_seal_tables.py.
 python builders/extract_seal_tables.py
 python builders/build_th_seal_en.py
 python builders/build_seal_tables.py
+
+# 15b. Per-patch TH seal page (docs/seal-patch-th-<N>.html) with the
+#      ticket/pack/price calculator + 🆕 badges from the patch's own
+#      "เพิ่มซีลใหม่" table. Regenerates every existing page; new suffixes
+#      with tables get a page automatically. Cards on index.html are
+#      generated per page by build_index_html.py.
+python builders/build_seal_patch_html.py --all   # or: ... 92
+
 
 # 16. Post-release "Family Attributes" rebalance blocks — merge additions into
 #     scan_result_digimon.json (3rd content enricher alongside #10 KR / #10c TH).
@@ -134,6 +153,10 @@ python builders/build_search_index.py
 # 19. Static site checks (no network). Run before committing / in CI:
 #     - every data/*.json + docs/*.json parses
 #     - every docs/*.html has balanced tags
+#     - inline <script> blocks pass node --check
+#     - parser regression fixtures (tools/fixtures/ — frozen slices of real
+#       posts; a failure means a parser EDIT broke old markup, not that the
+#       live site changed)
 #     - the deterministic builders are idempotent (re-running them leaves no
 #       git diff — catches template drift and accumulation bugs)
 python tools/validate.py              # all checks
@@ -146,11 +169,11 @@ enrichers) and `extractors/_image_common.py` (paths, scan JSON round-trip,
 base64-first image extraction core — used by all three image extractors).
 `builders/aliases.py` is the third one (digimon name aliasing).
 
-⚠️ **`scanners/scan_digimon.py` is destructive.** It rewrites
-`data/scan_result_digimon.json` from cache, blowing away manually-curated fields
-(`image`, `image_th`, `image_kr`, `source_kr`, `source_th`, `attributes`, the
-Rank-U filter on `e810`, etc.). Only re-run after a fresh `scanners/scan_decks.py`
-pull when you want to integrate new posts; otherwise stick with the enrichers.
+**`scanners/scan_digimon.py` is merge-safe.** Existing entries in
+`data/scan_result_digimon.json` are never touched (they carry curated fields —
+`image`, `image_th`, `image_kr`, `source_kr`, `source_th`, `attributes`, the
+Rank-U filter on `e810`); only posts not yet in the file are added. Re-run
+freely after a `scan_decks.py` pull.
 
 **Trusted-sources policy:** only `dmowiki.com`, gameking EventView/PatchNote,
 and the KR site (digimonmasters.com) are trusted for digimon stats.
@@ -282,6 +305,11 @@ previews, then "Download JSON" to save back over the data file. Use it instead o
 hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
 
 ## Conventions worth knowing
+
+- **Sponsored ads live in `docs/js/ads.js` only.** Every page with the ad
+  markup (`#ad-float` / `.ad-inline` / `#ad-box` + `data-ad-*` hooks) loads it
+  via `<script src="js/ads.js">`. To add/remove a product, edit the `ADS`
+  array there — never inline ad config in a page again.
 
 - All scripts force UTF-8 stdout at startup (`sys.stdout.reconfigure`) because the project path contains Thai characters and the default Windows console encoding will crash on prints.
 - `BASE` host, the two AJAX endpoints, and the two view-URL templates are centralized in the `CONFIGS` dict at the top of [scan_decks.py](scan_decks.py) — other scripts import from there rather than duplicating URLs.
