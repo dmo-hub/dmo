@@ -32,11 +32,6 @@
   .page input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none; appearance: none; margin: 0; }
 
-  /* page-level controls bar (sticky) — one price/pack setting for the whole page */
-  .calc-bar { position: sticky; top: 6px; z-index: 3; margin: 0 0 18px;
-    background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--radius); }
-  .calc-bar .ct-controls { border-top: 0; }
-
   /* per-table budget summary (lives above each card's table) */
   .calc-total { background: var(--surface-soft); color: var(--ink);
     border-bottom: 1px solid var(--hairline); padding: 4px;
@@ -63,21 +58,6 @@
   .calc-total .ct-stats .st .n { font-size: 13px; font-weight: 700; color: var(--ink);
     font-variant-numeric: tabular-nums; font-family: var(--display-font); }
   @media (max-width: 520px) { .calc-total .ct-stats { grid-template-columns: repeat(2, 1fr); } }
-
-  .ct-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
-    padding: 11px 14px; border-top: 1px solid var(--hairline); }
-  .ct-controls label { font-size: 13px; color: var(--body); font-weight: 500;
-    display: inline-flex; align-items: center; gap: 8px; }
-  .ct-controls input[type=number] { width: 84px; padding: 6px 9px; font: inherit;
-    font-size: 13px; border: 1px solid var(--hairline); border-radius: var(--radius-xs);
-    background: var(--canvas); color: var(--ink); text-align: right; }
-  .ct-controls .cc-unit { color: var(--muted-soft); font-size: 12.5px; margin-left: -3px; }
-  .ct-controls .fixed { color: var(--muted-soft); font-size: 12.5px; }
-  .ct-controls .spacer { flex: 1 1 auto; }
-  .ct-controls button { appearance: none; border: 1px solid var(--hairline); cursor: pointer;
-    background: var(--canvas); color: var(--body); font: inherit; font-size: 12.5px;
-    padding: 6px 12px; border-radius: 9999px; }
-  .ct-controls button:hover { background: var(--surface-card); }
 
   /* per-table card */
   .calc-card { border: 1px solid var(--hairline); border-radius: var(--radius);
@@ -119,6 +99,7 @@
   table.calc-tbl .status .got { font-weight: 600; color: var(--ink); }
   table.calc-tbl .status .mx { color: var(--muted); }
   table.calc-tbl tr.sub td { background: var(--surface-card); font-weight: 600; border-top: 2px solid var(--hairline); }
+  table.calc-tbl .seal-new { font-size: 11px; vertical-align: middle; cursor: help; }
 
   /* ===== sponsored ad: floating (desktop) → inline footer (mobile) ===== */
   .ad-label { font-size: 9.5px; letter-spacing: .8px; text-transform: uppercase;
@@ -181,7 +162,7 @@
   <div class="hero">
     <div>
       <h1>ซีลแพทช์ TH · 11.06.2026</h1>
-      <p class="lead">รายการแลกซีล (Seal Exchange List) เซิร์ฟไทย (vplay) ของแพทช์ 11.06.2026 — 2 หมวด: ผลิตซีลมาสเตอร์ + ผลิตตั๋วแลกซีลแบบพิเศษ พร้อมเครื่องคำนวณตั๋ว/แพ็ค/ราคา</p>
+      <p class="lead">รายการแลกซีล (Seal Exchange List) เซิร์ฟไทย (vplay) ของแพทช์ 11.06.2026 — 2 หมวด พร้อมเครื่องคำนวณตั๋ว/แพ็ค/ราคา</p>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><div class="num">2</div><div class="lbl">หมวด</div></div>
@@ -193,13 +174,13 @@
   <div class="patch-meta">
     <span class="pm"><span class="srv-th">TH</span></span>
     <span class="pm">📅 วันที่ <b>11.06.2026</b></span>
-    <span class="pm">🌐 vplay.in.th</span>
+    <span class="pm">🌐 <a href="https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/" target="_blank" rel="noopener noreferrer">vplay.in.th</a></span>
     <span class="pm">· 1 แพ็ค = 3,000 ตั๋ว · แต่ละหมวดคนละแพ็ค คิดราคาแยกกัน</span>
   </div>
 
   <div id="calc-root"></div>
 
-  <!-- mobile-only inline ad (footer) — src/href/label เซ็ตโดย JS (rotate) -->
+  <!-- mobile-only inline ad (footer) — src/href/label เซ็ตโดย js/ads.js -->
   <div class="ad-inline">
     <span class="ad-label" data-ad-label></span>
     <a data-ad-link href="#" target="_blank" rel="noopener noreferrer">
@@ -234,13 +215,13 @@
   const PACK = 3000;
   const WANT_KEY = 'dmo_sealpatch_th88_want', PRICE_KEY = 'dmo_sealpatch_th88_price';
 
-  // ── data: the two th-88 (11.06.2026) tables, copied verbatim from seal_data.json ──
+  // ── data: copied verbatim from seal_data.json by build_seal_patch_html.py ──
   // row = [name, e (ได้/ครั้ง), f (ตั๋ว/ครั้ง), stat, max]
   const TABLES = [
     {
-      key: 'th-88#0',
-      caption: 'รายการแลกซีล (Seal Exchange List) · หมวดผลิตซีลมาสเตอร์',
-      date: '11.06.2026',
+      key: "th-88#0",
+      caption: "รายการแลกซีล (Seal Exchange List) · หมวดผลิตซีลมาสเตอร์",
+      date: "11.06.2026",
       rows: [
         ["นูเมมอน ซีล", "10", "1", "AT", "100"],
         ["โอดิเนมอน (อะเวคเค่น) ซีล", "1", "10", "AT", "250"],
@@ -267,9 +248,9 @@
       ]
     },
     {
-      key: 'th-88#1',
-      caption: 'รายการแลกซีล (Seal Exchange List) · หมวดผลิตตั๋วแลกซีลแบบพิเศษ',
-      date: '11.06.2026',
+      key: "th-88#1",
+      caption: "รายการแลกซีล (Seal Exchange List) · หมวดผลิตตั๋วแลกซีลแบบพิเศษ",
+      date: "11.06.2026",
       noStats: true,
       rows: [
         ["ซีลแห่งความกระตือรือร้น [กิจกรรม]", "1", "1", "AT", "150"],
@@ -362,12 +343,15 @@
       const k = t.key, rows = t.rows;
       const statsList = [...new Set(rows.map(r => r[3]).filter(s => s && s !== '—'))];
       const chips = statsList.map(s => `<button class="calc-chip" data-stat="${s}" type="button">${s}</button>`).join('');
+      const newSet = new Set(t.newSeals || []);
       const rowsHtml = rows.map(r => {
         const name = r[0], ne = name.replace(/"/g, '&quot;'), saved = (want[k] && want[k][name]) || '';
         const statusCell = t.noStats ? '' :
           `<td class="status"><span class="got">0</span>/<span class="mx">${r[4] ? fmtStat(r[3], +r[4]) : '–'}</span></td>`;
+        const newTag = newSet.has(name)
+          ? ' <span class="seal-new" title="ซีลชนิดใหม่ที่เพิ่มในแพทช์นี้">🆕</span>' : '';
         return `<tr data-seal="${ne}" data-e="${r[1]}" data-f="${r[2]}" data-stat="${r[3]}" data-max="${r[4] || 0}">
-          <td>${name}</td><td>${r[3]}</td><td>${r[1]}</td><td>${r[2]}</td>
+          <td>${name}${newTag}</td><td>${r[3]}</td><td>${r[1]}</td><td>${r[2]}</td>
           <td><input class="want" type="number" min="0" step="1" value="${saved}"></td>
           <td class="tk">–</td>${statusCell}</tr>`;
       }).join('');
@@ -414,9 +398,6 @@
         delete want[k]; saveWant();
         card.querySelectorAll('input.want').forEach(i => i.value = ''); recalc();
       });
-      card.querySelector('.price-pack').addEventListener('input', e => {
-        price[k] = +e.target.value || 0; savePrice(); recalc();
-      });
       root.appendChild(card);
       applyFilter(card);
     });
@@ -425,51 +406,7 @@
 
   render();
 })();
-
-// sponsored floating ad: rotate 3 สินค้า (สุ่มต่อ load) + close (this load only) + click-to-zoom lightbox
-(() => {
-  const ADS = [
-    {img:'img/ads/dmo-dungeon-service.png', label:'service',
-     link:'https://web.facebook.com/groups/244114362448211/posts/3185424211650530'},
-    {img:'img/ads/726548819_2462184690968077_7780691861906989290_n.jpg', label:'promo',
-     link:'https://web.facebook.com/photo/?fbid=2462184687634744&set=gm.3185826914943593&idorvanity=244114362448211'},
-    {img:'img/ads/761633298_2505508689969010_7397997845874297130_n.jpg', label:'promo',
-     link:'https://web.facebook.com/photo/?fbid=2505508686635677&set=gm.3235723446620606&idorvanity=244114362448211'},
-  ];
-  const float = document.getElementById('ad-float');
-  const box = document.getElementById('ad-box');
-
-  // apply ad ไปยัง scope ที่กำหนด (root = document ทั้งหน้า หรือ #ad-box เฉพาะ popup)
-  const applyAd = (i, root=document) => {
-    const ad = ADS[i];
-    root.querySelectorAll('[data-ad-img]').forEach(el => { el.src = ad.img; el.alt = ad.label; });
-    root.querySelectorAll('[data-ad-link]').forEach(el => { el.href = ad.link; });
-    root.querySelectorAll('[data-ad-label]').forEach(el => { el.textContent = ad.label; });
-  };
-
-  // เริ่มต้น: สุ่ม 1 ทั้งหน้า (floating + inline + box)
-  let cur = Math.floor(Math.random() * ADS.length);
-  applyAd(cur);
-
-  // popup เปิด → auto สลับรูปในกล่องทุก 3.5 วิ (เฉพาะ #ad-box, ไม่แตะ floating thumb)
-  let slideTimer = null;
-  const startSlide = () => {
-    if (ADS.length < 2) return;
-    slideTimer = setInterval(() => {
-      cur = (cur + 1) % ADS.length;
-      applyAd(cur, box);
-    }, 3500);
-  };
-  const stopSlide = () => { clearInterval(slideTimer); slideTimer = null; };
-
-  document.getElementById('ad-close').addEventListener('click', () => { float.hidden = true; });
-  const openBox = () => { applyAd(cur, box); box.classList.add('open'); startSlide(); };
-  const closeBox = () => { box.classList.remove('open'); stopSlide(); };
-  document.getElementById('ad-thumb').addEventListener('click', openBox);
-  document.getElementById('ad-x').addEventListener('click', closeBox);
-  box.addEventListener('click', e => { if (e.target === box) closeBox(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBox(); });
-})();
 </script>
+<script src="js/ads.js"></script>
 </body>
 </html>
