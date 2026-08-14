@@ -538,12 +538,85 @@ def update_counts(html, data):
     return html
 
 
+_MONTHS_EN = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+]
+
+
+def _month_label(dmy):
+    dd, mm, yy = dmy.split(".")
+    return f"{_MONTHS_EN[int(mm) - 1]} {yy}", (int(yy), int(mm))
+
+
+_MONTH_HDR = re.compile(
+    r'<div class="tl-month"><span class="tl-month-label">([A-Za-z]+) (\d{4})</span>'
+    r'<span class="tl-month-count">(\d+) posts?</span></div>'
+)
+
+
+def ensure_cards(html, data):
+    """Create a stub <article> for every extracted post that has tables but no
+    card yet — the follow-on injection pass then fills its ST block. Cards used
+    to be hand-written; a marker typo once made ST_RE swallow the neighbouring
+    card, so stubs are machine-emitted now and only the injection is re-run."""
+    for key, d in data.items():
+        if not d.get("tables") or not d.get("date"):
+            continue
+        if re.search(r'<article\b[^>]*\bid="%s"' % re.escape(key), html):
+            continue
+        srv = key.split("-")[0]
+        label = {"kr": "KR", "na": "NA", "th": "TH"}[srv]
+        url = d.get("url", "")
+        stub = (
+            f'      <article class="card tl-entry" id="{key}" data-server="{label}">\n'
+            f'        <div class="sources"><span class="src-item is-{srv}">'
+            f'<a class="src-label" href="{url}" target="_blank" '
+            f'title="{url.rsplit("/", 2)[-2] if url.endswith("/") else url.rsplit("/", 1)[-1]}">{label}</a>'
+            f'<span class="src-date">{d["date"]}</span></span></div>\n'
+            f"        <!--ST:{key}--><!--/ST-->\n"
+            f"      </article>\n"
+        )
+        want_label, want_ym = _month_label(d["date"])
+        placed = False
+        for hm in _MONTH_HDR.finditer(html):
+            hdr_label = f"{hm.group(1)} {hm.group(2)}"
+            if hdr_label == want_label:
+                # newest-first within the page; drop the stub right under the
+                # header and bump the post count
+                n = int(hm.group(3)) + 1
+                new_hdr = hm.group(0).replace(
+                    f"{hm.group(3)} post{'s' if hm.group(3) != '1' else ''}",
+                    f"{n} posts",
+                )
+                html = html[: hm.start()] + new_hdr + "\n" + stub + html[hm.end() :]
+                placed = True
+                break
+            ym = (int(hm.group(2)), _MONTHS_EN.index(hm.group(1)) + 1)
+            if ym < want_ym:  # first older month → new section goes above it
+                section = (
+                    f'    <div class="tl-month"><span class="tl-month-label">{want_label}'
+                    f'</span><span class="tl-month-count">1 post</span></div>\n{stub}\n'
+                )
+                html = html[: hm.start()] + section + html[hm.start() :]
+                placed = True
+                break
+        if placed:
+            print(f"  ++ stub card created: {key} ({d['date']}) — review placement")
+        else:
+            print(f"  !! could not place stub for {key} ({d['date']})", file=sys.stderr)
+    return html
+
+
 def main():
     html = HTML.read_text(encoding="utf-8")
     data = json.loads(DATA.read_text(encoding="utf-8"))
 
     # 1) strip previously injected table blocks
     html = ST_RE.sub("", html)
+
+    # 1b) auto-create cards for newly discovered posts (stub + ST markers)
+    html = ensure_cards(html, data)
 
     # 2) (re)inject CSS once, inside the existing <style>
     css_block = f"{CSS_START}{CSS}{CSS_END}"

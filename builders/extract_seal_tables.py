@@ -615,6 +615,53 @@ def split_category_tables(tb):
     return out
 
 
+def post_url(post):
+    """Public URL for a post (mirrors get_html's routing, no fetch)."""
+    server, ident = post["server"], post["id"]
+    if server == "KR":
+        btype = "Event" if ident == 708817 else "Update"
+        return f"https://www.digimonmasters.com/news/newsBoard_sub.aspx?o={ident}&Btype={btype}"
+    if server == "NA":
+        kind = "patch" if ident in NA_PATCH else "event"
+        page = "PatchNoteView" if kind == "patch" else "EventView"
+        return f"https://dmo.gameking.com/news/{page}.aspx?idx={ident}"
+    if ident == "system":
+        return TH_SYSTEM_URL
+    hits = list(CACHE.glob(f"th_view_*-{ident}.html"))
+    if hits:
+        return f"https://www.vplay.in.th/{hits[0].stem[len('th_view_') :]}/"
+    return ""
+
+
+_NA_DATE = re.compile(r">\s*(\d{2})-(\d{2})-(\d{4})\s*<")
+_KR_DATE = re.compile(r"(20\d{2})-(\d{2})-(\d{2})")
+
+
+def post_date(post, raw):
+    """Post date as DD.MM.YYYY, or '' when not derivable."""
+    server = post["server"]
+    if server == "NA":
+        m = _NA_DATE.search(raw)
+        return f"{m.group(2)}.{m.group(1)}.{m.group(3)}" if m else ""
+    if server == "KR":
+        m = _KR_DATE.search(raw)
+        return f"{m.group(3)}.{m.group(2)}.{m.group(1)}" if m else ""
+    # TH: reuse the scanner's Thai-date parser on the body text
+    sys.path.insert(0, str(PROJ / "scanners"))
+    try:
+        from scan_th_patch_digimon import html_to_text, parse_thai_date
+
+        iso = parse_thai_date(html_to_text(raw))
+        if iso:
+            y, mth, d = iso.split("-")
+            return f"{d}.{mth}.{y}"
+    except Exception:  # noqa: BLE001 — date is best-effort for stub cards
+        pass
+    finally:
+        sys.path.pop(0)
+    return ""
+
+
 def extract(post):
     raw = get_html(post)
     if not raw:
@@ -672,7 +719,7 @@ def extract(post):
             base = f"{cap} ({i + 1})"
         t["caption"] = base + (" · ดึงจากรูปภาพ" if t.get("ocr") else "")
     note = "" if tables else "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
-    return {"tables": tables, "note": note}
+    return {"tables": tables, "note": note, "url": post_url(post), "date": post_date(post, raw)}
 
 
 # Per-server phrase hints for discovery. Looser than SEAL_PHRASES on purpose —
