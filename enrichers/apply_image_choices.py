@@ -24,7 +24,7 @@ IMG_DIR = PROJ / "docs" / "img" / "digimon"
 # Action: ("EN",) | ("KR",) | ("URL", "<url>") | ("REMOVE",)
 CHOICES: dict[tuple[str, str], tuple] = {
     ("event", "663"): ("URL", "https://www.vplay.in.th/wp-content/uploads/2024/03/8.jpg"),
-    ("event", "664"): ("EN",),
+    ("event", "668"): ("EN",),
     ("event", "673"): ("KR",),
     ("event", "683"): ("KR",),
     ("event", "692"): ("EN",),

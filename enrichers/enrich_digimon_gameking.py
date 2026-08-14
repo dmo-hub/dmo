@@ -256,7 +256,7 @@ def main() -> None:
                     origin = "gameking"
 
             # Fallback to KR site cache (cache/kr_view_o<N>.html) — primary
-            # path for posts that gameking didn't translate (e.g. e664) and
+            # path for posts that gameking didn't translate (e.g. e668) and
             # backup for any English block the regex missed.
             if not blocks:
                 kr_o = None
