@@ -51,6 +51,11 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--servers", default="na,kr,th", help="comma list: na,kr,th")
     ap.add_argument("--no-fetch", action="store_true", help="skip network scrape steps")
+    ap.add_argument(
+        "--no-images",
+        action="store_true",
+        help="skip image extractors (CI: keeps binary downloads out of PRs)",
+    )
     ap.add_argument("--no-validate", action="store_true", help="skip final validate.py")
     ap.add_argument("--keep-going", action="store_true", help="continue past a failed step")
     args = ap.parse_args()
@@ -62,6 +67,9 @@ def main() -> None:
             skipped.append(script)
             continue
         if net and args.no_fetch:
+            skipped.append(script)
+            continue
+        if args.no_images and script.startswith("extractors/"):
             skipped.append(script)
             continue
         run.append((script, extra))

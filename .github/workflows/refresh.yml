@@ -4,19 +4,17 @@ name: refresh
 # GitHub runner and, if anything changed, opens a PR for review — it never
 # pushes to main directly.
 #
-# What runs here (network = plain HTTPS, safe on a Linux runner):
-#   Seal:    extract_seal_tables -> build_th_seal_en -> build_seal_tables
-#   Digimon: fetch_kr/th index -> scan_kr/th releases -> enrich_kr/th
-#            -> enrich_gameking -> build_digimon_html
-#
-# What is deliberately NOT run here:
-#   * scanners/scan_digimon.py   — destructive; rewrites scan_result_digimon.json
-#                                  and wipes hand-curated fields (see CLAUDE.md).
-#   * enrich_digimon_attributes  — needs a Chrome CDP session past Cloudflare;
-#                                  cannot run headless on a cloud runner.
-#   * extractors/extract_*_images — download binaries into docs/img; left to a
-#                                  local run so PRs stay reviewable.
-# Attributes/images therefore keep whatever is already committed.
+# The step list lives in tools/refresh.py (single source — this workflow used
+# to duplicate it and drifted whenever a builder was added). Flags used here:
+#   --servers kr,th  KR/TH fetch legs only. The NA full crawl (scan_decks,
+#                    1400+ posts) stays local; NA data keeps what's committed.
+#   --no-images      image extractors download binaries into docs/img —
+#                    skipped so PRs stay reviewable.
+#   --no-validate    validate runs as its own step below with --no-build
+#                    (the runner's empty cache makes the idempotency pass
+#                    meaningless here).
+# enrich_digimon_attributes (Chrome CDP past Cloudflare) is not in refresh.py
+# at all — always local.
 
 on:
   workflow_dispatch:
@@ -38,22 +36,8 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Seal pipeline (fetches missing posts live, then builds)
-        run: |
-          python builders/extract_seal_tables.py
-          python builders/build_th_seal_en.py
-          python builders/build_seal_tables.py
-
-      - name: Digimon — refresh KR/TH references and rebuild page
-        run: |
-          python fetchers/fetch_kr_news_index.py
-          python fetchers/fetch_th_patch_index.py
-          python scanners/scan_kr_digimon_releases.py
-          python scanners/scan_th_patch_digimon.py
-          python enrichers/enrich_digimon_kr.py
-          python enrichers/enrich_digimon_th.py
-          python enrichers/enrich_digimon_gameking.py
-          python builders/build_digimon_html.py
+      - name: Run the cloud-safe pipeline
+        run: python tools/refresh.py --servers kr,th --no-images --no-validate --keep-going
 
       - name: Validate before proposing changes
         run: python tools/validate.py --no-build
@@ -65,11 +49,12 @@ jobs:
           title: "Data refresh"
           body: |
             Automated refresh of the cloud-safe pipeline (seal tables + KR/TH
-            digimon references). Review the diff before merging — Pages
-            publishes from `main`.
+            digimon references) via `tools/refresh.py --servers kr,th
+            --no-images`. Review the diff before merging — Pages publishes
+            from `main`.
 
-            Not included (run locally): `scan_digimon.py`, attribute enrichment
-            (CDP), and image extraction.
+            Not included (run locally): the NA full crawl, attribute
+            enrichment (CDP), and image extraction.
           branch: auto/data-refresh
           delete-branch: true
           add-paths: |
