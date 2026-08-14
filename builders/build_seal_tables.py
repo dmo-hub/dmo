@@ -176,6 +176,55 @@ def compute_matches(data):
     return res
 
 
+def compute_near_matches(data, exact):
+    """TH tables with NO exact twin -> near twins on NA/KR whose seal multiset
+    differs by 1-2 entries (e.g. th-92 = na-792 minus Lilithmon X — one side
+    added a seal, everything else identical). Returns
+    {key: {ti: [(twin_key, extra_in_twin, extra_in_self), ...]}} where the
+    extras are display names for the annotation."""
+    from collections import defaultdict
+
+    # per (key, ti): multiset + normkey -> display-name map
+    tables = {}
+    for key, v in data.items():
+        srv = key.split("-")[0]
+        for ti, t in enumerate(v.get("tables", [])):
+            ms = _name_multiset(t["html"], srv)
+            if not ms:
+                continue
+            disp = {}
+            for r in _table_rows_only(t["html"]):
+                if r and r[0]:
+                    k = _seal_key(r[0], srv) or ("th:" + _norm_seal(re.sub("ซีล", "", r[0])))
+                    disp.setdefault(k, r[0])
+            tables[(key, ti)] = (ms, disp)
+
+    res = defaultdict(dict)
+    for (key, ti), (ms, disp) in tables.items():
+        if not key.startswith("th-") or exact.get(key, {}).get(ti):
+            continue
+        found = []
+        for (okey, oti), (oms, odisp) in tables.items():
+            if okey.split("-")[0] == "th":
+                continue
+            extra_o = oms - ms  # Counter difference
+            extra_s = ms - oms
+            diff = sum(extra_o.values()) + sum(extra_s.values())
+            if 1 <= diff <= 2:
+                found.append(
+                    (
+                        okey,
+                        [odisp.get(k, k) for k in extra_o],
+                        [disp.get(k, k) for k in extra_s],
+                    )
+                )
+        if found:
+            res[key][ti] = sorted(
+                found, key=lambda x: (_SRV_ORDER.get(x[0].split("-")[0], 9), x[0])
+            )
+    return res
+
+
 def _twin_link(k, dates):
     """Link to a twin card, labelled "SRV DD.MM.YYYY" (falls back to the
     post id when the date is unknown)."""
@@ -319,7 +368,7 @@ def _mark_recurrence(html, srv, twin_iso, rec_index, twins=()):
         return (
             f'<td class="recur-cell"><span class="seal-recur" '
             f'title="ซีลนี้ยังมาแลกซ้ำใน {want_srv} {len(later)} แพท '
-            f'หลังจากแพทที่แมทกัน">{chips}</span></td>'
+            f'หลังจากแพทช์ TH นี้">{chips}</span></td>'
         )
 
     def add_cell(m):
@@ -369,7 +418,7 @@ def _mark_standing(html, srv, standing):
     return re.sub(r"(<tr><td>)(.*?)(</td>)", mark, html)
 
 
-def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index):
+def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index, near=None):
     """The injected body for a SINGLE table: standing badge + match link +
     star + the collapsible table. `total` is how many tables the post has, so
     the card can show "ตารางที่ 1/2" when split across cards."""
@@ -377,6 +426,22 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index):
     def note(tw):
         links = " ".join(_twin_link(x, dates) for x in tw)
         return f'<div class="seal-match"><span class="lbl">🔗 ลิสต์เดียวกับ:</span> {links}</div>'
+
+    def near_note(items):
+        parts = []
+        for okey, extra_o, extra_s in items:
+            osrv = okey.split("-")[0].upper()
+            bits = []
+            if extra_o:
+                bits.append(f"{osrv} มีเพิ่ม: {', '.join(extra_o)}")
+            if extra_s:
+                bits.append(f"TH มีเพิ่ม: {', '.join(extra_s)}")
+            parts.append(f"{_twin_link(okey, dates)} <span class=\"lbl\">({'; '.join(bits)})</span>")
+        return (
+            '<div class="seal-match"><span class="lbl">≈ ลิสต์คล้ายกับ:</span> '
+            + " ".join(parts)
+            + "</div>"
+        )
 
     out = []
     # meta row: standing badge (full text in tooltip) + cross-server match
@@ -388,6 +453,8 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index):
         )
     if tmatch.get(ti):
         meta.append(note(tmatch[ti]))
+    elif near and near.get(ti):
+        meta.append(near_note(near[ti]))
     if meta:
         out.append('<div class="seal-meta">' + "".join(meta) + "</div>")
     # actions row: star button + the table toggle
@@ -400,20 +467,24 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index):
     out.append('<details class="seal-detail"><summary>📋 ดูตาราง</summary>')
     thtml = _mark_standing(t["html"], srv, standing)
     # TH list matched to a NA/KR twin: flag each seal that recurs in a later
-    # NA/KR patch (cutoff = earliest twin date; the matched twins themselves
-    # are excluded so a cross-list match doesn't count as a recurrence).
-    if srv == "th" and tmatch.get(ti):
-        twins = set(tmatch[ti])
-        twin_isos = [_iso(dates.get(x)) for x in twins if dates.get(x)]
-        if twin_isos:
-            thtml = _mark_recurrence(thtml, srv, min(twin_isos), rec_index, twins)
+    # NA/KR patch. Cutoff = the TH card's OWN post date — a "recurrence" is
+    # only useful if it happens after the TH patch itself (the old cutoff was
+    # the twin's date, which flagged KR/NA patches that predate the TH post).
+    # The matched twins are still excluded so a cross-list match doesn't
+    # count as a recurrence.
+    near_keys = [x[0] for x in (near or {}).get(ti, [])]
+    if srv == "th" and (tmatch.get(ti) or near_keys):
+        twins = set(tmatch.get(ti) or []) | set(near_keys)
+        card_iso = _iso(dates.get(key))
+        if card_iso:
+            thtml = _mark_recurrence(thtml, srv, card_iso, rec_index, twins)
     out.append(f'<div class="seal-tbl-wrap">{thtml}</div>')
     out.append("</details>")
     out.append("</div>")
     return out
 
 
-def block_for(key, data, tmatch=None, dates=None, standing=None, sources="", rec_index=None):
+def block_for(key, data, tmatch=None, dates=None, standing=None, sources="", rec_index=None, near=None):
     """Injected content for a card. A post with ONE table fills its own card.
     A post with N tables is rendered as N cards: this returns the body for the
     first table, then closes the <article> and opens a fresh sibling
@@ -428,7 +499,9 @@ def block_for(key, data, tmatch=None, dates=None, standing=None, sources="", rec
     total = len(tables)
 
     inner = [f"<!--ST:{key}-->"]
-    inner += _one_table_body(key, 0, tables[0], srv, tmatch, dates, standing, total, rec_index)
+    inner += _one_table_body(
+        key, 0, tables[0], srv, tmatch, dates, standing, total, rec_index, near
+    )
     # further tables become sibling cards inside the same ST block
     for ti in range(1, total):
         inner.append("</article>")
@@ -438,7 +511,7 @@ def block_for(key, data, tmatch=None, dates=None, standing=None, sources="", rec
         if sources:
             inner.append(sources)
         inner += _one_table_body(
-            key, ti, tables[ti], srv, tmatch, dates, standing, total, rec_index
+            key, ti, tables[ti], srv, tmatch, dates, standing, total, rec_index, near
         )
     inner.append("<!--/ST-->")
     return "\n        " + "\n        ".join(inner)
@@ -629,6 +702,7 @@ def main():
 
     # 3) inject a block before each matching card's </article>
     matches = compute_matches(data)
+    near_matches = compute_near_matches(data, matches)
     standing = _standing_set(data)  # seals that never rotate out (NA/KR)
     # key -> card date (DD.MM.YYYY), read from each card's src-date span, so
     # twin links can be labelled by date rather than the opaque post id
@@ -655,7 +729,10 @@ def main():
         # multi-table post is split across several <article>s
         sm = re.search(r'<div class="sources">.*?</div>', m0.group(1), re.S)
         sources = sm.group(0) if sm else ""
-        blk = block_for(key, d, matches.get(key, {}), dates, standing, sources, rec_index)
+        blk = block_for(
+            key, d, matches.get(key, {}), dates, standing, sources, rec_index,
+            near_matches.get(key, {}),
+        )
         html = pat.sub(lambda m: m.group(1) + blk + "\n      " + m.group(2), html, count=1)  # noqa: B023 — sub is eager (count=1), blk not deferred
         injected += 1
     print(f"  cross-server matches: {len(matches)} cards link a twin")
