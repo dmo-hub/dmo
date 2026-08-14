@@ -120,6 +120,39 @@ def main() -> None:
     seal_servers = len({s["server"] for s in seals})
     total_activity = len(activity)
 
+    # --- Seal-patch highlight cards (auto: one per docs/seal-patch-th-*.html,
+    # newest first, dated from its th-<N>#0 entry in seal_data.json) ---------
+    import re as _re
+
+    seal_data_raw = json.loads(SEALS.read_text(encoding="utf-8"))
+    patch_cards = []
+    page_suffixes = sorted(
+        (
+            int(m.group(1))
+            for f in (PROJ / "docs").glob("seal-patch-th-*.html")
+            if (m := _re.search(r"th-(\d+)\.html$", f.name))
+        ),
+        reverse=True,
+    )
+    for n in page_suffixes:
+        entry = seal_data_raw.get(f"th-{n}#0") or seal_data_raw.get(f"th-{n}") or {}
+        date = entry.get("date", "")
+        n_seals = sum(
+            len(v.get("rows", []))
+            for k, v in seal_data_raw.items()
+            if _re.fullmatch(rf"th-{n}(#\d+)?", k)
+        )
+        patch_cards.append(f"""    <a href="seal-patch-th-{n}.html" class="feature">
+      <div class="icon">📜</div>
+      <h3>ซีลแพทช์ TH #{n}</h3>
+      <p>ซีลแพทช์ {date} — รายละเอียดตารางแลก + เครื่องคำนวณ</p>
+      <div class="feature-stats">
+        <div class="stat"><b>#{n}</b>แพทช์</div>
+        <div class="stat"><b>{n_seals}</b>ซีล</div>
+      </div>
+    </a>""")
+    seal_patch_cards = "\n\n".join(patch_cards)
+
     html = f"""<!DOCTYPE html>
 <html lang="th">
 <head>
@@ -264,15 +297,7 @@ def main() -> None:
       </div>
     </a>
 
-    <a href="seal-patch-th-88.html" class="feature">
-      <div class="icon">📜</div>
-      <h3>ซีลแพทช์ TH #88</h3>
-      <p>ซีลแพทช์ 11.06.2026 — รายละเอียดตารางแลก + เครื่องคำนวณ</p>
-      <div class="feature-stats">
-        <div class="stat"><b>#88</b>แพทช์</div>
-        <div class="stat"><b>TH</b>เซิร์ฟ</div>
-      </div>
-    </a>
+{seal_patch_cards}
   </div>
 
 </main>
