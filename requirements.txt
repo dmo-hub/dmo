@@ -1,11 +1,13 @@
 # Runtime dependencies for the dmo scrape→static-HTML pipeline.
 # Pinned floor versions; project is a script repo, not a package.
 #
-#   pip install -r requirements.txt
-#   playwright install chromium   # only needed for the CDP fetchers
+#   pip install -r requirements.txt        # the whole pipeline runs on this
+#   pip install -r requirements-dev.txt    # optional: CDP fetchers (dmowiki)
 #
-# requests  — every network scraper/fetcher (fetchers/, scanners/, enrichers/, builders/)
-# playwright — the Cloudflare/CDP fetchers only (fetch_dmowiki*, fetch_via_cdp, fetch_wiki_rank_u)
+# requests — every network scraper/fetcher (fetchers/, scanners/, enrichers/,
+# builders/). playwright lives in requirements-dev.txt because its greenlet
+# build needs MSVC on Windows and only the 3 Cloudflare/CDP fetchers use it —
+# keeping it here made a fresh `pip install -r requirements.txt` fail outright
+# on machines without build tools.
 
 requests>=2.31
-playwright>=1.40

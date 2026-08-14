@@ -1,0 +1,9 @@
+# Optional extras — only the Chrome-CDP fetchers need these
+# (fetch_dmowiki_digimon, fetch_dmowiki_icons, fetch_via_cdp, fetch_wiki_rank_u).
+# Requires MSVC build tools on Windows (greenlet builds from source).
+#
+#   pip install -r requirements-dev.txt
+#   playwright install chromium
+
+-r requirements.txt
+playwright>=1.40
