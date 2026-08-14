@@ -266,7 +266,7 @@ def main() -> None:
       <p>เครื่องประดับเซิร์ฟ TH — ที่มา สเตตัส และการอัพเกรด</p>
       <div class="feature-stats">
         <div class="stat"><b>7</b>ชนิด</div>
-        <div class="stat"><b>12</b>ชิ้น</div>
+        <div class="stat"><b>10</b>ชิ้น</div>
       </div>
     </a>
   </div>
