@@ -28,8 +28,6 @@ import sys
 import time
 from pathlib import Path
 
-from playwright.sync_api import sync_playwright
-
 sys.stdout.reconfigure(encoding="utf-8")
 
 PROJ = Path(__file__).resolve().parent.parent
@@ -154,6 +152,11 @@ def main() -> None:
     print(f"\n{len(missing)} digimon need dmowiki fetch:")
     for name, slug in missing:
         print(f"  - {name}  →  {slug}")
+
+    # lazy import: only the actual fetch needs playwright — helpers in this
+    # module (resolve_slug/safe_filename/...) are imported by builders that
+    # run in envs without it
+    from playwright.sync_api import sync_playwright
 
     with sync_playwright() as p:
         try:

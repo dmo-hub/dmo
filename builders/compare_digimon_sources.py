@@ -25,8 +25,9 @@ PROJ = Path(__file__).resolve().parent.parent
 SCAN = PROJ / "data" / "scan_result_digimon.json"
 CACHE = PROJ / "cache"
 
-# Re-use parsers we already wrote.
-sys.path.insert(0, str(PROJ))
+# Re-use parsers we already wrote (repo is split into stage subfolders).
+sys.path.insert(0, str(PROJ / "enrichers"))
+sys.path.insert(0, str(PROJ / "fetchers"))
 from enrich_digimon_attributes import (  # type: ignore
     parse_dmowiki,
 )
