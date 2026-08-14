@@ -36,6 +36,12 @@ MANUAL = {
     "ซาคุยามอน": "Sakuyamon",
     "ชัคโคมอน": "Shakkoumon",
     "มิราจกาโอมอน": "MirageGaogamon",
+    # --- th-92's CT group: silenced by group alignment because na-792's CT
+    #     group carries the extra Lilithmon X [Awaken] (NA spellings verified
+    #     against the na-792 table) ---
+    "เลดี้เดวีมอน": "LadyDevimon",
+    "เบิร์ดดรามอน": "Birdramon",
+    "เดดลี่แอ็กซ์มอน": "DeadlyAxemon",
     # --- TH names not in any rate-matched pair ---
     "กลาดิมอน": "Gladimon",
     "กาจิมอน": "Gazimon",
@@ -134,6 +140,37 @@ def main():
                 for a, b in zip(A, B, strict=True):
                     if a and b and a[0] and b[0]:
                         votes[th_name(a[0])][en_name(b[0])] += 1
+                continue
+            # near-pair: table sizes differ by a seal or two (th-92 is
+            # na-792 minus Lilithmon X), so whole-sequence alignment fails.
+            # The max column can't anchor rows either — NA posts print "—"
+            # there. Instead: gate on (given, tickets, stat) multiset overlap
+            # ≥80% (a stray coincidental tuple in an unrelated table once
+            # taught สกัลไนท์มอน -> Devimon, hence the gate), then align
+            # per-stat groups positionally — a group only votes when both
+            # sides have the same size AND the same (given, tickets)
+            # sequence, so the extra seal merely silences its own group.
+            if abs(len(A) - len(B)) <= 2 and min(len(A), len(B)) >= 10:
+                ka = Counter(tuple(x[1:4]) for x in A if len(x) >= 5)
+                kb = Counter(tuple(x[1:4]) for x in B if len(x) >= 5)
+                if sum((ka & kb).values()) / max(1, min(len(A), len(B))) < 0.8:
+                    continue
+                ga, gb = defaultdict(list), defaultdict(list)
+                for x in A:
+                    if len(x) >= 5:
+                        ga[x[3]].append(x)
+                for x in B:
+                    if len(x) >= 5:
+                        gb[x[3]].append(x)
+                for stat in ga:
+                    ra, rb = ga[stat], gb.get(stat, [])
+                    if len(ra) != len(rb):
+                        continue
+                    if [(x[1], x[2]) for x in ra] != [(x[1], x[2]) for x in rb]:
+                        continue
+                    for a, b in zip(ra, rb, strict=True):
+                        if a[0] and b[0]:
+                            votes[th_name(a[0])][en_name(b[0])] += 1
     boot = {th: c.most_common(1)[0][0] for th, c in votes.items()}
     out = {**boot, **MANUAL}  # MANUAL overrides bootstrap
     out.pop("", None)
