@@ -75,6 +75,10 @@ OVERRIDES: dict[tuple[str, str], str] = {
     # Omegamon Merciful Mode: introduced via deck "하얀 날개 : 용기의 우령도"
     # in o=780048 (2023-12-13). No dedicated 신규 디지몬 marker.
     ("event", "663"): "780048",
+    # Quantumon: KR post o=816756 HAS the standard marker but is not a
+    # Btype=Update post, so it never appears in kr_news_index / the release
+    # scan. The Btype=Update URL still serves it (verified live).
+    ("patch", "4148"): "816756",
 }
 
 
