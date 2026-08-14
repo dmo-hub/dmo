@@ -52,6 +52,7 @@ VOID = {
 IDEMPOTENT_BUILDS = [
     ["builders/build_th_seal_en.py"],
     ["builders/build_seal_tables.py"],
+    ["builders/build_seal_patch_html.py", "--all"],
     ["builders/build_digimon_html.py"],
     ["builders/build_nametag_html.py"],
     ["builders/build_search_index.py"],
@@ -159,6 +160,55 @@ def check_scripts():
     return bad
 
 
+def check_parsers():
+    """Frozen-fixture regression tests for the scrape parsers.
+
+    tools/fixtures/ holds small slices of REAL cached posts (one per parser).
+    They are frozen on purpose: a failure here means a parser edit changed
+    behaviour on markup that used to work — not that the live site changed.
+    """
+    fx = PROJ / "tools" / "fixtures"
+    if not fx.exists():
+        return ["__skip__: tools/fixtures missing — parser regression not checked"]
+    sys.path.insert(0, str(PROJ / "scanners"))
+    bad = []
+    try:
+        from scan_decks import parse_decks
+        from scan_digimon import parse_digimon
+        from scan_kr_digimon_releases import extract_releases
+        from scan_th_patch_digimon import NEW_DIGIMON_RE, html_to_text
+
+        cases = [
+            (
+                "na_deck_event_673.html",
+                lambda t: parse_decks(t)["new_decks"],
+                ["God’s Will", "Leader of the Awakened Four Holy Beasts"],
+            ),
+            ("na_digimon_patch_4171.html", parse_digimon, ["Apollomon"]),
+            ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
+            (
+                "th_digimon_slice.html",
+                lambda t: [
+                    m.group(1).strip() for m in [NEW_DIGIMON_RE.search(html_to_text(t))] if m
+                ],
+                ["ดูนัสมอน X"],
+            ),
+        ]
+        for name, fn, expect in cases:
+            p = fx / name
+            if not p.exists():
+                bad.append(f"fixture missing: {name}")
+                continue
+            got = fn(p.read_text(encoding="utf-8"))
+            if got != expect:
+                bad.append(f"{name}: expected {expect}, got {got}")
+    except Exception as e:  # noqa: BLE001
+        bad.append(f"parser import/run failed: {e}")
+    finally:
+        sys.path.pop(0)
+    return bad
+
+
 def check_idempotent():
     bad = []
     before = _git_state()
@@ -187,6 +237,7 @@ def main():
         ("JSON parses", check_json),
         ("HTML balanced", check_html),
         ("inline JS syntax", check_scripts),
+        ("parser fixtures", check_parsers),
     ]
     if not no_build:
         checks.append(("builders idempotent", check_idempotent))
