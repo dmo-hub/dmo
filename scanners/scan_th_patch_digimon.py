@@ -133,10 +133,30 @@ def process(post: dict) -> dict | None:
     return parse_post(post["slug"], post["url"], raw)
 
 
+def cached_posts_missing_from_index(known_slugs: set[str]) -> list[dict]:
+    """Posts whose detail page is cached but that the live category listing no
+    longer returns. Seen for real: vplay dropped slugs -83..-87 from its
+    listing (site-side renumber?), fetch_th_patch_index faithfully rebuilt the
+    index without them, and the enricher then stripped source_th from entries
+    whose TH match lived in those posts — while the cached HTML sat here, still
+    perfectly parseable. Cache is a first-class source, not just a fetch skip."""
+    extra = []
+    for f in CACHE.glob("th_view_*.html"):
+        slug = f.stem[len("th_view_") :]
+        if slug in known_slugs or slug == "system":
+            continue
+        extra.append({"slug": slug, "url": f"https://www.vplay.in.th/{slug}/", "type": "patch"})
+    return extra
+
+
 def main() -> None:
     index = json.loads(INDEX.read_text(encoding="utf-8"))
     # Scan both `patch` (main update notices) and `coming-soon` (previews)
     candidates = [p for p in index["posts"] if p["type"] in ("patch", "coming-soon")]
+    extra = cached_posts_missing_from_index({p["slug"] for p in index["posts"]})
+    if extra:
+        print(f"  +{len(extra)} cached post(s) missing from the live index — scanning those too")
+        candidates += extra
     print(f"Scanning {len(candidates)} TH posts for `ดิจิมอนใหม่` markers...")
 
     results: list[dict] = []
@@ -146,6 +166,18 @@ def main() -> None:
             r = fut.result()
             if r:
                 results.append(r)
+
+    # Dedup: the same post can be cached under two filenames (short alias like
+    # "p-87" plus the full permalink slug). Same date + same th_name = same
+    # post; keep the longest slug — that's the real permalink.
+    best: dict[tuple, dict] = {}
+    for r in results:
+        k = (r["date"], r["th_name"])
+        if k not in best or len(r["slug"]) > len(best[k]["slug"]):
+            best[k] = r
+    if len(best) != len(results):
+        print(f"  deduped {len(results) - len(best)} alias-cached post(s)")
+    results = list(best.values())
 
     results.sort(key=lambda x: x["date"] or "", reverse=True)
     out = {

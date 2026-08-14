@@ -51,10 +51,28 @@ TITLE_RE = re.compile(
 )
 DATE_TIME_RE = re.compile(r'datetime="(\d{4}-\d{2}-\d{2})')
 # Fallback: Thai date string like "21 พ.ค. 2569" (Buddhist year)
+# Full month names FIRST — the alternation is first-match, and post titles
+# use the full form ("23 กรกฎาคม 2569"); abbreviations only appear in other
+# post types. With only abbreviations here, every patch title parsed to None.
 THAI_DATE_RE = re.compile(
-    r"(\d{1,2})\s*(ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?)\s*(\d{4})"
+    r"(\d{1,2})\s*"
+    r"(มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม"
+    r"|ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?)"
+    r"\s*(\d{4})"
 )
 THAI_MONTH = {
+    "มกราคม": 1,
+    "กุมภาพันธ์": 2,
+    "มีนาคม": 3,
+    "เมษายน": 4,
+    "พฤษภาคม": 5,
+    "มิถุนายน": 6,
+    "กรกฎาคม": 7,
+    "สิงหาคม": 8,
+    "กันยายน": 9,
+    "ตุลาคม": 10,
+    "พฤศจิกายน": 11,
+    "ธันวาคม": 12,
     "ม.ค.": 1,
     "มค": 1,
     "ก.พ.": 2,

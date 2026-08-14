@@ -44,7 +44,12 @@ EN_TO_TH_KEYWORDS: list[tuple[str, str, str | None]] = [
     ("Alphamon Ouryuken [Extreme]", "อัลฟามอน โอริวเคน", "เอ็กซ์ตรีม"),
     ("Alphamon Ouryuken", "อัลฟามอน โอริวเคน", None),  # fallback for non-Extreme
     ("Last Evolution: Kizuna", "ลาสต์ อีโวลูชัน", None),
-    ("Lucemon: Satan Mode (Extreme)", "ซาตานโหมด", "เอ็กซ์ตรีม"),
+    # EN key is just "Satan Mode": the NA name's shape has flipped between
+    # "Lucemon: Satan Mode (Extreme)" and "[Extreme] Lucemon : Satan Mode"
+    # across rescans (colon spacing + bracket position), and no longer
+    # contiguous-substring-matches the full form. Only Lucemon carries
+    # "Satan Mode"; the เอ็กซ์ตรีม modifier keeps the TH Shin release out.
+    ("Satan Mode", "ซาตานโหมด", "เอ็กซ์ตรีม"),
     ("Omegamon – Merciful Mode", "เมอซิฟูล", None),
     ("Omegamon X Extreme", "โอเมกามอน X", "เอ็กซ์ตรีม"),
     # Single-name digimon (Thai transliterations)
