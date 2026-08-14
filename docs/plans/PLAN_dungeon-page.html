@@ -1,0 +1,123 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan — Dungeon Page (dmo)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { darkMode: 'class' };
+  function toggleTheme(){ document.documentElement.classList.toggle('dark'); }
+</script>
+<style>
+  .num{display:inline-flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;border-radius:.5rem;font-size:.8rem;font-weight:700}
+  code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85em}
+  .sev{font-size:.65rem;font-weight:700;letter-spacing:.05em;padding:.15rem .5rem;border-radius:9999px;text-transform:uppercase}
+  pre{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;line-height:1.5;overflow-x:auto}
+</style>
+
+<div class="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200">
+<div class="max-w-4xl mx-auto px-5 py-8">
+
+  <div class="flex items-start justify-between gap-4 mb-6">
+    <div>
+      <p class="text-xs font-semibold tracking-widest text-sky-600 dark:text-sky-400 uppercase">Plan Spec · Feature ใหม่</p>
+      <h1 class="text-2xl sm:text-3xl font-bold mt-1">Dungeon Page — <span class="text-sky-600 dark:text-sky-400">ดันเจี้ยน cross-server</span></h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">หน้าใหม่ <code>docs/dungeon.html</code> · pipeline เต็ม fetch→scan→build · scrape 3 เซิร์ฟ NA·KR·TH · 20.07.2026</p>
+    </div>
+    <button onclick="toggleTheme()" class="shrink-0 text-xs px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">◐ theme</button>
+  </div>
+
+  <!-- STATS -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-sky-500">4</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">ไฟล์ใหม่ (fetch+scan+build+page)</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-emerald-500">3</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">เซิร์ฟ NA · KR · TH</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-amber-500">2</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">ไฟล์แก้ (index hub + nav)</div>
+    </div>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3">
+      <div class="text-2xl font-bold text-slate-400">CDP</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">dmowiki ต้อง Chrome+CAPTCHA มือ</div>
+    </div>
+  </div>
+
+  <!-- GOAL -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300">G</span>Goal</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm leading-relaxed">
+      เพิ่มหน้า <code>docs/dungeon.html</code> ในเว็บ DMO Tracker — รวมข้อมูล<b>ดันเจี้ยน (Dungeon Raid / ดันบอส)</b>
+      ที่ scrape จาก<b>ทั้ง 3 เซิร์ฟ NA · KR · TH</b> ให้ดู<b>ชื่อดันเจี้ยน · boss · วัตถุดิบ/ของดรอป ต่อเซิร์ฟ</b> ในตารางเดียว
+      แบบ cross-server (pattern เดียวกับ <code>seals.html</code> / <code>lookup.html</code> ที่มีอยู่).
+      หน้าต้อง<b>data-driven ผ่าน pipeline มาตรฐานของ repo</b> (fetch→cache→scan→<code>data/*.json</code>→build)
+      ไม่ hardcode — เพื่อผ่าน <code>tools/validate.py</code> (idempotent + JSON check).
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-300">A</span>Architecture — ตาม pipeline เดิม</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm">
+      <pre>fetchers/fetch_dungeons_*.py  →  cache/*.html  →  scanners/scan_dungeons.py
+                                                          │
+                                                          ▼
+                                              data/dungeons.json  (source of truth)
+                                                          │
+                                                          ▼
+                              builders/build_dungeon_html.py  →  docs/dungeon.html
+                                                          │
+                                                          ▼
+                                    + link เข้า docs/index.html hub + nav ทุกหน้า</pre>
+      <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+        <b>data/dungeons.json shape</b> (cross-server, 1 entry/ดันเจี้ยน จับคู่ด้วยชื่อ/keyword เหมือน enrich kr/th):
+      </p>
+      <pre class="mt-2">{
+  "fetched_at": "YYYY-MM-DD",
+  "dungeons": [
+    { "id": "kaisers-lab",
+      "boss_en": "Kimeramon",
+      "na": { "name": "...", "mat": "...", "drop": "...", "src": "url" },
+      "kr": { "name": "...", "mat": "...", "drop": "...", "src": "url" },
+      "th": { "name": "...", "mat": "...", "drop": "...", "src": "url" } },
+    …
+  ]
+}</pre>
+    </div>
+  </section>
+
+  <!-- BUILD STEPS -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300">B</span>Build steps</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 divide-y divide-slate-200 dark:divide-slate-800 text-sm">
+      <div class="p-4"><b>1 · fetchers/</b> — scrape ดันเจี้ยนต่อเซิร์ฟ → cache/<br>
+        <span class="text-slate-500">NA = dmowiki.com (ผ่าน <code>fetch_via_cdp.py</code> เดิม — <b>ต้องเปิด Chrome debug port + solve CAPTCHA มือ</b>) · KR = board (pattern <code>fetch_kr_news_index</code>) · TH = vplay.in.th (pattern <code>fetch_th_patch_index</code>)</span></div>
+      <div class="p-4"><b>2 · scanners/scan_dungeons.py</b> — parse cache → จับคู่ 3 เซิร์ฟด้วยชื่อ boss/keyword → เขียน <code>data/dungeons.json</code> (offline, ไม่แตะเน็ต)</div>
+      <div class="p-4"><b>3 · builders/build_dungeon_html.py</b> — gen <code>docs/dungeon.html</code> เต็มจาก json (idempotent) — nav + hero + ตาราง cross-server ใช้ <code>css/site.css</code> เดิม + inline <code>&lt;style&gt;</code> เฉพาะหน้าแบบ nametag</div>
+      <div class="p-4"><b>4 · index hub + nav</b> — เพิ่ม feature card ใน <code>docs/index.html</code> + ลิงก์ <code>Dungeon</code> ใน nav ทุกหน้า (หรืออย่างน้อย index)</div>
+      <div class="p-4"><b>5 · validate</b> — รัน <code>python tools/validate.py</code> ให้ผ่าน (JSON ครบ + tag สมดุล + build ซ้ำไม่มี diff)</div>
+    </div>
+  </section>
+
+  <!-- OPEN QUESTIONS -->
+  <section class="mb-7">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300">?</span>ต้อง confirm ก่อนลุย</h2>
+    <div class="rounded-xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/30 p-4 text-sm space-y-2">
+      <p><span class="sev bg-amber-200 text-amber-900 dark:bg-amber-800 dark:text-amber-100">Q1</span> <b>URL หน้าดันเจี้ยนเป๊ะ ๆ ของแต่ละเซิร์ฟ</b> — repo มี base (dmowiki / vplay) แต่ยังไม่รู้ path หน้า "Dungeon" ของแต่ละที่. ต้องได้ URL จริง 3 ตัว.</p>
+      <p><span class="sev bg-amber-200 text-amber-900 dark:bg-amber-800 dark:text-amber-100">Q2</span> <b>dmowiki = manual step</b> — scrape สดอัตโนมัติเต็มไม่ได้ (Cloudflare + CAPTCHA). ยอมรับ workflow ที่ต้องเปิด Chrome debug + แก้ CAPTCHA มือตอน fetch NA ไหม?</p>
+      <p><span class="sev bg-amber-200 text-amber-900 dark:bg-amber-800 dark:text-amber-100">Q3</span> <b>fallback</b> — ถ้าเซิร์ฟไหนหาข้อมูลไม่ครบ ใช้ 6 ดันจาก <code>poster-studio/poster.json</code> (boss/mat/drop มีอยู่) เป็น seed คอลัมน์ TH ก่อนได้ไหม?</p>
+    </div>
+  </section>
+
+  <!-- OUT OF SCOPE -->
+  <section class="mb-4">
+    <h2 class="flex items-center gap-2 text-lg font-bold mb-2"><span class="num bg-slate-200 text-slate-600 dark:bg-slate-800 dark:text-slate-300">×</span>Out of scope</h2>
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-sm text-slate-600 dark:text-slate-400">
+      ราคา/service packages (นั่นเป็นงาน poster-studio) · รูป boss ลง docs/img (ยังไม่ตัดสิน — text/emoji ก่อน) · auto-commit/push (ทำเองหลัง review diff)
+    </div>
+  </section>
+
+</div>
+</div>
