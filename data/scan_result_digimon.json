@@ -69,8 +69,7 @@
         "Kuzuhamon MikoMode": {
           "families": [
             "Nightmare Soldiers",
-            "Unknown",
-            "TBD"
+            "Unknown"
           ],
           "rebalance_sources": [
             {
@@ -83,7 +82,10 @@
                 "TBD"
               ]
             }
-          ]
+          ],
+          "attribute": "Data",
+          "attribute_abbr": "DA",
+          "natural_attribute": "Pitch Black"
         }
       }
     },
@@ -131,8 +133,7 @@
       "attributes": {
         "Eosmon": {
           "families": [
-            "TBD",
-            "Unknown"
+            "TBD"
           ],
           "rebalance_sources": [
             {
@@ -144,7 +145,10 @@
                 "Unknown"
               ]
             }
-          ]
+          ],
+          "attribute": "Unknown",
+          "attribute_abbr": "UN",
+          "natural_attribute": "Thunder"
         }
       }
     },
@@ -160,8 +164,7 @@
       "attributes": {
         "BloomLordMon": {
           "families": [
-            "Unknown",
-            "TBD"
+            "Unknown"
           ],
           "rebalance_sources": [
             {
@@ -173,7 +176,10 @@
                 "TBD"
               ]
             }
-          ]
+          ],
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Wood"
         }
       },
       "image_th": "img/digimon/e705_th.png"
@@ -195,6 +201,14 @@
           "families": [
             "Dark Area"
           ]
+        },
+        "ZeedMillenniummon": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Dark Area"
+          ]
         }
       }
     },
@@ -207,13 +221,19 @@
       "image": "img/digimon/e731.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=801540&Btype=Update",
       "image_kr": "img/digimon/e731_kr.png",
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86/",
-      "date_th": "2026-04-23",
-      "_th_name": "อิมพีเรียลดรามอน พาราดินโหมด [อะเวคเค่น]",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/04/j22.png",
       "image_th": "img/digimon/e731_th.png",
       "attributes": {
         "Imperialdramon Paladin Mode (Awaken)": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Light",
+          "families": [
+            "Virus Busters",
+            "Deep Savers",
+            "Wind Guardians"
+          ]
+        },
+        "Imperialdramon PaladinMode": {
           "attribute": "Vaccine",
           "attribute_abbr": "VA",
           "natural_attribute": "Light",
@@ -234,10 +254,6 @@
       "image": "img/digimon/e743.png",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=804377&Btype=Update",
       "image_kr": "img/digimon/e743_kr.jpeg",
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-87/",
-      "date_th": "2026-05-21",
-      "_th_name": "[เอ็กซ์ตรีม] อัลฟามอน โอริวเคน",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/05/7.png",
       "image_th": "img/digimon/e743_th.png",
       "attributes": {
         "Alphamon Ouryuken [Extreme]": {
@@ -260,6 +276,16 @@
       "image_kr": "img/digimon/e759_kr.png",
       "attributes": {
         "Lucemon: Satan Mode (Extreme)": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Dark Area",
+            "Nightmare Soldiers",
+            "Virus Busters"
+          ]
+        },
+        "[Extreme] Lucemon : Satan Mode": {
           "attribute": "Virus",
           "attribute_abbr": "VI",
           "natural_attribute": "Pitch Black",
@@ -325,8 +351,22 @@
             "Wind Guardians",
             "Nature Spirits"
           ]
+        },
+        "Holydramon": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Wind",
+          "families": [
+            "Dragon's Roar",
+            "Wind Guardians",
+            "Nature Spirits"
+          ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-91/",
+      "date_th": "2026-07-23",
+      "_th_name": "ก็อดดรามอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/07/6.png"
     },
     "784": {
       "date": "10-01-2025",
@@ -364,6 +404,15 @@
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811713&Btype=Update",
       "attributes": {
         "Lilithmon X (Awaken)": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Dark Area",
+            "Nightmare Soldiers"
+          ]
+        },
+        "Awakened Lilithmon (Resistance)": {
           "attribute": "Virus",
           "attribute_abbr": "VI",
           "natural_attribute": "Pitch Black",
@@ -413,6 +462,24 @@
             "Unknown",
             "TBD"
           ]
+        },
+        "Negamon": {
+          "attribute": "Unknown",
+          "attribute_abbr": "UN",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Unknown",
+            "TBD"
+          ]
+        },
+        "Negamon (Evolved Form)": {
+          "attribute": "Unknown",
+          "attribute_abbr": "UN",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Unknown",
+            "TBD"
+          ]
         }
       },
       "image": "img/digimon/e810.jpeg"
@@ -458,6 +525,16 @@
             "Virus Busters",
             "Nature Spirits"
           ]
+        },
+        "(Extreme) Omegamon(Resistance)": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Light",
+          "families": [
+            "Metal Empire",
+            "Virus Busters",
+            "Nature Spirits"
+          ]
         }
       }
     },
@@ -487,7 +564,21 @@
       "source": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4171",
       "digimon": [
         "Apollomon"
-      ]
+      ],
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=818643&Btype=Update",
+      "image_kr": "img/digimon/p4171_kr.png",
+      "attributes": {
+        "Apollomon": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Fire",
+          "families": [
+            "Dragon's Roar",
+            "Nature Spirits",
+            "Virus Busters"
+          ]
+        }
+      }
     }
   }
 }

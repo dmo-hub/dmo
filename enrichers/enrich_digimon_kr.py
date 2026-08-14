@@ -66,6 +66,7 @@ EN_TO_KR_KEYWORDS: list[tuple[str, str]] = [
     ("Abbadomon", "아바도몬"),
     ("Omegamon", "오메가몬"),
     ("Quantumon", "퀀텀몬"),
+    ("Apollomon", "아폴로몬"),
 ]
 
 # Digimon released only via deck/event posts (no `신규 디지몬` marker exists).
