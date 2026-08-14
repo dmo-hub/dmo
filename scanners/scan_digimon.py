@@ -2,6 +2,12 @@
 
 Reads only from cache/ (no network). Run scan_decks.py first to populate cache.
 Output: scan_result_digimon.json with {kind: {idx: {date, source, digimon: [name, ...]}}}.
+
+MERGE, never overwrite: existing entries in scan_result_digimon.json are left
+completely untouched — they carry hand-curated fields (image, image_th,
+image_kr, source_kr, source_th, attributes, even edited digimon lists like
+the Rank-U filter on e810). Only posts NOT yet in the file are added, so the
+scan is safe to re-run any time.
 """
 
 import html
@@ -80,9 +86,17 @@ def parse_date(raw_html: str) -> str | None:
 
 def main() -> None:
     result: dict[str, dict[str, dict]] = {"event": {}, "patch": {}}
+    if OUT.exists():
+        result = json.loads(OUT.read_text(encoding="utf-8"))
+        result.setdefault("event", {})
+        result.setdefault("patch", {})
+
+    added = 0
     for f in sorted(CACHE.glob("*.html")):
         kind, _, idx = f.stem.partition("_")
-        if kind not in result:
+        if kind not in ("event", "patch"):
+            continue
+        if idx in result[kind]:  # curated entry — never touch
             continue
         raw = f.read_text(encoding="utf-8")
         digimon = parse_digimon(raw)
@@ -93,14 +107,16 @@ def main() -> None:
             "source": URL_TEMPLATE[kind].format(idx=idx),
             "digimon": digimon,
         }
+        added += 1
+        print(f"  NEW {kind} {idx} ({result[kind][idx]['date']}): {', '.join(digimon)}")
 
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
-    total = sum(len(p["digimon"]) for k in result for p in result[k].values())
-    posts = sum(len(result[k]) for k in result)
-    print(f"Wrote {OUT.name}: {total} digimon across {posts} posts")
-    for k in result:
-        for idx, p in result[k].items():
-            print(f"  {k} {idx} ({p['date']}): {', '.join(p['digimon'])}")
+    total = sum(len(p["digimon"]) for k in ("event", "patch") for p in result[k].values())
+    posts = sum(len(result[k]) for k in ("event", "patch"))
+    print(
+        f"Wrote {OUT.name}: {total} digimon across {posts} posts "
+        f"({added} new; existing entries untouched)"
+    )
 
 
 if __name__ == "__main__":
