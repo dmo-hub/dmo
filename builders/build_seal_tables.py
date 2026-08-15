@@ -105,9 +105,165 @@ CSS = """
   .seal-star .ic { font-size: 15px; line-height: 1; }
   .seal-star:hover { border-color: var(--amber); color: var(--amber); }
   .seal-star.on { background: var(--amber); border-color: var(--amber); color: var(--on-primary); }
+  /* in-page seal search: filters the timeline down to cards offering the seal */
+  .seal-search { display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    background: var(--canvas); border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg); padding: 11px 15px; margin: 0 0 14px; }
+  .seal-search .ic { font-size: 15px; line-height: 1; color: var(--muted-soft); }
+  .seal-search input { flex: 1 1 240px; border: none; outline: none;
+    background: transparent; font-family: inherit; font-size: 15px; color: var(--ink); }
+  .seal-search input::placeholder { color: var(--muted-soft); }
+  .seal-search .ss-clear { appearance: none; cursor: pointer; font: inherit;
+    font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 9999px;
+    border: 1px solid var(--hairline); background: var(--surface-soft);
+    color: var(--muted); }
+  .seal-search .ss-clear:hover { border-color: var(--coral); color: var(--coral); }
+  .seal-search .ss-count { font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .seal-search .ss-count b { color: var(--ink); font-weight: 600; }
+  .seal-search .ss-else { color: var(--muted-soft); }
+  .seal-search[hidden] { display: none; }
+  /* rows that matched the query, and the badge counting them on a card.
+     --coral on --coral-soft only reaches 2.3:1 in dark, so the hit row keeps
+     body text and marks itself with the tinted fill plus a left rule. */
+  table.seal-tbl tr.ss-hit td { background: var(--coral-soft); color: var(--ink); }
+  table.seal-tbl tr.ss-hit td:first-child { font-weight: 600;
+    box-shadow: inset 3px 0 0 var(--coral); }
+  /* 11.5px bold misses WCAG's large-text exemption, so the text runs at --ink
+     and the coral stays on the border where contrast doesn't gate legibility */
+  .ss-badge { font-size: 11.5px; font-weight: 600; color: var(--ink);
+    border: 1px solid var(--coral); border-radius: 9999px; padding: 3px 10px;
+    background: var(--surface-soft); }
+  /* search hides via a class so the server tabs keep owning .style.display */
+  .tl-entry.ss-hidden { display: none !important; }
 """
 
 CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
+SS_START, SS_END = "<!--SEAL-SEARCH-->", "<!--/SEAL-SEARCH-->"
+SSJS_START, SSJS_END = "<!--SEAL-SEARCH-JS-->", "<!--/SEAL-SEARCH-JS-->"
+
+SEARCH_BOX = """
+  <div class="seal-search">
+    <span class="ic">🔎</span>
+    <input id="seal-q" type="search" autocomplete="off"
+           placeholder="ค้นชื่อซีล — Scorpiomon · สกอเปี้ยนมอน · Omegamon…">
+    <span class="ss-count" id="seal-q-count" hidden></span>
+    <button class="ss-clear" id="seal-q-clear" type="button" hidden>ล้าง</button>
+  </div>
+"""
+
+# TH tables list Thai names while NA/KR list English, so a query has to be
+# matched against both spellings of every row. TH_EN (data/th_seal_en.json) is
+# inlined rather than fetched so search works with the page's own markup.
+SEARCH_JS = """
+<script>
+// In-page seal search: narrows the timeline to cards whose table offers the
+// seal, highlights the matching rows, and opens those tables. Composes with
+// the server tabs — the tab filter stays authoritative about which server
+// shows, this only hides cards further.
+(() => {
+  const TH_EN = __TH_EN__;
+  const input = document.getElementById('seal-q');
+  const countEl = document.getElementById('seal-q-count');
+  const clearBtn = document.getElementById('seal-q-clear');
+  const cards = [...document.querySelectorAll('.tl-entry')];
+  if (!input || !cards.length) return;
+
+  const norm = s => (s || '').toLowerCase()
+    .replace(/\\[[^\\]]*\\]/g, ' ')      // drop [Event]/[ 지급용 ] tags
+    .replace(/\\bseal\\b|ซีล/g, ' ')
+    .replace(/[^a-z0-9\\u0e00-\\u0e7f\\uac00-\\ud7af]+/g, ' ')
+    .trim();
+
+  // Each row is searchable under its printed name AND, for TH rows, the
+  // English name it maps to — so "Gerbemon" finds the TH card too.
+  const rows = new Map();               // card -> [{tr, hay}]
+  for (const card of cards) {
+    const list = [...card.querySelectorAll('table.seal-tbl tr')].slice(1).map(tr => {
+      const raw = (tr.cells[0] ? tr.cells[0].textContent : '').trim();
+      const base = norm(raw);
+      const en = TH_EN[raw.replace(/\\s*ซีล.*$/, '').trim()];
+      return { tr, hay: en ? base + ' ' + norm(en) : base };
+    });
+    rows.set(card, list);
+  }
+
+  function clearMarks() {
+    for (const list of rows.values())
+      for (const r of list) r.tr.classList.remove('ss-hit');
+    document.querySelectorAll('.ss-badge').forEach(b => b.remove());
+  }
+
+  // The search owns .ss-hidden; the server tabs own .style.display. Keeping
+  // them on separate channels means neither filter clobbers the other.
+  function apply(q) {
+    const needle = norm(q);
+    clearMarks();
+    if (!needle) {
+      cards.forEach(c => c.classList.remove('ss-hidden'));
+      countEl.hidden = clearBtn.hidden = true;
+      window.dispatchEvent(new CustomEvent('seal-search'));
+      return;
+    }
+    let hitCards = 0, hitRows = 0;
+    const otherSrv = new Map();         // matches sitting under an inactive tab
+    for (const card of cards) {
+      const hits = rows.get(card).filter(r => r.hay.includes(needle));
+      card.classList.toggle('ss-hidden', !hits.length);
+      if (!hits.length) continue;
+      hits.forEach(h => h.tr.classList.add('ss-hit'));
+      const det = card.querySelector('.seal-detail');
+      if (det) det.open = true;
+      const bar = card.querySelector('.seal-starbar');
+      if (bar) {
+        const b = document.createElement('span');
+        b.className = 'ss-badge';
+        b.textContent = `พบ ${hits.length} รายการ`;
+        bar.appendChild(b);
+      }
+      // The server tab hides cards with .style.display, so a match on another
+      // server is real but off-screen — counting it in the headline number
+      // would contradict what the timeline shows.
+      if (card.style.display === 'none') {
+        const s = card.dataset.server;
+        otherSrv.set(s, (otherSrv.get(s) || 0) + hits.length);
+      } else {
+        hitCards++; hitRows += hits.length;
+      }
+    }
+    const elsewhere = [...otherSrv].map(([s, n]) => `${s} ${n}`).join(' · ');
+    if (hitCards) {
+      countEl.innerHTML = `<b>${hitCards}</b> โพสต์ · <b>${hitRows}</b> รายการ`
+        + (elsewhere ? ` <span class="ss-else">(อีก ${elsewhere} — สลับแท็บ)</span>` : '');
+    } else {
+      countEl.innerHTML = elsewhere
+        ? `ไม่พบในแท็บนี้ <span class="ss-else">(มีที่ ${elsewhere} — สลับแท็บ)</span>`
+        : 'ไม่พบซีลนี้';
+    }
+    countEl.hidden = clearBtn.hidden = false;
+    window.dispatchEvent(new CustomEvent('seal-search'));
+  }
+
+  let t;
+  input.addEventListener('input', () => {
+    clearTimeout(t);
+    t = setTimeout(() => apply(input.value), 120);
+  });
+  // Switching servers changes which matches are on screen, so the tally has to
+  // be recomputed — otherwise it keeps describing the previous tab.
+  document.querySelectorAll('.server-tab').forEach(tab =>
+    tab.addEventListener('click', () => {
+      if (input.value.trim()) setTimeout(() => apply(input.value), 0);
+    }));
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { input.value = ''; apply(''); }
+  });
+  clearBtn.addEventListener('click', () => { input.value = ''; apply(''); input.focus(); });
+
+  const q = new URLSearchParams(location.search).get('q');
+  if (q) { input.value = q; apply(q); }
+})();
+</script>
+"""
 # Strip the leading newline+indent AND the trailing newline+indent we add
 # around the block on inject (step 3), so repeated rebuilds don't accumulate
 # blank lines before each card's </article> (keeps the build idempotent).
@@ -647,6 +803,30 @@ _MONTH_HDR = re.compile(
 )
 
 
+def inject_search(html):
+    """Put the search box above the server tabs and its script before </body>,
+    both marker-wrapped so a rebuild replaces them instead of stacking copies."""
+    box = f"{SS_START}{SEARCH_BOX}  {SS_END}"
+    if SS_START in html:
+        # lambda replacement: the blocks carry regex-escape sequences (\u in the
+        # inlined TH_EN JSON, \\b in the JS) that re.sub would try to expand
+        html = re.sub(
+            re.escape(SS_START) + r".*?" + re.escape(SS_END), lambda _: box, html, flags=re.S
+        )
+    else:
+        html = html.replace('  <div class="server-tabs"', box + '\n  <div class="server-tabs"', 1)
+
+    js = SEARCH_JS.replace("__TH_EN__", json.dumps(TH_EN, ensure_ascii=False))
+    block = f"{SSJS_START}{js}{SSJS_END}"
+    if SSJS_START in html:
+        html = re.sub(
+            re.escape(SSJS_START) + r".*?" + re.escape(SSJS_END), lambda _: block, html, flags=re.S
+        )
+    else:
+        html = html.replace("</body>", block + "\n</body>", 1)
+    return html
+
+
 def ensure_cards(html, data):
     """Create a stub <article> for every extracted post that has tables but no
     card yet — the follow-on injection pass then fills its ST block. Cards used
@@ -737,6 +917,9 @@ def main():
         )
     else:
         html = html.replace("</style>", css_block + "\n</style>", 1)
+
+    # 2b) in-page seal search (box above the tabs + its script)
+    html = inject_search(html)
 
     # 3) inject a block before each matching card's </article>
     matches = compute_matches(data)
