@@ -113,10 +113,13 @@ CSS = """
   .seal-search input { flex: 1 1 240px; border: none; outline: none;
     background: transparent; font-family: inherit; font-size: 15px; color: var(--ink); }
   .seal-search input::placeholder { color: var(--muted-soft); }
-  .seal-search .ss-clear { appearance: none; cursor: pointer; font: inherit;
-    font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 9999px;
-    border: 1px solid var(--hairline); background: var(--surface-soft);
-    color: var(--muted); }
+  .seal-search .ss-go, .seal-search .ss-clear { appearance: none; cursor: pointer;
+    font: inherit; font-size: 12px; font-weight: 600; padding: 6px 15px;
+    border-radius: 9999px; border: 1px solid var(--hairline); }
+  .seal-search .ss-go { background: var(--coral); border-color: var(--coral);
+    color: var(--on-primary); }
+  .seal-search .ss-go:hover { background: var(--coral-active); border-color: var(--coral-active); }
+  .seal-search .ss-clear { background: var(--surface-soft); color: var(--ink); }
   .seal-search .ss-clear:hover { border-color: var(--coral); color: var(--coral); }
   .seal-search .ss-count { font-size: 12px; color: var(--muted); white-space: nowrap; }
   .seal-search .ss-count b { color: var(--ink); font-weight: 600; }
@@ -142,13 +145,14 @@ SS_START, SS_END = "<!--SEAL-SEARCH-->", "<!--/SEAL-SEARCH-->"
 SSJS_START, SSJS_END = "<!--SEAL-SEARCH-JS-->", "<!--/SEAL-SEARCH-JS-->"
 
 SEARCH_BOX = """
-  <div class="seal-search">
+  <form class="seal-search" id="seal-search" role="search">
     <span class="ic">🔎</span>
     <input id="seal-q" type="search" autocomplete="off"
            placeholder="ค้นชื่อซีล — Scorpiomon · สกอเปี้ยนมอน · Omegamon…">
     <span class="ss-count" id="seal-q-count" hidden></span>
+    <button class="ss-go" id="seal-q-go" type="submit">ค้นหา</button>
     <button class="ss-clear" id="seal-q-clear" type="button" hidden>ล้าง</button>
-  </div>
+  </form>
 """
 
 # TH tables list Thai names while NA/KR list English, so a query has to be
@@ -162,9 +166,11 @@ SEARCH_JS = """
 // shows, this only hides cards further.
 (() => {
   const TH_EN = __TH_EN__;
+  const form = document.getElementById('seal-search');
   const input = document.getElementById('seal-q');
   const countEl = document.getElementById('seal-q-count');
   const clearBtn = document.getElementById('seal-q-clear');
+  const goBtn = document.getElementById('seal-q-go');
   const cards = [...document.querySelectorAll('.tl-entry')];
   if (!input || !cards.length) return;
 
@@ -244,6 +250,12 @@ SEARCH_JS = """
   }
 
   let t;
+  const run = () => { clearTimeout(t); apply(input.value); };
+
+  // The button and Enter search at once; typing still narrows as you go, so
+  // the button is a confirmation rather than the only way in.
+  form.addEventListener('submit', e => { e.preventDefault(); run(); input.blur(); });
+  goBtn.addEventListener('click', e => { e.preventDefault(); run(); input.blur(); });
   input.addEventListener('input', () => {
     clearTimeout(t);
     t = setTimeout(() => apply(input.value), 120);

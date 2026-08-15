@@ -131,10 +131,13 @@
   .seal-search input { flex: 1 1 240px; border: none; outline: none;
     background: transparent; font-family: inherit; font-size: 15px; color: var(--ink); }
   .seal-search input::placeholder { color: var(--muted-soft); }
-  .seal-search .ss-clear { appearance: none; cursor: pointer; font: inherit;
-    font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 9999px;
-    border: 1px solid var(--hairline); background: var(--surface-soft);
-    color: var(--muted); }
+  .seal-search .ss-go, .seal-search .ss-clear { appearance: none; cursor: pointer;
+    font: inherit; font-size: 12px; font-weight: 600; padding: 6px 15px;
+    border-radius: 9999px; border: 1px solid var(--hairline); }
+  .seal-search .ss-go { background: var(--coral); border-color: var(--coral);
+    color: var(--on-primary); }
+  .seal-search .ss-go:hover { background: var(--coral-active); border-color: var(--coral-active); }
+  .seal-search .ss-clear { background: var(--surface-soft); color: var(--ink); }
   .seal-search .ss-clear:hover { border-color: var(--coral); color: var(--coral); }
   .seal-search .ss-count { font-size: 12px; color: var(--muted); white-space: nowrap; }
   .seal-search .ss-count b { color: var(--ink); font-weight: 600; }
@@ -384,13 +387,14 @@
   </div>
 
 <!--SEAL-SEARCH-->
-  <div class="seal-search">
+  <form class="seal-search" id="seal-search" role="search">
     <span class="ic">🔎</span>
     <input id="seal-q" type="search" autocomplete="off"
            placeholder="ค้นชื่อซีล — Scorpiomon · สกอเปี้ยนมอน · Omegamon…">
     <span class="ss-count" id="seal-q-count" hidden></span>
+    <button class="ss-go" id="seal-q-go" type="submit">ค้นหา</button>
     <button class="ss-clear" id="seal-q-clear" type="button" hidden>ล้าง</button>
-  </div>
+  </form>
   <!--/SEAL-SEARCH-->
   <div class="server-tabs" role="tablist" aria-label="เลือกเซิร์ฟเวอร์">
     <button class="server-tab tab-na is-active" data-server="NA" role="tab" aria-selected="true">NA · gameking <span class="tab-count">16</span></button>
@@ -2933,9 +2937,11 @@
 // shows, this only hides cards further.
 (() => {
   const TH_EN = {"กาบีมอน": "Gerbemon", "เมก้าดรามอน": "Megadramon", "สกัลไนท์มอน": "SkullKnightmon", "โอเมกามอน อัลเทอร์-B": "Omegamon Alter-B", "สกอเปี้ยนมอน": "Anomalocarimon", "บาริสตามอน": "Baristamon", "โอคุวามอน": "Okuwamon", "โดคุกูมอน": "SpiderMon", "โดรูรูมอน": "Dorulumon", "อีออสมอน(ร่างสมบูรณ์)": "Eosmon_LV5", "เทสลามอน เจลลีมอน": "TeslaJellymon", "เมทัลเอเทมอน": "MetalEtemon", "กราวด์ดรามอน": "Groundramon", "เวนดีมอน": "Wendimon", "ซิมบาเรอังโกรามอน": "Symbareangoramon", "โอเมกามอน สวอร์ธ D": "Omegamon Zwart D", "นูเมมอน": "Wormmon", "โอดิเนมอน (อะเวคเค่น)": "Ordinemon", "อิมพีเรียลดรามอน พาราดินโหมด": "Imperialdramon Paladin Mode", "เชาท์มอน": "Shoutmon", "มูนมิลเลนเนียมมอน": "MoonMillenniummon", "ซี๊ดมิลเลนเนียมมอน": "ZeedMillenniummon", "เกรย์มอน(C)": "Greymon (C)", "ดาร์คเนสบากรามอน": "Darkness Bagramon", "อีออสมอน": "Eosmon", "เมลเบิร์ดดรามอน": "MailBirdramon", "ลูเจมอน ฟอลดาว์นโหมด": "Lucemon: Falldown Mode", "ดุ๊คมอน คริมสันโหมด (อะเวคเค่น)": "Gallantmon (Crimson Mode)", "ดิอาบิตมอน": "DearBeatmon", "ดุ๊คมอน (ชิน)": "Gallantmon", "บลูมลอร์ดมอน": "Bloomlordmon", "แอมพิมอน": "Amphimon", "ซาคุยามอน(อะเวคเค่น)": "Sakuyamon", "ครอสอัพ เมอร์วามอน": "Crossup Mervamon", "เซนต์การ์โกมอน (อะเวคเค่น)": "SaintGalgomon", "อามาเกมอน": "Armagemon", "กรุสแกมมามอน": "GulusGammamon", "ซูซาโนะโอมอน(ชิน)": "Susanoomon", "อาร์มเมอร์": "Armor", "คลื่นความร้อน": "Heat Wave", "ลาลามอน": "Lalamon", "แบล็คกาบูมอน": "Gabumon(Black)", "โกมามอน": "Gomamon", "อากูมอน (S)": "Agumon(S)", "คาเมมอน": "Kamemon", "อาร์มาดิมอน": "Armadimon", "โอกามอน": "Ogremon", "แองเจมอน": "Angemon", "ฟลายมอน": "Flymon", "โทเกมอน": "Togemon", "คาบุเทริมอน": "Kabuterimon", "เซนทารูมอน": "Centalmon", "โกรวมอน": "Growmon", "จีโอเกรย์มอน": "GeoGreymon", "อังคิโลมอน": "Ankylomon", "วารุมอนซาเอมอน": "Warumonzaemon", "บาโอแฮคมอน": "BaoHackmon", "มารีนเดวีมอน": "Marin Devimon", "แวมเดมอน": "Myotismon", "โอโรจิมอน": "Orochimon", "ไรซ์เกรย์มอน": "RizeGreymon", "วาร์การูรูมอน": "WereGarurumon", "แอนทิรามอน": "Antylamon", "เรฟมอน": "Ravemon", "ไซน์เกรย์มอน": "ShineGreymon", "ซาคุยามอน": "Sakuyamon", "คุสุฮะมอน": "Kuzuhamon", "เชาท์มอน X": "ShoutmonX2", "โอเมกามอน อัลเทอร์-S": "Omegamon Alter-S", "อาโพคาริมอน": "Apocalymon", "แกมมามอน": "Gammamon", "อังโกรามอน": "Angoramon", "อามาดิมอน": "Armadimon", "ปิโยมอน": "Piyomon", "พาตามอน": "Patamon", "เคาส์แกมมามอน": "KausGammamon", "วีซึนแกมมามอน": "WezenGammamon", "เบเทลแกมมามอน": "BetelGammamon", "เซนทารุมอน": "Centalmon", "บาอัลมอน": "Baalmon", "บาสเตมอน": "Bastemon", "คาโนเวสมอน": "Canoweissmon", "ธันเดอร์บอลมอน": "Thunderballmon", "แบล็คเทลมอน": "BlackGatomon", "ซิริอุสมอน": "Siriusmon", "เครเนียมมอน": "Craniamon", "เฮราเคิลคาบุเทริมอน": "HerculesKabuterimon", "อัลฟอร์ซ วีดรามอน": "Ulforce V-dramon", "คุสุฮะมอน มิโกะ โหมด": "Kuzuhamon Miko Mode", "โทเกมอน X": "Togemon X", "ดูนัสมอน X": "Dynasmon X", "สเลปมอน X": "Sleipmon X", "เอ็กซามอน X": "Examon X", "เมทัลเกร์ยมอน X": "MetalGreymon X", "ดูฟต์มอน X": "Duftmon X", "ลอร์ดไนท์มอน X": "LordKnightmon X", "เคออสดรามอน X": "Chaosdramon X", "ดุ๊คมอน X": "Gallantmon X", "บาร์บามอน X": "Barbamon X", "วาร์การูรูมอน X": "WereGarurumon X", "เบลเซบุมอน X": "Beelzebumon X", "ลีลีมอน X": "Lillymon X", "โรสมอน X": "Rosemon X", "ลิลิธมอน X": "Lilithmon X", "เดมอน X": "Demon X", "เกรย์มอน X": "Greymon X", "วอร์เกรย์มอน X": "War Greymon X", "อัลฟอร์ซ วีดรามอน X": "Ulforce V-dramon X", "ไกโอมอน": "Gaioumon", "เมดิวอล ดุ๊คมอน": "Medieval Gallantmon", "เจสมอน X": "Jesmon X", "กันคูมอน X": "Gankoomon X", "การูรูมอน X": "Garurumon X", "เมทัลการูรูมอน X": "MetalGarurumon X", "แมคนามอน X": "Magnamon X", "มิเนอร์วามอน X": "Minervamon X", "เครเนียมมอน X": "Craniummon X", "ไทเกอร์เวสปามอน": "TigerVespamon", "เมกิดรามอน X": "Megidramon X", "ชาโคมอน": "Syakomon", "พาวน์เชสมอนแบล็ค": "PawnChessmon B", "พาวน์เชสมอนไวท์": "PawnChessmon W", "พิโคเดวีมอน": "PicoDevimon", "พัลมอน": "Palmon", "ฟอลโคมอน": "Falcomon", "เพ็กมอน": "Pukamon", "ซันฟลาวมอน": "SunFlowmon", "เอ็กซ์วีมอน": "ExV-mon", "วิชมอน": "Witchmon", "คอร์ดดรามอน กรีน": "Coredramon(Green)", "คอร์ดรามอน บลู": "Coredramon(Blue)", "วีดรามอน": "Veedramon", "เทลมอน": "Gatomon", "ซังกุลูมอน": "Sangloupmon", "เลโอมอน": "Leomon", "อาโลมอน": "Allomon", "ไนท์มอน": "Knightmon", "ชินดูรามอน": "Sinduramon", "เอเทมอน": "Etemon", "กาโอกามอน": "Gaogamon", "ฮากูรูมอน": "Hagurumon", "เมทัลเกรย์มอน": "MetalGreymon", "ไลลามอน": "Lilamon", "ชิลฟีมอน": "Silphymon", "แฟนโทมอน": "Phantomon", "สเลปมอน": "Sleipmon", "วอร์เกรย์มอน": "WarGreymon", "พิน็อคคิมอน": "Puppetmon", "เดธ X มอน": "Death-X-mon", "โอเมกามอน": "Omegamon", "ชาโดว์เซราฟีมอน": "ShadowSeraphimon", "กาบูมอน": "Gabumon", "เท็นโตมอน": "Tentomon", "โดรุมอน": "Dorumon", "ทิโรมอน": "Tylomon", "เดวีมอน": "Devimon", "โวลเคมอน": "Volcamon", "อินเซกิมอน": "Meteormon", "นาโนมอน": "Datamon", "ชัคโคมอน": "Shakkoumon", "ซิลฟีมอน": "Silphymon", "บรอสซามอน": "Blossomon", "โฮเอมอน": "Whamon", "มิราจกาโอมอน": "MirageGaogamon", "ดูนัสมอน": "Dynasmon", "เบเรียลแวมเดมอน": "Belial Vamdemon", "อิมพีเรียลดรามอน": "ImperialDramon", "เลดี้เดวีมอน": "LadyDevimon", "เบิร์ดดรามอน": "Birdramon", "เดดลี่แอ็กซ์มอน": "DeadlyAxemon", "กลาดิมอน": "Gladimon", "กาจิมอน": "Gazimon", "กิลมอน": "Guilmon", "คอร์ดรามอน(กรีน)": "Coredramon(Green)", "คาออสมอน": "Chaosmon", "คิวบีมอน": "Kyubimon", "คิเมรามอน": "Kimeramon", "คูลูมอน": "Culumon", "จินลองมอน": "Huanglongmon", "จูเรย์มอน": "Cherrymon", "ดราคุมอน": "Dracmon", "ดาร์คทีราโนมอน": "DarkTyrannomon", "ดุ๊คมอน คริมสันโหมด": "Gallantmon Crimson Mode", "ทอยอากูมอน": "ToyAgumon", "ปรินซ์มาเมมอน": "PrinceMamemon", "ปิเอมอน": "Piedmon", "พล็อตมอน": "Salamon", "พาราไซมอน": "Parasimon", "ฟานลองมอน": "Fanglongmon", "มัชชูมอน": "Mushroomon", "มุเกนดรามอน": "MugenDramon", "ยูคิดารุมอน": "Yukidarumon", "ลอร์ดไนท์มอน": "LordKnightmon", "ลูเจมอน ซาตานโหมด": "Lucemon Satan Mode", "วาจิรามอน": "Vajramon", "วาสพ์มอน": "Waspmon", "สกัลเกรย์มอน": "SkullGreymon", "อัลฟามอน": "Alphamon", "อิคคาคุมอน": "Ikkakumon", "เครามอน": "Keramon", "เคออส ปิเอมอน": "ChaosPiedmon", "เจสมอน": "Jesmon", "เชนทารูมอน": "Centarumon", "เชาท์มอนX2": "ShoutmonX2", "เซเวียร์แฮคมอน": "SaviorHackmon", "เดธ X โดรุเกรย์มอน": "Death-X-DoruGreymon", "เดธ X โดรุโกรามอน": "Death-X-Dorugoramon", "เนโอเดวีมอน": "NeoDevimon", "เมทัลการูรูมอน": "MetalGarurumon", "เมทัลซีดรามอน": "MetalSeadramon", "เมทัลทีราโมมอน": "MetalTyrannomon", "เรนามอน": "Renamon", "เรพิดมอน": "Rapidmon", "เอ็กซามอน": "Examon", "แกรนดิสคุวากามอน": "GrandisKuwagamon", "แบล็ควาร์การูรูมอน": "BlackWereGarurumon", "แรปเตอร์ดรามอน": "Raptordramon", "แร็ปเตอร์ดรามอน": "Raptordramon", "แรร์มอน": "Raremon", "แฮคมอน": "Hackmon", "โกเลมอน": "Golemon", "โบลท์โบทามอน": "BoltBotamon", "โบโคมอน": "Bokomon", "โมโนคุโรมอน": "Monochromon", "โมโนดรามอน": "Monodramon", "โรสมอน": "Rosemon", "โอเมกามอน สวอร์ธ": "Omegamon Zwart", "ไทแรนคาบุเทริมอน": "TyrantKabuterimon", "ไทแรนคาบูเทริมอน": "TyrantKabuterimon", "ไบฟูมอน": "Baihumon"};
+  const form = document.getElementById('seal-search');
   const input = document.getElementById('seal-q');
   const countEl = document.getElementById('seal-q-count');
   const clearBtn = document.getElementById('seal-q-clear');
+  const goBtn = document.getElementById('seal-q-go');
   const cards = [...document.querySelectorAll('.tl-entry')];
   if (!input || !cards.length) return;
 
@@ -3015,6 +3021,12 @@
   }
 
   let t;
+  const run = () => { clearTimeout(t); apply(input.value); };
+
+  // The button and Enter search at once; typing still narrows as you go, so
+  // the button is a confirmation rather than the only way in.
+  form.addEventListener('submit', e => { e.preventDefault(); run(); input.blur(); });
+  goBtn.addEventListener('click', e => { e.preventDefault(); run(); input.blur(); });
   input.addEventListener('input', () => {
     clearTimeout(t);
     t = setTimeout(() => apply(input.value), 120);
