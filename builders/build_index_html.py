@@ -230,6 +230,16 @@ def main() -> None:
       </div>
     </a>
 
+    <a href="budget.html" class="feature">
+      <div class="icon">💰</div>
+      <h3>Seal Budget</h3>
+      <p>คำนวณตั๋วและราคาแพ็คจากตารางแลกซีลที่ติดตามไว้ — แยกงบต่อเซิร์ฟ</p>
+      <div class="feature-stats">
+        <div class="stat"><b>3,000</b>ตั๋ว/แพ็ค</div>
+        <div class="stat"><b>NA·KR·TH</b>แยกงบ</div>
+      </div>
+    </a>
+
     <a href="lookup.html" class="feature">
       <div class="icon">🔎</div>
       <h3>Cross-server Lookup</h3>

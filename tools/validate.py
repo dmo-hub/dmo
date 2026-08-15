@@ -48,10 +48,12 @@ VOID = {
 }
 
 # Deterministic, cache/data-only builders safe to re-run in CI (no network).
-# Order matters: th_seal_en feeds build_seal_tables.
+# Order matters: th_seal_en feeds build_seal_tables, which feeds build_seal_budget
+# (the budget page copies its nav/footer from the rebuilt seals.html).
 IDEMPOTENT_BUILDS = [
     ["builders/build_th_seal_en.py"],
     ["builders/build_seal_tables.py"],
+    ["builders/build_seal_budget.py"],
     ["builders/build_seal_patch_html.py", "--all"],
     ["builders/build_digimon_html.py"],
     ["builders/build_nametag_html.py"],

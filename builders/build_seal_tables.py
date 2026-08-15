@@ -138,6 +138,17 @@ CSS = """
     background: var(--surface-soft); }
   /* search hides via a class so the server tabs keep owning .style.display */
   .tl-entry.ss-hidden { display: none !important; }
+  /* entry point to the Seal Budget page (the calculator itself lives there) */
+  .budget-link { display: flex; align-items: center; gap: 10px; margin: 0 0 22px;
+    padding: 12px 16px; border: 1px solid var(--hairline); border-radius: var(--radius);
+    background: var(--surface-soft); text-decoration: none; color: var(--ink); }
+  .budget-link:hover { border-color: var(--coral); text-decoration: none; }
+  .budget-link .bl-ic { font-size: 17px; line-height: 1; }
+  .budget-link .bl-txt { font-size: 13.5px; font-weight: 600; }
+  .budget-link .bl-n { font-size: 11px; font-weight: 700; padding: 2px 9px;
+    border-radius: 9999px; background: var(--amber); color: var(--on-primary); }
+  .budget-link .bl-go { margin-left: auto; font-size: 12.5px; font-weight: 600;
+    color: var(--ink); white-space: nowrap; }
 """
 
 CSS_START, CSS_END = "/* SEAL-CSS */", "/* /SEAL-CSS */"
@@ -815,6 +826,94 @@ _MONTH_HDR = re.compile(
 )
 
 
+BUDGET_LINK = """
+  <a class="budget-link" href="budget.html">
+    <span class="bl-ic">💰</span>
+    <span class="bl-txt">Seal Budget — คำนวณตั๋วและราคา</span>
+    <span class="bl-n" id="budget-count" hidden>0</span>
+    <span class="bl-go">เปิด →</span>
+  </a>
+"""
+
+# The calculator moved to its own page (builders/build_seal_budget.py); the feed
+# keeps only the ☆ buttons that add a table to it. Both halves read the same
+# localStorage keys, so a star toggled here shows up there.
+BUDGET_JS = """
+<script>
+(() => {
+  const STARS_KEY = 'dmo_seal_stars';
+  const jget = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } };
+  const stars = () => jget(STARS_KEY, []);
+  const countEl = document.getElementById('budget-count');
+
+  function paint() {
+    const set = new Set(stars());
+    document.querySelectorAll('.seal-star').forEach(btn => {
+      const on = set.has(btn.dataset.tkey);
+      btn.classList.toggle('on', on);
+      const ic = btn.querySelector('.ic'); if (ic) ic.textContent = on ? '★' : '☆';
+    });
+    if (countEl) { countEl.textContent = set.size; countEl.hidden = !set.size; }
+  }
+  document.querySelectorAll('.seal-star').forEach(btn => btn.addEventListener('click', e => {
+    e.preventDefault();
+    const k = btn.dataset.tkey, set = new Set(stars());
+    if (set.has(k)) set.delete(k); else set.add(k);
+    localStorage.setItem(STARS_KEY, JSON.stringify([...set]));
+    paint();
+  }));
+  // The budget page writes the same key, so un-starring there has to repaint
+  // this page's buttons rather than leave them lit.
+  window.addEventListener('storage', e => { if (e.key === STARS_KEY) paint(); });
+  paint();
+})();
+</script>
+"""
+
+
+BL_START, BL_END = "<!--BUDGET-LINK-->", "<!--/BUDGET-LINK-->"
+BLJS_START, BLJS_END = "<!--BUDGET-JS-->", "<!--/BUDGET-JS-->"
+
+
+def move_budget_out(html):
+    """Replace the old inline calculator with a link to budget.html.
+
+    The panel, its ~140 lines of CSS and its ~230-line script were written into
+    the page by hand before the calculator had its own page, so this strips them
+    once and then keeps the link/script marker-wrapped like the other blocks.
+    """
+    # 1) the <details> panel
+    html = re.sub(
+        r'\n?  <details class="calc-panel".*?\n  </details>\n', "\n", html, flags=re.S
+    )
+    # 2) the hand-written CSS, bounded by its own banner comments
+    html = re.sub(
+        r"\n  /\* =+ inline Seal Calculator panel =+ \*/\n.*?"
+        r"(?=\n  /\* =+ sponsored ad)", "", html, flags=re.S
+    )
+    # 3) the calculator script (identified by its opening comment)
+    html = re.sub(
+        r"\n?<script>\n// Star tables on this page.*?\n</script>\n", "\n", html, flags=re.S
+    )
+
+    link = f"{BL_START}{BUDGET_LINK}  {BL_END}"
+    if BL_START in html:
+        html = re.sub(
+            re.escape(BL_START) + r".*?" + re.escape(BL_END), lambda _: link, html, flags=re.S
+        )
+    else:
+        html = html.replace('  <div class="timeline">', link + '\n  <div class="timeline">', 1)
+
+    block = f"{BLJS_START}{BUDGET_JS}{BLJS_END}"
+    if BLJS_START in html:
+        html = re.sub(
+            re.escape(BLJS_START) + r".*?" + re.escape(BLJS_END), lambda _: block, html, flags=re.S
+        )
+    else:
+        html = html.replace("</body>", block + "\n</body>", 1)
+    return html
+
+
 def inject_search(html):
     """Put the search box above the server tabs and its script before </body>,
     both marker-wrapped so a rebuild replaces them instead of stacking copies."""
@@ -932,6 +1031,9 @@ def main():
 
     # 2b) in-page seal search (box above the tabs + its script)
     html = inject_search(html)
+
+    # 2c) the calculator lives on budget.html — leave a link and the ☆ wiring
+    html = move_budget_out(html)
 
     # 3) inject a block before each matching card's </article>
     matches = compute_matches(data)
