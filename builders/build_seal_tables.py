@@ -240,7 +240,8 @@ def _twin_link(k, dates):
 # (o813439..o814935). Each statement also confirms the IMMEDIATELY PRECEDING
 # list, so na-4100 (+ its event twin na-810) and kr-812989 are included.
 # Older NA/KR posts and all TH posts describe event-period NPCs with no such
-# wording, so they get no badge.
+# wording, so they get no badge. Membership here is per POST — a post can also
+# add a time-limited list, which EXPIRING_TABLES excludes per table.
 STANDING_KEYS = {
     "na-4100",
     "na-810",
@@ -261,16 +262,34 @@ STANDING_KEYS = {
 }
 
 
-def standing_note(key):
-    """Short standing-list badge ("ลิสต์ถาวร · ไม่หายไป") for posts in
-    STANDING_KEYS — the full explanation lives in standing_note_full() (the
-    badge's tooltip). The ♾ glyph was dropped; the wording stays. Also shipped
-    to the Budget calc via seal_data.json."""
-    return "ลิสต์ถาวร · ไม่หายไป" if key in STANDING_KEYS else ""
+# Tables that the standing statement does NOT cover, keyed by "<post>#<table
+# index>". na-4110 and kr-814493 add a SECOND list in the same post and say it
+# expires: "This Seal list will be removed after the event duration ends." /
+# "해당 씰 리스트는 이벤트 기간 경과 후 제거됩니다." The "list previously
+# available … will remain" sentence in those posts refers only to table 0.
+EXPIRING_TABLES = {
+    "na-4110#1",
+    "kr-814493#1",
+}
 
 
-def standing_note_full(key):
-    if key not in STANDING_KEYS:
+def is_standing(key, ti=0):
+    """Whether table `ti` of post `key` is on the standing (never-expiring)
+    exchange list. Post-level membership is necessary but not sufficient — a
+    post can add a time-limited list alongside the standing one."""
+    return key in STANDING_KEYS and f"{key}#{ti}" not in EXPIRING_TABLES
+
+
+def standing_note(key, ti=0):
+    """Short standing-list badge ("ลิสต์ถาวร · ไม่หายไป") for standing tables —
+    the full explanation lives in standing_note_full() (the badge's tooltip).
+    The ♾ glyph was dropped; the wording stays. Also shipped to the Budget calc
+    via seal_data.json."""
+    return "ลิสต์ถาวร · ไม่หายไป" if is_standing(key, ti) else ""
+
+
+def standing_note_full(key, ti=0):
+    if not is_standing(key, ti):
         return ""
     npc = "Takato" if key.startswith("na") else "โอยูมิน (오유민)"
     return f"ซีลที่แลกกับ {npc} ไม่หายไป — ลิสต์เก่ายังแลกได้ต่อ (สะสมเพิ่มทุกแพท)"
@@ -390,10 +409,10 @@ def _standing_set(data):
     # --- former logic (re-enable by removing the early return above) ---
     # s = set()
     # for key, v in data.items():
-    #     if key not in STANDING_KEYS:
-    #         continue
     #     srv = key.split("-")[0]
-    #     for t in v.get("tables", []):
+    #     for ti, t in enumerate(v.get("tables", [])):
+    #         if not is_standing(key, ti):
+    #             continue
     #         for r in _table_rows_only(t["html"]):
     #             if r and r[0]:
     #                 k = _seal_key(r[0], srv)
@@ -446,10 +465,10 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index, 
     out = []
     # meta row: standing badge (full text in tooltip) + cross-server match
     meta = []
-    if standing_note(key):
+    if standing_note(key, ti):
         meta.append(
             f'<span class="seal-note s-{srv}" '
-            f'title="{standing_note_full(key)}">{standing_note(key)}</span>'
+            f'title="{standing_note_full(key, ti)}">{standing_note(key, ti)}</span>'
         )
     if tmatch.get(ti):
         meta.append(note(tmatch[ti]))
@@ -553,7 +572,7 @@ def emit_seal_data(data, html, standing=None):
                 "server": srv,
                 "date": dates.get(key, ""),
                 "caption": t.get("caption", ""),
-                "note": standing_note(key),
+                "note": standing_note(key, ti),
                 "inf": [
                     1 if (r and r[0] and (_seal_key(r[0], srv) or "") in standing) else 0
                     for r in rows
