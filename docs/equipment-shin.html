@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="เทียบค่าสเตตัสอุปกรณ์ใหม่เซิร์ฟ TH แบบปกติ กับแบบ (ชิน) ทุกช่องสวม ทุกระดับตีบวก +0 ถึง +15">
+<meta property="og:title" content="DMO Tracker — อุปกรณ์ใหม่ ปกติ vs ชิน">
+<meta property="og:description" content="เทียบค่าสเตตัสอุปกรณ์ใหม่เซิร์ฟ TH แบบปกติ กับแบบ (ชิน) ทุกช่องสวม ทุกระดับตีบวก +0 ถึง +15">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#9876;&#65039;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>DMO Tracker — อุปกรณ์ใหม่ ปกติ vs ชิน</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<style>
+  /* ---- comparison page: one card per equipment slot ---- */
+  .cmp-intro { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+    margin: 0 0 18px; padding: 12px 16px; border: 1px solid var(--hairline);
+    border-radius: var(--radius); background: var(--surface-soft); }
+  .cmp-intro p { margin: 0; font-size: 13px; color: var(--body); line-height: 1.7; }
+  .cmp-intro .back { margin-left: auto; font-size: 12.5px; font-weight: 600;
+    color: var(--ink); text-decoration: none; border: 1px solid var(--teal);
+    border-radius: 9999px; padding: 5px 13px; white-space: nowrap; }
+  .cmp-intro .back:hover { background: var(--teal); color: var(--on-primary); text-decoration: none; }
+
+  /* jump bar — six slots is enough to want one */
+  .slot-nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 18px; }
+  .slot-nav a { font-size: 12px; font-weight: 600; text-decoration: none;
+    padding: 5px 12px; border-radius: 9999px; border: 1px solid var(--hairline);
+    background: var(--surface-soft); color: var(--muted); }
+  .slot-nav a:hover { color: var(--on-primary); background: var(--teal);
+    border-color: var(--teal); text-decoration: none; }
+
+  .slot-card { border: 1px solid var(--hairline); border-radius: var(--radius-lg);
+    background: var(--canvas); overflow: hidden; margin: 0 0 16px; scroll-margin-top: 12px; }
+  .slot-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px;
+    padding: 11px 15px; border-bottom: 1px solid var(--hairline);
+    background: var(--surface-soft); }
+  .slot-icon { font-size: 19px; line-height: 1; }
+  .slot-title { display: flex; align-items: baseline; gap: 8px; }
+  .slot-title h2 { margin: 0; font-size: 15px; font-weight: 700; color: var(--ink); }
+  .slot-sub { font-size: 11.5px; color: var(--muted-soft); }
+  .slot-sum { margin-left: auto; display: flex; flex-wrap: wrap; gap: 5px; }
+  .sum-chip { font-size: 11px; color: var(--body); padding: 3px 10px;
+    border-radius: 9999px; border: 1px solid var(--hairline-soft);
+    background: var(--canvas); white-space: nowrap; }
+  .sum-chip .k { color: var(--muted-soft); margin-right: 5px; }
+  .sum-chip b { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .sum-chip b.s { color: var(--teal); }
+  @media (max-width: 720px) { .slot-sum { margin-left: 0; width: 100%; } }
+
+  .cmp-wrap { overflow-x: auto; }
+  table.cmp-tbl { border-collapse: collapse; width: 100%; font-size: 12px; min-width: 560px; }
+  table.cmp-tbl th, table.cmp-tbl td { padding: 6px 10px; text-align: center;
+    border-bottom: 1px solid var(--hairline); white-space: nowrap;
+    font-variant-numeric: tabular-nums; }
+  table.cmp-tbl thead th { background: var(--surface-card); color: var(--ink);
+    font-weight: 600; font-size: 11.5px; }
+  table.cmp-tbl thead tr:first-child th[colspan] { border-left: 1px solid var(--hairline); }
+  table.cmp-tbl th.c-n, table.cmp-tbl th.c-s { font-size: 10.5px; font-weight: 600; }
+  table.cmp-tbl th.c-s { color: var(--teal); }
+  table.cmp-tbl th.c-n { color: var(--muted); }
+  /* the ชิน column of each pair carries the tint + the dividing rule, so a stat
+     reads as one two-column unit without re-checking the header */
+  table.cmp-tbl th.c-s, table.cmp-tbl td.c-s { border-left: 1px solid var(--hairline-soft); }
+  table.cmp-tbl td.c-s { background: color-mix(in srgb, var(--teal) 9%, transparent);
+    font-weight: 600; color: var(--ink); }
+  table.cmp-tbl tbody tr:nth-child(even) td.c-s { background: color-mix(in srgb, var(--teal) 15%, transparent); }
+  table.cmp-tbl td.c-s.dash { font-weight: 400; }
+  table.cmp-tbl td.dash { color: var(--muted-soft); }
+  table.cmp-tbl td.lv, table.cmp-tbl th.lv-h { font-weight: 600; color: var(--body); }
+  table.cmp-tbl tbody tr:nth-child(even) td { background: var(--surface-soft); }
+  /* +15 is the row people actually plan around */
+  table.cmp-tbl tr.is-max td { border-top: 2px solid var(--teal);
+    font-weight: 700; color: var(--ink); }
+  table.cmp-tbl th.d-h { color: var(--muted); font-size: 10.5px;
+    border-left: 1px solid var(--hairline); }
+  table.cmp-tbl td.d-col { border-left: 1px solid var(--hairline);
+    color: var(--teal); font-weight: 600; }
+  table.cmp-tbl td.d-col.d-same { color: var(--muted-soft); font-weight: 400; }
+  table.cmp-tbl tbody tr:last-child td { border-bottom: 0; }
+
+  /* ---- whole-build summary ---- */
+  .sum-card { border-color: var(--teal); }
+  .sum-card .slot-head { background: color-mix(in srgb, var(--teal) 10%, var(--surface-soft)); }
+  table.sum-tbl { min-width: 460px; }
+  table.sum-tbl th.st-h, table.sum-tbl td.st-name { text-align: left; }
+  table.sum-tbl td.st-name { font-weight: 600; color: var(--ink); white-space: normal; }
+  table.sum-tbl .st-src { display: block; font-size: 10px; font-weight: 400;
+    color: var(--muted-soft); margin-top: 1px; }
+  table.sum-tbl td { font-size: 12.5px; }
+  table.sum-tbl td.c-s { font-weight: 700; }
+  .sum-foot { padding: 9px 15px; font-size: 11px; color: var(--muted-soft);
+    border-top: 1px solid var(--hairline); background: var(--surface-soft); line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+    </nav>
+    <span class="nav-meta">scrape: vplay.in.th</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <div>
+      <h1>&#9876;&#65039; อุปกรณ์ใหม่ — ปกติ vs (ชิน)</h1>
+      <p class="lead">เทียบค่าสเตตัสชุดอุปกรณ์ตัวละคร (ไดสุเกะ / ทาเครุ / มิยาโกะ) แบบธรรมดา กับแบบ (ชิน) — ทุกช่องสวม ทุกระดับตีบวก</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">6</div><div class="lbl">ช่องสวม</div></div>
+      <div class="hero-stat"><div class="num">16</div><div class="lbl">ระดับ (+0→+15)</div></div>
+      <div class="hero-stat"><div class="num">TH</div><div class="lbl">เซิร์ฟ</div></div>
+    </div>
+  </div>
+
+  <div class="cmp-intro">
+    <p>แถบสีเขียวคือค่าของแบบ <b>(ชิน)</b> &middot; คอลัมน์ขวาสุดคืออัตราส่วน <b>ชิน &divide; ปกติ</b> ของออปชั่นที่ได้เปรียบมากสุดในแถวนั้น (ชี้เมาส์ดูว่าเป็นออปชั่นไหน) &middot; แถว <b>+15</b> คั่นด้วยเส้นทึบ</p>
+    <a class="back" href="accessories.html">&larr; กลับหน้า Accessories</a>
+  </div>
+
+  <nav class="slot-nav">
+    <a href="#slot-สรุป">&#128202; สรุปรวม</a>
+    <a href="#slot-ส่วนหัว">&#127911; ส่วนหัว</a>
+    <a href="#slot-เครื่องประดับ">&#127890; เครื่องประดับ</a>
+    <a href="#slot-เสื้อ">&#128085; เสื้อ</a>
+    <a href="#slot-กางเกง">&#128086; กางเกง</a>
+    <a href="#slot-มือ">&#129508; มือ</a>
+    <a href="#slot-รองเท้า">&#128095; รองเท้า</a>
+  </nav>
+
+    <section class="slot-card sum-card" id="slot-สรุป">
+      <div class="slot-head">
+        <span class="slot-icon">&#128202;</span>
+        <div class="slot-title"><h2>สรุปรวมทั้งชุด</h2><span class="slot-sub">6 ช่องสวม ที่ +15</span></div>
+      </div>
+      <div class="cmp-wrap"><table class="cmp-tbl sum-tbl">
+        <thead>
+          <tr><th class="st-h">สเตตัส</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th>ส่วนต่าง</th><th class="d-h">ชิน&nbsp;&divide;&nbsp;ปกติ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="st-name">โจมตีแบบคริติคอล<span class="st-src">ส่วนหัว</span></td><td>25%</td><td class="c-s">45%</td><td>+20%</td><td class="d-col">×1.8</td></tr>
+          <tr><td class="st-name">พลังโจมตีแบบคริติคอล<span class="st-src">ส่วนหัว</span></td><td>40%</td><td class="c-s">60%</td><td>+20%</td><td class="d-col">×1.5</td></tr>
+          <tr><td class="st-name">อัตราโจมตี<span class="st-src">เครื่องประดับ</span></td><td>3,500</td><td class="c-s">4,500</td><td>+1,000</td><td class="d-col">×1.29</td></tr>
+          <tr><td class="st-name">การโจมตี<span class="st-src">เครื่องประดับ + มือ</span></td><td>4,200</td><td class="c-s">6,000</td><td>+1,800</td><td class="d-col">×1.43</td></tr>
+          <tr><td class="st-name">Max HP<span class="st-src">เสื้อ</span></td><td>4,500</td><td class="c-s">7,000</td><td>+2,500</td><td class="d-col">×1.56</td></tr>
+          <tr><td class="st-name">ค่าป้องกัน<span class="st-src">เสื้อ</span></td><td>1,000</td><td class="c-s">1,500</td><td>+500</td><td class="d-col">×1.5</td></tr>
+          <tr><td class="st-name">Max DS<span class="st-src">กางเกง</span></td><td>4,500</td><td class="c-s">7,000</td><td>+2,500</td><td class="d-col">×1.56</td></tr>
+          <tr><td class="st-name">พลังโจมตีสกิล<span class="st-src">กางเกง</span></td><td>30%</td><td class="c-s">40%</td><td>+10%</td><td class="d-col">×1.33</td></tr>
+          <tr><td class="st-name">ความเร็วในการโจมตี<span class="st-src">มือ</span></td><td>3%</td><td class="c-s">5%</td><td>+2%</td><td class="d-col">×1.67</td></tr>
+          <tr><td class="st-name">ความเร็ว<span class="st-src">รองเท้า</span></td><td>30%</td><td class="c-s">30%</td><td class="d-same">เท่ากัน</td><td class="d-col d-same">เท่ากัน</td></tr>
+          <tr><td class="st-name">เป็นมิตร<span class="st-src">รองเท้า</span></td><td>30</td><td class="c-s">40</td><td>+10</td><td class="d-col">×1.33</td></tr>
+          <tr><td class="st-name">EXP<span class="st-src">รองเท้า</span></td><td>2000%</td><td class="c-s">3000%</td><td>+1000%</td><td class="d-col">×1.5</td></tr>
+        </tbody>
+      </table></div>
+      <div class="sum-foot">รวมค่าจากทุกช่องสวมที่ตีบวก <b>+15</b> ครบทั้ง 6 ชิ้น &middot; สเตตัสที่มาจากหลายช่องจะบวกกัน (ระบุที่มาใต้ชื่อ) &middot; ค่าเปอร์เซ็นต์กับค่าแต้มแยกบรรทัดกันเสมอ</div>
+    </section>
+
+    <section class="slot-card" id="slot-ส่วนหัว">
+      <div class="slot-head">
+        <span class="slot-icon">🎧</span>
+        <div class="slot-title"><h2>ส่วนหัว</h2><span class="slot-sub">หัว</span></div>
+        <div class="slot-sum"><span class="sum-chip"><span class="k">โจมตีแบบคริติคอล</span><b>15%</b> → <b class="s">25%</b></span><span class="sum-chip"><span class="k">พลังโจมตีแบบคริติคอล</span><b>40%</b> → <b class="s">60%</b></span><span class="sum-chip"><span class="k">โจมตีแบบคริติคอล</span><b>10%</b> → <b class="s">20%</b></span></div>
+      </div>
+      <div class="cmp-wrap"><table class="cmp-tbl">
+        <thead>
+          <tr><th rowspan="2" class="lv-h">+Lv</th><th colspan="2">โจมตีแบบคริติคอล</th><th colspan="2">พลังโจมตีแบบคริติคอล</th><th colspan="2">โจมตีแบบคริติคอล</th><th rowspan="2" class="d-h" title="อัตราส่วน ชิน ÷ ปกติ ของออปชั่นที่ได้เปรียบมากสุดในแถวนั้น">ชิน&nbsp;÷&nbsp;ปกติ</th></tr>
+          <tr><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th></tr>
+        </thead>
+        <tbody>
+        <tr><td class="lv">+0</td><td>5%</td><td class="c-s">10%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="โจมตีแบบคริติคอล">×2</td></tr>
+        <tr><td class="lv">+1</td><td>5.25%</td><td class="c-s">10.25%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="โจมตีแบบคริติคอล">×1.95</td></tr>
+        <tr><td class="lv">+2</td><td>5.5%</td><td class="c-s">10.5%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="โจมตีแบบคริติคอล">×1.91</td></tr>
+        <tr><td class="lv">+3</td><td>5.75%</td><td class="c-s">10.75%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="โจมตีแบบคริติคอล">×1.87</td></tr>
+        <tr><td class="lv">+4</td><td>6.25%</td><td class="c-s">11.5%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="โจมตีแบบคริติคอล">×1.84</td></tr>
+        <tr><td class="lv">+5</td><td>6.5%</td><td class="c-s">12%</td><td>10%</td><td class="c-s">25%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="พลังโจมตีแบบคริติคอล">×2.5</td></tr>
+        <tr><td class="lv">+6</td><td>6.75%</td><td class="c-s">12.5%</td><td>11%</td><td class="c-s">26%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="พลังโจมตีแบบคริติคอล">×2.36</td></tr>
+        <tr><td class="lv">+7</td><td>7%</td><td class="c-s">13%</td><td>12%</td><td class="c-s">27%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="พลังโจมตีแบบคริติคอล">×2.25</td></tr>
+        <tr><td class="lv">+8</td><td>7.25%</td><td class="c-s">13.5%</td><td>13%</td><td class="c-s">30%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="พลังโจมตีแบบคริติคอล">×2.31</td></tr>
+        <tr><td class="lv">+9</td><td>7.5%</td><td class="c-s">14%</td><td>14%</td><td class="c-s">33%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="พลังโจมตีแบบคริติคอล">×2.36</td></tr>
+        <tr><td class="lv">+10</td><td>7.75%</td><td class="c-s">15%</td><td>15%</td><td class="c-s">36%</td><td>5%</td><td class="c-s">11%</td><td class="d-col" title="พลังโจมตีแบบคริติคอล">×2.4</td></tr>
+        <tr><td class="lv">+11</td><td>8%</td><td class="c-s">16%</td><td>18%</td><td class="c-s">39%</td><td>5.5%</td><td class="c-s">12%</td><td class="d-col" title="โจมตีแบบคริติคอล">×2.18</td></tr>
+        <tr><td class="lv">+12</td><td>8.5%</td><td class="c-s">17%</td><td>21%</td><td class="c-s">42%</td><td>6%</td><td class="c-s">13%</td><td class="d-col" title="โจมตีแบบคริติคอล">×2.17</td></tr>
+        <tr><td class="lv">+13</td><td>9%</td><td class="c-s">18%</td><td>25%</td><td class="c-s">45%</td><td>6.5%</td><td class="c-s">14%</td><td class="d-col" title="โจมตีแบบคริติคอล">×2.15</td></tr>
+        <tr><td class="lv">+14</td><td>10%</td><td class="c-s">20%</td><td>30%</td><td class="c-s">50%</td><td>7%</td><td class="c-s">15%</td><td class="d-col" title="โจมตีแบบคริติคอล">×2.14</td></tr>
+        <tr class="is-max"><td class="lv">+15</td><td>15%</td><td class="c-s">25%</td><td>40%</td><td class="c-s">60%</td><td>10%</td><td class="c-s">20%</td><td class="d-col" title="โจมตีแบบคริติคอล">×2</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="slot-card" id="slot-เครื่องประดับ">
+      <div class="slot-head">
+        <span class="slot-icon">🎒</span>
+        <div class="slot-title"><h2>เครื่องประดับ</h2><span class="slot-sub">กระเป๋า</span></div>
+        <div class="slot-sum"><span class="sum-chip"><span class="k">อัตราโจมตี</span><b>2000</b> → <b class="s">2500</b></span><span class="sum-chip"><span class="k">การโจมตี</span><b>1500</b> → <b class="s">2000</b></span><span class="sum-chip"><span class="k">อัตราโจมตี</span><b>1500</b> → <b class="s">2000</b></span></div>
+      </div>
+      <div class="cmp-wrap"><table class="cmp-tbl">
+        <thead>
+          <tr><th rowspan="2" class="lv-h">+Lv</th><th colspan="2">อัตราโจมตี</th><th colspan="2">การโจมตี</th><th colspan="2">อัตราโจมตี</th><th rowspan="2" class="d-h" title="อัตราส่วน ชิน ÷ ปกติ ของออปชั่นที่ได้เปรียบมากสุดในแถวนั้น">ชิน&nbsp;÷&nbsp;ปกติ</th></tr>
+          <tr><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th></tr>
+        </thead>
+        <tbody>
+        <tr><td class="lv">+0</td><td>500</td><td class="c-s">1000</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×2</td></tr>
+        <tr><td class="lv">+1</td><td>550</td><td class="c-s">1050</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×1.91</td></tr>
+        <tr><td class="lv">+2</td><td>600</td><td class="c-s">1100</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×1.83</td></tr>
+        <tr><td class="lv">+3</td><td>650</td><td class="c-s">1150</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×1.77</td></tr>
+        <tr><td class="lv">+4</td><td>750</td><td class="c-s">1250</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×1.67</td></tr>
+        <tr><td class="lv">+5</td><td>800</td><td class="c-s">1300</td><td>500</td><td class="c-s">800</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×1.62</td></tr>
+        <tr><td class="lv">+6</td><td>850</td><td class="c-s">1350</td><td>550</td><td class="c-s">850</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×1.59</td></tr>
+        <tr><td class="lv">+7</td><td>900</td><td class="c-s">1400</td><td>600</td><td class="c-s">900</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×1.56</td></tr>
+        <tr><td class="lv">+8</td><td>950</td><td class="c-s">1450</td><td>650</td><td class="c-s">950</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×1.53</td></tr>
+        <tr><td class="lv">+9</td><td>1000</td><td class="c-s">1500</td><td>700</td><td class="c-s">1000</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="อัตราโจมตี">×1.5</td></tr>
+        <tr><td class="lv">+10</td><td>1100</td><td class="c-s">1600</td><td>750</td><td class="c-s">1100</td><td>500</td><td class="c-s">1000</td><td class="d-col" title="อัตราโจมตี">×2</td></tr>
+        <tr><td class="lv">+11</td><td>1200</td><td class="c-s">1700</td><td>800</td><td class="c-s">1200</td><td>600</td><td class="c-s">1100</td><td class="d-col" title="อัตราโจมตี">×1.83</td></tr>
+        <tr><td class="lv">+12</td><td>1300</td><td class="c-s">1800</td><td>850</td><td class="c-s">1300</td><td>700</td><td class="c-s">1200</td><td class="d-col" title="อัตราโจมตี">×1.71</td></tr>
+        <tr><td class="lv">+13</td><td>1400</td><td class="c-s">1900</td><td>900</td><td class="c-s">1400</td><td>800</td><td class="c-s">1300</td><td class="d-col" title="อัตราโจมตี">×1.62</td></tr>
+        <tr><td class="lv">+14</td><td>1500</td><td class="c-s">2000</td><td>1000</td><td class="c-s">1500</td><td>1000</td><td class="c-s">1500</td><td class="d-col" title="การโจมตี">×1.5</td></tr>
+        <tr class="is-max"><td class="lv">+15</td><td>2000</td><td class="c-s">2500</td><td>1500</td><td class="c-s">2000</td><td>1500</td><td class="c-s">2000</td><td class="d-col" title="การโจมตี">×1.33</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="slot-card" id="slot-เสื้อ">
+      <div class="slot-head">
+        <span class="slot-icon">👕</span>
+        <div class="slot-title"><h2>เสื้อ</h2><span class="slot-sub">เสื้อ/แจ็กเก็ต</span></div>
+        <div class="slot-sum"><span class="sum-chip"><span class="k">Max HP</span><b>2500</b> → <b class="s">4000</b></span><span class="sum-chip"><span class="k">ค่าป้องกัน</span><b>1000</b> → <b class="s">1500</b></span><span class="sum-chip"><span class="k">Max HP</span><b>2000</b> → <b class="s">3000</b></span></div>
+      </div>
+      <div class="cmp-wrap"><table class="cmp-tbl">
+        <thead>
+          <tr><th rowspan="2" class="lv-h">+Lv</th><th colspan="2">Max HP</th><th colspan="2">ค่าป้องกัน</th><th colspan="2">Max HP</th><th rowspan="2" class="d-h" title="อัตราส่วน ชิน ÷ ปกติ ของออปชั่นที่ได้เปรียบมากสุดในแถวนั้น">ชิน&nbsp;÷&nbsp;ปกติ</th></tr>
+          <tr><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th></tr>
+        </thead>
+        <tbody>
+        <tr><td class="lv">+0</td><td>1000</td><td class="c-s">2000</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max HP">×2</td></tr>
+        <tr><td class="lv">+1</td><td>1050</td><td class="c-s">2050</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max HP">×1.95</td></tr>
+        <tr><td class="lv">+2</td><td>1100</td><td class="c-s">2100</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max HP">×1.91</td></tr>
+        <tr><td class="lv">+3</td><td>1150</td><td class="c-s">2150</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max HP">×1.87</td></tr>
+        <tr><td class="lv">+4</td><td>1250</td><td class="c-s">2250</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max HP">×1.8</td></tr>
+        <tr><td class="lv">+5</td><td>1300</td><td class="c-s">2300</td><td>200</td><td class="c-s">600</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ค่าป้องกัน">×3</td></tr>
+        <tr><td class="lv">+6</td><td>1350</td><td class="c-s">2350</td><td>225</td><td class="c-s">625</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ค่าป้องกัน">×2.78</td></tr>
+        <tr><td class="lv">+7</td><td>1400</td><td class="c-s">2400</td><td>250</td><td class="c-s">650</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ค่าป้องกัน">×2.6</td></tr>
+        <tr><td class="lv">+8</td><td>1450</td><td class="c-s">2450</td><td>275</td><td class="c-s">675</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ค่าป้องกัน">×2.45</td></tr>
+        <tr><td class="lv">+9</td><td>1500</td><td class="c-s">2500</td><td>300</td><td class="c-s">700</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ค่าป้องกัน">×2.33</td></tr>
+        <tr><td class="lv">+10</td><td>1600</td><td class="c-s">2600</td><td>350</td><td class="c-s">750</td><td>1000</td><td class="c-s">2000</td><td class="d-col" title="ค่าป้องกัน">×2.14</td></tr>
+        <tr><td class="lv">+11</td><td>1700</td><td class="c-s">2700</td><td>400</td><td class="c-s">800</td><td>1100</td><td class="c-s">2100</td><td class="d-col" title="ค่าป้องกัน">×2</td></tr>
+        <tr><td class="lv">+12</td><td>1800</td><td class="c-s">2800</td><td>500</td><td class="c-s">850</td><td>1200</td><td class="c-s">2200</td><td class="d-col" title="Max HP">×1.83</td></tr>
+        <tr><td class="lv">+13</td><td>1900</td><td class="c-s">2900</td><td>600</td><td class="c-s">900</td><td>1300</td><td class="c-s">2300</td><td class="d-col" title="Max HP">×1.77</td></tr>
+        <tr><td class="lv">+14</td><td>2000</td><td class="c-s">3000</td><td>700</td><td class="c-s">1000</td><td>1500</td><td class="c-s">2500</td><td class="d-col" title="Max HP">×1.67</td></tr>
+        <tr class="is-max"><td class="lv">+15</td><td>2500</td><td class="c-s">4000</td><td>1000</td><td class="c-s">1500</td><td>2000</td><td class="c-s">3000</td><td class="d-col" title="Max HP">×1.6</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="slot-card" id="slot-กางเกง">
+      <div class="slot-head">
+        <span class="slot-icon">👖</span>
+        <div class="slot-title"><h2>กางเกง</h2><span class="slot-sub">กางเกง</span></div>
+        <div class="slot-sum"><span class="sum-chip"><span class="k">Max DS</span><b>2500</b> → <b class="s">4000</b></span><span class="sum-chip"><span class="k">พลังโจมตีสกิล</span><b>30%</b> → <b class="s">40%</b></span><span class="sum-chip"><span class="k">Max DS</span><b>2000</b> → <b class="s">3000</b></span></div>
+      </div>
+      <div class="cmp-wrap"><table class="cmp-tbl">
+        <thead>
+          <tr><th rowspan="2" class="lv-h">+Lv</th><th colspan="2">Max DS</th><th colspan="2">พลังโจมตีสกิล</th><th colspan="2">Max DS</th><th rowspan="2" class="d-h" title="อัตราส่วน ชิน ÷ ปกติ ของออปชั่นที่ได้เปรียบมากสุดในแถวนั้น">ชิน&nbsp;÷&nbsp;ปกติ</th></tr>
+          <tr><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th></tr>
+        </thead>
+        <tbody>
+        <tr><td class="lv">+0</td><td>1000</td><td class="c-s">2000</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max DS">×2</td></tr>
+        <tr><td class="lv">+1</td><td>1050</td><td class="c-s">2050</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max DS">×1.95</td></tr>
+        <tr><td class="lv">+2</td><td>1100</td><td class="c-s">2100</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max DS">×1.91</td></tr>
+        <tr><td class="lv">+3</td><td>1150</td><td class="c-s">2150</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max DS">×1.87</td></tr>
+        <tr><td class="lv">+4</td><td>1250</td><td class="c-s">2250</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max DS">×1.8</td></tr>
+        <tr><td class="lv">+5</td><td>1300</td><td class="c-s">2300</td><td>5%</td><td class="c-s">10%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="พลังโจมตีสกิล">×2</td></tr>
+        <tr><td class="lv">+6</td><td>1350</td><td class="c-s">2350</td><td>6%</td><td class="c-s">11%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="พลังโจมตีสกิล">×1.83</td></tr>
+        <tr><td class="lv">+7</td><td>1400</td><td class="c-s">2400</td><td>7%</td><td class="c-s">12%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max DS">×1.71</td></tr>
+        <tr><td class="lv">+8</td><td>1450</td><td class="c-s">2450</td><td>8%</td><td class="c-s">13%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max DS">×1.69</td></tr>
+        <tr><td class="lv">+9</td><td>1500</td><td class="c-s">2500</td><td>9%</td><td class="c-s">14%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="Max DS">×1.67</td></tr>
+        <tr><td class="lv">+10</td><td>1600</td><td class="c-s">2600</td><td>12%</td><td class="c-s">15%</td><td>1000</td><td class="c-s">2000</td><td class="d-col" title="Max DS">×2</td></tr>
+        <tr><td class="lv">+11</td><td>1700</td><td class="c-s">2700</td><td>15%</td><td class="c-s">18%</td><td>1100</td><td class="c-s">2100</td><td class="d-col" title="Max DS">×1.91</td></tr>
+        <tr><td class="lv">+12</td><td>1800</td><td class="c-s">2800</td><td>18%</td><td class="c-s">21%</td><td>1200</td><td class="c-s">2200</td><td class="d-col" title="Max DS">×1.83</td></tr>
+        <tr><td class="lv">+13</td><td>1900</td><td class="c-s">2900</td><td>21%</td><td class="c-s">24%</td><td>1300</td><td class="c-s">2300</td><td class="d-col" title="Max DS">×1.77</td></tr>
+        <tr><td class="lv">+14</td><td>2000</td><td class="c-s">3000</td><td>25%</td><td class="c-s">30%</td><td>1500</td><td class="c-s">2500</td><td class="d-col" title="Max DS">×1.67</td></tr>
+        <tr class="is-max"><td class="lv">+15</td><td>2500</td><td class="c-s">4000</td><td>30%</td><td class="c-s">40%</td><td>2000</td><td class="c-s">3000</td><td class="d-col" title="Max DS">×1.6</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="slot-card" id="slot-มือ">
+      <div class="slot-head">
+        <span class="slot-icon">🧤</span>
+        <div class="slot-title"><h2>มือ</h2><span class="slot-sub">ถุงมือ/แส้</span></div>
+        <div class="slot-sum"><span class="sum-chip"><span class="k">การโจมตี</span><b>2000</b> → <b class="s">3000</b></span><span class="sum-chip"><span class="k">ความเร็วในการโจมตี</span><b>3%</b> → <b class="s">5%</b></span><span class="sum-chip"><span class="k">การโจมตี</span><b>700</b> → <b class="s">1000</b></span></div>
+      </div>
+      <div class="cmp-wrap"><table class="cmp-tbl">
+        <thead>
+          <tr><th rowspan="2" class="lv-h">+Lv</th><th colspan="2">การโจมตี</th><th colspan="2">ความเร็วในการโจมตี</th><th colspan="2">การโจมตี</th><th rowspan="2" class="d-h" title="อัตราส่วน ชิน ÷ ปกติ ของออปชั่นที่ได้เปรียบมากสุดในแถวนั้น">ชิน&nbsp;÷&nbsp;ปกติ</th></tr>
+          <tr><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th></tr>
+        </thead>
+        <tbody>
+        <tr><td class="lv">+0</td><td>500</td><td class="c-s">1500</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="การโจมตี">×3</td></tr>
+        <tr><td class="lv">+1</td><td>550</td><td class="c-s">1550</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="การโจมตี">×2.82</td></tr>
+        <tr><td class="lv">+2</td><td>600</td><td class="c-s">1600</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="การโจมตี">×2.67</td></tr>
+        <tr><td class="lv">+3</td><td>650</td><td class="c-s">1650</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="การโจมตี">×2.54</td></tr>
+        <tr><td class="lv">+4</td><td>750</td><td class="c-s">1750</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="การโจมตี">×2.33</td></tr>
+        <tr><td class="lv">+5</td><td>800</td><td class="c-s">1800</td><td>1%</td><td class="c-s">3%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็วในการโจมตี">×3</td></tr>
+        <tr><td class="lv">+6</td><td>850</td><td class="c-s">1850</td><td>1%</td><td class="c-s">3%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็วในการโจมตี">×3</td></tr>
+        <tr><td class="lv">+7</td><td>900</td><td class="c-s">1900</td><td>1%</td><td class="c-s">3%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็วในการโจมตี">×3</td></tr>
+        <tr><td class="lv">+8</td><td>950</td><td class="c-s">1950</td><td>1%</td><td class="c-s">3%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็วในการโจมตี">×3</td></tr>
+        <tr><td class="lv">+9</td><td>1000</td><td class="c-s">2000</td><td>1%</td><td class="c-s">3%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็วในการโจมตี">×3</td></tr>
+        <tr><td class="lv">+10</td><td>1100</td><td class="c-s">2100</td><td>2%</td><td class="c-s">4%</td><td>300</td><td class="c-s">525</td><td class="d-col" title="ความเร็วในการโจมตี">×2</td></tr>
+        <tr><td class="lv">+11</td><td>1200</td><td class="c-s">2200</td><td>2%</td><td class="c-s">4%</td><td>350</td><td class="c-s">550</td><td class="d-col" title="ความเร็วในการโจมตี">×2</td></tr>
+        <tr><td class="lv">+12</td><td>1300</td><td class="c-s">2300</td><td>2%</td><td class="c-s">4%</td><td>400</td><td class="c-s">575</td><td class="d-col" title="ความเร็วในการโจมตี">×2</td></tr>
+        <tr><td class="lv">+13</td><td>1400</td><td class="c-s">2400</td><td>2%</td><td class="c-s">4%</td><td>450</td><td class="c-s">600</td><td class="d-col" title="ความเร็วในการโจมตี">×2</td></tr>
+        <tr><td class="lv">+14</td><td>1500</td><td class="c-s">2500</td><td>2%</td><td class="c-s">4%</td><td>500</td><td class="c-s">700</td><td class="d-col" title="ความเร็วในการโจมตี">×2</td></tr>
+        <tr class="is-max"><td class="lv">+15</td><td>2000</td><td class="c-s">3000</td><td>3%</td><td class="c-s">5%</td><td>700</td><td class="c-s">1000</td><td class="d-col" title="ความเร็วในการโจมตี">×1.67</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="slot-card" id="slot-รองเท้า">
+      <div class="slot-head">
+        <span class="slot-icon">👟</span>
+        <div class="slot-title"><h2>รองเท้า</h2><span class="slot-sub">รองเท้า</span></div>
+        <div class="slot-sum"><span class="sum-chip"><span class="k">ความเร็ว</span><b>30%</b> → <b class="s">30%</b></span><span class="sum-chip"><span class="k">เป็นมิตร</span><b>30</b> → <b class="s">40</b></span><span class="sum-chip"><span class="k">EXP</span><b>2000%</b> → <b class="s">3000%</b></span></div>
+      </div>
+      <div class="cmp-wrap"><table class="cmp-tbl">
+        <thead>
+          <tr><th rowspan="2" class="lv-h">+Lv</th><th colspan="2">ความเร็ว</th><th colspan="2">เป็นมิตร</th><th colspan="2">EXP</th><th rowspan="2" class="d-h" title="อัตราส่วน ชิน ÷ ปกติ ของออปชั่นที่ได้เปรียบมากสุดในแถวนั้น">ชิน&nbsp;÷&nbsp;ปกติ</th></tr>
+          <tr><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th><th class="c-n">ปกติ</th><th class="c-s">ชิน</th></tr>
+        </thead>
+        <tbody>
+        <tr><td class="lv">+0</td><td>20%</td><td class="c-s">30%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็ว">×1.5</td></tr>
+        <tr><td class="lv">+1</td><td>20%</td><td class="c-s">30%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็ว">×1.5</td></tr>
+        <tr><td class="lv">+2</td><td>20%</td><td class="c-s">30%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็ว">×1.5</td></tr>
+        <tr><td class="lv">+3</td><td>20%</td><td class="c-s">30%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็ว">×1.5</td></tr>
+        <tr><td class="lv">+4</td><td>20%</td><td class="c-s">30%</td><td class="dash">—</td><td class="dash c-s">—</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็ว">×1.5</td></tr>
+        <tr><td class="lv">+5</td><td>20%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็ว">×1.5</td></tr>
+        <tr><td class="lv">+6</td><td>20%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็ว">×1.5</td></tr>
+        <tr><td class="lv">+7</td><td>20%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็ว">×1.5</td></tr>
+        <tr><td class="lv">+8</td><td>20%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="ความเร็ว">×1.5</td></tr>
+        <tr><td class="lv">+9</td><td>25%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td class="dash">—</td><td class="dash c-s">—</td><td class="d-col" title="เป็นมิตร">×1.33</td></tr>
+        <tr><td class="lv">+10</td><td>25%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td>1000%</td><td class="c-s">2000%</td><td class="d-col" title="EXP">×2</td></tr>
+        <tr><td class="lv">+11</td><td>25%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td>1100%</td><td class="c-s">2100%</td><td class="d-col" title="EXP">×1.91</td></tr>
+        <tr><td class="lv">+12</td><td>25%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td>1200%</td><td class="c-s">2200%</td><td class="d-col" title="EXP">×1.83</td></tr>
+        <tr><td class="lv">+13</td><td>25%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td>1300%</td><td class="c-s">2300%</td><td class="d-col" title="EXP">×1.77</td></tr>
+        <tr><td class="lv">+14</td><td>25%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td>1500%</td><td class="c-s">2500%</td><td class="d-col" title="EXP">×1.67</td></tr>
+        <tr class="is-max"><td class="lv">+15</td><td>30%</td><td class="c-s">30%</td><td>30</td><td class="c-s">40</td><td>2000%</td><td class="c-s">3000%</td><td class="d-col" title="EXP">×1.5</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+  <div class="note" style="margin-top:22px">&#128204; ข้อมูลจากโพสต์ <a href="https://www.vplay.in.th/%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%84/" target="_blank">อุปกรณ์ใหม่ — พลังแห่งความกล้า &middot; vplay.in.th</a> &middot; ค่าทั้งหมดเป็นค่าตามระดับตีบวก ไม่ใช่ค่าสุ่ม &middot; ชุดไดสุเกะ / ทาเครุ / มิยาโกะ ใช้ตารางเดียวกันต่อช่องสวม</div>
+
+</main>
+
+<footer class="site-footer">
+  Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
+  &nbsp;&middot;&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
+  &nbsp;&middot;&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+  &nbsp;&middot;&nbsp; <a href="styleguide.html">Style Guide</a>
+</footer>
+
+</body>
+</html>
