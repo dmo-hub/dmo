@@ -180,6 +180,7 @@ def main() -> None:
       <a href="decks.html">Decks</a>
       <a href="digimon.html">Digimon</a>
       <a href="seals.html">Seal</a>
+      <a href="gear.html">Gear Optimizer</a>
     </nav>
     <span class="nav-meta">scrape: dmo.gameking.com</span>
   </div>
@@ -240,6 +241,16 @@ def main() -> None:
       </div>
     </a>
 
+    <a href="gear.html" class="feature">
+      <div class="icon">⚙️</div>
+      <h3>Gear Optimizer</h3>
+      <p>หาชุดเครื่องประดับ + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้า HT/CT ที่ตั้งไว้</p>
+      <div class="feature-stats">
+        <div class="stat"><b>6</b>ช่องสวม</div>
+        <div class="stat"><b>6</b>ชิปสูงสุด</div>
+      </div>
+    </a>
+
     <a href="lookup.html" class="feature">
       <div class="icon">🔎</div>
       <h3>Cross-server Lookup</h3>
@@ -277,6 +288,16 @@ def main() -> None:
       <div class="feature-stats">
         <div class="stat"><b>7</b>ชนิด</div>
         <div class="stat"><b>10</b>ชิ้น</div>
+      </div>
+    </a>
+
+    <a href="equipment-shin.html" class="feature">
+      <div class="icon">⚔️</div>
+      <h3>อุปกรณ์ใหม่ ปกติ vs ชิน</h3>
+      <p>เทียบค่าสเตตัสชุดอุปกรณ์ตัวละคร แบบธรรมดา กับแบบ (ชิน) ทุกช่องสวม ทุกระดับตีบวก</p>
+      <div class="feature-stats">
+        <div class="stat"><b>6</b>ช่องสวม</div>
+        <div class="stat"><b>+0→+15</b>ระดับ</div>
       </div>
     </a>
 

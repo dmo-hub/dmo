@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="หาชุดเครื่องประดับ + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้า HT/CT ที่ตั้งไว้">
+<meta property="og:title" content="DMO Tracker — Gear Optimizer">
+<meta property="og:description" content="หาชุดเครื่องประดับ + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้า HT/CT ที่ตั้งไว้">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#9881;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>DMO Tracker — Gear Optimizer</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<style>
+  /* page-local only — colours and typography come from the shared tokens */
+  .go-tabs { display: flex; gap: 6px; margin: 0 0 18px; flex-wrap: wrap; }
+  .go-tab { cursor: pointer; font: inherit; font-size: 13px; font-weight: 600;
+    padding: 8px 17px; border-radius: 9999px; border: 1px solid var(--hairline);
+    background: var(--surface-soft); color: var(--muted); }
+  .go-tab[aria-selected="true"] { background: var(--primary); color: var(--on-primary); border-color: transparent; }
+  .go-panel[hidden] { display: none; }
+
+  .go-card { border: 1px solid var(--hairline); border-radius: var(--radius);
+    background: var(--canvas); padding: 18px; margin-bottom: 18px; }
+  .go-card > h2 { font-size: 15px; margin: 0 0 4px; color: var(--ink);
+    font-family: var(--display-font); font-weight: 600; }
+  .go-card > .go-sub { font-size: 12.5px; color: var(--muted); margin: 0 0 14px; line-height: 1.6; }
+
+  .go-tbl-wrap { overflow-x: auto; border: 1px solid var(--hairline); border-radius: var(--radius); }
+  table.go-tbl { border-collapse: collapse; width: 100%; font-size: 12.5px; min-width: 460px; }
+  table.go-tbl th, table.go-tbl td { padding: 6px 10px; text-align: center;
+    border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+  table.go-tbl thead th { background: var(--surface-card); color: var(--ink); font-weight: 600; }
+  table.go-tbl td:first-child, table.go-tbl th:first-child { text-align: left; }
+  table.go-tbl tr:last-child td { border-bottom: 0; }
+  table.go-tbl input, table.go-tbl select { font: inherit; font-size: 12.5px; width: 100%;
+    min-width: 62px; padding: 4px 7px; border: 1px solid var(--hairline);
+    border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
+  table.go-tbl td.go-name input { min-width: 120px; }
+  .go-del { cursor: pointer; border: 0; background: none; color: var(--muted-soft);
+    font-size: 15px; line-height: 1; padding: 2px 6px; }
+  .go-del:hover { color: var(--coral); }
+
+  .go-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; align-items: center; }
+  .go-btn { cursor: pointer; font: inherit; font-size: 12.5px; font-weight: 600;
+    padding: 8px 15px; border-radius: 9px; border: 1px solid var(--hairline);
+    background: var(--surface-soft); color: var(--body-strong); }
+  .go-btn.primary { background: var(--primary); color: var(--on-primary); border-color: transparent; }
+  .go-spacer { flex: 1; }
+
+  .go-fields { display: grid; grid-template-columns: repeat(3, minmax(120px, 1fr)); gap: 12px; }
+  @media (max-width: 620px) { .go-fields { grid-template-columns: 1fr 1fr; } }
+  .go-field label { display: block; font-size: 11.5px; font-weight: 600; color: var(--muted); margin-bottom: 5px; }
+  .go-field input { font: inherit; font-size: 14px; width: 100%; padding: 8px 11px;
+    border: 1px solid var(--hairline); border-radius: 9px;
+    background: var(--surface-soft); color: var(--ink); }
+
+  .go-verdict { border-radius: var(--radius); padding: 15px 18px; margin-bottom: 18px;
+    font-size: 13.5px; line-height: 1.65; }
+  .go-verdict.ok { background: var(--primary-soft); border: 1px solid var(--primary); color: var(--ink); }
+  .go-verdict.miss { background: var(--surface-card); border: 1px solid var(--amber); color: var(--ink); }
+
+  .go-totals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
+  @media (max-width: 560px) { .go-totals { grid-template-columns: 1fr; } }
+  .go-total { border: 1px solid var(--hairline); border-radius: var(--radius);
+    background: var(--surface-soft); padding: 14px 16px; }
+  .go-total .k { font-size: 11.5px; font-weight: 600; color: var(--muted); }
+  .go-total .v { font-size: 26px; font-weight: 600; color: var(--ink);
+    font-family: var(--display-font); line-height: 1.2; }
+  .go-total .t { font-size: 11.5px; color: var(--muted-soft); }
+  .go-total.hit .v { color: var(--teal); }
+  .go-total.short .v { color: var(--amber); }
+
+  .go-pick { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 720px) { .go-pick { grid-template-columns: 1fr; } }
+  .go-list { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+  .go-list li { display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
+    padding: 7px 0; border-bottom: 1px solid var(--hairline-soft); }
+  .go-list li:last-child { border-bottom: 0; }
+  .go-list .slot { color: var(--muted); font-size: 11.5px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .04em; }
+  .go-list .val { color: var(--muted-soft); font-size: 11.5px; }
+  .go-list .empty { color: var(--muted-soft); font-style: italic; }
+  .go-warn { color: var(--coral); font-size: 12.5px; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="gear.html" class="is-active">Gear Optimizer</a>
+    </nav>
+    <span class="nav-meta">คำนวณในเบราว์เซอร์</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <div>
+      <h1>&#9881;&#65039; Gear Optimizer</h1>
+      <p class="lead">ใส่เครื่องประดับกับชิปที่มี ตั้งเป้า HT/CT แล้วระบบจะหาชุดที่ให้ <b>AT สูงสุด</b> ที่ยังถึงเป้าให้ — ไล่ครบทุกความเป็นไปได้ ไม่ใช่การเดา</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num" id="hero-acc">0</div><div class="lbl">เครื่องประดับ</div></div>
+      <div class="hero-stat"><div class="num" id="hero-chip">0</div><div class="lbl">ชิป</div></div>
+      <div class="hero-stat"><div class="num">6</div><div class="lbl">ชิปสูงสุด</div></div>
+    </div>
+  </div>
+
+  <div class="go-tabs" role="tablist">
+    <button class="go-tab" id="tab-items" role="tab" aria-controls="panel-items" aria-selected="true" type="button">1 &middot; ไอเทมที่มี</button>
+    <button class="go-tab" id="tab-goal" role="tab" aria-controls="panel-goal" aria-selected="false" type="button">2 &middot; เป้าหมาย</button>
+    <button class="go-tab" id="tab-result" role="tab" aria-controls="panel-result" aria-selected="false" type="button">3 &middot; ผลลัพธ์</button>
+  </div>
+
+  <section class="go-panel" id="panel-items" role="tabpanel" aria-labelledby="tab-items">
+    <div class="go-card">
+      <h2>เครื่องประดับ</h2>
+      <p class="go-sub">6 ช่อง (ring &middot; necklace &middot; bracelet &middot; earring &middot; glasses &middot; wing) — แต่ละช่องใส่ได้ชิ้นเดียว ระบบจะเลือกเองว่าช่องไหนใส่อะไร หรือปล่อยว่าง</p>
+      <div class="go-tbl-wrap">
+        <table class="go-tbl">
+          <thead><tr><th>ชื่อ</th><th>ช่อง</th><th>AT</th><th>HT</th><th>CT (%)</th><th></th></tr></thead>
+          <tbody id="acc-body"></tbody>
+        </table>
+      </div>
+      <div class="go-actions">
+        <button class="go-btn" id="acc-add" type="button">+ เพิ่มเครื่องประดับ</button>
+      </div>
+    </div>
+
+    <div class="go-card">
+      <h2>ชิป</h2>
+      <p class="go-sub">ชิปสลับช่องได้อิสระ — ใส่ได้สูงสุด 6 ชิ้น ระบบจะเลือกชุดที่ดีที่สุดให้เอง</p>
+      <div class="go-tbl-wrap">
+        <table class="go-tbl">
+          <thead><tr><th>ชื่อ</th><th>AT</th><th>HT</th><th>CT (%)</th><th></th></tr></thead>
+          <tbody id="chip-body"></tbody>
+        </table>
+      </div>
+      <div class="go-actions">
+        <button class="go-btn" id="chip-add" type="button">+ เพิ่มชิป</button>
+        <span class="go-spacer"></span>
+        <button class="go-btn" id="reset-seed" type="button">คืนค่าชุดตัวอย่าง</button>
+      </div>
+      <p class="note" style="margin-top:14px">ข้อมูลเก็บในเบราว์เซอร์ของคุณเอง (localStorage) — ไม่ได้ส่งขึ้นเซิร์ฟเวอร์ และไม่หายเมื่อปิดหน้า</p>
+    </div>
+  </section>
+
+  <section class="go-panel" id="panel-goal" role="tabpanel" aria-labelledby="tab-goal" hidden>
+    <div class="go-card">
+      <h2>ค่าพื้นฐาน</h2>
+      <p class="go-sub">สเตตัสก่อนใส่ของ — ค่าคงที่ที่บวกเข้ากับทุกชุดเท่ากัน</p>
+      <div class="go-fields">
+        <div class="go-field"><label for="base-at">Base AT</label><input type="number" id="base-at" step="1" value="0"></div>
+        <div class="go-field"><label for="base-ht">Base HT</label><input type="number" id="base-ht" step="1" value="0"></div>
+        <div class="go-field"><label for="base-ct">Base CT (%)</label><input type="number" id="base-ct" step="0.01" value="0"></div>
+      </div>
+    </div>
+
+    <div class="go-card">
+      <h2>เป้าหมาย</h2>
+      <p class="go-sub">HT กับ CT ต้องถึงเท่านี้เป็นอย่างน้อย — เกินเป้าไม่มีผลดีผลเสีย ส่วน AT ไม่ต้องตั้งเป้า ระบบดันให้สูงสุดเอง</p>
+      <div class="go-fields">
+        <div class="go-field"><label for="target-ht">เป้า HT</label><input type="number" id="target-ht" step="1" value="0"></div>
+        <div class="go-field"><label for="target-ct">เป้า CT (%)</label><input type="number" id="target-ct" step="0.01" value="0"></div>
+      </div>
+      <div class="go-actions">
+        <button class="go-btn primary" id="run-goal" type="button">คำนวณเลย &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="go-panel" id="panel-result" role="tabpanel" aria-labelledby="tab-result" hidden>
+    <div id="result-root">
+      <div class="go-card"><p class="go-sub" style="margin:0">ยังไม่ได้คำนวณ — ไปที่แท็บ <b>2 &middot; เป้าหมาย</b> แล้วกดคำนวณ</p></div>
+    </div>
+    <div class="go-actions">
+      <button class="go-btn primary" id="run-again" type="button">คำนวณใหม่</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
+  &nbsp;&middot;&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
+  &nbsp;&middot;&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+  &nbsp;&middot;&nbsp; <a href="styleguide.html">Style Guide</a>
+</footer>
+
+<script src="js/gear-solver.js"></script>
+<script>
+(function () {
+  "use strict";
+  var SLOTS = window.GearSolver.SLOTS;
+  var MAX_CHIPS = window.GearSolver.MAX_CHIPS;
+  var ITEMS_KEY = "dmo_gear_items", GOAL_KEY = "dmo_gear_goal";
+
+  var jget = function (k, d) {
+    try { var v = JSON.parse(localStorage.getItem(k)); return v === null ? d : v; }
+    catch (e) { return d; }
+  };
+  var jset = function (k, v) {
+    try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode */ }
+  };
+  var $ = function (id) { return document.getElementById(id); };
+  var num = function (v) { return Number(v) || 0; };
+  var fmt = function (v) { return Math.round(v).toLocaleString("en-US"); };
+  var fmtCT = function (v) { return (Math.round(v * 100) / 100).toFixed(2); };
+  var T = {
+    empty: "\u2014 \u0e27\u0e48\u0e32\u0e07 \u2014",
+    noName: "(\u0e44\u0e21\u0e48\u0e21\u0e35\u0e0a\u0e37\u0e48\u0e2d)",
+    del: "\u0e25\u0e1a\u0e41\u0e16\u0e27\u0e19\u0e35\u0e49",
+    confirmSeed: "\u0e41\u0e17\u0e19\u0e17\u0e35\u0e48\u0e23\u0e32\u0e22\u0e01\u0e32\u0e23\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14\u0e14\u0e49\u0e27\u0e22\u0e0a\u0e38\u0e14\u0e15\u0e31\u0e27\u0e2d\u0e22\u0e48\u0e32\u0e07? \u0e02\u0e2d\u0e07\u0e17\u0e35\u0e48\u0e41\u0e01\u0e49\u0e44\u0e27\u0e49\u0e08\u0e30\u0e2b\u0e32\u0e22",
+    seedFail: "\u0e42\u0e2b\u0e25\u0e14\u0e0a\u0e38\u0e14\u0e15\u0e31\u0e27\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49 \u2014 \u0e40\u0e1b\u0e34\u0e14\u0e2b\u0e19\u0e49\u0e32\u0e19\u0e35\u0e49\u0e1c\u0e48\u0e32\u0e19\u0e40\u0e27\u0e47\u0e1a \u0e44\u0e21\u0e48\u0e43\u0e0a\u0e48\u0e40\u0e1b\u0e34\u0e14\u0e44\u0e1f\u0e25\u0e4c\u0e15\u0e23\u0e07 \u0e46",
+    noItems: "\u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e21\u0e35\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e43\u0e2b\u0e49\u0e04\u0e33\u0e19\u0e27\u0e13 \u2014 \u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a\u0e2b\u0e23\u0e37\u0e2d\u0e0a\u0e34\u0e1b\u0e01\u0e48\u0e2d\u0e19",
+    ok: "\u2705 \u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e2b\u0e21\u0e32\u0e22\u0e44\u0e14\u0e49 \u2014 \u0e19\u0e35\u0e48\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e43\u0e2b\u0e49 AT \u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e22\u0e31\u0e07\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32 HT/CT",
+    missA: "\u26a0\ufe0f \u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e14\u0e49\u0e27\u0e22\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e17\u0e35\u0e48\u0e21\u0e35\u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49 \u2014 \u0e02\u0e32\u0e14 HT \u0e2d\u0e35\u0e01 ",
+    missB: " \u00b7 \u0e02\u0e32\u0e14 CT \u0e2d\u0e35\u0e01 ",
+    missC: "% \u2014 \u0e14\u0e49\u0e32\u0e19\u0e25\u0e48\u0e32\u0e07\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e40\u0e02\u0e49\u0e32\u0e43\u0e01\u0e25\u0e49\u0e40\u0e1b\u0e49\u0e32\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14 \u0e41\u0e25\u0e30\u0e41\u0e23\u0e07\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e40\u0e17\u0e48\u0e32\u0e17\u0e35\u0e48\u0e17\u0e33\u0e44\u0e14\u0e49\u0e43\u0e19\u0e23\u0e30\u0e22\u0e30\u0e19\u0e31\u0e49\u0e19",
+    accHead: "\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a",
+    chipHead: "\u0e0a\u0e34\u0e1b",
+    atLbl: "AT (\u0e14\u0e31\u0e19\u0e43\u0e2b\u0e49\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14)",
+    noTarget: "\u0e44\u0e21\u0e48\u0e21\u0e35\u0e40\u0e1b\u0e49\u0e32\u0e15\u0e32\u0e22\u0e15\u0e31\u0e27",
+    target: "\u0e40\u0e1b\u0e49\u0e32 ",
+    dupA: "\u26a0\ufe0f \u0e21\u0e35\u0e44\u0e2d\u0e40\u0e17\u0e21 id \u0e0b\u0e49\u0e33 (",
+    dupB: ") \u2014 \u0e1c\u0e25\u0e2d\u0e32\u0e08\u0e40\u0e1e\u0e35\u0e49\u0e22\u0e19 \u0e25\u0e2d\u0e07\u0e25\u0e1a\u0e41\u0e16\u0e27\u0e17\u0e35\u0e48\u0e0b\u0e49\u0e33\u0e2d\u0e2d\u0e01"
+  };
+
+  var data = { accessories: [], chips: [] };
+  var lastRun = null;
+
+  /* Ids only have to be unique within this browser's saved set, so a counter
+     seeded past every existing id is enough. Unlike "smallest unused id", it
+     cannot hand out an id that a row further down the table already holds. */
+  var idSeq = 0;
+  function nextId(prefix) { idSeq += 1; return prefix + idSeq; }
+  function reseedIdSeq() {
+    var max = 0;
+    data.accessories.concat(data.chips).forEach(function (it) {
+      var m = /(\d+)$/.exec(String(it.id || ""));
+      if (m) max = Math.max(max, parseInt(m[1], 10));
+    });
+    idSeq = max;
+  }
+
+  // ---------------------------------------------------------------- tabs
+  var TABS = [["tab-items", "panel-items"], ["tab-goal", "panel-goal"], ["tab-result", "panel-result"]];
+  function showTab(id) {
+    TABS.forEach(function (pair) {
+      var on = pair[0] === id;
+      $(pair[0]).setAttribute("aria-selected", on ? "true" : "false");
+      $(pair[1]).hidden = !on;
+    });
+  }
+  TABS.forEach(function (pair) {
+    $(pair[0]).addEventListener("click", function () { showTab(pair[0]); });
+  });
+
+  // ---------------------------------------------------------------- item tables
+  function statCell(item, field, step) {
+    var td = document.createElement("td");
+    var inp = document.createElement("input");
+    inp.type = "number";
+    inp.step = step;
+    inp.value = item[field];
+    inp.addEventListener("input", function () {
+      // CT keeps its decimals (7.05); AT/HT are whole numbers, rounded not truncated
+      item[field] = field === "CT" ? num(inp.value) : Math.round(num(inp.value));
+      save();
+    });
+    td.appendChild(inp);
+    return td;
+  }
+
+  function nameCell(item) {
+    var td = document.createElement("td");
+    td.className = "go-name";
+    var inp = document.createElement("input");
+    inp.type = "text";
+    inp.value = item.name || "";
+    inp.addEventListener("input", function () { item.name = inp.value; save(); });
+    td.appendChild(inp);
+    return td;
+  }
+
+  function delCell(list, item) {
+    var td = document.createElement("td");
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "go-del";
+    b.textContent = "\u2715";
+    b.title = T.del;
+    b.addEventListener("click", function () {
+      var i = list.indexOf(item);
+      if (i >= 0) list.splice(i, 1);
+      save(); render();
+    });
+    td.appendChild(b);
+    return td;
+  }
+
+  function renderAcc() {
+    var body = $("acc-body");
+    body.textContent = "";
+    data.accessories.forEach(function (it) {
+      var tr = document.createElement("tr");
+      tr.appendChild(nameCell(it));
+      var tdSlot = document.createElement("td");
+      var sel = document.createElement("select");
+      SLOTS.forEach(function (s) {
+        var o = document.createElement("option");
+        o.value = s; o.textContent = s;
+        if (it.slot === s) o.selected = true;
+        sel.appendChild(o);
+      });
+      sel.addEventListener("change", function () { it.slot = sel.value; save(); });
+      tdSlot.appendChild(sel);
+      tr.appendChild(tdSlot);
+      tr.appendChild(statCell(it, "AT", "1"));
+      tr.appendChild(statCell(it, "HT", "1"));
+      tr.appendChild(statCell(it, "CT", "0.01"));
+      tr.appendChild(delCell(data.accessories, it));
+      body.appendChild(tr);
+    });
+  }
+
+  function renderChips() {
+    var body = $("chip-body");
+    body.textContent = "";
+    data.chips.forEach(function (it) {
+      var tr = document.createElement("tr");
+      tr.appendChild(nameCell(it));
+      tr.appendChild(statCell(it, "AT", "1"));
+      tr.appendChild(statCell(it, "HT", "1"));
+      tr.appendChild(statCell(it, "CT", "0.01"));
+      tr.appendChild(delCell(data.chips, it));
+      body.appendChild(tr);
+    });
+  }
+
+  function render() {
+    renderAcc();
+    renderChips();
+    $("hero-acc").textContent = data.accessories.length;
+    $("hero-chip").textContent = data.chips.length;
+  }
+
+  function save() { jset(ITEMS_KEY, data); }
+
+  $("acc-add").addEventListener("click", function () {
+    data.accessories.push({ id: nextId("acc"), name: "", slot: SLOTS[0], AT: 0, HT: 0, CT: 0 });
+    save(); render();
+  });
+  $("chip-add").addEventListener("click", function () {
+    data.chips.push({ id: nextId("chip"), name: "", AT: 0, HT: 0, CT: 0 });
+    save(); render();
+  });
+  $("reset-seed").addEventListener("click", function () {
+    if (!window.confirm(T.confirmSeed)) return;
+    loadSeed(true);
+  });
+
+  // ---------------------------------------------------------------- goal
+  var GOAL_FIELDS = ["base-at", "base-ht", "base-ct", "target-ht", "target-ct"];
+  function readGoal() {
+    return {
+      base: { AT: num($("base-at").value), HT: num($("base-ht").value), CT: num($("base-ct").value) },
+      ht: num($("target-ht").value),
+      ct: num($("target-ct").value)
+    };
+  }
+  function saveGoal() {
+    var g = {};
+    GOAL_FIELDS.forEach(function (id) { g[id] = $(id).value; });
+    jset(GOAL_KEY, g);
+  }
+  GOAL_FIELDS.forEach(function (id) { $(id).addEventListener("input", saveGoal); });
+
+  // ---------------------------------------------------------------- run
+  function run() {
+    var g = readGoal();
+    var dupes = window.GearSolver.findDuplicateIds(data);
+    var out = window.GearSolver.solve(data, g.base, g.ht, g.ct);
+    lastRun = { out: out, goal: g, dupes: dupes };
+    renderResult();
+    showTab("tab-result");
+  }
+  $("run-goal").addEventListener("click", run);
+  $("run-again").addEventListener("click", run);
+
+  function li(label, value, sub) {
+    var el = document.createElement("li");
+    var l = document.createElement("span");
+    l.className = "slot";
+    l.textContent = label;
+    var wrap = document.createElement("span");
+    var v = document.createElement("span");
+    if (value === null) { v.className = "empty"; v.textContent = T.empty; }
+    else { v.textContent = value; }
+    wrap.appendChild(v);
+    if (sub) {
+      var s = document.createElement("span");
+      s.className = "val";
+      s.textContent = "  " + sub;
+      wrap.appendChild(s);
+    }
+    el.appendChild(l);
+    el.appendChild(wrap);
+    return el;
+  }
+
+  function statLine(it) {
+    return "AT " + fmt(it.AT) + " \u00b7 HT " + fmt(it.HT) + " \u00b7 CT " + fmtCT(it.CT) + "%";
+  }
+
+  function totalBox(key, value, targetText, state) {
+    var d = document.createElement("div");
+    d.className = "go-total" + (state ? " " + state : "");
+    var k = document.createElement("div"); k.className = "k"; k.textContent = key;
+    var v = document.createElement("div"); v.className = "v"; v.textContent = value;
+    var t = document.createElement("div"); t.className = "t"; t.textContent = targetText;
+    d.appendChild(k); d.appendChild(v); d.appendChild(t);
+    return d;
+  }
+
+  function renderResult() {
+    var root = $("result-root");
+    root.textContent = "";
+    if (!lastRun) return;
+    var out = lastRun.out, g = lastRun.goal;
+
+    if (!out) {
+      var none = document.createElement("div");
+      none.className = "go-card";
+      none.textContent = T.noItems;
+      root.appendChild(none);
+      return;
+    }
+
+    var v = document.createElement("div");
+    v.className = "go-verdict " + (out.feasible ? "ok" : "miss");
+    v.textContent = out.feasible
+      ? T.ok
+      : T.missA + fmt(out.shortfall.HT) + T.missB + fmtCT(out.shortfall.CT) + T.missC;
+    root.appendChild(v);
+
+    var t = out.result.totals;
+    var box = document.createElement("div");
+    box.className = "go-totals";
+    box.appendChild(totalBox(T.atLbl, fmt(t.AT), T.noTarget));
+    box.appendChild(totalBox("HT", fmt(t.HT), T.target + fmt(g.ht), t.HT >= g.ht ? "hit" : "short"));
+    box.appendChild(totalBox("CT", fmtCT(t.CT) + "%", T.target + fmtCT(g.ct) + "%", t.CT >= g.ct ? "hit" : "short"));
+    root.appendChild(box);
+
+    var pick = document.createElement("div");
+    pick.className = "go-pick";
+
+    var c1 = document.createElement("div");
+    c1.className = "go-card";
+    var h1 = document.createElement("h2");
+    h1.textContent = T.accHead;
+    c1.appendChild(h1);
+    var ul1 = document.createElement("ul");
+    ul1.className = "go-list";
+    out.result.accessories.forEach(function (a) {
+      ul1.appendChild(a.item ? li(a.slot, a.item.name || T.noName, statLine(a.item)) : li(a.slot, null));
+    });
+    c1.appendChild(ul1);
+    pick.appendChild(c1);
+
+    var c2 = document.createElement("div");
+    c2.className = "go-card";
+    var h2 = document.createElement("h2");
+    h2.textContent = T.chipHead + " (" + out.result.chips.length + "/" + MAX_CHIPS + ")";
+    c2.appendChild(h2);
+    var ul2 = document.createElement("ul");
+    ul2.className = "go-list";
+    if (out.result.chips.length) {
+      out.result.chips.forEach(function (c, i) {
+        ul2.appendChild(li("#" + (i + 1), c.name || T.noName, statLine(c)));
+      });
+    } else {
+      ul2.appendChild(li("\u2014", null));
+    }
+    c2.appendChild(ul2);
+    pick.appendChild(c2);
+    root.appendChild(pick);
+
+    if (lastRun.dupes.length) {
+      var w = document.createElement("p");
+      w.className = "go-warn";
+      w.textContent = T.dupA + lastRun.dupes.join(", ") + T.dupB;
+      root.appendChild(w);
+    }
+  }
+
+  // ---------------------------------------------------------------- boot
+  /* Saved data is rebuilt rather than trusted. A duplicate id would let one item
+     be counted twice while filling only a single chip slot, so ids are re-issued
+     here instead of merely being reported after the fact. */
+  function normalize(d) {
+    var seen = {};
+    var fix = function (list, prefix, withSlot) {
+      return (list || []).map(function (it, i) {
+        var id = String((it && it.id) || "");
+        if (!id || seen[id]) id = prefix + "_" + i + "_" + Date.now().toString(36);
+        seen[id] = true;
+        var rec = {
+          id: id,
+          name: String((it && it.name) || ""),
+          AT: Math.round(num(it && it.AT)),
+          HT: Math.round(num(it && it.HT)),
+          CT: num(it && it.CT)
+        };
+        if (withSlot) rec.slot = SLOTS.indexOf(it && it.slot) >= 0 ? it.slot : SLOTS[0];
+        return rec;
+      });
+    };
+    return {
+      accessories: fix(d && d.accessories, "acc", true),
+      chips: fix(d && d.chips, "chip", false)
+    };
+  }
+
+  function loadSeed(force) {
+    fetch("gear_items.json")
+      .then(function (r) { return r.json(); })
+      .then(function (seed) {
+        data = normalize(seed);
+        reseedIdSeq();
+        save(); render();
+      })
+      .catch(function () {
+        if (force) window.alert(T.seedFail);
+        data = normalize(data);
+        render();
+      });
+  }
+
+  var savedGoal = jget(GOAL_KEY, null);
+  if (savedGoal) {
+    GOAL_FIELDS.forEach(function (id) {
+      if (savedGoal[id] !== undefined) $(id).value = savedGoal[id];
+    });
+  }
+
+  var savedItems = jget(ITEMS_KEY, null);
+  if (savedItems && ((savedItems.accessories || []).length || (savedItems.chips || []).length)) {
+    data = normalize(savedItems);
+    reseedIdSeq();
+    render();
+  } else {
+    loadSeed(false);
+  }
+})();
+</script>
+
+</body>
+</html>
