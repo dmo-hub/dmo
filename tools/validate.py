@@ -175,7 +175,7 @@ def check_parsers():
     sys.path.insert(0, str(PROJ / "scanners"))
     bad = []
     try:
-        from scan_clothing import parse_stat_cell
+        from scan_clothing import build_heading_map, parse_stat_cell, slot_from
         from scan_decks import parse_decks
         from scan_digimon import parse_digimon
         from scan_kr_digimon_releases import extract_releases
@@ -201,6 +201,19 @@ def check_parsers():
                    for x in parse_stat_cell("Digimon HP +12, Tamer Attack +4")],
                 ["AT:133.0-152.0", "pct", "random", "unsigned:0",
                  "HP/digimon", "AT/tamer"],
+            ),
+            (
+                # A nested table makes "<table" openings and "<table>...</table>"
+                # pairs disagree; keying slots off the wrong one shifts every
+                # heading by a table and silently mislabels every item after it.
+                "clothing_shapes.html",
+                lambda t: [
+                    slot_from(build_heading_map(t)(m.start()))
+                    for m in __import__("re").finditer(
+                        r"<table.*?</table>", t, __import__("re").S
+                    )
+                ],
+                ["Top", "Rings", "Gloves", "Shoes"],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (

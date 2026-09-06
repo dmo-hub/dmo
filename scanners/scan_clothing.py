@@ -162,8 +162,9 @@ def build_heading_map(html):
     """Map each table's document position to the h1/h2/h3 path above it.
 
     Most tables carry no slot column, so the heading is where the slot comes
-    from. Walking the DOM would desync on the nested Spiral Key Ring tables, so
-    positions are compared by offset in the raw document instead.
+    from. Returns a lookup keyed by document offset rather than a list: indexing
+    a parallel list by table number silently desyncs, because "<table" openings
+    and "<table>...</table>" pairs disagree wherever a table is nested.
     """
     heads = []
     for m in re.finditer(r"<h([1-3])[^>]*>(.*?)</h\1>", html, flags=re.S):
@@ -172,9 +173,7 @@ def build_heading_map(html):
         if text and text != "Contents":
             heads.append((m.start(), level, text))
 
-    out = []
-    for m in re.finditer(r"<table", html):
-        pos = m.start()
+    def path_at(pos):
         path = {}
         for hpos, level, text in heads:
             if hpos < pos:
@@ -184,8 +183,9 @@ def build_heading_map(html):
                         path.pop(deeper, None)
             else:
                 break
-        out.append(path)
-    return out
+        return path
+
+    return path_at
 
 
 def slot_from(path):
@@ -293,16 +293,17 @@ def main():
     html = io.open(CACHE, encoding="utf-8", errors="replace").read()
 
     oldid = re.search(r"oldid=(\d+)", html)
-    tables = re.findall(r"<table.*?</table>", html, flags=re.S)
-    heading_map = build_heading_map(html)
+    tables = [(m.start(), m.group(0))
+              for m in re.finditer(r"<table.*?</table>", html, flags=re.S)]
+    path_at = build_heading_map(html)
     total_rows = len(re.findall(r"<tr", html))
 
     items, skipped = [], []
     seen_ids = set()
     counted = 0
 
-    for idx, table in enumerate(tables):
-        path = heading_map[idx] if idx < len(heading_map) else {}
+    for idx, (pos, table) in enumerate(tables):
+        path = path_at(pos)
         heading = slot_from(path)
         rows = split_rows(table)
         # Count <tr> openings, not matched pairs: table 6 wraps the Spiral Key
