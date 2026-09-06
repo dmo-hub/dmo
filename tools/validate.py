@@ -175,6 +175,7 @@ def check_parsers():
     sys.path.insert(0, str(PROJ / "scanners"))
     bad = []
     try:
+        from scan_clothing import parse_stat_cell
         from scan_decks import parse_decks
         from scan_digimon import parse_digimon
         from scan_kr_digimon_releases import extract_releases
@@ -187,6 +188,17 @@ def check_parsers():
                 ["God’s Will", "Leader of the Awakened Four Holy Beasts"],
             ),
             ("na_digimon_patch_4171.html", parse_digimon, ["Apollomon"]),
+            (
+                "clothing_shapes.html",
+                lambda t: [
+                    "%s:%s" % (x["stat"], x.get("value", "%s-%s" % (x.get("min"), x.get("max"))))
+                    for x in parse_stat_cell("Attack +133~152")
+                ]
+                + [x["unit"] for x in parse_stat_cell("HP +5%")]
+                + ["random" if parse_stat_cell("Random bonus stat")[0]["random"] else "no"]
+                + ["unsigned:%d" % len(parse_stat_cell("Attack 92"))],
+                ["AT:133.0-152.0", "pct", "random", "unsigned:0"],
+            ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (
                 "th_digimon_slice.html",
