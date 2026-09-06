@@ -111,7 +111,7 @@
       <p class="lead">ใส่เครื่องประดับกับชิปที่มี ตั้งเป้า HT/CT แล้วระบบจะหาชุดที่ให้ <b>AT สูงสุด</b> ที่ยังถึงเป้าให้ — ไล่ครบทุกความเป็นไปได้ ไม่ใช่การเดา</p>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="num" id="hero-acc">0</div><div class="lbl">เครื่องประดับ</div></div>
+      <div class="hero-stat"><div class="num" id="hero-acc">0</div><div class="lbl">ของสวม</div></div>
       <div class="hero-stat"><div class="num" id="hero-chip">0</div><div class="lbl">ชิป</div></div>
       <div class="hero-stat"><div class="num">6</div><div class="lbl">ชิปสูงสุด</div></div>
     </div>
@@ -125,8 +125,8 @@
 
   <section class="go-panel" id="panel-items" role="tabpanel" aria-labelledby="tab-items">
     <div class="go-card">
-      <h2>เครื่องประดับ</h2>
-      <p class="go-sub">6 ช่อง (ring &middot; necklace &middot; bracelet &middot; earring &middot; glasses &middot; wing) — แต่ละช่องใส่ได้ชิ้นเดียว ระบบจะเลือกเองว่าช่องไหนใส่อะไร หรือปล่อยว่าง</p>
+      <h2>ของสวม</h2>
+      <p class="go-sub" id="slot-hint"></p>
       <div class="go-tbl-wrap">
         <table class="go-tbl">
           <thead><tr><th>ชื่อ</th><th>ช่อง</th><th>AT</th><th>HT</th><th>CT (%)</th><th></th></tr></thead>
@@ -134,7 +134,7 @@
         </table>
       </div>
       <div class="go-actions">
-        <button class="go-btn" id="acc-add" type="button">+ เพิ่มเครื่องประดับ</button>
+        <button class="go-btn" id="acc-add" type="button">+ เพิ่มของสวม</button>
       </div>
     </div>
 
@@ -228,7 +228,7 @@
     missA: "\u26a0\ufe0f \u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e14\u0e49\u0e27\u0e22\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e17\u0e35\u0e48\u0e21\u0e35\u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49 \u2014 \u0e02\u0e32\u0e14 HT \u0e2d\u0e35\u0e01 ",
     missB: " \u00b7 \u0e02\u0e32\u0e14 CT \u0e2d\u0e35\u0e01 ",
     missC: "% \u2014 \u0e14\u0e49\u0e32\u0e19\u0e25\u0e48\u0e32\u0e07\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e40\u0e02\u0e49\u0e32\u0e43\u0e01\u0e25\u0e49\u0e40\u0e1b\u0e49\u0e32\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14 \u0e41\u0e25\u0e30\u0e41\u0e23\u0e07\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e40\u0e17\u0e48\u0e32\u0e17\u0e35\u0e48\u0e17\u0e33\u0e44\u0e14\u0e49\u0e43\u0e19\u0e23\u0e30\u0e22\u0e30\u0e19\u0e31\u0e49\u0e19",
-    accHead: "\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a",
+    accHead: "\u0e02\u0e2d\u0e07\u0e2a\u0e27\u0e21",
     chipHead: "\u0e0a\u0e34\u0e1b",
     atLbl: "AT (\u0e14\u0e31\u0e19\u0e43\u0e2b\u0e49\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14)",
     noTarget: "\u0e44\u0e21\u0e48\u0e21\u0e35\u0e40\u0e1b\u0e49\u0e32\u0e15\u0e32\u0e22\u0e15\u0e31\u0e27",
@@ -352,6 +352,9 @@
   function render() {
     renderAcc();
     renderChips();
+    // built from SLOTS so the wording can never drift from the solver
+    $("slot-hint").textContent = SLOTS.length + " \u0e0a\u0e48\u0e2d\u0e07 (" +
+      SLOTS.join(" \u00b7 ") + ") \u2014 \u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e48\u0e2d\u0e07\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e0a\u0e34\u0e49\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27 \u0e23\u0e30\u0e1a\u0e1a\u0e08\u0e30\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e40\u0e2d\u0e07\u0e27\u0e48\u0e32\u0e0a\u0e48\u0e2d\u0e07\u0e44\u0e2b\u0e19\u0e43\u0e2a\u0e48\u0e2d\u0e30\u0e44\u0e23 \u0e2b\u0e23\u0e37\u0e2d\u0e1b\u0e25\u0e48\u0e2d\u0e22\u0e27\u0e48\u0e32\u0e07";
     $("hero-acc").textContent = data.accessories.length;
     $("hero-chip").textContent = data.chips.length;
   }

@@ -1,17 +1,24 @@
 /* Exact gear optimizer for the DMO accessory/chip loadout problem.
  *
  * Problem
- *   - 6 distinct accessory slots; each takes at most one accessory.
+ *   - 12 distinct gear slots (6 accessory + 6 clothing); one item each.
  *   - Chips are one interchangeable pool; at most MAX_CHIPS of them.
  *   - HT and CT must reach their targets (hard); overshoot is worthless.
  *   - AT has no target and is maximized.
  *
  * Why a DP and not an ILP
- *   The browser has no CBC. But "overshoot is worthless" lets every state whose
- *   HT/CT already clears the target collapse into a single state, which bounds
- *   the table: on the real dataset the worst case is ~45k states, trivial to
- *   enumerate. The result is exact, not a heuristic — it agrees with the PuLP
+ *   The browser has no CBC. "Overshoot is worthless" lets every state whose
+ *   HT/CT already clears the target collapse into one, which is what keeps the
+ *   table small. The result is exact, not a heuristic — it agrees with the PuLP
  *   reference model on every cross-checked case.
+ *
+ *   ⚠️ This bound only holds while the item list stays small. Benchmarking with
+ *   ~400 items (the size of the full wiki registry) blows the table past 6M
+ *   states and the solve never returns, at 6 slots as well as 12. Wiring a
+ *   registry of that size into the page needs the algorithm replaced first —
+ *   dominance filtering plus branch-and-bound solved the same instances in
+ *   ~3s. The seed shipped with the page is far smaller, so this DP is still
+ *   correct and fast for it.
  *
  * CT is a percentage carried to 2 decimals (7.05, 7.12), so it is quantized to
  * hundredths and kept in integers; floats would make the state keys unstable.
@@ -19,7 +26,12 @@
 (function (root) {
   "use strict";
 
-  var SLOTS = ["ring", "necklace", "bracelet", "earring", "glasses", "wing"];
+  /* Accessory slots first, then the clothing slots. Order is the order the
+     result list renders in, so it follows how the game lays the doll out. */
+  var SLOTS = [
+    "ring", "necklace", "bracelet", "earring", "glasses", "wing",
+    "head", "fashion", "top", "bottom", "gloves", "shoes"
+  ];
   var MAX_CHIPS = 6;
 
   var ct100 = function (v) { return Math.round((Number(v) || 0) * 100); };
