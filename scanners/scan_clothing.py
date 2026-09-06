@@ -77,7 +77,14 @@ def clean(html):
 
 
 def canon_stat(label):
+    """Resolve a wiki stat label, ignoring any Tamer/Digimon prefix.
+
+    The page writes "Digimon HP +12~60" wherever both axes appear in one table,
+    so the prefix has to be stripped before the lookup -- otherwise every
+    prefixed stat resolves to nothing and the row silently loses its numbers.
+    """
     key = re.sub(r"[^a-z ]", "", label.lower()).strip()
+    key = re.sub(r"^(?:tamer|digimon)\s+", "", key)
     return STAT_ALIASES.get(key)
 
 
@@ -104,12 +111,18 @@ def parse_stat_cell(text):
         r"([A-Za-z][A-Za-z .\-]*?)\s*\+\s*(\d+(?:\.\d+)?)(?:\s*~\s*\+?(\d+(?:\.\d+)?))?\s*(%?)"
     )
     for m in pattern.finditer(text):
-        stat = canon_stat(m.group(1))
+        label = m.group(1)
+        stat = canon_stat(label)
         if not stat:
             continue
         lo, hi, pct = m.group(2), m.group(3), m.group(4)
         unit = "pct" if pct else unit_for(stat)
         rec = {"stat": stat, "unit": unit, "random": False}
+        # The prefix belongs to this stat, not to the row: one Key Ring line can
+        # grant Digimon HP and Tamer Attack together.
+        pre = re.match(r"\s*(tamer|digimon)", label.lower())
+        if pre:
+            rec["axis"] = pre.group(1)
         if hi is not None:
             rec["min"] = float(lo)
             rec["max"] = float(hi)
@@ -213,11 +226,18 @@ def parse_rowwise(rows, path, seen, stats_cols, name_col, upgrade_col):
         # (cosmetics, and the option-slot tables). It belongs in the registry;
         # only rows we could not READ are failures, so the two are kept apart.
         slot = slot_from(path)
+        axes_seen = {st.get("axis") for st in stats if st.get("axis")}
+        if len(axes_seen) == 1:
+            row_axis = axes_seen.pop()
+        elif len(axes_seen) > 1:
+            row_axis = "mixed"      # per-stat axis is authoritative in this case
+        else:
+            row_axis = axis_for(blob, slot) or "unknown"
         rec = {
             "id": mk_id(name, slot, seen),
             "name": name,
             "slot": slot,
-            "axis": axis_for(blob, slot) or "unknown",
+            "axis": row_axis,
             "stats": stats,
         }
         if upgrade_col is not None and upgrade_col < len(texts):
@@ -337,7 +357,8 @@ def main():
     # axis is never stated. Defaulting those to digimon would put tamer-scale
     # numbers (~10x smaller) into the optimizer with nothing to flag it, so the
     # gap is recorded instead of filled in.
-    assert all(i["axis"] in ("digimon", "tamer", "unknown") for i in items), "bad axis"
+    assert all(i["axis"] in ("digimon", "tamer", "mixed", "unknown")
+               for i in items), "bad axis"
 
     payload = {
         "source": {

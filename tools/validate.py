@@ -196,8 +196,11 @@ def check_parsers():
                 ]
                 + [x["unit"] for x in parse_stat_cell("HP +5%")]
                 + ["random" if parse_stat_cell("Random bonus stat")[0]["random"] else "no"]
-                + ["unsigned:%d" % len(parse_stat_cell("Attack 92"))],
-                ["AT:133.0-152.0", "pct", "random", "unsigned:0"],
+                + ["unsigned:%d" % len(parse_stat_cell("Attack 92"))]
+                + ["%s/%s" % (x["stat"], x.get("axis"))
+                   for x in parse_stat_cell("Digimon HP +12, Tamer Attack +4")],
+                ["AT:133.0-152.0", "pct", "random", "unsigned:0",
+                 "HP/digimon", "AT/tamer"],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (

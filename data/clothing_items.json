@@ -36,7 +36,22 @@
       "name": "Agumon Paw Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 300.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 700.0
+        }
+      ]
     },
     {
       "id": "bottom-arbormon-s-gauntlet-event",
@@ -63,49 +78,105 @@
       "name": "Baihumon Aural Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 300.0
+        }
+      ]
     },
     {
       "id": "bottom-baihumon-gloves",
       "name": "Baihumon Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 250.0
+        }
+      ]
     },
     {
       "id": "bottom-baihumon-s-flawless-gloves",
       "name": "Baihumon's Flawless Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 400.0
+        }
+      ]
     },
     {
       "id": "bottom-boundless-advanced-gloves-30-days",
       "name": "Boundless Advanced Gloves (30 days)",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 250.0
+        }
+      ]
     },
     {
       "id": "bottom-boundless-crude-gloves-30-days",
       "name": "Boundless Crude Gloves (30 days)",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 150.0
+        }
+      ]
     },
     {
       "id": "bottom-boundless-inferior-gloves-30-days",
       "name": "Boundless Inferior Gloves (30 days)",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 50.0
+        }
+      ]
     },
     {
       "id": "bottom-boundless-plain-gloves-30-days",
       "name": "Boundless Plain Gloves (30 days)",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 200.0
+        }
+      ]
     },
     {
       "id": "bottom-chakkumon-s-romeo-event",
@@ -166,14 +237,30 @@
       "name": "Flame Gloves of Zhuqiaomon",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 300.0
+        }
+      ]
     },
     {
       "id": "bottom-gloves-of-zhuqiaomon",
       "name": "Gloves of Zhuqiaomon",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 250.0
+        }
+      ]
     },
     {
       "id": "bottom-lanamon-s-gauntlet-event",
@@ -242,28 +329,60 @@
       "name": "Qinglongmon's Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 250.0
+        }
+      ]
     },
     {
       "id": "bottom-qinglongmon-s-lightning-gloves",
       "name": "Qinglongmon's Lightning Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 330.0
+        }
+      ]
     },
     {
       "id": "bottom-qinglongmon-s-radiant-gloves",
       "name": "Qinglongmon's Radiant Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 300.0
+        }
+      ]
     },
     {
       "id": "bottom-shiny-desert-gloves-60-days",
       "name": "Shiny Desert Gloves (60 days)",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 210.0
+        }
+      ]
     },
     {
       "id": "bottom-small-lollipop",
@@ -271,6 +390,13 @@
       "slot": "Bottom",
       "axis": "tamer",
       "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 100.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -310,6 +436,13 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 100.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -323,6 +456,13 @@
       "slot": "Bottom",
       "axis": "tamer",
       "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 150.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -363,28 +503,67 @@
       "name": "WaruMonzaemon Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 300.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 200.0
+        }
+      ]
     },
     {
       "id": "bottom-xuanwumon-gloves",
       "name": "Xuanwumon Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 250.0
+        }
+      ]
     },
     {
       "id": "bottom-xuanwumon-s-aquatic-gloves",
       "name": "Xuanwumon's Aquatic Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 330.0
+        }
+      ]
     },
     {
       "id": "bottom-xuanwumon-shiny-gloves",
       "name": "Xuanwumon Shiny Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 300.0
+        }
+      ]
     },
     {
       "id": "bottom-yolei-t-k-davis-gloves",
@@ -415,7 +594,15 @@
       "name": "Zhuqiamon's Infernal Gloves",
       "slot": "Bottom",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 330.0
+        }
+      ]
     },
     {
       "id": "bracelets-digiaura",
@@ -1180,6 +1367,13 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 50.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -1213,6 +1407,13 @@
       "slot": "Digimon Kaiser´s Goggles",
       "axis": "tamer",
       "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 50.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -1268,6 +1469,13 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 50.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -1295,6 +1503,13 @@
       "slot": "Digimon Kaiser´s Goggles",
       "axis": "tamer",
       "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 50.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -1330,6 +1545,13 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 50.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -1343,6 +1565,13 @@
       "slot": "Digimon Kaiser´s Goggles",
       "axis": "tamer",
       "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 100.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -2816,7 +3045,15 @@
       "name": "Agumon Top",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 700.0
+        }
+      ]
     },
     {
       "id": "fashion-arbormon-s-upper-armor-event",
@@ -2837,14 +3074,30 @@
       "name": "Aural Hooded Shirt of Baihumon",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "fashion-baihumon-s-flawless-hooded-shirt",
       "name": "Baihumon's Flawless Hooded Shirt",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1100.0
+        }
+      ]
     },
     {
       "id": "fashion-chakkumon-s-ice-vest-event",
@@ -2905,28 +3158,60 @@
       "name": "Flame Hooded Shirt of Zhuqiaomon",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "fashion-hooded-shirt-of-baihumon",
       "name": "Hooded Shirt of Baihumon",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 500.0
+        }
+      ]
     },
     {
       "id": "fashion-hooded-shirt-of-qinglongmon",
       "name": "Hooded Shirt of Qinglongmon",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 500.0
+        }
+      ]
     },
     {
       "id": "fashion-hooded-shirt-of-zhuqiaomon",
       "name": "Hooded Shirt of Zhuqiaomon",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 500.0
+        }
+      ]
     },
     {
       "id": "fashion-lanamon-s-swimsuit-event",
@@ -2953,14 +3238,30 @@
       "name": "Qinglongmon's Lightning Hooded Shirt",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 900.0
+        }
+      ]
     },
     {
       "id": "fashion-radiant-hooded-shirt-of-qinglongmon",
       "name": "Radiant Hooded Shirt of Qinglongmon",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "fashion-spirit-top",
@@ -2991,7 +3292,15 @@
       "name": "Spooky Soulmon's Robe [30 days]",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "fashion-t-shirts",
@@ -3025,28 +3334,60 @@
       "name": "Unlimited Advanced T -shirt [30 days]",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 800.0
+        }
+      ]
     },
     {
       "id": "fashion-xuanwumon-hooded-shirt",
       "name": "Xuanwumon Hooded Shirt",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 500.0
+        }
+      ]
     },
     {
       "id": "fashion-xuanwumon-s-aquatic-hooded-shirt",
       "name": "Xuanwumon's Aquatic Hooded Shirt",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1200.0
+        }
+      ]
     },
     {
       "id": "fashion-xuanwumon-shiny-hooded-shirt",
       "name": "Xuanwumon Shiny Hooded Shirt",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "fashion-yolei-t-k-davis-top",
@@ -3077,7 +3418,15 @@
       "name": "Zhuqiamon's Infernal Hooded Shirt",
       "slot": "Fashion",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 900.0
+        }
+      ]
     },
     {
       "id": "ghost-key-ring-complete-tamer-s-goggles",
@@ -3086,10 +3435,26 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 100.0,
+          "max": 500.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
           "value": 20.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 200.0,
+          "max": 1000.0
         }
       ]
     },
@@ -3107,6 +3472,14 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 55.0,
+          "max": 275.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -3121,10 +3494,26 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 60.0,
+          "max": 300.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
           "value": 14.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 20.0,
+          "max": 100.0
         }
       ]
     },
@@ -3135,10 +3524,26 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 68.0,
+          "max": 340.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
           "value": 14.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 36.0,
+          "max": 180.0
         }
       ]
     },
@@ -3149,10 +3554,26 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 72.0,
+          "max": 360.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
           "value": 15.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 50.0,
+          "max": 250.0
         }
       ]
     },
@@ -3163,10 +3584,26 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 76.0,
+          "max": 380.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
           "value": 15.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 90.0,
+          "max": 450.0
         }
       ]
     },
@@ -3177,10 +3614,26 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 80.0,
+          "max": 400.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
           "value": 16.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 140.0,
+          "max": 700.0
         }
       ]
     },
@@ -3190,6 +3643,14 @@
       "slot": "Ghost Key Ring",
       "axis": "tamer",
       "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 10.0,
+          "max": 50.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -3205,6 +3666,14 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 20.0,
+          "max": 100.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -3218,6 +3687,14 @@
       "slot": "Ghost Key Ring",
       "axis": "tamer",
       "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 25.0,
+          "max": 125.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -3233,6 +3710,14 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 30.0,
+          "max": 150.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -3246,6 +3731,14 @@
       "slot": "Ghost Key Ring",
       "axis": "tamer",
       "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 35.0,
+          "max": 175.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -3261,6 +3754,14 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 40.0,
+          "max": 200.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -3275,6 +3776,14 @@
       "axis": "tamer",
       "stats": [
         {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 45.0,
+          "max": 225.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -3288,6 +3797,14 @@
       "slot": "Ghost Key Ring",
       "axis": "tamer",
       "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 50.0,
+          "max": 250.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -3762,56 +4279,256 @@
       "name": "Spiral Key Ring Lv.1",
       "slot": "Key Rings",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 25.0,
+          "max": 50.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 4.0,
+          "max": 8.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 3.0,
+          "max": 6.0
+        }
+      ]
     },
     {
       "id": "key-rings-spiral-key-ring-lv-2",
       "name": "Spiral Key Ring Lv.2",
       "slot": "Key Rings",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 50.0,
+          "max": 100.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 7.0,
+          "max": 15.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 5.0,
+          "max": 10.0
+        }
+      ]
     },
     {
       "id": "key-rings-spiral-key-ring-lv-3",
       "name": "Spiral Key Ring Lv.3",
       "slot": "Key Rings",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 105.0,
+          "max": 210.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 15.0,
+          "max": 30.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 11.0,
+          "max": 22.0
+        }
+      ]
     },
     {
       "id": "key-rings-spiral-key-ring-lv-4",
       "name": "Spiral Key Ring Lv.4",
       "slot": "Key Rings",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 185.0,
+          "max": 370.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 27.0,
+          "max": 54.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 18.0,
+          "max": 37.0
+        }
+      ]
     },
     {
       "id": "key-rings-spiral-key-ring-lv-5",
       "name": "Spiral Key Ring Lv.5",
       "slot": "Key Rings",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 295.0,
+          "max": 590.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 42.0,
+          "max": 84.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 29.0,
+          "max": 59.0
+        }
+      ]
     },
     {
       "id": "key-rings-spiral-key-ring-lv-6",
       "name": "Spiral Key Ring Lv.6",
       "slot": "Key Rings",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 430.0,
+          "max": 860.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 61.0,
+          "max": 122.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 43.0,
+          "max": 86.0
+        }
+      ]
     },
     {
       "id": "key-rings-spiral-key-ring-lv-7",
       "name": "Spiral Key Ring Lv.7",
       "slot": "Key Rings",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 590.0,
+          "max": 1180.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 84.0,
+          "max": 168.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 59.0,
+          "max": 119.0
+        }
+      ]
     },
     {
       "id": "key-rings-spiral-key-ring-lv-max",
       "name": "Spiral Key Ring Lv.Max",
       "slot": "Key Rings",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 775.0,
+          "max": 1550.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 111.0,
+          "max": 222.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "min": 78.0,
+          "max": 156.0
+        }
+      ]
     },
     {
       "id": "necklaces-aural-necklace-of-sealed-baihumon",
@@ -8216,112 +8933,400 @@
       "name": "Spiral Key Ring(JT) Lv.1",
       "slot": "Spiral Key Ring (DS)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 12.0,
+          "max": 60.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 2.0,
+          "max": 10.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-jt-lv-2",
       "name": "Spiral Key Ring(JT) Lv.2",
       "slot": "Spiral Key Ring (DS)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 26.0,
+          "max": 130.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 3.0,
+          "max": 19.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-jt-lv-3",
       "name": "Spiral Key Ring(JT) Lv.3",
       "slot": "Spiral Key Ring (DS)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 52.0,
+          "max": 260.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 7.0,
+          "max": 38.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-jt-lv-4",
       "name": "Spiral Key Ring(JT) Lv.4",
       "slot": "Spiral Key Ring (DS)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 94.0,
+          "max": 470.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 13.0,
+          "max": 67.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-jt-lv-5",
       "name": "Spiral Key Ring(JT) Lv.5",
       "slot": "Spiral Key Ring (DS)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 146.0,
+          "max": 730.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 21.0,
+          "max": 105.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-jt-lv-6",
       "name": "Spiral Key Ring(JT) Lv.6",
       "slot": "Spiral Key Ring (DS)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 214.0,
+          "max": 1070.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 30.0,
+          "max": 153.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-jt-lv-7",
       "name": "Spiral Key Ring(JT) Lv.7",
       "slot": "Spiral Key Ring (DS)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 294.0,
+          "max": 1470.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 42.0,
+          "max": 210.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-jt-lv-max",
       "name": "Spiral Key Ring(JT) Lv.Max",
       "slot": "Spiral Key Ring (DS)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 388.0,
+          "max": 1940.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 42.0,
+          "max": 210.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "axis": "digimon",
+          "min": 2.0,
+          "max": 10.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-me-lv-1",
       "name": "Spiral Key Ring(ME) Lv.1",
       "slot": "Spiral Key Ring (JT)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 12.0,
+          "max": 60.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 2.0,
+          "max": 10.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-me-lv-2",
       "name": "Spiral Key Ring(ME) Lv.2",
       "slot": "Spiral Key Ring (JT)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 26.0,
+          "max": 130.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 3.0,
+          "max": 19.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-me-lv-3",
       "name": "Spiral Key Ring(ME) Lv.3",
       "slot": "Spiral Key Ring (JT)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 52.0,
+          "max": 260.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 7.0,
+          "max": 38.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-me-lv-4",
       "name": "Spiral Key Ring(ME) Lv.4",
       "slot": "Spiral Key Ring (JT)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 94.0,
+          "max": 470.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 13.0,
+          "max": 67.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-me-lv-5",
       "name": "Spiral Key Ring(ME) Lv.5",
       "slot": "Spiral Key Ring (JT)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 146.0,
+          "max": 730.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 21.0,
+          "max": 105.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-me-lv-6",
       "name": "Spiral Key Ring(ME) Lv.6",
       "slot": "Spiral Key Ring (JT)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 214.0,
+          "max": 1070.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 30.0,
+          "max": 153.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-me-lv-7",
       "name": "Spiral Key Ring(ME) Lv.7",
       "slot": "Spiral Key Ring (JT)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 294.0,
+          "max": 1470.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 42.0,
+          "max": 210.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-me-lv-max",
       "name": "Spiral Key Ring(ME) Lv.Max",
       "slot": "Spiral Key Ring (JT)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 388.0,
+          "max": 1940.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 42.0,
+          "max": 210.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "axis": "digimon",
+          "min": 2.0,
+          "max": 10.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-me-ghost-keyring-families",
@@ -8456,112 +9461,400 @@
       "name": "Spiral Key Ring(WG) Lv.1",
       "slot": "Spiral Key Ring",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 12.0,
+          "max": 60.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 2.0,
+          "max": 10.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-spiral-key-ring-wg-lv-2",
       "name": "Spiral Key Ring(WG) Lv.2",
       "slot": "Spiral Key Ring",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 26.0,
+          "max": 130.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 3.0,
+          "max": 19.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-spiral-key-ring-wg-lv-3",
       "name": "Spiral Key Ring(WG) Lv.3",
       "slot": "Spiral Key Ring",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 52.0,
+          "max": 260.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 7.0,
+          "max": 38.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-spiral-key-ring-wg-lv-4",
       "name": "Spiral Key Ring(WG) Lv.4",
       "slot": "Spiral Key Ring",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 94.0,
+          "max": 470.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 13.0,
+          "max": 67.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-spiral-key-ring-wg-lv-5",
       "name": "Spiral Key Ring(WG) Lv.5",
       "slot": "Spiral Key Ring",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 146.0,
+          "max": 730.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 21.0,
+          "max": 105.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-spiral-key-ring-wg-lv-6",
       "name": "Spiral Key Ring(WG) Lv.6",
       "slot": "Spiral Key Ring",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 214.0,
+          "max": 1070.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 30.0,
+          "max": 153.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-spiral-key-ring-wg-lv-7",
       "name": "Spiral Key Ring(WG) Lv.7",
       "slot": "Spiral Key Ring",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 294.0,
+          "max": 1470.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 42.0,
+          "max": 210.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-spiral-key-ring-wg-lv-max",
       "name": "Spiral Key Ring(WG) Lv.Max",
       "slot": "Spiral Key Ring",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 388.0,
+          "max": 1940.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 42.0,
+          "max": 210.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "axis": "digimon",
+          "min": 2.0,
+          "max": 10.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-ds-lv-1",
       "name": "Spiral Key Ring(DS) Lv.1",
       "slot": "Spiral Key Ring (WG)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 12.0,
+          "max": 60.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 2.0,
+          "max": 10.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-ds-lv-2",
       "name": "Spiral Key Ring(DS) Lv.2",
       "slot": "Spiral Key Ring (WG)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 26.0,
+          "max": 130.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 3.0,
+          "max": 19.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-ds-lv-3",
       "name": "Spiral Key Ring(DS) Lv.3",
       "slot": "Spiral Key Ring (WG)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 52.0,
+          "max": 260.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 7.0,
+          "max": 38.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-ds-lv-4",
       "name": "Spiral Key Ring(DS) Lv.4",
       "slot": "Spiral Key Ring (WG)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 94.0,
+          "max": 470.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 13.0,
+          "max": 67.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-ds-lv-5",
       "name": "Spiral Key Ring(DS) Lv.5",
       "slot": "Spiral Key Ring (WG)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 146.0,
+          "max": 730.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 21.0,
+          "max": 105.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-ds-lv-6",
       "name": "Spiral Key Ring(DS) Lv.6",
       "slot": "Spiral Key Ring (WG)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 214.0,
+          "max": 1070.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 30.0,
+          "max": 153.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-ds-lv-7",
       "name": "Spiral Key Ring(DS) Lv.7",
       "slot": "Spiral Key Ring (WG)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 294.0,
+          "max": 1470.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 42.0,
+          "max": 210.0
+        }
+      ]
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-ds-lv-max",
       "name": "Spiral Key Ring(DS) Lv.Max",
       "slot": "Spiral Key Ring (WG)",
       "axis": "digimon",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 388.0,
+          "max": 1940.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "axis": "digimon",
+          "min": 42.0,
+          "max": 210.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "axis": "digimon",
+          "min": 2.0,
+          "max": 10.0
+        }
+      ]
     },
     {
       "id": "susa-digivice-digimon-xros-fusion-drakness-loader",
@@ -8705,14 +9998,30 @@
       "name": "Aural Short Pants of Baihumon",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "top-baihumon-s-flawless-short-pants",
       "name": "Baihumon's Flawless Short Pants",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1100.0
+        }
+      ]
     },
     {
       "id": "top-chakkumon-s-snowman-event",
@@ -8779,7 +10088,15 @@
       "name": "Flame Short Pants of Zhuqiaomon",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "top-lanamon-s-tights-event",
@@ -8813,35 +10130,75 @@
       "name": "Qinglongmon's Lightning Short Pants",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1100.0
+        }
+      ]
     },
     {
       "id": "top-radiant-short-pants-of-qinglongmon",
       "name": "Radiant Short Pants of Qinglongmon",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "top-short-pants-of-baihumon",
       "name": "Short Pants of Baihumon",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 500.0
+        }
+      ]
     },
     {
       "id": "top-short-pants-of-qinglongmon",
       "name": "Short Pants of Qinglongmon",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 500.0
+        }
+      ]
     },
     {
       "id": "top-short-pants-of-zhuqiaomon",
       "name": "Short Pants of Zhuqiaomon",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 500.0
+        }
+      ]
     },
     {
       "id": "top-spirit-bottom",
@@ -8892,21 +10249,45 @@
       "name": "Xuanwumon's Aquatic Short Pants",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1100.0
+        }
+      ]
     },
     {
       "id": "top-xuanwumon-shiny-short-pants",
       "name": "Xuanwumon Shiny Short Pants",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "top-xuanwumon-short-pants",
       "name": "Xuanwumon Short Pants",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 500.0
+        }
+      ]
     },
     {
       "id": "top-yolei-t-k-davis-bottom",
@@ -8937,7 +10318,15 @@
       "name": "Zhuqiamon's Infernal Short Pants",
       "slot": "Top",
       "axis": "tamer",
-      "stats": []
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "axis": "tamer",
+          "value": 1100.0
+        }
+      ]
     },
     {
       "id": "xai-system-sakura-xai-ver-vi",
