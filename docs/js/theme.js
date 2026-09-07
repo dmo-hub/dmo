@@ -74,3 +74,52 @@
     });
   }
 })();
+
+/* Bring the current page's nav link into view.
+ * Under 720px the nav row scrolls sideways, so on a page whose link sits late
+ * in the list -- Gear Optimizer is 500px in at 360px wide -- the reader opens
+ * the page and cannot see which one they are on. Scrolling the row is enough;
+ * the page itself never moves. */
+(function () {
+  /* The fade on the right edge means the last link is never fully visible.
+     Drop it once there is nothing further to scroll to. */
+  function markEnd(nav) {
+    var atEnd = nav.scrollLeft >= nav.scrollWidth - nav.clientWidth - 1;
+    nav.classList.toggle('is-scroll-end', atEnd);
+  }
+
+  function reveal() {
+    var nav = document.querySelector('.site-nav nav');
+    if (!nav || nav.scrollWidth <= nav.clientWidth) return;
+    var active = nav.querySelector('.is-active');
+    if (!active) return;
+    var navBox = nav.getBoundingClientRect();
+    var box = active.getBoundingClientRect();
+    if (box.left >= navBox.left && box.right <= navBox.right) return;
+    /* offsetLeft is measured from offsetParent, which is not this nav (it is
+       not positioned), so it cannot be used here. The distance from the row's
+       current scroll position is what actually moves it. */
+    var delta = box.left - navBox.left;
+    var want = nav.scrollLeft + delta - (nav.clientWidth - box.width) / 2;
+    nav.scrollLeft = Math.max(0, Math.min(want, nav.scrollWidth - nav.clientWidth));
+    markEnd(nav);
+  }
+  function bind() {
+    var nav = document.querySelector('.site-nav nav');
+    if (!nav) return;
+    reveal();
+    /* Link widths are not final until the webfont lands, and a first pass
+       measured against fallback metrics lands short of the end. */
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(reveal);
+    }
+    window.addEventListener('resize', reveal);
+    nav.addEventListener('scroll', function () { markEnd(nav); }, { passive: true });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else {
+    bind();
+  }
+})();

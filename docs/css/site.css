@@ -26,7 +26,11 @@
   --ink: #0b1220;
   --body-strong: #1c2638;
   --body: #3d4a60;
-  --muted: #6b7891;
+  /* #6b7891 fell under WCAG AA (4.5) on every surface it is actually used on:
+     4.45 on white, 4.22 on --surface-soft, 4.07 on --surface-card and 3.70 on
+     --surface-strong. This value clears 4.5 on all four (5.66 / 5.36 / 5.17 /
+     4.71). Dark mode was already fine at 7.35-7.76 and is left alone. */
+  --muted: #5c6879;
   --muted-soft: #94a0b3;
 
   /* Text on dark surfaces (footer) */
@@ -671,11 +675,15 @@ body { overflow-x: hidden; }
     overflow-x: auto; flex-wrap: nowrap; white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    /* fade hint that more links exist to the right */
+    /* Fade hint that more links exist to the right. It is dropped once the row
+       is scrolled to the end (js/theme.js sets .is-scroll-end), otherwise the
+       last link -- which is the current page on the deepest pages -- stays half
+       faded with nowhere left to scroll. */
     mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent);
     -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent);
   }
   .site-nav nav::-webkit-scrollbar { display: none; }
+  .site-nav nav.is-scroll-end { mask-image: none; -webkit-mask-image: none; }
   .site-nav nav a { padding: 8px 10px; font-size: 13px; flex-shrink: 0; }
   .site-nav .nav-meta { display: none; }
   .site-nav .brand { flex-shrink: 0; }
