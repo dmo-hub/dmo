@@ -177,6 +177,7 @@ def check_parsers():
     try:
         from scan_vplay_upgrade import parse_blocks as parse_vplay_blocks
         from scan_chipsets import parse_chipsets
+        from scan_attributes import parse_attributes, parse_rank_table
         from scan_clothing import (build_heading_map, canon_stat, header_labels,
                                    parse_rowwise, parse_stat_cell, slot_from,
                                    split_rows)
@@ -307,6 +308,34 @@ def check_parsers():
                  "chip-family-r1|HP=135.0,AT=20.0,CT=0.25%",
                  "chip-family-r2|HP=269.0,AT=39.0,CT=0.5%",
                  "chip-family-r15|AT=288.0,CT=3.75%"],
+            ),
+            (
+                # Attribute rows carry a roll RANGE, written with "~" on most
+                # rows and a hyphen on at least one. A blank cell means the
+                # wiki has no value -- it must not become a zero-width range.
+                # The slot each kind merges into comes from the prose above
+                # the table, not from any column.
+                "attributes_slice.html",
+                lambda t: [
+                    "%s|%s|%s" % (a["name"], a["merges_into"],
+                                  ("%s-%s%s" % (a["roll"]["min"], a["roll"]["max"],
+                                                "%" if a["roll"]["unit"] == "pct" else "")
+                                   if "roll" in a else "no-roll"))
+                    for a in parse_attributes(t)
+                ],
+                ["HP attribute rank A|Jacket|15.0-20.0",
+                 "HP attribute rank X|Jacket|168.0-280.0",
+                 "HP attribute rank Z|Jacket|no-roll",
+                 "MS attribute rank A|Shoes|1.0-2.0%"],
+            ),
+            (
+                "attributes_slice.html",
+                lambda t: sorted(
+                    "%s|%s" % (r["id"], ",".join(
+                        "%s=%s" % (s["stat"], s["value"]) for s in r["stats"]))
+                    for r in parse_rank_table(t)
+                ),
+                ["rank-a-lv1|HP=50.0,AT=28.0", "rank-a-lvmax|HP=250.0,AT=140.0"],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (

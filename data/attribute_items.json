@@ -1,0 +1,997 @@
+{
+  "fetched_at": "2026-09-07",
+  "source": "dmowiki.com/Equipment_attributes",
+  "note": "feeds TAMER stats through a clothes-dependent fraction; outside the optimizer's scope (decision 02)",
+  "attributes": [
+    {
+      "name": "HP attribute rank A",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Magic",
+      "tamer_level": 3,
+      "roll": {
+        "min": 15.0,
+        "max": 20.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "HP attribute rank A",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Rare",
+      "tamer_level": 3,
+      "roll": {
+        "min": 20.0,
+        "max": 25.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "HP attribute rank B",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Magic",
+      "tamer_level": 7,
+      "roll": {
+        "min": 30.0,
+        "max": 40.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "HP attribute rank B",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Rare",
+      "tamer_level": 7,
+      "roll": {
+        "min": 40.0,
+        "max": 50.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "HP attribute rank C",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Magic",
+      "tamer_level": 10,
+      "roll": {
+        "min": 60.0,
+        "max": 80.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "HP attribute rank C",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Rare",
+      "tamer_level": 10,
+      "roll": {
+        "min": 80.0,
+        "max": 100.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "HP attribute rank C",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Epic",
+      "tamer_level": 18,
+      "roll": {
+        "min": 100.0,
+        "max": 120.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "HP attribute rank D",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Normal",
+      "tamer_level": 41,
+      "roll": {
+        "min": 136.0,
+        "max": 176.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Pyramid HP attribute",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Epic",
+      "tamer_level": 75,
+      "roll": {
+        "min": 200.0,
+        "max": 500.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Pyramid HP attribute",
+      "kind": "HP",
+      "merges_into": "Jacket",
+      "class": "Unique",
+      "tamer_level": 75,
+      "roll": {
+        "min": 300.0,
+        "max": 500.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DS attribute rank B",
+      "kind": "DS",
+      "merges_into": "Head accessories",
+      "class": "Magic",
+      "tamer_level": 7,
+      "roll": {
+        "min": 60.0,
+        "max": 80.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DS attribute rank B",
+      "kind": "DS",
+      "merges_into": "Head accessories",
+      "class": "Rare",
+      "tamer_level": 7,
+      "roll": {
+        "min": 80.0,
+        "max": 100.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DS attribute rank C",
+      "kind": "DS",
+      "merges_into": "Head accessories",
+      "class": "Magic",
+      "tamer_level": 10,
+      "roll": {
+        "min": 112.0,
+        "max": 150.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DS attribute rank D",
+      "kind": "DS",
+      "merges_into": "Head accessories",
+      "class": "Normal",
+      "tamer_level": 41,
+      "roll": {
+        "min": 144.0,
+        "max": 187.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DS attribute rank D",
+      "kind": "DS",
+      "merges_into": "Head accessories",
+      "class": "Magic",
+      "tamer_level": 41
+    },
+    {
+      "name": "DS attribute rank B Lv4",
+      "kind": "DS",
+      "merges_into": "Head accessories",
+      "class": "Epic",
+      "tamer_level": 45,
+      "roll": {
+        "min": 400.0,
+        "max": 450.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Pyramid DS attribute",
+      "kind": "DS",
+      "merges_into": "Head accessories",
+      "class": "Epic",
+      "tamer_level": 75,
+      "roll": {
+        "min": 200.0,
+        "max": 500.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Pyramid DS attribute",
+      "kind": "DS",
+      "merges_into": "Head accessories",
+      "class": "Unique",
+      "tamer_level": 75,
+      "roll": {
+        "min": 300.0,
+        "max": 500.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank A",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Magic",
+      "tamer_level": 3,
+      "roll": {
+        "min": 5.0,
+        "max": 7.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank A",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Rare",
+      "tamer_level": 3,
+      "roll": {
+        "min": 7.0,
+        "max": 8.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank B",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Magic",
+      "tamer_level": 7,
+      "roll": {
+        "min": 15.0,
+        "max": 20.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank B",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Rare",
+      "tamer_level": 7,
+      "roll": {
+        "min": 20.0,
+        "max": 25.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank C",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Magic",
+      "tamer_level": 8,
+      "roll": {
+        "min": 30.0,
+        "max": 40.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank C",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Rare",
+      "tamer_level": 8,
+      "roll": {
+        "min": 40.0,
+        "max": 50.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank C",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Epic",
+      "tamer_level": 18,
+      "roll": {
+        "min": 50.0,
+        "max": 60.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank C",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Unique",
+      "tamer_level": 18,
+      "roll": {
+        "min": 60.0,
+        "max": 70.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank D",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Normal",
+      "tamer_level": 41,
+      "roll": {
+        "min": 68.0,
+        "max": 88.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank D",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Magic",
+      "tamer_level": 41,
+      "roll": {
+        "min": 80.0,
+        "max": 104.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank D",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Rare",
+      "tamer_level": 41,
+      "roll": {
+        "min": 104.0,
+        "max": 112.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "AP attribute rank D",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Epic",
+      "tamer_level": 41,
+      "roll": {
+        "min": 112.0,
+        "max": 120.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Desert AT attribute",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Epic",
+      "tamer_level": 41,
+      "roll": {
+        "min": 40.0,
+        "max": 200.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Laboratory AT attribute",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Epic",
+      "tamer_level": 41,
+      "roll": {
+        "min": 27.0,
+        "max": 220.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Pyramid AT attribute",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Epic",
+      "tamer_level": 75,
+      "roll": {
+        "min": 112.0,
+        "max": 280.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Pyramid AT attribute",
+      "kind": "AP",
+      "merges_into": "Gloves",
+      "class": "Unique",
+      "tamer_level": 75,
+      "roll": {
+        "min": 168.0,
+        "max": 280.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DF attribute rank A",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Magic",
+      "tamer_level": 7,
+      "roll": {
+        "min": 7.0,
+        "max": 10.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DF attribute rank A",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Rare",
+      "tamer_level": 7,
+      "roll": {
+        "min": 10.0,
+        "max": 12.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DF attribute rank B",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Magic",
+      "tamer_level": 10,
+      "roll": {
+        "min": 22.0,
+        "max": 30.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DF attribute rank B",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Rare",
+      "tamer_level": 10,
+      "roll": {
+        "min": 30.0,
+        "max": 37.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DF attribute rank B",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Epic",
+      "tamer_level": 10,
+      "roll": {
+        "min": 37.0,
+        "max": 45.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DF attribute rank B",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Unique",
+      "tamer_level": 18,
+      "roll": {
+        "min": 45.0,
+        "max": 52.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DF attribute rank B",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Legend",
+      "tamer_level": 18,
+      "roll": {
+        "min": 52.0,
+        "max": 60.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "DF attribute rank C",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Normal",
+      "tamer_level": 41,
+      "roll": {
+        "min": 42.0,
+        "max": 55.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Pyramid DE attribute",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Epic",
+      "tamer_level": 75,
+      "roll": {
+        "min": 60.0,
+        "max": 150.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "Pyramid DE attribute",
+      "kind": "DF",
+      "merges_into": "Pants",
+      "class": "Unique",
+      "tamer_level": 75,
+      "roll": {
+        "min": 90.0,
+        "max": 150.0,
+        "unit": "flat"
+      }
+    },
+    {
+      "name": "MS attribute rank A",
+      "kind": "MS",
+      "merges_into": "Shoes",
+      "class": "Rare",
+      "tamer_level": 3,
+      "roll": {
+        "min": 1.0,
+        "max": 2.0,
+        "unit": "pct"
+      }
+    },
+    {
+      "name": "MS attribute rank B",
+      "kind": "MS",
+      "merges_into": "Shoes",
+      "class": "Legend",
+      "tamer_level": 15,
+      "roll": {
+        "min": 2.0,
+        "max": 4.0,
+        "unit": "pct"
+      }
+    },
+    {
+      "name": "[MS] Attribute Rank A LvMax",
+      "kind": "MS",
+      "merges_into": "Shoes",
+      "class": "Unique",
+      "tamer_level": 30,
+      "roll": {
+        "min": 4.0,
+        "max": 6.0,
+        "unit": "pct"
+      }
+    },
+    {
+      "name": "Desert MS attribute",
+      "kind": "MS",
+      "merges_into": "Shoes",
+      "class": "Epic",
+      "tamer_level": 41,
+      "roll": {
+        "min": 2.0,
+        "max": 10.0,
+        "unit": "pct"
+      }
+    },
+    {
+      "name": "Laboratory MS attribute",
+      "kind": "MS",
+      "merges_into": "Shoes",
+      "class": "Epic",
+      "tamer_level": 41,
+      "roll": {
+        "min": 1.0,
+        "max": 10.0,
+        "unit": "pct"
+      }
+    }
+  ],
+  "rank_levels": [
+    {
+      "id": "rank-a-lv1",
+      "rank": "A",
+      "level": "1",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 50.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 50.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 28.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 15.0
+        }
+      ]
+    },
+    {
+      "id": "rank-a-lv2",
+      "rank": "A",
+      "level": "2",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 100.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 100.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 56.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 30.0
+        }
+      ]
+    },
+    {
+      "id": "rank-a-lv3",
+      "rank": "A",
+      "level": "3",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 150.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 150.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 84.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 45.0
+        }
+      ]
+    },
+    {
+      "id": "rank-a-lv4",
+      "rank": "A",
+      "level": "4",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 200.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 200.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 112.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 60.0
+        }
+      ]
+    },
+    {
+      "id": "rank-a-lvmax",
+      "rank": "A",
+      "level": "Max",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 250.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 250.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 140.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 75.0
+        }
+      ]
+    },
+    {
+      "id": "rank-b-lv1",
+      "rank": "B",
+      "level": "1",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 300.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 300.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 168.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 90.0
+        }
+      ]
+    },
+    {
+      "id": "rank-b-lv2",
+      "rank": "B",
+      "level": "2",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 350.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 350.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 196.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 105.0
+        }
+      ]
+    },
+    {
+      "id": "rank-b-lv3",
+      "rank": "B",
+      "level": "3",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 400.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 400.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 224.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 120.0
+        }
+      ]
+    },
+    {
+      "id": "rank-b-lv4",
+      "rank": "B",
+      "level": "4",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 450.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 450.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 252.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 135.0
+        }
+      ]
+    },
+    {
+      "id": "rank-b-lvmax",
+      "rank": "B",
+      "level": "Max",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 500.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 500.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 280.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 150.0
+        }
+      ]
+    },
+    {
+      "id": "rank-c-lv1",
+      "rank": "C",
+      "level": "1",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 550.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 550.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 308.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 165.0
+        }
+      ]
+    },
+    {
+      "id": "rank-c-lv2",
+      "rank": "C",
+      "level": "2",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 600.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 600.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 336.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 180.0
+        }
+      ]
+    },
+    {
+      "id": "rank-c-lv3",
+      "rank": "C",
+      "level": "3",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 650.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 650.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 364.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 195.0
+        }
+      ]
+    },
+    {
+      "id": "rank-c-lv4",
+      "rank": "C",
+      "level": "4",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 700.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 700.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 392.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 211.0
+        }
+      ]
+    },
+    {
+      "id": "rank-c-lvmax",
+      "rank": "C",
+      "level": "Max",
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 750.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 750.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 420.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 225.0
+        }
+      ]
+    }
+  ]
+}
