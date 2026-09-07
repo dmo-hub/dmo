@@ -688,6 +688,15 @@ body { overflow-x: hidden; }
   .site-nav .nav-meta { display: none; }
   .site-nav .brand { flex-shrink: 0; }
 
+  /* Under ~340px the brand and the theme button squeeze the link row down to
+     114px, which is narrower than the longest link (116px) -- the current page
+     can then never be shown whole, however far the row is scrolled. */
+  @media (max-width: 340px) {
+    .site-nav-inner { gap: 6px; padding: 10px 8px; }
+    .site-nav .brand { font-size: 14px; }
+    .site-nav nav a { padding: 8px 7px; }
+  }
+
   .page { padding: 20px 14px 48px; }
   .hero { padding: 24px 20px; }
   .hero h1 { font-size: 27px; }
@@ -698,8 +707,11 @@ body { overflow-x: hidden; }
   .tl-month { margin-left: -24px; padding-left: 24px; }
   .tl-entry::before { left: -17px; }
 
-  /* wide tables scroll inside the card, not the page */
-  .card-body { overflow-x: auto; }
+  /* wide tables scroll inside the card, not the page.
+     .deck-body is a separate wrapper from .card-body, and the deck tables
+     carry min-width: 280px, which is wider than the column they sit in at
+     320px -- without this they push the whole page sideways. */
+  .card-body, .deck-body { overflow-x: auto; }
 }
 
 /* ============================================================
