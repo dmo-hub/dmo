@@ -64,6 +64,7 @@ IDEMPOTENT_BUILDS = [
     # reads a cached page, so it is safe to re-run in the gate
     ["scanners/scan_set_effects.py"],
     ["scanners/scan_vplay_sets.py"],
+    ["builders/build_set_registry.py"],
 ]
 
 
@@ -602,6 +603,66 @@ def check_set_rosters():
     return bad
 
 
+def check_set_registry():
+    """The joined set registry the optimizer will read.
+
+    Two sources meet here: vplay names the items per slot (Thai) and dmowiki
+    supplies the stats via one template row per slot (English). The join key
+    is (set, slot), so the thing that can silently rot is a slot losing its
+    template -- the set would still look complete while scoring zero.
+    """
+    bad = []
+    p = PROJ / "docs" / "set_registry.json"
+    if not p.exists():
+        return ["docs/set_registry.json missing -- run builders/build_set_registry.py"]
+    sets = json.loads(p.read_text(encoding="utf-8"))["sets"]
+
+    if len(sets) != 3:
+        bad.append("expected the 3 tamer sets, got %d" % len(sets))
+
+    SHIN = "(\u0e0a\u0e34\u0e19)"
+    for s in sets:
+        if not s.get("set") or not s.get("set_th"):
+            bad.append("%s: missing one of the two names" % s.get("set_th"))
+        if len(s["slots"]) != 6:
+            bad.append("%s: %d slots, expected 6" % (s["set"], len(s["slots"])))
+        seen = set()
+        for sl in s["slots"]:
+            if sl["slot"] in seen:
+                bad.append("%s: slot %s appears twice" % (s["set"], sl["slot"]))
+            seen.add(sl["slot"])
+            # a slot takes the base item or its shin variant, never both at once
+            if sl["accepts"] != [sl["item"], sl["shin"]]:
+                bad.append("%s/%s: accepts does not match item+shin"
+                           % (s["set"], sl["slot"]))
+            if not sl["shin"].startswith(SHIN):
+                bad.append("%s/%s: shin variant is not marked"
+                           % (s["set"], sl["slot"]))
+            if sl["item"].startswith(SHIN):
+                bad.append("%s/%s: base item is a shin variant"
+                           % (s["set"], sl["slot"]))
+            if not sl["stats_from"]:
+                bad.append("%s/%s: no template supplied the stats"
+                           % (s["set"], sl["slot"]))
+        # every set has a 4-piece and a 6-piece bonus
+        sizes = sorted(b["pieces"] for b in s["bonuses"])
+        if sizes != [4, 6]:
+            bad.append("%s: bonus sizes %s, expected [4, 6]" % (s["set"], sizes))
+
+    # Davis procs at both sizes; the others are permanent at 4. Guards the
+    # join from quietly pairing a set with another set's bonuses.
+    davis = next((s for s in sets if s["set"].startswith("Davis")), None)
+    if davis and any(b["permanent"] for b in davis["bonuses"]):
+        bad.append("Davis: a bonus is marked permanent, both are procs")
+    for s in sets:
+        if s["set"].startswith("Davis"):
+            continue
+        four = next((b for b in s["bonuses"] if b["pieces"] == 4), None)
+        if four and not four["permanent"]:
+            bad.append("%s: the 4-piece bonus should be permanent" % s["set"])
+    return bad
+
+
 def check_idempotent():
     bad = []
     before = _git_state()
@@ -633,6 +694,7 @@ def main():
         ("parser fixtures", check_parsers),
         ("chip registry", check_chip_registry),
         ("set rosters", check_set_rosters),
+        ("set registry", check_set_registry),
     ]
     if not no_build:
         checks.append(("builders idempotent", check_idempotent))

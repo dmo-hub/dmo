@@ -1,0 +1,433 @@
+{
+  "built_at": "2026-09-07",
+  "source": "data/set_rosters.json + data/set_effects.json + docs/gear_registry.json",
+  "note": "a set is complete when all its SLOTS are filled; each slot accepts either the base item or its shin variant",
+  "sets": [
+    {
+      "set_th": "จิตใจแห่งรัก",
+      "set": "Yolei-Heart of Love",
+      "pieces": 6,
+      "slots": [
+        {
+          "slot": "head",
+          "item": "หมวกของมิยาโกะ",
+          "shin": "(ชิน) หมวกของมิยาโกะ",
+          "accepts": [
+            "หมวกของมิยาโกะ",
+            "(ชิน) หมวกของมิยาโกะ"
+          ],
+          "stats": {
+            "CT": 2500.0
+          },
+          "stats_from": "Yolei,T.K,Davis Head"
+        },
+        {
+          "slot": "fashion",
+          "item": "กระเป๋าของมิยาโกะ",
+          "shin": "(ชิน) กระเป๋าของมิยาโกะ",
+          "accepts": [
+            "กระเป๋าของมิยาโกะ",
+            "(ชิน) กระเป๋าของมิยาโกะ"
+          ],
+          "stats": {
+            "AT": 1500,
+            "HT": 3500
+          },
+          "stats_from": "Yolei,T.K,Davis Fashion"
+        },
+        {
+          "slot": "top",
+          "item": "เสื้อของมิยาโกะ",
+          "shin": "(ชิน) เสื้อของมิยาโกะ",
+          "accepts": [
+            "เสื้อของมิยาโกะ",
+            "(ชิน) เสื้อของมิยาโกะ"
+          ],
+          "stats": {},
+          "stats_from": "Yolei,T.K,Davis Top"
+        },
+        {
+          "slot": "bottom",
+          "item": "กางเกงของมิยาโกะ",
+          "shin": "(ชิน) กางเกงของมิยาโกะ",
+          "accepts": [
+            "กางเกงของมิยาโกะ",
+            "(ชิน) กางเกงของมิยาโกะ"
+          ],
+          "stats": {
+            "DS": 4500
+          },
+          "stats_from": "Yolei,T.K,Davis Bottom"
+        },
+        {
+          "slot": "gloves",
+          "item": "ถุงมือของมิยาโกะ",
+          "shin": "(ชิน) ถุงมือของมิยาโกะ",
+          "accepts": [
+            "ถุงมือของมิยาโกะ",
+            "(ชิน) ถุงมือของมิยาโกะ"
+          ],
+          "stats": {
+            "AT": 2700
+          },
+          "stats_from": "Yolei,T.K,Davis Gloves"
+        },
+        {
+          "slot": "shoes",
+          "item": "รองเท้าของมิยาโกะ",
+          "shin": "(ชิน) รองเท้าของมิยาโกะ",
+          "accepts": [
+            "รองเท้าของมิยาโกะ",
+            "(ชิน) รองเท้าของมิยาโกะ"
+          ],
+          "stats": {},
+          "stats_from": "Yolei,T.K,Davis Shoes"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 4,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "Skill DMG",
+              "value": 40.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "+40% SKill DMG"
+            },
+            {
+              "stat": "HP",
+              "value": 4500.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "4500 HP"
+            },
+            {
+              "stat": "Skill DMG Taken",
+              "value": -20.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "-20% SKill DMG Received"
+            }
+          ]
+        },
+        {
+          "pieces": 6,
+          "permanent": false,
+          "chance": "50%",
+          "operation": "Digimon Skill",
+          "effects": [
+            {
+              "stat": "Skill DMG",
+              "value": 50.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "50% Skilldmg"
+            },
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "1000 HT"
+            },
+            {
+              "stat": "DMG Taken",
+              "value": -30.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Reduce DMG taken 30%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set_th": "พลังแห่งความกล้า",
+      "set": "Davis-Power of Courage",
+      "pieces": 6,
+      "slots": [
+        {
+          "slot": "head",
+          "item": "ผ้าโพกหัวของไดสุเกะ",
+          "shin": "(ชิน) ผ้าโพกหัวของไดสุเกะ",
+          "accepts": [
+            "ผ้าโพกหัวของไดสุเกะ",
+            "(ชิน) ผ้าโพกหัวของไดสุเกะ"
+          ],
+          "stats": {
+            "CT": 2500.0
+          },
+          "stats_from": "Yolei,T.K,Davis Head"
+        },
+        {
+          "slot": "fashion",
+          "item": "กระเป๋าของไดสุเกะ",
+          "shin": "(ชิน) กระเป๋าของไดสุเกะ",
+          "accepts": [
+            "กระเป๋าของไดสุเกะ",
+            "(ชิน) กระเป๋าของไดสุเกะ"
+          ],
+          "stats": {
+            "AT": 1500,
+            "HT": 3500
+          },
+          "stats_from": "Yolei,T.K,Davis Fashion"
+        },
+        {
+          "slot": "top",
+          "item": "แจ็กเก็ตของไดสุเกะ",
+          "shin": "(ชิน) แจ็กเก็ตของไดสุเกะ",
+          "accepts": [
+            "แจ็กเก็ตของไดสุเกะ",
+            "(ชิน) แจ็กเก็ตของไดสุเกะ"
+          ],
+          "stats": {},
+          "stats_from": "Yolei,T.K,Davis Top"
+        },
+        {
+          "slot": "bottom",
+          "item": "กางเกงของไดสุเกะ",
+          "shin": "(ชิน) กางเกงของไดสุเกะ",
+          "accepts": [
+            "กางเกงของไดสุเกะ",
+            "(ชิน) กางเกงของไดสุเกะ"
+          ],
+          "stats": {
+            "DS": 4500
+          },
+          "stats_from": "Yolei,T.K,Davis Bottom"
+        },
+        {
+          "slot": "gloves",
+          "item": "ถุงมือของไดสุเกะ",
+          "shin": "(ชิน) ถุงมือของไดสุเกะ",
+          "accepts": [
+            "ถุงมือของไดสุเกะ",
+            "(ชิน) ถุงมือของไดสุเกะ"
+          ],
+          "stats": {
+            "AT": 2700
+          },
+          "stats_from": "Yolei,T.K,Davis Gloves"
+        },
+        {
+          "slot": "shoes",
+          "item": "รองเท้าของไดสุเกะ",
+          "shin": "(ชิน) รองเท้าของไดสุเกะ",
+          "accepts": [
+            "รองเท้าของไดสุเกะ",
+            "(ชิน) รองเท้าของไดสุเกะ"
+          ],
+          "stats": {},
+          "stats_from": "Yolei,T.K,Davis Shoes"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 4,
+          "permanent": false,
+          "chance": "30%",
+          "operation": "Normal ATK",
+          "effects": [
+            {
+              "stat": "CT",
+              "value": 20.0,
+              "unit": "pct",
+              "scoreable": true,
+              "text": "20% CT"
+            },
+            {
+              "stat": "CT DMG",
+              "value": 20.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "20% CTDMG"
+            },
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "1000HT"
+            }
+          ]
+        },
+        {
+          "pieces": 6,
+          "permanent": false,
+          "chance": "70%",
+          "operation": "Hit",
+          "effects": [
+            {
+              "stat": "AS",
+              "value": 5.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "5% ATKSpeed"
+            },
+            {
+              "stat": "CT DMG",
+              "value": 30.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "30% CTDMG"
+            },
+            {
+              "stat": "AT",
+              "value": 2000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "2000 ATK"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set_th": "แสงแห่งความหวัง",
+      "set": "T.K-Light of Hope",
+      "pieces": 6,
+      "slots": [
+        {
+          "slot": "head",
+          "item": "หมวกของทาเครุ",
+          "shin": "(ชิน) หมวกของทาเครุ",
+          "accepts": [
+            "หมวกของทาเครุ",
+            "(ชิน) หมวกของทาเครุ"
+          ],
+          "stats": {
+            "CT": 2500.0
+          },
+          "stats_from": "Yolei,T.K,Davis Head"
+        },
+        {
+          "slot": "fashion",
+          "item": "กระเป๋าของทาเครุ",
+          "shin": "(ชิน) กระเป๋าของทาเครุ",
+          "accepts": [
+            "กระเป๋าของทาเครุ",
+            "(ชิน) กระเป๋าของทาเครุ"
+          ],
+          "stats": {
+            "AT": 1500,
+            "HT": 3500
+          },
+          "stats_from": "Yolei,T.K,Davis Fashion"
+        },
+        {
+          "slot": "top",
+          "item": "เสื้อของทาเครุ",
+          "shin": "(ชิน) เสื้อของทาเครุ",
+          "accepts": [
+            "เสื้อของทาเครุ",
+            "(ชิน) เสื้อของทาเครุ"
+          ],
+          "stats": {},
+          "stats_from": "Yolei,T.K,Davis Top"
+        },
+        {
+          "slot": "bottom",
+          "item": "กางเกงของทาเครุ",
+          "shin": "(ชิน) กางเกงของทาเครุ",
+          "accepts": [
+            "กางเกงของทาเครุ",
+            "(ชิน) กางเกงของทาเครุ"
+          ],
+          "stats": {
+            "DS": 4500
+          },
+          "stats_from": "Yolei,T.K,Davis Bottom"
+        },
+        {
+          "slot": "gloves",
+          "item": "แส้ของดิจิมอนไกเซอร์",
+          "shin": "(ชิน) แส้ของดิจิมอนไกเซอร์",
+          "accepts": [
+            "แส้ของดิจิมอนไกเซอร์",
+            "(ชิน) แส้ของดิจิมอนไกเซอร์"
+          ],
+          "stats": {
+            "AT": 2700
+          },
+          "stats_from": "Yolei,T.K,Davis Gloves"
+        },
+        {
+          "slot": "shoes",
+          "item": "รองเท้าของทาเครุ",
+          "shin": "(ชิน) รองเท้าของทาเครุ",
+          "accepts": [
+            "รองเท้าของทาเครุ",
+            "(ชิน) รองเท้าของทาเครุ"
+          ],
+          "stats": {},
+          "stats_from": "Yolei,T.K,Davis Shoes"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 4,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "EXP",
+              "value": 1000.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "1000% EXP"
+            },
+            {
+              "stat": "HP",
+              "value": 3000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "3000 HP"
+            },
+            {
+              "stat": "HT",
+              "value": 1500.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "1500 HT"
+            }
+          ]
+        },
+        {
+          "pieces": 6,
+          "permanent": false,
+          "chance": "30%",
+          "operation": "Defeating Monster",
+          "effects": [
+            {
+              "stat": "EXP",
+              "value": 2000.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "2000% EXP"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 70.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "70% Skilldmg"
+            },
+            {
+              "stat": "AT",
+              "value": 3000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "3000 ATK"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
