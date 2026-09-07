@@ -97,10 +97,15 @@ def parse_double(html):
                 v = re.match(r"^\s*\+?\s*(\d+(?:\.\d+)?)\s*(%?)\s*$", c[1])
                 if not v:
                     continue
-                stats[name] = {
-                    "value": float(v.group(1)),
-                    "unit": "pct" if (v.group(2) or name in PCT) else "flat",
-                }
+                value = float(v.group(1))
+                unit = "pct" if (v.group(2) or name in PCT) else "flat"
+                if unit == "pct" and not v.group(2):
+                    # vplay writes percentages here as hundredths of a percent
+                    # and drops the % sign: "CT 400" is dmowiki's "CT +4%".
+                    # Verified against every grade -- flat stats match 1:1
+                    # while CT and EV are exactly 100x on R16, R17 and R18.
+                    value = value / 100.0
+                stats[name] = {"value": value, "unit": unit}
             if stats:
                 sets.append(stats)
         if not sets:

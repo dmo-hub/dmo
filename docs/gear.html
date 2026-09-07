@@ -305,7 +305,9 @@
     var inp = document.createElement("input");
     inp.type = "text";
     inp.value = item.name || "";
-    inp.setAttribute("list", "reg-" + item.slot);
+    /* Chips carry no slot, so they get their own list rather than the dead
+       "reg-undefined" the slot lookup would otherwise produce. */
+    inp.setAttribute("list", "reg-" + (item.slot || CHIP_LIST));
     inp.addEventListener("input", function () {
       item.name = inp.value;
       var pick = findInRegistry(inp.value, item.slot);
@@ -321,7 +323,7 @@
   }
 
   function findInRegistry(name, slot) {
-    var list = registryBySlot[slot] || [];
+    var list = (slot ? registryBySlot[slot] : chipRegistry) || [];
     for (var i = 0; i < list.length; i++) {
       if (list[i].name === name) return list[i];
     }
@@ -393,6 +395,19 @@
   var registry = [];
   var registryBySlot = {};
 
+  /* Only the Double ChipSets (R16-R18) are offered. Every number in here is
+     the primary and secondary sets already added together -- a Double ChipSet
+     grants both at once -- so a picked chip needs no further arithmetic. */
+  var CHIP_LIST = "chip";
+  var chipRegistry = [];
+
+  function loadChipRegistry() {
+    return fetch("chip_registry.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { chipRegistry = (d && d.items) || []; })
+      .catch(function () { chipRegistry = []; });
+  }
+
   function loadRegistry() {
     return fetch("gear_registry.json")
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -448,6 +463,23 @@
       });
       host.appendChild(dl);
     });
+    host.appendChild(buildDatalist(CHIP_LIST, chipRegistry));
+  }
+
+  function buildDatalist(id, items) {
+    var dl = document.createElement("datalist");
+    dl.id = "reg-" + id;
+    items.forEach(function (it) {
+      var o = document.createElement("option");
+      o.value = it.name;
+      var parts = [];
+      STAT_FIELDS.forEach(function (f) {
+        if (it[f.key]) parts.push(f.key + " " + it[f.key]);
+      });
+      o.label = parts.join(" · ");
+      dl.appendChild(o);
+    });
+    return dl;
   }
 
   function renderAcc() {
@@ -849,7 +881,7 @@
   var savedItems = jget(ITEMS_KEY, null);
   /* The picker needs the registry before the first paint, otherwise the
      datalists render empty and typing offers nothing. */
-  loadRegistry().then(function () {
+  Promise.all([loadRegistry(), loadChipRegistry()]).then(function () {
     if (savedItems && ((savedItems.accessories || []).length || (savedItems.chips || []).length)) {
       data = normalize(savedItems);
       reseedIdSeq();

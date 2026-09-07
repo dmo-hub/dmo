@@ -59,6 +59,8 @@ IDEMPOTENT_BUILDS = [
     ["builders/build_nametag_html.py"],
     ["builders/build_search_index.py"],
     ["builders/build_index_html.py"],
+    ["builders/build_gear_registry.py"],
+    ["builders/build_chip_registry.py"],
 ]
 
 
@@ -397,6 +399,18 @@ def check_parsers():
                 ["R16|2151.0|1291.0", "R17|2285.0|1371.0"],
             ),
             (
+                # vplay writes percentages as hundredths of a percent with no
+                # % sign -- "CT 400" is 4%, not 400%. Left as read it would be
+                # 100x too generous and the solver would pick these every time.
+                "vplay_double_chipset.html",
+                lambda t: [
+                    "%s:%s%s" % (k, v["value"], "%" if v["unit"] == "pct" else "")
+                    for b in parse_double(t) if b["grade"] == 16
+                    for k, v in sorted(b["primary"].items())
+                ],
+                ["AT:306.0", "CT:4.0%", "HP:2151.0"],
+            ),
+            (
                 "vplay_double_chipset.html",
                 lambda t: sorted({b["axis"] for b in parse_double(t)}),
                 ["digimon"],
@@ -422,6 +436,49 @@ def check_parsers():
         bad.append(f"parser import/run failed: {e}")
     finally:
         sys.path.pop(0)
+    return bad
+
+
+def check_chip_registry():
+    """The chip list the gear page loads.
+
+    Two things can go wrong silently here and neither shows up as a crash:
+    the low grades creeping back in (they were dropped on purpose), and the
+    secondary set going missing so a chip is scored at roughly 60% of what it
+    really gives.
+    """
+    bad = []
+    p = PROJ / "docs" / "chip_registry.json"
+    if not p.exists():
+        return ["docs/chip_registry.json missing -- run builders/build_chip_registry.py"]
+    items = json.loads(p.read_text(encoding="utf-8"))["items"]
+
+    grades = sorted(it["grade"] for it in items)
+    if grades != [16, 17, 18]:
+        bad.append(f"expected only R16-R18, got {grades}")
+
+    for it in items:
+        parts = it.get("parts") or {}
+        prim, sec = parts.get("primary") or {}, parts.get("secondary") or {}
+        if not sec:
+            bad.append(f"{it['id']}: no secondary set -- a Double ChipSet grants both")
+            continue
+        for key in set(prim) | set(sec):
+            want = round(prim.get(key, 0) + sec.get(key, 0), 2)
+            got = it.get(key)
+            if got is None:
+                bad.append(f"{it['id']}: {key} dropped from the totals")
+            elif abs(got - want) > 0.011:
+                bad.append(f"{it['id']}: {key} is {got}, primary+secondary is {want}")
+
+    r16 = next((it for it in items if it["grade"] == 16), None)
+    if r16:
+        # dmowiki's family chipset R16 is AT +306 / CT +4%; the secondary set
+        # is what vplay adds on top, so the totals must exceed those.
+        if r16.get("AT") != 490 or abs(r16.get("CT", 0) - 6.4) > 0.011:
+            bad.append(f"R16 totals moved: AT={r16.get('AT')} CT={r16.get('CT')}")
+    else:
+        bad.append("R16 missing")
     return bad
 
 
@@ -454,6 +511,7 @@ def main():
         ("HTML balanced", check_html),
         ("inline JS syntax", check_scripts),
         ("parser fixtures", check_parsers),
+        ("chip registry", check_chip_registry),
     ]
     if not no_build:
         checks.append(("builders idempotent", check_idempotent))

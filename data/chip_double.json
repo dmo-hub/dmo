@@ -30,11 +30,11 @@
           "unit": "flat"
         },
         "EV": {
-          "value": 400.0,
+          "value": 4.0,
           "unit": "pct"
         },
         "CT": {
-          "value": 400.0,
+          "value": 4.0,
           "unit": "pct"
         }
       },
@@ -60,11 +60,11 @@
           "unit": "flat"
         },
         "EV": {
-          "value": 240.0,
+          "value": 2.4,
           "unit": "pct"
         },
         "CT": {
-          "value": 240.0,
+          "value": 2.4,
           "unit": "pct"
         }
       }
@@ -96,11 +96,11 @@
           "unit": "flat"
         },
         "EV": {
-          "value": 425.0,
+          "value": 4.25,
           "unit": "pct"
         },
         "CT": {
-          "value": 425.0,
+          "value": 4.25,
           "unit": "pct"
         }
       },
@@ -126,11 +126,11 @@
           "unit": "flat"
         },
         "EV": {
-          "value": 255.0,
+          "value": 2.55,
           "unit": "pct"
         },
         "CT": {
-          "value": 255.0,
+          "value": 2.55,
           "unit": "pct"
         }
       }
@@ -162,11 +162,11 @@
           "unit": "flat"
         },
         "EV": {
-          "value": 450.0,
+          "value": 4.5,
           "unit": "pct"
         },
         "CT": {
-          "value": 450.0,
+          "value": 4.5,
           "unit": "pct"
         }
       },
@@ -192,11 +192,11 @@
           "unit": "flat"
         },
         "EV": {
-          "value": 270.0,
+          "value": 2.7,
           "unit": "pct"
         },
         "CT": {
-          "value": 270.0,
+          "value": 2.7,
           "unit": "pct"
         }
       }

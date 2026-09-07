@@ -1,0 +1,106 @@
+{
+  "built_at": "2026-09-07",
+  "source": "data/chip_double.json",
+  "note": "Double ChipSets only (R16-R18); each value is the primary and secondary sets added together, both of which the item grants",
+  "items": [
+    {
+      "id": "chip-double-r16",
+      "name": "Double ChipSet R16",
+      "grade": 16,
+      "axis": "digimon",
+      "HP": 3442,
+      "DS": 3072,
+      "AT": 490,
+      "DE": 346,
+      "HT": 640,
+      "EV": 6.4,
+      "CT": 6.4,
+      "parts": {
+        "primary": {
+          "AT": 306.0,
+          "CT": 4.0,
+          "DE": 216.0,
+          "DS": 1920.0,
+          "EV": 4.0,
+          "HP": 2151.0,
+          "HT": 400.0
+        },
+        "secondary": {
+          "AT": 184.0,
+          "CT": 2.4,
+          "DE": 130.0,
+          "DS": 1152.0,
+          "EV": 2.4,
+          "HP": 1291.0,
+          "HT": 240.0
+        }
+      }
+    },
+    {
+      "id": "chip-double-r17",
+      "name": "Double ChipSet R17",
+      "grade": 17,
+      "axis": "digimon",
+      "HP": 3656,
+      "DS": 3264,
+      "AT": 522,
+      "DE": 370,
+      "HT": 680,
+      "EV": 6.8,
+      "CT": 6.8,
+      "parts": {
+        "primary": {
+          "AT": 326.0,
+          "CT": 4.25,
+          "DE": 231.0,
+          "DS": 2040.0,
+          "EV": 4.25,
+          "HP": 2285.0,
+          "HT": 425.0
+        },
+        "secondary": {
+          "AT": 196.0,
+          "CT": 2.55,
+          "DE": 139.0,
+          "DS": 1224.0,
+          "EV": 2.55,
+          "HP": 1371.0,
+          "HT": 255.0
+        }
+      }
+    },
+    {
+      "id": "chip-double-r18",
+      "name": "Double ChipSet R18",
+      "grade": 18,
+      "axis": "digimon",
+      "HP": 3872,
+      "DS": 3456,
+      "AT": 552,
+      "DE": 389,
+      "HT": 720,
+      "EV": 7.2,
+      "CT": 7.2,
+      "parts": {
+        "primary": {
+          "AT": 345.0,
+          "CT": 4.5,
+          "DE": 243.0,
+          "DS": 2160.0,
+          "EV": 4.5,
+          "HP": 2420.0,
+          "HT": 450.0
+        },
+        "secondary": {
+          "AT": 207.0,
+          "CT": 2.7,
+          "DE": 146.0,
+          "DS": 1296.0,
+          "EV": 2.7,
+          "HP": 1452.0,
+          "HT": 270.0
+        }
+      }
+    }
+  ]
+}

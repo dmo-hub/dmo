@@ -350,12 +350,18 @@
   }
 
   function dropOffAxis(data) {
-    var kept = [], dropped = [];
+    var kept = [], keptChips = [], dropped = [];
     ((data && data.accessories) || []).forEach(function (it) {
       (scorableAxis(it) ? kept : dropped).push(it);
     });
+    /* Chips go through the same gate. Every chip on file today is marked
+       digimon, so this drops nothing yet -- but a chip is scored exactly like
+       a piece of gear, so a tamer one would skew the answer the same way. */
+    ((data && data.chips) || []).forEach(function (it) {
+      (scorableAxis(it) ? keptChips : dropped).push(it);
+    });
     return {
-      data: { accessories: kept, chips: (data && data.chips) || [] },
+      data: { accessories: kept, chips: keptChips },
       dropped: dropped
     };
   }
