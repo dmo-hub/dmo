@@ -36,9 +36,9 @@
   table.go-tbl thead th { background: var(--surface-card); color: var(--ink); font-weight: 600; }
   table.go-tbl td:first-child, table.go-tbl th:first-child { text-align: left; }
   table.go-tbl tr:last-child td { border-bottom: 0; }
-  table.go-tbl tr.go-grp td { text-align: left; font-weight: 600;
-    background: var(--surface-sunken, var(--surface-card));
-    color: var(--ink); padding-top: 9px; padding-bottom: 5px; }
+  .go-acc-grp + .go-acc-grp { margin-top: 18px; }
+  .go-acc-grp h3 { margin: 0 0 2px; font-size: 14px; color: var(--ink); }
+  .go-acc-grp .go-sub { margin: 0 0 8px; }
   table.go-tbl input, table.go-tbl select { font: inherit; font-size: 12.5px; width: 100%;
     min-width: 62px; padding: 4px 7px; border: 1px solid var(--hairline);
     border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
@@ -147,16 +147,12 @@
       <h2>ของสวม</h2>
       <p class="go-sub" id="slot-hint"></p>
       <p class="go-sub" id="reg-hint"></p>
-      <div class="go-tbl-wrap">
-        <table class="go-tbl">
-          <thead><tr><th>ชื่อ</th><th>ช่อง</th><th>ตีบวก</th><th>AT</th><th>HT</th><th>CT (%)</th><th></th></tr></thead>
-          <tbody id="acc-body"></tbody>
-        </table>
-      </div>
+      <!-- One card per slot group, built from SLOT_GROUPS when the page
+           renders. Kept out of the markup on purpose: adding a group to the
+           solver must not need an edit here, the same way adding a slot
+           already does not. -->
+      <div id="acc-groups"></div>
       <div id="reg-lists" hidden></div>
-      <div class="go-actions">
-        <button class="go-btn" id="acc-add" type="button">+ เพิ่มของสวม</button>
-      </div>
     </div>
 
     <div class="go-card">
@@ -517,23 +513,15 @@
     return dl;
   }
 
-  /* One header row per group, matching the slot dropdown's own grouping.
-     Written as a full-width cell rather than a real <th> so it cannot be
-     mistaken for a second column header by a screen reader. */
-  function groupHeaderRow(label, cols) {
-    var tr = document.createElement("tr");
-    tr.className = "go-grp";
-    var td = document.createElement("td");
-    td.colSpan = cols;
-    td.textContent = label;
-    tr.appendChild(td);
-    return tr;
-  }
+  var ACC_COLS = ["ชื่อ", "ช่อง",
+                  "ตีบวก", "AT", "HT", "CT (%)", ""];
 
+  /* One card per slot group. The dropdown already groups the slots this way,
+     so the tables now match what the picker shows instead of being one long
+     list the reader has to segment by eye. */
   function renderAcc() {
-    var body = $("acc-body");
-    body.textContent = "";
-    var cols = document.querySelectorAll("#panel-items thead th").length || 7;
+    var host = $("acc-groups");
+    host.textContent = "";
 
     /* Rows are grouped for display only -- data.accessories keeps its own
        order, because that is what the solver and localStorage round-trip. */
@@ -544,10 +532,57 @@
     });
 
     SLOT_GROUPS.forEach(function (g) {
-      var rows = groups[g];
-      if (!rows || !rows.length) return;   // no rows: no heading
-      body.appendChild(groupHeaderRow(g, cols));
-      rows.forEach(function (it) { body.appendChild(accRow(it)); });
+      var block = document.createElement("section");
+      block.className = "go-acc-grp";
+
+      var h = document.createElement("h3");
+      h.textContent = g;
+      block.appendChild(h);
+
+      var sub = document.createElement("p");
+      sub.className = "go-sub";
+      sub.textContent = slotsInGroup(g).map(slotLabel).join(" · ");
+      block.appendChild(sub);
+
+      var wrap = document.createElement("div");
+      wrap.className = "go-tbl-wrap";
+      var table = document.createElement("table");
+      table.className = "go-tbl";
+      var thead = document.createElement("thead");
+      var htr = document.createElement("tr");
+      ACC_COLS.forEach(function (label) {
+        var th = document.createElement("th");
+        th.textContent = label;
+        htr.appendChild(th);
+      });
+      thead.appendChild(htr);
+      table.appendChild(thead);
+
+      var body = document.createElement("tbody");
+      (groups[g] || []).forEach(function (it) { body.appendChild(accRow(it)); });
+      table.appendChild(body);
+      wrap.appendChild(table);
+      block.appendChild(wrap);
+
+      /* Adding from inside a group starts the row in that group's first slot,
+         so the new row lands where the button was pressed rather than jumping
+         to another table. */
+      var actions = document.createElement("div");
+      actions.className = "go-actions";
+      var btn = document.createElement("button");
+      btn.className = "go-btn";
+      btn.type = "button";
+      btn.textContent = "+ เพิ่ม" + g;
+      btn.addEventListener("click", function () {
+        var first = slotsInGroup(g)[0] || SLOTS[0];
+        data.accessories.push({ id: nextId("acc"), name: "", slot: first,
+                                AT: 0, HT: 0, CT: 0 });
+        save(); render();
+      });
+      actions.appendChild(btn);
+      block.appendChild(actions);
+
+      host.appendChild(block);
     });
   }
 
@@ -620,10 +655,6 @@
 
   function save() { jset(ITEMS_KEY, data); }
 
-  $("acc-add").addEventListener("click", function () {
-    data.accessories.push({ id: nextId("acc"), name: "", slot: SLOTS[0], AT: 0, HT: 0, CT: 0 });
-    save(); render();
-  });
   $("chip-add").addEventListener("click", function () {
     data.chips.push({ id: nextId("chip"), name: "", AT: 0, HT: 0, CT: 0 });
     save(); render();
