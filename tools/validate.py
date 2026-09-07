@@ -61,6 +61,8 @@ IDEMPOTENT_BUILDS = [
     ["builders/build_index_html.py"],
     ["builders/build_gear_registry.py"],
     ["builders/build_chip_registry.py"],
+    # reads a cached page, so it is safe to re-run in the gate
+    ["scanners/scan_set_effects.py"],
 ]
 
 
@@ -193,6 +195,7 @@ def check_parsers():
         from scan_vplay_upgrade import parse_blocks as parse_vplay_blocks
         from scan_chipsets import parse_chipsets
         from scan_vplay_chipsets import parse_double
+        from scan_set_effects import parse_sets
         from scan_attributes import parse_attributes, parse_rank_table
         from scan_clothing import (build_heading_map, canon_stat, header_labels,
                                    parse_rowwise, parse_stat_cell, slot_from,
@@ -423,6 +426,33 @@ def check_parsers():
                 lambda t: [b["name"] for b in parse_double(t) if b["grade"] == 16],
                 ["ดับเบิ้ล"
                  "ชิปเซ็ท R16"],
+            ),
+            (
+                # 33 sub-effects across 12 rows. The count is the point: the
+                # cell mixes value-first ("4500 HP"), value-last ("Reduce DMG
+                # taken 30%"), no space at all ("1000HT"), and newlines instead
+                # of commas -- any one of those regressing drops the tally.
+                "set_effects_slice.html",
+                lambda t: [sum(len(b["effects"]) for b in parse_sets(t)),
+                           sum(len(b["unreadable"]) for b in parse_sets(t))],
+                [33, 0],
+            ),
+            (
+                # Davis procs at BOTH sizes while every other 4-set row is
+                # permanent, so the split cannot be read off the piece count.
+                "set_effects_slice.html",
+                lambda t: sorted("%s/%s" % (b["pieces"], "perma" if b["permanent"]
+                                            else "proc")
+                                 for b in parse_sets(t)
+                                 if b["set"].startswith("Davis")),
+                ["4/proc", "6/proc"],
+            ),
+            (
+                # A reduction is negative however the wiki phrased it.
+                "set_effects_slice.html",
+                lambda t: sorted({e["value"] for b in parse_sets(t)
+                                  for e in b["effects"] if "Taken" in e["stat"]}),
+                [-30.0, -20.0],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (

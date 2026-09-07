@@ -1,0 +1,387 @@
+{
+  "fetched_at": "2026-09-07",
+  "source": "cache/dmowiki_clothing.html",
+  "note": "set bonuses only -- the wiki does not say which item belongs to which set, so nothing here can be awarded yet",
+  "sub_effects": {
+    "total": 33,
+    "read": 33,
+    "scoreable": 17
+  },
+  "sets": [
+    {
+      "set": "Yolei-Heart of Love",
+      "pieces": 4,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effect_time": "Perma",
+      "effects": [
+        {
+          "stat": "Skill DMG",
+          "value": 40.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "+40% SKill DMG"
+        },
+        {
+          "stat": "HP",
+          "value": 4500.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "4500 HP"
+        },
+        {
+          "stat": "Skill DMG Taken",
+          "value": -20.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "-20% SKill DMG Received"
+        }
+      ],
+      "unreadable": [],
+      "raw": "+40% SKill DMG, 4500 HP, -20% SKill DMG Received"
+    },
+    {
+      "set": "Yolei-Heart of Love",
+      "pieces": 6,
+      "permanent": false,
+      "chance": "50%",
+      "operation": "Digimon Skill",
+      "effect_time": "10 Sec",
+      "effects": [
+        {
+          "stat": "Skill DMG",
+          "value": 50.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "50% Skilldmg"
+        },
+        {
+          "stat": "HT",
+          "value": 1000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "1000 HT"
+        },
+        {
+          "stat": "DMG Taken",
+          "value": -30.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "Reduce DMG taken 30%"
+        }
+      ],
+      "unreadable": [],
+      "raw": "50% Skilldmg, 1000 HT, Reduce DMG taken 30%"
+    },
+    {
+      "set": "T.K-Light of Hope",
+      "pieces": 4,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effect_time": "Perma",
+      "effects": [
+        {
+          "stat": "EXP",
+          "value": 1000.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "1000% EXP"
+        },
+        {
+          "stat": "HP",
+          "value": 3000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "3000 HP"
+        },
+        {
+          "stat": "HT",
+          "value": 1500.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "1500 HT"
+        }
+      ],
+      "unreadable": [],
+      "raw": "1000% EXP, 3000 HP, 1500 HT"
+    },
+    {
+      "set": "T.K-Light of Hope",
+      "pieces": 6,
+      "permanent": false,
+      "chance": "30%",
+      "operation": "Defeating Monster",
+      "effect_time": "10sec",
+      "effects": [
+        {
+          "stat": "EXP",
+          "value": 2000.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "2000% EXP"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 70.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "70% Skilldmg"
+        },
+        {
+          "stat": "AT",
+          "value": 3000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "3000 ATK"
+        }
+      ],
+      "unreadable": [],
+      "raw": "2000% EXP,70% Skilldmg, 3000 ATK"
+    },
+    {
+      "set": "Davis-Power of Courage",
+      "pieces": 4,
+      "permanent": false,
+      "chance": "30%",
+      "operation": "Normal ATK",
+      "effect_time": "10 Sec",
+      "effects": [
+        {
+          "stat": "CT",
+          "value": 20.0,
+          "unit": "pct",
+          "scoreable": true,
+          "text": "20% CT"
+        },
+        {
+          "stat": "CT DMG",
+          "value": 20.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "20% CTDMG"
+        },
+        {
+          "stat": "HT",
+          "value": 1000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "1000HT"
+        }
+      ],
+      "unreadable": [],
+      "raw": "20% CT,20% CTDMG, 1000HT"
+    },
+    {
+      "set": "Davis-Power of Courage",
+      "pieces": 6,
+      "permanent": false,
+      "chance": "70%",
+      "operation": "Hit",
+      "effect_time": "10Sec",
+      "effects": [
+        {
+          "stat": "AS",
+          "value": 5.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "5% ATKSpeed"
+        },
+        {
+          "stat": "CT DMG",
+          "value": 30.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "30% CTDMG"
+        },
+        {
+          "stat": "AT",
+          "value": 2000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "2000 ATK"
+        }
+      ],
+      "unreadable": [],
+      "raw": "5% ATKSpeed,30% CTDMG,2000 ATK"
+    },
+    {
+      "set": "Digimon Frontier",
+      "pieces": 4,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effect_time": "Perma",
+      "effects": [
+        {
+          "stat": "Skill DMG Taken",
+          "value": -20.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "Received Skill Damage Reduction + 20%"
+        },
+        {
+          "stat": "DMG Taken",
+          "value": -30.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "Received Damage Reduction + 30%"
+        },
+        {
+          "stat": "HP",
+          "value": 4500.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "Max HP + 4500"
+        },
+        {
+          "stat": "HT",
+          "value": 1000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "Hit Rate + 1000"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 25.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "Final Damage +25%"
+        }
+      ],
+      "unreadable": [],
+      "raw": "Received Skill Damage Reduction + 20%\nReceived Damage Reduction + 30%\nMax HP + 4500\nHit Rate + 1000\nFinal Damage +25%"
+    },
+    {
+      "set": "Fire : Spirit",
+      "pieces": 6,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effect_time": "Perma",
+      "effects": [
+        {
+          "stat": "HP",
+          "value": 4000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "Max Hp +4000"
+        },
+        {
+          "stat": "DS",
+          "value": 4000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "DS 4000"
+        }
+      ],
+      "unreadable": [],
+      "raw": "Max Hp +4000,DS 4000"
+    },
+    {
+      "set": "Light: Spirit",
+      "pieces": 6,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effect_time": "Perma",
+      "effects": [
+        {
+          "stat": "HT",
+          "value": 7000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "HT 7000"
+        },
+        {
+          "stat": "CT",
+          "value": 30.0,
+          "unit": "pct",
+          "scoreable": true,
+          "text": "CT 30%"
+        }
+      ],
+      "unreadable": [],
+      "raw": "HT 7000, CT 30%"
+    },
+    {
+      "set": "Ice: Spirit",
+      "pieces": 6,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effect_time": "Perma",
+      "effects": [
+        {
+          "stat": "HT",
+          "value": 3000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "HT 3000"
+        },
+        {
+          "stat": "CT",
+          "value": 70.0,
+          "unit": "pct",
+          "scoreable": true,
+          "text": "CT 70%"
+        }
+      ],
+      "unreadable": [],
+      "raw": "HT 3000, CT 70%"
+    },
+    {
+      "set": "Wind: Spirit",
+      "pieces": 6,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effect_time": "Perma",
+      "effects": [
+        {
+          "stat": "AT",
+          "value": 4000.0,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "ATK 4000"
+        },
+        {
+          "stat": "AS",
+          "value": 5.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "ATK Speed 5%"
+        }
+      ],
+      "unreadable": [],
+      "raw": "ATK 4000, ATK Speed 5%"
+    },
+    {
+      "set": "Thunder: Spirit",
+      "pieces": 6,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effect_time": "Perma",
+      "effects": [
+        {
+          "stat": "EXP",
+          "value": 4000.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "EXP 4000%"
+        },
+        {
+          "stat": "AS",
+          "value": 3.0,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "AtkSpeed 3%"
+        }
+      ],
+      "unreadable": [],
+      "raw": "EXP 4000%, AtkSpeed 3%"
+    }
+  ]
+}
