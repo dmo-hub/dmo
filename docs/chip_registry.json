@@ -5,7 +5,7 @@
   "items": [
     {
       "id": "chip-double-r16",
-      "name": "Double ChipSet R16",
+      "name": "ดับเบิ้ลชิปเซ็ท R16",
       "grade": 16,
       "axis": "digimon",
       "HP": 3442,
@@ -38,7 +38,7 @@
     },
     {
       "id": "chip-double-r17",
-      "name": "Double ChipSet R17",
+      "name": "ดับเบิ้ลชิปเซ็ท R17",
       "grade": 17,
       "axis": "digimon",
       "HP": 3656,
@@ -71,7 +71,7 @@
     },
     {
       "id": "chip-double-r18",
-      "name": "Double ChipSet R18",
+      "name": "ดับเบิ้ลชิปเซ็ท R18",
       "grade": 18,
       "axis": "digimon",
       "HP": 3872,

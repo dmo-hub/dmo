@@ -6,7 +6,7 @@
     {
       "grade": 16,
       "id": "chip-double-r16",
-      "name": "Double ChipSet R16",
+      "name": "ดับเบิ้ลชิปเซ็ท R16",
       "axis": "digimon",
       "primary": {
         "HP": {
@@ -72,7 +72,7 @@
     {
       "grade": 17,
       "id": "chip-double-r17",
-      "name": "Double ChipSet R17",
+      "name": "ดับเบิ้ลชิปเซ็ท R17",
       "axis": "digimon",
       "primary": {
         "HP": {
@@ -138,7 +138,7 @@
     {
       "grade": 18,
       "id": "chip-double-r18",
-      "name": "Double ChipSet R18",
+      "name": "ดับเบิ้ลชิปเซ็ท R18",
       "axis": "digimon",
       "primary": {
         "HP": {

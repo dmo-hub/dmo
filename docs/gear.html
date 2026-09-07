@@ -330,6 +330,21 @@
     return null;
   }
 
+  /* A saved row keeps the name it was picked under. When a registry entry is
+     renamed -- the chipsets went from an invented English name to the one the
+     game uses -- that saved name no longer matches anything, so the row would
+     quietly lose its flag and its level lock while still holding the right
+     numbers. regId does not change, so it can put the name back. */
+  function relinkByRegId(rows, list) {
+    var byId = {};
+    (list || []).forEach(function (it) { byId[it.id] = it; });
+    (rows || []).forEach(function (row) {
+      if (!row.regId) return;
+      var pick = byId[row.regId];
+      if (pick && pick.name !== row.name) row.name = pick.name;
+    });
+  }
+
   /* Copy the registry's numbers onto the row. Stats the registry does not
      mention are zeroed, otherwise a leftover value from the previous pick
      would silently ride along. */
@@ -884,7 +899,10 @@
   Promise.all([loadRegistry(), loadChipRegistry()]).then(function () {
     if (savedItems && ((savedItems.accessories || []).length || (savedItems.chips || []).length)) {
       data = normalize(savedItems);
+      relinkByRegId(data.accessories, registry);
+      relinkByRegId(data.chips, chipRegistry);
       reseedIdSeq();
+      save();
       render();
     } else {
       loadSeed(false);

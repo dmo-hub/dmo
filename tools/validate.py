@@ -415,6 +415,15 @@ def check_parsers():
                 lambda t: sorted({b["axis"] for b in parse_double(t)}),
                 ["digimon"],
             ),
+            (
+                # The name is the post's own wording, which is what the game
+                # shows the player. Nothing else asserts it, so a rescrape
+                # could quietly put an invented English name back.
+                "vplay_double_chipset.html",
+                lambda t: [b["name"] for b in parse_double(t) if b["grade"] == 16],
+                ["ดับเบิ้ล"
+                 "ชิปเซ็ท R16"],
+            ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (
                 "th_digimon_slice.html",

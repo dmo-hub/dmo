@@ -117,8 +117,11 @@ def parse_double(html):
                 sets.append(stats)
         if not sets:
             continue
+        # The name is what the player reads and types into the picker, so it
+        # is the post's own wording -- the same words the game shows. The id
+        # stays ASCII: nobody sees it, and saved loadouts point at it.
         rec = {"grade": grade, "id": "chip-double-r%d" % grade,
-               "name": "Double ChipSet R%d" % grade, "axis": "digimon",
+               "name": "%s R%d" % (NAME_TH, grade), "axis": "digimon",
                "primary": sets[0]}
         if len(sets) > 1:
             rec["secondary"] = sets[1]
