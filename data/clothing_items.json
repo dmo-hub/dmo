@@ -12,7 +12,20 @@
       "name": "Tamer’s Goggles [AT/AT]",
       "slot": "Adventure Goggles",
       "axis": "unknown",
-      "stats": [],
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "value": 300.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "value": 275.0
+        }
+      ],
       "upgrade": 0
     },
     {
@@ -20,22 +33,64 @@
       "name": "Tamer’s Goggles [AT/AT]",
       "slot": "Adventure Goggles",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 1
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 360.0,
+          "max": 960.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 300.0,
+          "max": 800.0
+        }
+      ],
+      "upgrade": 1,
+      "upgrade_max": 15
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-at-at-3",
       "name": "Tamer’s Goggles [AT/AT]",
       "slot": "Adventure Goggles",
       "axis": "unknown",
-      "stats": []
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "value": 1500.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ct-ct",
       "name": "Tamer’s Goggles [CT/CT]",
       "slot": "Adventure Goggles",
       "axis": "unknown",
-      "stats": [],
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "value": 450.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "value": 275.0
+        }
+      ],
       "upgrade": 0
     },
     {
@@ -43,22 +98,64 @@
       "name": "Tamer’s Goggles [CT/CT]",
       "slot": "Adventure Goggles",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 1
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 500.0,
+          "max": 1200.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 300.0,
+          "max": 800.0
+        }
+      ],
+      "upgrade": 1,
+      "upgrade_max": 15
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ct-ct-3",
       "name": "Tamer’s Goggles [CT/CT]",
       "slot": "Adventure Goggles",
       "axis": "unknown",
-      "stats": []
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "value": 2000.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "value": 1000.0
+        }
+      ]
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ht-ht",
       "name": "Tamer’s Goggles [HT/HT]",
       "slot": "Adventure Goggles",
       "axis": "unknown",
-      "stats": [],
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "value": 25.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "value": 10.0
+        }
+      ],
       "upgrade": 0
     },
     {
@@ -66,15 +163,44 @@
       "name": "Tamer’s Goggles [HT/HT]",
       "slot": "Adventure Goggles",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 1
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 50.0,
+          "max": 650.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 25.0,
+          "max": 400.0
+        }
+      ],
+      "upgrade": 1,
+      "upgrade_max": 15
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ht-ht-3",
       "name": "Tamer’s Goggles [HT/HT]",
       "slot": "Adventure Goggles",
       "axis": "unknown",
-      "stats": []
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "value": 1000.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "value": 500.0
+        }
+      ]
     },
     {
       "id": "bottom-agumon-bottom",
@@ -328,24 +454,72 @@
       "name": "*:Spirit Bottom",
       "slot": "Bottom",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "min": 2000.0,
+          "max": 2250.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "bottom-spirit-bottom-2",
       "name": "*:Spirit Bottom",
       "slot": "Bottom",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "min": 2300.0,
+          "max": 2500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 20.0,
+          "max": 30.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "bottom-spirit-bottom-3",
       "name": "*:Spirit Bottom",
       "slot": "Bottom",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "min": 4000.0,
+          "max": 4500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 40.0,
+          "max": 45.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "min": 3000.0,
+          "max": 3500.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "bottom-trendy-wide-pants-event",
@@ -417,24 +591,72 @@
       "name": "Yolei,T.K,Davis Bottom",
       "slot": "Bottom",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1250.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "bottom-yolei-t-k-davis-bottom-2",
       "name": "Yolei,T.K,Davis Bottom",
       "slot": "Bottom",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "min": 1300.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 5.0,
+          "max": 9.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "bottom-yolei-t-k-davis-bottom-3",
       "name": "Yolei,T.K,Davis Bottom",
       "slot": "Bottom",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "min": 1600.0,
+          "max": 2500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 12.0,
+          "max": 30.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 2000.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "bottom-zhuqiamon-s-infernal-short-pants",
@@ -571,6 +793,12 @@
           "unit": "pct",
           "random": false,
           "value": 15.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "value": 5.0
         }
       ]
     },
@@ -621,6 +849,12 @@
           "unit": "pct",
           "random": false,
           "value": 10.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "value": 1.0
         }
       ]
     },
@@ -1374,24 +1608,51 @@
       "name": "Tamer’s Goggles [AT]",
       "slot": "Digimon Kaiser´s Goggles",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 1
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 2500.0,
+          "max": 4000.0
+        }
+      ],
+      "upgrade": 1,
+      "upgrade_max": 10
     },
     {
       "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ct",
       "name": "Tamer’s Goggles [CT]",
       "slot": "Digimon Kaiser´s Goggles",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 1
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 3000.0,
+          "max": 4000.0
+        }
+      ],
+      "upgrade": 1,
+      "upgrade_max": 10
     },
     {
       "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ht",
       "name": "Tamer’s Goggles [HT]",
       "slot": "Digimon Kaiser´s Goggles",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 1
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 1500.0,
+          "max": 3000.0
+        }
+      ],
+      "upgrade": 1,
+      "upgrade_max": 10
     },
     {
       "id": "earrings-aural-earring-of-sealed-baihumon",
@@ -2847,24 +3108,72 @@
       "name": "*:Spirit Accessory",
       "slot": "Fashion",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1250.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "fashion-spirit-accessory-2",
       "name": "*:Spirit Accessory",
       "slot": "Fashion",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 1300.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "fashion-spirit-accessory-3",
       "name": "*:Spirit Accessory",
       "slot": "Fashion",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 2500.0,
+          "max": 3000.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 2000.0,
+          "max": 2500.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 2000.0,
+          "max": 2500.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "fashion-sunglasses",
@@ -2932,24 +3241,72 @@
       "name": "Yolei,T.K,Davis Fashion",
       "slot": "Fashion",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 500.0,
+          "max": 750.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "fashion-yolei-t-k-davis-fashion-2",
       "name": "Yolei,T.K,Davis Fashion",
       "slot": "Fashion",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 800.0,
+          "max": 1000.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 500.0,
+          "max": 700.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "fashion-yolei-t-k-davis-fashion-3",
       "name": "Yolei,T.K,Davis Fashion",
       "slot": "Fashion",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 1100.0,
+          "max": 2000.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 750.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 500.0,
+          "max": 1500.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "fashion-zhuqiaomon-s-infernal-cape",
@@ -3776,24 +4133,58 @@
       "name": "*:Spirit Gloves",
       "slot": "Gloves",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 1500.0,
+          "max": 1750.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "gloves-spirit-gloves-2",
       "name": "*:Spirit Gloves",
       "slot": "Gloves",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 1800.0,
+          "max": 2000.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "gloves-spirit-gloves-3",
       "name": "*:Spirit Gloves",
       "slot": "Gloves",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 3000.0,
+          "max": 3500.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "gloves-square-lollipop",
@@ -3936,24 +4327,58 @@
       "name": "Yolei,T.K,Davis Gloves",
       "slot": "Gloves",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 500.0,
+          "max": 750.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "gloves-yolei-t-k-davis-gloves-2",
       "name": "Yolei,T.K,Davis Gloves",
       "slot": "Gloves",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 800.0,
+          "max": 1000.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "gloves-yolei-t-k-davis-gloves-3",
       "name": "Yolei,T.K,Davis Gloves",
       "slot": "Gloves",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 1100.0,
+          "max": 2000.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 300.0,
+          "max": 700.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "gloves-zhuqiamon-s-infernal-gloves",
@@ -4132,24 +4557,58 @@
       "name": "*:Spirit Helmet",
       "slot": "Head",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "head-spirit-helmet-2",
       "name": "*:Spirit Helmet",
       "slot": "Head",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 1600.0,
+          "max": 2000.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "head-spirit-helmet-3",
       "name": "*:Spirit Helmet",
       "slot": "Head",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 2500.0,
+          "max": 3000.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 2000.0,
+          "max": 2500.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "head-spooky-pumpkinmon-s-mask-30-days",
@@ -4218,24 +4677,58 @@
       "name": "Yolei,T.K,Davis Head",
       "slot": "Head",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 500.0,
+          "max": 625.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "head-yolei-t-k-davis-head-2",
       "name": "Yolei,T.K,Davis Head",
       "slot": "Head",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 650.0,
+          "max": 750.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "head-yolei-t-k-davis-head-3",
       "name": "Yolei,T.K,Davis Head",
       "slot": "Head",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 775.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 500.0,
+          "max": 1000.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "head-zhuqiaomon-s-infernal-ornament",
@@ -5781,6 +6274,12 @@
           "value": 100.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 30.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -5808,6 +6307,12 @@
           "value": 600.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -5821,6 +6326,12 @@
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
       "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -5870,6 +6381,12 @@
           "value": 1000.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 70.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -5890,6 +6407,12 @@
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
       "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 50.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -5912,6 +6435,12 @@
       "axis": "unknown",
       "stats": [
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "HP",
           "unit": "flat",
           "random": false,
@@ -5930,6 +6459,12 @@
           "unit": "flat",
           "random": false,
           "value": 300.0
+        },
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
         },
         {
           "stat": "EXP",
@@ -5971,6 +6506,12 @@
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
       "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 50.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -6086,6 +6627,12 @@
           "value": 600.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -6113,6 +6660,12 @@
           "value": 600.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -6131,6 +6684,12 @@
           "unit": "flat",
           "random": false,
           "value": 600.0
+        },
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
         },
         {
           "stat": "EXP",
@@ -6165,6 +6724,12 @@
           "unit": "flat",
           "random": false,
           "value": 10.0
+        },
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 100.0
         }
       ]
     },
@@ -6174,6 +6739,12 @@
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
       "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 50.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -6188,6 +6759,12 @@
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
       "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 10.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -6207,6 +6784,12 @@
           "unit": "flat",
           "random": false,
           "value": 1000.0
+        },
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
         },
         {
           "stat": "EXP",
@@ -6229,6 +6812,12 @@
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
       "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 50.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -6270,6 +6859,12 @@
           "value": 700.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -6288,6 +6883,12 @@
           "unit": "flat",
           "random": false,
           "value": 1000.0
+        },
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
         },
         {
           "stat": "EXP",
@@ -6358,6 +6959,12 @@
           "value": 700.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -6376,6 +6983,12 @@
           "unit": "flat",
           "random": false,
           "value": 600.0
+        },
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
         },
         {
           "stat": "EXP",
@@ -6412,6 +7025,12 @@
           "value": 600.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -6439,6 +7058,12 @@
           "value": 600.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -6452,6 +7077,12 @@
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
       "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 50.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -6467,6 +7098,12 @@
       "axis": "unknown",
       "stats": [
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 50.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -6480,6 +7117,12 @@
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
       "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 50.0
+        },
         {
           "stat": "EXP",
           "unit": "pct",
@@ -6506,6 +7149,12 @@
           "unit": "flat",
           "random": false,
           "value": 600.0
+        },
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
         },
         {
           "stat": "EXP",
@@ -6556,6 +7205,12 @@
           "value": 600.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -6597,6 +7252,12 @@
           "value": 600.0
         },
         {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
           "stat": "EXP",
           "unit": "pct",
           "random": false,
@@ -6629,6 +7290,12 @@
           "unit": "flat",
           "random": false,
           "value": 600.0
+        },
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
         },
         {
           "stat": "EXP",
@@ -7537,7 +8204,38 @@
       "name": "Perma Costume [Tamer]",
       "slot": "Perma Costume",
       "axis": "unknown",
-      "stats": [],
+      "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 77.0
+        },
+        {
+          "stat": "EXP",
+          "unit": "pct",
+          "random": false,
+          "value": 1500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "value": 10.0
+        },
+        {
+          "stat": "AT",
+          "unit": "pct",
+          "random": false,
+          "value": 10.0
+        },
+        {
+          "stat": "HP",
+          "unit": "pct",
+          "random": false,
+          "value": 10.0
+        }
+      ],
       "upgrade": 0
     },
     {
@@ -7545,192 +8243,590 @@
       "name": "Magnetic ID Card - Digimon King [AT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 50.0,
+          "max": 300.0
+        },
+        {
+          "stat": "EXP",
+          "unit": "pct",
+          "random": false,
+          "min": 0.0,
+          "max": 500.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 5
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-at-2",
       "name": "Magnetic ID Card - Digimon King [AT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 6
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 350.0,
+          "max": 900.0
+        },
+        {
+          "stat": "EXP",
+          "unit": "pct",
+          "random": false,
+          "min": 1000.0,
+          "max": 2500.0
+        }
+      ],
+      "upgrade": 6,
+      "upgrade_max": 12
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-at-3",
       "name": "Magnetic ID Card - Digimon King [AT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 13
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "EXP",
+          "unit": "pct",
+          "random": false,
+          "min": 3000.0,
+          "max": 5000.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 3.0
+        }
+      ],
+      "upgrade": 13,
+      "upgrade_max": 15
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-ht",
       "name": "Magnetic ID Card - Digimon King [HT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 50.0,
+          "max": 300.0
+        },
+        {
+          "stat": "EXP",
+          "unit": "pct",
+          "random": false,
+          "min": 0.0,
+          "max": 500.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 5
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-ht-2",
       "name": "Magnetic ID Card - Digimon King [HT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 6
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 350.0,
+          "max": 900.0
+        },
+        {
+          "stat": "EXP",
+          "unit": "pct",
+          "random": false,
+          "min": 1000.0,
+          "max": 2500.0
+        }
+      ],
+      "upgrade": 6,
+      "upgrade_max": 12
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-ht-3",
       "name": "Magnetic ID Card - Digimon King [HT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 13
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "EXP",
+          "unit": "pct",
+          "random": false,
+          "min": 3000.0,
+          "max": 5000.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 3.0
+        }
+      ],
+      "upgrade": 13,
+      "upgrade_max": 15
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-at",
       "name": "Magnetic ID Card -Heaven Wing [AT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 50.0,
+          "max": 300.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 5
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-at-2",
       "name": "Magnetic ID Card - Heaven Wing [AT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 6
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 350.0,
+          "max": 900.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 7.0
+        }
+      ],
+      "upgrade": 6,
+      "upgrade_max": 12
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-at-3",
       "name": "Magnetic ID Card - Heaven Wing [AT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 13
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 8.0,
+          "max": 12.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 3.0
+        }
+      ],
+      "upgrade": 13,
+      "upgrade_max": 15
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ct",
       "name": "Magnetic ID Card - Heaven Wing [CT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 50.0,
+          "max": 300.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 5
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ct-2",
       "name": "Magnetic ID Card - Heaven Wing [CT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 6
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 350.0,
+          "max": 900.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 7.0
+        }
+      ],
+      "upgrade": 6,
+      "upgrade_max": 12
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ct-3",
       "name": "Magnetic ID Card - Heaven Wing [CT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 13
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 8.0,
+          "max": 12.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 3.0
+        }
+      ],
+      "upgrade": 13,
+      "upgrade_max": 15
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ht",
       "name": "Magnetic ID Card - Heaven Wing [HT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 50.0,
+          "max": 300.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 5
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ht-2",
       "name": "Magnetic ID Card - Heaven Wing [HT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 6
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 350.0,
+          "max": 900.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 7.0
+        }
+      ],
+      "upgrade": 6,
+      "upgrade_max": 12
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ht-3",
       "name": "Magnetic ID Card - Heaven Wing [HT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 13
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 8.0,
+          "max": 12.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 3.0
+        }
+      ],
+      "upgrade": 13,
+      "upgrade_max": 15
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-at",
       "name": "Magnetic ID Card - Time Ruler [AT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 50.0,
+          "max": 300.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 5
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-at-2",
       "name": "Magnetic ID Card - Time Ruler [AT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 6
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 350.0,
+          "max": 900.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 7.0
+        }
+      ],
+      "upgrade": 6,
+      "upgrade_max": 12
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-at-3",
       "name": "Magnetic ID Card - Time Ruler [AT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 13
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 8.0,
+          "max": 12.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 3.0
+        }
+      ],
+      "upgrade": 13,
+      "upgrade_max": 15
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ct",
       "name": "Magnetic ID Card - Time Ruler [CT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 50.0,
+          "max": 300.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 5
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ct-2",
       "name": "Magnetic ID Card - Time Ruler [CT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 6
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 350.0,
+          "max": 900.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 7.0
+        }
+      ],
+      "upgrade": 6,
+      "upgrade_max": 12
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ct-3",
       "name": "Magnetic ID Card - Time Ruler [CT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 13
+      "stats": [
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 8.0,
+          "max": 12.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 3.0
+        }
+      ],
+      "upgrade": 13,
+      "upgrade_max": 15
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ht",
       "name": "Magnetic ID Card - Time Ruler [HT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 50.0,
+          "max": 300.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 5
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ht-2",
       "name": "Magnetic ID Card - Time Ruler [HT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 6
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 350.0,
+          "max": 900.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 7.0
+        }
+      ],
+      "upgrade": 6,
+      "upgrade_max": 12
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ht-3",
       "name": "Magnetic ID Card - Time Ruler [HT]",
       "slot": "Perma ID Cards",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 13
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1500.0
+        },
+        {
+          "stat": "Skill DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 8.0,
+          "max": 12.0
+        },
+        {
+          "stat": "Final DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 1.0,
+          "max": 3.0
+        }
+      ],
+      "upgrade": 13,
+      "upgrade_max": 15
     },
     {
       "id": "rings-arcane-desert-ring",
@@ -8883,24 +9979,67 @@
       "name": "*:Spirit Shoes",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 30.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "shoes-spirit-shoes-2",
       "name": "*:Spirit Shoes",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 30.0
+        },
+        {
+          "stat": "Affinity",
+          "unit": "flat",
+          "random": false,
+          "value": 40.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "shoes-spirit-shoes-3",
       "name": "*:Spirit Shoes",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 30.0
+        },
+        {
+          "stat": "Affinity",
+          "unit": "flat",
+          "random": false,
+          "value": 40.0
+        },
+        {
+          "stat": "EXP",
+          "unit": "pct",
+          "random": false,
+          "min": 3000.0,
+          "max": 3500.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "shoes-spooky-wizardmon-shoes-30-days",
@@ -8963,24 +10102,69 @@
       "name": "Yolei,T.K,Davis Shoes",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "value": 20.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "shoes-yolei-t-k-davis-shoes-2",
       "name": "Yolei,T.K,Davis Shoes",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "min": 20.0,
+          "max": 25.0
+        },
+        {
+          "stat": "Affinity",
+          "unit": "flat",
+          "random": false,
+          "value": 30.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "shoes-yolei-t-k-davis-shoes-3",
       "name": "Yolei,T.K,Davis Shoes",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "Speed",
+          "unit": "pct",
+          "random": false,
+          "min": 25.0,
+          "max": 30.0
+        },
+        {
+          "stat": "Affinity",
+          "unit": "flat",
+          "random": false,
+          "value": 30.0
+        },
+        {
+          "stat": "EXP",
+          "unit": "pct",
+          "random": false,
+          "min": 1000.0,
+          "max": 2000.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-1",
@@ -10423,24 +11607,58 @@
       "name": "*:Spirit Top",
       "slot": "Top",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "min": 2000.0,
+          "max": 2250.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "top-spirit-top-2",
       "name": "*:Spirit Top",
       "slot": "Top",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "min": 2300.0,
+          "max": 2500.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "top-spirit-top-3",
       "name": "*:Spirit Top",
       "slot": "Top",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "min": 4000.0,
+          "max": 4500.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "min": 3000.0,
+          "max": 3500.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "top-spooky-soulmon-s-robe-30-days",
@@ -10549,24 +11767,58 @@
       "name": "Yolei,T.K,Davis Top",
       "slot": "Top",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 0
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 1250.0
+        }
+      ],
+      "upgrade": 0,
+      "upgrade_max": 4
     },
     {
       "id": "top-yolei-t-k-davis-top-2",
       "name": "Yolei,T.K,Davis Top",
       "slot": "Top",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 5
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "min": 1300.0,
+          "max": 1500.0
+        }
+      ],
+      "upgrade": 5,
+      "upgrade_max": 9
     },
     {
       "id": "top-yolei-t-k-davis-top-3",
       "name": "Yolei,T.K,Davis Top",
       "slot": "Top",
       "axis": "unknown",
-      "stats": [],
-      "upgrade": 10
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "min": 1600.0,
+          "max": 2500.0
+        },
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "random": false,
+          "min": 1000.0,
+          "max": 2000.0
+        }
+      ],
+      "upgrade": 10,
+      "upgrade_max": 15
     },
     {
       "id": "top-zhuqiamon-s-infernal-hooded-shirt",
@@ -10940,7 +12192,7 @@
     {
       "table": 62,
       "heading": "Bracelets",
-      "rows": 4,
+      "rows": 3,
       "reason": "rows without a readable name or stat"
     }
   ]

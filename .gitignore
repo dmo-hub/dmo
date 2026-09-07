@@ -24,3 +24,6 @@ Thumbs.db
 # Nested repos / separate systems (each has its own git)
 poster-studio/
 backoffice/
+cache_vplay/
+vplay_candidates.json
+vplay_hits.json

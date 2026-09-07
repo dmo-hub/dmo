@@ -179,7 +179,7 @@ def check_parsers():
                                    parse_rowwise, parse_stat_cell, slot_from,
                                    split_rows)
 
-        def _clothing_rows(text, slot):
+        def _clothing_rows(text, slot, marker="Column Named Ring"):
             """Drive parse_rowwise the way main() does, for one fixture table."""
             import re as _re
             for m in _re.finditer(r"<table.*?</table>", text, _re.S):
@@ -190,7 +190,7 @@ def check_parsers():
                 lower = [h.lower() for h in header]
                 if "name" not in lower or "upgrade" not in lower:
                     continue
-                if "Column Named Ring" not in m.group(0):
+                if marker not in m.group(0):
                     continue
                 cols = [i for i, h in enumerate(lower)
                         if "stat" in h or "effect" in h or canon_stat(header[i])]
@@ -236,7 +236,7 @@ def check_parsers():
                         r"<table.*?</table>", t, __import__("re").S
                     )
                 ],
-                ["Top", "Rings", "Gloves", "Shoes", "Ghost Key Ring"],
+                ["Top", "Rings", "Gloves", "Shoes", "Ghost Key Ring", "Bottom"],
             ),
             (
                 # Upgrade tables name the stat in the COLUMN and leave a bare
@@ -251,6 +251,22 @@ def check_parsers():
                     if st.get("value")
                 ),
                 ["HP:500.0@1", "HT:100.0@0", "HT:150.0@1", "Skill DMG:3.0@1"],
+            ),
+            (
+                # "Stats Increase" cells put the value first and the stat last
+                # ("1000-1250 DS"), the reverse of every other cell. One cell
+                # can also name several stats ("10% SkillDmg/AT/HP"), and a row
+                # can cover a BAND of levels rather than one.
+                "clothing_shapes.html",
+                lambda t: sorted(
+                    "%s:%s@%s" % (st["stat"],
+                                  st.get("value", "%s-%s" % (st.get("min"), st.get("max"))),
+                                  it.get("upgrade_max", it["upgrade"]))
+                    for it in _clothing_rows(t, "Bottom", "Trailing Stat Pants")
+                    for st in it["stats"]
+                ),
+                ["AT:10.0@15", "DS:1000.0-1250.0@4", "HP:10.0@15",
+                 "HT:1500.0-3000.0@15", "HT:25.0@15", "Skill DMG:10.0@15"],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (

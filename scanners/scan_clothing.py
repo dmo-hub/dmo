@@ -52,6 +52,8 @@ STAT_ALIASES = {
     "attack speed": "AS", "as": "AS",
     "exp": "EXP",
     "skill dmg": "Skill DMG", "skilldmg": "Skill DMG", "skill damage": "Skill DMG",
+    "finaldmg": "Final DMG", "final dmg": "Final DMG",
+    "speed": "Speed", "affinity": "Affinity",
 }
 
 # Headings whose tables describe something other than a wearable item.
@@ -91,6 +93,57 @@ def canon_stat(label):
     key = re.sub(r"[^a-z ]", "", label.lower()).strip()
     key = re.sub(r"^(?:tamer|digimon)\s+", "", key)
     return STAT_ALIASES.get(key)
+
+
+# "Stats Increase" columns write the value FIRST and the stat last
+# ("1000-1250 DS", "77% Speed", "1500 HT- 3000 HT"), which is the reverse of
+# every other cell on the page. Ranges use "-" here, not "~".
+TRAILING_ONE = re.compile(
+    r"^\s*(\d+(?:\.\d+)?)\s*(%?)"
+    r"(?:\s*[-~]\s*(\d+(?:\.\d+)?)\s*(%?))?"
+    r"\s*([A-Za-z][A-Za-z /]*?)\s*$"
+)
+# "1500 HT- 3000 HT" repeats the stat name on both ends of the range.
+TRAILING_DUP = re.compile(
+    r"^\s*(\d+(?:\.\d+)?)\s*(%?)\s*([A-Za-z][A-Za-z /]*?)"
+    r"\s*[-~]\s*(\d+(?:\.\d+)?)\s*(%?)\s*([A-Za-z][A-Za-z /]*?)\s*$"
+)
+
+
+def parse_trailing_stat(text):
+    """Read one "<value>[%] <stat>" cell. Returns [] when it is not that shape.
+
+    A bare "0" or "10% - 20%" names no stat at all, so it yields nothing --
+    that is a cell with no stat, not a parse failure.
+    """
+    if not text:
+        return []
+    m = TRAILING_DUP.match(text)
+    if m and canon_stat(m.group(3)) and canon_stat(m.group(3)) == canon_stat(m.group(6)):
+        lo, plo, label, hi, phi = m.group(1), m.group(2), m.group(3), m.group(4), m.group(5)
+        return _trailing_records(label, lo, hi, plo or phi)
+    m = TRAILING_ONE.match(text)
+    if not m:
+        return []
+    lo, plo, hi, phi, label = m.groups()
+    return _trailing_records(label, lo, hi, plo or phi or "")
+
+
+def _trailing_records(label, lo, hi, pct):
+    """One cell can name several stats at once ("10% SkillDmg/AT/HP")."""
+    out = []
+    for part in label.split("/"):
+        stat = canon_stat(part)
+        if not stat:
+            return []          # an unknown name means the whole cell is not a stat
+        unit = "pct" if pct else unit_for(stat)
+        rec = {"stat": stat, "unit": unit, "random": False}
+        if hi is not None and hi != lo:
+            rec["min"], rec["max"] = float(lo), float(hi)
+        else:
+            rec["value"] = float(lo)
+        out.append(rec)
+    return out
 
 
 def parse_stat_cell(text):
@@ -231,11 +284,18 @@ def parse_rowwise(rows, path, seen, stats_cols, name_col, upgrade_col, header):
         # Feeding a bare "100 0 0%" to parse_stat_cell yields nothing, so the
         # column header is put back in front of the value first.
         parts = []
+        stats_direct = []
         for c in stats_cols:
             if c >= len(texts):
                 continue
             txt = texts[c]
             if not txt:
+                continue
+            # "Stats Increase" columns hold "<value> <stat>" -- the reverse
+            # order, which parse_stat_cell cannot read. Try that shape first.
+            trailing = parse_trailing_stat(txt)
+            if trailing:
+                stats_direct.extend(trailing)
                 continue
             col_stat = canon_stat(header[c]) if c < len(header) else None
             if col_stat and not canon_stat_in(txt):
@@ -249,7 +309,7 @@ def parse_rowwise(rows, path, seen, stats_cols, name_col, upgrade_col, header):
             else:
                 parts.append(txt)
         blob = " ".join(parts)
-        stats = parse_stat_cell(blob)
+        stats = stats_direct + parse_stat_cell(blob)
         # A named row with no numbers is a real item that simply grants no stat
         # (cosmetics, and the option-slot tables). It belongs in the registry;
         # only rows we could not READ are failures, so the two are kept apart.
@@ -269,9 +329,15 @@ def parse_rowwise(rows, path, seen, stats_cols, name_col, upgrade_col, header):
             "stats": stats,
         }
         if upgrade_col is not None and upgrade_col < len(texts):
-            up = re.search(r"\d+", texts[upgrade_col])
-            if up:
-                rec["upgrade"] = int(up.group(0))
+            # One row can cover a BAND of levels ("0-4", "Lv.1-Lv.10"), not a
+            # single one. Keeping only the first number silently drops the top
+            # of the band, and the user locks a specific level per item, so the
+            # band is what says which row applies.
+            nums = re.findall(r"\d+", texts[upgrade_col])
+            if nums:
+                rec["upgrade"] = int(nums[0])
+                if len(nums) > 1 and int(nums[-1]) != int(nums[0]):
+                    rec["upgrade_max"] = int(nums[-1])
         items.append(rec)
     return items, unread
 
