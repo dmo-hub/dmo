@@ -40,8 +40,15 @@
     min-width: 62px; padding: 4px 7px; border: 1px solid var(--hairline);
     border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
   table.go-tbl td.go-name input { min-width: 120px; }
-  .go-del { cursor: pointer; border: 0; background: none; color: var(--muted-soft);
-    font-size: 15px; line-height: 1; padding: 2px 6px; }
+  /* --muted-soft on white is 2.65:1 -- too faint to read, and 19px is under
+     the 24px a finger can hit. --muted clears 4.5 and the padding brings the
+     box to 24px without changing the glyph size. */
+  /* --muted-soft on white was 2.65:1 and --muted only reaches 4.45, both under
+     the 4.5 this needs: the glyph is 15px at normal weight, so it does not
+     qualify as large text. --body clears it. 19px was also under the 24px a
+     finger can hit, hence the padding. */
+  .go-del { cursor: pointer; border: 0; background: none; color: var(--body);
+    font-size: 15px; line-height: 1; padding: 5px 8px; min-height: 24px; }
   .go-del:hover { color: var(--coral); }
 
   .go-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; align-items: center; }
