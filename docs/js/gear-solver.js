@@ -35,7 +35,7 @@
      result list renders in, so it follows how the game lays the doll out. */
   var SLOTS = [
     "ring", "necklace", "bracelet", "earring", "glasses", "wing",
-    "head", "fashion", "top", "bottom", "gloves", "shoes"
+    "head", "fashion", "top", "bottom", "gloves", "shoes", "keyring"
   ];
 
   /* Thai label and group for each slot. The ID above stays English on purpose:
@@ -55,14 +55,15 @@
     bracelet: { label: "\u0e01\u0e33\u0e44\u0e25",   group: "\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a" },
     earring:  { label: "\u0e15\u0e48\u0e32\u0e07\u0e2b\u0e39", group: "\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a" },
     glasses:  { label: "\u0e41\u0e27\u0e48\u0e19",   group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
-    wing:     { label: "\u0e1b\u0e35\u0e01",     group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" }
+    wing:     { label: "\u0e1b\u0e35\u0e01",     group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
+    keyring:  { label: "\u0e04\u0e35\u0e22\u0e4c\u0e23\u0e34\u0e07", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" }
   };
 
   /* Wearing order within each group, so the dropdown reads head-to-toe rather
      than following the internal SLOTS order. */
   var SLOT_ORDER = [
     "head", "top", "bottom", "gloves", "shoes", "fashion",
-    "ring", "necklace", "bracelet", "earring", "glasses", "wing"
+    "ring", "necklace", "bracelet", "earring", "glasses", "wing", "keyring"
   ];
 
   function slotsInGroup(group) {

@@ -1,0 +1,2341 @@
+{
+  "built_at": "2026-09-07",
+  "source": "data/clothing_items.json",
+  "note": "stat values are the TOP of each roll range and the highest upgrade band; axis 'unknown' means the wiki never said which side the stat feeds",
+  "items": [
+    {
+      "id": "bottom-spirit-bottom-3",
+      "name": "*:Spirit Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "DS": 8000,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 45.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "bottom-agumon-bottom",
+      "name": "Agumon Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "AT": 200,
+      "DS": 1200
+    },
+    {
+      "id": "bottom-arbormon-s-lower-armor-event",
+      "name": "Arbormon's Lower Armor [Event]",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "DS": 700,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 50.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "bottom-aural-short-pants-of-baihumon",
+      "name": "Aural Short Pants of Baihumon",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 1000
+    },
+    {
+      "id": "bottom-baihumon-s-flawless-short-pants",
+      "name": "Baihumon's Flawless Short Pants",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 1100
+    },
+    {
+      "id": "bottom-chakkumon-s-snowman-event",
+      "name": "Chakkumon's Snowman [Event]",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "DS": 700,
+      "AT": 150
+    },
+    {
+      "id": "bottom-cozy-and-warm-pants",
+      "name": "Cozy and warm Pants",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "AT": 200,
+      "DS": 1200
+    },
+    {
+      "id": "bottom-fairimon-s-lower-armor-event",
+      "name": "Fairimon's Lower Armor [Event]",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "DS": 1000,
+      "CT": 3.0
+    },
+    {
+      "id": "bottom-flame-short-pants-of-zhuqiaomon",
+      "name": "Flame Short Pants of Zhuqiaomon",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 1000
+    },
+    {
+      "id": "bottom-lanamon-s-tights-event",
+      "name": "Lanamon's Tights [Event]",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "DS": 1500,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "bottom-qinglongmon-s-lightning-short-pants",
+      "name": "Qinglongmon's Lightning Short Pants",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 1100
+    },
+    {
+      "id": "bottom-radiant-short-pants-of-qinglongmon",
+      "name": "Radiant Short Pants of Qinglongmon",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 1000
+    },
+    {
+      "id": "bottom-short-pants-of-baihumon",
+      "name": "Short Pants of Baihumon",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 500
+    },
+    {
+      "id": "bottom-short-pants-of-qinglongmon",
+      "name": "Short Pants of Qinglongmon",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 500
+    },
+    {
+      "id": "bottom-short-pants-of-zhuqiaomon",
+      "name": "Short Pants of Zhuqiaomon",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 500
+    },
+    {
+      "id": "bottom-trendy-wide-pants-event",
+      "name": "Trendy Wide Pants [Event]",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "DS": 1000,
+      "AT": 200
+    },
+    {
+      "id": "bottom-xuanwumon-shiny-short-pants",
+      "name": "Xuanwumon Shiny Short Pants",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 1000
+    },
+    {
+      "id": "bottom-xuanwumon-short-pants",
+      "name": "Xuanwumon Short Pants",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 500
+    },
+    {
+      "id": "bottom-xuanwumon-s-aquatic-short-pants",
+      "name": "Xuanwumon's Aquatic Short Pants",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 1100
+    },
+    {
+      "id": "bottom-yolei-t-k-davis-bottom-3",
+      "name": "Yolei,T.K,Davis Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "DS": 4500,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 30.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "bottom-zhuqiamon-s-infernal-short-pants",
+      "name": "Zhuqiamon's Infernal Short Pants",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "tamer",
+      "DS": 1100
+    },
+    {
+      "id": "bracelets-knight-s-bracelet-2",
+      "name": "Knight's Bracelet",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "DS": 800,
+      "DE": 100,
+      "CT": 7.0,
+      "HT": 500,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 800.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-maximum",
+      "name": "Maximum",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "DS": 2500,
+      "DE": 500,
+      "AT": 1500,
+      "CT": 10.0,
+      "HT": 1200,
+      "EV": 15.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 3000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-minimum",
+      "name": "Minimum",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "DS": 1500,
+      "DE": 300,
+      "AT": 1000,
+      "CT": 5.0,
+      "HT": 800,
+      "EV": 10.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 1.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-miracle-bracelet-level-10-2",
+      "name": "Miracle Bracelet",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "bands": 10,
+      "level": 10,
+      "DS": 1152,
+      "AT": 576,
+      "DE": 144,
+      "HT": 720,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1152.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-miracle-bracelet-special-2",
+      "name": "Miracle Bracelet [Special]",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "DS": 1200,
+      "AT": 600,
+      "DE": 150,
+      "HT": 750,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1200.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-radiant-knight-s-bracelet-2",
+      "name": "Radiant Knight's Bracelet",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "DS": 960,
+      "AT": 480,
+      "DE": 120,
+      "CT": 8.0,
+      "HT": 600,
+      "EV": 7.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 960.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "earrings-earrings-of-four-holy-beasts-lv-5",
+      "name": "Earrings of Four Holy Beasts [ ]",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "bands": 5,
+      "level": 5,
+      "DS": 880,
+      "DE": 110,
+      "HT": 550,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 880.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "earrings-fanglongmon-s-ancient-earring-lv-10",
+      "name": "Fanglongmon's Ancient Earring [ ]",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "bands": 10,
+      "level": 10,
+      "DS": 960,
+      "DE": 120,
+      "CT": 9.0,
+      "HT": 600,
+      "EV": 8.0,
+      "BL": 7.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 960.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "earrings-imperial-earring",
+      "name": "Imperial Earring",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "CT": 7.0,
+      "HT": 700
+    },
+    {
+      "id": "earrings-maximum",
+      "name": "Maximum",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "DS": 1500,
+      "DE": 200,
+      "CT": 12.0,
+      "HT": 1000,
+      "EV": 10.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "earrings-minimum",
+      "name": "Minimum",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "DS": 750,
+      "DE": 100,
+      "CT": 6.0,
+      "HT": 500,
+      "EV": 1.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 750.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "earrings-nanomon-s-shiny-earring",
+      "name": "Nanomon's Shiny Earring",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "DS": 600,
+      "HT": 300,
+      "BL": 5.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 600.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "earrings-radiant-earrings-of-four-holy-beasts-lv-5",
+      "name": "Radiant Earrings of Four Holy Beasts [ ]",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "bands": 5,
+      "level": 5,
+      "DS": 1040,
+      "DE": 130,
+      "HT": 650,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1040.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "earrings-regular-earrings",
+      "name": "Regular Earrings",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "DS": 800,
+      "DE": 100,
+      "CT": 7.0,
+      "HT": 500,
+      "EV": 7.0,
+      "BL": 6.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 800.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "earrings-zero-unit-earrings",
+      "name": "Zero Unit Earrings",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "DS": 960,
+      "DE": 120,
+      "CT": 9.0,
+      "HT": 600,
+      "EV": 8.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 960.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "fashion-spirit-accessory-3",
+      "name": "*:Spirit Accessory",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "HT": 5500,
+      "AT": 2500,
+      "ranged": true
+    },
+    {
+      "id": "fashion-agumon-ornament",
+      "name": "Agumon Ornament",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "AT": 100,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 200.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-arbormon-s-vine-barrel-event",
+      "name": "Arbormon's Vine Barrel [Event]",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-baihumon-s-flawless-cape",
+      "name": "Baihumon's Flawless Cape",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-chakkumon-s-ski-board-event",
+      "name": "Chakkumon's Ski Board [Event]",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "AT": 150,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-cute-cat-ears",
+      "name": "Cute Cat Ears",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 100.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-fairimon-s-fairy-wings-event",
+      "name": "Fairimon's Fairy Wings [Event]",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "CT": 3.0,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-headphones",
+      "name": "Headphones",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 50.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-lanamon-s-shell-event",
+      "name": "Lanamon's Shell [Event]",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 5.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "fashion-qinglongmon-s-lightning-cape",
+      "name": "Qinglongmon's Lightning Cape",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 7.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-trendy-wireless-earphones-event",
+      "name": "Trendy Wireless Earphones [Event]",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "HT": 300,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-warm-hand-warmer",
+      "name": "Warm Hand Warmer",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "DE": 100,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 200.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-xuanwumon-s-aquatic-cape",
+      "name": "Xuanwumon's Aquatic Cape",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-yolei-t-k-davis-fashion-3",
+      "name": "Yolei,T.K,Davis Fashion",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "HT": 3500,
+      "AT": 1500,
+      "ranged": true
+    },
+    {
+      "id": "fashion-zhuqiaomon-s-infernal-cape",
+      "name": "Zhuqiaomon's Infernal Cape",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "tamer-s-goggles-complete-tamer-s-goggles",
+      "name": "Complete Tamer’s Goggles",
+      "slot": "glasses",
+      "wikiSlot": "Tamer`s Goggles",
+      "axis": "tamer",
+      "AT": 500,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 20.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "tamer-s-goggles-tamer-s-goggles-lv-15",
+      "name": "Tamer’s Goggles",
+      "slot": "glasses",
+      "wikiSlot": "Tamer`s Goggles",
+      "axis": "tamer",
+      "bands": 14,
+      "level": 15,
+      "AT": 400,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 16.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "adventure-goggles-tamer-s-goggles-at-at-2",
+      "name": "Tamer’s Goggles [AT/AT]",
+      "slot": "glasses",
+      "wikiSlot": "Adventure Goggles",
+      "axis": "unknown",
+      "upgrade": 1,
+      "upgradeMax": 15,
+      "bands": 3,
+      "AT": 1760,
+      "ranged": true
+    },
+    {
+      "id": "digimon-kaiser-s-goggles-tamer-s-goggles-at",
+      "name": "Tamer’s Goggles [AT]",
+      "slot": "glasses",
+      "wikiSlot": "Digimon Kaiser´s Goggles",
+      "axis": "unknown",
+      "upgrade": 1,
+      "upgradeMax": 10,
+      "AT": 4000,
+      "ranged": true
+    },
+    {
+      "id": "adventure-goggles-tamer-s-goggles-ct-ct-2",
+      "name": "Tamer’s Goggles [CT/CT]",
+      "slot": "glasses",
+      "wikiSlot": "Adventure Goggles",
+      "axis": "unknown",
+      "upgrade": 1,
+      "upgradeMax": 15,
+      "bands": 3,
+      "CT": 2000.0,
+      "ranged": true
+    },
+    {
+      "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ct",
+      "name": "Tamer’s Goggles [CT]",
+      "slot": "glasses",
+      "wikiSlot": "Digimon Kaiser´s Goggles",
+      "axis": "unknown",
+      "upgrade": 1,
+      "upgradeMax": 10,
+      "CT": 4000.0,
+      "ranged": true
+    },
+    {
+      "id": "adventure-goggles-tamer-s-goggles-ht-ht-2",
+      "name": "Tamer’s Goggles [HT/HT]",
+      "slot": "glasses",
+      "wikiSlot": "Adventure Goggles",
+      "axis": "unknown",
+      "upgrade": 1,
+      "upgradeMax": 15,
+      "bands": 3,
+      "HT": 1050,
+      "ranged": true
+    },
+    {
+      "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ht",
+      "name": "Tamer’s Goggles [HT]",
+      "slot": "glasses",
+      "wikiSlot": "Digimon Kaiser´s Goggles",
+      "axis": "unknown",
+      "upgrade": 1,
+      "upgradeMax": 10,
+      "HT": 3000,
+      "ranged": true
+    },
+    {
+      "id": "gloves-spirit-gloves-3",
+      "name": "*:Spirit Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "AT": 5000,
+      "ranged": true
+    },
+    {
+      "id": "gloves-agumon-paw-gloves",
+      "name": "Agumon Paw Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 300,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "gloves-arbormon-s-gauntlet-event",
+      "name": "Arbormon's Gauntlet [Event]",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "CT": 5.0,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 100.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "gloves-baihumon-aural-gloves",
+      "name": "Baihumon Aural Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 300
+    },
+    {
+      "id": "gloves-baihumon-gloves",
+      "name": "Baihumon Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 250
+    },
+    {
+      "id": "gloves-baihumon-s-flawless-gloves",
+      "name": "Baihumon's Flawless Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 400
+    },
+    {
+      "id": "gloves-boundless-advanced-gloves-30-days",
+      "name": "Boundless Advanced Gloves (30 days)",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 250
+    },
+    {
+      "id": "gloves-boundless-crude-gloves-30-days",
+      "name": "Boundless Crude Gloves (30 days)",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 150
+    },
+    {
+      "id": "gloves-boundless-inferior-gloves-30-days",
+      "name": "Boundless Inferior Gloves (30 days)",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 50
+    },
+    {
+      "id": "gloves-boundless-plain-gloves-30-days",
+      "name": "Boundless Plain Gloves (30 days)",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 200
+    },
+    {
+      "id": "gloves-chakkumon-s-romeo-event",
+      "name": "Chakkumon's Romeo [Event]",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "CT": 5.0,
+      "AT": 300
+    },
+    {
+      "id": "gloves-cozy-and-warm-leather-gloves",
+      "name": "Cozy and warm Leather Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "AT": 300,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "gloves-fairimon-s-gauntlet-event",
+      "name": "Fairimon's Gauntlet [Event]",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "CT": 5.0
+    },
+    {
+      "id": "gloves-flame-gloves-of-zhuqiaomon",
+      "name": "Flame Gloves of Zhuqiaomon",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 300
+    },
+    {
+      "id": "gloves-gloves-of-zhuqiaomon",
+      "name": "Gloves of Zhuqiaomon",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 250
+    },
+    {
+      "id": "gloves-lanamon-s-gauntlet-event",
+      "name": "Lanamon's Gauntlet [Event]",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "CT": 5.0,
+      "DS": 2000
+    },
+    {
+      "id": "gloves-power-gloves-1-7-15-or-30-days",
+      "name": "Power Gloves (1, 7, 15 or 30 days)",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 50.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "gloves-power-gloves-7-days",
+      "name": "Power Gloves (7 days)",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 50.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "gloves-power-gloves-permanent",
+      "name": "Power Gloves (Permanent)",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 50.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "gloves-qinglongmon-s-gloves",
+      "name": "Qinglongmon's Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 250
+    },
+    {
+      "id": "gloves-qinglongmon-s-lightning-gloves",
+      "name": "Qinglongmon's Lightning Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 330
+    },
+    {
+      "id": "gloves-qinglongmon-s-radiant-gloves",
+      "name": "Qinglongmon's Radiant Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 300
+    },
+    {
+      "id": "gloves-shiny-desert-gloves-60-days",
+      "name": "Shiny Desert Gloves (60 days)",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 210
+    },
+    {
+      "id": "gloves-small-lollipop",
+      "name": "Small Lollipop",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 100,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 100.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "gloves-square-lollipop",
+      "name": "Square Lollipop",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 100,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 100.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "gloves-star-lollipop",
+      "name": "Star Lollipop",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 150,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 100.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "gloves-trendy-watch-event",
+      "name": "Trendy Watch [Event]",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "AT": 300,
+      "DS": 1000
+    },
+    {
+      "id": "gloves-warumonzaemon-gloves",
+      "name": "WaruMonzaemon Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 300,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 200.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "gloves-xuanwumon-gloves",
+      "name": "Xuanwumon Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 250
+    },
+    {
+      "id": "gloves-xuanwumon-shiny-gloves",
+      "name": "Xuanwumon Shiny Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 300
+    },
+    {
+      "id": "gloves-xuanwumon-s-aquatic-gloves",
+      "name": "Xuanwumon's Aquatic Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 330
+    },
+    {
+      "id": "gloves-yolei-t-k-davis-gloves-3",
+      "name": "Yolei,T.K,Davis Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "AT": 2700,
+      "ranged": true
+    },
+    {
+      "id": "gloves-zhuqiamon-s-infernal-gloves",
+      "name": "Zhuqiamon's Infernal Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "tamer",
+      "AT": 330
+    },
+    {
+      "id": "head-spirit-helmet-3",
+      "name": "*:Spirit Helmet",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "CT": 5500.0,
+      "ranged": true
+    },
+    {
+      "id": "head-arbormon-s-helmet-event",
+      "name": "Arbormon's Helmet [Event]",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "AT": 100,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 200.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "head-baihumon-s-flawless-ornament",
+      "name": "Baihumon's Flawless Ornament",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "tamer",
+      "AT": 50,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 50.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "head-chakkumon-s-integrated-ear-muffs-event",
+      "name": "Chakkumon's Integrated Ear Muffs [Event]",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "AT": 300,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 100.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "head-cozy-and-warm-hat",
+      "name": "Cozy and warm Hat",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "tamer",
+      "AT": 50,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 200.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "head-fairimon-s-wing-googles-event",
+      "name": "Fairimon's Wing Googles [Event]",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "AT": 150,
+      "CT": 3.0
+    },
+    {
+      "id": "head-lanamon-s-helmet-event",
+      "name": "Lanamon's Helmet [Event]",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 100.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "head-qinglongmon-s-lightning-ornament",
+      "name": "Qinglongmon's Lightning Ornament",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "tamer",
+      "AT": 50,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 50.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "head-soulmon-halloween-hat",
+      "name": "Soulmon / Halloween Hat",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 100.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "head-spooky-pumpkinmon-s-mask-30-days",
+      "name": "Spooky Pumpkinmon's Mask [30 days]",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "tamer",
+      "AT": 50,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 200.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "head-trendy-ball-cap-event",
+      "name": "Trendy Ball Cap [Event]",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "AT": 100,
+      "HT": 300
+    },
+    {
+      "id": "head-xuanwumon-s-aquatic-ornament",
+      "name": "Xuanwumon's Aquatic Ornament",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "tamer",
+      "AT": 50,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 50.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "head-yolei-t-k-davis-head-3",
+      "name": "Yolei,T.K,Davis Head",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "CT": 2500.0,
+      "ranged": true
+    },
+    {
+      "id": "head-zhuqiaomon-s-infernal-ornament",
+      "name": "Zhuqiaomon's Infernal Ornament",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "tamer",
+      "AT": 100,
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 200.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "ghost-key-ring-ghost-keyring-families-16",
+      "name": "Ghost Keyring ( Families )",
+      "slot": "keyring",
+      "wikiSlot": "Ghost Key Ring",
+      "axis": "unknown",
+      "upgrade": 15,
+      "bands": 16,
+      "HT": 1000,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 5000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 50.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "key-rings-spiral-key-ring-lv-7",
+      "name": "Spiral Key Ring",
+      "slot": "keyring",
+      "wikiSlot": "Key Rings",
+      "axis": "tamer",
+      "bands": 7,
+      "level": 7,
+      "AT": 168,
+      "DE": 119,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1180.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "key-rings-spiral-key-ring-lv-max",
+      "name": "Spiral Key Ring Lv.Max",
+      "slot": "keyring",
+      "wikiSlot": "Key Rings",
+      "axis": "tamer",
+      "AT": 222,
+      "DE": 156,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1550.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-7",
+      "name": "Spiral Key Ring(DS)",
+      "slot": "keyring",
+      "wikiSlot": "Spiral Key Ring (DS)",
+      "axis": "digimon",
+      "bands": 7,
+      "level": 7,
+      "AT": 210,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1470.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-max",
+      "name": "Spiral Key Ring(DS) Lv.Max",
+      "slot": "keyring",
+      "wikiSlot": "Spiral Key Ring (DS)",
+      "axis": "digimon",
+      "AT": 210,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1940.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-7",
+      "name": "Spiral Key Ring(JT)",
+      "slot": "keyring",
+      "wikiSlot": "Spiral Key Ring (JT)",
+      "axis": "digimon",
+      "bands": 7,
+      "level": 7,
+      "AT": 210,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1470.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-max",
+      "name": "Spiral Key Ring(JT) Lv.Max",
+      "slot": "keyring",
+      "wikiSlot": "Spiral Key Ring (JT)",
+      "axis": "digimon",
+      "AT": 210,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1940.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "spiral-key-ring-me-spiral-key-ring-me-lv-7",
+      "name": "Spiral Key Ring(ME)",
+      "slot": "keyring",
+      "wikiSlot": "Spiral Key Ring (ME)",
+      "axis": "digimon",
+      "bands": 7,
+      "level": 7,
+      "AT": 210,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1470.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "spiral-key-ring-me-spiral-key-ring-me-lv-max",
+      "name": "Spiral Key Ring(ME) Lv.Max",
+      "slot": "keyring",
+      "wikiSlot": "Spiral Key Ring (ME)",
+      "axis": "digimon",
+      "AT": 210,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1940.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-7",
+      "name": "Spiral Key Ring(WG)",
+      "slot": "keyring",
+      "wikiSlot": "Spiral Key Ring (WG)",
+      "axis": "digimon",
+      "bands": 7,
+      "level": 7,
+      "AT": 210,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1470.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-max",
+      "name": "Spiral Key Ring(WG) Lv.Max",
+      "slot": "keyring",
+      "wikiSlot": "Spiral Key Ring (WG)",
+      "axis": "digimon",
+      "AT": 210,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1940.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "necklaces-fanglongmon-s-ancient-necklace-lv-10",
+      "name": "Fanglongmon's Ancient Necklace [ ]",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "bands": 10,
+      "level": 10,
+      "AT": 240,
+      "DE": 60,
+      "CT": 6.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 960.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 960.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "AS",
+          "value": 15.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "necklaces-imperial-necklaces",
+      "name": "Imperial Necklaces",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "AT": 450,
+      "CT": 7.0,
+      "extra": [
+        {
+          "stat": "AS",
+          "value": 20.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "necklaces-maximum",
+      "name": "Maximum",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "DS": 1200,
+      "AT": 300,
+      "DE": 100,
+      "CT": 10.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1200.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "necklaces-minimum",
+      "name": "Minimum",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "DS": 600,
+      "AT": 150,
+      "DE": 50,
+      "CT": 5.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 600.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "necklaces-necklace-of-four-holy-beasts-lv-5",
+      "name": "Necklace of Four Holy Beasts [ ]",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "bands": 5,
+      "level": 5,
+      "DS": 880,
+      "AT": 220,
+      "DE": 55,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 880.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "necklaces-necklaces-with-3-options",
+      "name": "Necklaces with 3 Options",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "DS": 500,
+      "AT": 100,
+      "DE": 25,
+      "CT": 2.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "AS",
+          "value": 4.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "necklaces-necklaces-with-4-or-5-options",
+      "name": "Necklaces with 4 or 5 Options",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "DS": 800,
+      "AT": 200,
+      "DE": 50,
+      "CT": 5.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 800.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "AS",
+          "value": 15.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "necklaces-radiant-necklace-of-four-holy-beasts-lv-5",
+      "name": "Radiant Necklace of Four Holy Beasts [ ]",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "bands": 5,
+      "level": 5,
+      "DS": 1040,
+      "AT": 260,
+      "DE": 65,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1040.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "necklaces-underworld-necklaces",
+      "name": "Underworld Necklaces",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "AT": 450,
+      "CT": 7.0
+    },
+    {
+      "id": "rings-fanglongmon-s-ancient-ring-lv-10",
+      "name": "Fanglongmon's Ancient Ring [ ]",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "bands": 10,
+      "level": 10,
+      "DS": 960,
+      "AT": 360,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 960.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "rings-imperial-ring",
+      "name": "Imperial Ring",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "AT": 450,
+      "CT": 7.0
+    },
+    {
+      "id": "rings-maximum",
+      "name": "Maximum",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "DS": 1500,
+      "AT": 1000,
+      "DE": 100,
+      "CT": 10.0,
+      "HT": 2000,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "rings-minimum",
+      "name": "Minimum",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "DS": 750,
+      "AT": 500,
+      "DE": 50,
+      "CT": 2.0,
+      "HT": 1000,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 750.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "rings-radiant-ring-of-four-holy-beasts-lv-5",
+      "name": "Radiant Ring of Four Holy Beasts [ ]",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "bands": 5,
+      "level": 5,
+      "DS": 1040,
+      "AT": 390,
+      "DE": 33,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1040.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "rings-ring-of-four-holy-beasts-lv-5",
+      "name": "Ring of Four Holy Beasts [ ]",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "bands": 5,
+      "level": 5,
+      "DS": 880,
+      "AT": 330,
+      "DE": 28,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 880.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "rings-ring-with-3-options",
+      "name": "Ring with 3 Options",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "DS": 500,
+      "AT": 150,
+      "DE": 15,
+      "CT": 4.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "rings-ring-with-4-or-5-options",
+      "name": "Ring with 4 or 5 Options",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "DS": 800,
+      "AT": 300,
+      "DE": 25,
+      "CT": 5.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 800.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "rings-underworld-ring",
+      "name": "Underworld Ring",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "AT": 450,
+      "CT": 7.0
+    },
+    {
+      "id": "shoes-spirit-shoes-3",
+      "name": "*:Spirit Shoes",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "extra": [
+        {
+          "stat": "Speed",
+          "value": 30.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Affinity",
+          "value": 40.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 3500.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "shoes-agumon-feet-shoes-30d",
+      "name": "Agumon Feet Shoes [30D]",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "DE": 200
+    },
+    {
+      "id": "shoes-cozy-and-warm-socks",
+      "name": "Cozy and warm Socks",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "DE": 200
+    },
+    {
+      "id": "shoes-spooky-wizardmon-shoes-30-days",
+      "name": "Spooky Wizardmon Shoes[30 days]",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "DE": 100
+    },
+    {
+      "id": "shoes-swimming-gears-flippers-30d",
+      "name": "Swimming Gears - Flippers [30D]",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "DE": 200
+    },
+    {
+      "id": "shoes-yolei-t-k-davis-shoes-3",
+      "name": "Yolei,T.K,Davis Shoes",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "extra": [
+        {
+          "stat": "Speed",
+          "value": 30.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Affinity",
+          "value": 30.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 2000.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "top-spirit-top-3",
+      "name": "*:Spirit Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 4500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 3500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-agumon-top",
+      "name": "Agumon Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-arbormon-s-upper-armor-event",
+      "name": "Arbormon's Upper Armor [Event]",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-aural-hooded-shirt-of-baihumon",
+      "name": "Aural Hooded Shirt of Baihumon",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-baihumon-s-flawless-hooded-shirt",
+      "name": "Baihumon's Flawless Hooded Shirt",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1100.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-chakkumon-s-ice-vest-event",
+      "name": "Chakkumon's Ice Vest [Event]",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "AT": 150,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-cozy-and-warm-quilting-jacket",
+      "name": "Cozy and warm Quilting Jacket",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-fairimon-s-upper-armor-event",
+      "name": "Fairimon's Upper Armor [Event]",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "CT": 3.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-flame-hooded-shirt-of-zhuqiaomon",
+      "name": "Flame Hooded Shirt of Zhuqiaomon",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-hooded-shirt-of-baihumon",
+      "name": "Hooded Shirt of Baihumon",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-hooded-shirt-of-qinglongmon",
+      "name": "Hooded Shirt of Qinglongmon",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-hooded-shirt-of-zhuqiaomon",
+      "name": "Hooded Shirt of Zhuqiaomon",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-lanamon-s-swimsuit-event",
+      "name": "Lanamon's Swimsuit [Event]",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "DS": 2000,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-qinglongmon-s-lightning-hooded-shirt",
+      "name": "Qinglongmon's Lightning Hooded Shirt",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 900.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-radiant-hooded-shirt-of-qinglongmon",
+      "name": "Radiant Hooded Shirt of Qinglongmon",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-spooky-soulmon-s-robe-30-days",
+      "name": "Spooky Soulmon's Robe [30 days]",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-trendy-white-shirt-event",
+      "name": "Trendy White Shirt [Event]",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 5.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-unlimited-advanced-t-shirt-30-days",
+      "name": "Unlimited Advanced T -shirt [30 days]",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 800.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-xuanwumon-hooded-shirt",
+      "name": "Xuanwumon Hooded Shirt",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-xuanwumon-shiny-hooded-shirt",
+      "name": "Xuanwumon Shiny Hooded Shirt",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-xuanwumon-s-aquatic-hooded-shirt",
+      "name": "Xuanwumon's Aquatic Hooded Shirt",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1200.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-yolei-t-k-davis-top-3",
+      "name": "Yolei,T.K,Davis Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 2500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-zhuqiamon-s-infernal-hooded-shirt",
+      "name": "Zhuqiamon's Infernal Hooded Shirt",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "tamer",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 900.0,
+          "unit": "flat"
+        }
+      ]
+    }
+  ]
+}

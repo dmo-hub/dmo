@@ -47,6 +47,9 @@
      the 4.5 this needs: the glyph is 15px at normal weight, so it does not
      qualify as large text. --body clears it. 19px was also under the 24px a
      finger can hit, hence the padding. */
+  .go-flag { display: inline-block; margin-left: 6px; font-size: 11px;
+    color: var(--body); background: var(--surface-strong);
+    border-radius: 4px; padding: 1px 6px; white-space: nowrap; }
   .go-del { cursor: pointer; border: 0; background: none; color: var(--body);
     font-size: 15px; line-height: 1; padding: 5px 8px; min-height: 24px; }
   .go-del:hover { color: var(--coral); }
@@ -134,12 +137,14 @@
     <div class="go-card">
       <h2>ของสวม</h2>
       <p class="go-sub" id="slot-hint"></p>
+      <p class="go-sub" id="reg-hint"></p>
       <div class="go-tbl-wrap">
         <table class="go-tbl">
           <thead><tr><th>ชื่อ</th><th>ช่อง</th><th>ตีบวก</th><th>AT</th><th>HT</th><th>CT (%)</th><th></th></tr></thead>
           <tbody id="acc-body"></tbody>
         </table>
       </div>
+      <div id="reg-lists" hidden></div>
       <div class="go-actions">
         <button class="go-btn" id="acc-add" type="button">+ เพิ่มของสวม</button>
       </div>
@@ -290,15 +295,76 @@
     return td;
   }
 
+  /* Picking from the registry writes the stats in. Typing a name by hand still
+     works -- the box is a datalist, not a closed select, because the registry
+     only covers what the wiki records. */
   function nameCell(item) {
     var td = document.createElement("td");
     td.className = "go-name";
+
     var inp = document.createElement("input");
     inp.type = "text";
     inp.value = item.name || "";
-    inp.addEventListener("input", function () { item.name = inp.value; save(); });
+    inp.setAttribute("list", "reg-" + item.slot);
+    inp.addEventListener("input", function () {
+      item.name = inp.value;
+      var pick = findInRegistry(inp.value, item.slot);
+      if (pick) applyRegistryItem(item, pick);
+      save();
+      renderAcc();
+    });
     td.appendChild(inp);
+
+    var flag = registryFlag(item);
+    if (flag) td.appendChild(flag);
     return td;
+  }
+
+  function findInRegistry(name, slot) {
+    var list = registryBySlot[slot] || [];
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].name === name) return list[i];
+    }
+    return null;
+  }
+
+  /* Copy the registry's numbers onto the row. Stats the registry does not
+     mention are zeroed, otherwise a leftover value from the previous pick
+     would silently ride along. */
+  function applyRegistryItem(row, pick) {
+    STAT_FIELDS.forEach(function (f) {
+      row[f.key] = pick[f.key] !== undefined ? pick[f.key] : 0;
+    });
+    row.regId = pick.id;
+    row.regAxis = pick.axis;
+    row.regRanged = !!pick.ranged;
+    /* "Default to the maximum" -- the registry entry already holds the top
+       band, so the locked level follows it. */
+    if (pick.upgradeMax !== undefined) {
+      levels[pick.name] = pick.upgradeMax;
+      saveLevels();
+    } else if (pick.level !== undefined) {
+      levels[pick.name] = pick.level;
+      saveLevels();
+    }
+  }
+
+  /* An item whose axis the wiki never stated might feed the tamer instead of
+     the digimon, and the two scales differ by ~10x. Showing it with a warning
+     beats hiding gear a player actually owns. */
+  function registryFlag(item) {
+    if (!item.regId) return null;
+    var bits = [];
+    if (item.regAxis && item.regAxis !== "digimon") {
+      bits.push(item.regAxis === "tamer" ? "\u0e41\u0e01\u0e19\u0e40\u0e17\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c" : "\u0e44\u0e21\u0e48\u0e23\u0e39\u0e49\u0e41\u0e01\u0e19");
+    }
+    if (item.regRanged) bits.push("\u0e04\u0e48\u0e32\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14");
+    if (!bits.length) return null;
+    var el = document.createElement("span");
+    el.className = "go-flag";
+    el.textContent = bits.join(" \u00b7 ");
+    el.title = "\u0e41\u0e01\u0e19\u0e40\u0e17\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c = optimizer \u0e44\u0e21\u0e48\u0e04\u0e34\u0e14\u0e04\u0e30\u0e41\u0e19\u0e19\u0e43\u0e2b\u0e49 \u00b7 \u0e44\u0e21\u0e48\u0e23\u0e39\u0e49\u0e41\u0e01\u0e19 = \u0e2d\u0e32\u0e08\u0e40\u0e1b\u0e47\u0e19\u0e02\u0e2d\u0e07\u0e40\u0e17\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c \u00b7 \u0e04\u0e48\u0e32\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14 = \u0e27\u0e34\u0e01\u0e34\u0e43\u0e2b\u0e49\u0e40\u0e1b\u0e47\u0e19\u0e0a\u0e48\u0e27\u0e07 \u0e43\u0e0a\u0e49\u0e02\u0e2d\u0e1a\u0e1a\u0e19";
+    return el;
   }
 
   function delCell(list, item) {
@@ -319,6 +385,25 @@
 
   /* The player's own upgrade level per piece. Decision 08: the solver must not
      choose it -- a +15 recommendation is useless to someone holding a +3. */
+  /* The registry the picker offers, built by builders/build_gear_registry.py
+     from data/clothing_items.json. Values in it are already the top of each
+     roll range and the highest upgrade band. */
+  var registry = [];
+  var registryBySlot = {};
+
+  function loadRegistry() {
+    return fetch("gear_registry.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        registry = (d && d.items) || [];
+        registryBySlot = {};
+        registry.forEach(function (it) {
+          (registryBySlot[it.slot] = registryBySlot[it.slot] || []).push(it);
+        });
+      })
+      .catch(function () { registry = []; registryBySlot = {}; });
+  }
+
   var LEVELS_KEY = "dmo_gear_levels";
   var levels = jget(LEVELS_KEY) || {};
 
@@ -339,6 +424,28 @@
     });
     td.appendChild(inp);
     return td;
+  }
+
+  /* One datalist per slot, so a row only offers gear that fits its slot. */
+  function renderDatalists() {
+    var host = $("reg-lists");
+    host.textContent = "";
+    SLOTS.forEach(function (slot) {
+      var dl = document.createElement("datalist");
+      dl.id = "reg-" + slot;
+      (registryBySlot[slot] || []).forEach(function (it) {
+        var o = document.createElement("option");
+        o.value = it.name;
+        var parts = [];
+        STAT_FIELDS.forEach(function (f) {
+          if (it[f.key]) parts.push(f.key + " " + it[f.key]);
+        });
+        if (it.axis !== "digimon") parts.push(it.axis);
+        o.label = parts.join(" \u00b7 ");
+        dl.appendChild(o);
+      });
+      host.appendChild(dl);
+    });
   }
 
   function renderAcc() {
@@ -390,12 +497,17 @@
   }
 
   function render() {
+    renderDatalists();
     renderAcc();
     renderChips();
     // built from SLOTS so the wording can never drift from the solver
     $("slot-hint").textContent = SLOTS.length + " \u0e0a\u0e48\u0e2d\u0e07 \u2014 " +
       SLOT_GROUPS.map(function (g) {
         return g + ": " + slotsInGroup(g).map(slotLabel).join(" · ");
+    $("reg-hint").textContent = registry.length
+      ? "\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e0a\u0e37\u0e48\u0e2d\u0e02\u0e2d\u0e07\u0e08\u0e32\u0e01\u0e0a\u0e48\u0e2d\u0e07\u0e0a\u0e37\u0e48\u0e2d \u0e41\u0e25\u0e49\u0e27\u0e04\u0e48\u0e32\u0e08\u0e30\u0e40\u0e15\u0e34\u0e21\u0e43\u0e2b\u0e49\u0e40\u0e2d\u0e07 \u2014 " + registry.length +
+        " \u0e0a\u0e34\u0e49\u0e19\u0e43\u0e19\u0e17\u0e30\u0e40\u0e1a\u0e35\u0e22\u0e19 \u00b7 \u0e04\u0e48\u0e32\u0e17\u0e35\u0e48\u0e40\u0e15\u0e34\u0e21\u0e04\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14\u0e02\u0e2d\u0e07\u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e34\u0e49\u0e19"
+      : "\u0e42\u0e2b\u0e25\u0e14\u0e17\u0e30\u0e40\u0e1a\u0e35\u0e22\u0e19\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49 \u2014 \u0e01\u0e23\u0e2d\u0e01\u0e04\u0e48\u0e32\u0e40\u0e2d\u0e07\u0e44\u0e14\u0e49\u0e15\u0e32\u0e21\u0e1b\u0e01\u0e15\u0e34";
       }).join("  |  ") + " \u2014 \u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e48\u0e2d\u0e07\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e0a\u0e34\u0e49\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27";
       SLOTS.join(" \u00b7 ") + ") \u2014 \u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e48\u0e2d\u0e07\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e0a\u0e34\u0e49\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27 \u0e23\u0e30\u0e1a\u0e1a\u0e08\u0e30\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e40\u0e2d\u0e07\u0e27\u0e48\u0e32\u0e0a\u0e48\u0e2d\u0e07\u0e44\u0e2b\u0e19\u0e43\u0e2a\u0e48\u0e2d\u0e30\u0e44\u0e23 \u0e2b\u0e23\u0e37\u0e2d\u0e1b\u0e25\u0e48\u0e2d\u0e22\u0e27\u0e48\u0e32\u0e07";
     // from the solver so the headline number cannot drift from the cap it uses
@@ -668,6 +780,14 @@
         /* Upgrade level is metadata, not a stat, so the loop above misses it.
            Dropping it here would hand the solver every level of a piece at
            once and let it pick one -- exactly what decision 08 rules out. */
+        /* Which registry entry a row came from, so the warning flag survives
+           a reload. Same trap as the upgrade fields: normalize builds a fresh
+           object and anything not copied here is dropped. */
+        if (it && it.regId) {
+          rec.regId = String(it.regId);
+          if (it.regAxis) rec.regAxis = String(it.regAxis);
+          if (it.regRanged) rec.regRanged = true;
+        }
         if (it && it.upgrade !== undefined && it.upgrade !== null) {
           rec.upgrade = Math.round(num(it.upgrade));
           if (it.upgradeMax !== undefined && it.upgradeMax !== null) {
@@ -706,13 +826,17 @@
   }
 
   var savedItems = jget(ITEMS_KEY, null);
-  if (savedItems && ((savedItems.accessories || []).length || (savedItems.chips || []).length)) {
-    data = normalize(savedItems);
-    reseedIdSeq();
-    render();
-  } else {
-    loadSeed(false);
-  }
+  /* The picker needs the registry before the first paint, otherwise the
+     datalists render empty and typing offers nothing. */
+  loadRegistry().then(function () {
+    if (savedItems && ((savedItems.accessories || []).length || (savedItems.chips || []).length)) {
+      data = normalize(savedItems);
+      reseedIdSeq();
+      render();
+    } else {
+      loadSeed(false);
+    }
+  });
 })();
 </script>
 
