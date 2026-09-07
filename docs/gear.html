@@ -559,7 +559,7 @@
       table.appendChild(thead);
 
       var body = document.createElement("tbody");
-      (groups[g] || []).forEach(function (it) { body.appendChild(accRow(it)); });
+      (groups[g] || []).forEach(function (it) { body.appendChild(accRow(it, g)); });
       table.appendChild(body);
       wrap.appendChild(table);
       block.appendChild(wrap);
@@ -586,25 +586,24 @@
     });
   }
 
-  function accRow(it) {
+  /* `group` is the block this row is rendered in. The dropdown then offers only
+     that block's slots -- repeating all three groups in every row would let a
+     row pick a slot that belongs to a different table, and it would jump there
+     on the next render. Moving an item between groups is therefore delete and
+     re-add, which is what each block's own "+ add" button is for. */
+  function accRow(it, group) {
     {
       var tr = document.createElement("tr");
       tr.appendChild(nameCell(it));
       var tdSlot = document.createElement("td");
       var sel = document.createElement("select");
-      SLOT_GROUPS.forEach(function (g) {
-        var members = slotsInGroup(g);
-        if (!members.length) return;
-        var grp = document.createElement("optgroup");
-        grp.label = g;
-        members.forEach(function (s) {
-          var o = document.createElement("option");
-          o.value = s;                    // id stays English -- it is stored
-          o.textContent = slotLabel(s);
-          if (it.slot === s) o.selected = true;
-          grp.appendChild(o);
-        });
-        sel.appendChild(grp);
+      var members = slotsInGroup(group || slotGroup(it.slot));
+      members.forEach(function (s) {
+        var o = document.createElement("option");
+        o.value = s;                      // id stays English -- it is stored
+        o.textContent = slotLabel(s);
+        if (it.slot === s) o.selected = true;
+        sel.appendChild(o);
       });
       sel.addEventListener("change", function () { it.slot = sel.value; save(); });
       tdSlot.appendChild(sel);
