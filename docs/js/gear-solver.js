@@ -335,6 +335,31 @@
     return out;
   }
 
+  /* Decision 02 scoped the optimizer to DIGIMON stats. Tamer gear reaches
+     values ~10x larger on the same axis names, so leaving it in the pool makes
+     the solver pick it every time and hand back a loadout whose numbers never
+     reach the digimon. Rows the wiki never placed on an axis are the same
+     hazard with the added twist that nobody knows which way they fall.
+
+     Rows carrying no axis mark at all are hand-entered and stay: the player
+     typed those numbers, so they are the player's to judge. */
+  function scorableAxis(it) {
+    var ax = it && it.regAxis;
+    if (!ax) return true;
+    return ax === "digimon";
+  }
+
+  function dropOffAxis(data) {
+    var kept = [], dropped = [];
+    ((data && data.accessories) || []).forEach(function (it) {
+      (scorableAxis(it) ? kept : dropped).push(it);
+    });
+    return {
+      data: { accessories: kept, chips: (data && data.chips) || [] },
+      dropped: dropped
+    };
+  }
+
   root.GearSolver = {
     SLOTS: SLOTS,
     SLOT_GROUPS: SLOT_GROUPS,
@@ -346,5 +371,7 @@
     solve: solve,
     findDuplicateIds: findDuplicateIds,
     applyUpgradeLevels: applyUpgradeLevels,
+    dropOffAxis: dropOffAxis,
+    scorableAxis: scorableAxis,
   };
 })(typeof window !== "undefined" ? window : globalThis);

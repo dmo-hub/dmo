@@ -353,7 +353,9 @@
      the digimon, and the two scales differ by ~10x. Showing it with a warning
      beats hiding gear a player actually owns. */
   function registryFlag(item) {
-    if (!item.regId) return null;
+    /* Keyed off the axis mark, not the registry id: what matters is whether
+       the solver will score this row, and that is decided by regAxis alone. */
+    if (!item.regAxis && !item.regRanged) return null;
     var bits = [];
     if (item.regAxis && item.regAxis !== "digimon") {
       bits.push(item.regAxis === "tamer" ? "\u0e41\u0e01\u0e19\u0e40\u0e17\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c" : "\u0e44\u0e21\u0e48\u0e23\u0e39\u0e49\u0e41\u0e01\u0e19");
@@ -631,9 +633,14 @@
     /* One row per upgrade level lives in the registry; keep only the band that
        holds each piece's locked level so the solver cannot pick a level. */
     var solveData = window.GearSolver.applyUpgradeLevels(data, levels);
+    /* Gear that does not feed the digimon is set aside before the solve, and
+       named in the result -- silently ignoring a piece the player put in the
+       list would read as the optimizer losing it. */
+    var axisCut = window.GearSolver.dropOffAxis(solveData);
+    solveData = axisCut.data;
     var dupes = window.GearSolver.findDuplicateIds(data);
     var out = window.GearSolver.solve(solveData, g.base, g.targets);
-    lastRun = { out: out, goal: g, dupes: dupes };
+    lastRun = { out: out, goal: g, dupes: dupes, axisDropped: axisCut.dropped };
     renderResult();
     showTab("tab-result");
   }
@@ -750,6 +757,19 @@
     pick.appendChild(c2);
     root.appendChild(pick);
 
+    var cut = lastRun.axisDropped || [];
+    if (cut.length) {
+      var an = document.createElement("p");
+      an.className = "go-warn";
+      an.textContent = "\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49\u0e04\u0e34\u0e14 " + cut.length + " \u0e0a\u0e34\u0e49\u0e19\u0e17\u0e35\u0e48\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49\u0e43\u0e2b\u0e49\u0e04\u0e48\u0e32\u0e14\u0e34\u0e08\u0e34\u0e21\u0e2d\u0e19: " +
+        cut.map(function (it) {
+          var why = it.regAxis === "tamer" ? "\u0e41\u0e01\u0e19\u0e40\u0e17\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c"
+                                           : "\u0e44\u0e21\u0e48\u0e23\u0e39\u0e49\u0e41\u0e01\u0e19";
+          return (it.name || "-") + " (" + why + ")";
+        }).join(", ");
+      root.appendChild(an);
+    }
+
     if (lastRun.dupes.length) {
       var w = document.createElement("p");
       w.className = "go-warn";
@@ -783,11 +803,12 @@
         /* Which registry entry a row came from, so the warning flag survives
            a reload. Same trap as the upgrade fields: normalize builds a fresh
            object and anything not copied here is dropped. */
-        if (it && it.regId) {
-          rec.regId = String(it.regId);
-          if (it.regAxis) rec.regAxis = String(it.regAxis);
-          if (it.regRanged) rec.regRanged = true;
-        }
+        /* regAxis is what the solver filters on, so it has to survive on its
+           own -- tying it to regId meant a row carrying only an axis mark lost
+           it here and slipped back into the scoring pool. */
+        if (it && it.regId) rec.regId = String(it.regId);
+        if (it && it.regAxis) rec.regAxis = String(it.regAxis);
+        if (it && it.regRanged) rec.regRanged = true;
         if (it && it.upgrade !== undefined && it.upgrade !== null) {
           rec.upgrade = Math.round(num(it.upgrade));
           if (it.upgradeMax !== undefined && it.upgradeMax !== null) {

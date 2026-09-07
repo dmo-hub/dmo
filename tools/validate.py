@@ -153,9 +153,22 @@ def check_scripts():
             f.write(js)
             tmp = f.name
         try:
-            r = subprocess.run([node, "--check", tmp], capture_output=True, text=True)
+            # Read bytes, not text: node echoes the offending source line, so a
+            # syntax error inside a Thai string makes the default locale decode
+            # (cp874 on this machine) fail. text=True then hands back None and
+            # the .strip() below used to crash the whole gate -- turning "this
+            # file has a syntax error" into "the checker exploded".
+            r = subprocess.run([node, "--check", tmp], capture_output=True)
             if r.returncode != 0:
-                msg = (r.stderr.strip().splitlines() or ["syntax error"])[0]
+                err = (r.stderr or b"").decode("utf-8", errors="replace")
+                lines = [ln for ln in err.strip().splitlines() if ln.strip()]
+                msg = lines[0] if lines else "syntax error"
+                # node prints the source line first and the reason further down;
+                # the reason is what a reader needs.
+                for ln in lines:
+                    if "Error" in ln:
+                        msg = ln.strip()
+                        break
                 bad.append(f"{p.relative_to(PROJ)}: {msg[:200]}")
         finally:
             Path(tmp).unlink(missing_ok=True)
