@@ -520,6 +520,19 @@ def check_chip_registry():
     if grades != [16, 17, 18]:
         bad.append(f"expected only R16-R18, got {grades}")
 
+    # B09: a "family" chipset is stronger but only fits a matching digimon, and
+    # the solver has no idea which family the player runs -- it would pick the
+    # stronger one every time and recommend a chip that cannot be equipped.
+    # Today the list is Double ChipSets only, which carry no such restriction,
+    # so the decision is to score all-family chips only. This guard is what
+    # keeps that true: adding a restricted chip must fail here rather than
+    # quietly produce an unusable answer.
+    for it in items:
+        if (it.get("kind") or "all") != "all":
+            bad.append("%s: kind=%r -- the solver scores all-family chips only "
+                       "(a family chip needs the player's family, see B09)"
+                       % (it["id"], it.get("kind")))
+
     for it in items:
         parts = it.get("parts") or {}
         prim, sec = parts.get("primary") or {}, parts.get("secondary") or {}
