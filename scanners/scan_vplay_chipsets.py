@@ -11,12 +11,19 @@ grade, but the Thai post shows a Double ChipSet carries TWO sets --
     (a Double ChipSet carries a PRIMARY and a SECONDARY stat set, for the
      DIGIMON's attributes)
 
-The primary numbers match dmowiki's family chipset exactly (R16 HP 2151, AT
-306 ...), so this file adds the secondary set -- roughly 60% of the primary --
-which dmowiki does not record at all.
+The quote above also settles a question left open by B08: it says the stats
+are for the digimon's attributes, so the solver may score them.
 
-That last clause also settles a question left open by B08: chipset stats feed
-the DIGIMON, so the solver may score them.
+The primary numbers match dmowiki's FAMILY chipset exactly on all seven stats
+of all three grades -- and not the All-Family row sitting beside it (R16 AT
+244 there, 306 here), so the match picks one of two candidates rather than
+landing anywhere. That is what makes the rest of the post worth reading: this
+file adds the secondary set, which dmowiki does not record at all.
+
+The secondary set is 60% of the primary, rounded to whole numbers, on every
+stat of every grade. Whether the game works that way or vplay simply laid the
+table out that way is not something these numbers can answer -- but a table
+that consistent is generated, not typed in by hand, so the values carry.
 
 Table shape: each grade gets a heading ("ดับเบิ้ลชิปเซ็ท R17") followed by
 two 2-column tables, primary then secondary, each row "STAT | value".

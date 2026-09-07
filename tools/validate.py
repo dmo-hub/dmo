@@ -472,10 +472,11 @@ def check_chip_registry():
                 bad.append(f"{it['id']}: {key} is {got}, primary+secondary is {want}")
 
     # The secondary set is 60% of the primary, rounded to whole numbers, on
-    # every stat of every grade. Only vplay records it -- dmowiki has no
-    # second set at all -- so there is no other source to check it against.
-    # What can be checked is that it still follows the one rule the whole
-    # table obeys, which a bad rescrape would break.
+    # every stat of every grade. Only vplay records it, so there is no second
+    # source to diff against; what stands in for one is that the primary set
+    # from the same tables matches dmowiki's family chipset exactly, and the
+    # 60% rule holds across all three grades without a hand-typed outlier.
+    # This guard catches a rescrape that breaks the rule.
     for it in items:
         parts = it.get("parts") or {}
         prim, sec = parts.get("primary") or {}, parts.get("secondary") or {}
