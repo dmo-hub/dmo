@@ -281,16 +281,6 @@ def main() -> None:
       </div>
     </a>
 
-    <a href="accessories.html" class="feature">
-      <div class="icon">💍</div>
-      <h3>Accessories</h3>
-      <p>เครื่องประดับเซิร์ฟ TH — ที่มา สเตตัส และการอัพเกรด</p>
-      <div class="feature-stats">
-        <div class="stat"><b>7</b>ชนิด</div>
-        <div class="stat"><b>10</b>ชิ้น</div>
-      </div>
-    </a>
-
     <a href="equipment-shin.html" class="feature">
       <div class="icon">⚔️</div>
       <h3>อุปกรณ์ใหม่ ปกติ vs ชิน</h3>

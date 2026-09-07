@@ -120,7 +120,8 @@ fetchers/  →  cache/*.html  →  scanners/  →  data/*.json  →  enrichers/ 
 | `seals.html` | Seal Exchange ข้ามเซิร์ฟ NA/KR/TH + localStorage budget calculator |
 | `lookup.html` | Cross-server name lookup (EN/KR/TH alias-aware) |
 | `nametag.html` | ข้อมูล nametag item |
-| `accessories.html`, `breakthrough.html` | หน้าเสริม — มีลิงก์เข้าจาก nav/seals ครบ ไม่ orphan |
+| `breakthrough.html` | หน้าเสริม — มีลิงก์เข้าจาก nav/seals ครบ ไม่ orphan |
+| ~~`accessories.html`~~ | **ลบแล้ว 2026-09-07** — เขียนมือ ซ้ำกับ `data/clothing_items.json` 6/11 หัวข้อ และผิด 2 จุด (เรียก `HT` ว่า "อัตราโจมตี" · `HP=1` ที่ wiki บอก `0`) ⇒ ทะเบียนเป็นเจ้าของ · หน้าทะเบียนตัวจริงคือ `gear.html` |
 | `seal-deal.html`, `seal-deal-calculator.html`, `seal-lookup-89.html`, `seal-patch-th-88.html`, `susanoomon-extreme-th-90.html` | หน้า one-off ผูก patch เฉพาะ |
 | `styleguide.html` | reference component ทุกตัวของ site (copy-paste) |
 | `css/site.css` | stylesheet กลางทุกหน้า (light/dark theme) — รวม `.poster-*` ที่เพิ่มไว้รองรับ backoffice |
