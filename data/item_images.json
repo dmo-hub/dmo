@@ -1,0 +1,76 @@
+{
+  "images": {
+    "old-digivice-101-orange-ap1": [
+      "old-digivice-101-orange-ap1.png"
+    ],
+    "old-digivice-102-blue-bt": [
+      "old-digivice-102-blue-bt.png"
+    ],
+    "old-digivice-103-ot-digivice-orange-purple-blue-snowflower": [
+      "old-digivice-103-ot-digivice-orange-purple-blue-snowflower.png"
+    ],
+    "old-digivice-103-purple-bt": [
+      "old-digivice-103-purple-bt.png"
+    ],
+    "old-digivice-d-ark-proto-type": [
+      "old-digivice-d-ark-proto-type.png",
+      "old-digivice-d-ark-proto-type-2.png",
+      "old-digivice-d-ark-proto-type-3.png"
+    ],
+    "old-digivice-digivice-adventure": [
+      "old-digivice-digivice-adventure.png"
+    ],
+    "old-digivice-digivice-of-adventure-lv-0": [
+      "old-digivice-digivice-of-adventure-lv-0.png"
+    ],
+    "old-digivice-digivice-of-adventure-lv-1": [
+      "old-digivice-digivice-of-adventure-lv-1.png"
+    ],
+    "old-digivice-digivice-of-adventure-lv-2": [
+      "old-digivice-digivice-of-adventure-lv-2.png"
+    ],
+    "old-digivice-digivice-of-beginning-lv-0": [
+      "old-digivice-digivice-of-beginning-lv-0.png"
+    ],
+    "old-digivice-digivice-of-beginning-lv-1": [
+      "old-digivice-digivice-of-beginning-lv-1.png"
+    ],
+    "old-digivice-digivice-of-beginning-lv-2": [
+      "old-digivice-digivice-of-beginning-lv-2.png"
+    ],
+    "old-digivice-digivice-of-courage": [
+      "old-digivice-digivice-of-courage.png"
+    ],
+    "old-digivice-digivice-of-fate": [
+      "old-digivice-digivice-of-fate.png"
+    ],
+    "old-digivice-digivice-of-friendship": [
+      "old-digivice-digivice-of-friendship.png"
+    ],
+    "old-digivice-digivice-of-hope": [
+      "old-digivice-digivice-of-hope.png"
+    ],
+    "old-digivice-digivice-of-kindness": [
+      "old-digivice-digivice-of-kindness.png"
+    ],
+    "old-digivice-digivice-of-knowledge": [
+      "old-digivice-digivice-of-knowledge.png"
+    ],
+    "old-digivice-digivice-of-light": [
+      "old-digivice-digivice-of-light.png"
+    ],
+    "old-digivice-digivice-of-love": [
+      "old-digivice-digivice-of-love.png"
+    ],
+    "old-digivice-digivice-of-miracles": [
+      "old-digivice-digivice-of-miracles.png"
+    ],
+    "old-digivice-digivice-of-purity": [
+      "old-digivice-digivice-of-purity.png"
+    ],
+    "old-digivice-true-digivice": [
+      "old-digivice-true-digivice.png"
+    ]
+  },
+  "note": "item id -> files under docs/img/items/"
+}
