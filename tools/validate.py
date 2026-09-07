@@ -617,37 +617,60 @@ def check_set_registry():
         return ["docs/set_registry.json missing -- run builders/build_set_registry.py"]
     sets = json.loads(p.read_text(encoding="utf-8"))["sets"]
 
-    if len(sets) != 3:
-        bad.append("expected the 3 tamer sets, got %d" % len(sets))
+    # The three tamer sets claim the six clothing slots and have shin variants.
+    # Last Evolution is a two-piece accessory set with no shin variants at all,
+    # so the shape checks below are split: what holds for every set, and what
+    # holds only for the clothing three.
+    CLOTHING = {"Yolei-Heart of Love", "T.K-Light of Hope",
+                "Davis-Power of Courage"}
+    if len(sets) != 4:
+        bad.append("expected 3 tamer sets + Last Evolution, got %d" % len(sets))
 
     SHIN = "(\u0e0a\u0e34\u0e19)"
     for s in sets:
+        clothing = s["set"] in CLOTHING
         if not s.get("set") or not s.get("set_th"):
             bad.append("%s: missing one of the two names" % s.get("set_th"))
-        if len(s["slots"]) != 6:
+        if clothing and len(s["slots"]) != 6:
             bad.append("%s: %d slots, expected 6" % (s["set"], len(s["slots"])))
+        if not s["slots"]:
+            bad.append("%s: no slots at all" % s["set"])
+        if len(s["slots"]) != s["pieces"]:
+            bad.append("%s: pieces %s but %d slots"
+                       % (s["set"], s["pieces"], len(s["slots"])))
         seen = set()
         for sl in s["slots"]:
             if sl["slot"] in seen:
                 bad.append("%s: slot %s appears twice" % (s["set"], sl["slot"]))
             seen.add(sl["slot"])
             # a slot takes the base item or its shin variant, never both at once
-            if sl["accepts"] != [sl["item"], sl["shin"]]:
+            want = [n for n in (sl["item"], sl["shin"]) if n]
+            if sl["accepts"] != want:
                 bad.append("%s/%s: accepts does not match item+shin"
                            % (s["set"], sl["slot"]))
-            if not sl["shin"].startswith(SHIN):
+            if sl["shin"] and not sl["shin"].startswith(SHIN):
                 bad.append("%s/%s: shin variant is not marked"
+                           % (s["set"], sl["slot"]))
+            if clothing and not sl["shin"]:
+                bad.append("%s/%s: clothing slot lost its shin variant"
                            % (s["set"], sl["slot"]))
             if sl["item"].startswith(SHIN):
                 bad.append("%s/%s: base item is a shin variant"
                            % (s["set"], sl["slot"]))
             if not sl["stats_from"]:
-                bad.append("%s/%s: no template supplied the stats"
+                bad.append("%s/%s: no source supplied the stats"
                            % (s["set"], sl["slot"]))
-        # every set has a 4-piece and a 6-piece bonus
+        # the clothing sets each have a 4-piece and a 6-piece bonus
         sizes = sorted(b["pieces"] for b in s["bonuses"])
-        if sizes != [4, 6]:
+        if clothing and sizes != [4, 6]:
             bad.append("%s: bonus sizes %s, expected [4, 6]" % (s["set"], sizes))
+        if not sizes:
+            bad.append("%s: no bonuses joined" % s["set"])
+        # a threshold can never ask for more pieces than the set has
+        for n in sizes:
+            if n > len(s["slots"]):
+                bad.append("%s: a %d-piece bonus on a %d-slot set"
+                           % (s["set"], n, len(s["slots"])))
 
     # Davis procs at both sizes; the others are permanent at 4. Guards the
     # join from quietly pairing a set with another set's bonuses.

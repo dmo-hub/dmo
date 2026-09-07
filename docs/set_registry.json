@@ -288,6 +288,74 @@
       ]
     },
     {
+      "set_th": "ลาสต์ อีโวลูชัน",
+      "set": "Last Evolution",
+      "pieces": 2,
+      "slots": [
+        {
+          "slot": "digivice",
+          "item": "เฟิร์สท์ ดิจิไวซ์",
+          "shin": null,
+          "accepts": [
+            "เฟิร์สท์ ดิจิไวซ์"
+          ],
+          "stats": {},
+          "stats_from": "le-digivice"
+        },
+        {
+          "slot": "aura",
+          "item": "ดิจิออร่าแห่งความกล้าหาญและมิตรภาพ",
+          "shin": null,
+          "accepts": [
+            "ดิจิออร่าแห่งความกล้าหาญและมิตรภาพ"
+          ],
+          "stats": {
+            "AT": 1500,
+            "HP": 2000
+          },
+          "stats_from": "le-aura"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 2,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "HP",
+              "value": 2000,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "2000 HP"
+            },
+            {
+              "stat": "HT",
+              "value": 1000,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "1000 HT"
+            },
+            {
+              "stat": "CT",
+              "value": 10,
+              "unit": "pct",
+              "scoreable": true,
+              "text": "+10% Critical"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "+1% Final DMG"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "set_th": "แสงแห่งความหวัง",
       "set": "T.K-Light of Hope",
       "pieces": 6,

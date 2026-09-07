@@ -33,6 +33,10 @@ sys.stdout.reconfigure(encoding="utf-8")
 PROJ = Path(__file__).resolve().parent.parent
 ROSTERS = PROJ / "data" / "set_rosters.json"
 EFFECTS = PROJ / "data" / "set_effects.json"
+# data/set_effects.json is a dmowiki scan and gets rewritten on every rescan,
+# so a set dmowiki never recorded cannot live there. This second, hand-kept
+# file carries the vplay-only set and its two items.
+EXTRA = PROJ / "data" / "last_evolution.json"
 REGISTRY = PROJ / "docs" / "gear_registry.json"
 OUT = PROJ / "docs" / "set_registry.json"
 
@@ -46,12 +50,22 @@ SET_NAMES = {
     "พลังแห่งความกล้า": "Davis-Power of Courage",
     "แสงแห่งความหวัง": "T.K-Light of Hope",
     "จิตใจแห่งรัก": "Yolei-Heart of Love",
+    # dmowiki never recorded this one, so the English name is ours: it is only
+    # a join key, and the page shows set_th to the player either way.
+    "ลาสต์ อีโวลูชัน": "Last Evolution",
 }
 
 # vplay's slot words, in roster order, against the solver's slot ids. The
 # roster lists one item per slot in a fixed order, so position identifies the
 # slot even though the item names differ per set.
-SLOT_ORDER = ["head", "fashion", "top", "bottom", "gloves", "shoes"]
+#
+# Not every set claims the six clothing slots: the Last Evolution pair is two
+# accessories in slots of their own. The order is therefore per set, keyed by
+# the English name, with the clothing six as the default.
+CLOTHING_SLOTS = ["head", "fashion", "top", "bottom", "gloves", "shoes"]
+SLOT_ORDER_BY_SET = {
+    "Last Evolution": ["digivice", "aura"],
+}
 
 # The dmowiki template row that carries the stats for these sets' slots.
 TEMPLATE = "Yolei,T.K,Davis"
@@ -61,11 +75,25 @@ def main():
     rosters = json.loads(ROSTERS.read_text(encoding="utf-8"))["sets"]
     effects = json.loads(EFFECTS.read_text(encoding="utf-8"))["sets"]
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))["items"]
+    extra = json.loads(EXTRA.read_text(encoding="utf-8"))
+
+    # The vplay-only set's bonus joins the dmowiki ones on the same key.
+    effects = effects + extra["bonuses"]
 
     by_slot = {}
     for it in registry:
         if it["name"].startswith(TEMPLATE):
             by_slot[it["slot"]] = it
+
+    # Its two items are not in the dmowiki registry either, so their stats come
+    # straight from the extra file, keyed by slot like the template rows above.
+    stats_by_item = {}
+    for it in extra["items"]:
+        stats = {}
+        for k in ("AT", "HT", "CT", "DS", "DE", "EV", "BL", "HP"):
+            if it.get(k):
+                stats[k] = it[k]
+        stats_by_item[it["name"]] = (stats, it["id"])
 
     out = []
     unmapped = []
@@ -74,27 +102,39 @@ def main():
         if not english:
             unmapped.append(r["set"])
             continue
-        if len(r["items"]) != len(SLOT_ORDER):
+        slot_order = SLOT_ORDER_BY_SET.get(english, CLOTHING_SLOTS)
+        if len(r["items"]) != len(slot_order):
             print("  WARN  %s: %d items, expected %d"
-                  % (r["set"], len(r["items"]), len(SLOT_ORDER)))
+                  % (r["set"], len(r["items"]), len(slot_order)))
             continue
 
+        # A set without shin variants has shin_items == [], and zip() would
+        # silently yield nothing -- producing a set with zero slots and no
+        # error at all. Pad instead, so "no shin variant" means the slot
+        # accepts only the base item rather than the slot vanishing.
+        shins = r["shin_items"] or [None] * len(r["items"])
+
         slots = []
-        for slot, base, shin in zip(SLOT_ORDER, r["items"], r["shin_items"]):
+        for slot, base, shin in zip(slot_order, r["items"], shins):
             tmpl = by_slot.get(slot)
             stats = {}
-            if tmpl:
+            stats_from = None
+            if base in stats_by_item:
+                stats, stats_from = stats_by_item[base]
+            elif tmpl:
                 for k in ("AT", "HT", "CT", "DS", "DE", "EV", "BL", "HP"):
                     if tmpl.get(k):
                         stats[k] = tmpl[k]
+                stats_from = tmpl["name"]
             slots.append({
                 "slot": slot,
                 "item": base,
                 "shin": shin,
-                # either variant fills this slot and counts toward the set
-                "accepts": [base, shin],
+                # either variant fills this slot and counts toward the set;
+                # a set with no shin variants accepts the base item only
+                "accepts": [n for n in (base, shin) if n],
                 "stats": stats,
-                "stats_from": tmpl["name"] if tmpl else None,
+                "stats_from": stats_from,
             })
 
         bonuses = [e for e in effects if e["set"] == english]

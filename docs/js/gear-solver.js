@@ -36,7 +36,8 @@
      result list renders in, so it follows how the game lays the doll out. */
   var SLOTS = [
     "ring", "necklace", "bracelet", "earring", "glasses", "wing",
-    "head", "fashion", "top", "bottom", "gloves", "shoes", "keyring"
+    "head", "fashion", "top", "bottom", "gloves", "shoes", "keyring",
+    "digivice", "aura"
   ];
 
   /* Thai label and group for each slot. The ID above stays English on purpose:
@@ -57,14 +58,17 @@
     earring:  { label: "\u0e15\u0e48\u0e32\u0e07\u0e2b\u0e39", group: "\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a" },
     glasses:  { label: "\u0e41\u0e27\u0e48\u0e19",   group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
     wing:     { label: "\u0e1b\u0e35\u0e01",     group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
-    keyring:  { label: "\u0e04\u0e35\u0e22\u0e4c\u0e23\u0e34\u0e07", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" }
+    keyring:  { label: "\u0e04\u0e35\u0e22\u0e4c\u0e23\u0e34\u0e07", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
+    digivice: { label: "\u0e14\u0e34\u0e08\u0e34\u0e44\u0e27\u0e0b\u0e4c", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
+    aura:     { label: "\u0e2d\u0e2d\u0e23\u0e48\u0e32", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" }
   };
 
   /* Wearing order within each group, so the dropdown reads head-to-toe rather
      than following the internal SLOTS order. */
   var SLOT_ORDER = [
     "head", "top", "bottom", "gloves", "shoes", "fashion",
-    "ring", "necklace", "bracelet", "earring", "glasses", "wing", "keyring"
+    "ring", "necklace", "bracelet", "earring",
+    "glasses", "wing", "keyring", "digivice", "aura"
   ];
 
   function slotsInGroup(group) {
@@ -108,21 +112,66 @@
     return vals.join("|") + "|" + n + "|" + (setKey || "");
   }
 
-  /* Set progress rides in the state key as ONE pair, not one counter per set.
-     Every set covered here claims the same six clothing slots and no item
-     belongs to two sets, so a loadout can only ever be building one of them:
-     the moment a piece of another set is worn, the first set's run is over.
-     That turns what would be 7x7x7 = 343 combinations into 1 + 3x6 = 19.
+  /* Set progress rides in the state key as one pair PER GROUP of sets that
+     compete for the same slots -- not one counter per set, and not a single
+     pair for everything.
 
-     Tracking it per set instead would multiply the state count by 343 on a DP
-     that is already the reason ticket B01 exists. */
+     Sets that share slots are mutually exclusive: the three tamer sets all
+     claim the same six clothing slots, so a loadout can only ever be building
+     one of them and a single pair covers all three (1 + 3x6 = 19 states rather
+     than 7x7x7 = 343).
+
+     But that only holds WITHIN a group. Last Evolution sits on its own two
+     accessory slots, so it can be worn alongside a clothing set -- and while
+     progress was a single pair, putting on its digivice wiped whatever
+     clothing set was in progress. Grouping is computed from the registry
+     (see groupSets) instead of assumed, so the next disjoint set added does
+     not silently repeat the bug. */
   function setProgress(prev, item, index) {
     var owner = index.owner[item && item.name];
     if (!owner) return prev;                 // not a set piece: progress stands
-    if (!prev) return owner + ":1";          // first piece of a set
-    var parts = prev.split(":");
-    if (parts[0] !== owner) return owner + ":1";  // switched sets: start over
-    return owner + ":" + (Number(parts[1]) + 1);
+    var group = index.group[owner];
+    var parts = (prev || "").split(",").filter(Boolean);
+    var out = [];
+    var found = false;
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i].split(":");
+      if (index.group[p[0]] !== group) {      // another group's run: untouched
+        out.push(parts[i]);
+        continue;
+      }
+      found = true;
+      if (p[0] === owner) out.push(owner + ":" + (Number(p[1]) + 1));
+      else out.push(owner + ":1");            // switched sets within a group
+    }
+    if (!found) out.push(owner + ":1");
+    out.sort();                               // keys must not depend on order
+    return out.join(",");
+  }
+
+  /* Partition the sets into groups that share at least one slot, so each group
+     needs only one progress counter. Union-find over the slot lists. */
+  function groupSets(sets) {
+    var parent = {};
+    function find(a) {
+      while (parent[a] !== a) { parent[a] = parent[parent[a]]; a = parent[a]; }
+      return a;
+    }
+    (sets || []).forEach(function (s) { parent[s.set] = s.set; });
+    var owners = {};
+    (sets || []).forEach(function (s) {
+      (s.slots || []).forEach(function (sl) {
+        if (owners[sl.slot] !== undefined) {
+          var a = find(owners[sl.slot]), b = find(s.set);
+          if (a !== b) parent[a] = b;
+        } else {
+          owners[sl.slot] = s.set;
+        }
+      });
+    });
+    var group = {};
+    (sets || []).forEach(function (s) { group[s.set] = find(s.set); });
+    return group;
   }
 
   /* Each state remembers the choice that produced it. `prev` is a direct
@@ -147,7 +196,8 @@
         proc[s.set + ":" + b.pieces] = !b.permanent;
       });
     });
-    return { owner: owner, bonus: bonus, label: label, proc: proc };
+    return { owner: owner, bonus: bonus, label: label, proc: proc,
+             group: groupSets(sets) };
   }
 
   /* What a state's set progress is worth right now. Bonuses stack by
@@ -156,15 +206,19 @@
   function setBonusFor(setKey, index) {
     var out = {};
     if (!setKey) return out;
-    var parts = setKey.split(":");
-    var name = parts[0], worn = Number(parts[1]);
-    Object.keys(index.bonus).forEach(function (k) {
-      var kp = k.split(":");
-      if (kp[0] !== name) return;
-      if (worn < Number(kp[1])) return;
-      var add = index.bonus[k];
-      Object.keys(add).forEach(function (st) {
-        out[st] = (out[st] || 0) + add[st];
+    /* The key now holds one "set:worn" pair per group, comma separated, so a
+       clothing set and Last Evolution can both be paying out at once. */
+    setKey.split(",").filter(Boolean).forEach(function (pair) {
+      var parts = pair.split(":");
+      var name = parts[0], worn = Number(parts[1]);
+      Object.keys(index.bonus).forEach(function (k) {
+        var kp = k.split(":");
+        if (kp[0] !== name) return;
+        if (worn < Number(kp[1])) return;
+        var add = index.bonus[k];
+        Object.keys(add).forEach(function (st) {
+          out[st] = (out[st] || 0) + add[st];
+        });
       });
     });
     return out;
@@ -359,7 +413,9 @@
        that a proc bonus is counted at full value. */
     var setsOut = [];
     if (index && winner.set) {
-      var parts = winner.set.split(":");
+      // one "set:worn" pair per group, so more than one set can be earned
+      winner.set.split(",").filter(Boolean).forEach(function (pair) {
+      var parts = pair.split(":");
       var worn = Number(parts[1]);
       Object.keys(index.bonus).forEach(function (k) {
         var kp = k.split(":");
@@ -378,6 +434,7 @@
             return { stat: st, value: b[st] };
           }),
         });
+      });
       });
       setsOut.sort(function (a, b) { return a.pieces - b.pieces; });
     }

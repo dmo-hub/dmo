@@ -57,6 +57,7 @@ PROJ = Path(__file__).resolve().parent.parent
 SLOTS = [
     "ring", "necklace", "bracelet", "earring", "glasses", "wing",
     "head", "fashion", "top", "bottom", "gloves", "shoes", "keyring",
+    "digivice", "aura",
 ]
 STATS = ["HT", "CT", "DS", "DE", "EV", "BL"]
 PCT_STATS = {"CT"}

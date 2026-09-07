@@ -87,6 +87,14 @@ if victim_slot:
     variants.append((broken, [{"base": {"AT": 0, "HT": 0}, "targets": t}
                               for t in ({"HT": 3000}, {"HT": 0}, {"CT": 10.0})]))
 
+# Last Evolution sits on two accessory slots of its own, so it can be worn
+# ALONGSIDE a clothing set -- which the single-progress-pair DP could not
+# represent (putting on the digivice wiped the clothing run). Only a high HT
+# floor makes the pair worth its slots, so pin those targets explicitly rather
+# than hoping the random draw lands there.
+variants.append((data, [{"base": {"AT": 0, "HT": 0}, "targets": {"HT": h}}
+                        for h in (6000, 8000, 10000)]))
+
 bad = feas = total = 0
 for vi, (vdata, vcases) in enumerate(variants):
     json.dump({"data": vdata, "cases": vcases},
