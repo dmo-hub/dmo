@@ -176,6 +176,7 @@ def check_parsers():
     bad = []
     try:
         from scan_vplay_upgrade import parse_blocks as parse_vplay_blocks
+        from scan_chipsets import parse_chipsets
         from scan_clothing import (build_heading_map, canon_stat, header_labels,
                                    parse_rowwise, parse_stat_cell, slot_from,
                                    split_rows)
@@ -286,6 +287,26 @@ def check_parsers():
                  "0:AT=50.0,1:AT=100.0,15:AT=1500.0,15:Skill DMG=12.0%,15:Final DMG=3.0%",
                  "แมกเนติก ID Card - Fixture [CT]|"
                  "0:CT=5.0%,1:CT=7.0%"],
+            ),
+            (
+                # Chipset tables are pivoted: stats down the rows, GRADE across
+                # the columns, so one column is one chip. Two kinds share the
+                # same header and are told apart only by the image above the
+                # table. "+?" means the wiki has no value -- it must not become
+                # a zero, or an unmeasured stat reads as "this chip gives none".
+                "chipsets_slice.html",
+                lambda t: [
+                    "%s|%s" % (c["id"], ",".join(
+                        "%s=%s%s" % (s["stat"], s["value"],
+                                     "%" if s["unit"] == "pct" else "")
+                        for s in c["stats"]))
+                    for c in parse_chipsets(t)
+                ],
+                ["chip-all-r1|HP=108.0,AT=16.0,CT=0.2%",
+                 "chip-all-r2|HP=215.0,AT=31.0,CT=0.4%",
+                 "chip-family-r1|HP=135.0,AT=20.0,CT=0.25%",
+                 "chip-family-r2|HP=269.0,AT=39.0,CT=0.5%",
+                 "chip-family-r15|AT=288.0,CT=3.75%"],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (

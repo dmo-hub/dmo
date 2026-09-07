@@ -1,0 +1,1418 @@
+{
+  "fetched_at": "2026-09-07",
+  "source": "dmowiki.com/ChipSets",
+  "items": [
+    {
+      "id": "chip-all-r1",
+      "name": "All Family ChipSet R1",
+      "kind": "all",
+      "grade": 1,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 108.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 96.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 16.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 12.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 20.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 0.2
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r2",
+      "name": "All Family ChipSet R2",
+      "kind": "all",
+      "grade": 2,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 215.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 192.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 31.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 21.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 40.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 0.4
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 0.4
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r3",
+      "name": "All Family ChipSet R3",
+      "kind": "all",
+      "grade": 3,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 323.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 288.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 46.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 32.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 60.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 0.6
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 0.6
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r4",
+      "name": "All Family ChipSet R4",
+      "kind": "all",
+      "grade": 4,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 430.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 384.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 61.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 44.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 80.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 0.8
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 0.8
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r5",
+      "name": "All Family ChipSet R5",
+      "kind": "all",
+      "grade": 5,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 537.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 480.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 77.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 54.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 100.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 1.0
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r6",
+      "name": "All Family ChipSet R6",
+      "kind": "all",
+      "grade": 6,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 645.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 576.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 92.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 65.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 120.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 1.2
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 1.2
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r7",
+      "name": "All Family ChipSet R7",
+      "kind": "all",
+      "grade": 7,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 752.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 672.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 108.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 75.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 140.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 1.4
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 1.4
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r8",
+      "name": "All Family ChipSet R8",
+      "kind": "all",
+      "grade": 8,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 860.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 768.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 122.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 86.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 160.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 1.6
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 1.6
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r9",
+      "name": "All Family ChipSet R9",
+      "kind": "all",
+      "grade": 9,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 968.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 864.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 138.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 98.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 180.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 1.8
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 1.8
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r10",
+      "name": "All Family ChipSet R10",
+      "kind": "all",
+      "grade": 10,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1075.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 960.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 153.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 108.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 200.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 2.0
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 2.0
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r11",
+      "name": "All Family ChipSet R11",
+      "kind": "all",
+      "grade": 11,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1183.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1056.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 168.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 119.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 220.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 2.2
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 2.2
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r12",
+      "name": "All Family ChipSet R12",
+      "kind": "all",
+      "grade": 12,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1290.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1152.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 184.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 131.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 240.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 2.4
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 2.4
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r13",
+      "name": "All Family ChipSet R13",
+      "kind": "all",
+      "grade": 13,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1398.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1248.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 200.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 140.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 260.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 2.6
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 2.6
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r14",
+      "name": "All Family ChipSet R14",
+      "kind": "all",
+      "grade": 14,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1505.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1344.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 216.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 152.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 280.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 2.8
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 2.8
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r15",
+      "name": "All Family ChipSet R15",
+      "kind": "all",
+      "grade": 15,
+      "stats": [
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 300.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 3.0
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 3.0
+        }
+      ]
+    },
+    {
+      "id": "chip-all-r16",
+      "name": "All Family ChipSet R16",
+      "kind": "all",
+      "grade": 16,
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 244.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 320.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 3.2
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 3.2
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r1",
+      "name": "Family ChipSet R1",
+      "kind": "family",
+      "grade": 1,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 135.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 120.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 20.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 15.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 25.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 0.25
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 0.25
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r2",
+      "name": "Family ChipSet R2",
+      "kind": "family",
+      "grade": 2,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 269.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 240.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 39.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 27.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 50.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 0.5
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r3",
+      "name": "Family ChipSet R3",
+      "kind": "family",
+      "grade": 3,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 404.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 360.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 58.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 41.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 75.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 0.75
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 0.75
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r4",
+      "name": "Family ChipSet R4",
+      "kind": "family",
+      "grade": 4,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 538.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 480.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 77.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 56.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 100.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 1.0
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r5",
+      "name": "Family ChipSet R5",
+      "kind": "family",
+      "grade": 5,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 672.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 600.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 97.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 68.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 125.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 1.25
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 1.25
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r6",
+      "name": "Family ChipSet R6",
+      "kind": "family",
+      "grade": 6,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 807.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 720.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 115.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 82.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 150.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 1.5
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 1.5
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r7",
+      "name": "Family ChipSet R7",
+      "kind": "family",
+      "grade": 7,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 941.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 840.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 135.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 94.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 175.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 1.75
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 1.75
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r8",
+      "name": "Family ChipSet R8",
+      "kind": "family",
+      "grade": 8,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1076.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 960.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 153.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 108.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 200.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 2.0
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 2.0
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r9",
+      "name": "Family ChipSet R9",
+      "kind": "family",
+      "grade": 9,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1210.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1080.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 173.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 123.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 225.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 2.25
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 2.25
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r10",
+      "name": "Family ChipSet R10",
+      "kind": "family",
+      "grade": 10,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1344.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1200.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 192.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 135.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 250.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 2.5
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 2.5
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r11",
+      "name": "Family ChipSet R11",
+      "kind": "family",
+      "grade": 11,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1479.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1320.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 211.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 149.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 275.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 2.75
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 2.75
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r12",
+      "name": "Family ChipSet R12",
+      "kind": "family",
+      "grade": 12,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1613.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1440.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 230.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 163.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 300.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 3.0
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 3.0
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r13",
+      "name": "Family ChipSet R13",
+      "kind": "family",
+      "grade": 13,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1749.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1560.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 250.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 177.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 325.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 3.25
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 3.25
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r14",
+      "name": "Family ChipSet R14",
+      "kind": "family",
+      "grade": 14,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 1882.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1680.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 268.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 190.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 350.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 3.5
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 3.5
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r15",
+      "name": "Family ChipSet R15",
+      "kind": "family",
+      "grade": 15,
+      "stats": [
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 288.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 375.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 3.75
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 3.75
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r16",
+      "name": "Family ChipSet R16",
+      "kind": "family",
+      "grade": 16,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 2151.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 1920.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 306.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 216.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 400.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 4.0
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 4.0
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r17",
+      "name": "Family ChipSet R17",
+      "kind": "family",
+      "grade": 17,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 2285.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 2040.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 326.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 231.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 425.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 4.25
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 4.25
+        }
+      ]
+    },
+    {
+      "id": "chip-family-r18",
+      "name": "Family ChipSet R18",
+      "kind": "family",
+      "grade": 18,
+      "stats": [
+        {
+          "stat": "HP",
+          "unit": "flat",
+          "value": 2420.0
+        },
+        {
+          "stat": "DS",
+          "unit": "flat",
+          "value": 2160.0
+        },
+        {
+          "stat": "AT",
+          "unit": "flat",
+          "value": 345.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "value": 243.0
+        },
+        {
+          "stat": "HT",
+          "unit": "flat",
+          "value": 450.0
+        },
+        {
+          "stat": "CT",
+          "unit": "pct",
+          "value": 4.5
+        },
+        {
+          "stat": "EV",
+          "unit": "pct",
+          "value": 4.5
+        }
+      ]
+    }
+  ]
+}
