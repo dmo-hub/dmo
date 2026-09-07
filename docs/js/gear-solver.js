@@ -103,15 +103,74 @@
 
   /* A state key packs the targeted stat totals plus the chip count. Every value
      is already capped at its target, so all of them stay small integers. */
-  function key(vals, n) { return vals.join("|") + "|" + n; }
+  function key(vals, n, setKey) {
+    return vals.join("|") + "|" + n + "|" + (setKey || "");
+  }
+
+  /* Set progress rides in the state key as ONE pair, not one counter per set.
+     Every set covered here claims the same six clothing slots and no item
+     belongs to two sets, so a loadout can only ever be building one of them:
+     the moment a piece of another set is worn, the first set's run is over.
+     That turns what would be 7x7x7 = 343 combinations into 1 + 3x6 = 19.
+
+     Tracking it per set instead would multiply the state count by 343 on a DP
+     that is already the reason ticket B01 exists. */
+  function setProgress(prev, item, index) {
+    var owner = index.owner[item && item.name];
+    if (!owner) return prev;                 // not a set piece: progress stands
+    if (!prev) return owner + ":1";          // first piece of a set
+    var parts = prev.split(":");
+    if (parts[0] !== owner) return owner + ":1";  // switched sets: start over
+    return owner + ":" + (Number(parts[1]) + 1);
+  }
 
   /* Each state remembers the choice that produced it. `prev` is a direct
      reference to the parent state object, never a key lookup: keys are reused
      across phases (an empty slot maps a state onto its own key), so resolving a
      parent by key can walk into itself and loop forever. */
+  /* Flatten docs/set_registry.json into the two lookups the DP needs: which
+     set an item belongs to, and what a given count of that set is worth. */
+  function indexSets(sets) {
+    var owner = {}, bonus = {};
+    (sets || []).forEach(function (s) {
+      (s.slots || []).forEach(function (sl) {
+        (sl.accepts || []).forEach(function (name) { owner[name] = s.set; });
+      });
+      (s.bonuses || []).forEach(function (b) {
+        var add = {};
+        (b.effects || []).forEach(function (e) {
+          if (e.scoreable) add[e.stat] = (add[e.stat] || 0) + e.value;
+        });
+        bonus[s.set + ":" + b.pieces] = add;
+      });
+    });
+    return { owner: owner, bonus: bonus };
+  }
+
+  /* What a state's set progress is worth right now. Bonuses stack by
+     threshold: six pieces earns the 4-set bonus as well as the 6-set one,
+     which is how the wiki lists them. */
+  function setBonusFor(setKey, index) {
+    var out = {};
+    if (!setKey) return out;
+    var parts = setKey.split(":");
+    var name = parts[0], worn = Number(parts[1]);
+    Object.keys(index.bonus).forEach(function (k) {
+      var kp = k.split(":");
+      if (kp[0] !== name) return;
+      if (worn < Number(kp[1])) return;
+      var add = index.bonus[k];
+      Object.keys(add).forEach(function (st) {
+        out[st] = (out[st] || 0) + add[st];
+      });
+    });
+    return out;
+  }
+
   function solve(data, baseStats, targetHT, targetCT) {
     var accessories = (data && data.accessories) || [];
     var chips = (data && data.chips) || [];
+    var index = indexSets(data && data.sets);
 
     /* Two call shapes are supported: the original (base, targetHT, targetCT)
        and an object of stat -> floor. The positional form stays because the
@@ -141,12 +200,24 @@
 
     var zero = axes.map(function () { return 0; });
     var states = {};
-    states[key(zero, 0)] = { at: 0, v: zero, n: 0, prev: null, pick: null };
+    states[key(zero, 0, "")] = { at: 0, v: zero, n: 0, set: "", prev: null,
+                                pick: null };
 
     // Advance one state by one item, capping every axis at its target.
     function advance(st, it) {
       return axes.map(function (stat, i) {
         return Math.min(caps[i], st.v[i] + scale(stat, it[stat]));
+      });
+    }
+
+    /* Same, plus the change in set bonus this pick causes. `after` and
+       `before` are the bonus totals for the new and old set progress, so the
+       difference is what this one piece unlocked (zero until a threshold). */
+    function advanceWith(st, it, after, before) {
+      return axes.map(function (stat, i) {
+        var gain = scale(stat, it[stat])
+                 + scale(stat, num(after[stat]) - num(before[stat]));
+        return Math.min(caps[i], st.v[i] + gain);
       });
     }
 
@@ -156,17 +227,30 @@
       var next = {};
       Object.keys(states).forEach(function (k) {
         var st = states[k];
-        // empty slot
-        var ek = key(st.v, st.n);
+        /* Empty slot. The set progress CARRIES OVER: a set claims six of the
+           thirteen slots, so leaving a ring empty says nothing about whether
+           its clothing pieces are worn. Clearing the key here meant every
+           slot after the last set piece wiped the run, and no set was ever
+           credited. Only another set's piece ends a run. */
+        var ek = key(st.v, st.n, st.set);
         if (!next[ek] || next[ek].at < st.at) {
-          next[ek] = { at: st.at, v: st.v, n: st.n, prev: st, pick: null };
+          next[ek] = { at: st.at, v: st.v, n: st.n, set: st.set, prev: st,
+                       pick: null };
         }
         candidates.forEach(function (it) {
-          var v = advance(st, it);
-          var at = st.at + num(it.AT);
-          var nk = key(v, st.n);
+          var sk = setProgress(st.set, it, index);
+          /* The bonus is re-applied from scratch at each step rather than
+             added incrementally: crossing the 4-piece threshold is worth the
+             whole 4-set bonus at once, and the delta from the previous state
+             is exactly that jump. */
+          var before = setBonusFor(st.set, index);
+          var after = setBonusFor(sk, index);
+          var v = advanceWith(st, it, after, before);
+          var at = st.at + num(it.AT)
+                 + (num(after.AT) - num(before.AT));
+          var nk = key(v, st.n, sk);
           if (!next[nk] || next[nk].at < at) {
-            next[nk] = { at: at, v: v, n: st.n, prev: st, pick: it };
+            next[nk] = { at: at, v: v, n: st.n, set: sk, prev: st, pick: it };
           }
         });
       });
@@ -183,9 +267,10 @@
         if (st.n >= MAX_CHIPS) return;
         var v = advance(st, it);
         var at = st.at + num(it.AT);
-        var nk = key(v, st.n + 1);
+        var nk = key(v, st.n + 1, st.set);
         if (!next[nk] || next[nk].at < at) {
-          next[nk] = { at: at, v: v, n: st.n + 1, prev: st, pick: it, chip: true };
+          next[nk] = { at: at, v: v, n: st.n + 1, set: st.set, prev: st,
+                       pick: it, chip: true };
         }
       });
       states = next;
@@ -220,13 +305,13 @@
     var winner = best || (bestShort && bestShort.st);
     if (!winner) return null;
 
-    return buildResult(winner, base, feasible, bestShort, axes);
+    return buildResult(winner, base, feasible, bestShort, axes, index);
   }
 
   /* Walk the parent chain back to the root, collecting the picks. Following
      object references means the chain is acyclic by construction — it can only
      ever run backwards through states that were actually built. */
-  function buildResult(winner, base, feasible, bestShort, axes) {
+  function buildResult(winner, base, feasible, bestShort, axes, index) {
     var chosenChips = [];
     var accPicks = [];
 
@@ -248,12 +333,38 @@
        is still worth showing, it just did not need to constrain the search.
        Percentages are summed in hundredths and converted back once, so 7.05 +
        7.12 cannot drift. */
-    var totals = { AT: base.AT + picked.reduce(function (a, it) { return a + num(it.AT); }, 0) };
+    /* The set bonus has to be added back here. The DP used it to steer the
+       search, but these totals are rebuilt from the chosen items alone, so
+       leaving it out would report numbers the solver did not actually
+       optimise for -- the answer would look worse than the loadout is. */
+    var setBonus = index ? setBonusFor(winner.set, index) : {};
+
+    var totals = {
+      AT: base.AT
+        + picked.reduce(function (a, it) { return a + num(it.AT); }, 0)
+        + num(setBonus.AT),
+    };
     STATS.forEach(function (stat) {
       var acc = scale(stat, base[stat]);
       picked.forEach(function (it) { acc += scale(stat, it[stat]); });
+      acc += scale(stat, num(setBonus[stat]));
       totals[stat] = unscale(stat, acc);
     });
+
+    /* Which set the answer completed, and at which thresholds. The page needs
+       this to explain a jump in the numbers, and decision 06 requires saying
+       that a proc bonus is counted at full value. */
+    var setsOut = [];
+    if (index && winner.set) {
+      var parts = winner.set.split(":");
+      var worn = Number(parts[1]);
+      Object.keys(index.bonus).forEach(function (k) {
+        var kp = k.split(":");
+        if (kp[0] !== parts[0] || worn < Number(kp[1])) return;
+        setsOut.push({ set: parts[0], pieces: Number(kp[1]), worn: worn });
+      });
+      setsOut.sort(function (a, b) { return a.pieces - b.pieces; });
+    }
 
     var out = {
       feasible: feasible,
@@ -261,6 +372,8 @@
         accessories: accessoriesOut,
         chips: chosenChips,
         totals: totals,
+        sets: setsOut,
+        setBonus: setBonus,
         targeted: (axes || []).slice(),
       },
     };
