@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="หาชุดเครื่องประดับ + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้า HT/CT ที่ตั้งไว้">
+<meta name="description" content="หาชุดของสวม + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้าทุกสเตตที่ตั้งไว้">
 <meta property="og:title" content="DMO Tracker — Gear Optimizer">
-<meta property="og:description" content="หาชุดเครื่องประดับ + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้า HT/CT ที่ตั้งไว้">
+<meta property="og:description" content="หาชุดของสวม + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้าทุกสเตตที่ตั้งไว้">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#9881;</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,7 +108,7 @@
   <div class="hero">
     <div>
       <h1>&#9881;&#65039; Gear Optimizer</h1>
-      <p class="lead">ใส่เครื่องประดับกับชิปที่มี ตั้งเป้า HT/CT แล้วระบบจะหาชุดที่ให้ <b>AT สูงสุด</b> ที่ยังถึงเป้าให้ — ไล่ครบทุกความเป็นไปได้ ไม่ใช่การเดา</p>
+      <p class="lead">ใส่ของสวมกับชิปที่มี ตั้งเป้าสเตตที่ต้องการ แล้วระบบจะหาชุดที่ให้ <b>AT สูงสุด</b> ที่ยังถึงเป้าให้ — ไล่ครบทุกความเป็นไปได้ ไม่ใช่การเดา</p>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><div class="num" id="hero-acc">0</div><div class="lbl">ของสวม</div></div>
@@ -160,20 +160,14 @@
     <div class="go-card">
       <h2>ค่าพื้นฐาน</h2>
       <p class="go-sub">สเตตัสก่อนใส่ของ — ค่าคงที่ที่บวกเข้ากับทุกชุดเท่ากัน</p>
-      <div class="go-fields">
-        <div class="go-field"><label for="base-at">Base AT</label><input type="number" id="base-at" step="1" value="0"></div>
-        <div class="go-field"><label for="base-ht">Base HT</label><input type="number" id="base-ht" step="1" value="0"></div>
-        <div class="go-field"><label for="base-ct">Base CT (%)</label><input type="number" id="base-ct" step="0.01" value="0"></div>
-      </div>
+      <div class="go-fields" id="base-fields"></div>
     </div>
 
     <div class="go-card">
       <h2>เป้าหมาย</h2>
-      <p class="go-sub">HT กับ CT ต้องถึงเท่านี้เป็นอย่างน้อย — เกินเป้าไม่มีผลดีผลเสีย ส่วน AT ไม่ต้องตั้งเป้า ระบบดันให้สูงสุดเอง</p>
-      <div class="go-fields">
-        <div class="go-field"><label for="target-ht">เป้า HT</label><input type="number" id="target-ht" step="1" value="0"></div>
-        <div class="go-field"><label for="target-ct">เป้า CT (%)</label><input type="number" id="target-ct" step="0.01" value="0"></div>
-      </div>
+      <p class="go-sub">เว้นไว้ = ไม่บังคับ · กรอกเท่าไหร่ = ต้องถึงอย่างน้อยเท่านั้น — เกินเป้าไม่มีผลดีผลเสีย ส่วน AT ไม่ต้องตั้งเป้า ระบบดันให้สูงสุดเอง</p>
+      <div class="go-fields" id="target-fields"></div>
+      <p class="go-warn" id="target-warn" hidden></p>
       <div class="go-actions">
         <button class="go-btn primary" id="run-goal" type="button">คำนวณเลย &rarr;</button>
       </div>
@@ -224,14 +218,16 @@
     confirmSeed: "\u0e41\u0e17\u0e19\u0e17\u0e35\u0e48\u0e23\u0e32\u0e22\u0e01\u0e32\u0e23\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14\u0e14\u0e49\u0e27\u0e22\u0e0a\u0e38\u0e14\u0e15\u0e31\u0e27\u0e2d\u0e22\u0e48\u0e32\u0e07? \u0e02\u0e2d\u0e07\u0e17\u0e35\u0e48\u0e41\u0e01\u0e49\u0e44\u0e27\u0e49\u0e08\u0e30\u0e2b\u0e32\u0e22",
     seedFail: "\u0e42\u0e2b\u0e25\u0e14\u0e0a\u0e38\u0e14\u0e15\u0e31\u0e27\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49 \u2014 \u0e40\u0e1b\u0e34\u0e14\u0e2b\u0e19\u0e49\u0e32\u0e19\u0e35\u0e49\u0e1c\u0e48\u0e32\u0e19\u0e40\u0e27\u0e47\u0e1a \u0e44\u0e21\u0e48\u0e43\u0e0a\u0e48\u0e40\u0e1b\u0e34\u0e14\u0e44\u0e1f\u0e25\u0e4c\u0e15\u0e23\u0e07 \u0e46",
     noItems: "\u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e21\u0e35\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e43\u0e2b\u0e49\u0e04\u0e33\u0e19\u0e27\u0e13 \u2014 \u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a\u0e2b\u0e23\u0e37\u0e2d\u0e0a\u0e34\u0e1b\u0e01\u0e48\u0e2d\u0e19",
-    ok: "\u2705 \u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e2b\u0e21\u0e32\u0e22\u0e44\u0e14\u0e49 \u2014 \u0e19\u0e35\u0e48\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e43\u0e2b\u0e49 AT \u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e22\u0e31\u0e07\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32 HT/CT",
-    missA: "\u26a0\ufe0f \u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e14\u0e49\u0e27\u0e22\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e17\u0e35\u0e48\u0e21\u0e35\u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49 \u2014 \u0e02\u0e32\u0e14 HT \u0e2d\u0e35\u0e01 ",
-    missB: " \u00b7 \u0e02\u0e32\u0e14 CT \u0e2d\u0e35\u0e01 ",
-    missC: "% \u2014 \u0e14\u0e49\u0e32\u0e19\u0e25\u0e48\u0e32\u0e07\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e40\u0e02\u0e49\u0e32\u0e43\u0e01\u0e25\u0e49\u0e40\u0e1b\u0e49\u0e32\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14 \u0e41\u0e25\u0e30\u0e41\u0e23\u0e07\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e40\u0e17\u0e48\u0e32\u0e17\u0e35\u0e48\u0e17\u0e33\u0e44\u0e14\u0e49\u0e43\u0e19\u0e23\u0e30\u0e22\u0e30\u0e19\u0e31\u0e49\u0e19",
+    ok: "\u2705 \u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e2b\u0e21\u0e32\u0e22\u0e44\u0e14\u0e49 \u2014 \u0e19\u0e35\u0e48\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e43\u0e2b\u0e49 AT \u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e17\u0e38\u0e01\u0e02\u0e49\u0e2d\u0e17\u0e35\u0e48\u0e15\u0e31\u0e49\u0e07\u0e44\u0e27\u0e49",
+    missA: "\u26a0\ufe0f \u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e14\u0e49\u0e27\u0e22\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e17\u0e35\u0e48\u0e21\u0e35\u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49 \u2014 \u0e22\u0e31\u0e07\u0e02\u0e32\u0e14: ",
+    missC: " \u2014 \u0e14\u0e49\u0e32\u0e19\u0e25\u0e48\u0e32\u0e07\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e40\u0e02\u0e49\u0e32\u0e43\u0e01\u0e25\u0e49\u0e40\u0e1b\u0e49\u0e32\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14 \u0e41\u0e25\u0e30\u0e41\u0e23\u0e07\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e40\u0e17\u0e48\u0e32\u0e17\u0e35\u0e48\u0e17\u0e33\u0e44\u0e14\u0e49\u0e43\u0e19\u0e23\u0e30\u0e22\u0e30\u0e19\u0e31\u0e49\u0e19",
     accHead: "\u0e02\u0e2d\u0e07\u0e2a\u0e27\u0e21",
     chipHead: "\u0e0a\u0e34\u0e1b",
     atLbl: "AT (\u0e14\u0e31\u0e19\u0e43\u0e2b\u0e49\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14)",
     noTarget: "\u0e44\u0e21\u0e48\u0e21\u0e35\u0e40\u0e1b\u0e49\u0e32\u0e15\u0e32\u0e22\u0e15\u0e31\u0e27",
+    tooMany: "\u26a0\ufe0f \u0e15\u0e31\u0e49\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e44\u0e14\u0e49\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14 2 \u0e2a\u0e40\u0e15\u0e15\u0e15\u0e48\u0e2d\u0e04\u0e23\u0e31\u0e49\u0e07 \u2014 \u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49\u0e15\u0e31\u0e49\u0e07\u0e44\u0e27\u0e49 ",
+    tooMany2: " \u0e15\u0e31\u0e27 \u00b7 \u0e40\u0e2d\u0e32\u0e2d\u0e2d\u0e01\u0e01\u0e48\u0e2d\u0e19\u0e08\u0e36\u0e07\u0e08\u0e30\u0e04\u0e33\u0e19\u0e27\u0e13\u0e44\u0e14\u0e49",
+    tooManyWhy: "\u0e40\u0e01\u0e34\u0e19 2 \u0e2a\u0e40\u0e15\u0e15\u0e41\u0e25\u0e49\u0e27\u0e01\u0e32\u0e23\u0e04\u0e33\u0e19\u0e27\u0e13\u0e0a\u0e49\u0e32\u0e08\u0e19\u0e2b\u0e19\u0e49\u0e32\u0e04\u0e49\u0e32\u0e07 (\u0e27\u0e31\u0e14\u0e44\u0e14\u0e49 3 \u0e2a\u0e40\u0e15\u0e15 ~4 \u0e27\u0e34 \u00b7 4 \u0e2a\u0e40\u0e15\u0e15 ~7 \u0e27\u0e34)",
     target: "\u0e40\u0e1b\u0e49\u0e32 ",
     dupA: "\u26a0\ufe0f \u0e21\u0e35\u0e44\u0e2d\u0e40\u0e17\u0e21 id \u0e0b\u0e49\u0e33 (",
     dupB: ") \u2014 \u0e1c\u0e25\u0e2d\u0e32\u0e08\u0e40\u0e1e\u0e35\u0e49\u0e22\u0e19 \u0e25\u0e2d\u0e07\u0e25\u0e1a\u0e41\u0e16\u0e27\u0e17\u0e35\u0e48\u0e0b\u0e49\u0e33\u0e2d\u0e2d\u0e01"
@@ -375,26 +371,103 @@
   });
 
   // ---------------------------------------------------------------- goal
-  var GOAL_FIELDS = ["base-at", "base-ht", "base-ct", "target-ht", "target-ct"];
+  /* One row per stat drives both the base and the target inputs, so adding a
+     stat later means adding a line here and nothing else. `pct` decides the
+     step and the "%" suffix; AT is base-only because it is what gets maximized
+     rather than something you set a floor on. */
+  var STAT_FIELDS = [
+    { key: "AT", label: "AT", pct: false, targetable: false },
+    { key: "HT", label: "HT", pct: false, targetable: true },
+    { key: "CT", label: "CT", pct: true, targetable: true },
+    { key: "DS", label: "DS", pct: false, targetable: true },
+    { key: "DE", label: "DE", pct: false, targetable: true },
+    { key: "EV", label: "EV", pct: true, targetable: true },
+    { key: "BL", label: "BL", pct: true, targetable: true }
+  ];
+  var GOAL_FIELDS = [];
+  var PCT_LABEL = {};
+
+  function buildField(id, label, pct) {
+    var wrap = document.createElement("div");
+    wrap.className = "go-field";
+    var lab = document.createElement("label");
+    lab.setAttribute("for", id);
+    lab.textContent = label;
+    var inp = document.createElement("input");
+    inp.type = "number";
+    inp.id = id;
+    inp.step = pct ? "0.01" : "1";
+    inp.value = "0";
+    wrap.appendChild(lab);
+    wrap.appendChild(inp);
+    GOAL_FIELDS.push(id);
+    return wrap;
+  }
+
+  STAT_FIELDS.forEach(function (f) { if (f.pct) PCT_LABEL[f.key] = true; });
+
+  (function buildGoalFields() {
+    var baseBox = $("base-fields");
+    var targetBox = $("target-fields");
+    STAT_FIELDS.forEach(function (f) {
+      var suffix = f.pct ? " (%)" : "";
+      baseBox.appendChild(buildField("base-" + f.key.toLowerCase(),
+        "Base " + f.label + suffix, f.pct));
+      if (f.targetable) {
+        targetBox.appendChild(buildField("target-" + f.key.toLowerCase(),
+          T.target + f.label + suffix, f.pct));
+      }
+    });
+  })();
+
   function readGoal() {
-    return {
-      base: { AT: num($("base-at").value), HT: num($("base-ht").value), CT: num($("base-ct").value) },
-      ht: num($("target-ht").value),
-      ct: num($("target-ct").value)
-    };
+    var base = {};
+    var targets = {};
+    STAT_FIELDS.forEach(function (f) {
+      base[f.key] = num($("base-" + f.key.toLowerCase()).value);
+      if (f.targetable) {
+        var v = num($("target-" + f.key.toLowerCase()).value);
+        // A blank or zero floor means "do not constrain this stat" -- and it
+        // must not reach the solver, because an untracked stat is what keeps
+        // the search fast.
+        if (v > 0) targets[f.key] = v;
+      }
+    });
+    return { base: base, targets: targets };
   }
   function saveGoal() {
     var g = {};
     GOAL_FIELDS.forEach(function (id) { g[id] = $(id).value; });
     jset(GOAL_KEY, g);
   }
-  GOAL_FIELDS.forEach(function (id) { $(id).addEventListener("input", saveGoal); });
+  GOAL_FIELDS.forEach(function (id) {
+    $(id).addEventListener("input", function () { saveGoal(); checkTargets(); });
+  });
 
   // ---------------------------------------------------------------- run
+  /* Two floors solve in milliseconds; three take ~4s and four ~7s, because every
+     targeted stat multiplies the DP state space. The solve is synchronous, so
+     going past two would freeze the page rather than just be slow. */
+  var MAX_TARGETS = 2;
+
+  function checkTargets() {
+    var g = readGoal();
+    var keys = Object.keys(g.targets);
+    var over = keys.length > MAX_TARGETS;
+    var warn = $("target-warn");
+    warn.hidden = !over;
+    if (over) {
+      warn.textContent = T.tooMany + keys.length + T.tooMany2 + " (" + T.tooManyWhy + ")";
+    }
+    $("run-goal").disabled = over;
+    return !over;
+  }
+
   function run() {
+    if (!checkTargets()) return;
     var g = readGoal();
     var dupes = window.GearSolver.findDuplicateIds(data);
-    var out = window.GearSolver.solve(data, g.base, g.ht, g.ct);
+    var out = window.GearSolver.solve(data, g.base, g.targets);
     lastRun = { out: out, goal: g, dupes: dupes };
     renderResult();
     showTab("tab-result");
@@ -455,15 +528,27 @@
     v.className = "go-verdict " + (out.feasible ? "ok" : "miss");
     v.textContent = out.feasible
       ? T.ok
-      : T.missA + fmt(out.shortfall.HT) + T.missB + fmtCT(out.shortfall.CT) + T.missC;
+      : T.missA + Object.keys(out.shortfall || {}).map(function (k) {
+          var isPct = PCT_LABEL[k];
+          return k + " " + (isPct ? fmtCT(out.shortfall[k]) + "%" : fmt(out.shortfall[k]));
+        }).join(" \u00b7 ") + T.missC;
     root.appendChild(v);
 
     var t = out.result.totals;
     var box = document.createElement("div");
     box.className = "go-totals";
     box.appendChild(totalBox(T.atLbl, fmt(t.AT), T.noTarget));
-    box.appendChild(totalBox("HT", fmt(t.HT), T.target + fmt(g.ht), t.HT >= g.ht ? "hit" : "short"));
-    box.appendChild(totalBox("CT", fmtCT(t.CT) + "%", T.target + fmtCT(g.ct) + "%", t.CT >= g.ct ? "hit" : "short"));
+    // One tile per stat the user actually asked for; untargeted stats would
+    // just be noise on a page whose whole point is the floors you set.
+    STAT_FIELDS.forEach(function (f) {
+      if (!f.targetable || !(f.key in g.targets)) return;
+      var want = g.targets[f.key];
+      var got = t[f.key];
+      var show = f.pct ? fmtCT(got) + "%" : fmt(got);
+      var wantShow = f.pct ? fmtCT(want) + "%" : fmt(want);
+      box.appendChild(totalBox(f.label, show, T.target + wantShow,
+        got >= want ? "hit" : "short"));
+    });
     root.appendChild(box);
 
     var pick = document.createElement("div");
@@ -519,13 +604,13 @@
         var id = String((it && it.id) || "");
         if (!id || seen[id]) id = prefix + "_" + i + "_" + Date.now().toString(36);
         seen[id] = true;
-        var rec = {
-          id: id,
-          name: String((it && it.name) || ""),
-          AT: Math.round(num(it && it.AT)),
-          HT: Math.round(num(it && it.HT)),
-          CT: num(it && it.CT)
-        };
+        /* Carry every stat the solver knows about, not just the three the item
+           table shows. Dropping the rest here would make DS/DE/EV/BL targets
+           unsatisfiable for any item that came from storage or the registry. */
+        var rec = { id: id, name: String((it && it.name) || "") };
+        STAT_FIELDS.forEach(function (f) {
+          rec[f.key] = f.pct ? num(it && it[f.key]) : Math.round(num(it && it[f.key]));
+        });
         if (withSlot) rec.slot = SLOTS.indexOf(it && it.slot) >= 0 ? it.slot : SLOTS[0];
         return rec;
       });

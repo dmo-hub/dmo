@@ -3,8 +3,13 @@
  * Problem
  *   - 12 distinct gear slots (6 accessory + 6 clothing); one item each.
  *   - Chips are one interchangeable pool; at most MAX_CHIPS of them.
- *   - HT and CT must reach their targets (hard); overshoot is worthless.
- *   - AT has no target and is maximized.
+ *   - Any stat can be given a floor (hard); overshoot above it is worthless.
+ *   - AT has no floor and is maximized.
+ *
+ * Only the stats the caller actually targets enter the state key. That is not
+ * an optimisation detail -- benchmarking on the real registry put two targets
+ * at ~1s and four at ~13s, so an untargeted stat riding along in the key is the
+ * difference between usable and not.
  *
  * Why a DP and not an ILP
  *   The browser has no CBC. "Overshoot is worthless" lets every state whose
@@ -34,12 +39,24 @@
   ];
   var MAX_CHIPS = 6;
 
+  /* Stats that are percentages are held as hundredths so the DP works in whole
+     numbers -- 7.05% would otherwise make state keys float-unstable. */
+  var PCT_STATS = { CT: true, EV: true, BL: true };
+  var STATS = ["HT", "CT", "DS", "DE", "EV", "BL"];
+
   var ct100 = function (v) { return Math.round((Number(v) || 0) * 100); };
   var num = function (v) { return Number(v) || 0; };
 
-  /* A state key packs (ht, ct, chipCount). ht/ct are already capped at the
-     target, so both fit well inside the safe-integer range for any real input. */
-  function key(h, c, n) { return h + "|" + c + "|" + n; }
+  function scale(stat, v) {
+    return PCT_STATS[stat] ? ct100(v) : Math.round(num(v));
+  }
+  function unscale(stat, v) {
+    return PCT_STATS[stat] ? v / 100 : v;
+  }
+
+  /* A state key packs the targeted stat totals plus the chip count. Every value
+     is already capped at its target, so all of them stay small integers. */
+  function key(vals, n) { return vals.join("|") + "|" + n; }
 
   /* Each state remembers the choice that produced it. `prev` is a direct
      reference to the parent state object, never a key lookup: keys are reused
@@ -48,18 +65,43 @@
   function solve(data, baseStats, targetHT, targetCT) {
     var accessories = (data && data.accessories) || [];
     var chips = (data && data.chips) || [];
-    var base = {
-      AT: num(baseStats && baseStats.AT),
-      HT: num(baseStats && baseStats.HT),
-      CT: num(baseStats && baseStats.CT),
-    };
 
-    // Targets are expressed relative to base, since base is a free constant.
-    var tH = Math.max(0, Math.round(num(targetHT) - base.HT));
-    var tC = Math.max(0, ct100(targetCT) - ct100(base.CT));
+    /* Two call shapes are supported: the original (base, targetHT, targetCT)
+       and an object of stat -> floor. The positional form stays because the
+       page and the differential tests both still use it. */
+    var targets = {};
+    if (targetHT && typeof targetHT === "object") {
+      targets = targetHT;
+    } else {
+      targets.HT = num(targetHT);
+      targets.CT = num(targetCT);
+    }
 
+    var base = { AT: num(baseStats && baseStats.AT) };
+    STATS.forEach(function (st) { base[st] = num(baseStats && baseStats[st]); });
+
+    // Only stats with a floor above base need tracking; the rest are free.
+    var axes = [];
+    var caps = [];
+    STATS.forEach(function (st) {
+      if (!(st in targets)) return;
+      var want = scale(st, targets[st]) - scale(st, base[st]);
+      if (want > 0) {
+        axes.push(st);
+        caps.push(want);
+      }
+    });
+
+    var zero = axes.map(function () { return 0; });
     var states = {};
-    states[key(0, 0, 0)] = { at: 0, ht: 0, ct: 0, n: 0, prev: null, pick: null };
+    states[key(zero, 0)] = { at: 0, v: zero, n: 0, prev: null, pick: null };
+
+    // Advance one state by one item, capping every axis at its target.
+    function advance(st, it) {
+      return axes.map(function (stat, i) {
+        return Math.min(caps[i], st.v[i] + scale(stat, it[stat]));
+      });
+    }
 
     // --- accessories: exactly one choice per slot, "leave empty" included ---
     SLOTS.forEach(function (slot) {
@@ -68,17 +110,16 @@
       Object.keys(states).forEach(function (k) {
         var st = states[k];
         // empty slot
-        var ek = key(st.ht, st.ct, st.n);
+        var ek = key(st.v, st.n);
         if (!next[ek] || next[ek].at < st.at) {
-          next[ek] = { at: st.at, ht: st.ht, ct: st.ct, n: st.n, prev: st, pick: null };
+          next[ek] = { at: st.at, v: st.v, n: st.n, prev: st, pick: null };
         }
         candidates.forEach(function (it) {
-          var h = Math.min(tH, st.ht + num(it.HT));
-          var c = Math.min(tC, st.ct + ct100(it.CT));
+          var v = advance(st, it);
           var at = st.at + num(it.AT);
-          var nk = key(h, c, st.n);
+          var nk = key(v, st.n);
           if (!next[nk] || next[nk].at < at) {
-            next[nk] = { at: at, ht: h, ct: c, n: st.n, prev: st, pick: it };
+            next[nk] = { at: at, v: v, n: st.n, prev: st, pick: it };
           }
         });
       });
@@ -93,12 +134,11 @@
       Object.keys(states).forEach(function (k) {
         var st = states[k];
         if (st.n >= MAX_CHIPS) return;
-        var h = Math.min(tH, st.ht + num(it.HT));
-        var c = Math.min(tC, st.ct + ct100(it.CT));
+        var v = advance(st, it);
         var at = st.at + num(it.AT);
-        var nk = key(h, c, st.n + 1);
+        var nk = key(v, st.n + 1);
         if (!next[nk] || next[nk].at < at) {
-          next[nk] = { at: at, ht: h, ct: c, n: st.n + 1, prev: st, pick: it, chip: true };
+          next[nk] = { at: at, v: v, n: st.n + 1, prev: st, pick: it, chip: true };
         }
       });
       states = next;
@@ -109,20 +149,23 @@
     var bestShort = null;
     Object.keys(states).forEach(function (k) {
       var st = states[k];
-      if (st.ht >= tH && st.ct >= tC) {
-        if (!best || st.at > best.at) best = st;
-      }
+      var meets = axes.every(function (stat, i) { return st.v[i] >= caps[i]; });
+      if (meets && (!best || st.at > best.at)) best = st;
+
       // Fallback candidate: least total shortfall, then highest AT. The AT
       // tiebreak is what stops "closest to target" from also meaning "weakest
       // possible" — a pure min-shortfall pass happily leaves free slots empty.
-      // On the shipped dataset it never changes the winner (the DP already
-      // keeps only the max-AT state per key), but it is load-bearing for any
-      // dataset where two states tie on shortfall with different AT.
-      var shortH = Math.max(0, tH - st.ht);
-      var shortC = Math.max(0, tC - st.ct) / 100;
-      var pen = shortH + shortC;
+      // Shortfalls are summed in display units so a percentage stat short by 5
+      // does not outweigh a flat stat short by 500.
+      var short = {};
+      var pen = 0;
+      axes.forEach(function (stat, i) {
+        var gap = Math.max(0, caps[i] - st.v[i]);
+        short[stat] = unscale(stat, gap);
+        pen += short[stat];
+      });
       if (!bestShort || pen < bestShort.pen || (pen === bestShort.pen && st.at > bestShort.st.at)) {
-        bestShort = { pen: pen, st: st, shortH: shortH, shortC: shortC };
+        bestShort = { pen: pen, st: st, short: short };
       }
     });
 
@@ -130,13 +173,13 @@
     var winner = best || (bestShort && bestShort.st);
     if (!winner) return null;
 
-    return buildResult(winner, base, feasible, bestShort);
+    return buildResult(winner, base, feasible, bestShort, axes);
   }
 
   /* Walk the parent chain back to the root, collecting the picks. Following
      object references means the chain is acyclic by construction — it can only
      ever run backwards through states that were actually built. */
-  function buildResult(winner, base, feasible, bestShort) {
+  function buildResult(winner, base, feasible, bestShort, axes) {
     var chosenChips = [];
     var accPicks = [];
 
@@ -152,26 +195,30 @@
       return { slot: s, item: bySlot[s] || null };
     });
 
-    var sum = function (list, stat) {
-      return list.reduce(function (a, it) { return a + num(it[stat]); }, 0);
-    };
-    var sumCT = function (list) {
-      return list.reduce(function (a, it) { return a + ct100(it.CT); }, 0);
-    };
     var picked = accPicks.concat(chosenChips);
 
-    var totals = {
-      AT: base.AT + sum(picked, "AT"),
-      HT: base.HT + sum(picked, "HT"),
-      CT: (ct100(base.CT) + sumCT(picked)) / 100,
-    };
+    /* Totals cover every stat, not just the targeted ones: an untargeted stat
+       is still worth showing, it just did not need to constrain the search.
+       Percentages are summed in hundredths and converted back once, so 7.05 +
+       7.12 cannot drift. */
+    var totals = { AT: base.AT + picked.reduce(function (a, it) { return a + num(it.AT); }, 0) };
+    STATS.forEach(function (stat) {
+      var acc = scale(stat, base[stat]);
+      picked.forEach(function (it) { acc += scale(stat, it[stat]); });
+      totals[stat] = unscale(stat, acc);
+    });
 
     var out = {
       feasible: feasible,
-      result: { accessories: accessoriesOut, chips: chosenChips, totals: totals },
+      result: {
+        accessories: accessoriesOut,
+        chips: chosenChips,
+        totals: totals,
+        targeted: (axes || []).slice(),
+      },
     };
     if (!feasible && bestShort) {
-      out.shortfall = { HT: bestShort.shortH, CT: bestShort.shortC };
+      out.shortfall = bestShort.short;
     }
     return out;
   }
