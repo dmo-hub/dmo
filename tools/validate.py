@@ -634,15 +634,13 @@ def check_set_registry():
     # Last Evolution is a two-piece accessory set with no shin variants at all,
     # so the shape checks below are split: what holds for every set, and what
     # holds only for the clothing three.
-    # Sets that fill the six clothing slots.
+    # Sets that fill the six clothing slots -- all three have shin variants and
+    # a 4-piece plus 6-piece bonus, so one name serves both kinds of rule.
     CLOTHING = {"Yolei-Heart of Love", "T.K-Light of Hope",
-                "Davis-Power of Courage", "Four Holy Beasts"}
-    # Of those, the three tamer sets are the ones with shin variants and a
-    # 4-piece plus 6-piece bonus. Four Holy Beasts has neither: no shin item
-    # exists, and vplay lists a single 6-piece bonus.
-    TAMER = CLOTHING - {"Four Holy Beasts"}
-    if len(sets) != 5:
-        bad.append("expected 4 clothing sets + Last Evolution, got %d" % len(sets))
+                "Davis-Power of Courage"}
+    TAMER = CLOTHING
+    if len(sets) != 4:
+        bad.append("expected 3 tamer sets + Last Evolution, got %d" % len(sets))
 
     SHIN = "(\u0e0a\u0e34\u0e19)"
     for s in sets:

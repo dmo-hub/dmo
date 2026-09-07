@@ -36,8 +36,7 @@ EFFECTS = PROJ / "data" / "set_effects.json"
 # The hand-kept files for sets dmowiki never recorded. Their BONUSES reach us
 # through data/set_effects.json (scan_set_effects merges them there); what is
 # read from here are the ITEMS, which are in no item registry either.
-EXTRA = [PROJ / "data" / "last_evolution.json",
-         PROJ / "data" / "four_holy_beasts.json"]
+EXTRA = [PROJ / "data" / "last_evolution.json"]
 REGISTRY = PROJ / "docs" / "gear_registry.json"
 OUT = PROJ / "docs" / "set_registry.json"
 
@@ -51,10 +50,9 @@ SET_NAMES = {
     "พลังแห่งความกล้า": "Davis-Power of Courage",
     "แสงแห่งความหวัง": "T.K-Light of Hope",
     "จิตใจแห่งรัก": "Yolei-Heart of Love",
-    # dmowiki never recorded these two, so the English names are ours: they are
-    # only join keys, and the page shows set_th to the player either way.
+    # dmowiki never recorded this one, so the English name is ours: it is only
+    # a join key, and the page shows set_th to the player either way.
     "ลาสต์ อีโวลูชัน": "Last Evolution",
-    "พลังของสี่สัตว์เทพเซ็ต": "Four Holy Beasts",
 }
 
 # vplay's slot words, in roster order, against the solver's slot ids. The
@@ -67,10 +65,6 @@ SET_NAMES = {
 CLOTHING_SLOTS = ["head", "fashion", "top", "bottom", "gloves", "shoes"]
 SLOT_ORDER_BY_SET = {
     "Last Evolution": ["digivice", "aura"],
-    # This set's roster order is not the clothing default: vplay's own crafting
-    # table calls the cloak an accessory (fashion) and the armour a shirt (top),
-    # so the middle two are swapped relative to CLOTHING_SLOTS.
-    "Four Holy Beasts": ["head", "fashion", "top", "bottom", "gloves", "shoes"],
 }
 
 # The dmowiki template row that carries the stats for these sets' slots.
@@ -94,8 +88,8 @@ def main():
         if it["name"].startswith(TEMPLATE):
             by_slot[it["slot"]] = it
 
-    # Its two items are not in the dmowiki registry either, so their stats come
-    # straight from the extra file, keyed by slot like the template rows above.
+    # Those items are in no dmowiki registry either, so their stats come
+    # straight from the hand-kept file rather than the template rows above.
     stats_by_item = {}
     for it in extra_items:
         stats = {}
