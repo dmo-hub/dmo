@@ -383,8 +383,25 @@ def parse_pivot(rows, path, seen):
     return items, unread
 
 
+def load_axis_overrides():
+    """Axis answers the wiki never states, settled from the game and vplay.
+
+    The page writes a "Tamer"/"Digimon" prefix only where both axes share one
+    table, so most rows parse as "unknown". Those answers cannot be stored in
+    clothing_items.json -- this scanner rewrites that file from scratch on
+    every run -- so they live in their own file and are layered on here.
+    """
+    path = PROJ / "data" / "axis_overrides.json"
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {k: v["axis"] for k, v in (data.get("overrides") or {}).items()
+            if v.get("axis")}
+
+
 def main():
     html = io.open(CACHE, encoding="utf-8", errors="replace").read()
+    axis_overrides = load_axis_overrides()
 
     oldid = re.search(r"oldid=(\d+)", html)
     tables = [(m.start(), m.group(0))
@@ -455,6 +472,14 @@ def main():
     assert all(i["axis"] in ("digimon", "tamer", "mixed", "unknown")
                for i in items), "bad axis"
 
+    applied = 0
+    for it in items:
+        want = axis_overrides.get(it["id"])
+        if want and it["axis"] != want:
+            it["axis"] = want
+            it["axis_source"] = "override"
+            applied += 1
+
     payload = {
         "source": {
             "site": "dmowiki.com",
@@ -477,6 +502,9 @@ def main():
     print("  items  %d  (%d carry stats, %d are stat-less)"
           % (len(items), with_stats, len(items) - with_stats))
     print("  axis   %s" % dict(by_axis))
+    if applied:
+        print("  axis   %d row(s) set from data/axis_overrides.json"
+              % applied)
     if unknown_with_stats:
         print("  WARN   %d items carry stats but no stated axis -- the optimizer"
               % unknown_with_stats)

@@ -182,6 +182,27 @@ def check_parsers():
                                    parse_rowwise, parse_stat_cell, slot_from,
                                    split_rows)
 
+        def _axis_override_probe():
+            """Run the override layer over three synthetic rows."""
+            import json as _json
+            from pathlib import Path as _Path
+            ov = _json.loads(
+                (_Path(__file__).resolve().parent.parent / "data" /
+                 "axis_overrides.json").read_text(encoding="utf-8"))
+            by_axis = {}
+            for rec in ov["overrides"].values():
+                by_axis.setdefault(rec["axis"], set()).add(
+                    "Yolei,T.K,Davis" if "Yolei" in rec["name"] else rec["slot"])
+            out = []
+            for want, key in (("digimon", "Yolei,T.K,Davis"),
+                              ("tamer", "Perma ID Cards")):
+                out.append("%s|%s" % (key, want if key in by_axis.get(want, ())
+                                      else "MISSING"))
+            # an id the file does not mention must stay untouched
+            out.append("other|%s" % ("unknown" if "no-such-id" not in ov["overrides"]
+                                     else "LEAKED"))
+            return out
+
         def _clothing_rows(text, slot, marker="Column Named Ring"):
             """Drive parse_rowwise the way main() does, for one fixture table."""
             import re as _re
@@ -336,6 +357,14 @@ def check_parsers():
                     for r in parse_rank_table(t)
                 ),
                 ["rank-a-lv1|HP=50.0,AT=28.0", "rank-a-lvmax|HP=250.0,AT=140.0"],
+            ),
+            (
+                # The axis override layer: answers the wiki never states, taken
+                # from the game and vplay. They cannot live in the registry
+                # because scan_clothing rewrites it from scratch every run.
+                "clothing_shapes.html",
+                lambda t: _axis_override_probe(),
+                ["Yolei,T.K,Davis|digimon", "Perma ID Cards|tamer", "other|unknown"],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (

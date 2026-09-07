@@ -590,7 +590,7 @@
       "id": "bottom-yolei-t-k-davis-bottom",
       "name": "Yolei,T.K,Davis Bottom",
       "slot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "DS",
@@ -601,13 +601,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "axis_source": "override"
     },
     {
       "id": "bottom-yolei-t-k-davis-bottom-2",
       "name": "Yolei,T.K,Davis Bottom",
       "slot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "DS",
@@ -625,13 +626,14 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "axis_source": "override"
     },
     {
       "id": "bottom-yolei-t-k-davis-bottom-3",
       "name": "Yolei,T.K,Davis Bottom",
       "slot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "DS",
@@ -656,7 +658,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "bottom-zhuqiamon-s-infernal-short-pants",
@@ -3240,7 +3243,7 @@
       "id": "fashion-yolei-t-k-davis-fashion",
       "name": "Yolei,T.K,Davis Fashion",
       "slot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HT",
@@ -3251,13 +3254,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "axis_source": "override"
     },
     {
       "id": "fashion-yolei-t-k-davis-fashion-2",
       "name": "Yolei,T.K,Davis Fashion",
       "slot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HT",
@@ -3275,13 +3279,14 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "axis_source": "override"
     },
     {
       "id": "fashion-yolei-t-k-davis-fashion-3",
       "name": "Yolei,T.K,Davis Fashion",
       "slot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HT",
@@ -3306,7 +3311,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "fashion-zhuqiaomon-s-infernal-cape",
@@ -4326,7 +4332,7 @@
       "id": "gloves-yolei-t-k-davis-gloves",
       "name": "Yolei,T.K,Davis Gloves",
       "slot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "AT",
@@ -4337,13 +4343,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "axis_source": "override"
     },
     {
       "id": "gloves-yolei-t-k-davis-gloves-2",
       "name": "Yolei,T.K,Davis Gloves",
       "slot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "AT",
@@ -4354,13 +4361,14 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "axis_source": "override"
     },
     {
       "id": "gloves-yolei-t-k-davis-gloves-3",
       "name": "Yolei,T.K,Davis Gloves",
       "slot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "AT",
@@ -4378,7 +4386,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "gloves-zhuqiamon-s-infernal-gloves",
@@ -4676,7 +4685,7 @@
       "id": "head-yolei-t-k-davis-head",
       "name": "Yolei,T.K,Davis Head",
       "slot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "CT",
@@ -4687,13 +4696,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "axis_source": "override"
     },
     {
       "id": "head-yolei-t-k-davis-head-2",
       "name": "Yolei,T.K,Davis Head",
       "slot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "CT",
@@ -4704,13 +4714,14 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "axis_source": "override"
     },
     {
       "id": "head-yolei-t-k-davis-head-3",
       "name": "Yolei,T.K,Davis Head",
       "slot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "CT",
@@ -4728,7 +4739,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "head-zhuqiaomon-s-infernal-ornament",
@@ -8242,7 +8254,7 @@
       "id": "perma-id-cards-magnetic-id-card-digimon-king-at",
       "name": "Magnetic ID Card - Digimon King [AT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "AT",
@@ -8260,13 +8272,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 5
+      "upgrade_max": 5,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-at-2",
       "name": "Magnetic ID Card - Digimon King [AT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "AT",
@@ -8284,13 +8297,14 @@
         }
       ],
       "upgrade": 6,
-      "upgrade_max": 12
+      "upgrade_max": 12,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-at-3",
       "name": "Magnetic ID Card - Digimon King [AT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "AT",
@@ -8315,13 +8329,14 @@
         }
       ],
       "upgrade": 13,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-ht",
       "name": "Magnetic ID Card - Digimon King [HT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "HT",
@@ -8339,13 +8354,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 5
+      "upgrade_max": 5,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-ht-2",
       "name": "Magnetic ID Card - Digimon King [HT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "HT",
@@ -8363,13 +8379,14 @@
         }
       ],
       "upgrade": 6,
-      "upgrade_max": 12
+      "upgrade_max": 12,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-ht-3",
       "name": "Magnetic ID Card - Digimon King [HT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "HT",
@@ -8394,13 +8411,14 @@
         }
       ],
       "upgrade": 13,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-at",
       "name": "Magnetic ID Card -Heaven Wing [AT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "AT",
@@ -8411,13 +8429,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 5
+      "upgrade_max": 5,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-at-2",
       "name": "Magnetic ID Card - Heaven Wing [AT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "AT",
@@ -8435,13 +8454,14 @@
         }
       ],
       "upgrade": 6,
-      "upgrade_max": 12
+      "upgrade_max": 12,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-at-3",
       "name": "Magnetic ID Card - Heaven Wing [AT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "AT",
@@ -8466,13 +8486,14 @@
         }
       ],
       "upgrade": 13,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ct",
       "name": "Magnetic ID Card - Heaven Wing [CT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "CT",
@@ -8483,13 +8504,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 5
+      "upgrade_max": 5,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ct-2",
       "name": "Magnetic ID Card - Heaven Wing [CT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "CT",
@@ -8507,13 +8529,14 @@
         }
       ],
       "upgrade": 6,
-      "upgrade_max": 12
+      "upgrade_max": 12,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ct-3",
       "name": "Magnetic ID Card - Heaven Wing [CT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "CT",
@@ -8538,13 +8561,14 @@
         }
       ],
       "upgrade": 13,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ht",
       "name": "Magnetic ID Card - Heaven Wing [HT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "HT",
@@ -8555,13 +8579,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 5
+      "upgrade_max": 5,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ht-2",
       "name": "Magnetic ID Card - Heaven Wing [HT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "HT",
@@ -8579,13 +8604,14 @@
         }
       ],
       "upgrade": 6,
-      "upgrade_max": 12
+      "upgrade_max": 12,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-heaven-wing-ht-3",
       "name": "Magnetic ID Card - Heaven Wing [HT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "HT",
@@ -8610,13 +8636,14 @@
         }
       ],
       "upgrade": 13,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-at",
       "name": "Magnetic ID Card - Time Ruler [AT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "AT",
@@ -8627,13 +8654,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 5
+      "upgrade_max": 5,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-at-2",
       "name": "Magnetic ID Card - Time Ruler [AT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "AT",
@@ -8651,13 +8679,14 @@
         }
       ],
       "upgrade": 6,
-      "upgrade_max": 12
+      "upgrade_max": 12,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-at-3",
       "name": "Magnetic ID Card - Time Ruler [AT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "AT",
@@ -8682,13 +8711,14 @@
         }
       ],
       "upgrade": 13,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ct",
       "name": "Magnetic ID Card - Time Ruler [CT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "CT",
@@ -8699,13 +8729,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 5
+      "upgrade_max": 5,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ct-2",
       "name": "Magnetic ID Card - Time Ruler [CT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "CT",
@@ -8723,13 +8754,14 @@
         }
       ],
       "upgrade": 6,
-      "upgrade_max": 12
+      "upgrade_max": 12,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ct-3",
       "name": "Magnetic ID Card - Time Ruler [CT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "CT",
@@ -8754,13 +8786,14 @@
         }
       ],
       "upgrade": 13,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ht",
       "name": "Magnetic ID Card - Time Ruler [HT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "HT",
@@ -8771,13 +8804,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 5
+      "upgrade_max": 5,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ht-2",
       "name": "Magnetic ID Card - Time Ruler [HT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "HT",
@@ -8795,13 +8829,14 @@
         }
       ],
       "upgrade": 6,
-      "upgrade_max": 12
+      "upgrade_max": 12,
+      "axis_source": "override"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-time-ruler-ht-3",
       "name": "Magnetic ID Card - Time Ruler [HT]",
       "slot": "Perma ID Cards",
-      "axis": "unknown",
+      "axis": "tamer",
       "stats": [
         {
           "stat": "HT",
@@ -8826,7 +8861,8 @@
         }
       ],
       "upgrade": 13,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "rings-arcane-desert-ring",
@@ -10101,7 +10137,7 @@
       "id": "shoes-yolei-t-k-davis-shoes",
       "name": "Yolei,T.K,Davis Shoes",
       "slot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "Speed",
@@ -10111,13 +10147,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "axis_source": "override"
     },
     {
       "id": "shoes-yolei-t-k-davis-shoes-2",
       "name": "Yolei,T.K,Davis Shoes",
       "slot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "Speed",
@@ -10134,13 +10171,14 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "axis_source": "override"
     },
     {
       "id": "shoes-yolei-t-k-davis-shoes-3",
       "name": "Yolei,T.K,Davis Shoes",
       "slot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "Speed",
@@ -10164,7 +10202,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-1",
@@ -11766,7 +11805,7 @@
       "id": "top-yolei-t-k-davis-top",
       "name": "Yolei,T.K,Davis Top",
       "slot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -11777,13 +11816,14 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "axis_source": "override"
     },
     {
       "id": "top-yolei-t-k-davis-top-2",
       "name": "Yolei,T.K,Davis Top",
       "slot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -11794,13 +11834,14 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "axis_source": "override"
     },
     {
       "id": "top-yolei-t-k-davis-top-3",
       "name": "Yolei,T.K,Davis Top",
       "slot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -11818,7 +11859,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "axis_source": "override"
     },
     {
       "id": "top-zhuqiamon-s-infernal-hooded-shirt",

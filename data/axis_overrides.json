@@ -1,0 +1,258 @@
+{
+  "note": "axis answers that the wiki never states; the scanner applies these on top of what it parses",
+  "recorded_at": "2026-09-07",
+  "overrides": {
+    "bottom-yolei-t-k-davis-bottom": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Bottom",
+      "slot": "Bottom",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "bottom-yolei-t-k-davis-bottom-2": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Bottom",
+      "slot": "Bottom",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "bottom-yolei-t-k-davis-bottom-3": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Bottom",
+      "slot": "Bottom",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "fashion-yolei-t-k-davis-fashion": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Fashion",
+      "slot": "Fashion",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "fashion-yolei-t-k-davis-fashion-2": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Fashion",
+      "slot": "Fashion",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "fashion-yolei-t-k-davis-fashion-3": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Fashion",
+      "slot": "Fashion",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "gloves-yolei-t-k-davis-gloves": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Gloves",
+      "slot": "Gloves",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "gloves-yolei-t-k-davis-gloves-2": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Gloves",
+      "slot": "Gloves",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "gloves-yolei-t-k-davis-gloves-3": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Gloves",
+      "slot": "Gloves",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "head-yolei-t-k-davis-head": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Head",
+      "slot": "Head",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "head-yolei-t-k-davis-head-2": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Head",
+      "slot": "Head",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "head-yolei-t-k-davis-head-3": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Head",
+      "slot": "Head",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "shoes-yolei-t-k-davis-shoes": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Shoes",
+      "slot": "Shoes",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "shoes-yolei-t-k-davis-shoes-2": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Shoes",
+      "slot": "Shoes",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "shoes-yolei-t-k-davis-shoes-3": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Shoes",
+      "slot": "Shoes",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "top-yolei-t-k-davis-top": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Top",
+      "slot": "Top",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "top-yolei-t-k-davis-top-2": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Top",
+      "slot": "Top",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "top-yolei-t-k-davis-top-3": {
+      "axis": "digimon",
+      "name": "Yolei,T.K,Davis Top",
+      "slot": "Top",
+      "source": "vplay: \"จะนำไปใช้กับดิจิมอน ไม่ใช่เทมเมอร์\" + ภาพในเกมยืนยัน stat ตรงชนิด"
+    },
+    "perma-id-cards-magnetic-id-card-digimon-king-at": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Digimon King [AT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-digimon-king-at-2": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Digimon King [AT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-digimon-king-at-3": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Digimon King [AT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-digimon-king-ht": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Digimon King [HT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-digimon-king-ht-2": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Digimon King [HT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-digimon-king-ht-3": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Digimon King [HT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-heaven-wing-at": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card -Heaven Wing [AT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-heaven-wing-at-2": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Heaven Wing [AT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-heaven-wing-at-3": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Heaven Wing [AT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-heaven-wing-ct": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Heaven Wing [CT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-heaven-wing-ct-2": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Heaven Wing [CT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-heaven-wing-ct-3": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Heaven Wing [CT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-heaven-wing-ht": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Heaven Wing [HT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-heaven-wing-ht-2": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Heaven Wing [HT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-heaven-wing-ht-3": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Heaven Wing [HT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-time-ruler-at": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Time Ruler [AT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-time-ruler-at-2": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Time Ruler [AT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-time-ruler-at-3": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Time Ruler [AT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-time-ruler-ct": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Time Ruler [CT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-time-ruler-ct-2": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Time Ruler [CT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-time-ruler-ct-3": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Time Ruler [CT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-time-ruler-ht": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Time Ruler [HT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-time-ruler-ht-2": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Time Ruler [HT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "perma-id-cards-magnetic-id-card-time-ruler-ht-3": {
+      "axis": "tamer",
+      "name": "Magnetic ID Card - Time Ruler [HT]",
+      "slot": "Perma ID Cards",
+      "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    }
+  }
+}
