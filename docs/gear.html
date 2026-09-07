@@ -129,7 +129,7 @@
       <p class="go-sub" id="slot-hint"></p>
       <div class="go-tbl-wrap">
         <table class="go-tbl">
-          <thead><tr><th>ชื่อ</th><th>ช่อง</th><th>AT</th><th>HT</th><th>CT (%)</th><th></th></tr></thead>
+          <thead><tr><th>ชื่อ</th><th>ช่อง</th><th>ตีบวก</th><th>AT</th><th>HT</th><th>CT (%)</th><th></th></tr></thead>
           <tbody id="acc-body"></tbody>
         </table>
       </div>
@@ -306,6 +306,30 @@
     return td;
   }
 
+  /* The player's own upgrade level per piece. Decision 08: the solver must not
+     choose it -- a +15 recommendation is useless to someone holding a +3. */
+  var LEVELS_KEY = "dmo_gear_levels";
+  var levels = jget(LEVELS_KEY) || {};
+
+  function saveLevels() { jset(LEVELS_KEY, levels); }
+
+  function upgradeCell(it) {
+    var td = document.createElement("td");
+    var inp = document.createElement("input");
+    inp.type = "number"; inp.min = "0"; inp.max = "15"; inp.step = "1";
+    inp.placeholder = "+0";
+    var key = it.name || "";
+    inp.value = (key && levels[key] !== undefined) ? levels[key] : "";
+    inp.addEventListener("input", function () {
+      var k = it.name || "";
+      if (!k) return;
+      if (inp.value === "") { delete levels[k]; } else { levels[k] = num(inp.value); }
+      saveLevels();
+    });
+    td.appendChild(inp);
+    return td;
+  }
+
   function renderAcc() {
     var body = $("acc-body");
     body.textContent = "";
@@ -323,6 +347,7 @@
       sel.addEventListener("change", function () { it.slot = sel.value; save(); });
       tdSlot.appendChild(sel);
       tr.appendChild(tdSlot);
+      tr.appendChild(upgradeCell(it));
       tr.appendChild(statCell(it, "AT", "1"));
       tr.appendChild(statCell(it, "HT", "1"));
       tr.appendChild(statCell(it, "CT", "0.01"));
@@ -469,8 +494,11 @@
   function run() {
     if (!checkTargets()) return;
     var g = readGoal();
+    /* One row per upgrade level lives in the registry; keep only the band that
+       holds each piece's locked level so the solver cannot pick a level. */
+    var solveData = window.GearSolver.applyUpgradeLevels(data, levels);
     var dupes = window.GearSolver.findDuplicateIds(data);
-    var out = window.GearSolver.solve(data, g.base, g.targets);
+    var out = window.GearSolver.solve(solveData, g.base, g.targets);
     lastRun = { out: out, goal: g, dupes: dupes };
     renderResult();
     showTab("tab-result");
@@ -615,6 +643,15 @@
           rec[f.key] = f.pct ? num(it && it[f.key]) : Math.round(num(it && it[f.key]));
         });
         if (withSlot) rec.slot = SLOTS.indexOf(it && it.slot) >= 0 ? it.slot : SLOTS[0];
+        /* Upgrade level is metadata, not a stat, so the loop above misses it.
+           Dropping it here would hand the solver every level of a piece at
+           once and let it pick one -- exactly what decision 08 rules out. */
+        if (it && it.upgrade !== undefined && it.upgrade !== null) {
+          rec.upgrade = Math.round(num(it.upgrade));
+          if (it.upgradeMax !== undefined && it.upgradeMax !== null) {
+            rec.upgradeMax = Math.round(num(it.upgradeMax));
+          }
+        }
         return rec;
       });
     };

@@ -240,10 +240,62 @@
     return dupes;
   }
 
+  /* The registry keeps ONE ROW PER UPGRADE LEVEL, and a row can cover a band
+     ("0-4" carries upgrade 0 with upgradeMax 4). The solver picks one item per
+     slot by score, so feeding it every row would have it "choose" the highest
+     level -- recommending a +15 to someone who owns a +3. The level is the
+     player's, not the optimizer's, so rows are filtered down to the one band
+     that contains each item's locked level before the solve. */
+  function levelOf(it) {
+    return num(it && (it.upgrade !== undefined ? it.upgrade : it.up));
+  }
+
+  function bandContains(it, lvl) {
+    var lo = levelOf(it);
+    var hi = it && it.upgradeMax !== undefined && it.upgradeMax !== null
+      ? num(it.upgradeMax) : lo;
+    return lvl >= lo && lvl <= hi;
+  }
+
+  /* levels: { "<item name>": <locked level> }. An item with no entry keeps its
+     lowest row, which is what an untouched piece is. */
+  function applyUpgradeLevels(data, levels) {
+    levels = levels || {};
+    var out = { accessories: [], chips: (data && data.chips) || [] };
+    var groups = {};
+    ((data && data.accessories) || []).forEach(function (it) {
+      if (!it || it.upgrade === undefined || it.upgrade === null) {
+        out.accessories.push(it);
+        return;
+      }
+      var key = String(it.slot) + " " + String(it.name);
+      (groups[key] = groups[key] || []).push(it);
+    });
+    Object.keys(groups).forEach(function (key) {
+      var rows = groups[key].slice().sort(function (a, b) {
+        return levelOf(a) - levelOf(b);
+      });
+      var want = levels[rows[0].name];
+      var pick = null;
+      if (want !== undefined && want !== null && want !== "") {
+        var lvl = num(want);
+        for (var i = 0; i < rows.length; i++) {
+          if (bandContains(rows[i], lvl)) { pick = rows[i]; break; }
+        }
+        /* A level above every band means the piece is upgraded further than
+           the wiki records; the top band is the closest truth we have. */
+        if (!pick) pick = rows[rows.length - 1];
+      }
+      out.accessories.push(pick || rows[0]);
+    });
+    return out;
+  }
+
   root.GearSolver = {
     SLOTS: SLOTS,
     MAX_CHIPS: MAX_CHIPS,
     solve: solve,
     findDuplicateIds: findDuplicateIds,
+    applyUpgradeLevels: applyUpgradeLevels,
   };
 })(typeof window !== "undefined" ? window : globalThis);
