@@ -15,7 +15,8 @@
  *   The browser has no CBC. "Overshoot is worthless" lets every state whose
  *   HT/CT already clears the target collapse into one, which is what keeps the
  *   table small. The result is exact, not a heuristic — it agrees with the PuLP
- *   reference model on every cross-checked case.
+ *   reference model in tools/ref_model.py on every cross-checked case, which
+ *   the validate gate re-runs via tools/diff_set_model.py.
  *
  *   ⚠️ This bound only holds while the item list stays small. Benchmarking with
  *   ~400 items (the size of the full wiki registry) blows the table past 6M
