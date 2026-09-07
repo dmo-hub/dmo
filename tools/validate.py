@@ -685,6 +685,34 @@ def check_idempotent():
     return bad
 
 
+def check_set_model():
+    """Cross-check the browser DP against the ILP reference model.
+
+    The DP collapses every state that already clears its floor into one, which
+    is what keeps it fast and also the likeliest place for a silent error. The
+    ILP never merges states, so agreement is evidence rather than the solver
+    checking its own arithmetic. Needs node and pulp; absent either, skip.
+    """
+    try:
+        import pulp  # noqa: F401
+    except ImportError:
+        return ["__skip__: pulp not installed"]
+    r = subprocess.run(
+        [sys.executable, str(PROJ / "tools" / "diff_set_model.py")],
+        cwd=PROJ,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
+    if "NODE ERR" in r.stdout:
+        return ["__skip__: node unavailable"]
+    if r.returncode != 0:
+        tail = [ln for ln in r.stdout.strip().splitlines() if ln][-6:]
+        return ["DP and ILP disagree:"] + tail
+    return []
+
+
 def main():
     no_build = "--no-build" in sys.argv
     checks = [
@@ -695,6 +723,7 @@ def main():
         ("chip registry", check_chip_registry),
         ("set rosters", check_set_rosters),
         ("set registry", check_set_registry),
+        ("DP vs ILP model", check_set_model),
     ]
     if not no_build:
         checks.append(("builders idempotent", check_idempotent))

@@ -27,3 +27,4 @@ backoffice/
 cache_vplay/
 vplay_candidates.json
 vplay_hits.json
+tools/.diff_cases.json
