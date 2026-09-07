@@ -113,7 +113,7 @@
     <div class="hero-stats">
       <div class="hero-stat"><div class="num" id="hero-acc">0</div><div class="lbl">ของสวม</div></div>
       <div class="hero-stat"><div class="num" id="hero-chip">0</div><div class="lbl">ชิป</div></div>
-      <div class="hero-stat"><div class="num">6</div><div class="lbl">ชิปสูงสุด</div></div>
+      <div class="hero-stat"><div class="num" id="hero-maxchips">6</div><div class="lbl">ชิปสูงสุด</div></div>
     </div>
   </div>
 
@@ -140,7 +140,7 @@
 
     <div class="go-card">
       <h2>ชิป</h2>
-      <p class="go-sub">ชิปสลับช่องได้อิสระ — ใส่ได้สูงสุด 6 ชิ้น ระบบจะเลือกชุดที่ดีที่สุดให้เอง</p>
+      <p class="go-sub" id="chip-hint"></p>
       <div class="go-tbl-wrap">
         <table class="go-tbl">
           <thead><tr><th>ชื่อ</th><th>AT</th><th>HT</th><th>CT (%)</th><th></th></tr></thead>
@@ -351,6 +351,9 @@
     // built from SLOTS so the wording can never drift from the solver
     $("slot-hint").textContent = SLOTS.length + " \u0e0a\u0e48\u0e2d\u0e07 (" +
       SLOTS.join(" \u00b7 ") + ") \u2014 \u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e48\u0e2d\u0e07\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e0a\u0e34\u0e49\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27 \u0e23\u0e30\u0e1a\u0e1a\u0e08\u0e30\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e40\u0e2d\u0e07\u0e27\u0e48\u0e32\u0e0a\u0e48\u0e2d\u0e07\u0e44\u0e2b\u0e19\u0e43\u0e2a\u0e48\u0e2d\u0e30\u0e44\u0e23 \u0e2b\u0e23\u0e37\u0e2d\u0e1b\u0e25\u0e48\u0e2d\u0e22\u0e27\u0e48\u0e32\u0e07";
+    // from the solver so the headline number cannot drift from the cap it uses
+    $("hero-maxchips").textContent = MAX_CHIPS;
+    $("chip-hint").textContent = "\u0e0a\u0e34\u0e1b\u0e2a\u0e25\u0e31\u0e1a\u0e0a\u0e48\u0e2d\u0e07\u0e44\u0e14\u0e49\u0e2d\u0e34\u0e2a\u0e23\u0e30 \u2014 \u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14 " + MAX_CHIPS + " \u0e0a\u0e34\u0e49\u0e19 \u0e23\u0e30\u0e1a\u0e1a\u0e08\u0e30\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e14\u0e35\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e43\u0e2b\u0e49\u0e40\u0e2d\u0e07";
     $("hero-acc").textContent = data.accessories.length;
     $("hero-chip").textContent = data.chips.length;
   }

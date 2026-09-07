@@ -37,7 +37,10 @@
     "ring", "necklace", "bracelet", "earring", "glasses", "wing",
     "head", "fashion", "top", "bottom", "gloves", "shoes"
   ];
-  var MAX_CHIPS = 6;
+  /* A character has eight chip sockets. This is a property of the character,
+     not of the gear -- the per-item "Attribute Slot" numbers on the wiki count
+     something else, and summing those across a loadout would reach 42. */
+  var MAX_CHIPS = 8;
 
   /* Stats that are percentages are held as hundredths so the DP works in whole
      numbers -- 7.05% would otherwise make state keys float-unstable. */
