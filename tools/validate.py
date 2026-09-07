@@ -471,6 +471,24 @@ def check_chip_registry():
             elif abs(got - want) > 0.011:
                 bad.append(f"{it['id']}: {key} is {got}, primary+secondary is {want}")
 
+    # The secondary set is 60% of the primary, rounded to whole numbers, on
+    # every stat of every grade. Only vplay records it -- dmowiki has no
+    # second set at all -- so there is no other source to check it against.
+    # What can be checked is that it still follows the one rule the whole
+    # table obeys, which a bad rescrape would break.
+    for it in items:
+        parts = it.get("parts") or {}
+        prim, sec = parts.get("primary") or {}, parts.get("secondary") or {}
+        for key in sorted(set(prim) & set(sec)):
+            want = prim[key] * 0.6
+            # whole-stat values are rounded; CT/EV/BL keep their decimals
+            slack = 0.5 if key not in ("CT", "EV", "BL") else 0.011
+            if abs(sec[key] - want) > slack:
+                bad.append(
+                    f"{it['id']}: secondary {key} is {sec[key]}, "
+                    f"60% of the primary is {round(want, 2)}"
+                )
+
     r16 = next((it for it in items if it["grade"] == 16), None)
     if r16:
         # dmowiki's family chipset R16 is AT +306 / CT +4%; the secondary set
