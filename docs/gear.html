@@ -36,6 +36,9 @@
   table.go-tbl thead th { background: var(--surface-card); color: var(--ink); font-weight: 600; }
   table.go-tbl td:first-child, table.go-tbl th:first-child { text-align: left; }
   table.go-tbl tr:last-child td { border-bottom: 0; }
+  table.go-tbl tr.go-grp td { text-align: left; font-weight: 600;
+    background: var(--surface-sunken, var(--surface-card));
+    color: var(--ink); padding-top: 9px; padding-bottom: 5px; }
   table.go-tbl input, table.go-tbl select { font: inherit; font-size: 12.5px; width: 100%;
     min-width: 62px; padding: 4px 7px; border: 1px solid var(--hairline);
     border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
@@ -497,10 +500,42 @@
     return dl;
   }
 
+  /* One header row per group, matching the slot dropdown's own grouping.
+     Written as a full-width cell rather than a real <th> so it cannot be
+     mistaken for a second column header by a screen reader. */
+  function groupHeaderRow(label, cols) {
+    var tr = document.createElement("tr");
+    tr.className = "go-grp";
+    var td = document.createElement("td");
+    td.colSpan = cols;
+    td.textContent = label;
+    tr.appendChild(td);
+    return tr;
+  }
+
   function renderAcc() {
     var body = $("acc-body");
     body.textContent = "";
+    var cols = document.querySelectorAll("#panel-items thead th").length || 7;
+
+    /* Rows are grouped for display only -- data.accessories keeps its own
+       order, because that is what the solver and localStorage round-trip. */
+    var groups = {};
     data.accessories.forEach(function (it) {
+      var g = slotGroup(it.slot);
+      (groups[g] = groups[g] || []).push(it);
+    });
+
+    SLOT_GROUPS.forEach(function (g) {
+      var rows = groups[g];
+      if (!rows || !rows.length) return;   // no rows: no heading
+      body.appendChild(groupHeaderRow(g, cols));
+      rows.forEach(function (it) { body.appendChild(accRow(it)); });
+    });
+  }
+
+  function accRow(it) {
+    {
       var tr = document.createElement("tr");
       tr.appendChild(nameCell(it));
       var tdSlot = document.createElement("td");
@@ -527,8 +562,8 @@
       tr.appendChild(statCell(it, "HT", "1"));
       tr.appendChild(statCell(it, "CT", "0.01"));
       tr.appendChild(delCell(data.accessories, it));
-      body.appendChild(tr);
-    });
+      return tr;
+    }
   }
 
   function renderChips() {
