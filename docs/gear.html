@@ -197,6 +197,10 @@
 (function () {
   "use strict";
   var SLOTS = window.GearSolver.SLOTS;
+  var SLOT_GROUPS = window.GearSolver.SLOT_GROUPS;
+  var slotsInGroup = window.GearSolver.slotsInGroup;
+  var slotLabel = window.GearSolver.slotLabel;
+  var slotGroup = window.GearSolver.slotGroup;
   var MAX_CHIPS = window.GearSolver.MAX_CHIPS;
   var ITEMS_KEY = "dmo_gear_items", GOAL_KEY = "dmo_gear_goal";
 
@@ -338,11 +342,19 @@
       tr.appendChild(nameCell(it));
       var tdSlot = document.createElement("td");
       var sel = document.createElement("select");
-      SLOTS.forEach(function (s) {
-        var o = document.createElement("option");
-        o.value = s; o.textContent = s;
-        if (it.slot === s) o.selected = true;
-        sel.appendChild(o);
+      SLOT_GROUPS.forEach(function (g) {
+        var members = slotsInGroup(g);
+        if (!members.length) return;
+        var grp = document.createElement("optgroup");
+        grp.label = g;
+        members.forEach(function (s) {
+          var o = document.createElement("option");
+          o.value = s;                    // id stays English -- it is stored
+          o.textContent = slotLabel(s);
+          if (it.slot === s) o.selected = true;
+          grp.appendChild(o);
+        });
+        sel.appendChild(grp);
       });
       sel.addEventListener("change", function () { it.slot = sel.value; save(); });
       tdSlot.appendChild(sel);
@@ -374,7 +386,10 @@
     renderAcc();
     renderChips();
     // built from SLOTS so the wording can never drift from the solver
-    $("slot-hint").textContent = SLOTS.length + " \u0e0a\u0e48\u0e2d\u0e07 (" +
+    $("slot-hint").textContent = SLOTS.length + " \u0e0a\u0e48\u0e2d\u0e07 \u2014 " +
+      SLOT_GROUPS.map(function (g) {
+        return g + ": " + slotsInGroup(g).map(slotLabel).join(" · ");
+      }).join("  |  ") + " \u2014 \u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e48\u0e2d\u0e07\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e0a\u0e34\u0e49\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27";
       SLOTS.join(" \u00b7 ") + ") \u2014 \u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e48\u0e2d\u0e07\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e0a\u0e34\u0e49\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27 \u0e23\u0e30\u0e1a\u0e1a\u0e08\u0e30\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e40\u0e2d\u0e07\u0e27\u0e48\u0e32\u0e0a\u0e48\u0e2d\u0e07\u0e44\u0e2b\u0e19\u0e43\u0e2a\u0e48\u0e2d\u0e30\u0e44\u0e23 \u0e2b\u0e23\u0e37\u0e2d\u0e1b\u0e25\u0e48\u0e2d\u0e22\u0e27\u0e48\u0e32\u0e07";
     // from the solver so the headline number cannot drift from the cap it uses
     $("hero-maxchips").textContent = MAX_CHIPS;

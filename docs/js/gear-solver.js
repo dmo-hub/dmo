@@ -37,6 +37,49 @@
     "ring", "necklace", "bracelet", "earring", "glasses", "wing",
     "head", "fashion", "top", "bottom", "gloves", "shoes"
   ];
+
+  /* Thai label and group for each slot. The ID above stays English on purpose:
+     it is what sits in localStorage and in every registry row, so renaming it
+     would orphan every loadout a player has already saved. */
+  var SLOT_GROUPS = ["\u0e0a\u0e38\u0e14", "\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a",
+                     "\u0e2d\u0e37\u0e48\u0e19 \u0e46"];
+  var SLOT_INFO = {
+    head:     { label: "\u0e2b\u0e31\u0e27",       group: "\u0e0a\u0e38\u0e14" },
+    top:      { label: "\u0e40\u0e2a\u0e37\u0e49\u0e2d",     group: "\u0e0a\u0e38\u0e14" },
+    bottom:   { label: "\u0e01\u0e32\u0e07\u0e40\u0e01\u0e07", group: "\u0e0a\u0e38\u0e14" },
+    gloves:   { label: "\u0e16\u0e38\u0e07\u0e21\u0e37\u0e2d", group: "\u0e0a\u0e38\u0e14" },
+    shoes:    { label: "\u0e23\u0e2d\u0e07\u0e40\u0e17\u0e49\u0e32", group: "\u0e0a\u0e38\u0e14" },
+    fashion:  { label: "\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e41\u0e15\u0e48\u0e07\u0e01\u0e32\u0e22", group: "\u0e0a\u0e38\u0e14" },
+    ring:     { label: "\u0e41\u0e2b\u0e27\u0e19",   group: "\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a" },
+    necklace: { label: "\u0e2a\u0e23\u0e49\u0e2d\u0e22\u0e04\u0e2d", group: "\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a" },
+    bracelet: { label: "\u0e01\u0e33\u0e44\u0e25",   group: "\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a" },
+    earring:  { label: "\u0e15\u0e48\u0e32\u0e07\u0e2b\u0e39", group: "\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a" },
+    glasses:  { label: "\u0e41\u0e27\u0e48\u0e19",   group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
+    wing:     { label: "\u0e1b\u0e35\u0e01",     group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" }
+  };
+
+  /* Wearing order within each group, so the dropdown reads head-to-toe rather
+     than following the internal SLOTS order. */
+  var SLOT_ORDER = [
+    "head", "top", "bottom", "gloves", "shoes", "fashion",
+    "ring", "necklace", "bracelet", "earring", "glasses", "wing"
+  ];
+
+  function slotsInGroup(group) {
+    return SLOT_ORDER.filter(function (s) {
+      return SLOT_INFO[s] && SLOT_INFO[s].group === group;
+    });
+  }
+
+  function slotLabel(slot) {
+    var info = SLOT_INFO[slot];
+    return info ? info.label : String(slot);
+  }
+
+  function slotGroup(slot) {
+    var info = SLOT_INFO[slot];
+    return info ? info.group : SLOT_GROUPS[SLOT_GROUPS.length - 1];
+  }
   /* A character has eight chip sockets. This is a property of the character,
      not of the gear -- the per-item "Attribute Slot" numbers on the wiki count
      something else, and summing those across a loadout would reach 42. */
@@ -268,7 +311,7 @@
         out.accessories.push(it);
         return;
       }
-      var key = String(it.slot) + " " + String(it.name);
+      var key = String(it.slot) + "\u0000" + String(it.name);
       (groups[key] = groups[key] || []).push(it);
     });
     Object.keys(groups).forEach(function (key) {
@@ -293,6 +336,11 @@
 
   root.GearSolver = {
     SLOTS: SLOTS,
+    SLOT_GROUPS: SLOT_GROUPS,
+    SLOT_INFO: SLOT_INFO,
+    slotsInGroup: slotsInGroup,
+    slotLabel: slotLabel,
+    slotGroup: slotGroup,
     MAX_CHIPS: MAX_CHIPS,
     solve: solve,
     findDuplicateIds: findDuplicateIds,
