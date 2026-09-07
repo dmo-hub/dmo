@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMO — สิ่งที่ต้องเช็คในเกม</title>
+<style>
+:root{
+  --bg:#0f1115; --card:#171a21; --line:#272b35; --fg:#e7e9ee; --dim:#9aa3b2;
+  --acc:#5b9cff; --dg:#3ddc97; --tm:#ffb454; --warn:#ff6b6b; --skip:#5a6172;
+  --dgink:#04140d; --tmink:#241500;
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f6f7f9; --card:#ffffff; --line:#e2e5ea; --fg:#1a1d23; --dim:#5c6472;
+         --acc:#2563eb; --dg:#0f9d58; --tm:#b26a00; --warn:#d92d20; --skip:#8b93a1;
+         --dgink:#ffffff; --tmink:#ffffff; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 "Noto Sans Thai",-apple-system,"Segoe UI",Roboto,sans-serif;
+  padding:0 0 92px;-webkit-text-size-adjust:100%}
+.wrap{max-width:880px;margin:0 auto;padding:0 14px}
+header{background:linear-gradient(180deg,var(--card),transparent);
+  border-bottom:1px solid var(--line);padding:18px 0 14px;margin-bottom:6px}
+h1{font-size:20px;margin:0 0 4px}
+.lede{color:var(--dim);font-size:13px;margin:0}
+.stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:4px 11px;font-size:12px;color:var(--dim)}
+.pill b{color:var(--fg);font-size:13px}
+.pill.hot b{color:var(--warn)}
+h2{font-size:16px;margin:26px 0 8px;display:flex;align-items:center;gap:8px}
+h2 .num{background:var(--acc);color:#fff;border-radius:6px;font-size:12px;
+  padding:1px 7px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:14px;margin-bottom:12px}
+.why{border-left:3px solid var(--acc);padding-left:11px;color:var(--dim);
+  font-size:13.5px;margin:9px 0}
+.why:first-child{margin-top:0}
+.why b,.why i{color:var(--fg)}
+.why.warn{border-left-color:var(--warn)}
+.why.warn b{color:var(--warn)}
+.shoot{margin:10px 0 0;font-size:13.5px}
+.grp{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  margin-bottom:10px;overflow:hidden}
+.grp h3{margin:0;padding:10px 13px;font-size:14px;background:rgba(127,127,127,.06);
+  border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+.slug{color:var(--dim);font-weight:400;font-size:12px}
+.cnt{margin-left:auto;font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums}
+.grp.full h3{background:rgba(61,220,151,.12)}
+.grp.full .cnt{color:var(--dg);font-weight:700}
+table{width:100%;border-collapse:collapse}
+td{padding:8px 13px;border-top:1px solid var(--line);vertical-align:middle}
+tr:first-child td{border-top:0}
+.nm{font-size:13.5px}
+.sub{color:var(--dim);font-size:11.5px;margin-top:3px}
+.st b{color:var(--fg);font-weight:600;margin-right:2px;opacity:.7}
+.ax{width:1%;white-space:nowrap;text-align:right}
+.axb{background:transparent;border:1px solid var(--line);color:var(--dim);
+  border-radius:7px;padding:6px 10px;font-size:12px;cursor:pointer;margin-left:4px;
+  font-family:inherit}
+.axb:hover{border-color:var(--acc);color:var(--fg)}
+.axb:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.axb[aria-pressed=true][data-v=digimon]{background:var(--dg);border-color:var(--dg);
+  color:var(--dgink);font-weight:700}
+.axb[aria-pressed=true][data-v=tamer]{background:var(--tm);border-color:var(--tm);
+  color:var(--tmink);font-weight:700}
+.axb[aria-pressed=true][data-v=skip]{background:var(--skip);border-color:var(--skip);color:#fff}
+tr.answered .nm{opacity:.5}
+ul.list{margin:8px 0 0;padding-left:20px;color:var(--dim);font-size:13px}
+ul.list li{margin:4px 0}
+ul.list code{color:var(--fg);background:rgba(127,127,127,.13);padding:1px 5px;
+  border-radius:4px;font-size:12.5px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);
+  border-top:1px solid var(--line);padding:10px 14px;display:flex;gap:9px;align-items:center}
+.bar .prog{flex:1;font-size:13px;color:var(--dim);font-variant-numeric:tabular-nums}
+.bar .prog b{color:var(--fg)}
+button.act{background:var(--acc);color:#fff;border:0;border-radius:8px;
+  padding:9px 14px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+button.act.ghost{background:transparent;border:1px solid var(--line);color:var(--dim)}
+#out{width:100%;min-height:190px;margin-top:10px;background:var(--bg);color:var(--fg);
+  border:1px solid var(--line);border-radius:8px;padding:11px;
+  font:12px/1.5 ui-monospace,Menlo,Consolas,monospace}
+.done-note{font-size:12px;color:var(--dim);margin:8px 0 0}
+[hidden]{display:none!important}
+@media (max-width:560px){
+  .ax{display:block;text-align:left;width:auto;padding-top:0}
+  td.nm{padding-bottom:4px}
+  tr td:last-child{padding-bottom:10px}
+  .axb{margin:0 4px 0 0}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>สิ่งที่ต้องเช็คในเกม</h1>
+  <p class="lede">DMO Gear Optimizer — เปิดเกมรอบเดียวเก็บได้ครบทั้ง 4 ข้อ</p>
+  <div class="stats">
+    <span class="pill">ทะเบียน <b>164</b> ชิ้น</span>
+    <span class="pill hot">ไม่รู้แกน <b>91</b></span>
+    <span class="pill hot">คิดคะแนนได้แต่ถูกตัดทิ้ง <b>73</b></span>
+    <span class="pill">solver ใช้ได้จริงตอนนี้ <b>14</b></span>
+  </div>
+</div></header>
+
+<div class="wrap">
+
+<h2><span class="num">1</span> แกนของไอเทม — 73 แถว</h2>
+<div class="card">
+  <div class="why"><b>ทำไมสำคัญ:</b> solver เก็บเฉพาะของที่รู้ว่าเป็น<b>ดิจิมอน</b>
+    ⇒ ตอนนี้เลือกจากของแค่ <b>14</b> ชิ้น จาก 164 ·
+    ตอบแกนให้ 73 แถวนี้ = ปลดล็อกเข้าการคำนวณทั้งหมด</div>
+  <div class="why"><b>ดูยังไง:</b> ใส่/ถอดของ แล้วดู<b>หน้าสถานะตัวละคร</b>ว่าตัวเลขฝั่งไหนขยับ</div>
+  <div class="why warn"><b>⚠ ห้ามอ่านจากกล่องข้อมูลไอเทม</b> — ช่อง
+    <i>เลเวลเทมเมอร์</i> / <i>เลเวลดิจิมอน</i> คือ<b>ข้อกำหนดการสวมใส่ ไม่ใช่แกนของ stat</b> ·
+    ชุดมิยาโกะเขียน "เลเวลเทมเมอร์ 140" แต่ stat เข้า<b>ดิจิมอน</b></div>
+  <div class="why"><b>ไม่ต้องครบ:</b> ตอบทีละก้อนก็เติม override ได้ ·
+    <b>ช่องเดียวมี 2 แกนปนกันได้</b> (ยืนยันแล้วที่ ถุงมือ · กางเกง · เสื้อ · หมวก)
+    ⇒ ต้องดูทีละชิ้น ตอบเหมาทั้งช่องไม่ได้</div>
+</div>
+<section class="grp" data-slot="earring"><h3>ตุ้มหู <span class="slug">earring</span><span class="cnt"><span class="done">0</span>/9</span></h3><table><tbody><tr data-id="earrings-earrings-of-four-holy-beasts-lv-5"><td class="nm">Earrings of Four Holy Beasts [ ]<div class="sub"><span class="st"><b>HT</b>550</span> · <span class="st"><b>DS</b>880</span> · <span class="st"><b>DE</b>110</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="earrings-fanglongmon-s-ancient-earring-lv-10"><td class="nm">Fanglongmon's Ancient Earring [ ]<div class="sub"><span class="st"><b>HT</b>600</span> · <span class="st"><b>CT</b>9%</span> · <span class="st"><b>DS</b>960</span> · <span class="st"><b>DE</b>120</span> · <span class="st"><b>EV</b>8%</span> · <span class="st"><b>BL</b>7%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="earrings-imperial-earring"><td class="nm">Imperial Earring<div class="sub"><span class="st"><b>HT</b>700</span> · <span class="st"><b>CT</b>7%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="earrings-maximum"><td class="nm">Maximum<div class="sub"><span class="st"><b>HT</b>1000</span> · <span class="st"><b>CT</b>12%</span> · <span class="st"><b>DS</b>1500</span> · <span class="st"><b>DE</b>200</span> · <span class="st"><b>EV</b>10%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="earrings-minimum"><td class="nm">Minimum<div class="sub"><span class="st"><b>HT</b>500</span> · <span class="st"><b>CT</b>6%</span> · <span class="st"><b>DS</b>750</span> · <span class="st"><b>DE</b>100</span> · <span class="st"><b>EV</b>1%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="earrings-nanomon-s-shiny-earring"><td class="nm">Nanomon's Shiny Earring<div class="sub"><span class="st"><b>HT</b>300</span> · <span class="st"><b>DS</b>600</span> · <span class="st"><b>BL</b>5%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="earrings-radiant-earrings-of-four-holy-beasts-lv-5"><td class="nm">Radiant Earrings of Four Holy Beasts [ ]<div class="sub"><span class="st"><b>HT</b>650</span> · <span class="st"><b>DS</b>1040</span> · <span class="st"><b>DE</b>130</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="earrings-regular-earrings"><td class="nm">Regular Earrings<div class="sub"><span class="st"><b>HT</b>500</span> · <span class="st"><b>CT</b>7%</span> · <span class="st"><b>DS</b>800</span> · <span class="st"><b>DE</b>100</span> · <span class="st"><b>EV</b>7%</span> · <span class="st"><b>BL</b>6%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="earrings-zero-unit-earrings"><td class="nm">Zero Unit Earrings<div class="sub"><span class="st"><b>HT</b>600</span> · <span class="st"><b>CT</b>9%</span> · <span class="st"><b>DS</b>960</span> · <span class="st"><b>DE</b>120</span> · <span class="st"><b>EV</b>8%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="necklace"><h3>สร้อยคอ <span class="slug">necklace</span><span class="cnt"><span class="done">0</span>/9</span></h3><table><tbody><tr data-id="necklaces-fanglongmon-s-ancient-necklace-lv-10"><td class="nm">Fanglongmon's Ancient Necklace [ ]<div class="sub"><span class="st"><b>AT</b>240</span> · <span class="st"><b>CT</b>6%</span> · <span class="st"><b>DE</b>60</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="necklaces-imperial-necklaces"><td class="nm">Imperial Necklaces<div class="sub"><span class="st"><b>AT</b>450</span> · <span class="st"><b>CT</b>7%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="necklaces-maximum"><td class="nm">Maximum<div class="sub"><span class="st"><b>AT</b>300</span> · <span class="st"><b>CT</b>10%</span> · <span class="st"><b>DS</b>1200</span> · <span class="st"><b>DE</b>100</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="necklaces-minimum"><td class="nm">Minimum<div class="sub"><span class="st"><b>AT</b>150</span> · <span class="st"><b>CT</b>5%</span> · <span class="st"><b>DS</b>600</span> · <span class="st"><b>DE</b>50</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="necklaces-necklace-of-four-holy-beasts-lv-5"><td class="nm">Necklace of Four Holy Beasts [ ]<div class="sub"><span class="st"><b>AT</b>220</span> · <span class="st"><b>DS</b>880</span> · <span class="st"><b>DE</b>55</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="necklaces-necklaces-with-3-options"><td class="nm">Necklaces with 3 Options<div class="sub"><span class="st"><b>AT</b>100</span> · <span class="st"><b>CT</b>2%</span> · <span class="st"><b>DS</b>500</span> · <span class="st"><b>DE</b>25</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="necklaces-necklaces-with-4-or-5-options"><td class="nm">Necklaces with 4 or 5 Options<div class="sub"><span class="st"><b>AT</b>200</span> · <span class="st"><b>CT</b>5%</span> · <span class="st"><b>DS</b>800</span> · <span class="st"><b>DE</b>50</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="necklaces-radiant-necklace-of-four-holy-beasts-lv-5"><td class="nm">Radiant Necklace of Four Holy Beasts [ ]<div class="sub"><span class="st"><b>AT</b>260</span> · <span class="st"><b>DS</b>1040</span> · <span class="st"><b>DE</b>65</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="necklaces-underworld-necklaces"><td class="nm">Underworld Necklaces<div class="sub"><span class="st"><b>AT</b>450</span> · <span class="st"><b>CT</b>7%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="ring"><h3>แหวน <span class="slug">ring</span><span class="cnt"><span class="done">0</span>/9</span></h3><table><tbody><tr data-id="rings-fanglongmon-s-ancient-ring-lv-10"><td class="nm">Fanglongmon's Ancient Ring [ ]<div class="sub"><span class="st"><b>AT</b>360</span> · <span class="st"><b>DS</b>960</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="rings-imperial-ring"><td class="nm">Imperial Ring<div class="sub"><span class="st"><b>AT</b>450</span> · <span class="st"><b>CT</b>7%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="rings-maximum"><td class="nm">Maximum<div class="sub"><span class="st"><b>AT</b>1000</span> · <span class="st"><b>HT</b>2000</span> · <span class="st"><b>CT</b>10%</span> · <span class="st"><b>DS</b>1500</span> · <span class="st"><b>DE</b>100</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="rings-minimum"><td class="nm">Minimum<div class="sub"><span class="st"><b>AT</b>500</span> · <span class="st"><b>HT</b>1000</span> · <span class="st"><b>CT</b>2%</span> · <span class="st"><b>DS</b>750</span> · <span class="st"><b>DE</b>50</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="rings-radiant-ring-of-four-holy-beasts-lv-5"><td class="nm">Radiant Ring of Four Holy Beasts [ ]<div class="sub"><span class="st"><b>AT</b>390</span> · <span class="st"><b>DS</b>1040</span> · <span class="st"><b>DE</b>33</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="rings-ring-of-four-holy-beasts-lv-5"><td class="nm">Ring of Four Holy Beasts [ ]<div class="sub"><span class="st"><b>AT</b>330</span> · <span class="st"><b>DS</b>880</span> · <span class="st"><b>DE</b>28</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="rings-ring-with-3-options"><td class="nm">Ring with 3 Options<div class="sub"><span class="st"><b>AT</b>150</span> · <span class="st"><b>CT</b>4%</span> · <span class="st"><b>DS</b>500</span> · <span class="st"><b>DE</b>15</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="rings-ring-with-4-or-5-options"><td class="nm">Ring with 4 or 5 Options<div class="sub"><span class="st"><b>AT</b>300</span> · <span class="st"><b>CT</b>5%</span> · <span class="st"><b>DS</b>800</span> · <span class="st"><b>DE</b>25</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="rings-underworld-ring"><td class="nm">Underworld Ring<div class="sub"><span class="st"><b>AT</b>450</span> · <span class="st"><b>CT</b>7%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="bottom"><h3>กางเกง <span class="slug">bottom</span><span class="cnt"><span class="done">0</span>/8</span></h3><table><tbody><tr data-id="bottom-spirit-bottom-3"><td class="nm">*:Spirit Bottom<div class="sub"><span class="st"><b>DS</b>8000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bottom-agumon-bottom"><td class="nm">Agumon Bottom<div class="sub"><span class="st"><b>AT</b>200</span> · <span class="st"><b>DS</b>1200</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bottom-arbormon-s-lower-armor-event"><td class="nm">Arbormon's Lower Armor [Event]<div class="sub"><span class="st"><b>DS</b>700</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bottom-chakkumon-s-snowman-event"><td class="nm">Chakkumon's Snowman [Event]<div class="sub"><span class="st"><b>AT</b>150</span> · <span class="st"><b>DS</b>700</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bottom-cozy-and-warm-pants"><td class="nm">Cozy and warm Pants<div class="sub"><span class="st"><b>AT</b>200</span> · <span class="st"><b>DS</b>1200</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bottom-fairimon-s-lower-armor-event"><td class="nm">Fairimon's Lower Armor [Event]<div class="sub"><span class="st"><b>CT</b>3%</span> · <span class="st"><b>DS</b>1000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bottom-lanamon-s-tights-event"><td class="nm">Lanamon's Tights [Event]<div class="sub"><span class="st"><b>DS</b>1500</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bottom-trendy-wide-pants-event"><td class="nm">Trendy Wide Pants [Event]<div class="sub"><span class="st"><b>AT</b>200</span> · <span class="st"><b>DS</b>1000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="gloves"><h3>ถุงมือ <span class="slug">gloves</span><span class="cnt"><span class="done">0</span>/7</span></h3><table><tbody><tr data-id="gloves-spirit-gloves-3"><td class="nm">*:Spirit Gloves<div class="sub"><span class="st"><b>AT</b>5000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="gloves-arbormon-s-gauntlet-event"><td class="nm">Arbormon's Gauntlet [Event]<div class="sub"><span class="st"><b>CT</b>5%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="gloves-chakkumon-s-romeo-event"><td class="nm">Chakkumon's Romeo [Event]<div class="sub"><span class="st"><b>AT</b>300</span> · <span class="st"><b>CT</b>5%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="gloves-cozy-and-warm-leather-gloves"><td class="nm">Cozy and warm Leather Gloves<div class="sub"><span class="st"><b>AT</b>300</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="gloves-fairimon-s-gauntlet-event"><td class="nm">Fairimon's Gauntlet [Event]<div class="sub"><span class="st"><b>CT</b>5%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="gloves-lanamon-s-gauntlet-event"><td class="nm">Lanamon's Gauntlet [Event]<div class="sub"><span class="st"><b>CT</b>5%</span> · <span class="st"><b>DS</b>2000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="gloves-trendy-watch-event"><td class="nm">Trendy Watch [Event]<div class="sub"><span class="st"><b>AT</b>300</span> · <span class="st"><b>DS</b>1000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="bracelet"><h3>กำไล <span class="slug">bracelet</span><span class="cnt"><span class="done">0</span>/6</span></h3><table><tbody><tr data-id="bracelets-knight-s-bracelet-2"><td class="nm">Knight's Bracelet<div class="sub"><span class="st"><b>HT</b>500</span> · <span class="st"><b>CT</b>7%</span> · <span class="st"><b>DS</b>800</span> · <span class="st"><b>DE</b>100</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bracelets-maximum"><td class="nm">Maximum<div class="sub"><span class="st"><b>AT</b>1500</span> · <span class="st"><b>HT</b>1200</span> · <span class="st"><b>CT</b>10%</span> · <span class="st"><b>DS</b>2500</span> · <span class="st"><b>DE</b>500</span> · <span class="st"><b>EV</b>15%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bracelets-minimum"><td class="nm">Minimum<div class="sub"><span class="st"><b>AT</b>1000</span> · <span class="st"><b>HT</b>800</span> · <span class="st"><b>CT</b>5%</span> · <span class="st"><b>DS</b>1500</span> · <span class="st"><b>DE</b>300</span> · <span class="st"><b>EV</b>10%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bracelets-miracle-bracelet-level-10-2"><td class="nm">Miracle Bracelet<div class="sub"><span class="st"><b>AT</b>576</span> · <span class="st"><b>HT</b>720</span> · <span class="st"><b>DS</b>1152</span> · <span class="st"><b>DE</b>144</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bracelets-miracle-bracelet-special-2"><td class="nm">Miracle Bracelet [Special]<div class="sub"><span class="st"><b>AT</b>600</span> · <span class="st"><b>HT</b>750</span> · <span class="st"><b>DS</b>1200</span> · <span class="st"><b>DE</b>150</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="bracelets-radiant-knight-s-bracelet-2"><td class="nm">Radiant Knight's Bracelet<div class="sub"><span class="st"><b>AT</b>480</span> · <span class="st"><b>HT</b>600</span> · <span class="st"><b>CT</b>8%</span> · <span class="st"><b>DS</b>960</span> · <span class="st"><b>DE</b>120</span> · <span class="st"><b>EV</b>7%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="fashion"><h3>เครื่องประดับ <span class="slug">fashion</span><span class="cnt"><span class="done">0</span>/6</span></h3><table><tbody><tr data-id="fashion-spirit-accessory-3"><td class="nm">*:Spirit Accessory<div class="sub"><span class="st"><b>AT</b>2500</span> · <span class="st"><b>HT</b>5500</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="fashion-agumon-ornament"><td class="nm">Agumon Ornament<div class="sub"><span class="st"><b>AT</b>100</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="fashion-chakkumon-s-ski-board-event"><td class="nm">Chakkumon's Ski Board [Event]<div class="sub"><span class="st"><b>AT</b>150</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="fashion-fairimon-s-fairy-wings-event"><td class="nm">Fairimon's Fairy Wings [Event]<div class="sub"><span class="st"><b>CT</b>3%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="fashion-trendy-wireless-earphones-event"><td class="nm">Trendy Wireless Earphones [Event]<div class="sub"><span class="st"><b>HT</b>300</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="fashion-warm-hand-warmer"><td class="nm">Warm Hand Warmer<div class="sub"><span class="st"><b>DE</b>100</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="glasses"><h3>แว่น <span class="slug">glasses</span><span class="cnt"><span class="done">0</span>/6</span></h3><table><tbody><tr data-id="adventure-goggles-tamer-s-goggles-at-at-2"><td class="nm">Tamer’s Goggles [AT/AT]<div class="sub"><span class="st"><b>AT</b>1760</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="digimon-kaiser-s-goggles-tamer-s-goggles-at"><td class="nm">Tamer’s Goggles [AT]<div class="sub"><span class="st"><b>AT</b>4000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="adventure-goggles-tamer-s-goggles-ct-ct-2"><td class="nm">Tamer’s Goggles [CT/CT]<div class="sub"><span class="st"><b>CT</b>2000%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="digimon-kaiser-s-goggles-tamer-s-goggles-ct"><td class="nm">Tamer’s Goggles [CT]<div class="sub"><span class="st"><b>CT</b>4000%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="adventure-goggles-tamer-s-goggles-ht-ht-2"><td class="nm">Tamer’s Goggles [HT/HT]<div class="sub"><span class="st"><b>HT</b>1050</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="digimon-kaiser-s-goggles-tamer-s-goggles-ht"><td class="nm">Tamer’s Goggles [HT]<div class="sub"><span class="st"><b>HT</b>3000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="head"><h3>หมวก <span class="slug">head</span><span class="cnt"><span class="done">0</span>/5</span></h3><table><tbody><tr data-id="head-spirit-helmet-3"><td class="nm">*:Spirit Helmet<div class="sub"><span class="st"><b>CT</b>5500%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="head-arbormon-s-helmet-event"><td class="nm">Arbormon's Helmet [Event]<div class="sub"><span class="st"><b>AT</b>100</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="head-chakkumon-s-integrated-ear-muffs-event"><td class="nm">Chakkumon's Integrated Ear Muffs [Event]<div class="sub"><span class="st"><b>AT</b>300</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="head-fairimon-s-wing-googles-event"><td class="nm">Fairimon's Wing Googles [Event]<div class="sub"><span class="st"><b>AT</b>150</span> · <span class="st"><b>CT</b>3%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="head-trendy-ball-cap-event"><td class="nm">Trendy Ball Cap [Event]<div class="sub"><span class="st"><b>AT</b>100</span> · <span class="st"><b>HT</b>300</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="shoes"><h3>รองเท้า <span class="slug">shoes</span><span class="cnt"><span class="done">0</span>/4</span></h3><table><tbody><tr data-id="shoes-agumon-feet-shoes-30d"><td class="nm">Agumon Feet Shoes [30D]<div class="sub"><span class="st"><b>DE</b>200</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="shoes-cozy-and-warm-socks"><td class="nm">Cozy and warm Socks<div class="sub"><span class="st"><b>DE</b>200</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="shoes-spooky-wizardmon-shoes-30-days"><td class="nm">Spooky Wizardmon Shoes[30 days]<div class="sub"><span class="st"><b>DE</b>100</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="shoes-swimming-gears-flippers-30d"><td class="nm">Swimming Gears - Flippers [30D]<div class="sub"><span class="st"><b>DE</b>200</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="top"><h3>เสื้อ <span class="slug">top</span><span class="cnt"><span class="done">0</span>/3</span></h3><table><tbody><tr data-id="top-chakkumon-s-ice-vest-event"><td class="nm">Chakkumon's Ice Vest [Event]<div class="sub"><span class="st"><b>AT</b>150</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="top-fairimon-s-upper-armor-event"><td class="nm">Fairimon's Upper Armor [Event]<div class="sub"><span class="st"><b>CT</b>3%</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr><tr data-id="top-lanamon-s-swimsuit-event"><td class="nm">Lanamon's Swimsuit [Event]<div class="sub"><span class="st"><b>DS</b>2000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section><section class="grp" data-slot="keyring"><h3>พวงกุญแจ <span class="slug">keyring</span><span class="cnt"><span class="done">0</span>/1</span></h3><table><tbody><tr data-id="ghost-key-ring-ghost-keyring-families-16"><td class="nm">Ghost Keyring ( Families )<div class="sub"><span class="st"><b>HT</b>1000</span></div></td><td class="ax"><button type="button" class="axb" data-v="digimon">ดิจิมอน</button><button type="button" class="axb" data-v="tamer">เทมเมอร์</button><button type="button" class="axb skip" data-v="skip">ข้าม</button></td></tr></tbody></table></section>
+
+<h2><span class="num">2</span> ชื่อไอเทม — เกมใช้ภาษาอะไร</h2>
+<div class="card">
+  <div class="why"><b>ทำไมสำคัญ:</b> ทะเบียน 164 แถวเป็น<b>ภาษาอังกฤษ</b>จาก dmowiki ·
+    ถ้าเกมไทยโชว์ชื่อไทย ผู้ใช้พิมพ์ตามที่เห็นจะ<b>ไม่ match สักตัว</b> ·
+    ช่องค้นเป็น datalist แบบเปิด ⇒ <b>ไม่มี error</b> แค่ไม่มีอะไรขึ้นมาให้เลือก
+    ซึ่งอ่านเหมือนทะเบียนไม่มีของชิ้นนั้น</div>
+  <p class="shoot">📸 <b>ถ่ายช่องเก็บของ</b> ให้เห็นชื่อสัก 5-10 ชิ้น —
+    เอาชื่อแปลก ๆ ด้วย ไม่ใช่เฉพาะชิ้นง่าย · ตัวอย่างที่อยากให้เทียบ:</p>
+  <ul class="list"><li><code>Fanglongmon's Ancient Earring [ ]</code> <span class="slug">earring</span></li><li><code>Maximum</code> <span class="slug">bracelet</span></li><li><code>Minimum</code> <span class="slug">bracelet</span></li><li><code>Radiant Knight's Bracelet</code> <span class="slug">bracelet</span></li><li><code>Regular Earrings</code> <span class="slug">earring</span></li><li><code>Maximum</code> <span class="slug">earring</span></li><li><code>Maximum</code> <span class="slug">ring</span></li><li><code>Minimum</code> <span class="slug">earring</span></li><li><code>Minimum</code> <span class="slug">ring</span></li><li><code>Zero Unit Earrings</code> <span class="slug">earring</span></li><li><code>Knight's Bracelet</code> <span class="slug">bracelet</span></li><li><code>Maximum</code> <span class="slug">necklace</span></li></ul>
+  <p class="shoot">📸 <b>ถ่ายหน้าต่างชิป</b> ให้เห็นชื่อเต็ม —
+    3 ชื่อนี้มาจากโพสต์ vplay ยังไม่เคยยืนยันกับเกม:</p>
+  <ul class="list"><li><code>ดับเบิ้ลชิปเซ็ท R16</code> <span class="slug">R16</span></li><li><code>ดับเบิ้ลชิปเซ็ท R17</code> <span class="slug">R17</span></li><li><code>ดับเบิ้ลชิปเซ็ท R18</code> <span class="slug">R18</span></li></ul>
+</div>
+
+<h2><span class="num">3</span> ดิจิไวซ์ + ออร่า ใส่พร้อมกันได้มั้ย</h2>
+<div class="card">
+  <div class="why"><b>ทำไมสำคัญ:</b> โค้ดถือว่าใส่พร้อมกันได้ตามที่เคาะไว้ ·
+    ถ้าจริงแล้วใส่ได้ทีละชิ้น <b>โบนัส 2 ชิ้นของชุดลาสต์ อีโวลูชันจะไม่มีวันติด</b>
+    ⇒ solver ให้คะแนนเกินจริงเงียบ ๆ ไม่มีอะไรฟ้อง</div>
+  <p class="shoot">📸 ถ่าย<b>หน้าจอสวมใส่</b>ให้เห็น 2 ช่องนี้พร้อมกัน</p>
+</div>
+
+<h2><span class="num">4</span> ชุดกำกับไอเทม</h2>
+<div class="card">
+  <div class="why"><b>ทำไมสำคัญ:</b> วิกิผูกไอเทมกับชุดไม่ได้เลย <b>0 จาก 9</b> ·
+    ค้นครบแล้วไม่มีที่ไหนบอก ⇒ ภาพนี้ปิดใบ B05 ครึ่งหลังได้ทันที</div>
+  <p class="shoot">📸 ถ้าเกมมี <b>tooltip บอกว่าชิ้นนี้อยู่ชุดไหน</b> — ถ่ายมาด้วย</p>
+</div>
+
+<h2 style="opacity:.5"><span class="num" style="background:var(--skip)">5</span>
+  <s>threshold ชุดสี่สัตว์เทพ</s></h2>
+<div class="card" style="opacity:.6">
+  <div class="why"><b>ตัดออกแล้ว</b> — สั่งตัดชุดนี้ทิ้ง (<code>ed93e8a</code>)
+    ⇒ <b>ไม่ต้องถ่าย</b></div>
+</div>
+
+<h2>ส่งคำตอบกลับ</h2>
+<div class="card">
+  <p style="margin:0;font-size:13.5px;color:var(--dim)">กดปุ่มแกนไปเรื่อย ๆ แล้วกด
+    <b>คัดลอกคำตอบ</b> ด้านล่าง — วางกลับมาในแชทได้เลย</p>
+  <p class="done-note">คำตอบเก็บไว้ในเครื่องอัตโนมัติ ปิดหน้าแล้วเปิดใหม่ไม่หาย ·
+    ปุ่ม <b>ข้าม</b> ใช้มาร์คว่าดูแล้วแต่ตอบไม่ได้ (ไม่ถูกส่งไปกับคำตอบ)</p>
+  <textarea id="out" readonly hidden></textarea>
+</div>
+</div>
+
+<div class="bar">
+  <div class="prog">ตอบแล้ว <b><span id="n">0</span></b> / 73</div>
+  <button class="act ghost" type="button" id="reset">ล้าง</button>
+  <button class="act" type="button" id="copy">คัดลอกคำตอบ</button>
+</div>
+
+<script>
+(function () {
+  var KEY = "dmo_axis_answers_v1";
+  var ans = {};
+  try { ans = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { ans = {}; }
+
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(ans)); } catch (e) {}
+  }
+
+  function paint(tr) {
+    var v = ans[tr.dataset.id];
+    tr.classList.toggle("answered", !!v);
+    var bs = tr.querySelectorAll(".axb");
+    for (var i = 0; i < bs.length; i++) {
+      bs[i].setAttribute("aria-pressed", String(bs[i].dataset.v === v));
+    }
+  }
+
+  function refresh() {
+    var total = 0, grps = document.querySelectorAll(".grp");
+    for (var i = 0; i < grps.length; i++) {
+      var rows = grps[i].querySelectorAll("tr[data-id]"), done = 0;
+      for (var j = 0; j < rows.length; j++) if (ans[rows[j].dataset.id]) done++;
+      grps[i].querySelector(".done").textContent = done;
+      grps[i].classList.toggle("full", done === rows.length);
+      total += done;
+    }
+    document.getElementById("n").textContent = total;
+  }
+
+  var all = document.querySelectorAll("tr[data-id]");
+  for (var i = 0; i < all.length; i++) paint(all[i]);
+  refresh();
+
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest(".axb");
+    if (!b) return;
+    var tr = b.closest("tr"), id = tr.dataset.id;
+    if (ans[id] === b.dataset.v) delete ans[id]; else ans[id] = b.dataset.v;
+    save(); paint(tr); refresh();
+  });
+
+  document.getElementById("reset").addEventListener("click", function () {
+    if (!confirm("ล้างคำตอบทั้งหมด?")) return;
+    ans = {}; save();
+    var rs = document.querySelectorAll("tr[data-id]");
+    for (var i = 0; i < rs.length; i++) paint(rs[i]);
+    refresh();
+    document.getElementById("out").hidden = true;
+  });
+
+  document.getElementById("copy").addEventListener("click", function () {
+    var out = [], grps = document.querySelectorAll(".grp");
+    for (var i = 0; i < grps.length; i++) {
+      var lines = [], rows = grps[i].querySelectorAll("tr[data-id]");
+      for (var j = 0; j < rows.length; j++) {
+        var v = ans[rows[j].dataset.id];
+        if (!v || v === "skip") continue;
+        var nm = rows[j].querySelector(".nm").firstChild.textContent.trim();
+        lines.push("  " + rows[j].dataset.id + " = " + v + "   # " + nm);
+      }
+      if (lines.length) out.push(grps[i].dataset.slot + ":\n" + lines.join("\n"));
+    }
+    var txt = out.length ? out.join("\n\n") : "(ยังไม่ได้ตอบข้อไหน)";
+    var ta = document.getElementById("out");
+    ta.hidden = false; ta.value = txt; ta.select();
+    try { navigator.clipboard.writeText(txt); } catch (e) {}
+    ta.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+})();
+</script>
+</body>
+</html>

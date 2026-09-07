@@ -246,8 +246,8 @@ def main() -> None:
       <h3>Gear Optimizer</h3>
       <p>หาชุดเครื่องประดับ + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้า HT/CT ที่ตั้งไว้</p>
       <div class="feature-stats">
-        <div class="stat"><b>6</b>ช่องสวม</div>
-        <div class="stat"><b>6</b>ชิปสูงสุด</div>
+        <div class="stat"><b>15</b>ช่องสวม</div>
+        <div class="stat"><b>8</b>ชิปสูงสุด</div>
       </div>
     </a>
 
