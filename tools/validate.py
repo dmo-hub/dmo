@@ -175,7 +175,30 @@ def check_parsers():
     sys.path.insert(0, str(PROJ / "scanners"))
     bad = []
     try:
-        from scan_clothing import build_heading_map, parse_stat_cell, slot_from
+        from scan_clothing import (build_heading_map, canon_stat, header_labels,
+                                   parse_rowwise, parse_stat_cell, slot_from,
+                                   split_rows)
+
+        def _clothing_rows(text, slot):
+            """Drive parse_rowwise the way main() does, for one fixture table."""
+            import re as _re
+            for m in _re.finditer(r"<table.*?</table>", text, _re.S):
+                rows = split_rows(m.group(0))
+                if not rows:
+                    continue
+                header = header_labels(rows[0])
+                lower = [h.lower() for h in header]
+                if "name" not in lower or "upgrade" not in lower:
+                    continue
+                if "Column Named Ring" not in m.group(0):
+                    continue
+                cols = [i for i, h in enumerate(lower)
+                        if "stat" in h or "effect" in h or canon_stat(header[i])]
+                got, _ = parse_rowwise(rows, {2: slot}, set(), cols,
+                                       lower.index("name"), lower.index("upgrade"),
+                                       header)
+                return got
+            return []
         from scan_decks import parse_decks
         from scan_digimon import parse_digimon
         from scan_kr_digimon_releases import extract_releases
@@ -213,7 +236,21 @@ def check_parsers():
                         r"<table.*?</table>", t, __import__("re").S
                     )
                 ],
-                ["Top", "Rings", "Gloves", "Shoes"],
+                ["Top", "Rings", "Gloves", "Shoes", "Ghost Key Ring"],
+            ),
+            (
+                # Upgrade tables name the stat in the COLUMN and leave a bare
+                # number in the cell. parse_stat_cell needs "HT +100", so a
+                # table like this silently yielded stats:[] -- which is
+                # indistinguishable from a cosmetic that grants nothing.
+                "clothing_shapes.html",
+                lambda t: sorted(
+                    "%s:%s@%s" % (st["stat"], st.get("value"), it["upgrade"])
+                    for it in _clothing_rows(t, "Ghost Key Ring")
+                    for st in it["stats"]
+                    if st.get("value")
+                ),
+                ["HP:500.0@1", "HT:100.0@0", "HT:150.0@1", "Skill DMG:3.0@1"],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (

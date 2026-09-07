@@ -76,6 +76,11 @@ def clean(html):
     return re.sub(r"\s+", " ", txt).strip()
 
 
+def canon_stat_in(text):
+    """True when the cell names its own stat, so the column header is redundant."""
+    return any(canon_stat(w) for w in re.findall(r"[A-Za-z][A-Za-z ]*", text))
+
+
 def canon_stat(label):
     """Resolve a wiki stat label, ignoring any Tamer/Digimon prefix.
 
@@ -206,7 +211,7 @@ def mk_id(name, slot, seen):
     return cand
 
 
-def parse_rowwise(rows, path, seen, stats_cols, name_col, upgrade_col):
+def parse_rowwise(rows, path, seen, stats_cols, name_col, upgrade_col, header):
     """Tables with a Name column: one item per row."""
     items, unread = [], 0
     for row in rows[1:]:
@@ -220,7 +225,30 @@ def parse_rowwise(rows, path, seen, stats_cols, name_col, upgrade_col):
             unread += 1
             continue
 
-        blob = " ".join(texts[c] for c in stats_cols if c < len(texts))
+        # Two shapes share this branch. Either the stat is named inside the
+        # cell ("Digimon HT +100"), or the COLUMN carries the name and the cell
+        # holds a bare number -- the Upgrade tables are all the second kind.
+        # Feeding a bare "100 0 0%" to parse_stat_cell yields nothing, so the
+        # column header is put back in front of the value first.
+        parts = []
+        for c in stats_cols:
+            if c >= len(texts):
+                continue
+            txt = texts[c]
+            if not txt:
+                continue
+            col_stat = canon_stat(header[c]) if c < len(header) else None
+            if col_stat and not canon_stat_in(txt):
+                # parse_stat_cell requires the "+" sign on purpose (it keeps
+                # "Loader 1-4" from reading as a stat range), so the bare
+                # column value has to be written in the shape it expects.
+                m = re.match(r"^(\d+(?:\.\d+)?)(%?)$", txt)
+                if not m:
+                    continue
+                parts.append(header[c] + " +" + m.group(1) + m.group(2))
+            else:
+                parts.append(txt)
+        blob = " ".join(parts)
         stats = parse_stat_cell(blob)
         # A named row with no numbers is a real item that simply grants no stat
         # (cosmetics, and the option-slot tables). It belongs in the registry;
@@ -338,7 +366,7 @@ def main():
             # the names on the floor.
             upgrade_col = lower.index("upgrade") if "upgrade" in lower else None
             got, unread = parse_rowwise(rows, path, seen_ids, stats_cols,
-                                        name_col, upgrade_col)
+                                        name_col, upgrade_col, header)
         elif header[0] == "" or canon_stat(header[0]) or header[0].lower() == "stats":
             got, unread = parse_pivot(rows, path, seen_ids)
         else:
