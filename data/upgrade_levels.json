@@ -1,0 +1,2346 @@
+{
+  "fetched_at": "2026-09-07",
+  "source": "vplay.in.th",
+  "items": [
+    {
+      "name": "แมกเนติก ID Card - Heaven Wings [AT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 300.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 350.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 900.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-89/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Heaven Wings [CT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 350.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 900.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-89/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Heaven Wings [EXP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 550.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 800.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1100.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-89/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Heaven Wings [HP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 700.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 900.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1900.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2100.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2300.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2800.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 3000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 3500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 4000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 5000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-89/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Heaven Wings [HT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 350.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 900.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-89/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Time Ruler [AT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 300.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 350.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 900.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-91/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Time Ruler [CT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 300.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 350.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 900.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-91/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Time Ruler [EXP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 550.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 800.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1100.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-91/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Time Ruler [HP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 700.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 900.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1900.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2100.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2300.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2800.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 3000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 3500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 4000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 5000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-91/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Time Ruler [HT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 300.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 350.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 700.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 900.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-91/"
+    }
+  ]
+}

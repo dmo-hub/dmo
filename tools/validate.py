@@ -175,6 +175,7 @@ def check_parsers():
     sys.path.insert(0, str(PROJ / "scanners"))
     bad = []
     try:
+        from scan_vplay_upgrade import parse_blocks as parse_vplay_blocks
         from scan_clothing import (build_heading_map, canon_stat, header_labels,
                                    parse_rowwise, parse_stat_cell, slot_from,
                                    split_rows)
@@ -267,6 +268,24 @@ def check_parsers():
                 ),
                 ["AT:10.0@15", "DS:1000.0-1250.0@4", "HP:10.0@15",
                  "HT:1500.0-3000.0@15", "HT:25.0@15", "Skill DMG:10.0@15"],
+            ),
+            (
+                # vplay writes the stat names only on the base row; levels 1..15
+                # carry bare values that inherit them. It also spells the same
+                # item with an en dash in one post and "&#8211;" in another, so
+                # the two must normalise to one name or de-dupe never fires.
+                "vplay_upgrade_slice.html",
+                lambda t: [
+                    "%s|%s" % (b["name"], ",".join(
+                        "%d:%s=%s%s" % (l["upgrade"], st["stat"], st["value"],
+                                        "%" if st["unit"] == "pct" else "")
+                        for l in b["levels"] for st in l["stats"]))
+                    for b in parse_vplay_blocks(t)
+                ],
+                ["แมกเนติก ID Card - Fixture [AT]|"
+                 "0:AT=50.0,1:AT=100.0,15:AT=1500.0,15:Skill DMG=12.0%,15:Final DMG=3.0%",
+                 "แมกเนติก ID Card - Fixture [CT]|"
+                 "0:CT=5.0%,1:CT=7.0%"],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (
