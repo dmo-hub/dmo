@@ -42,6 +42,13 @@ PROJ = Path(__file__).resolve().parent.parent
 SRC = PROJ / "cache" / "dmowiki_clothing.html"
 OUT = PROJ / "data" / "set_effects.json"
 
+# Sets dmowiki never recorded live in their own hand-kept files and get merged
+# into the output here. The merge belongs in the scanner rather than in the
+# artifact: a rescan rebuilds every row, so a bonus pasted into the output by
+# hand would be dropped on the next run -- and the validate gate re-runs this
+# scanner precisely to prove the output is reproducible.
+EXTRA_SOURCES = [PROJ / "data" / "last_evolution.json"]
+
 # Terms this table uses that the per-item tables never do. Kept here rather
 # than in scan_clothing's table so the item scanner's vocabulary stays the
 # vocabulary of the item tables.
@@ -211,23 +218,53 @@ def main():
         print("no set-effect table found")
         return 1
 
+    # Merge the hand-kept sets, in the same row shape the wiki path produces so
+    # nothing downstream has to know which source a row came from -- except via
+    # the "source" field, which is what keeps the provenance readable.
+    extra_rows = 0
+    for path in EXTRA_SOURCES:
+        if not path.exists():
+            print("  MISSING %s" % path.relative_to(PROJ))
+            continue
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        for b in doc.get("bonuses") or []:
+            effects = b.get("effects") or []
+            sets.append({
+                "set": b["set"],
+                "pieces": b["pieces"],
+                "permanent": b["permanent"],
+                "chance": b.get("chance", ""),
+                "operation": b.get("operation", ""),
+                "effect_time": b.get("effect_time", "Perma" if b["permanent"] else ""),
+                "effects": effects,
+                "unreadable": [],
+                "raw": ", ".join(e.get("text", "") for e in effects),
+                "source": path.name,
+            })
+            extra_rows += 1
+
     total = sum(len(s["effects"]) + len(s["unreadable"]) for s in sets)
     read = sum(len(s["effects"]) for s in sets)
     scoreable = sum(1 for s in sets for e in s["effects"] if e["scoreable"])
 
     OUT.write_text(json.dumps({
         "fetched_at": date.today().isoformat(),
-        "source": "cache/dmowiki_clothing.html",
-        "note": ("set bonuses only -- the wiki does not say which item belongs "
-                 "to which set, so nothing here can be awarded yet"),
+        "source": ", ".join(["cache/dmowiki_clothing.html"]
+                            + [str(p.relative_to(PROJ)).replace("\\", "/")
+                               for p in EXTRA_SOURCES if p.exists()]),
+        "note": ("set bonuses only. Most rows are read off the dmowiki table; "
+                 "rows carrying a \"source\" field come from a hand-kept file "
+                 "for a set dmowiki never recorded. Which item belongs to "
+                 "which set is not here -- that join lives in "
+                 "data/set_rosters.json"),
         "sub_effects": {"total": total, "read": read, "scoreable": scoreable},
         "sets": sets,
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     print("wrote %s" % OUT.relative_to(PROJ))
-    print("  set rows %d  (permanent %d / proc %d)"
+    print("  set rows %d  (permanent %d / proc %d)  merged from files %d"
           % (len(sets), sum(1 for s in sets if s["permanent"]),
-             sum(1 for s in sets if not s["permanent"])))
+             sum(1 for s in sets if not s["permanent"]), extra_rows))
     print("  sub-effects %d  read %d  unreadable %d  scoreable %d"
           % (total, read, total - read, scoreable))
     for s in sets:

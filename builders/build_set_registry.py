@@ -33,9 +33,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 PROJ = Path(__file__).resolve().parent.parent
 ROSTERS = PROJ / "data" / "set_rosters.json"
 EFFECTS = PROJ / "data" / "set_effects.json"
-# data/set_effects.json is a dmowiki scan and gets rewritten on every rescan,
-# so a set dmowiki never recorded cannot live there. This second, hand-kept
-# file carries the vplay-only set and its two items.
+# The hand-kept file for the set dmowiki never recorded. Its BONUS reaches us
+# through data/set_effects.json (scan_set_effects merges it there); what is
+# read from here are the two ITEMS, which are in no item registry either.
 EXTRA = PROJ / "data" / "last_evolution.json"
 REGISTRY = PROJ / "docs" / "gear_registry.json"
 OUT = PROJ / "docs" / "set_registry.json"
@@ -77,8 +77,9 @@ def main():
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))["items"]
     extra = json.loads(EXTRA.read_text(encoding="utf-8"))
 
-    # The vplay-only set's bonus joins the dmowiki ones on the same key.
-    effects = effects + extra["bonuses"]
+    # Only the ITEMS are read from here: the bonus is merged into
+    # data/set_effects.json by scan_set_effects, so taking it from both places
+    # would award it twice.
 
     by_slot = {}
     for it in registry:
