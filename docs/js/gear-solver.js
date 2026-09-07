@@ -131,8 +131,9 @@
   /* Flatten docs/set_registry.json into the two lookups the DP needs: which
      set an item belongs to, and what a given count of that set is worth. */
   function indexSets(sets) {
-    var owner = {}, bonus = {};
+    var owner = {}, bonus = {}, label = {}, proc = {};
     (sets || []).forEach(function (s) {
+      label[s.set] = s.set_th || s.set;
       (s.slots || []).forEach(function (sl) {
         (sl.accepts || []).forEach(function (name) { owner[name] = s.set; });
       });
@@ -142,9 +143,10 @@
           if (e.scoreable) add[e.stat] = (add[e.stat] || 0) + e.value;
         });
         bonus[s.set + ":" + b.pieces] = add;
+        proc[s.set + ":" + b.pieces] = !b.permanent;
       });
     });
-    return { owner: owner, bonus: bonus };
+    return { owner: owner, bonus: bonus, label: label, proc: proc };
   }
 
   /* What a state's set progress is worth right now. Bonuses stack by
@@ -361,7 +363,20 @@
       Object.keys(index.bonus).forEach(function (k) {
         var kp = k.split(":");
         if (kp[0] !== parts[0] || worn < Number(kp[1])) return;
-        setsOut.push({ set: parts[0], pieces: Number(kp[1]), worn: worn });
+        var b = index.bonus[k] || {};
+        setsOut.push({
+          set: parts[0],
+          label: (index.label && index.label[parts[0]]) || parts[0],
+          pieces: Number(kp[1]),
+          worn: worn,
+          /* A proc bonus is one the wiki gates behind a chance and a trigger.
+             Decision 06 counts it at full value anyway, so the page has to
+             say so -- see the note rendered next to it. */
+          proc: !!index.proc[k],
+          effects: Object.keys(b).map(function (st) {
+            return { stat: st, value: b[st] };
+          }),
+        });
       });
       setsOut.sort(function (a, b) { return a.pieces - b.pieces; });
     }

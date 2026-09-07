@@ -98,6 +98,12 @@
   .go-list .val { color: var(--muted-soft); font-size: 11.5px; }
   .go-list .empty { color: var(--muted-soft); font-style: italic; }
   .go-warn { color: var(--coral); font-size: 12.5px; margin-top: 10px; }
+  .go-sets h3 { margin: 0 0 8px; font-size: 13.5px; }
+  .go-set-row { margin: 4px 0; display: flex; flex-wrap: wrap;
+    align-items: center; gap: 8px; font-size: 12.5px; }
+  .go-set-name { font-weight: 600; }
+  .go-set-vals { color: var(--muted); }
+  .go-proc-note { margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -419,6 +425,17 @@
   var CHIP_LIST = "chip";
   var chipRegistry = [];
 
+  /* The clothing sets. Without this the solver has nothing to match items
+     against and no set bonus is ever awarded on the real page. */
+  var setRegistry = [];
+
+  function loadSetRegistry() {
+    return fetch("set_registry.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { setRegistry = (d && d.sets) || []; })
+      .catch(function () { setRegistry = []; });
+  }
+
   function loadChipRegistry() {
     return fetch("chip_registry.json")
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -721,6 +738,7 @@
     var axisCut = window.GearSolver.dropOffAxis(solveData);
     solveData = axisCut.data;
     var dupes = window.GearSolver.findDuplicateIds(data);
+    solveData.sets = setRegistry;
     var out = window.GearSolver.solve(solveData, g.base, g.targets);
     lastRun = { out: out, goal: g, dupes: dupes, axisDropped: axisCut.dropped };
     renderResult();
@@ -852,6 +870,60 @@
       root.appendChild(an);
     }
 
+    /* What the loadout earned from wearing a full set. Shown even though the
+       numbers are already inside the totals: a jump of several thousand with
+       no item to explain it reads as a bug. */
+    var earned = (out.result && out.result.sets) || [];
+    if (earned.length) {
+      var sc = document.createElement("div");
+      sc.className = "go-card go-sets";
+
+      var h = document.createElement("h3");
+      h.textContent = "\u0e42\u0e1a\u0e19\u0e31\u0e2a\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e44\u0e14\u0e49";
+      sc.appendChild(h);
+
+      earned.forEach(function (e) {
+        var row = document.createElement("p");
+        row.className = "go-set-row";
+
+        var name = document.createElement("span");
+        name.className = "go-set-name";
+        name.textContent = e.label + " \u00b7 " + e.pieces + " \u0e0a\u0e34\u0e49\u0e19";
+        row.appendChild(name);
+
+        if (e.proc) {
+          var tag = document.createElement("span");
+          tag.className = "go-flag go-proc";
+          tag.textContent = "\u0e21\u0e35\u0e40\u0e07\u0e37\u0e48\u0e2d\u0e19\u0e44\u0e02";
+          row.appendChild(tag);
+        }
+
+        var vals = (e.effects || []).filter(function (x) { return x.value; })
+          .map(function (x) {
+            return x.stat + " +" + (PCT_LABEL[x.stat] ? fmtCT(x.value) + "%"
+                                                      : fmt(x.value));
+          }).join(" \u00b7 ");
+        if (vals) {
+          var v = document.createElement("span");
+          v.className = "go-set-vals";
+          v.textContent = vals;
+          row.appendChild(v);
+        }
+        sc.appendChild(row);
+      });
+
+      /* Decision 06: a proc bonus is counted at full value rather than
+         multiplied by its chance. Saying so is part of the decision -- the
+         answer would otherwise read as a guarantee. */
+      if (earned.some(function (e) { return e.proc; })) {
+        var note = document.createElement("p");
+        note.className = "go-warn go-proc-note";
+        note.textContent = "\u0e04\u0e34\u0e14\u0e40\u0e15\u0e47\u0e21 100% \u0e17\u0e31\u0e49\u0e07\u0e17\u0e35\u0e48\u0e02\u0e2d\u0e07\u0e08\u0e23\u0e34\u0e07\u0e15\u0e34\u0e14\u0e40\u0e1b\u0e47\u0e19\u0e04\u0e23\u0e31\u0e49\u0e07 \u2014 \u0e15\u0e31\u0e27\u0e40\u0e25\u0e02\u0e08\u0e23\u0e34\u0e07\u0e08\u0e30\u0e15\u0e48\u0e33\u0e01\u0e27\u0e48\u0e32\u0e19\u0e35\u0e49";
+        sc.appendChild(note);
+      }
+      root.appendChild(sc);
+    }
+
     if (lastRun.dupes.length) {
       var w = document.createElement("p");
       w.className = "go-warn";
@@ -931,7 +1003,8 @@
   var savedItems = jget(ITEMS_KEY, null);
   /* The picker needs the registry before the first paint, otherwise the
      datalists render empty and typing offers nothing. */
-  Promise.all([loadRegistry(), loadChipRegistry()]).then(function () {
+  Promise.all([loadRegistry(), loadChipRegistry(),
+               loadSetRegistry()]).then(function () {
     if (savedItems && ((savedItems.accessories || []).length || (savedItems.chips || []).length)) {
       data = normalize(savedItems);
       relinkByRegId(data.accessories, registry);
