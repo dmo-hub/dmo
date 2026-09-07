@@ -7,6 +7,7 @@
       "name": "All Family ChipSet R1",
       "kind": "all",
       "grade": 1,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -50,6 +51,7 @@
       "name": "All Family ChipSet R2",
       "kind": "all",
       "grade": 2,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -93,6 +95,7 @@
       "name": "All Family ChipSet R3",
       "kind": "all",
       "grade": 3,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -136,6 +139,7 @@
       "name": "All Family ChipSet R4",
       "kind": "all",
       "grade": 4,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -179,6 +183,7 @@
       "name": "All Family ChipSet R5",
       "kind": "all",
       "grade": 5,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -222,6 +227,7 @@
       "name": "All Family ChipSet R6",
       "kind": "all",
       "grade": 6,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -265,6 +271,7 @@
       "name": "All Family ChipSet R7",
       "kind": "all",
       "grade": 7,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -308,6 +315,7 @@
       "name": "All Family ChipSet R8",
       "kind": "all",
       "grade": 8,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -351,6 +359,7 @@
       "name": "All Family ChipSet R9",
       "kind": "all",
       "grade": 9,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -394,6 +403,7 @@
       "name": "All Family ChipSet R10",
       "kind": "all",
       "grade": 10,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -437,6 +447,7 @@
       "name": "All Family ChipSet R11",
       "kind": "all",
       "grade": 11,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -480,6 +491,7 @@
       "name": "All Family ChipSet R12",
       "kind": "all",
       "grade": 12,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -523,6 +535,7 @@
       "name": "All Family ChipSet R13",
       "kind": "all",
       "grade": 13,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -566,6 +579,7 @@
       "name": "All Family ChipSet R14",
       "kind": "all",
       "grade": 14,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -609,6 +623,7 @@
       "name": "All Family ChipSet R15",
       "kind": "all",
       "grade": 15,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HT",
@@ -632,6 +647,7 @@
       "name": "All Family ChipSet R16",
       "kind": "all",
       "grade": 16,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "AT",
@@ -660,6 +676,7 @@
       "name": "Family ChipSet R1",
       "kind": "family",
       "grade": 1,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -703,6 +720,7 @@
       "name": "Family ChipSet R2",
       "kind": "family",
       "grade": 2,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -746,6 +764,7 @@
       "name": "Family ChipSet R3",
       "kind": "family",
       "grade": 3,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -789,6 +808,7 @@
       "name": "Family ChipSet R4",
       "kind": "family",
       "grade": 4,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -832,6 +852,7 @@
       "name": "Family ChipSet R5",
       "kind": "family",
       "grade": 5,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -875,6 +896,7 @@
       "name": "Family ChipSet R6",
       "kind": "family",
       "grade": 6,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -918,6 +940,7 @@
       "name": "Family ChipSet R7",
       "kind": "family",
       "grade": 7,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -961,6 +984,7 @@
       "name": "Family ChipSet R8",
       "kind": "family",
       "grade": 8,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -1004,6 +1028,7 @@
       "name": "Family ChipSet R9",
       "kind": "family",
       "grade": 9,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -1047,6 +1072,7 @@
       "name": "Family ChipSet R10",
       "kind": "family",
       "grade": 10,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -1090,6 +1116,7 @@
       "name": "Family ChipSet R11",
       "kind": "family",
       "grade": 11,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -1133,6 +1160,7 @@
       "name": "Family ChipSet R12",
       "kind": "family",
       "grade": 12,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -1176,6 +1204,7 @@
       "name": "Family ChipSet R13",
       "kind": "family",
       "grade": 13,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -1219,6 +1248,7 @@
       "name": "Family ChipSet R14",
       "kind": "family",
       "grade": 14,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -1262,6 +1292,7 @@
       "name": "Family ChipSet R15",
       "kind": "family",
       "grade": 15,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "AT",
@@ -1290,6 +1321,7 @@
       "name": "Family ChipSet R16",
       "kind": "family",
       "grade": 16,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -1333,6 +1365,7 @@
       "name": "Family ChipSet R17",
       "kind": "family",
       "grade": 17,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -1376,6 +1409,7 @@
       "name": "Family ChipSet R18",
       "kind": "family",
       "grade": 18,
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",

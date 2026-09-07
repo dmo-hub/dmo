@@ -117,6 +117,10 @@ def parse_chipsets(html):
                              else "Family ChipSet R%d") % grade,
                     "kind": kind,
                     "grade": grade,
+                    # The vplay post for the double chipsets states the stats
+                    # are "สำหรับค่าคุณลักษณะดิจิมอน"
+                    # -- for the DIGIMON's attributes. Same system, same axis.
+                    "axis": "digimon",
                     "stats": [],
                 })
                 # A stat can appear in two tables of the same kind (R1-R18 and

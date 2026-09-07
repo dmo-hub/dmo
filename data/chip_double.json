@@ -1,0 +1,205 @@
+{
+  "fetched_at": "2026-09-07",
+  "source": "https://www.vplay.in.th/%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%9A%E0%B8%B4%E0%B9%89%E0%B8%A5%E0%B8%8A%E0%B8%B4%E0%B8%9B%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%97-r16-r18/",
+  "note": "a Double ChipSet grants a primary AND a secondary stat set; the post states both feed the DIGIMON's attributes",
+  "items": [
+    {
+      "grade": 16,
+      "id": "chip-double-r16",
+      "name": "Double ChipSet R16",
+      "axis": "digimon",
+      "primary": {
+        "HP": {
+          "value": 2151.0,
+          "unit": "flat"
+        },
+        "DS": {
+          "value": 1920.0,
+          "unit": "flat"
+        },
+        "AT": {
+          "value": 306.0,
+          "unit": "flat"
+        },
+        "DE": {
+          "value": 216.0,
+          "unit": "flat"
+        },
+        "HT": {
+          "value": 400.0,
+          "unit": "flat"
+        },
+        "EV": {
+          "value": 400.0,
+          "unit": "pct"
+        },
+        "CT": {
+          "value": 400.0,
+          "unit": "pct"
+        }
+      },
+      "secondary": {
+        "HP": {
+          "value": 1291.0,
+          "unit": "flat"
+        },
+        "DS": {
+          "value": 1152.0,
+          "unit": "flat"
+        },
+        "AT": {
+          "value": 184.0,
+          "unit": "flat"
+        },
+        "DE": {
+          "value": 130.0,
+          "unit": "flat"
+        },
+        "HT": {
+          "value": 240.0,
+          "unit": "flat"
+        },
+        "EV": {
+          "value": 240.0,
+          "unit": "pct"
+        },
+        "CT": {
+          "value": 240.0,
+          "unit": "pct"
+        }
+      }
+    },
+    {
+      "grade": 17,
+      "id": "chip-double-r17",
+      "name": "Double ChipSet R17",
+      "axis": "digimon",
+      "primary": {
+        "HP": {
+          "value": 2285.0,
+          "unit": "flat"
+        },
+        "DS": {
+          "value": 2040.0,
+          "unit": "flat"
+        },
+        "AT": {
+          "value": 326.0,
+          "unit": "flat"
+        },
+        "DE": {
+          "value": 231.0,
+          "unit": "flat"
+        },
+        "HT": {
+          "value": 425.0,
+          "unit": "flat"
+        },
+        "EV": {
+          "value": 425.0,
+          "unit": "pct"
+        },
+        "CT": {
+          "value": 425.0,
+          "unit": "pct"
+        }
+      },
+      "secondary": {
+        "HP": {
+          "value": 1371.0,
+          "unit": "flat"
+        },
+        "DS": {
+          "value": 1224.0,
+          "unit": "flat"
+        },
+        "AT": {
+          "value": 196.0,
+          "unit": "flat"
+        },
+        "DE": {
+          "value": 139.0,
+          "unit": "flat"
+        },
+        "HT": {
+          "value": 255.0,
+          "unit": "flat"
+        },
+        "EV": {
+          "value": 255.0,
+          "unit": "pct"
+        },
+        "CT": {
+          "value": 255.0,
+          "unit": "pct"
+        }
+      }
+    },
+    {
+      "grade": 18,
+      "id": "chip-double-r18",
+      "name": "Double ChipSet R18",
+      "axis": "digimon",
+      "primary": {
+        "HP": {
+          "value": 2420.0,
+          "unit": "flat"
+        },
+        "DS": {
+          "value": 2160.0,
+          "unit": "flat"
+        },
+        "AT": {
+          "value": 345.0,
+          "unit": "flat"
+        },
+        "DE": {
+          "value": 243.0,
+          "unit": "flat"
+        },
+        "HT": {
+          "value": 450.0,
+          "unit": "flat"
+        },
+        "EV": {
+          "value": 450.0,
+          "unit": "pct"
+        },
+        "CT": {
+          "value": 450.0,
+          "unit": "pct"
+        }
+      },
+      "secondary": {
+        "HP": {
+          "value": 1452.0,
+          "unit": "flat"
+        },
+        "DS": {
+          "value": 1296.0,
+          "unit": "flat"
+        },
+        "AT": {
+          "value": 207.0,
+          "unit": "flat"
+        },
+        "DE": {
+          "value": 146.0,
+          "unit": "flat"
+        },
+        "HT": {
+          "value": 270.0,
+          "unit": "flat"
+        },
+        "EV": {
+          "value": 270.0,
+          "unit": "pct"
+        },
+        "CT": {
+          "value": 270.0,
+          "unit": "pct"
+        }
+      }
+    }
+  ]
+}

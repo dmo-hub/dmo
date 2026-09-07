@@ -190,6 +190,7 @@ def check_parsers():
     try:
         from scan_vplay_upgrade import parse_blocks as parse_vplay_blocks
         from scan_chipsets import parse_chipsets
+        from scan_vplay_chipsets import parse_double
         from scan_attributes import parse_attributes, parse_rank_table
         from scan_clothing import (build_heading_map, canon_stat, header_labels,
                                    parse_rowwise, parse_stat_cell, slot_from,
@@ -378,6 +379,27 @@ def check_parsers():
                 "clothing_shapes.html",
                 lambda t: _axis_override_probe(),
                 ["Yolei,T.K,Davis|digimon", "Perma ID Cards|tamer", "other|unknown"],
+            ),
+            (
+                # A Double ChipSet lists its primary and secondary sets as two
+                # PARALLEL columns: one row holds both labels, the next holds
+                # both tables. Reading the nearest preceding label tags the
+                # primary numbers as secondary, so pairing is positional.
+                # The grade heading also comes in two shapes -- R16 splits the
+                # name and grade across two <strong> tags, R17 does not.
+                "vplay_double_chipset.html",
+                lambda t: [
+                    "R%d|%s|%s" % (b["grade"],
+                                   b["primary"].get("HP", {}).get("value"),
+                                   b.get("secondary", {}).get("HP", {}).get("value"))
+                    for b in parse_double(t)
+                ],
+                ["R16|2151.0|1291.0", "R17|2285.0|1371.0"],
+            ),
+            (
+                "vplay_double_chipset.html",
+                lambda t: sorted({b["axis"] for b in parse_double(t)}),
+                ["digimon"],
             ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (
