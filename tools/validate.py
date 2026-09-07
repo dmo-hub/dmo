@@ -63,6 +63,7 @@ IDEMPOTENT_BUILDS = [
     ["builders/build_chip_registry.py"],
     # reads a cached page, so it is safe to re-run in the gate
     ["scanners/scan_set_effects.py"],
+    ["scanners/scan_vplay_sets.py"],
 ]
 
 
@@ -196,6 +197,7 @@ def check_parsers():
         from scan_chipsets import parse_chipsets
         from scan_vplay_chipsets import parse_double
         from scan_set_effects import parse_sets
+        from scan_vplay_sets import parse_rosters
         from scan_attributes import parse_attributes, parse_rank_table
         from scan_clothing import (build_heading_map, canon_stat, header_labels,
                                    parse_rowwise, parse_stat_cell, slot_from,
@@ -454,6 +456,27 @@ def check_parsers():
                                   for e in b["effects"] if "Taken" in e["stat"]}),
                 [-30.0, -20.0],
             ),
+            (
+                # The set name is held by a rowspan cell. The 3-column layout
+                # (set | items | 6-set bonus) has bonus cells with their own
+                # rowspan=2, so a row there can have two cells without being
+                # a new set -- reading cell COUNT instead of rowspan promoted
+                # items to set names and invented five sets that do not exist.
+                "vplay_set_rosters.html",
+                lambda t: sorted((k, len(v)) for k, v in parse_rosters(t).items()),
+                [('จิตใจแห่งรัก', 12), ('พลังของสี่สัตว์เทพเซ็ต', 6), ('พลังแห่งความกล้า', 12), ('แสงแห่งความหวัง', 12)],
+            ),
+            (
+                # Counting sets is not enough: ignoring the rowspan
+                # WIDTH still yields the right totals here. The Four
+                # Holy Beasts rows that carry the bonus column's own
+                # rowspan=2 would become sets of their own, which only
+                # shows up in the item list.
+                "vplay_set_rosters.html",
+                lambda t: [k for k in parse_rosters(t)
+                           if k.startswith('เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [อัลติเมท]'[:12])],
+                [],
+            ),
             ("kr_release_o797630_slice.html", extract_releases, ["블룸로드몬"]),
             (
                 "th_digimon_slice.html",
@@ -540,6 +563,45 @@ def check_chip_registry():
     return bad
 
 
+def check_set_rosters():
+    """The roster artifact: which item belongs to which clothing set.
+
+    The parser fixtures stop at parse_rosters; the split between base items
+    and their "(ชิน)" upgraded variants happens when the file is written, so
+    it needs checking here or it is not checked at all.
+    """
+    bad = []
+    p = PROJ / "data" / "set_rosters.json"
+    if not p.exists():
+        return ["data/set_rosters.json missing -- run scanners/scan_vplay_sets.py"]
+    sets = json.loads(p.read_text(encoding="utf-8"))["sets"]
+    if not sets:
+        return ["set_rosters.json has no sets"]
+
+    SHIN = "(\u0e0a\u0e34\u0e19)"
+    for s in sets:
+        if any(i.startswith(SHIN) for i in s["items"]):
+            bad.append("%s: a shin variant leaked into the base item list" % s["set"])
+        if any(not i.startswith(SHIN) for i in s["shin_items"]):
+            bad.append("%s: a base item leaked into the shin list" % s["set"])
+        if s["pieces"] != len(s["items"]):
+            bad.append("%s: pieces=%d but %d items listed"
+                       % (s["set"], s["pieces"], len(s["items"])))
+        if not s["items"]:
+            bad.append("%s: no items" % s["set"])
+
+    # The three tamer sets are the ones that unblock B05; each is six worn
+    # pieces plus six shin variants.
+    tamer = [s for s in sets if s["shin_items"]]
+    if len(tamer) != 3:
+        bad.append("expected 3 sets carrying shin variants, got %d" % len(tamer))
+    for s in tamer:
+        if s["pieces"] != 6 or len(s["shin_items"]) != 6:
+            bad.append("%s: expected 6 base + 6 shin, got %d + %d"
+                       % (s["set"], s["pieces"], len(s["shin_items"])))
+    return bad
+
+
 def check_idempotent():
     bad = []
     before = _git_state()
@@ -570,6 +632,7 @@ def main():
         ("inline JS syntax", check_scripts),
         ("parser fixtures", check_parsers),
         ("chip registry", check_chip_registry),
+        ("set rosters", check_set_rosters),
     ]
     if not no_build:
         checks.append(("builders idempotent", check_idempotent))
