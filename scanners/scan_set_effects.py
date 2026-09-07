@@ -47,7 +47,8 @@ OUT = PROJ / "data" / "set_effects.json"
 # artifact: a rescan rebuilds every row, so a bonus pasted into the output by
 # hand would be dropped on the next run -- and the validate gate re-runs this
 # scanner precisely to prove the output is reproducible.
-EXTRA_SOURCES = [PROJ / "data" / "last_evolution.json"]
+EXTRA_SOURCES = [PROJ / "data" / "last_evolution.json",
+                 PROJ / "data" / "four_holy_beasts.json"]
 
 # Terms this table uses that the per-item tables never do. Kept here rather
 # than in scan_clothing's table so the item scanner's vocabulary stays the

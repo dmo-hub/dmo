@@ -634,14 +634,20 @@ def check_set_registry():
     # Last Evolution is a two-piece accessory set with no shin variants at all,
     # so the shape checks below are split: what holds for every set, and what
     # holds only for the clothing three.
+    # Sets that fill the six clothing slots.
     CLOTHING = {"Yolei-Heart of Love", "T.K-Light of Hope",
-                "Davis-Power of Courage"}
-    if len(sets) != 4:
-        bad.append("expected 3 tamer sets + Last Evolution, got %d" % len(sets))
+                "Davis-Power of Courage", "Four Holy Beasts"}
+    # Of those, the three tamer sets are the ones with shin variants and a
+    # 4-piece plus 6-piece bonus. Four Holy Beasts has neither: no shin item
+    # exists, and vplay lists a single 6-piece bonus.
+    TAMER = CLOTHING - {"Four Holy Beasts"}
+    if len(sets) != 5:
+        bad.append("expected 4 clothing sets + Last Evolution, got %d" % len(sets))
 
     SHIN = "(\u0e0a\u0e34\u0e19)"
     for s in sets:
         clothing = s["set"] in CLOTHING
+        tamer = s["set"] in TAMER
         if not s.get("set") or not s.get("set_th"):
             bad.append("%s: missing one of the two names" % s.get("set_th"))
         if clothing and len(s["slots"]) != 6:
@@ -664,7 +670,7 @@ def check_set_registry():
             if sl["shin"] and not sl["shin"].startswith(SHIN):
                 bad.append("%s/%s: shin variant is not marked"
                            % (s["set"], sl["slot"]))
-            if clothing and not sl["shin"]:
+            if tamer and not sl["shin"]:
                 bad.append("%s/%s: clothing slot lost its shin variant"
                            % (s["set"], sl["slot"]))
             if sl["item"].startswith(SHIN):
@@ -675,7 +681,7 @@ def check_set_registry():
                            % (s["set"], sl["slot"]))
         # the clothing sets each have a 4-piece and a 6-piece bonus
         sizes = sorted(b["pieces"] for b in s["bonuses"])
-        if clothing and sizes != [4, 6]:
+        if tamer and sizes != [4, 6]:
             bad.append("%s: bonus sizes %s, expected [4, 6]" % (s["set"], sizes))
         if not sizes:
             bad.append("%s: no bonuses joined" % s["set"])

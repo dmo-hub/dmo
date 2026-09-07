@@ -1,11 +1,11 @@
 {
   "fetched_at": "2026-09-07",
-  "source": "cache/dmowiki_clothing.html, data/last_evolution.json",
+  "source": "cache/dmowiki_clothing.html, data/last_evolution.json, data/four_holy_beasts.json",
   "note": "set bonuses only. Most rows are read off the dmowiki table; rows carrying a \"source\" field come from a hand-kept file for a set dmowiki never recorded. Which item belongs to which set is not here -- that join lives in data/set_rosters.json",
   "sub_effects": {
-    "total": 37,
-    "read": 37,
-    "scoreable": 20
+    "total": 40,
+    "read": 40,
+    "scoreable": 22
   },
   "sets": [
     {
@@ -423,6 +423,40 @@
       "unreadable": [],
       "raw": "2000 HP, 1000 HT, +10% Critical, +1% Final DMG",
       "source": "last_evolution.json"
+    },
+    {
+      "set": "Four Holy Beasts",
+      "pieces": 6,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effect_time": "Perma",
+      "effects": [
+        {
+          "stat": "HT",
+          "value": 500,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "HT +500"
+        },
+        {
+          "stat": "AT",
+          "value": 500,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "AT +500"
+        },
+        {
+          "stat": "SCD",
+          "value": 2,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "SCD +2%"
+        }
+      ],
+      "unreadable": [],
+      "raw": "HT +500, AT +500, SCD +2%",
+      "source": "four_holy_beasts.json"
     }
   ]
 }

@@ -1,0 +1,103 @@
+{
+  "fetched_at": "2026-09-07",
+  "source": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%94%e0%b8%b4%e0%b8%88%e0%b8%b4%e0%b8%ad/",
+  "note": "the Four Holy Beasts set: six clothing pieces and one 6-piece bonus. dmowiki never recorded this set, so data/set_effects.json (a dmowiki scan) cannot carry it. Item stats are the ULTIMATE column at Lv.10, matching the [aultimate] tag on every roster name. THRESHOLD: the table pairs each effect cell with two item rows via rowspan=2, but the heading above it reads \"wear 6 pieces to gain the special stats\" -- so all three are awarded at 6, and the rowspan is layout. If the game turns out to grant them at 2/4/6 instead, split the one bonus below into three and nothing else changes.",
+  "items": [
+    {
+      "id": "fb-head",
+      "name": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [อัลติเมท]",
+      "slot": "head",
+      "axis": "digimon",
+      "level": "อัลติเมท Lv.10",
+      "slot_from": "vplay: ข้อมูลอุปกรณ์ : หัว",
+      "AT": 525.0,
+      "HT": 385.0
+    },
+    {
+      "id": "fb-fashion",
+      "name": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [อัลติเมท]",
+      "slot": "fashion",
+      "axis": "digimon",
+      "level": "อัลติเมท Lv.10",
+      "slot_from": "vplay: ข้อมูลอุปกรณ์ : เครื่องประดับ",
+      "AT": 475.0,
+      "extra": {
+        "SCD": {
+          "value": 10.0,
+          "unit": "pct"
+        }
+      }
+    },
+    {
+      "id": "fb-top",
+      "name": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [อัลติเมท]",
+      "slot": "top",
+      "axis": "digimon",
+      "level": "อัลติเมท Lv.10",
+      "slot_from": "vplay: ข้อมูลอุปกรณ์ : เสื้อ",
+      "DS": 2500.0,
+      "HP": 2500.0
+    },
+    {
+      "id": "fb-bottom",
+      "name": "กางเกงแห่งสายฟ้าของจินลอนมอน [อัลติเมท]",
+      "slot": "bottom",
+      "axis": "digimon",
+      "level": "อัลติเมท Lv.10",
+      "slot_from": "vplay: ข้อมูลอุปกรณ์ : กางเกง",
+      "DE": 300.0,
+      "HT": 620.0
+    },
+    {
+      "id": "fb-gloves",
+      "name": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [อัลติเมท]",
+      "slot": "gloves",
+      "axis": "digimon",
+      "level": "อัลติเมท Lv.10",
+      "slot_from": "vplay: ข้อมูลอุปกรณ์ : มือ",
+      "CT": 12.0
+    },
+    {
+      "id": "fb-shoes",
+      "name": "รองเท้าแห่งสี่สัตว์เทพ [อัลติเมท]",
+      "slot": "shoes",
+      "axis": "digimon",
+      "level": "อัลติเมท Lv.10",
+      "slot_from": "vplay: ข้อมูลอุปกรณ์ : รองเท้า",
+      "note": "carries EXP and MS only, neither of which the solver scores -- no scoreable stat is missing here"
+    }
+  ],
+  "bonuses": [
+    {
+      "set": "Four Holy Beasts",
+      "set_th": "พลังของสี่สัตว์เทพเซ็ต",
+      "pieces": 6,
+      "permanent": true,
+      "chance": "100%",
+      "operation": "None",
+      "effects": [
+        {
+          "stat": "HT",
+          "value": 500,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "HT +500"
+        },
+        {
+          "stat": "AT",
+          "value": 500,
+          "unit": "flat",
+          "scoreable": true,
+          "text": "AT +500"
+        },
+        {
+          "stat": "SCD",
+          "value": 2,
+          "unit": "pct",
+          "scoreable": false,
+          "text": "SCD +2%"
+        }
+      ]
+    }
+  ]
+}
