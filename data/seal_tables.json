@@ -403,6 +403,21 @@
     "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4129",
     "date": "01.04.2026"
   },
+  "na-4126": {
+    "tables": [
+      {
+        "header": "Craft seal Stat Stat value (Master) Required amount to Master Required Seal Exchange Ticket Seal Obtained amount",
+        "score": 36,
+        "rows": 34,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Venom Vamdemon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>[Awaken] Ordinemon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Numemon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>Cross-up Mervamon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>[Awaken] Sakuyamon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Amphimon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Vritramon Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>Chakkumon Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Grotmon Seal</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>KaiserGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>BaoHackmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Diarbbitmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Salamon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>PawnChessmon W Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>GrandisKuwagamon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>Baalmon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Yukidarumon Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Peckmon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Marsmon Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>Hagurumon Seal</td><td>6</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>Reppamon Seal</td><td>10</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>[Awaken] Gallantmon (Crimson Mode) Seal</td><td>1</td><td>25</td><td>HP</td><td>600</td></tr><tr><td>Gardromon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Whamon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>DarkTyrannomon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>WereGarurumon(Black) Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>[Awaken] ZeedMillenniummon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4126",
+    "date": "25.03.2026"
+  },
   "na-4121": {
     "tables": [
       {
@@ -470,6 +485,36 @@
     "note": "",
     "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4110",
     "date": "25.02.2026"
+  },
+  "na-4108": {
+    "tables": [
+      {
+        "header": "Craft Seal Stat Stat value (Master) Required amount to Master Required Seal Exchange Ticket Seal Obtained amount",
+        "score": 34,
+        "rows": 32,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Megidramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>MugenDramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Chaosmon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Etemon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Tentomon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Dracmon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Sharmamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Koromon Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>Kunemon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>CommanDramon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Goblimon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Leomon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Upamon Seal</td><td>10</td><td>1</td><td>DE</td><td>80</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>1</td><td>DE</td><td>250</td></tr><tr><td>Diablomon Seal</td><td>1</td><td>6</td><td>DS</td><td>500</td></tr><tr><td>Agumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>V-dramon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Mystimon Seal</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>V-mon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Soulmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>WarGreymon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Canoweissmon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>FanBeemon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Coredramon (Blue) Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Dorugamon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Beelzebumon Seal</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4108",
+    "date": "11.02.2026"
+  },
+  "na-4105": {
+    "tables": [
+      {
+        "header": "Craft seal Stat Stat value (Master) Required amount to Master Required Seal Exchange Ticket Seal Obtained amount",
+        "score": 33,
+        "rows": 31,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Xuanwumon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Tsunomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Keramon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Garurumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Coredramon (Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Zhuqiaomon Seal</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr><tr><td>DemiMeramon Seal</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>Guilmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Mushroomon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Silphymon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>PicoDevimon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Nanomon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>SaberLeomon Seal</td><td>1</td><td>6</td><td>CT</td><td>300</td></tr><tr><td>Darkness Bagramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Prince Mamemon Seal</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Rosemon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>Crownmon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Hackmon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Kaiserleomon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Okuwamon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Gomamon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Shakkoumon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Waspmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Sangloupmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Blackgatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Rapidmon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>MirageGaogamon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4105",
+    "date": "04.02.2026"
   },
   "na-4100": {
     "tables": [
@@ -558,6 +603,21 @@
     "url": "https://dmo.gameking.com/news/EventView.aspx?idx=759",
     "date": "22.07.2025"
   },
+  "na-746": {
+    "tables": [
+      {
+        "header": "Craft Item Number of Seals Given Required Seal Exchange Tickets Attribute Master Attribute",
+        "score": 24,
+        "rows": 23,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Numemon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>[Awaken] Ordinemon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>[Awaken] ImperialDramon Paladinmode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Shoutmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>MoonMillenniumon Seal</td><td>1</td><td>5</td><td>HT</td><td>300</td></tr><tr><td>[Awaken] ZeedMillenniumon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr><tr><td>Greymon© Seal</td><td>10</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Darkness Bagramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Eosmon Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>MailBirdramon Seal</td><td>10</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Lucemon : Falldown Mode Seal</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>[Awaken] Gallantmon Crimson Mode Seal</td><td>1</td><td>25</td><td>HP</td><td>600</td></tr><tr><td>Diarbbitmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>[Awaken] Gallantmon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Bloomlordmon Seal</td><td>1</td><td>25</td><td>DE</td><td>300</td></tr><tr><td>Amphimon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>[Awaken] Sakuyamon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>CrossUp Mervamon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>[Awaken] SaintGalgomon Seal</td><td>1</td><td>1</td><td>EV</td><td>350</td></tr><tr><td>Armagemon Seal</td><td>1</td><td>25</td><td>EV</td><td>400</td></tr><tr><td>GulusGammamon Seal</td><td>5</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>[Awaken] Susanoomon Seal</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=746",
+    "date": "24.06.2025"
+  },
   "na-743": {
     "tables": [
       {
@@ -572,6 +632,66 @@
     "note": "",
     "url": "https://dmo.gameking.com/news/EventView.aspx?idx=743",
     "date": "17.06.2025"
+  },
+  "na-740": {
+    "tables": [
+      {
+        "header": "Event Seal Exchange",
+        "score": 47,
+        "rows": 25,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Grow Well Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Heat Wave Seal[Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Passionate Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Coolness Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Firm Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Marksman Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Conversion Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Armor Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Exploration Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Hope Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Happiness Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Environment Guardian Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Friendship Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Knowledge Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sincerity Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Brave Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Dragon Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Beginning Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>New Semester Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Spring Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Family Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Heat Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Summer Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=740",
+    "date": "10.06.2025"
+  },
+  "na-715": {
+    "tables": [
+      {
+        "header": "Event Seal Exchange",
+        "score": 49,
+        "rows": 26,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Passionate Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>10th Year Anniversary Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Environment Guardian Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>12th Year Anniversary Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>New Semester Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Marksman Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Exploration Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Brave Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Conversion Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Hope Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Last Seal of 2023 [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Grow Well Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sincerity Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal of Heat [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Heat Wave Seal[Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Happiness Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Beginning Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Armor Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Firm Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>friendship Seal[Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal of spring [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal Of Coolness [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Knowledge Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Family Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=715",
+    "date": "08.04.2025"
+  },
+  "na-703": {
+    "tables": [
+      {
+        "header": "Event Seal Exchange",
+        "score": 49,
+        "rows": 26,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Passionate Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>10th Year Anniversary Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Environment Guardian Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>12th Year Anniversary Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>New Semester Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Marksman Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Exploration Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Brave Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Conversion Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Hope Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Last Seal of 2023 [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Grow Well Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sincerity Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal of Heat [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Heat Wave Seal[Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Happiness Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Beginning Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Armor Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Firm Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>friendship Seal[Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal of spring [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal Of Coolness [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Knowledge Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Family Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=703",
+    "date": "04.02.2025"
+  },
+  "na-694": {
+    "tables": [
+      {
+        "header": "Craft Item Seal Reward Amount Required Seal Exchange Tickets Stats Max Value",
+        "score": 28,
+        "rows": 28,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gammamon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Angoramon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Armadimon Seal</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Kausgammamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Wezengammamon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>BetelGammamon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Geogreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Baalmon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Bastemon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Canoweissmon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>Rizegreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Blackgatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Siriusmon Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Craniummon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Kuzuhamon Miko Mode</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Huanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>Kuzuhamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=694",
+    "date": "26.11.2024"
   },
   "na-683": {
     "tables": [
@@ -929,125 +1049,5 @@
     "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)",
     "url": "https://www.vplay.in.th/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%8B%E0%B8%B5%E0%B8%A5%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/",
     "date": ""
-  },
-  "na-746": {
-    "tables": [
-      {
-        "header": "Craft Item Number of Seals Given Required Seal Exchange Tickets Attribute Master Attribute",
-        "score": 24,
-        "rows": 23,
-        "normalized": true,
-        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Numemon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>[Awaken] Ordinemon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>[Awaken] ImperialDramon Paladinmode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Shoutmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>MoonMillenniumon Seal</td><td>1</td><td>5</td><td>HT</td><td>300</td></tr><tr><td>[Awaken] ZeedMillenniumon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr><tr><td>Greymon© Seal</td><td>10</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Darkness Bagramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Eosmon Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>MailBirdramon Seal</td><td>10</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Lucemon : Falldown Mode Seal</td><td>1</td><td>1</td><td>HP</td><td>300</td></tr><tr><td>[Awaken] Gallantmon Crimson Mode Seal</td><td>1</td><td>25</td><td>HP</td><td>600</td></tr><tr><td>Diarbbitmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>[Awaken] Gallantmon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Bloomlordmon Seal</td><td>1</td><td>25</td><td>DE</td><td>300</td></tr><tr><td>Amphimon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>[Awaken] Sakuyamon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>CrossUp Mervamon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>[Awaken] SaintGalgomon Seal</td><td>1</td><td>1</td><td>EV</td><td>350</td></tr><tr><td>Armagemon Seal</td><td>1</td><td>25</td><td>EV</td><td>400</td></tr><tr><td>GulusGammamon Seal</td><td>5</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>[Awaken] Susanoomon Seal</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr></table>",
-        "caption": "Seal Exchange Ticket — Craft List"
-      }
-    ],
-    "note": "",
-    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=746",
-    "date": "24.06.2025"
-  },
-  "na-740": {
-    "tables": [
-      {
-        "header": "Event Seal Exchange",
-        "score": 47,
-        "rows": 25,
-        "normalized": true,
-        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Grow Well Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Heat Wave Seal[Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Passionate Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Coolness Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Firm Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Marksman Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Conversion Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Armor Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Exploration Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Hope Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Happiness Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Environment Guardian Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Friendship Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Knowledge Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sincerity Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Brave Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Dragon Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Beginning Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>New Semester Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Spring Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Family Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Heat Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Summer Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr></table>",
-        "caption": "Seal Exchange Ticket — Craft List"
-      }
-    ],
-    "note": "",
-    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=740",
-    "date": "10.06.2025"
-  },
-  "na-715": {
-    "tables": [
-      {
-        "header": "Event Seal Exchange",
-        "score": 49,
-        "rows": 26,
-        "normalized": true,
-        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Passionate Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>10th Year Anniversary Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Environment Guardian Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>12th Year Anniversary Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>New Semester Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Marksman Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Exploration Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Brave Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Conversion Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Hope Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Last Seal of 2023 [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Grow Well Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sincerity Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal of Heat [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Heat Wave Seal[Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Happiness Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Beginning Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Armor Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Firm Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>friendship Seal[Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal of spring [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal Of Coolness [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Knowledge Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Family Seal [Event] x60</td><td>—</td><td>1</td><td>—</td><td>—</td></tr></table>",
-        "caption": "Seal Exchange Ticket — Craft List"
-      }
-    ],
-    "note": "",
-    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=715",
-    "date": "08.04.2025"
-  },
-  "na-703": {
-    "tables": [
-      {
-        "header": "Event Seal Exchange",
-        "score": 49,
-        "rows": 26,
-        "normalized": true,
-        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Passionate Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>10th Year Anniversary Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Environment Guardian Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>12th Year Anniversary Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>New Semester Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Marksman Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Exploration Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Brave Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Conversion Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Hope Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Last Seal of 2023 [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Grow Well Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sincerity Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal of Heat [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Heat Wave Seal[Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Happiness Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Beginning Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Armor Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Firm Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>friendship Seal[Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal of spring [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seal Of Coolness [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Knowledge Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Family Seal [Event] 60ea</td><td>—</td><td>1</td><td>—</td><td>—</td></tr></table>",
-        "caption": "Seal Exchange Ticket — Craft List"
-      }
-    ],
-    "note": "",
-    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=703",
-    "date": "04.02.2025"
-  },
-  "na-694": {
-    "tables": [
-      {
-        "header": "Craft Item Seal Reward Amount Required Seal Exchange Tickets Stats Max Value",
-        "score": 28,
-        "rows": 28,
-        "normalized": true,
-        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gammamon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Angoramon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Armadimon Seal</td><td>10</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Kausgammamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Wezengammamon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>BetelGammamon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Geogreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Baalmon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Bastemon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Canoweissmon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>Rizegreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Blackgatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Siriusmon Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Craniummon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Kuzuhamon Miko Mode</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Huanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>Kuzuhamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
-        "caption": "Seal Exchange Ticket — Craft List"
-      }
-    ],
-    "note": "",
-    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=694",
-    "date": "26.11.2024"
-  },
-  "na-4126": {
-    "tables": [
-      {
-        "header": "Craft seal Stat Stat value (Master) Required amount to Master Required Seal Exchange Ticket Seal Obtained amount",
-        "score": 36,
-        "rows": 34,
-        "normalized": true,
-        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Venom Vamdemon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>[Awaken] Ordinemon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Numemon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>Cross-up Mervamon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>[Awaken] Sakuyamon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Amphimon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Vritramon Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>Chakkumon Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Grotmon Seal</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>KaiserGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>BaoHackmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Diarbbitmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Salamon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>PawnChessmon W Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>GrandisKuwagamon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>Baalmon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Yukidarumon Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Peckmon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Marsmon Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>Hagurumon Seal</td><td>6</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>Reppamon Seal</td><td>10</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>[Awaken] Gallantmon (Crimson Mode) Seal</td><td>1</td><td>25</td><td>HP</td><td>600</td></tr><tr><td>Gardromon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Whamon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>DarkTyrannomon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>WereGarurumon(Black) Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>[Awaken] ZeedMillenniummon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr></table>",
-        "caption": "Seal Exchange Ticket — Craft List"
-      }
-    ],
-    "note": "",
-    "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4126",
-    "date": "25.03.2026"
-  },
-  "na-4108": {
-    "tables": [
-      {
-        "header": "Craft Seal Stat Stat value (Master) Required amount to Master Required Seal Exchange Ticket Seal Obtained amount",
-        "score": 34,
-        "rows": 32,
-        "normalized": true,
-        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Megidramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>MugenDramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Chaosmon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Etemon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Tentomon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Dracmon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Sharmamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Koromon Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>Kunemon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>CommanDramon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Goblimon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Leomon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Upamon Seal</td><td>10</td><td>1</td><td>DE</td><td>80</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>1</td><td>DE</td><td>250</td></tr><tr><td>Diablomon Seal</td><td>1</td><td>6</td><td>DS</td><td>500</td></tr><tr><td>Agumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>V-dramon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Mystimon Seal</td><td>1</td><td>1</td><td>EV</td><td>300</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>V-mon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Soulmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>WarGreymon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Canoweissmon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>FanBeemon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Coredramon (Blue) Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Dorugamon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Beelzebumon Seal</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr></table>",
-        "caption": "Seal Exchange Ticket — Craft List"
-      }
-    ],
-    "note": "",
-    "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4108",
-    "date": "11.02.2026"
-  },
-  "na-4105": {
-    "tables": [
-      {
-        "header": "Craft seal Stat Stat value (Master) Required amount to Master Required Seal Exchange Ticket Seal Obtained amount",
-        "score": 33,
-        "rows": 31,
-        "normalized": true,
-        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Xuanwumon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Tsunomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Keramon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Garurumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Coredramon (Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Zhuqiaomon Seal</td><td>1</td><td>25</td><td>DS</td><td>600</td></tr><tr><td>DemiMeramon Seal</td><td>10</td><td>1</td><td>DS</td><td>100</td></tr><tr><td>Guilmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Mushroomon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Silphymon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>PicoDevimon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Nanomon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>SaberLeomon Seal</td><td>1</td><td>6</td><td>CT</td><td>300</td></tr><tr><td>Darkness Bagramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Prince Mamemon Seal</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Rosemon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>Crownmon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Hackmon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Kaiserleomon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Okuwamon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Gomamon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Shakkoumon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Waspmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Sangloupmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Blackgatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Rapidmon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>MirageGaogamon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr></table>",
-        "caption": "Seal Exchange Ticket — Craft List"
-      }
-    ],
-    "note": "",
-    "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4105",
-    "date": "04.02.2026"
   }
 }

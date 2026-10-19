@@ -55,7 +55,7 @@ UA = {
 }
 
 # NA idx that are PatchNote (rest are EventView)
-NA_PATCH = {4100, 4110, 4114, 4118, 4121, 4129}
+NA_PATCH = {4100, 4105, 4108, 4110, 4114, 4118, 4121, 4126, 4129}
 
 # TH system page (permanent Seal Master explainer) — encoded permalink
 TH_SYSTEM_URL = (
@@ -99,10 +99,13 @@ KR_IDS = [
 ]
 NA_IDS = [
     4129,
+    4126,
     4121,
     4118,
     4114,
     4110,
+    4108,
+    4105,
     4100,
     810,
     792,
@@ -110,7 +113,12 @@ NA_IDS = [
     784,
     782,
     759,
+    746,
     743,
+    740,
+    715,
+    703,
+    694,
     683,
     673,
     636,
