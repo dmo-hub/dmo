@@ -111,15 +111,22 @@ def fetch_detail(slug: str, url: str, force: bool = False) -> str:
 
 def parse_post(slug: str, url: str, raw_html: str) -> dict | None:
     text = html_to_text(raw_html)
-    nm = NEW_DIGIMON_RE.search(text)
-    if not nm:
+    # A release post often brings several digimon, each under its own
+    # "ดิจิมอนใหม่ :" heading; reading only the first dropped every later one.
+    # th_name stays the first so existing keys (dedup, enricher) keep working.
+    names = []
+    for m in NEW_DIGIMON_RE.finditer(text):
+        n = m.group(1).strip()
+        if n and n not in names:
+            names.append(n)
+    if not names:
         return None  # not a new-digimon post
-    th_name = nm.group(1).strip()
     return {
         "slug": slug,
         "url": url,
         "date": parse_thai_date(text),
-        "th_name": th_name,
+        "th_name": names[0],
+        "th_names": names,
         "image_url": first_banner(raw_html),
     }
 

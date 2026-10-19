@@ -28,8 +28,9 @@ TH_DIGIMON = PROJ / "data" / "th_patch_digimon.json"
 # (EN_substring, TH_substring, required_th_modifier_or_None).
 # Match logic:
 #   1. find first tuple where `en_kw` is a substring of the EN digimon name
-#   2. find TH posts whose `th_name` contains `th_kw`
-#   3. if `required_th_modifier` is set, also require it in `th_name`
+#   2. find TH posts where one of `th_names` (every new digimon the post
+#      announces) contains `th_kw`
+#   3. if `required_th_modifier` is set, also require it in that same name
 #      (used to disambiguate e.g. Alphamon Ouryuken Extreme vs Awaken)
 # Keep keywords as specific as possible — substring matching on "โอเมกามอน"
 # alone would catch every Omegamon variant including Alter-B.
@@ -59,6 +60,9 @@ EN_TO_TH_KEYWORDS: list[tuple[str, str, str | None]] = [
     ("Goddramon", "ก็อดดรามอน", None),
     ("Holydramon", "โฮลีดรามอน", None),
     ("Susanoomon", "ซูซาโน", None),
+    # Lilithmon X shares a TH post with other digimon; without the modifier
+    # the awakened form would land on it.
+    ("Awakened Lilithmon", "ลิลิธมอน", "อะเวค"),
     ("Lilithmon", "ลิลิธมอน", None),
     ("DoneDevimon", "ดันเดวีมอน", None),
     ("Negamon", "เนกามอน", None),
@@ -97,7 +101,9 @@ def main() -> None:
                 if not row:
                     continue
                 _, th_kw, required_mod = row
-                matches = find_matches(th_kw, th_posts, lambda p: [p["th_name"]], required_mod)
+                matches = find_matches(th_kw, th_posts,
+                                       lambda p: p.get("th_names") or [p["th_name"]],
+                                       required_mod)
                 if not matches:
                     continue
                 th_post = pick_best(matches, parse_mmddyyyy(post["date"])) if len(matches) > 1 else matches[0]
@@ -107,8 +113,18 @@ def main() -> None:
             if th_post:
                 post["source_th"] = th_post["url"]
                 post["date_th"] = th_post["date"]
-                post["_th_name"] = th_post["th_name"]
-                post["_th_image_url"] = th_post["image_url"]
+                # the name that actually matched, not the post's first digimon
+                post["_th_name"] = next(
+                    (n for n in th_post.get("th_names") or [] if via[1] in n),
+                    th_post["th_name"])
+                # image_url is the post's first banner, which shows the post's
+                # first digimon; a later one would get someone else's picture,
+                # so it keeps its NA image instead.
+                if post["_th_name"] == th_post["th_name"]:
+                    post["_th_image_url"] = th_post["image_url"]
+                else:
+                    post.pop("_th_image_url", None)
+                    post.pop("image_th", None)
                 matched += 1
                 tag = f" [{via[3]} candidates]" if via[3] > 1 else ""
                 print(
