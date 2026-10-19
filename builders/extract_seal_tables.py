@@ -833,6 +833,13 @@ def main():
         }
         print(f"{key:<12} tables=1 (alias -> {meta['alias']})")
 
+    # Discovery only sees posts that happen to be in cache/, so a post found on an
+    # earlier run can be absent now; carry its tables over rather than drop it.
+    for key, data in prev.items():
+        if key not in result and data.get("tables"):
+            result[key] = data
+            stale.append(key)
+
     # Discovered candidates only earn an entry by producing a table; curated
     # keys always stay (their empty entries drive card upkeep in seals.html).
     dropped = [
