@@ -27,6 +27,7 @@ import sys
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
+from urllib.parse import unquote
 
 from stamped_json import write_stamped
 
@@ -35,6 +36,65 @@ sys.stdout.reconfigure(encoding="utf-8")
 PROJ = Path(__file__).resolve().parent.parent
 SRC = PROJ / "data" / "clothing_items.json"
 OUT = PROJ / "docs" / "gear_registry.json"
+ICON_DIR = PROJ / "docs" / "img" / "gear"
+
+
+def icon_filename(wiki_path):
+    """/images/4/4a/Agumon_Bottom.png -> agumon_bottom.png. MediaWiki file
+    names are unique per wiki, so the basename alone is a safe key."""
+    base = unquote(wiki_path.rsplit("/", 1)[-1])
+    return re.sub(r"[^a-z0-9._-]+", "_", base.lower())
+
+
+def full_key(name):
+    return re.sub(r"[^a-z0-9]+", " ", name.lower()).strip()
+
+
+def icon_key(name):
+    """Name with its level / duration tail dropped, so "Imperial Ring" from a
+    stats table meets "Imperial Ring [15 Days]" from the list that has the
+    picture."""
+    name = re.sub(r"\s*\[[^\]]*\]\s*$", "", name)
+    name = re.sub(r"\s*Lv\.?\s*[\d-]+$", "", name, flags=re.I)
+    return full_key(name)
+
+
+def stem_key(wiki_path):
+    return icon_key(unquote(wiki_path.rsplit("/", 1)[-1]).rsplit(".", 1)[0])
+
+
+def index_icons(items):
+    """Every way a picture can be found again: the row's full name (keeps the
+    level, whose picture can differ), the name without its tail, and the file
+    name itself -- a pictureless "Earrings of Four Holy Beasts" table still
+    has Earrings_of_Four_Holy_Beasts.png elsewhere on the page."""
+    exact, loose = defaultdict(set), defaultdict(set)
+    for it in items:
+        p = it.get("icon")
+        if not p:
+            continue
+        exact[full_key(it["name"])].add(p)
+        loose[icon_key(it["name"])].add(p)
+        loose[stem_key(p)].add(p)
+    return exact, loose
+
+
+def icon_by_name(row_names, name, icons):
+    """Picture for an item whose own rows had none (the pivoted stats tables).
+    Several pictures under one name -- "Knight's Bracelet" also matches the
+    Royal X- one -- are settled by the file name; a tie stays without one
+    rather than showing the wrong item."""
+    exact, loose = icons
+    for n in row_names:
+        found = exact.get(full_key(n)) or set()
+        if len(found) == 1:
+            return next(iter(found))
+    key = icon_key(name)
+    found = loose.get(key) or set()
+    if len(found) == 1:
+        return next(iter(found))
+    named = [p for p in found if stem_key(p) == key]
+    return named[0] if len(named) == 1 else None
 
 # Wiki slot -> solver slot id. Anything absent is not wearable gear for the
 # optimizer and is left out; the counts are printed so a drop is never silent.
@@ -103,6 +163,8 @@ def band_key(item):
 def main():
     items = json.loads(SRC.read_text(encoding="utf-8"))["items"]
 
+    icons = index_icons(items)
+
     groups = defaultdict(list)
     dropped = defaultdict(int)
     for it in items:
@@ -136,6 +198,16 @@ def main():
             rec["bands"] = len(rows)
         if best.get("_name_level") is not None:
             rec["level"] = best["_name_level"]
+        wiki_icon = (best.get("icon")
+                     or next((r["icon"] for r in reversed(rows) if r.get("icon")), None)
+                     or icon_by_name([r["name"] for r in reversed(rows)], name, icons))
+        if wiki_icon:
+            rec["iconWiki"] = wiki_icon
+            # Only point the page at a picture fetch_dmowiki_images.py has
+            # actually saved; a dangling path is a broken image on every row.
+            local = ICON_DIR / icon_filename(wiki_icon)
+            if local.exists():
+                rec["icon"] = local.relative_to(PROJ / "docs").as_posix()
 
         ranged, other = False, []
         for st in best["stats"]:

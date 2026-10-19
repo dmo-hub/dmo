@@ -96,6 +96,12 @@ python fetchers/fetch_dmowiki_pages.py Clothing ChipSets
 python fetchers/fetch_dmowiki_pages.py --mode api --category Digimon_Rank_U
 python fetchers/fetch_dmowiki_pages.py --mode api --list titles.txt
 
+# 11c. Gear picker pictures. scan_clothing records each row's wiki image as
+#      `icon`; build_gear_registry passes it on as `iconWiki` and sets `icon`
+#      only once the file is in docs/img/gear/. /images/ sits behind the same
+#      challenge as the pages, so the download goes through the same tab.
+python fetchers/fetch_dmowiki_images.py      # then re-run build_gear_registry.py
+
 # 12. Parse cache/dmowiki_*.html and seed `attributes` dict on each digimon.
 python enrichers/enrich_digimon_attributes.py            # missing only
 python enrichers/enrich_digimon_attributes.py --force    # re-parse every digimon

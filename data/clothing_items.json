@@ -26,7 +26,8 @@
           "value": 275.0
         }
       ],
-      "upgrade": 0
+      "upgrade": 0,
+      "icon": "/images/5/5f/Adv_Goggles_0.png"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-at-at-2",
@@ -50,7 +51,8 @@
         }
       ],
       "upgrade": 1,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "icon": "/images/8/87/Adv_Goggles_15.png"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-at-at-3",
@@ -70,7 +72,8 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/1/11/Adv_Goggles_Max.png"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ct-ct",
@@ -91,7 +94,8 @@
           "value": 275.0
         }
       ],
-      "upgrade": 0
+      "upgrade": 0,
+      "icon": "/images/5/5f/Adv_Goggles_0.png"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ct-ct-2",
@@ -115,7 +119,8 @@
         }
       ],
       "upgrade": 1,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "icon": "/images/8/87/Adv_Goggles_15.png"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ct-ct-3",
@@ -135,7 +140,8 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/1/11/Adv_Goggles_Max.png"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ht-ht",
@@ -156,7 +162,8 @@
           "value": 10.0
         }
       ],
-      "upgrade": 0
+      "upgrade": 0,
+      "icon": "/images/5/5f/Adv_Goggles_0.png"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ht-ht-2",
@@ -180,7 +187,8 @@
         }
       ],
       "upgrade": 1,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "icon": "/images/8/87/Adv_Goggles_15.png"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ht-ht-3",
@@ -200,7 +208,8 @@
           "random": false,
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/1/11/Adv_Goggles_Max.png"
     },
     {
       "id": "bottom-agumon-bottom",
@@ -220,7 +229,8 @@
           "random": false,
           "value": 1200.0
         }
-      ]
+      ],
+      "icon": "/images/4/4a/Agumon_Bottom.png"
     },
     {
       "id": "bottom-arbormon-s-lower-armor-event",
@@ -240,7 +250,8 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/f/f9/Arbormon%27s_Lower_Armor.png"
     },
     {
       "id": "bottom-aural-short-pants-of-baihumon",
@@ -255,7 +266,8 @@
           "axis": "tamer",
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/0/0c/Baihumon_Pants.png"
     },
     {
       "id": "bottom-baihumon-s-flawless-short-pants",
@@ -270,7 +282,8 @@
           "axis": "tamer",
           "value": 1100.0
         }
-      ]
+      ],
+      "icon": "/images/0/04/Baihumon%27s_Flawless_Short_Pants.png"
     },
     {
       "id": "bottom-chakkumon-s-snowman-event",
@@ -290,7 +303,8 @@
           "random": false,
           "value": 150.0
         }
-      ]
+      ],
+      "icon": "/images/2/2f/Chakkumon%27s_Snowman.png"
     },
     {
       "id": "bottom-cozy-and-warm-pants",
@@ -310,7 +324,8 @@
           "random": false,
           "value": 1200.0
         }
-      ]
+      ],
+      "icon": "/images/c/c6/Cozy_and_warm_Pants.png"
     },
     {
       "id": "bottom-fairimon-s-lower-armor-event",
@@ -330,7 +345,8 @@
           "random": false,
           "value": 3.0
         }
-      ]
+      ],
+      "icon": "/images/5/5f/Fairimon%27s_Lower_Armor.png"
     },
     {
       "id": "bottom-flame-short-pants-of-zhuqiaomon",
@@ -345,7 +361,8 @@
           "axis": "tamer",
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/a/a3/Zhuqiomon_shorts.png"
     },
     {
       "id": "bottom-lanamon-s-tights-event",
@@ -365,14 +382,16 @@
           "random": false,
           "value": 1500.0
         }
-      ]
+      ],
+      "icon": "/images/a/a1/Lanamon%27s_Tights.png"
     },
     {
       "id": "bottom-pants",
       "name": "Pants",
       "slot": "Bottom",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/47/Pants.png"
     },
     {
       "id": "bottom-qinglongmon-s-lightning-short-pants",
@@ -387,7 +406,8 @@
           "axis": "tamer",
           "value": 1100.0
         }
-      ]
+      ],
+      "icon": "/images/3/3d/Qinglongmon%27s_Thunder_Short_Pants.png"
     },
     {
       "id": "bottom-radiant-short-pants-of-qinglongmon",
@@ -402,7 +422,8 @@
           "axis": "tamer",
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/d/d1/Qinglongmon%27s_Radiant_Pants.png"
     },
     {
       "id": "bottom-short-pants-of-baihumon",
@@ -417,7 +438,8 @@
           "axis": "tamer",
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/0/0c/Baihumon_Pants.png"
     },
     {
       "id": "bottom-short-pants-of-qinglongmon",
@@ -432,7 +454,8 @@
           "axis": "tamer",
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/d/d1/Qinglongmon%27s_Radiant_Pants.png"
     },
     {
       "id": "bottom-short-pants-of-zhuqiaomon",
@@ -447,7 +470,8 @@
           "axis": "tamer",
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/a/a3/Zhuqiomon_shorts.png"
     },
     {
       "id": "bottom-spirit-bottom",
@@ -464,7 +488,8 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "icon": "/images/e/ed/DigimonFrontierBottom.png"
     },
     {
       "id": "bottom-spirit-bottom-2",
@@ -488,7 +513,8 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "icon": "/images/e/ed/DigimonFrontierBottom.png"
     },
     {
       "id": "bottom-spirit-bottom-3",
@@ -519,7 +545,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "icon": "/images/e/ed/DigimonFrontierBottom.png"
     },
     {
       "id": "bottom-trendy-wide-pants-event",
@@ -539,7 +566,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/5/57/Trendy_Wide_Pants_Event.png"
     },
     {
       "id": "bottom-xuanwumon-s-aquatic-short-pants",
@@ -554,7 +582,8 @@
           "axis": "tamer",
           "value": 1100.0
         }
-      ]
+      ],
+      "icon": "/images/a/a6/Xuanwumon%27s_Aquatic_Short_Pants.png"
     },
     {
       "id": "bottom-xuanwumon-shiny-short-pants",
@@ -569,7 +598,8 @@
           "axis": "tamer",
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/8/8a/Ebonwumon_Shorts.png"
     },
     {
       "id": "bottom-xuanwumon-short-pants",
@@ -584,7 +614,8 @@
           "axis": "tamer",
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/8/8a/Ebonwumon_Shorts.png"
     },
     {
       "id": "bottom-yolei-t-k-davis-bottom",
@@ -602,6 +633,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
+      "icon": "/images/6/69/MDGBottom.png",
       "axis_source": "override"
     },
     {
@@ -627,6 +659,7 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
+      "icon": "/images/6/69/MDGBottom.png",
       "axis_source": "override"
     },
     {
@@ -659,6 +692,7 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
+      "icon": "/images/6/69/MDGBottom.png",
       "axis_source": "override"
     },
     {
@@ -674,42 +708,48 @@
           "axis": "tamer",
           "value": 1100.0
         }
-      ]
+      ],
+      "icon": "/images/c/c5/Zhuqiamon%27s_Infernal_Short_Pants.png"
     },
     {
       "id": "bracelets-bracelet-of-ancient-breath",
       "name": "Bracelet of Ancient Breath",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/5f/Bracelet_of_Ancient_Breath.png"
     },
     {
       "id": "bracelets-crude-rusty-bracelet",
       "name": "Crude Rusty Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a3/Rusty_Bracelet.png"
     },
     {
       "id": "bracelets-fancy-bracelet-of-ancient-breath",
       "name": "Fancy Bracelet of Ancient Breath",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/41/Fancy_Bracelet_of_Ancient_Breath.png"
     },
     {
       "id": "bracelets-intact-bracelet-of-ruins",
       "name": "Intact Bracelet of Ruins",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/2/22/Shabby_Bracelet_of_Ruins.png"
     },
     {
       "id": "bracelets-knight-s-bracelet",
       "name": "Knight's Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/8f/Knight%27s_Bracelet.png"
     },
     {
       "id": "bracelets-knight-s-bracelet-2",
@@ -866,7 +906,8 @@
       "name": "Miracle Bracelet [Level 1]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/77/Miracle_Bracelet_Lv1-2.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-1-2",
@@ -923,7 +964,8 @@
       "name": "Miracle Bracelet [Level 10]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a4/Miracle_Bracelet_-Level_10-.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-10-2",
@@ -968,7 +1010,8 @@
       "name": "Miracle Bracelet [Level 2]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/77/Miracle_Bracelet_Lv1-2.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-2-2",
@@ -1025,7 +1068,8 @@
       "name": "Miracle Bracelet [Level 3]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/ae/Miracle_Bracelet_Lv3-5.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-3-2",
@@ -1082,7 +1126,8 @@
       "name": "Miracle Bracelet [Level 4]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/ae/Miracle_Bracelet_Lv3-5.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-4-2",
@@ -1133,7 +1178,8 @@
       "name": "Miracle Bracelet [Level 5]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/ae/Miracle_Bracelet_Lv3-5.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-5-2",
@@ -1190,7 +1236,8 @@
       "name": "Miracle Bracelet [Level 6]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/ae/Miracle_Bracelet_Lv3-5.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-6-2",
@@ -1241,7 +1288,8 @@
       "name": "Miracle Bracelet [Level 7]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a4/Miracle_Bracelet_-Level_10-.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-7-2",
@@ -1286,7 +1334,8 @@
       "name": "Miracle Bracelet [Level 8]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a4/Miracle_Bracelet_-Level_10-.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-8-2",
@@ -1331,7 +1380,8 @@
       "name": "Miracle Bracelet [Level 9]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a4/Miracle_Bracelet_-Level_10-.png"
     },
     {
       "id": "bracelets-miracle-bracelet-level-9-2",
@@ -1376,7 +1426,8 @@
       "name": "Miracle Bracelet [Special]",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/7e/Miracle_Bracelet_-Special-.png"
     },
     {
       "id": "bracelets-miracle-bracelet-special-2",
@@ -1421,7 +1472,8 @@
       "name": "Radiant Knight's Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/8f/Knight%27s_Bracelet.png"
     },
     {
       "id": "bracelets-radiant-knight-s-bracelet-2",
@@ -1478,133 +1530,152 @@
       "name": "Royal : Knight's Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/eb/Royal_Bracelet.png"
     },
     {
       "id": "bracelets-royal-radiant-knight-s-bracelet",
       "name": "Royal : Radiant Knight's Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/eb/Royal_Bracelet.png"
     },
     {
       "id": "bracelets-royal-x-knight-s-bracelet",
       "name": "Royal : X-Knight's Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/ad/Royal_-_X-Knight%27s_Bracelet.png"
     },
     {
       "id": "bracelets-rusty-bracelet",
       "name": "Rusty Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a3/Rusty_Bracelet.png"
     },
     {
       "id": "bracelets-shabby-bracelet-of-ruins",
       "name": "Shabby Bracelet of Ruins",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/2/22/Shabby_Bracelet_of_Ruins.png"
     },
     {
       "id": "bracelets-shiny-bracelet-of-ancient-breath",
       "name": "Shiny Bracelet of Ancient Breath",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/50/Shiny_Bracelet_of_Ancient_Breath.png"
     },
     {
       "id": "bracelets-shiny-bracelet-of-ruins",
       "name": "Shiny Bracelet of Ruins",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/2/21/Shiny_Bracelet_of_Ruins.png"
     },
     {
       "id": "bracelets-vital-breath-digivice-v",
       "name": "Vital Breath Digivice -V-",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/9e/Vital_Breath_Digivice_-V-.png"
     },
     {
       "id": "bracelets-zero-unit-bracelet",
       "name": "Zero Unit Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/7b/Zero_Unit_Bracelet.png"
     },
     {
       "id": "digiaura-digiaura",
       "name": "DigiAura",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/de/DigiAura_Icon.png"
     },
     {
       "id": "digiaura-digiaura-of-bracery-and-friendship",
       "name": "DigiAura of Bracery and Friendship",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/64/DigiAura_of_Bracery_and_Friendship.png"
     },
     {
       "id": "digiaura-digiaura-of-feathers",
       "name": "DigiAura of Feathers",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/6c/DigiAura_of_Feathers_Icon.png"
     },
     {
       "id": "digiaura-energy-aura",
       "name": "Energy Aura",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/78/Energy_Aura.gif"
     },
     {
       "id": "digiaura-energy-patch",
       "name": "Energy Patch",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/c/cf/Energy_Patch.png"
     },
     {
       "id": "digiaura-fullmoon-digiaura",
       "name": "FullMoon DigiAura",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/2/22/SuperMoon_DigiAura_Icon.png"
     },
     {
       "id": "digiaura-halloween-digiaura",
       "name": "Halloween DigiAura",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a1/Halloween_DigiAura_Icon.png"
     },
     {
       "id": "digiaura-reinforced-digiaura-ver-x",
       "name": "Reinforced DigiAura Ver. X",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/d6/Reinforced_DigiAura_Ver._X.png"
     },
     {
       "id": "digiaura-reinforced-digiaura-ver-y",
       "name": "Reinforced DigiAura Ver. Y",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/6b/Reinforced_DigiAura_Ver._Y.png"
     },
     {
       "id": "digiaura-supermoon-digiaura",
       "name": "SuperMoon DigiAura",
       "slot": "DigiAura",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/2/22/SuperMoon_DigiAura_Icon.png"
     },
     {
       "id": "digimon-kaiser-s-goggles-tamer-s-goggles-at",
@@ -1621,7 +1692,8 @@
         }
       ],
       "upgrade": 1,
-      "upgrade_max": 10
+      "upgrade_max": 10,
+      "icon": "/images/e/e0/Kaiser_Goggles.png"
     },
     {
       "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ct",
@@ -1638,7 +1710,8 @@
         }
       ],
       "upgrade": 1,
-      "upgrade_max": 10
+      "upgrade_max": 10,
+      "icon": "/images/e/e0/Kaiser_Goggles.png"
     },
     {
       "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ht",
@@ -1655,49 +1728,56 @@
         }
       ],
       "upgrade": 1,
-      "upgrade_max": 10
+      "upgrade_max": 10,
+      "icon": "/images/e/e0/Kaiser_Goggles.png"
     },
     {
       "id": "earrings-aural-earring-of-sealed-baihumon",
       "name": "Aural Earring of Sealed Baihumon",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/ee/Baihumon_Shiny_Earring.png"
     },
     {
       "id": "earrings-boundless-advanced-earrings",
       "name": "Boundless Advanced Earrings",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/2/26/Boundless_Advanced_Earrings.png"
     },
     {
       "id": "earrings-brilliant-kindness-earring",
       "name": "Brilliant Kindness Earring",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/ec/Brilliant_Kindness_Earring.png"
     },
     {
       "id": "earrings-digital-hazard-earring",
       "name": "Digital Hazard Earring",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/7e/Sealed_Digital_Hazard_Earring.png"
     },
     {
       "id": "earrings-earring-of-sealed-baihumon",
       "name": "Earring of Sealed Baihumon",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/dc/Baihumon_Earring.png"
     },
     {
       "id": "earrings-earring-of-sealed-zhuqiaomon",
       "name": "Earring of Sealed Zhuqiaomon",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/75/Zhuqiaomon_Earring.png"
     },
     {
       "id": "earrings-earrings-of-four-holy-beasts-lv-1",
@@ -1950,7 +2030,8 @@
       "name": "Fanglongmon's Ancient Earring [Lv.1-10]",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/c/ca/Fanglongmon_Earring.png"
     },
     {
       "id": "earrings-fanglongmon-s-ancient-earring-lv-10",
@@ -2407,14 +2488,16 @@
       "name": "Flame Earring of Sealed Zhuqiaomon",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/95/Zhuqiaomon_Shiny_Earring.png"
     },
     {
       "id": "earrings-growth-accessory-earrings",
       "name": "Growth Accessory (Earrings)",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/9a/Growth_Accessory_%28Earrings%29.png"
     },
     {
       "id": "earrings-imperial-earring",
@@ -2441,7 +2524,8 @@
       "name": "Imperial Earrings [15 Days]",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/6e/Imperial_Earrings.png"
     },
     {
       "id": "earrings-maximum",
@@ -2536,14 +2620,16 @@
       "name": "Miracle Earring [Special]",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/53/Miracle_Earring_-Special-.png"
     },
     {
       "id": "earrings-miracle-earrings-level-10",
       "name": "Miracle Earrings [Level 10]",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a0/Miracle_Earrings_-Level_10-.png"
     },
     {
       "id": "earrings-nanomon-s-shiny-earring",
@@ -2582,14 +2668,16 @@
       "name": "Qinglongmon's Sealed Earring",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/47/Qinglongmon%27s_Sealed_Earring.png"
     },
     {
       "id": "earrings-qinglongmon-s-sealed-radiant-earring",
       "name": "Qinglongmon's Sealed Radiant Earring",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/08/Qinglongmon%27s_Sealed_Radiant_Earring.png"
     },
     {
       "id": "earrings-radiant-earrings-of-four-holy-beasts-lv-1",
@@ -2854,28 +2942,32 @@
       "name": "Sealed Earrings of Four Holy Beasts [Lv.1-5]",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/9d/Earrings_of_Four_Holy_Beasts.png"
     },
     {
       "id": "earrings-sealed-radiant-earrings-of-four-holy-beasts-lv-1-5",
       "name": "Sealed Radiant Earrings of Four Holy Beasts [Lv.1-5]",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/8f/Radiant_Earrings_of_Four_Holy_Beasts.png"
     },
     {
       "id": "earrings-shiny-high-powered-quad-core-earrings",
       "name": "Shiny High-Powered Quad-Core Earrings",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/99/Shiny_High-Powered_Quad-Core_Earrings.png"
     },
     {
       "id": "earrings-zero-unit-earring",
       "name": "Zero Unit Earring",
       "slot": "Earrings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/4e/Zero_Unit_Earring.png"
     },
     {
       "id": "earrings-zero-unit-earrings",
@@ -2926,28 +3018,32 @@
       "name": "Final Digivice",
       "slot": "Eos Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a0/EosDviceMax.PNG"
     },
     {
       "id": "eos-digivice-first-digivice",
       "name": "First Digivice",
       "slot": "Eos Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/3/36/EosDvice.PNG"
     },
     {
       "id": "eos-digivice-first-digivice-2",
       "name": "First Digivice",
       "slot": "Eos Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/3/36/EosDvice.PNG"
     },
     {
       "id": "eos-digivice-first-digivice-3",
       "name": "First Digivice",
       "slot": "Eos Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/3/36/EosDvice.PNG"
     },
     {
       "id": "fashion-agumon-ornament",
@@ -2967,7 +3063,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/4/45/Agumon_Ornament.png"
     },
     {
       "id": "fashion-arbormon-s-vine-barrel-event",
@@ -2981,7 +3078,8 @@
           "random": false,
           "value": 5.0
         }
-      ]
+      ],
+      "icon": "/images/6/61/Arbormon%27s_Vine_Barrel.png"
     },
     {
       "id": "fashion-baihumon-s-flawless-cape",
@@ -2995,7 +3093,8 @@
           "random": false,
           "value": 5.0
         }
-      ]
+      ],
+      "icon": "/images/c/c7/Baihumon%27s_Flawless_Cape.png"
     },
     {
       "id": "fashion-chakkumon-s-ski-board-event",
@@ -3015,7 +3114,8 @@
           "random": false,
           "value": 150.0
         }
-      ]
+      ],
+      "icon": "/images/3/36/Chakkumon%27s_Ski_Board.png"
     },
     {
       "id": "fashion-cute-cat-ears",
@@ -3029,7 +3129,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/c/c5/CuteCatEars.png"
     },
     {
       "id": "fashion-fairimon-s-fairy-wings-event",
@@ -3049,7 +3150,8 @@
           "random": false,
           "value": 3.0
         }
-      ]
+      ],
+      "icon": "/images/c/ce/Fairimon%27s_Fairy_Wings.png"
     },
     {
       "id": "fashion-headphones",
@@ -3063,7 +3165,8 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/a/af/Headphones_Icon.png"
     },
     {
       "id": "fashion-lanamon-s-shell-event",
@@ -3083,14 +3186,16 @@
           "random": false,
           "value": 2000.0
         }
-      ]
+      ],
+      "icon": "/images/4/4a/Lanamon%27s_Shell.png"
     },
     {
       "id": "fashion-plastic-frame-glasses",
       "name": "Plastic Frame Glasses",
       "slot": "Fashion",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/2/26/Plastic_Frame_Glasses.png"
     },
     {
       "id": "fashion-qinglongmon-s-lightning-cape",
@@ -3104,7 +3209,8 @@
           "random": false,
           "value": 7.0
         }
-      ]
+      ],
+      "icon": "/images/a/a9/Qinglongmon%27s_Thunder_Cape.png"
     },
     {
       "id": "fashion-spirit-accessory",
@@ -3121,7 +3227,8 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "icon": "/images/6/6c/DigimonFrontierFashion.png"
     },
     {
       "id": "fashion-spirit-accessory-2",
@@ -3145,7 +3252,8 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "icon": "/images/6/6c/DigimonFrontierFashion.png"
     },
     {
       "id": "fashion-spirit-accessory-3",
@@ -3176,14 +3284,16 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "icon": "/images/6/6c/DigimonFrontierFashion.png"
     },
     {
       "id": "fashion-sunglasses",
       "name": "Sunglasses",
       "slot": "Fashion",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/92/Sunglasses.png"
     },
     {
       "id": "fashion-trendy-wireless-earphones-event",
@@ -3203,7 +3313,8 @@
           "random": false,
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/f/f5/Trendy_Wireless_Earphones_Event.png"
     },
     {
       "id": "fashion-warm-hand-warmer",
@@ -3223,7 +3334,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/d/da/Warm_Hand_Warmer.png"
     },
     {
       "id": "fashion-xuanwumon-s-aquatic-cape",
@@ -3237,7 +3349,8 @@
           "random": false,
           "value": 5.0
         }
-      ]
+      ],
+      "icon": "/images/2/23/Xuanwumon%27s_Aquatic_Cape.png"
     },
     {
       "id": "fashion-yolei-t-k-davis-fashion",
@@ -3255,6 +3368,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
+      "icon": "/images/3/34/MDGFashion.png",
       "axis_source": "override"
     },
     {
@@ -3280,6 +3394,7 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
+      "icon": "/images/3/34/MDGFashion.png",
       "axis_source": "override"
     },
     {
@@ -3312,6 +3427,7 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
+      "icon": "/images/3/34/MDGFashion.png",
       "axis_source": "override"
     },
     {
@@ -3326,7 +3442,8 @@
           "random": false,
           "value": 5.0
         }
-      ]
+      ],
+      "icon": "/images/5/5d/Zhuqiaomon%27s_Infernal_Cape.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families",
@@ -3353,7 +3470,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 0
+      "upgrade": 0,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-10",
@@ -3380,7 +3498,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 9
+      "upgrade": 9,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-11",
@@ -3407,7 +3526,8 @@
           "value": 30.0
         }
       ],
-      "upgrade": 10
+      "upgrade": 10,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-12",
@@ -3434,7 +3554,8 @@
           "value": 32.0
         }
       ],
-      "upgrade": 11
+      "upgrade": 11,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-13",
@@ -3461,7 +3582,8 @@
           "value": 35.0
         }
       ],
-      "upgrade": 12
+      "upgrade": 12,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-14",
@@ -3488,7 +3610,8 @@
           "value": 37.0
         }
       ],
-      "upgrade": 13
+      "upgrade": 13,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-15",
@@ -3515,7 +3638,8 @@
           "value": 40.0
         }
       ],
-      "upgrade": 14
+      "upgrade": 14,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-16",
@@ -3542,7 +3666,8 @@
           "value": 50.0
         }
       ],
-      "upgrade": 15
+      "upgrade": 15,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-2",
@@ -3569,7 +3694,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 1
+      "upgrade": 1,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-3",
@@ -3596,7 +3722,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 2
+      "upgrade": 2,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-4",
@@ -3623,7 +3750,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 3
+      "upgrade": 3,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-5",
@@ -3650,7 +3778,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 4
+      "upgrade": 4,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-6",
@@ -3677,7 +3806,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 5
+      "upgrade": 5,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-7",
@@ -3704,7 +3834,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 6
+      "upgrade": 6,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-8",
@@ -3731,7 +3862,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 7
+      "upgrade": 7,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-9",
@@ -3758,7 +3890,8 @@
           "value": 0.0
         }
       ],
-      "upgrade": 8
+      "upgrade": 8,
+      "icon": "/images/6/66/Ghost_Key_Ring.png"
     },
     {
       "id": "gloves-agumon-paw-gloves",
@@ -3780,7 +3913,8 @@
           "axis": "tamer",
           "value": 700.0
         }
-      ]
+      ],
+      "icon": "/images/f/f1/AgumonPaw.png"
     },
     {
       "id": "gloves-arbormon-s-gauntlet-event",
@@ -3800,7 +3934,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/5/5a/Arbormon%27s_Gauntlet.png"
     },
     {
       "id": "gloves-baihumon-aural-gloves",
@@ -3815,7 +3950,8 @@
           "axis": "tamer",
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/1/15/Baihumon_Gloves.png"
     },
     {
       "id": "gloves-baihumon-gloves",
@@ -3830,7 +3966,8 @@
           "axis": "tamer",
           "value": 250.0
         }
-      ]
+      ],
+      "icon": "/images/1/15/Baihumon_Gloves.png"
     },
     {
       "id": "gloves-baihumon-s-flawless-gloves",
@@ -3845,7 +3982,8 @@
           "axis": "tamer",
           "value": 400.0
         }
-      ]
+      ],
+      "icon": "/images/b/b0/Baihumon%27s_Flawless_Gloves.png"
     },
     {
       "id": "gloves-boundless-advanced-gloves-30-days",
@@ -3860,7 +3998,8 @@
           "axis": "tamer",
           "value": 250.0
         }
-      ]
+      ],
+      "icon": "/images/4/45/Boundless_Crude_Gloves.png"
     },
     {
       "id": "gloves-boundless-crude-gloves-30-days",
@@ -3875,7 +4014,8 @@
           "axis": "tamer",
           "value": 150.0
         }
-      ]
+      ],
+      "icon": "/images/4/45/Boundless_Crude_Gloves.png"
     },
     {
       "id": "gloves-boundless-inferior-gloves-30-days",
@@ -3890,7 +4030,8 @@
           "axis": "tamer",
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/c/c6/Boundless_Inferior_Gloves.png"
     },
     {
       "id": "gloves-boundless-plain-gloves-30-days",
@@ -3905,7 +4046,8 @@
           "axis": "tamer",
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/4/45/Boundless_Crude_Gloves.png"
     },
     {
       "id": "gloves-chakkumon-s-romeo-event",
@@ -3925,7 +4067,8 @@
           "random": false,
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/d/d0/Chakkumon%27s_Romeo.png"
     },
     {
       "id": "gloves-cozy-and-warm-leather-gloves",
@@ -3945,7 +4088,8 @@
           "random": false,
           "value": 700.0
         }
-      ]
+      ],
+      "icon": "/images/8/81/Cozy_and_warm_Leather_Gloves.png"
     },
     {
       "id": "gloves-fairimon-s-gauntlet-event",
@@ -3959,7 +4103,8 @@
           "random": false,
           "value": 5.0
         }
-      ]
+      ],
+      "icon": "/images/e/ee/Fairimon%27s_Gauntlet.png"
     },
     {
       "id": "gloves-flame-gloves-of-zhuqiaomon",
@@ -3974,7 +4119,8 @@
           "axis": "tamer",
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/d/df/Flame_Gloves_of_Zhuqiaomon.png"
     },
     {
       "id": "gloves-gloves-of-zhuqiaomon",
@@ -3989,7 +4135,8 @@
           "axis": "tamer",
           "value": 250.0
         }
-      ]
+      ],
+      "icon": "/images/d/df/Flame_Gloves_of_Zhuqiaomon.png"
     },
     {
       "id": "gloves-lanamon-s-gauntlet-event",
@@ -4009,7 +4156,8 @@
           "random": false,
           "value": 2000.0
         }
-      ]
+      ],
+      "icon": "/images/f/f9/Lanamon%27s_Gauntlet.png"
     },
     {
       "id": "gloves-power-gloves-1-7-15-or-30-days",
@@ -4023,7 +4171,8 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/f/f0/Tape_3.png"
     },
     {
       "id": "gloves-power-gloves-7-days",
@@ -4037,7 +4186,8 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/e/e5/Tape_2.png"
     },
     {
       "id": "gloves-power-gloves-permanent",
@@ -4051,7 +4201,8 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/f/f0/Tape_3.png"
     },
     {
       "id": "gloves-qinglongmon-s-gloves",
@@ -4066,7 +4217,8 @@
           "axis": "tamer",
           "value": 250.0
         }
-      ]
+      ],
+      "icon": "/images/4/4d/Qinglongmon%27s_Radiant_Gloves.png"
     },
     {
       "id": "gloves-qinglongmon-s-lightning-gloves",
@@ -4081,7 +4233,8 @@
           "axis": "tamer",
           "value": 330.0
         }
-      ]
+      ],
+      "icon": "/images/3/39/Qinglongmon%27s_Thunder_Gloves.png"
     },
     {
       "id": "gloves-qinglongmon-s-radiant-gloves",
@@ -4096,7 +4249,8 @@
           "axis": "tamer",
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/4/4d/Qinglongmon%27s_Radiant_Gloves.png"
     },
     {
       "id": "gloves-shiny-desert-gloves-60-days",
@@ -4111,7 +4265,8 @@
           "axis": "tamer",
           "value": 210.0
         }
-      ]
+      ],
+      "icon": "/images/0/0d/Shiny_Desert_Gloves_Icon.png"
     },
     {
       "id": "gloves-small-lollipop",
@@ -4132,7 +4287,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/8/85/Small_Lollipop_.png"
     },
     {
       "id": "gloves-spirit-gloves",
@@ -4149,7 +4305,8 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "icon": "/images/8/80/DigimonFrontierGloves.png"
     },
     {
       "id": "gloves-spirit-gloves-2",
@@ -4166,7 +4323,8 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "icon": "/images/8/80/DigimonFrontierGloves.png"
     },
     {
       "id": "gloves-spirit-gloves-3",
@@ -4190,7 +4348,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "icon": "/images/8/80/DigimonFrontierGloves.png"
     },
     {
       "id": "gloves-square-lollipop",
@@ -4211,7 +4370,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/f/f4/Square_Lollipop.png"
     },
     {
       "id": "gloves-star-lollipop",
@@ -4232,14 +4392,16 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/9/9b/Star_Lollipop.png"
     },
     {
       "id": "gloves-tape",
       "name": "Tape",
       "slot": "Gloves",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/4f/Tape.png"
     },
     {
       "id": "gloves-trendy-watch-event",
@@ -4259,7 +4421,8 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/1/12/Trendy_Watch_Event.png"
     },
     {
       "id": "gloves-warumonzaemon-gloves",
@@ -4281,7 +4444,8 @@
           "axis": "tamer",
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/0/07/WaruMonzaemon_Gloves.png"
     },
     {
       "id": "gloves-xuanwumon-gloves",
@@ -4296,7 +4460,8 @@
           "axis": "tamer",
           "value": 250.0
         }
-      ]
+      ],
+      "icon": "/images/4/43/Ebonwumon_Gloves.png"
     },
     {
       "id": "gloves-xuanwumon-s-aquatic-gloves",
@@ -4311,7 +4476,8 @@
           "axis": "tamer",
           "value": 330.0
         }
-      ]
+      ],
+      "icon": "/images/4/4f/Xuanwumon%27s_Aquatic_Gloves.png"
     },
     {
       "id": "gloves-xuanwumon-shiny-gloves",
@@ -4326,7 +4492,8 @@
           "axis": "tamer",
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/4/43/Ebonwumon_Gloves.png"
     },
     {
       "id": "gloves-yolei-t-k-davis-gloves",
@@ -4344,6 +4511,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
+      "icon": "/images/b/b7/MDGGloves.png",
       "axis_source": "override"
     },
     {
@@ -4362,6 +4530,7 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
+      "icon": "/images/b/b7/MDGGloves.png",
       "axis_source": "override"
     },
     {
@@ -4387,6 +4556,7 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
+      "icon": "/images/b/b7/MDGGloves.png",
       "axis_source": "override"
     },
     {
@@ -4402,7 +4572,8 @@
           "axis": "tamer",
           "value": 330.0
         }
-      ]
+      ],
+      "icon": "/images/8/80/Zhuqiamon%27s_Infernal_Gloves.png"
     },
     {
       "id": "head-arbormon-s-helmet-event",
@@ -4422,7 +4593,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/c/cd/Arbormon%27s_Helmet.png"
     },
     {
       "id": "head-baihumon-s-flawless-ornament",
@@ -4443,7 +4615,8 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/7/73/Baihumon%27s_Flawless_Ornament.png"
     },
     {
       "id": "head-chakkumon-s-integrated-ear-muffs-event",
@@ -4463,7 +4636,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/9/99/Chakkumon%27s_Integrated_Ear_Muffs.png"
     },
     {
       "id": "head-cozy-and-warm-hat",
@@ -4484,7 +4658,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/8/8e/Cozy_and_warm_Hat.png"
     },
     {
       "id": "head-fairimon-s-wing-googles-event",
@@ -4504,7 +4679,8 @@
           "random": false,
           "value": 3.0
         }
-      ]
+      ],
+      "icon": "/images/a/af/Fairimon%27s_Wing_Googles.png"
     },
     {
       "id": "head-lanamon-s-helmet-event",
@@ -4524,7 +4700,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/a/a7/Lanamon%27s_Helmet.png"
     },
     {
       "id": "head-qinglongmon-s-lightning-ornament",
@@ -4545,7 +4722,8 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/d/d6/Qinglongmon%27s_Thunder_Hair_Accessory.png"
     },
     {
       "id": "head-soulmon-halloween-hat",
@@ -4559,7 +4737,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/b/b0/Halloween_hat.png"
     },
     {
       "id": "head-spirit-helmet",
@@ -4576,7 +4755,8 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "icon": "/images/2/2b/DigimonFrontierHead.png"
     },
     {
       "id": "head-spirit-helmet-2",
@@ -4593,7 +4773,8 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "icon": "/images/2/2b/DigimonFrontierHead.png"
     },
     {
       "id": "head-spirit-helmet-3",
@@ -4617,7 +4798,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "icon": "/images/2/2b/DigimonFrontierHead.png"
     },
     {
       "id": "head-spooky-pumpkinmon-s-mask-30-days",
@@ -4638,7 +4820,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/4/4a/Spooky_Pumpkinmon%27s_Mask_%2830_days%29.png"
     },
     {
       "id": "head-trendy-ball-cap-event",
@@ -4658,7 +4841,8 @@
           "random": false,
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/b/b1/Trendy_Ball_Cap_Event.png"
     },
     {
       "id": "head-xuanwumon-s-aquatic-ornament",
@@ -4679,7 +4863,8 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/e/ef/Xuanwumon%27s_Aquatic_Ornament.png"
     },
     {
       "id": "head-yolei-t-k-davis-head",
@@ -4697,6 +4882,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
+      "icon": "/images/b/ba/MDGHead.png",
       "axis_source": "override"
     },
     {
@@ -4715,6 +4901,7 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
+      "icon": "/images/b/ba/MDGHead.png",
       "axis_source": "override"
     },
     {
@@ -4740,6 +4927,7 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
+      "icon": "/images/b/ba/MDGHead.png",
       "axis_source": "override"
     },
     {
@@ -4761,7 +4949,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/8/88/Zhuqiaomon%27s_Infernal_Ornament.png"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-1",
@@ -4793,7 +4982,8 @@
           "min": 3.0,
           "max": 6.0
         }
-      ]
+      ],
+      "icon": "/images/9/94/Spiral_Key_Ring_Lv.1-5.png"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-2",
@@ -4825,7 +5015,8 @@
           "min": 5.0,
           "max": 10.0
         }
-      ]
+      ],
+      "icon": "/images/9/94/Spiral_Key_Ring_Lv.1-5.png"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-3",
@@ -4857,7 +5048,8 @@
           "min": 11.0,
           "max": 22.0
         }
-      ]
+      ],
+      "icon": "/images/9/94/Spiral_Key_Ring_Lv.1-5.png"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-4",
@@ -4889,7 +5081,8 @@
           "min": 18.0,
           "max": 37.0
         }
-      ]
+      ],
+      "icon": "/images/9/94/Spiral_Key_Ring_Lv.1-5.png"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-5",
@@ -4921,7 +5114,8 @@
           "min": 29.0,
           "max": 59.0
         }
-      ]
+      ],
+      "icon": "/images/9/94/Spiral_Key_Ring_Lv.1-5.png"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-6",
@@ -4953,7 +5147,8 @@
           "min": 43.0,
           "max": 86.0
         }
-      ]
+      ],
+      "icon": "/images/8/8e/Spiral_Key_Ring_Lv.6%2B.png"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-7",
@@ -4985,7 +5180,8 @@
           "min": 59.0,
           "max": 119.0
         }
-      ]
+      ],
+      "icon": "/images/8/8e/Spiral_Key_Ring_Lv.6%2B.png"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-max",
@@ -5017,42 +5213,48 @@
           "min": 78.0,
           "max": 156.0
         }
-      ]
+      ],
+      "icon": "/images/8/8e/Spiral_Key_Ring_Lv.6%2B.png"
     },
     {
       "id": "necklaces-arcane-quad-core-necklace",
       "name": "Arcane Quad-core Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/9f/Quad_Core_Necklace_Unopened.png"
     },
     {
       "id": "necklaces-arcane-tri-core-necklace",
       "name": "Arcane Tri-core Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/3/3c/Tricore_Necklace_Unopened.png"
     },
     {
       "id": "necklaces-aural-necklace-of-sealed-baihumon",
       "name": "Aural Necklace of Sealed Baihumon",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/c/c4/Baihumon_Shiny_Necklace.png"
     },
     {
       "id": "necklaces-boundless-advanced-necklace",
       "name": "Boundless Advanced Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/43/Boundless_Advanced_Necklace.png"
     },
     {
       "id": "necklaces-digital-hazard-necklace",
       "name": "Digital Hazard Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/6c/Digital_Hazard_Necklace.png"
     },
     {
       "id": "necklaces-fanglongmon-s-ancient-necklace-lv-1",
@@ -5103,7 +5305,8 @@
       "name": "Fanglongmon's Ancient Necklace [Lv.1-10]",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/f7/Fanglongmon_Necklace.png"
     },
     {
       "id": "necklaces-fanglongmon-s-ancient-necklace-lv-10",
@@ -5506,14 +5709,16 @@
       "name": "Flame Necklace of Sealed Zhuqiaomon",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/73/Flame_Necklace_of_Sealed_Zhuqiamon.png"
     },
     {
       "id": "necklaces-growth-accessory-necklace",
       "name": "Growth Accessory (Necklace)",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/e0/Growth_Accessory_%28Necklace%29.png"
     },
     {
       "id": "necklaces-imperial-necklaces",
@@ -5546,7 +5751,8 @@
       "name": "Imperial Necklaces [15 Days]",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/85/Imperial_Necklaces.png"
     },
     {
       "id": "necklaces-maximum",
@@ -5629,14 +5835,16 @@
       "name": "Miracle Necklace [Level 10]",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/6b/Miracle_Necklace_Lv10.png"
     },
     {
       "id": "necklaces-miracle-necklace-special",
       "name": "Miracle Necklace (Special)",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/2/29/Miracle_Necklace_%28Special%29.PNG"
     },
     {
       "id": "necklaces-necklace-of-four-holy-beasts-lv-1",
@@ -5821,7 +6029,8 @@
       "name": "Necklace of Sealed Baihumon",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/c/cb/Baihumon_Necklace.png"
     },
     {
       "id": "necklaces-necklaces-with-3-options",
@@ -5916,21 +6125,24 @@
       "name": "Qinglongmon's Sealed Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/98/Qinglongmon%27s_Sealed_Necklace.png"
     },
     {
       "id": "necklaces-qinglongmon-s-sealed-radiant-necklace",
       "name": "Qinglongmon's Sealed Radiant Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/3/3b/Qinglongmon%27s_Sealed_Radiant_Necklace.png"
     },
     {
       "id": "necklaces-radiant-miracle-necklace",
       "name": "Radiant Miracle Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/7c/Radiant_Miracle_Necklace.png"
     },
     {
       "id": "necklaces-radiant-necklace-of-four-holy-beasts-lv-1",
@@ -6115,42 +6327,48 @@
       "name": "Sealed Necklace of Datamon",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/8f/Sealed_Necklace_of_Datamon_Unopened.png"
     },
     {
       "id": "necklaces-sealed-necklace-of-four-holy-beasts-lv-1-5",
       "name": "Sealed Necklace of Four Holy Beasts [Lv.1-5]",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/04/Sealed_Necklace_of_Four_Holy_Beasts.png"
     },
     {
       "id": "necklaces-sealed-radiant-necklace-of-four-holy-beasts-lv-1-5",
       "name": "Sealed Radiant Necklace of Four Holy Beasts [Lv.1-5]",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/b/b0/Sealed_Radiant_Necklace_of_Four_Holy_Beasts.png"
     },
     {
       "id": "necklaces-sealed-xuanwumon-necklace",
       "name": "Sealed Xuanwumon Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/fd/Ebonwumon_Necklace.png"
     },
     {
       "id": "necklaces-shining-necklace-of-datamon",
       "name": "Shining Necklace of Datamon",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/8f/Sealed_Necklace_of_Datamon_Unopened.png"
     },
     {
       "id": "necklaces-shiny-high-powered-quad-core-necklace",
       "name": "Shiny High-Powered Quad-Core Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/d4/Shiny_High-Powered_Quad-Core_Necklace.png"
     },
     {
       "id": "necklaces-underworld-necklaces",
@@ -6177,21 +6395,24 @@
       "name": "Xuanwumon Sealed Shiny Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/ef/Ebonwumon_Shiny_Necklace.png"
     },
     {
       "id": "necklaces-zero-unit-necklace",
       "name": "Zero Unit Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/dc/Zero_Unit_Necklace.png"
     },
     {
       "id": "necklaces-zhuqiaomon-sealed-necklace",
       "name": "Zhuqiaomon Sealed Necklace",
       "slot": "Necklaces",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/12/Zhuqiaomon_Necklace.png"
     },
     {
       "id": "old-avatar-costume-7th-anniversary-costume",
@@ -6205,7 +6426,8 @@
           "random": false,
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/0/02/7th_Anniversary_Costume.png"
     },
     {
       "id": "old-avatar-costume-9th-anniversary-costume",
@@ -6219,7 +6441,8 @@
           "random": false,
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/1/12/9th_Anniversary_Costume.png"
     },
     {
       "id": "old-avatar-costume-adorable-panda-doll-clothes",
@@ -6245,7 +6468,8 @@
           "random": false,
           "value": 150.0
         }
-      ]
+      ],
+      "icon": "/images/0/05/Panda_Doll_Clothes.png"
     },
     {
       "id": "old-avatar-costume-adorable-rabbit-doll-clothes",
@@ -6271,7 +6495,8 @@
           "random": false,
           "value": 150.0
         }
-      ]
+      ],
+      "icon": "/images/e/ec/Rabbit_Doll_Clothes.png"
     },
     {
       "id": "old-avatar-costume-adventure-tamer-avatar",
@@ -6297,14 +6522,16 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/1/11/Adventure_Tamer_Avatar.png"
     },
     {
       "id": "old-avatar-costume-archery-uniform",
       "name": "Archery Uniform",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/1d/Archery_Uniform.png"
     },
     {
       "id": "old-avatar-costume-archery-uniform-2",
@@ -6330,7 +6557,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/1/1d/Archery_Uniform.png"
     },
     {
       "id": "old-avatar-costume-archery-uniform-3",
@@ -6350,35 +6578,40 @@
           "random": false,
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/1/1d/Archery_Uniform.png"
     },
     {
       "id": "old-avatar-costume-beachwear-black",
       "name": "Beachwear (Black)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/7d/Beachwear_%28Black%29.png"
     },
     {
       "id": "old-avatar-costume-beachwear-green",
       "name": "Beachwear (Green)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/15/Beachwear_%28Green%29.png"
     },
     {
       "id": "old-avatar-costume-beachwear-normal",
       "name": "Beachwear (Normal)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/9d/Beachwear_%28Normal%29.png"
     },
     {
       "id": "old-avatar-costume-beachwear-yellow",
       "name": "Beachwear (Yellow)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/19/Beachwear_%28Yellow%29.png"
     },
     {
       "id": "old-avatar-costume-beginner-s-orange-soccer-uniform",
@@ -6404,14 +6637,16 @@
           "random": false,
           "value": 700.0
         }
-      ]
+      ],
+      "icon": "/images/9/99/Beginner%27s_Orange_Soccer_Uniform.png"
     },
     {
       "id": "old-avatar-costume-bellboy-costume-thomas",
       "name": "Bellboy Costume (Thomas)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/3/3d/Bellboy_Costume_%28Thomas%29.png"
     },
     {
       "id": "old-avatar-costume-bellboy-costume-thomas-2",
@@ -6431,14 +6666,16 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/3/3d/Bellboy_Costume_%28Thomas%29.png"
     },
     {
       "id": "old-avatar-costume-black-teddy-bear-doll-clothes",
       "name": "Black Teddy Bear Doll Clothes",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/ed/Black_Teddy_Bear_Doll_Clothes.png"
     },
     {
       "id": "old-avatar-costume-champion-s-taekwondo-uniform",
@@ -6458,7 +6695,8 @@
           "random": false,
           "value": 2500.0
         }
-      ]
+      ],
+      "icon": "/images/d/d5/Taekwondo_Uniform.png"
     },
     {
       "id": "old-avatar-costume-champion-s-white-soccer-uniform",
@@ -6484,7 +6722,8 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/3/34/Champion%27s_White_Soccer_Uniform.png"
     },
     {
       "id": "old-avatar-costume-cute-black-teddy-bear-doll-clothes",
@@ -6510,7 +6749,8 @@
           "random": false,
           "value": 150.0
         }
-      ]
+      ],
+      "icon": "/images/e/ed/Black_Teddy_Bear_Doll_Clothes.png"
     },
     {
       "id": "old-avatar-costume-cute-sumo-referee-costume-t-k",
@@ -6530,7 +6770,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/4/43/Sumo_Referee_Costume_%28T.K.%29.png"
     },
     {
       "id": "old-avatar-costume-cute-teddy-bear-doll-clothes",
@@ -6556,7 +6797,8 @@
           "random": false,
           "value": 150.0
         }
-      ]
+      ],
+      "icon": "/images/0/09/Teddy_Bear_Doll_Clothes.png"
     },
     {
       "id": "old-avatar-costume-cute-white-teddy-bear-doll-clothes",
@@ -6582,49 +6824,56 @@
           "random": false,
           "value": 150.0
         }
-      ]
+      ],
+      "icon": "/images/d/d7/White_Teddy_Bear_Doll_Clothes.png"
     },
     {
       "id": "old-avatar-costume-d-a-t-s-uniform",
       "name": "D.A.T.S. Uniform",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/4a/D.A.T.S._Uniform.png"
     },
     {
       "id": "old-avatar-costume-divingsuit-black",
       "name": "DivingSuit (Black)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/69/DivingSuit_%28Black%29.png"
     },
     {
       "id": "old-avatar-costume-divingsuit-green",
       "name": "DivingSuit (Green)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/54/DivingSuit_%28Green%29.png"
     },
     {
       "id": "old-avatar-costume-divingsuit-normal",
       "name": "DivingSuit (Normal)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/44/DivingSuit_%28Normal%29.png"
     },
     {
       "id": "old-avatar-costume-divingsuit-normal-2",
       "name": "DivingSuit (Normal)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/44/DivingSuit_%28Normal%29.png"
     },
     {
       "id": "old-avatar-costume-divingsuit-yellow",
       "name": "DivingSuit (Yellow)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/16/DivingSuit_%28Yellow%29.png"
     },
     {
       "id": "old-avatar-costume-expert-s-green-soccer-uniform",
@@ -6650,14 +6899,16 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/8/8a/Expert%27s_Green_Soccer_Uniform.png"
     },
     {
       "id": "old-avatar-costume-fencing-uniform-costume",
       "name": "Fencing Uniform Costume",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/86/Fencing_Uniform_Costume.png"
     },
     {
       "id": "old-avatar-costume-fencing-uniform-costume-2",
@@ -6683,7 +6934,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/8/86/Fencing_Uniform_Costume.png"
     },
     {
       "id": "old-avatar-costume-figure-skate-dress-female-characters",
@@ -6709,7 +6961,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/0/05/Figure_Skate_Dress_%28Female_Characters%29.png"
     },
     {
       "id": "old-avatar-costume-for-u-avatar",
@@ -6723,7 +6976,8 @@
           "random": false,
           "value": 400.0
         }
-      ]
+      ],
+      "icon": "/images/9/90/FOR_U_Avatar.png"
     },
     {
       "id": "old-avatar-costume-gm-power-cloth",
@@ -6743,7 +6997,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/7/77/GM_Power_Cloth.png"
     },
     {
       "id": "old-avatar-costume-graceful-princess-dress-mimi",
@@ -6763,7 +7018,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/9/94/Princess_Dress_%28Mimi%29.png"
     },
     {
       "id": "old-avatar-costume-lunar-rabbit-doll-costume",
@@ -6783,7 +7039,8 @@
           "random": false,
           "value": 50.0
         }
-      ]
+      ],
+      "icon": "/images/e/ea/Lunar_Rabbit_Doll_Costume.png"
     },
     {
       "id": "old-avatar-costume-luxury-black-formal-dress",
@@ -6809,14 +7066,16 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/9/94/Luxury_Black_Formal_Dress.png"
     },
     {
       "id": "old-avatar-costume-maid-costume-yoshino",
       "name": "Maid Costume (Yoshino)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/3/3a/Maid_Costume_%28Yoshino%29.png"
     },
     {
       "id": "old-avatar-costume-maid-costume-yoshino-2",
@@ -6836,7 +7095,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/3/3a/Maid_Costume_%28Yoshino%29.png"
     },
     {
       "id": "old-avatar-costume-mature-blue-soccer-uniform",
@@ -6856,7 +7116,8 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/f/f5/Mature_Blue_Soccer_Uniform.png"
     },
     {
       "id": "old-avatar-costume-moon-rabbit-s-clothes",
@@ -6882,7 +7143,8 @@
           "random": false,
           "value": 700.0
         }
-      ]
+      ],
+      "icon": "/images/d/da/Moon_Rabbit%27s_Clothes.png"
     },
     {
       "id": "old-avatar-costume-newbie-s-yellow-soccer-uniform",
@@ -6908,28 +7170,32 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/0/07/Newbie%27s_Yellow_Soccer_Uniform.png"
     },
     {
       "id": "old-avatar-costume-original-active-clothes-savers-tamers",
       "name": "Original Active Clothes (Savers Tamers)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/f3/Original_Active_Clothes_%28Savers_Tamers%29.png"
     },
     {
       "id": "old-avatar-costume-panda-doll-clothes",
       "name": "Panda Doll Clothes",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/05/Panda_Doll_Clothes.png"
     },
     {
       "id": "old-avatar-costume-princess-dress-mimi",
       "name": "Princess Dress (Mimi)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/94/Princess_Dress_%28Mimi%29.png"
     },
     {
       "id": "old-avatar-costume-professional-black-soccer-uniform",
@@ -6949,14 +7215,16 @@
           "random": false,
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/c/c4/Professional_Black_Soccer_Uniform.png"
     },
     {
       "id": "old-avatar-costume-rabbit-doll-clothes",
       "name": "Rabbit Doll Clothes",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/ec/Rabbit_Doll_Clothes.png"
     },
     {
       "id": "old-avatar-costume-red-winged-santa-costume",
@@ -6982,7 +7250,8 @@
           "random": false,
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/e/e2/Red-Winged_Santa_Costume.png"
     },
     {
       "id": "old-avatar-costume-santa-costume",
@@ -7008,21 +7277,24 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/8/8b/Santa_Costume.png"
     },
     {
       "id": "old-avatar-costume-school-uniform-keenan",
       "name": "School Uniform (Keenan)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/00/School_Uniform_%28Keenan%29.png"
     },
     {
       "id": "old-avatar-costume-school-uniform-marcus",
       "name": "School Uniform (Marcus)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/76/School_Uniform_%28Marcus%29.png"
     },
     {
       "id": "old-avatar-costume-skating-suit-savers-tamers",
@@ -7048,14 +7320,16 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/6/68/Skating_Suit_%28Savers_Tamers%29.png"
     },
     {
       "id": "old-avatar-costume-sleepwear-costume-hikari-only",
       "name": "Sleepwear Costume (Hikari Only)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/18/Sleepwear_Costume_%28Hikari_Only%29.png"
     },
     {
       "id": "old-avatar-costume-sleepwear-costume-hikari-only-2",
@@ -7081,7 +7355,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/1/18/Sleepwear_Costume_%28Hikari_Only%29.png"
     },
     {
       "id": "old-avatar-costume-slim-fit-original-school-uniform-keenan",
@@ -7101,7 +7376,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/0/00/School_Uniform_%28Keenan%29.png"
     },
     {
       "id": "old-avatar-costume-slim-fit-original-school-uniform-marcus",
@@ -7121,7 +7397,8 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/7/76/School_Uniform_%28Marcus%29.png"
     },
     {
       "id": "old-avatar-costume-slim-fit-smart-school-uniform",
@@ -7141,14 +7418,16 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/0/0d/Smart_School_Uniform.png"
     },
     {
       "id": "old-avatar-costume-smart-school-uniform",
       "name": "Smart School Uniform",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/0d/Smart_School_Uniform.png"
     },
     {
       "id": "old-avatar-costume-snowboard-suit",
@@ -7174,35 +7453,40 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/2/28/Snowboard_Suit.png"
     },
     {
       "id": "old-avatar-costume-sumo-referee-costume-t-k",
       "name": "Sumo Referee Costume (T.K.)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/43/Sumo_Referee_Costume_%28T.K.%29.png"
     },
     {
       "id": "old-avatar-costume-swimsuit-black",
       "name": "Swimsuit (Black)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/ad/Swimsuit_%28Black%29.png"
     },
     {
       "id": "old-avatar-costume-swimsuit-green",
       "name": "Swimsuit (Green)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/4c/Swimsuit_%28Green%29.png"
     },
     {
       "id": "old-avatar-costume-swimsuit-normal",
       "name": "Swimsuit (Normal)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/db/Swimsuit_%28Normal%29.png"
     },
     {
       "id": "old-avatar-costume-swimsuit-red",
@@ -7228,28 +7512,32 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/5/5d/Swimsuit_%28Red%29.png"
     },
     {
       "id": "old-avatar-costume-swimsuit-red-adventure-tamers-only",
       "name": "Swimsuit (Red)(Adventure Tamers Only)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/92/Swimsuit_%28Red%29%28Adventure_Tamers_Only%29.png"
     },
     {
       "id": "old-avatar-costume-swimsuit-yellow",
       "name": "Swimsuit (Yellow)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/b/ba/Swimsuit_%28Yellow%29.png"
     },
     {
       "id": "old-avatar-costume-taekwondo-uniform",
       "name": "Taekwondo Uniform",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/d5/Taekwondo_Uniform.png"
     },
     {
       "id": "old-avatar-costume-taekwondo-uniform-2",
@@ -7275,21 +7563,24 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/d/d5/Taekwondo_Uniform.png"
     },
     {
       "id": "old-avatar-costume-teddy-bear-doll-clothes",
       "name": "Teddy Bear Doll Clothes",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/09/Teddy_Bear_Doll_Clothes.png"
     },
     {
       "id": "old-avatar-costume-tennis-clothes-costume-sora-only",
       "name": "Tennis Clothes Costume (Sora Only)",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/65/Tennis_Clothes_Costume_%28Sora_Only%29.png"
     },
     {
       "id": "old-avatar-costume-tennis-clothes-costume-sora-only-2",
@@ -7315,7 +7606,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/6/65/Tennis_Clothes_Costume_%28Sora_Only%29.png"
     },
     {
       "id": "old-avatar-costume-veteran-s-red-soccer-uniform",
@@ -7341,14 +7633,16 @@
           "random": false,
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/b/b9/Veteran%27s_Red_Soccer_Uniform.png"
     },
     {
       "id": "old-avatar-costume-white-teddy-bear-doll-clothes",
       "name": "White Teddy Bear Doll Clothes",
       "slot": "Old Avatar/Costume",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/d7/White_Teddy_Bear_Doll_Clothes.png"
     },
     {
       "id": "old-digivice-100-base-ot",
@@ -7362,21 +7656,24 @@
           "random": true,
           "text": "1 Random Attribute"
         }
-      ]
+      ],
+      "icon": "/images/4/48/101-Orange-AP1.PNG"
     },
     {
       "id": "old-digivice-101-orange-ap1",
       "name": "101-Orange-AP1",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/48/101-Orange-AP1.PNG"
     },
     {
       "id": "old-digivice-102-blue-bt",
       "name": "102-Blue-BT",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/b/b9/102_Blue_BT.png"
     },
     {
       "id": "old-digivice-103-ot-digivice-orange-purple-blue-snowflower",
@@ -7390,14 +7687,16 @@
           "random": true,
           "text": "2 Random Attributes"
         }
-      ]
+      ],
+      "icon": "/images/f/f2/OT_Digivice.PNG"
     },
     {
       "id": "old-digivice-103-purple-bt",
       "name": "103-Purple-BT",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/49/103_Purple_BT.png"
     },
     {
       "id": "old-digivice-advanced-102-blue-bt",
@@ -7411,28 +7710,32 @@
           "random": true,
           "text": "Random bonus stat equivalent to R11 chipset between HP, DS, AT, or DE"
         }
-      ]
+      ],
+      "icon": "/images/5/51/Advanced_b-vice.png"
     },
     {
       "id": "old-digivice-d-ark-complete-type-lv-1",
       "name": "D-Ark Complete Type Lv. 1",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/95/D-Ark_Proto_Type_Lv2-3.png"
     },
     {
       "id": "old-digivice-d-ark-complete-type-lv-2",
       "name": "D-Ark Complete Type Lv. 2",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/68/D-Ark_Complete_Lv2-3.png"
     },
     {
       "id": "old-digivice-d-ark-complete-type-lv-3",
       "name": "D-Ark Complete Type Lv. 3",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/68/D-Ark_Complete_Lv2-3.png"
     },
     {
       "id": "old-digivice-d-ark-limited-edition",
@@ -7446,7 +7749,8 @@
           "random": true,
           "text": "2 Random Attributes, SAINT-Aura"
         }
-      ]
+      ],
+      "icon": "/images/2/24/D-Ark-Item-Saint.png"
     },
     {
       "id": "old-digivice-d-ark-limited-edition-2",
@@ -7460,7 +7764,8 @@
           "random": true,
           "text": "2 Random Attributes, SAKUYA-Aura"
         }
-      ]
+      ],
+      "icon": "/images/2/26/D-Ark-Item-Sakuya.png"
     },
     {
       "id": "old-digivice-d-ark-limited-edition-3",
@@ -7474,7 +7779,8 @@
           "random": true,
           "text": "2 Random Attributes, HAZARD-Aura"
         }
-      ]
+      ],
+      "icon": "/images/d/da/D-Ark-Item-Hazard.png"
     },
     {
       "id": "old-digivice-d-ark-limited-edition-4",
@@ -7488,7 +7794,8 @@
           "random": true,
           "text": "2 Random Attributes, DESTINY-Aura"
         }
-      ]
+      ],
+      "icon": "/images/2/27/D-Ark-Item-DESTINY.png"
     },
     {
       "id": "old-digivice-d-ark-limited-edition-5",
@@ -7502,28 +7809,32 @@
           "random": true,
           "text": "2 Random Attributes, JUSTICE-Aura"
         }
-      ]
+      ],
+      "icon": "/images/e/eb/D-Ark-Item-JUSTICE.png"
     },
     {
       "id": "old-digivice-d-ark-proto-type",
       "name": "D-Ark [Proto-type]",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/da/D-Ark_ProtoType.png"
     },
     {
       "id": "old-digivice-d-ark-prototype-lv-1",
       "name": "D-Ark Prototype Lv.1",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/9b/D-Ark_Proto_Type_Lv1-2.png"
     },
     {
       "id": "old-digivice-d-ark-prototype-lv-2",
       "name": "D-Ark Prototype Lv.2",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/9b/D-Ark_Proto_Type_Lv1-2.png"
     },
     {
       "id": "old-digivice-d-ark-prototype-lv-3",
@@ -7537,7 +7848,8 @@
           "random": true,
           "text": "2 Random Attributes"
         }
-      ]
+      ],
+      "icon": "/images/9/95/D-Ark_Proto_Type_Lv2-3.png"
     },
     {
       "id": "old-digivice-digivice-adventure",
@@ -7551,14 +7863,16 @@
           "random": false,
           "value": 92.0
         }
-      ]
+      ],
+      "icon": "/images/a/ab/Digivice_Adventure_Old.png"
     },
     {
       "id": "old-digivice-digivice-of-adventure-lv-0",
       "name": "Digivice of Adventure Lv 0",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/f2/Digivice_of_Adventure_Lv_0.PNG"
     },
     {
       "id": "old-digivice-digivice-of-adventure-lv-1",
@@ -7573,7 +7887,8 @@
           "min": 153.0,
           "max": 168.0
         }
-      ]
+      ],
+      "icon": "/images/b/ba/Digivice_of_Adventure_Lv_1.PNG"
     },
     {
       "id": "old-digivice-digivice-of-adventure-lv-2",
@@ -7587,14 +7902,16 @@
           "random": true,
           "text": "2 Random Attributes"
         }
-      ]
+      ],
+      "icon": "/images/8/80/Digivice_of_Adventure_Lv_2.PNG"
     },
     {
       "id": "old-digivice-digivice-of-beginning-lv-0",
       "name": "Digivice of Beginning Lv 0",
       "slot": "Old Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/63/Digivice_of_Beginning_Lv_0.PNG"
     },
     {
       "id": "old-digivice-digivice-of-beginning-lv-1",
@@ -7609,7 +7926,8 @@
           "min": 133.0,
           "max": 152.0
         }
-      ]
+      ],
+      "icon": "/images/1/19/Digivice_of_Beginning_Lv_1.PNG"
     },
     {
       "id": "old-digivice-digivice-of-beginning-lv-2",
@@ -7623,7 +7941,8 @@
           "random": true,
           "text": "2 Random Attributes"
         }
-      ]
+      ],
+      "icon": "/images/1/1e/Digivice_of_Beginning_Lv_2.PNG"
     },
     {
       "id": "old-digivice-digivice-of-courage",
@@ -7637,7 +7956,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Courage"
         }
-      ]
+      ],
+      "icon": "/images/6/6a/Digivice_of_Courage.PNG"
     },
     {
       "id": "old-digivice-digivice-of-fate",
@@ -7651,7 +7971,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Fate"
         }
-      ]
+      ],
+      "icon": "/images/4/47/Digivice_of_Fate.PNG"
     },
     {
       "id": "old-digivice-digivice-of-friendship",
@@ -7665,7 +7986,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Friendship"
         }
-      ]
+      ],
+      "icon": "/images/9/91/Digivice_of_Friendship.PNG"
     },
     {
       "id": "old-digivice-digivice-of-hope",
@@ -7679,7 +8001,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Hope"
         }
-      ]
+      ],
+      "icon": "/images/2/29/Digivice_of_Hope.PNG"
     },
     {
       "id": "old-digivice-digivice-of-kindness",
@@ -7693,7 +8016,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Kindness"
         }
-      ]
+      ],
+      "icon": "/images/6/68/Digivice_of_Kindness.PNG"
     },
     {
       "id": "old-digivice-digivice-of-knowledge",
@@ -7707,7 +8031,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Knowledge"
         }
-      ]
+      ],
+      "icon": "/images/1/15/Digivice_of_Knowledge.PNG"
     },
     {
       "id": "old-digivice-digivice-of-light",
@@ -7721,7 +8046,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Light"
         }
-      ]
+      ],
+      "icon": "/images/3/3d/Digivice_of_Light.PNG"
     },
     {
       "id": "old-digivice-digivice-of-love",
@@ -7735,7 +8061,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Love"
         }
-      ]
+      ],
+      "icon": "/images/4/4e/Digivice_of_Love.PNG"
     },
     {
       "id": "old-digivice-digivice-of-miracles",
@@ -7749,7 +8076,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Miracles"
         }
-      ]
+      ],
+      "icon": "/images/e/e5/Digivice_of_Miracles.PNG"
     },
     {
       "id": "old-digivice-digivice-of-purity",
@@ -7763,7 +8091,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Purity"
         }
-      ]
+      ],
+      "icon": "/images/d/d8/Digivice_of_Purity.PNG"
     },
     {
       "id": "old-digivice-digivice-of-sincerity",
@@ -7777,7 +8106,8 @@
           "random": true,
           "text": "2 Random Attributes, Crest of Sincerity"
         }
-      ]
+      ],
+      "icon": "/images/7/78/Digivice_of_Reliability.PNG"
     },
     {
       "id": "old-digivice-true-digivice",
@@ -7791,7 +8121,8 @@
           "random": true,
           "text": "Right click to obtain a random Crest Digivice"
         }
-      ]
+      ],
+      "icon": "/images/e/ea/True_Digivice.PNG"
     },
     {
       "id": "old-id-cards-fancy-id-card-blaze-step",
@@ -7805,7 +8136,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/f/f1/Fancy_ID_Card_-_Blaze_Step.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-crescent",
@@ -7819,7 +8151,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/8/8b/Fancy_ID_Card_-_Crescent.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-dark-shadow",
@@ -7833,7 +8166,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/7/7b/Fancy_ID_Card_-_Dark_Shadow.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-flex",
@@ -7847,7 +8181,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/a/af/Fancy_ID_Card_-_FLEX.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-foxy",
@@ -7861,7 +8196,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/2/23/Fancy_ID_Card_-_Foxy.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-frozen-step",
@@ -7875,7 +8211,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/e/e1/Fancy_ID_Card_-_Frozen_Step.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-heaven",
@@ -7889,7 +8226,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/d/df/Fancy_ID_Card_-_Heaven.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-in-the-club",
@@ -7903,7 +8241,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/a/af/Fancy_ID_Card_-_In_the_Club.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-interstellar",
@@ -7917,7 +8256,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/8/86/Fancy_ID_Card_-_Interstellar.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-lightning-step",
@@ -7931,7 +8271,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/7/7b/Fancy_ID_Card_-_Lightning_Step.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-merry-christmas",
@@ -7945,7 +8286,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/1/19/Fancy_ID_Card_-_Merry_Christmas.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-president",
@@ -7959,7 +8301,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/b/b1/Fancy_ID_Card_-_President.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-tropical-ocean",
@@ -7973,7 +8316,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/b/b7/Fancy_ID_Card_-_Tropical_Ocean.png"
     },
     {
       "id": "old-id-cards-fancy-id-card-x-color-power",
@@ -7987,7 +8331,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/3/34/Fancy_ID_Card_-_X_Color_Power.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-blaze-step",
@@ -8001,7 +8346,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/f/f4/Magnetic_ID_Card_-_Blaze_Step.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-crescent",
@@ -8015,7 +8361,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/e/e0/Magnetic_ID_Card_-_Crescent.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-dark-shadow",
@@ -8029,7 +8376,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/d/d8/Magnetic_ID_Card_-_Dark_Shadow.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-flex",
@@ -8043,7 +8391,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/d/d4/Magnetic_ID_Card_-_FLEX.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-foxy",
@@ -8057,7 +8406,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/c/c6/Magnetic_ID_Card_-_Foxy.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-frozen-step",
@@ -8071,7 +8421,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/1/15/Magnetic_ID_Card_-_Frozen_Step.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-heaven",
@@ -8085,7 +8436,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/6/6b/Magnetic_ID_Card_-_Heaven.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-in-the-club",
@@ -8099,7 +8451,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/9/95/Magnetic_ID_Card_-_In_the_Club.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-interstellar",
@@ -8113,7 +8466,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/d/d4/Magnetic_ID_Card_-_Interstellar.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-lightning-step",
@@ -8127,7 +8481,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/7/7b/Magnetic_ID_Card_-_Lightning_Step.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-merry-christmas",
@@ -8141,7 +8496,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/6/65/Magnetic_ID_Card_-_Merry_Christmas.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-president",
@@ -8155,7 +8511,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/1/1e/Magnetic_ID_Card_-_President.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-tropical-ocean",
@@ -8169,7 +8526,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/3/34/Magnetic_ID_Card_-_Tropical_Ocean.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-x-color-power",
@@ -8183,7 +8541,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/b/b5/Magnetic_ID_Card_-_X_Color_Power.png"
     },
     {
       "id": "old-id-cards-magnetic-id-card-yellow-wings",
@@ -8209,7 +8568,8 @@
           "random": false,
           "value": 300.0
         }
-      ]
+      ],
+      "icon": "/images/f/fa/Magnetic_ID_Card_-_Yellow_Wings.png"
     },
     {
       "id": "perma-costume-perma-costume-tamer",
@@ -8248,7 +8608,8 @@
           "value": 10.0
         }
       ],
-      "upgrade": 0
+      "upgrade": 0,
+      "icon": "/images/1/1a/Dino.png"
     },
     {
       "id": "perma-id-cards-magnetic-id-card-digimon-king-at",
@@ -8273,6 +8634,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 5,
+      "icon": "/images/9/97/DigimonKing.png",
       "axis_source": "override"
     },
     {
@@ -8298,6 +8660,7 @@
       ],
       "upgrade": 6,
       "upgrade_max": 12,
+      "icon": "/images/9/97/DigimonKing.png",
       "axis_source": "override"
     },
     {
@@ -8330,6 +8693,7 @@
       ],
       "upgrade": 13,
       "upgrade_max": 15,
+      "icon": "/images/9/97/DigimonKing.png",
       "axis_source": "override"
     },
     {
@@ -8355,6 +8719,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 5,
+      "icon": "/images/d/d6/DigimonKing0.png",
       "axis_source": "override"
     },
     {
@@ -8380,6 +8745,7 @@
       ],
       "upgrade": 6,
       "upgrade_max": 12,
+      "icon": "/images/f/f1/DigimonKing5.png",
       "axis_source": "override"
     },
     {
@@ -8412,6 +8778,7 @@
       ],
       "upgrade": 13,
       "upgrade_max": 15,
+      "icon": "/images/9/92/DigimonKing15.png",
       "axis_source": "override"
     },
     {
@@ -8430,6 +8797,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 5,
+      "icon": "/images/e/eb/HeavenWing.png",
       "axis_source": "override"
     },
     {
@@ -8455,6 +8823,7 @@
       ],
       "upgrade": 6,
       "upgrade_max": 12,
+      "icon": "/images/e/eb/HeavenWing.png",
       "axis_source": "override"
     },
     {
@@ -8487,6 +8856,7 @@
       ],
       "upgrade": 13,
       "upgrade_max": 15,
+      "icon": "/images/e/eb/HeavenWing.png",
       "axis_source": "override"
     },
     {
@@ -8505,6 +8875,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 5,
+      "icon": "/images/e/eb/HeavenWing.png",
       "axis_source": "override"
     },
     {
@@ -8530,6 +8901,7 @@
       ],
       "upgrade": 6,
       "upgrade_max": 12,
+      "icon": "/images/e/eb/HeavenWing.png",
       "axis_source": "override"
     },
     {
@@ -8562,6 +8934,7 @@
       ],
       "upgrade": 13,
       "upgrade_max": 15,
+      "icon": "/images/e/eb/HeavenWing.png",
       "axis_source": "override"
     },
     {
@@ -8580,6 +8953,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 5,
+      "icon": "/images/d/dd/HeavenWing0.png",
       "axis_source": "override"
     },
     {
@@ -8605,6 +8979,7 @@
       ],
       "upgrade": 6,
       "upgrade_max": 12,
+      "icon": "/images/e/e3/HeavenWing5.png",
       "axis_source": "override"
     },
     {
@@ -8637,6 +9012,7 @@
       ],
       "upgrade": 13,
       "upgrade_max": 15,
+      "icon": "/images/3/3a/HeavenWing15.png",
       "axis_source": "override"
     },
     {
@@ -8655,6 +9031,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 5,
+      "icon": "/images/a/a8/TimeRuler.png",
       "axis_source": "override"
     },
     {
@@ -8680,6 +9057,7 @@
       ],
       "upgrade": 6,
       "upgrade_max": 12,
+      "icon": "/images/a/a8/TimeRuler.png",
       "axis_source": "override"
     },
     {
@@ -8712,6 +9090,7 @@
       ],
       "upgrade": 13,
       "upgrade_max": 15,
+      "icon": "/images/a/a8/TimeRuler.png",
       "axis_source": "override"
     },
     {
@@ -8730,6 +9109,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 5,
+      "icon": "/images/a/a8/TimeRuler.png",
       "axis_source": "override"
     },
     {
@@ -8755,6 +9135,7 @@
       ],
       "upgrade": 6,
       "upgrade_max": 12,
+      "icon": "/images/a/a8/TimeRuler.png",
       "axis_source": "override"
     },
     {
@@ -8787,6 +9168,7 @@
       ],
       "upgrade": 13,
       "upgrade_max": 15,
+      "icon": "/images/a/a8/TimeRuler.png",
       "axis_source": "override"
     },
     {
@@ -8805,6 +9187,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 5,
+      "icon": "/images/7/7d/TimeRuler0.png",
       "axis_source": "override"
     },
     {
@@ -8830,6 +9213,7 @@
       ],
       "upgrade": 6,
       "upgrade_max": 12,
+      "icon": "/images/b/b4/TimeRuler5.png",
       "axis_source": "override"
     },
     {
@@ -8862,6 +9246,7 @@
       ],
       "upgrade": 13,
       "upgrade_max": 15,
+      "icon": "/images/6/69/TimeRuler15.png",
       "axis_source": "override"
     },
     {
@@ -8869,56 +9254,64 @@
       "name": "Arcane Desert Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/13/Quad_Core_Ring_Unopened.png"
     },
     {
       "id": "rings-arcane-double-core-ring",
       "name": "Arcane Double-Core Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/48/Double_Core_Ring_Unopened.png"
     },
     {
       "id": "rings-arcane-quad-core-ring",
       "name": "Arcane Quad-core Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/13/Quad_Core_Ring_Unopened.png"
     },
     {
       "id": "rings-arcane-tri-core-ring",
       "name": "Arcane Tri-core Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/73/Tricore_Ring_Unopened.png"
     },
     {
       "id": "rings-aural-ring-of-sealed-baihumon",
       "name": "Aural Ring of Sealed Baihumon",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/88/Aural_Ring_of_Sealed_Baihumon.png"
     },
     {
       "id": "rings-boundless-advanced-ring",
       "name": "Boundless Advanced Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/18/Boundless_Advanced_Ring.png"
     },
     {
       "id": "rings-brilliant-ring-of-hope",
       "name": "Brilliant Ring of Hope",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/b/be/Brilliant_Ring_of_Hope.png"
     },
     {
       "id": "rings-digital-hazard-ring",
       "name": "Digital Hazard Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/d8/Digital_Hazard_Ring.png"
     },
     {
       "id": "rings-fanglongmon-s-ancient-ring-lv-1",
@@ -8963,7 +9356,8 @@
       "name": "Fanglongmon's Ancient Ring [Lv.1-10]",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/c/c8/Fanglongmon_Ring.png"
     },
     {
       "id": "rings-fanglongmon-s-ancient-ring-lv-10",
@@ -9264,14 +9658,16 @@
       "name": "Flame Ring of Sealed Zhuqiaomon",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/e7/Flame_Ring_of_Sealed_Zhuqiaomon.png"
     },
     {
       "id": "rings-growth-accessory-ring",
       "name": "Growth Accessory (Ring)",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/42/Growth_Accessory_%28Ring%29.png"
     },
     {
       "id": "rings-imperial-ring",
@@ -9298,7 +9694,8 @@
       "name": "Imperial Ring [15 Days]",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/12/Imperial_Ring.png"
     },
     {
       "id": "rings-maximum",
@@ -9393,28 +9790,32 @@
       "name": "Miracle Ring [Level 10]",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/06/Miracle_Ring.png"
     },
     {
       "id": "rings-miracle-ring-special",
       "name": "Miracle Ring (Special)",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/56/Special_Miracle_Ring.png"
     },
     {
       "id": "rings-qinglongmon-s-sealed-radiant-ring",
       "name": "Qinglongmon's Sealed Radiant Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/e6/Qinglongmon%27s_Sealed_Radiant_Ring.png"
     },
     {
       "id": "rings-qinglongmon-s-sealed-ring",
       "name": "Qinglongmon's Sealed Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a1/Qinglongmon%27s_Sealed_Ring.png"
     },
     {
       "id": "rings-radiant-ring-of-four-holy-beasts-lv-1",
@@ -9765,14 +10166,16 @@
       "name": "Ring of Sealed Baihumon",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/0c/Ring_of_Sealed_Baihumon.png"
     },
     {
       "id": "rings-ring-of-sealed-zhuqiaomon",
       "name": "Ring of Sealed Zhuqiaomon",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/83/Ring_of_Sealed_Zhuqiaomon.png"
     },
     {
       "id": "rings-ring-with-3-options",
@@ -9855,35 +10258,40 @@
       "name": "Sealed Radiant Ring of Four Holy Beasts [Lv.1-5]",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/88/Sealed_Radiant_Ring_of_Four_Holy_Beasts.png"
     },
     {
       "id": "rings-sealed-ring-of-four-holy-beasts-lv-1-5",
       "name": "Sealed Ring of Four Holy Beasts [Lv.1-5]",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/9/97/Sealed_Ring_of_Four_Holy_Beasts.png"
     },
     {
       "id": "rings-sealed-xuanwumon-ring",
       "name": "Sealed Xuanwumon Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a6/Sealed_Xuanwumon_Ring.png"
     },
     {
       "id": "rings-shining-arena-ring",
       "name": "Shining Arena Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/4/42/Shining_Arena_Ring.png"
     },
     {
       "id": "rings-shiny-high-powered-quad-core-ring",
       "name": "Shiny High-powered Quad-core Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/b/bd/Shiny_High-powered_Quad-core_Ring.png"
     },
     {
       "id": "rings-underworld-ring",
@@ -9910,28 +10318,32 @@
       "name": "World Cup Rings",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/53/World_Cup_Rings.png"
     },
     {
       "id": "rings-worn-desert-sand-ring",
       "name": "Worn Desert Sand Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/78/Shiny_High-powered_Desert_Sand_Ring.png"
     },
     {
       "id": "rings-xuanwumon-sealed-shiny-ring",
       "name": "Xuanwumon Sealed Shiny Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/07/Xuanwumon_Sealed_Shiny_Ring.png"
     },
     {
       "id": "rings-zero-unit-ring",
       "name": "Zero Unit Ring",
       "slot": "Rings",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/1d/Zero_Unit_Ring.png"
     },
     {
       "id": "shoes-agumon-feet-shoes-30d",
@@ -9945,21 +10357,24 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/e/e2/Agumon_Feet_Shoes.png"
     },
     {
       "id": "shoes-arbormon-s-boots-event",
       "name": "Arbormon's Boots [Event]",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/59/Arbormon%27s_Boots.png"
     },
     {
       "id": "shoes-chakkumon-s-winter-boots-event",
       "name": "Chakkumon's Winter Boots [Event]",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/0/0d/Chakkumon%27s_Winter_Boots.png"
     },
     {
       "id": "shoes-cozy-and-warm-socks",
@@ -9973,42 +10388,48 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/2/25/Cozy_and_warm_Socks.png"
     },
     {
       "id": "shoes-fairimon-s-fairy-boots-event",
       "name": "Fairimon's Fairy Boots [Event]",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/5f/Fairimon%27s_Fairy_Boots.png"
     },
     {
       "id": "shoes-lanamon-s-bangle-event",
       "name": "Lanamon's Bangle [Event]",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/2/20/Lanamon%27s_Bangle.png"
     },
     {
       "id": "shoes-new-semester-shoes",
       "name": "New Semester Shoes",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/f7/New_semester_shoes.jpg"
     },
     {
       "id": "shoes-shiny-desert-shoes-60-days",
       "name": "Shiny Desert Shoes (60 days)",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/51/Shiny_desert_shoes.png"
     },
     {
       "id": "shoes-slippers",
       "name": "Slippers",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/82/Shoes.png"
     },
     {
       "id": "shoes-spirit-shoes",
@@ -10024,7 +10445,8 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "icon": "/images/a/a8/DigimonFrontierShoes.png"
     },
     {
       "id": "shoes-spirit-shoes-2",
@@ -10046,7 +10468,8 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "icon": "/images/a/a8/DigimonFrontierShoes.png"
     },
     {
       "id": "shoes-spirit-shoes-3",
@@ -10075,7 +10498,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "icon": "/images/a/a8/DigimonFrontierShoes.png"
     },
     {
       "id": "shoes-spooky-wizardmon-shoes-30-days",
@@ -10089,21 +10513,24 @@
           "random": false,
           "value": 100.0
         }
-      ]
+      ],
+      "icon": "/images/f/f5/Spooky_Wizardmon_Shoes%2830_days%29.png"
     },
     {
       "id": "shoes-sports-sneakers-1-day",
       "name": "Sports Sneakers (1 Day)",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/e6/Sports_Sneakers.png"
     },
     {
       "id": "shoes-sports-sneakers-7-days",
       "name": "Sports Sneakers (7 Days)",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/e/e6/Sports_Sneakers.png"
     },
     {
       "id": "shoes-swimming-gears-flippers-30d",
@@ -10117,21 +10544,24 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/a/a4/Swimming_Gears_-_Flippers_%2830D%29.png"
     },
     {
       "id": "shoes-trendy-sneakers-event",
       "name": "Trendy Sneakers [Event]",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/7/78/Trendy_Sneakers_Event.png"
     },
     {
       "id": "shoes-wizardmon-shoes-30-days",
       "name": "Wizardmon Shoes [30 Days]",
       "slot": "Shoes",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/f5/Spooky_Wizardmon_Shoes%2830_days%29.png"
     },
     {
       "id": "shoes-yolei-t-k-davis-shoes",
@@ -10148,6 +10578,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
+      "icon": "/images/3/38/MDGShoes.png",
       "axis_source": "override"
     },
     {
@@ -10172,6 +10603,7 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
+      "icon": "/images/3/38/MDGShoes.png",
       "axis_source": "override"
     },
     {
@@ -10203,6 +10635,7 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
+      "icon": "/images/3/38/MDGShoes.png",
       "axis_source": "override"
     },
     {
@@ -10227,7 +10660,8 @@
           "min": 2.0,
           "max": 10.0
         }
-      ]
+      ],
+      "icon": "/images/e/e2/Spiral_Key_Ring_DS_Level_1.png"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-2",
@@ -10251,7 +10685,8 @@
           "min": 3.0,
           "max": 19.0
         }
-      ]
+      ],
+      "icon": "/images/e/e2/Spiral_Key_Ring_DS_Level_1.png"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-3",
@@ -10275,7 +10710,8 @@
           "min": 7.0,
           "max": 38.0
         }
-      ]
+      ],
+      "icon": "/images/2/2c/Spiral_Key_Ring_DS_Level_3.png"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-4",
@@ -10299,7 +10735,8 @@
           "min": 13.0,
           "max": 67.0
         }
-      ]
+      ],
+      "icon": "/images/2/2c/Spiral_Key_Ring_DS_Level_3.png"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-5",
@@ -10323,7 +10760,8 @@
           "min": 21.0,
           "max": 105.0
         }
-      ]
+      ],
+      "icon": "/images/0/0c/Spiral_Key_Ring_DS_Level_5.png"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-6",
@@ -10347,7 +10785,8 @@
           "min": 30.0,
           "max": 153.0
         }
-      ]
+      ],
+      "icon": "/images/0/0c/Spiral_Key_Ring_DS_Level_5.png"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-7",
@@ -10371,7 +10810,8 @@
           "min": 42.0,
           "max": 210.0
         }
-      ]
+      ],
+      "icon": "/images/4/4b/Spiral_Key_Ring_DS_Level_7.png"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-max",
@@ -10403,7 +10843,8 @@
           "min": 2.0,
           "max": 10.0
         }
-      ]
+      ],
+      "icon": "/images/4/4b/Spiral_Key_Ring_DS_Level_7.png"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-1",
@@ -10427,7 +10868,8 @@
           "min": 2.0,
           "max": 10.0
         }
-      ]
+      ],
+      "icon": "/images/1/1e/Spiral_Key_Ring_JT_Level_1.png"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-2",
@@ -10451,7 +10893,8 @@
           "min": 3.0,
           "max": 19.0
         }
-      ]
+      ],
+      "icon": "/images/1/1e/Spiral_Key_Ring_JT_Level_1.png"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-3",
@@ -10475,7 +10918,8 @@
           "min": 7.0,
           "max": 38.0
         }
-      ]
+      ],
+      "icon": "/images/b/b8/Spiral_Key_Ring_JT_Level_3.png"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-4",
@@ -10499,7 +10943,8 @@
           "min": 13.0,
           "max": 67.0
         }
-      ]
+      ],
+      "icon": "/images/b/b8/Spiral_Key_Ring_JT_Level_3.png"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-5",
@@ -10523,7 +10968,8 @@
           "min": 21.0,
           "max": 105.0
         }
-      ]
+      ],
+      "icon": "/images/f/fc/Spiral_Key_Ring_JT_Level_5.png"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-6",
@@ -10547,7 +10993,8 @@
           "min": 30.0,
           "max": 153.0
         }
-      ]
+      ],
+      "icon": "/images/f/fc/Spiral_Key_Ring_JT_Level_5.png"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-7",
@@ -10571,7 +11018,8 @@
           "min": 42.0,
           "max": 210.0
         }
-      ]
+      ],
+      "icon": "/images/6/65/Spiral_Key_Ring_JT_Level_7.png"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-max",
@@ -10603,7 +11051,8 @@
           "min": 2.0,
           "max": 10.0
         }
-      ]
+      ],
+      "icon": "/images/6/65/Spiral_Key_Ring_JT_Level_7.png"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-1",
@@ -10627,7 +11076,8 @@
           "min": 2.0,
           "max": 10.0
         }
-      ]
+      ],
+      "icon": "/images/7/79/Spiral_Key_Ring_ME_Level_1.png"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-2",
@@ -10651,7 +11101,8 @@
           "min": 3.0,
           "max": 19.0
         }
-      ]
+      ],
+      "icon": "/images/7/79/Spiral_Key_Ring_ME_Level_1.png"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-3",
@@ -10675,7 +11126,8 @@
           "min": 7.0,
           "max": 38.0
         }
-      ]
+      ],
+      "icon": "/images/f/f2/Spiral_Key_Ring_ME_Level_3.png"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-4",
@@ -10699,7 +11151,8 @@
           "min": 13.0,
           "max": 67.0
         }
-      ]
+      ],
+      "icon": "/images/f/f2/Spiral_Key_Ring_ME_Level_3.png"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-5",
@@ -10723,7 +11176,8 @@
           "min": 21.0,
           "max": 105.0
         }
-      ]
+      ],
+      "icon": "/images/a/ae/Spiral_Key_Ring_ME_Level_5.png"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-6",
@@ -10747,7 +11201,8 @@
           "min": 30.0,
           "max": 153.0
         }
-      ]
+      ],
+      "icon": "/images/a/ae/Spiral_Key_Ring_ME_Level_5.png"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-7",
@@ -10771,7 +11226,8 @@
           "min": 42.0,
           "max": 210.0
         }
-      ]
+      ],
+      "icon": "/images/8/81/Spiral_Key_Ring_ME_Level_7.png"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-max",
@@ -10803,7 +11259,8 @@
           "min": 2.0,
           "max": 10.0
         }
-      ]
+      ],
+      "icon": "/images/8/81/Spiral_Key_Ring_ME_Level_7.png"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-1",
@@ -10827,7 +11284,8 @@
           "min": 2.0,
           "max": 10.0
         }
-      ]
+      ],
+      "icon": "/images/b/b3/Spiral_Key_Ring_WG_Level_1.png"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-2",
@@ -10851,7 +11309,8 @@
           "min": 3.0,
           "max": 19.0
         }
-      ]
+      ],
+      "icon": "/images/b/b3/Spiral_Key_Ring_WG_Level_1.png"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-3",
@@ -10875,7 +11334,8 @@
           "min": 7.0,
           "max": 38.0
         }
-      ]
+      ],
+      "icon": "/images/9/92/Spiral_Key_Ring_WG_Level_3.png"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-4",
@@ -10899,7 +11359,8 @@
           "min": 13.0,
           "max": 67.0
         }
-      ]
+      ],
+      "icon": "/images/9/92/Spiral_Key_Ring_WG_Level_3.png"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-5",
@@ -10923,7 +11384,8 @@
           "min": 21.0,
           "max": 105.0
         }
-      ]
+      ],
+      "icon": "/images/9/90/Spiral_Key_Ring_WG_Level_5.png"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-6",
@@ -10947,7 +11409,8 @@
           "min": 30.0,
           "max": 153.0
         }
-      ]
+      ],
+      "icon": "/images/9/90/Spiral_Key_Ring_WG_Level_5.png"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-7",
@@ -10971,7 +11434,8 @@
           "min": 42.0,
           "max": 210.0
         }
-      ]
+      ],
+      "icon": "/images/9/9e/Spiral_Key_Ring_WG_Level_7.png"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-max",
@@ -11003,35 +11467,40 @@
           "min": 2.0,
           "max": 10.0
         }
-      ]
+      ],
+      "icon": "/images/9/9e/Spiral_Key_Ring_WG_Level_7.png"
     },
     {
       "id": "susa-digivice-digimon-xros-fusion-drakness-loader",
       "name": "Digimon (Xros,Fusion,Drakness) Loader",
       "slot": "Susa Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/5f/SusaLoader.PNG"
     },
     {
       "id": "susa-digivice-digimon-xros-fusion-drakness-loader-2",
       "name": "Digimon (Xros,Fusion,Drakness) Loader",
       "slot": "Susa Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/5f/SusaLoader.PNG"
     },
     {
       "id": "susa-digivice-digimon-xros-fusion-drakness-loader-3",
       "name": "Digimon (Xros,Fusion,Drakness) Loader",
       "slot": "Susa Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/5/5f/SusaLoader.PNG"
     },
     {
       "id": "susa-digivice-digimon-xros-fusion-drakness-loader-4",
       "name": "Digimon (Xros,Fusion,Drakness) Loader",
       "slot": "Susa Digivice",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/d/d2/SusaLoaderMax.PNG"
     },
     {
       "id": "tamer-s-goggles-complete-tamer-s-goggles",
@@ -11061,14 +11530,16 @@
           "min": 200.0,
           "max": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/f/f1/Tamer%E2%80%99s_Goggles_Lv.Max.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-1",
       "name": "Tamer’s Goggles Lv.1",
       "slot": "Tamer`s Goggles",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/85/Tamer%E2%80%99s_Goggles_Lv.1.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-10",
@@ -11090,7 +11561,8 @@
           "random": false,
           "value": 10.0
         }
-      ]
+      ],
+      "icon": "/images/3/3f/Tamer%E2%80%99s_Goggles_Lv.6-10.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-11",
@@ -11120,7 +11592,8 @@
           "min": 20.0,
           "max": 100.0
         }
-      ]
+      ],
+      "icon": "/images/b/bc/Tamer%E2%80%99s_Goggles_Lv.11-15.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-12",
@@ -11150,7 +11623,8 @@
           "min": 36.0,
           "max": 180.0
         }
-      ]
+      ],
+      "icon": "/images/b/bc/Tamer%E2%80%99s_Goggles_Lv.11-15.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-13",
@@ -11180,7 +11654,8 @@
           "min": 50.0,
           "max": 250.0
         }
-      ]
+      ],
+      "icon": "/images/b/bc/Tamer%E2%80%99s_Goggles_Lv.11-15.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-14",
@@ -11210,7 +11685,8 @@
           "min": 90.0,
           "max": 450.0
         }
-      ]
+      ],
+      "icon": "/images/b/bc/Tamer%E2%80%99s_Goggles_Lv.11-15.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-15",
@@ -11240,7 +11716,8 @@
           "min": 140.0,
           "max": 700.0
         }
-      ]
+      ],
+      "icon": "/images/b/bc/Tamer%E2%80%99s_Goggles_Lv.11-15.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-2",
@@ -11262,7 +11739,8 @@
           "random": false,
           "value": 1.0
         }
-      ]
+      ],
+      "icon": "/images/1/11/Tamer%E2%80%99s_Goggles_Lv.2-5.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-3",
@@ -11284,7 +11762,8 @@
           "random": false,
           "value": 2.0
         }
-      ]
+      ],
+      "icon": "/images/1/11/Tamer%E2%80%99s_Goggles_Lv.2-5.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-4",
@@ -11306,7 +11785,8 @@
           "random": false,
           "value": 3.0
         }
-      ]
+      ],
+      "icon": "/images/1/11/Tamer%E2%80%99s_Goggles_Lv.2-5.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-5",
@@ -11328,7 +11808,8 @@
           "random": false,
           "value": 4.0
         }
-      ]
+      ],
+      "icon": "/images/1/11/Tamer%E2%80%99s_Goggles_Lv.2-5.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-6",
@@ -11350,7 +11831,8 @@
           "random": false,
           "value": 5.0
         }
-      ]
+      ],
+      "icon": "/images/3/3f/Tamer%E2%80%99s_Goggles_Lv.6-10.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-7",
@@ -11372,7 +11854,8 @@
           "random": false,
           "value": 6.0
         }
-      ]
+      ],
+      "icon": "/images/3/3f/Tamer%E2%80%99s_Goggles_Lv.6-10.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-8",
@@ -11394,7 +11877,8 @@
           "random": false,
           "value": 7.0
         }
-      ]
+      ],
+      "icon": "/images/3/3f/Tamer%E2%80%99s_Goggles_Lv.6-10.png"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-9",
@@ -11416,7 +11900,8 @@
           "random": false,
           "value": 8.0
         }
-      ]
+      ],
+      "icon": "/images/3/3f/Tamer%E2%80%99s_Goggles_Lv.6-10.png"
     },
     {
       "id": "top-agumon-top",
@@ -11431,7 +11916,8 @@
           "axis": "tamer",
           "value": 700.0
         }
-      ]
+      ],
+      "icon": "/images/c/c6/Agumon_Top.png"
     },
     {
       "id": "top-arbormon-s-upper-armor-event",
@@ -11445,7 +11931,8 @@
           "random": false,
           "value": 700.0
         }
-      ]
+      ],
+      "icon": "/images/3/3d/Arbormon%27s_Upper_Armor.png"
     },
     {
       "id": "top-aural-hooded-shirt-of-baihumon",
@@ -11460,7 +11947,8 @@
           "axis": "tamer",
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/8/8e/Baihumon_Hoodie.png"
     },
     {
       "id": "top-baihumon-s-flawless-hooded-shirt",
@@ -11475,7 +11963,8 @@
           "axis": "tamer",
           "value": 1100.0
         }
-      ]
+      ],
+      "icon": "/images/9/94/Baihumon%27s_Flawless_Hooded_Shirt.png"
     },
     {
       "id": "top-chakkumon-s-ice-vest-event",
@@ -11495,7 +11984,8 @@
           "random": false,
           "value": 150.0
         }
-      ]
+      ],
+      "icon": "/images/f/f1/Chakkumon%27s_Ice_Vest.png"
     },
     {
       "id": "top-cozy-and-warm-quilting-jacket",
@@ -11509,7 +11999,8 @@
           "random": false,
           "value": 700.0
         }
-      ]
+      ],
+      "icon": "/images/f/f7/Cozy_and_warm_Quilting_Jacket.png"
     },
     {
       "id": "top-fairimon-s-upper-armor-event",
@@ -11529,7 +12020,8 @@
           "random": false,
           "value": 3.0
         }
-      ]
+      ],
+      "icon": "/images/6/6c/Fairimon%27s_Upper_Armor.png"
     },
     {
       "id": "top-flame-hooded-shirt-of-zhuqiaomon",
@@ -11544,7 +12036,8 @@
           "axis": "tamer",
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/b/bf/Flame_Hoodie_of_Zhuqiaomon.png"
     },
     {
       "id": "top-hooded-shirt-of-baihumon",
@@ -11559,7 +12052,8 @@
           "axis": "tamer",
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/8/8e/Baihumon_Hoodie.png"
     },
     {
       "id": "top-hooded-shirt-of-qinglongmon",
@@ -11574,7 +12068,8 @@
           "axis": "tamer",
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/9/90/Qinglongmon%27s_Radiant_Hoodie.png"
     },
     {
       "id": "top-hooded-shirt-of-zhuqiaomon",
@@ -11589,7 +12084,8 @@
           "axis": "tamer",
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/b/bf/Flame_Hoodie_of_Zhuqiaomon.png"
     },
     {
       "id": "top-lanamon-s-swimsuit-event",
@@ -11609,7 +12105,8 @@
           "random": false,
           "value": 2000.0
         }
-      ]
+      ],
+      "icon": "/images/d/d9/Lanamon%27s_Swimsuit.png"
     },
     {
       "id": "top-qinglongmon-s-lightning-hooded-shirt",
@@ -11624,7 +12121,8 @@
           "axis": "tamer",
           "value": 900.0
         }
-      ]
+      ],
+      "icon": "/images/c/c8/Qinglongmon%27s_Thunder_Hooded_Shirt.png"
     },
     {
       "id": "top-radiant-hooded-shirt-of-qinglongmon",
@@ -11639,7 +12137,8 @@
           "axis": "tamer",
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/9/90/Qinglongmon%27s_Radiant_Hoodie.png"
     },
     {
       "id": "top-spirit-top",
@@ -11656,7 +12155,8 @@
         }
       ],
       "upgrade": 0,
-      "upgrade_max": 4
+      "upgrade_max": 4,
+      "icon": "/images/d/d5/DigimonFrontierTop.png"
     },
     {
       "id": "top-spirit-top-2",
@@ -11673,7 +12173,8 @@
         }
       ],
       "upgrade": 5,
-      "upgrade_max": 9
+      "upgrade_max": 9,
+      "icon": "/images/d/d5/DigimonFrontierTop.png"
     },
     {
       "id": "top-spirit-top-3",
@@ -11697,7 +12198,8 @@
         }
       ],
       "upgrade": 10,
-      "upgrade_max": 15
+      "upgrade_max": 15,
+      "icon": "/images/d/d5/DigimonFrontierTop.png"
     },
     {
       "id": "top-spooky-soulmon-s-robe-30-days",
@@ -11712,14 +12214,16 @@
           "axis": "tamer",
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/b/b0/Spooky_Soulmon%27s_Robe_%2830_days%29.png"
     },
     {
       "id": "top-t-shirts",
       "name": "T-Shirts",
       "slot": "Top",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/6/67/Shirt.png"
     },
     {
       "id": "top-trendy-white-shirt-event",
@@ -11739,7 +12243,8 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/f/f9/Trendy_Shirts_Event.png"
     },
     {
       "id": "top-unlimited-advanced-t-shirt-30-days",
@@ -11754,7 +12259,8 @@
           "axis": "tamer",
           "value": 800.0
         }
-      ]
+      ],
+      "icon": "/images/3/34/Unlimited_Advanced_T_-shirt.jpg"
     },
     {
       "id": "top-xuanwumon-hooded-shirt",
@@ -11769,7 +12275,8 @@
           "axis": "tamer",
           "value": 500.0
         }
-      ]
+      ],
+      "icon": "/images/3/39/Ebonwumon_Hoodie.png"
     },
     {
       "id": "top-xuanwumon-s-aquatic-hooded-shirt",
@@ -11784,7 +12291,8 @@
           "axis": "tamer",
           "value": 1200.0
         }
-      ]
+      ],
+      "icon": "/images/d/df/Xuanwumon%27s_Aquatic_Hooded_Shirt.png"
     },
     {
       "id": "top-xuanwumon-shiny-hooded-shirt",
@@ -11799,7 +12307,8 @@
           "axis": "tamer",
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/3/39/Ebonwumon_Hoodie.png"
     },
     {
       "id": "top-yolei-t-k-davis-top",
@@ -11817,6 +12326,7 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
+      "icon": "/images/7/7e/MDGTop.png",
       "axis_source": "override"
     },
     {
@@ -11835,6 +12345,7 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
+      "icon": "/images/7/7e/MDGTop.png",
       "axis_source": "override"
     },
     {
@@ -11860,6 +12371,7 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
+      "icon": "/images/7/7e/MDGTop.png",
       "axis_source": "override"
     },
     {
@@ -11875,7 +12387,8 @@
           "axis": "tamer",
           "value": 900.0
         }
-      ]
+      ],
+      "icon": "/images/f/f5/Zhuqiamon%27s_Infernal_Hooded_Shirt.png"
     },
     {
       "id": "xai-system-sakura-xai-ver-vi",
@@ -11889,7 +12402,8 @@
           "random": false,
           "value": 200.0
         }
-      ]
+      ],
+      "icon": "/images/b/bf/XAI_Ver_VI_Sakura.png"
     },
     {
       "id": "xai-system-xai-ver-anniversary",
@@ -11915,42 +12429,48 @@
           "random": false,
           "value": 1500.0
         }
-      ]
+      ],
+      "icon": "/images/5/59/XAI_Ver._Anniversary.png"
     },
     {
       "id": "xai-system-xai-ver-i",
       "name": "XAI Ver. I",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/a/a2/XAI_ver_i.png"
     },
     {
       "id": "xai-system-xai-ver-ii",
       "name": "XAI Ver. II",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/1/19/XAI_Ver_ii.png"
     },
     {
       "id": "xai-system-xai-ver-iii",
       "name": "XAI Ver. III",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/8/8c/XAI_ver_iii.png"
     },
     {
       "id": "xai-system-xai-ver-iv",
       "name": "XAI Ver. IV",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/fb/XAI_Ver_iv.png"
     },
     {
       "id": "xai-system-xai-ver-ix",
       "name": "XAI Ver. IX",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/fb/XAI_Ver_iv.png"
     },
     {
       "id": "xai-system-xai-ver-storm",
@@ -11970,7 +12490,8 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/9/91/XAI_ver_storm.png"
     },
     {
       "id": "xai-system-xai-ver-storm-ii",
@@ -11990,42 +12511,48 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/1/14/XAI_ver_storm_ii.png"
     },
     {
       "id": "xai-system-xai-ver-v",
       "name": "XAI Ver. V",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/c/c4/XAI_ver_v.png"
     },
     {
       "id": "xai-system-xai-ver-vi",
       "name": "XAI Ver. VI",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/f3/XAI_ver_vi.png"
     },
     {
       "id": "xai-system-xai-ver-vii",
       "name": "XAI Ver. VII",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/fb/XAI_Ver_iv.png"
     },
     {
       "id": "xai-system-xai-ver-viii",
       "name": "XAI Ver. VIII",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/fb/XAI_Ver_iv.png"
     },
     {
       "id": "xai-system-xai-ver-x",
       "name": "XAI Ver. X",
       "slot": "XAI System",
       "axis": "unknown",
-      "stats": []
+      "stats": [],
+      "icon": "/images/f/fb/XAI_Ver_iv.png"
     },
     {
       "id": "xai-system-xai-ver-x-mas",
@@ -12045,7 +12572,8 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/9/9e/XAI_ver_x-mas.png"
     },
     {
       "id": "xai-system-xai-ver-x-mas-2",
@@ -12065,7 +12593,8 @@
           "random": false,
           "value": 1000.0
         }
-      ]
+      ],
+      "icon": "/images/f/f1/XAI_ver_x-mas_II.png"
     }
   ],
   "skipped": [

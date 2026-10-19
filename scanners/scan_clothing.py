@@ -340,6 +340,11 @@ def parse_rowwise(rows, path, seen, stats_cols, name_col, upgrade_col, header):
                 rec["upgrade"] = int(nums[0])
                 if len(nums) > 1 and int(nums[-1]) != int(nums[0]):
                     rec["upgrade_max"] = int(nums[-1])
+        # The item's own picture sits in the cells up to the name; later cells
+        # can hold unrelated ones (a boss icon in "How to Obtain").
+        icon = re.search(r'<img[^>]+src="(/images/[^"]+)"', "".join(cells[:name_col + 1]))
+        if icon:
+            rec["icon"] = icon.group(1)
         items.append(rec)
     return items, unread
 

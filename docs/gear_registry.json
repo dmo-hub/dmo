@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-09-07",
+  "built_at": "2026-10-19",
   "source": "data/clothing_items.json",
   "note": "stat values are the TOP of each roll range and the highest upgrade band; axis 'unknown' means the wiki never said which side the stat feeds",
   "items": [
@@ -12,6 +12,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
+      "icon": "img/gear/digimonfrontierbottom.png",
       "DS": 8000,
       "ranged": true,
       "extra": [
@@ -28,6 +30,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "unknown",
+      "iconWiki": "/images/4/4a/Agumon_Bottom.png",
+      "icon": "img/gear/agumon_bottom.png",
       "AT": 200,
       "DS": 1200
     },
@@ -37,6 +41,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "unknown",
+      "iconWiki": "/images/f/f9/Arbormon%27s_Lower_Armor.png",
+      "icon": "img/gear/arbormon_s_lower_armor.png",
       "DS": 700,
       "extra": [
         {
@@ -52,6 +58,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/0/0c/Baihumon_Pants.png",
+      "icon": "img/gear/baihumon_pants.png",
       "DS": 1000
     },
     {
@@ -60,6 +68,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/0/04/Baihumon%27s_Flawless_Short_Pants.png",
+      "icon": "img/gear/baihumon_s_flawless_short_pants.png",
       "DS": 1100
     },
     {
@@ -68,6 +78,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "unknown",
+      "iconWiki": "/images/2/2f/Chakkumon%27s_Snowman.png",
+      "icon": "img/gear/chakkumon_s_snowman.png",
       "DS": 700,
       "AT": 150
     },
@@ -77,6 +89,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "unknown",
+      "iconWiki": "/images/c/c6/Cozy_and_warm_Pants.png",
+      "icon": "img/gear/cozy_and_warm_pants.png",
       "AT": 200,
       "DS": 1200
     },
@@ -86,6 +100,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "unknown",
+      "iconWiki": "/images/5/5f/Fairimon%27s_Lower_Armor.png",
+      "icon": "img/gear/fairimon_s_lower_armor.png",
       "DS": 1000,
       "CT": 3.0
     },
@@ -95,6 +111,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/a/a3/Zhuqiomon_shorts.png",
+      "icon": "img/gear/zhuqiomon_shorts.png",
       "DS": 1000
     },
     {
@@ -103,6 +121,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "unknown",
+      "iconWiki": "/images/a/a1/Lanamon%27s_Tights.png",
+      "icon": "img/gear/lanamon_s_tights.png",
       "DS": 1500,
       "extra": [
         {
@@ -118,6 +138,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/3/3d/Qinglongmon%27s_Thunder_Short_Pants.png",
+      "icon": "img/gear/qinglongmon_s_thunder_short_pants.png",
       "DS": 1100
     },
     {
@@ -126,6 +148,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/d/d1/Qinglongmon%27s_Radiant_Pants.png",
+      "icon": "img/gear/qinglongmon_s_radiant_pants.png",
       "DS": 1000
     },
     {
@@ -134,6 +158,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/0/0c/Baihumon_Pants.png",
+      "icon": "img/gear/baihumon_pants.png",
       "DS": 500
     },
     {
@@ -142,6 +168,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/d/d1/Qinglongmon%27s_Radiant_Pants.png",
+      "icon": "img/gear/qinglongmon_s_radiant_pants.png",
       "DS": 500
     },
     {
@@ -150,6 +178,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/a/a3/Zhuqiomon_shorts.png",
+      "icon": "img/gear/zhuqiomon_shorts.png",
       "DS": 500
     },
     {
@@ -158,6 +188,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "unknown",
+      "iconWiki": "/images/5/57/Trendy_Wide_Pants_Event.png",
+      "icon": "img/gear/trendy_wide_pants_event.png",
       "DS": 1000,
       "AT": 200
     },
@@ -167,6 +199,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/8/8a/Ebonwumon_Shorts.png",
+      "icon": "img/gear/ebonwumon_shorts.png",
       "DS": 1000
     },
     {
@@ -175,6 +209,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/8/8a/Ebonwumon_Shorts.png",
+      "icon": "img/gear/ebonwumon_shorts.png",
       "DS": 500
     },
     {
@@ -183,6 +219,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/a/a6/Xuanwumon%27s_Aquatic_Short_Pants.png",
+      "icon": "img/gear/xuanwumon_s_aquatic_short_pants.png",
       "DS": 1100
     },
     {
@@ -194,6 +232,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/6/69/MDGBottom.png",
+      "icon": "img/gear/mdgbottom.png",
       "DS": 4500,
       "ranged": true,
       "extra": [
@@ -210,6 +250,8 @@
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "tamer",
+      "iconWiki": "/images/c/c5/Zhuqiamon%27s_Infernal_Short_Pants.png",
+      "icon": "img/gear/zhuqiamon_s_infernal_short_pants.png",
       "DS": 1100
     },
     {
@@ -218,6 +260,8 @@
       "slot": "bracelet",
       "wikiSlot": "Bracelets",
       "axis": "unknown",
+      "iconWiki": "/images/8/8f/Knight%27s_Bracelet.png",
+      "icon": "img/gear/knight_s_bracelet.png",
       "DS": 800,
       "DE": 100,
       "CT": 7.0,
@@ -288,6 +332,8 @@
       "axis": "unknown",
       "bands": 10,
       "level": 10,
+      "iconWiki": "/images/a/a4/Miracle_Bracelet_-Level_10-.png",
+      "icon": "img/gear/miracle_bracelet_-level_10-.png",
       "DS": 1152,
       "AT": 576,
       "DE": 144,
@@ -306,6 +352,8 @@
       "slot": "bracelet",
       "wikiSlot": "Bracelets",
       "axis": "unknown",
+      "iconWiki": "/images/7/7e/Miracle_Bracelet_-Special-.png",
+      "icon": "img/gear/miracle_bracelet_-special-.png",
       "DS": 1200,
       "AT": 600,
       "DE": 150,
@@ -324,6 +372,8 @@
       "slot": "bracelet",
       "wikiSlot": "Bracelets",
       "axis": "unknown",
+      "iconWiki": "/images/8/8f/Knight%27s_Bracelet.png",
+      "icon": "img/gear/knight_s_bracelet.png",
       "DS": 960,
       "AT": 480,
       "DE": 120,
@@ -346,6 +396,8 @@
       "axis": "unknown",
       "bands": 5,
       "level": 5,
+      "iconWiki": "/images/9/9d/Earrings_of_Four_Holy_Beasts.png",
+      "icon": "img/gear/earrings_of_four_holy_beasts.png",
       "DS": 880,
       "DE": 110,
       "HT": 550,
@@ -365,6 +417,8 @@
       "axis": "unknown",
       "bands": 10,
       "level": 10,
+      "iconWiki": "/images/c/ca/Fanglongmon_Earring.png",
+      "icon": "img/gear/fanglongmon_earring.png",
       "DS": 960,
       "DE": 120,
       "CT": 9.0,
@@ -451,6 +505,8 @@
       "axis": "unknown",
       "bands": 5,
       "level": 5,
+      "iconWiki": "/images/8/8f/Radiant_Earrings_of_Four_Holy_Beasts.png",
+      "icon": "img/gear/radiant_earrings_of_four_holy_beasts.png",
       "DS": 1040,
       "DE": 130,
       "HT": 650,
@@ -510,6 +566,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/6/6c/DigimonFrontierFashion.png",
+      "icon": "img/gear/digimonfrontierfashion.png",
       "HT": 5500,
       "AT": 2500,
       "ranged": true
@@ -520,6 +578,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/4/45/Agumon_Ornament.png",
+      "icon": "img/gear/agumon_ornament.png",
       "AT": 100,
       "extra": [
         {
@@ -535,6 +595,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/6/61/Arbormon%27s_Vine_Barrel.png",
+      "icon": "img/gear/arbormon_s_vine_barrel.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -549,6 +611,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/c/c7/Baihumon%27s_Flawless_Cape.png",
+      "icon": "img/gear/baihumon_s_flawless_cape.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -563,6 +627,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/3/36/Chakkumon%27s_Ski_Board.png",
+      "icon": "img/gear/chakkumon_s_ski_board.png",
       "AT": 150,
       "extra": [
         {
@@ -578,6 +644,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/c/c5/CuteCatEars.png",
+      "icon": "img/gear/cutecatears.png",
       "extra": [
         {
           "stat": "EXP",
@@ -592,6 +660,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/c/ce/Fairimon%27s_Fairy_Wings.png",
+      "icon": "img/gear/fairimon_s_fairy_wings.png",
       "CT": 3.0,
       "extra": [
         {
@@ -607,6 +677,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/a/af/Headphones_Icon.png",
+      "icon": "img/gear/headphones_icon.png",
       "extra": [
         {
           "stat": "EXP",
@@ -621,6 +693,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/4/4a/Lanamon%27s_Shell.png",
+      "icon": "img/gear/lanamon_s_shell.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -640,6 +714,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/a/a9/Qinglongmon%27s_Thunder_Cape.png",
+      "icon": "img/gear/qinglongmon_s_thunder_cape.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -654,6 +730,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/f/f5/Trendy_Wireless_Earphones_Event.png",
+      "icon": "img/gear/trendy_wireless_earphones_event.png",
       "HT": 300,
       "extra": [
         {
@@ -669,6 +747,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/d/da/Warm_Hand_Warmer.png",
+      "icon": "img/gear/warm_hand_warmer.png",
       "DE": 100,
       "extra": [
         {
@@ -684,6 +764,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/2/23/Xuanwumon%27s_Aquatic_Cape.png",
+      "icon": "img/gear/xuanwumon_s_aquatic_cape.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -701,6 +783,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/3/34/MDGFashion.png",
+      "icon": "img/gear/mdgfashion.png",
       "HT": 3500,
       "AT": 1500,
       "ranged": true
@@ -711,6 +795,8 @@
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "unknown",
+      "iconWiki": "/images/5/5d/Zhuqiaomon%27s_Infernal_Cape.png",
+      "icon": "img/gear/zhuqiaomon_s_infernal_cape.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -725,6 +811,8 @@
       "slot": "glasses",
       "wikiSlot": "Tamer`s Goggles",
       "axis": "tamer",
+      "iconWiki": "/images/f/f1/Tamer%E2%80%99s_Goggles_Lv.Max.png",
+      "icon": "img/gear/tamer_s_goggles_lv.max.png",
       "AT": 500,
       "ranged": true,
       "extra": [
@@ -748,6 +836,8 @@
       "axis": "tamer",
       "bands": 14,
       "level": 15,
+      "iconWiki": "/images/b/bc/Tamer%E2%80%99s_Goggles_Lv.11-15.png",
+      "icon": "img/gear/tamer_s_goggles_lv.11-15.png",
       "AT": 400,
       "ranged": true,
       "extra": [
@@ -772,6 +862,8 @@
       "upgrade": 1,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
       "AT": 1760,
       "ranged": true
     },
@@ -783,6 +875,8 @@
       "axis": "unknown",
       "upgrade": 1,
       "upgradeMax": 10,
+      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
+      "icon": "img/gear/kaiser_goggles.png",
       "AT": 4000,
       "ranged": true
     },
@@ -795,6 +889,8 @@
       "upgrade": 1,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
       "CT": 2000.0,
       "ranged": true
     },
@@ -806,6 +902,8 @@
       "axis": "unknown",
       "upgrade": 1,
       "upgradeMax": 10,
+      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
+      "icon": "img/gear/kaiser_goggles.png",
       "CT": 4000.0,
       "ranged": true
     },
@@ -818,6 +916,8 @@
       "upgrade": 1,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
       "HT": 1050,
       "ranged": true
     },
@@ -829,6 +929,8 @@
       "axis": "unknown",
       "upgrade": 1,
       "upgradeMax": 10,
+      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
+      "icon": "img/gear/kaiser_goggles.png",
       "HT": 3000,
       "ranged": true
     },
@@ -841,6 +943,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
+      "icon": "img/gear/digimonfrontiergloves.png",
       "AT": 5000,
       "ranged": true
     },
@@ -850,6 +954,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/f/f1/AgumonPaw.png",
+      "icon": "img/gear/agumonpaw.png",
       "AT": 300,
       "extra": [
         {
@@ -865,6 +971,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "unknown",
+      "iconWiki": "/images/5/5a/Arbormon%27s_Gauntlet.png",
+      "icon": "img/gear/arbormon_s_gauntlet.png",
       "CT": 5.0,
       "extra": [
         {
@@ -880,6 +988,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/1/15/Baihumon_Gloves.png",
+      "icon": "img/gear/baihumon_gloves.png",
       "AT": 300
     },
     {
@@ -888,6 +998,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/1/15/Baihumon_Gloves.png",
+      "icon": "img/gear/baihumon_gloves.png",
       "AT": 250
     },
     {
@@ -896,6 +1008,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/b/b0/Baihumon%27s_Flawless_Gloves.png",
+      "icon": "img/gear/baihumon_s_flawless_gloves.png",
       "AT": 400
     },
     {
@@ -904,6 +1018,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/4/45/Boundless_Crude_Gloves.png",
+      "icon": "img/gear/boundless_crude_gloves.png",
       "AT": 250
     },
     {
@@ -912,6 +1028,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/4/45/Boundless_Crude_Gloves.png",
+      "icon": "img/gear/boundless_crude_gloves.png",
       "AT": 150
     },
     {
@@ -920,6 +1038,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/c/c6/Boundless_Inferior_Gloves.png",
+      "icon": "img/gear/boundless_inferior_gloves.png",
       "AT": 50
     },
     {
@@ -928,6 +1048,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/4/45/Boundless_Crude_Gloves.png",
+      "icon": "img/gear/boundless_crude_gloves.png",
       "AT": 200
     },
     {
@@ -936,6 +1058,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "unknown",
+      "iconWiki": "/images/d/d0/Chakkumon%27s_Romeo.png",
+      "icon": "img/gear/chakkumon_s_romeo.png",
       "CT": 5.0,
       "AT": 300
     },
@@ -945,6 +1069,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "unknown",
+      "iconWiki": "/images/8/81/Cozy_and_warm_Leather_Gloves.png",
+      "icon": "img/gear/cozy_and_warm_leather_gloves.png",
       "AT": 300,
       "extra": [
         {
@@ -960,6 +1086,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "unknown",
+      "iconWiki": "/images/e/ee/Fairimon%27s_Gauntlet.png",
+      "icon": "img/gear/fairimon_s_gauntlet.png",
       "CT": 5.0
     },
     {
@@ -968,6 +1096,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/d/df/Flame_Gloves_of_Zhuqiaomon.png",
+      "icon": "img/gear/flame_gloves_of_zhuqiaomon.png",
       "AT": 300
     },
     {
@@ -976,6 +1106,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/d/df/Flame_Gloves_of_Zhuqiaomon.png",
+      "icon": "img/gear/flame_gloves_of_zhuqiaomon.png",
       "AT": 250
     },
     {
@@ -984,6 +1116,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "unknown",
+      "iconWiki": "/images/f/f9/Lanamon%27s_Gauntlet.png",
+      "icon": "img/gear/lanamon_s_gauntlet.png",
       "CT": 5.0,
       "DS": 2000
     },
@@ -993,6 +1127,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "unknown",
+      "iconWiki": "/images/f/f0/Tape_3.png",
+      "icon": "img/gear/tape_3.png",
       "extra": [
         {
           "stat": "EXP",
@@ -1007,6 +1143,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "unknown",
+      "iconWiki": "/images/e/e5/Tape_2.png",
+      "icon": "img/gear/tape_2.png",
       "extra": [
         {
           "stat": "EXP",
@@ -1021,6 +1159,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "unknown",
+      "iconWiki": "/images/f/f0/Tape_3.png",
+      "icon": "img/gear/tape_3.png",
       "extra": [
         {
           "stat": "EXP",
@@ -1035,6 +1175,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/4/4d/Qinglongmon%27s_Radiant_Gloves.png",
+      "icon": "img/gear/qinglongmon_s_radiant_gloves.png",
       "AT": 250
     },
     {
@@ -1043,6 +1185,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/3/39/Qinglongmon%27s_Thunder_Gloves.png",
+      "icon": "img/gear/qinglongmon_s_thunder_gloves.png",
       "AT": 330
     },
     {
@@ -1051,6 +1195,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/4/4d/Qinglongmon%27s_Radiant_Gloves.png",
+      "icon": "img/gear/qinglongmon_s_radiant_gloves.png",
       "AT": 300
     },
     {
@@ -1059,6 +1205,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/0/0d/Shiny_Desert_Gloves_Icon.png",
+      "icon": "img/gear/shiny_desert_gloves_icon.png",
       "AT": 210
     },
     {
@@ -1067,6 +1215,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/8/85/Small_Lollipop_.png",
+      "icon": "img/gear/small_lollipop_.png",
       "AT": 100,
       "extra": [
         {
@@ -1082,6 +1232,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/f/f4/Square_Lollipop.png",
+      "icon": "img/gear/square_lollipop.png",
       "AT": 100,
       "extra": [
         {
@@ -1097,6 +1249,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/9/9b/Star_Lollipop.png",
+      "icon": "img/gear/star_lollipop.png",
       "AT": 150,
       "extra": [
         {
@@ -1112,6 +1266,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "unknown",
+      "iconWiki": "/images/1/12/Trendy_Watch_Event.png",
+      "icon": "img/gear/trendy_watch_event.png",
       "AT": 300,
       "DS": 1000
     },
@@ -1121,6 +1277,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/0/07/WaruMonzaemon_Gloves.png",
+      "icon": "img/gear/warumonzaemon_gloves.png",
       "AT": 300,
       "extra": [
         {
@@ -1136,6 +1294,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/4/43/Ebonwumon_Gloves.png",
+      "icon": "img/gear/ebonwumon_gloves.png",
       "AT": 250
     },
     {
@@ -1144,6 +1304,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/4/43/Ebonwumon_Gloves.png",
+      "icon": "img/gear/ebonwumon_gloves.png",
       "AT": 300
     },
     {
@@ -1152,6 +1314,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/4/4f/Xuanwumon%27s_Aquatic_Gloves.png",
+      "icon": "img/gear/xuanwumon_s_aquatic_gloves.png",
       "AT": 330
     },
     {
@@ -1163,6 +1327,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/b/b7/MDGGloves.png",
+      "icon": "img/gear/mdggloves.png",
       "AT": 2700,
       "ranged": true
     },
@@ -1172,6 +1338,8 @@
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "tamer",
+      "iconWiki": "/images/8/80/Zhuqiamon%27s_Infernal_Gloves.png",
+      "icon": "img/gear/zhuqiamon_s_infernal_gloves.png",
       "AT": 330
     },
     {
@@ -1183,6 +1351,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
+      "icon": "img/gear/digimonfrontierhead.png",
       "CT": 5500.0,
       "ranged": true
     },
@@ -1192,6 +1362,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "unknown",
+      "iconWiki": "/images/c/cd/Arbormon%27s_Helmet.png",
+      "icon": "img/gear/arbormon_s_helmet.png",
       "AT": 100,
       "extra": [
         {
@@ -1207,6 +1379,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "tamer",
+      "iconWiki": "/images/7/73/Baihumon%27s_Flawless_Ornament.png",
+      "icon": "img/gear/baihumon_s_flawless_ornament.png",
       "AT": 50,
       "extra": [
         {
@@ -1222,6 +1396,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "unknown",
+      "iconWiki": "/images/9/99/Chakkumon%27s_Integrated_Ear_Muffs.png",
+      "icon": "img/gear/chakkumon_s_integrated_ear_muffs.png",
       "AT": 300,
       "extra": [
         {
@@ -1237,6 +1413,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "tamer",
+      "iconWiki": "/images/8/8e/Cozy_and_warm_Hat.png",
+      "icon": "img/gear/cozy_and_warm_hat.png",
       "AT": 50,
       "extra": [
         {
@@ -1252,6 +1430,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "unknown",
+      "iconWiki": "/images/a/af/Fairimon%27s_Wing_Googles.png",
+      "icon": "img/gear/fairimon_s_wing_googles.png",
       "AT": 150,
       "CT": 3.0
     },
@@ -1261,6 +1441,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "unknown",
+      "iconWiki": "/images/a/a7/Lanamon%27s_Helmet.png",
+      "icon": "img/gear/lanamon_s_helmet.png",
       "extra": [
         {
           "stat": "HP",
@@ -1280,6 +1462,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "tamer",
+      "iconWiki": "/images/d/d6/Qinglongmon%27s_Thunder_Hair_Accessory.png",
+      "icon": "img/gear/qinglongmon_s_thunder_hair_accessory.png",
       "AT": 50,
       "extra": [
         {
@@ -1295,6 +1479,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "unknown",
+      "iconWiki": "/images/b/b0/Halloween_hat.png",
+      "icon": "img/gear/halloween_hat.png",
       "extra": [
         {
           "stat": "EXP",
@@ -1309,6 +1495,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "tamer",
+      "iconWiki": "/images/4/4a/Spooky_Pumpkinmon%27s_Mask_%2830_days%29.png",
+      "icon": "img/gear/spooky_pumpkinmon_s_mask__30_days_.png",
       "AT": 50,
       "extra": [
         {
@@ -1324,6 +1512,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "unknown",
+      "iconWiki": "/images/b/b1/Trendy_Ball_Cap_Event.png",
+      "icon": "img/gear/trendy_ball_cap_event.png",
       "AT": 100,
       "HT": 300
     },
@@ -1333,6 +1523,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "tamer",
+      "iconWiki": "/images/e/ef/Xuanwumon%27s_Aquatic_Ornament.png",
+      "icon": "img/gear/xuanwumon_s_aquatic_ornament.png",
       "AT": 50,
       "extra": [
         {
@@ -1351,6 +1543,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/b/ba/MDGHead.png",
+      "icon": "img/gear/mdghead.png",
       "CT": 2500.0,
       "ranged": true
     },
@@ -1360,6 +1554,8 @@
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "tamer",
+      "iconWiki": "/images/8/88/Zhuqiaomon%27s_Infernal_Ornament.png",
+      "icon": "img/gear/zhuqiaomon_s_infernal_ornament.png",
       "AT": 100,
       "extra": [
         {
@@ -1377,6 +1573,8 @@
       "axis": "unknown",
       "upgrade": 15,
       "bands": 16,
+      "iconWiki": "/images/6/66/Ghost_Key_Ring.png",
+      "icon": "img/gear/ghost_key_ring.png",
       "HT": 1000,
       "extra": [
         {
@@ -1399,6 +1597,8 @@
       "axis": "tamer",
       "bands": 7,
       "level": 7,
+      "iconWiki": "/images/8/8e/Spiral_Key_Ring_Lv.6%2B.png",
+      "icon": "img/gear/spiral_key_ring_lv.6_.png",
       "AT": 168,
       "DE": 119,
       "ranged": true,
@@ -1416,6 +1616,8 @@
       "slot": "keyring",
       "wikiSlot": "Key Rings",
       "axis": "tamer",
+      "iconWiki": "/images/8/8e/Spiral_Key_Ring_Lv.6%2B.png",
+      "icon": "img/gear/spiral_key_ring_lv.6_.png",
       "AT": 222,
       "DE": 156,
       "ranged": true,
@@ -1435,6 +1637,8 @@
       "axis": "digimon",
       "bands": 7,
       "level": 7,
+      "iconWiki": "/images/4/4b/Spiral_Key_Ring_DS_Level_7.png",
+      "icon": "img/gear/spiral_key_ring_ds_level_7.png",
       "AT": 210,
       "ranged": true,
       "extra": [
@@ -1451,6 +1655,8 @@
       "slot": "keyring",
       "wikiSlot": "Spiral Key Ring (DS)",
       "axis": "digimon",
+      "iconWiki": "/images/4/4b/Spiral_Key_Ring_DS_Level_7.png",
+      "icon": "img/gear/spiral_key_ring_ds_level_7.png",
       "AT": 210,
       "ranged": true,
       "extra": [
@@ -1474,6 +1680,8 @@
       "axis": "digimon",
       "bands": 7,
       "level": 7,
+      "iconWiki": "/images/6/65/Spiral_Key_Ring_JT_Level_7.png",
+      "icon": "img/gear/spiral_key_ring_jt_level_7.png",
       "AT": 210,
       "ranged": true,
       "extra": [
@@ -1490,6 +1698,8 @@
       "slot": "keyring",
       "wikiSlot": "Spiral Key Ring (JT)",
       "axis": "digimon",
+      "iconWiki": "/images/6/65/Spiral_Key_Ring_JT_Level_7.png",
+      "icon": "img/gear/spiral_key_ring_jt_level_7.png",
       "AT": 210,
       "ranged": true,
       "extra": [
@@ -1513,6 +1723,8 @@
       "axis": "digimon",
       "bands": 7,
       "level": 7,
+      "iconWiki": "/images/8/81/Spiral_Key_Ring_ME_Level_7.png",
+      "icon": "img/gear/spiral_key_ring_me_level_7.png",
       "AT": 210,
       "ranged": true,
       "extra": [
@@ -1529,6 +1741,8 @@
       "slot": "keyring",
       "wikiSlot": "Spiral Key Ring (ME)",
       "axis": "digimon",
+      "iconWiki": "/images/8/81/Spiral_Key_Ring_ME_Level_7.png",
+      "icon": "img/gear/spiral_key_ring_me_level_7.png",
       "AT": 210,
       "ranged": true,
       "extra": [
@@ -1552,6 +1766,8 @@
       "axis": "digimon",
       "bands": 7,
       "level": 7,
+      "iconWiki": "/images/9/9e/Spiral_Key_Ring_WG_Level_7.png",
+      "icon": "img/gear/spiral_key_ring_wg_level_7.png",
       "AT": 210,
       "ranged": true,
       "extra": [
@@ -1568,6 +1784,8 @@
       "slot": "keyring",
       "wikiSlot": "Spiral Key Ring (WG)",
       "axis": "digimon",
+      "iconWiki": "/images/9/9e/Spiral_Key_Ring_WG_Level_7.png",
+      "icon": "img/gear/spiral_key_ring_wg_level_7.png",
       "AT": 210,
       "ranged": true,
       "extra": [
@@ -1591,6 +1809,8 @@
       "axis": "unknown",
       "bands": 10,
       "level": 10,
+      "iconWiki": "/images/f/f7/Fanglongmon_Necklace.png",
+      "icon": "img/gear/fanglongmon_necklace.png",
       "AT": 240,
       "DE": 60,
       "CT": 6.0,
@@ -1618,6 +1838,8 @@
       "slot": "necklace",
       "wikiSlot": "Necklaces",
       "axis": "unknown",
+      "iconWiki": "/images/8/85/Imperial_Necklaces.png",
+      "icon": "img/gear/imperial_necklaces.png",
       "AT": 450,
       "CT": 7.0,
       "extra": [
@@ -1765,6 +1987,8 @@
       "axis": "unknown",
       "bands": 10,
       "level": 10,
+      "iconWiki": "/images/c/c8/Fanglongmon_Ring.png",
+      "icon": "img/gear/fanglongmon_ring.png",
       "DS": 960,
       "AT": 360,
       "extra": [
@@ -1781,6 +2005,8 @@
       "slot": "ring",
       "wikiSlot": "Rings",
       "axis": "unknown",
+      "iconWiki": "/images/1/12/Imperial_Ring.png",
+      "icon": "img/gear/imperial_ring.png",
       "AT": 450,
       "CT": 7.0
     },
@@ -1914,6 +2140,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/a/a8/DigimonFrontierShoes.png",
+      "icon": "img/gear/digimonfrontiershoes.png",
       "extra": [
         {
           "stat": "Speed",
@@ -1938,6 +2166,8 @@
       "slot": "shoes",
       "wikiSlot": "Shoes",
       "axis": "unknown",
+      "iconWiki": "/images/e/e2/Agumon_Feet_Shoes.png",
+      "icon": "img/gear/agumon_feet_shoes.png",
       "DE": 200
     },
     {
@@ -1946,6 +2176,8 @@
       "slot": "shoes",
       "wikiSlot": "Shoes",
       "axis": "unknown",
+      "iconWiki": "/images/2/25/Cozy_and_warm_Socks.png",
+      "icon": "img/gear/cozy_and_warm_socks.png",
       "DE": 200
     },
     {
@@ -1954,6 +2186,8 @@
       "slot": "shoes",
       "wikiSlot": "Shoes",
       "axis": "unknown",
+      "iconWiki": "/images/f/f5/Spooky_Wizardmon_Shoes%2830_days%29.png",
+      "icon": "img/gear/spooky_wizardmon_shoes_30_days_.png",
       "DE": 100
     },
     {
@@ -1962,6 +2196,8 @@
       "slot": "shoes",
       "wikiSlot": "Shoes",
       "axis": "unknown",
+      "iconWiki": "/images/a/a4/Swimming_Gears_-_Flippers_%2830D%29.png",
+      "icon": "img/gear/swimming_gears_-_flippers__30d_.png",
       "DE": 200
     },
     {
@@ -1973,6 +2209,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/3/38/MDGShoes.png",
+      "icon": "img/gear/mdgshoes.png",
       "extra": [
         {
           "stat": "Speed",
@@ -2000,6 +2238,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
+      "icon": "img/gear/digimonfrontiertop.png",
       "extra": [
         {
           "stat": "HP",
@@ -2019,6 +2259,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/c/c6/Agumon_Top.png",
+      "icon": "img/gear/agumon_top.png",
       "extra": [
         {
           "stat": "HP",
@@ -2033,6 +2275,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "unknown",
+      "iconWiki": "/images/3/3d/Arbormon%27s_Upper_Armor.png",
+      "icon": "img/gear/arbormon_s_upper_armor.png",
       "extra": [
         {
           "stat": "HP",
@@ -2047,6 +2291,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/8/8e/Baihumon_Hoodie.png",
+      "icon": "img/gear/baihumon_hoodie.png",
       "extra": [
         {
           "stat": "HP",
@@ -2061,6 +2307,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/9/94/Baihumon%27s_Flawless_Hooded_Shirt.png",
+      "icon": "img/gear/baihumon_s_flawless_hooded_shirt.png",
       "extra": [
         {
           "stat": "HP",
@@ -2075,6 +2323,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "unknown",
+      "iconWiki": "/images/f/f1/Chakkumon%27s_Ice_Vest.png",
+      "icon": "img/gear/chakkumon_s_ice_vest.png",
       "AT": 150,
       "extra": [
         {
@@ -2090,6 +2340,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "unknown",
+      "iconWiki": "/images/f/f7/Cozy_and_warm_Quilting_Jacket.png",
+      "icon": "img/gear/cozy_and_warm_quilting_jacket.png",
       "extra": [
         {
           "stat": "HP",
@@ -2104,6 +2356,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "unknown",
+      "iconWiki": "/images/6/6c/Fairimon%27s_Upper_Armor.png",
+      "icon": "img/gear/fairimon_s_upper_armor.png",
       "CT": 3.0,
       "extra": [
         {
@@ -2119,6 +2373,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/b/bf/Flame_Hoodie_of_Zhuqiaomon.png",
+      "icon": "img/gear/flame_hoodie_of_zhuqiaomon.png",
       "extra": [
         {
           "stat": "HP",
@@ -2133,6 +2389,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/8/8e/Baihumon_Hoodie.png",
+      "icon": "img/gear/baihumon_hoodie.png",
       "extra": [
         {
           "stat": "HP",
@@ -2147,6 +2405,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/9/90/Qinglongmon%27s_Radiant_Hoodie.png",
+      "icon": "img/gear/qinglongmon_s_radiant_hoodie.png",
       "extra": [
         {
           "stat": "HP",
@@ -2161,6 +2421,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/b/bf/Flame_Hoodie_of_Zhuqiaomon.png",
+      "icon": "img/gear/flame_hoodie_of_zhuqiaomon.png",
       "extra": [
         {
           "stat": "HP",
@@ -2175,6 +2437,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "unknown",
+      "iconWiki": "/images/d/d9/Lanamon%27s_Swimsuit.png",
+      "icon": "img/gear/lanamon_s_swimsuit.png",
       "DS": 2000,
       "extra": [
         {
@@ -2190,6 +2454,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/c/c8/Qinglongmon%27s_Thunder_Hooded_Shirt.png",
+      "icon": "img/gear/qinglongmon_s_thunder_hooded_shirt.png",
       "extra": [
         {
           "stat": "HP",
@@ -2204,6 +2470,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/9/90/Qinglongmon%27s_Radiant_Hoodie.png",
+      "icon": "img/gear/qinglongmon_s_radiant_hoodie.png",
       "extra": [
         {
           "stat": "HP",
@@ -2218,6 +2486,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/b/b0/Spooky_Soulmon%27s_Robe_%2830_days%29.png",
+      "icon": "img/gear/spooky_soulmon_s_robe__30_days_.png",
       "extra": [
         {
           "stat": "HP",
@@ -2232,6 +2502,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "unknown",
+      "iconWiki": "/images/f/f9/Trendy_Shirts_Event.png",
+      "icon": "img/gear/trendy_shirts_event.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -2251,6 +2523,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/3/34/Unlimited_Advanced_T_-shirt.jpg",
+      "icon": "img/gear/unlimited_advanced_t_-shirt.jpg",
       "extra": [
         {
           "stat": "HP",
@@ -2265,6 +2539,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/3/39/Ebonwumon_Hoodie.png",
+      "icon": "img/gear/ebonwumon_hoodie.png",
       "extra": [
         {
           "stat": "HP",
@@ -2279,6 +2555,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/3/39/Ebonwumon_Hoodie.png",
+      "icon": "img/gear/ebonwumon_hoodie.png",
       "extra": [
         {
           "stat": "HP",
@@ -2293,6 +2571,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/d/df/Xuanwumon%27s_Aquatic_Hooded_Shirt.png",
+      "icon": "img/gear/xuanwumon_s_aquatic_hooded_shirt.png",
       "extra": [
         {
           "stat": "HP",
@@ -2310,6 +2590,8 @@
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
+      "iconWiki": "/images/7/7e/MDGTop.png",
+      "icon": "img/gear/mdgtop.png",
       "extra": [
         {
           "stat": "HP",
@@ -2329,6 +2611,8 @@
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "tamer",
+      "iconWiki": "/images/f/f5/Zhuqiamon%27s_Infernal_Hooded_Shirt.png",
+      "icon": "img/gear/zhuqiamon_s_infernal_hooded_shirt.png",
       "extra": [
         {
           "stat": "HP",
