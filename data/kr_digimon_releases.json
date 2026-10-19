@@ -1,7 +1,16 @@
 {
-  "scanned": 108,
-  "release_posts": 24,
+  "scanned": 126,
+  "release_posts": 26,
   "posts": [
+    {
+      "o": "823928",
+      "date": "2026-09-15",
+      "num": 1043,
+      "kr_names": [
+        "아폴로몬:위스퍼드"
+      ],
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=823928&Btype=Update"
+    },
     {
       "o": "818643",
       "date": "2026-07-14",
@@ -10,6 +19,15 @@
         "아폴로몬"
       ],
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=818643&Btype=Update"
+    },
+    {
+      "o": "816756",
+      "date": "2026-05-19",
+      "num": 1011,
+      "kr_names": [
+        "퀀타몬"
+      ],
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=816756&Btype=Update"
     },
     {
       "o": "814935",

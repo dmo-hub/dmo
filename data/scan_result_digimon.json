@@ -524,7 +524,20 @@
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810988&Btype=Update",
       "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-34/",
       "date_th": "2022-01-26",
-      "_th_name": "ซูซาโนะโอมอน(ชิน)"
+      "_th_name": "ซูซาโนะโอมอน(ชิน)",
+      "image_kr": "img/digimon/e531_kr.png",
+      "attributes": {
+        "Susanoomon(Shin)": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Thunder",
+          "families": [
+            "Virus Busters",
+            "Deep Savers",
+            "Nature Spirits"
+          ]
+        }
+      }
     },
     "578": {
       "date": "07-26-2022",
@@ -533,7 +546,18 @@
         "Shoutmon X7"
       ],
       "image": "img/digimon/e578.png",
-      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=784466&Btype=Update"
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=784466&Btype=Update",
+      "image_kr": "img/digimon/e578_kr.jpeg",
+      "attributes": {
+        "Shoutmon X7": {
+          "attribute": "Data",
+          "attribute_abbr": "DA",
+          "natural_attribute": "Steel",
+          "families": [
+            "Virus Busters"
+          ]
+        }
+      }
     },
     "602": {
       "date": "12-27-2022",
@@ -547,7 +571,20 @@
       "date_th": "2026-06-11",
       "_th_name": "[เอ็กซ์ตรีม] ลูเจมอน : ซาตานโหมด",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/06/3.png",
-      "image_th": "img/digimon/e602_th.png"
+      "image_th": "img/digimon/e602_th.png",
+      "image_kr": "img/digimon/e602_kr.png",
+      "attributes": {
+        "Lucemon Satan Mode(Shin)": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Dark Area",
+            "Nightmare Soldiers",
+            "Virus Busters"
+          ]
+        }
+      }
     },
     "614": {
       "date": "03-07-2023",
