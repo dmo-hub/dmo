@@ -82,8 +82,10 @@ def server_panel(code, label, srv):
 
 def dungeon_card(d):
     th = d.get("th") or {}
-    title = esc(th.get("boss") or d["id"])
-    subtitle = esc(th.get("name", "")).split(":")[0] if th.get("name") else ""
+    # Without a known boss the dungeon's name heads the card, and is not
+    # repeated underneath.
+    title = esc(th.get("boss") or th.get("name") or d["id"])
+    subtitle = esc(th.get("name", "")).split(":")[0] if th.get("name") and th.get("boss") else ""
     img = d.get("image") or ""
     if img:
         media = f'<img class="dg-img" src="{esc(img)}" alt="{title}" loading="lazy">'

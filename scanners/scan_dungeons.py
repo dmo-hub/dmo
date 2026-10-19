@@ -183,7 +183,9 @@ def patch_entry(p, prev):
     """One dungeon from a patch post (scan_th_patch_dungeons.py)."""
     sid = "thp-" + hashlib.md5(p["name"].encode("utf-8")).hexdigest()[:8]
     mons = [m for m in p.get("monsters") or [] if m.get("name")]
-    boss = pick_boss(mons) or p["name"]
+    # No monster list (a daily-rotating roster, a post that only describes
+    # rewards) means no known boss; the page titles the card by name instead.
+    boss = pick_boss(mons)
     drop = ["%s %s" % (r["item"], r["qty"] or "") for r in p.get("rewards") or []]
     th = {
         "name": p["name"], "url": p["url"], "date": p["date"], "boss": boss,

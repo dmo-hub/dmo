@@ -681,13 +681,7 @@
       "pass_item": null,
       "party": null,
       "clear_reward": null,
-      "monsters": [
-        {
-          "name": "2",
-          "title": null,
-          "level": null
-        }
-      ],
+      "monsters": [],
       "rewards": [
         {
           "item": "พลังกายของเดธเมรามอน",

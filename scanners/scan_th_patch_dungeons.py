@@ -168,7 +168,9 @@ def parse_section(name, sec):
         if b["kind"] == "text":
             lines += [ln.strip() for ln in b["text"].split("\n") if ln.strip()]
     tables = [b["rows"] for b in sec if b["kind"] == "table"]
-    kv = [r for t in tables for r in t]
+    # Label lookups read the details tables only: a reward row such as
+    # "มอนสเตอร์การ์ด แบบสุ่ม | 2" would otherwise answer "มอนสเตอร์" with "2".
+    kv = [r for t in tables if not any("ไอเทม" in c for c in t[0]) for r in t]
 
     d = {"name": re.sub(r"\s+", " ", name)}
     loc = first_match(lines, r"^(?:ที่ตั้ง|ตำแหน่ง)\S*\s*:\s*(.+)") or \
