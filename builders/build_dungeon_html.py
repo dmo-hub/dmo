@@ -32,14 +32,36 @@ def server_panel(code, label, srv):
             f'<span class="dg-soon">เร็ว ๆ นี้</span></div>'
         )
     rows = []
-    if srv.get("req"):
-        rows.append(f'<div class="dg-fld"><span class="dg-k">เลเวล</span>'
-                    f'<span class="dg-v">{esc(srv["req"])}</span></div>')
-    if srv.get("pass_item"):
-        rows.append(f'<div class="dg-fld"><span class="dg-k">บัตรผ่าน</span>'
-                    f'<span class="dg-v">{esc(srv["pass_item"])}</span></div>')
+    for key, field, fmt in (("location", "ที่ตั้ง", str), ("npc", "NPC", str),
+                            ("req", "เลเวล", str), ("party", "จำนวนคน", lambda n: f"สูงสุด {n} คน"),
+                            ("pass_item", "บัตรผ่าน", str),
+                            ("clear_reward", "เคลียร์ได้", str)):
+        if srv.get(key):
+            rows.append(f'<div class="dg-fld"><span class="dg-k">{field}</span>'
+                        f'<span class="dg-v">{esc(fmt(srv[key]))}</span></div>')
+    mons = srv.get("monsters") or []
+    if mons:
+        lis = "".join(
+            f'<li>{esc(m["name"])}'
+            + (f' <span class="dg-note">&lt;{esc(m["title"])}&gt;</span>' if m.get("title") else "")
+            + (f' <span class="dg-note">Lv.{m["level"]}</span>' if m.get("level") else "")
+            + "</li>" for m in mons)
+        rows.append(f'<div class="dg-fld dg-drop"><span class="dg-k">มอนสเตอร์</span>'
+                    f'<ul class="dg-droplist">{lis}</ul></div>')
+    rewards = srv.get("rewards") or []
     drops = srv.get("drop") or []
-    if drops:
+    if rewards:
+        lis = "".join(
+            f'<li>{esc(r["item"])}'
+            + (f' ×{esc(r["qty"])}' if r.get("qty") else "")
+            + (f' <span class="dg-note">{esc(r["rate"])}</span>' if r.get("rate") else "")
+            + "</li>" for r in rewards)
+        body = f'<ul class="dg-droplist">{lis}</ul>'
+        # Long tables (40+ rows) would bury the next card; fold them.
+        if len(rewards) > 8:
+            body = f'<details><summary>{len(rewards)} รายการ</summary>{body}</details>'
+        rows.append(f'<div class="dg-fld dg-drop"><span class="dg-k">ของรางวัล</span>{body}</div>')
+    elif drops:
         lis = "".join(f"<li>{esc(d)}</li>" for d in drops)
         rows.append(f'<div class="dg-fld dg-drop"><span class="dg-k">ของดรอป</span>'
                     f'<ul class="dg-droplist">{lis}</ul></div>')
@@ -118,16 +140,23 @@ STYLE = """
   .dg-k { flex: 0 0 62px; font-weight: 600; color: var(--muted-soft); font-size: 12px; }
   .dg-v { color: var(--ink); }
   .dg-drop { flex-direction: column; gap: 4px; }
+  /* the 62px basis is a width in a row but a height in this column */
+  .dg-drop .dg-k { flex-basis: auto; }
   .dg-droplist { margin: 2px 0 0; padding-left: 18px; color: var(--ink);
     line-height: 1.6; }
   .dg-droplist li { font-size: 12.5px; }
+  .dg-note { color: var(--muted); font-size: 11.5px; }
+  .dg-drop summary { cursor: pointer; font-size: 12.5px; color: var(--body); }
   .dg-src { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 600;
     color: var(--coral); }
 """
 
 
 def render(payload):
-    cards = "\n".join(dungeon_card(d) for d in payload["dungeons"])
+    # Newest first: the dungeon a player is asking about is usually the latest.
+    ordered = sorted(payload["dungeons"], key=lambda d: (d.get("th") or {}).get("date") or "",
+                     reverse=True)
+    cards = "\n".join(dungeon_card(d) for d in ordered)
     n = len(payload["dungeons"])
     n_th = sum(1 for d in payload["dungeons"] if d.get("th"))
     return f"""<!DOCTYPE html>
