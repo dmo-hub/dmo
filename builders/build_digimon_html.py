@@ -16,7 +16,7 @@ import urllib.parse
 from collections import OrderedDict
 from pathlib import Path
 
-from wiki_names import wiki_name
+from wiki_names import is_rank_u, wiki_name
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -228,8 +228,19 @@ def render() -> str:
         for p in json.loads(KR_INDEX.read_text(encoding="utf-8"))["posts"]:
             kr_dates[p["o"]] = p["date"]
 
-    total_posts = len(events) + len(patches)
-    total_digimon = sum(len(p["digimon"]) for p in list(events.values()) + list(patches.values()))
+    # The feed lists Rank U digimon only; a post keeps just its Rank U names
+    # and drops out when it has none. The data itself stays complete.
+    def only_rank_u(posts: dict) -> dict:
+        out = {}
+        for key, p in posts.items():
+            keep = [n for n in p["digimon"] if is_rank_u(n)]
+            if keep:
+                out[key] = {**p, "digimon": keep,
+                            "attributes": {k: v for k, v in (p.get("attributes") or {}).items() if k in keep}}
+        return out
+
+    events, patches = only_rank_u(events), only_rank_u(patches)
+
 
     # Build merged list, sorted by gameking date DESCENDING (newest first
     # — activity-feed convention). Tie-break by idx desc so same-day posts
@@ -246,10 +257,14 @@ def render() -> str:
     merged: list[tuple[str, str, dict]] = sorted(
         [("event", idx, p) for idx, p in events.items()]
         + [("patch", idx, p) for idx, p in patches.items()]
-        + [("kr", o, p) for o, p in kr_only.items()],
+        + [("kr", o, p) for o, p in only_rank_u(kr_only).items()],
         key=lambda t: (date_key(t[2].get("date")), int(t[1])),
         reverse=True,
     )
+
+    # counted from the cards shown, KR-only ones included
+    total_posts = len(merged)
+    total_digimon = sum(len(p["digimon"]) for _, _, p in merged)
 
     # Group by month
     by_month: OrderedDict[str, list[tuple[str, str, dict]]] = OrderedDict()
@@ -313,6 +328,7 @@ def render() -> str:
         # Only the Thai banner sits beside these; a KR/NA banner may already
         # show every digimon in the post.
         extra = (p.get("images_th_extra") or {}) if p.get("image_th") else {}
+        extra = {k: v for k, v in extra.items() if k in names}
         if extra:
             img_block = '<div class="card-gallery">' + img_block + "".join(
                 f'<a href="{e["path"]}" target="_blank">'
@@ -510,7 +526,7 @@ def render() -> str:
     <div class="hero">
       <div>
         <h1>Digimon Activity Feed</h1>
-        <p class="lead">Digimon ใหม่ที่ถูกเพิ่ม — เรียงตามเดือนของ NA release</p>
+        <p class="lead">Digimon Rank U ใหม่ที่ถูกเพิ่ม — เรียงตามเดือนของ NA release</p>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><div class="num">{total_posts}</div><div class="lbl">โพสต์</div></div>
