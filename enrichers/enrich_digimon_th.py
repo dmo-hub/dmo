@@ -66,6 +66,9 @@ EN_TO_TH_KEYWORDS: list[tuple[str, str, str | None]] = [
     ("Lilithmon", "ลิลิธมอน", None),
     ("DoneDevimon", "ดันเดวีมอน", None),
     ("Negamon", "เนกามอน", None),
+    ("Fanglongmon (Shin)", "ฟานลอนมอน (ชิน)", None),
+    ("Rafflesimon", "ราเฟลเรซีมอน", None),
+    ("Chaosmon", "คาออสมอน", None),
     ("Abbadomon", "อบาดอน", None),
     ("Quantumon", "ควอนตัมมอน", None),
 ]
