@@ -25,6 +25,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
+from stamped_json import write_stamped  # noqa: E402
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 PROJ = Path(__file__).resolve().parent.parent
@@ -169,7 +172,7 @@ def main():
         "fetched_at": dt.date.today().isoformat(),
         "dungeons": sorted(dungeons.values(), key=lambda d: d["id"]),
     }
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_stamped(OUT, payload, "fetched_at")
     print(f"wrote {OUT.relative_to(PROJ)}  ({len(dungeons)} dungeon)")
     for d in payload["dungeons"]:
         t = d["th"]

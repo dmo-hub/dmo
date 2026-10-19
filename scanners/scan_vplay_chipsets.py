@@ -29,11 +29,13 @@ Table shape: each grade gets a heading ("ดับเบิ้ลชิปเซ
 two 2-column tables, primary then secondary, each row "STAT | value".
 """
 
-import json
 import re
 import sys
 from datetime import date
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
+from stamped_json import write_stamped  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -136,13 +138,13 @@ def main():
         return 1
     html = path.read_text(encoding="utf-8", errors="replace")
     items = parse_double(html)
-    OUT.write_text(json.dumps({
+    write_stamped(OUT, {
         "fetched_at": date.today().isoformat(),
         "source": POST,
         "note": ("a Double ChipSet grants a primary AND a secondary stat set; "
                  "the post states both feed the DIGIMON's attributes"),
         "items": items,
-    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    }, "fetched_at")
     print("wrote %s" % OUT.relative_to(PROJ))
     print("  grades %d" % len(items))
     for it in items:

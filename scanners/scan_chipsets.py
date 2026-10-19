@@ -28,11 +28,13 @@ click was needed as of 2026-09-07, the challenge clears on its own:
 then save document.documentElement.outerHTML.
 """
 
-import json
 import re
 import sys
 from datetime import date
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
+from stamped_json import write_stamped  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -143,11 +145,9 @@ def main():
         return 1
     html = SRC.read_text(encoding="utf-8", errors="replace")
     items = parse_chipsets(html)
-    OUT.write_text(json.dumps(
-        {"fetched_at": date.today().isoformat(),
-         "source": "dmowiki.com/ChipSets",
-         "items": items}, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8", newline="\n")
+    write_stamped(OUT, {"fetched_at": date.today().isoformat(),
+                        "source": "dmowiki.com/ChipSets",
+                        "items": items}, "fetched_at")
     print("wrote %s" % OUT.relative_to(PROJ))
     by_kind = {}
     for it in items:

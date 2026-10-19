@@ -24,12 +24,14 @@ Shape of the source table (nothing like dmowiki's):
   * "–" means "no value", not zero
 """
 
-import json
 import re
 import sys
 import time
 from datetime import date
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
+from stamped_json import write_stamped  # noqa: E402
 
 import requests
 
@@ -218,10 +220,8 @@ def main():
             seen.add(key)
             block["post"] = url
             out.append(block)
-    OUT.write_text(json.dumps(
-        {"fetched_at": date.today().isoformat(), "source": "vplay.in.th",
-         "items": sorted(out, key=lambda x: x["name"])},
-        ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    write_stamped(OUT, {"fetched_at": date.today().isoformat(), "source": "vplay.in.th",
+                        "items": sorted(out, key=lambda x: x["name"])}, "fetched_at")
     lv = sum(len(i["levels"]) for i in out)
     print("wrote %s" % OUT.relative_to(PROJ))
     print("  items %d  levels %d" % (len(out), lv))

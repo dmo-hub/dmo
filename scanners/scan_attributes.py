@@ -27,11 +27,13 @@ Refresh cache/dmowiki_equipment_attributes.html the same way as the chipset
 page -- see the docstring of scan_chipsets.py (headful Chrome over CDP).
 """
 
-import json
 import re
 import sys
 from datetime import date
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
+from stamped_json import write_stamped  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -178,14 +180,14 @@ def main():
     html = SRC.read_text(encoding="utf-8", errors="replace")
     attrs = parse_attributes(html)
     ranks = parse_rank_table(html)
-    OUT.write_text(json.dumps({
+    write_stamped(OUT, {
         "fetched_at": date.today().isoformat(),
         "source": "dmowiki.com/Equipment_attributes",
         "note": ("feeds TAMER stats through a clothes-dependent fraction; "
                  "outside the optimizer's scope (decision 02)"),
         "attributes": attrs,
         "rank_levels": sorted(ranks, key=lambda r: r["id"]),
-    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    }, "fetched_at")
     print("wrote %s" % OUT.relative_to(PROJ))
     print("  attributes %d  rank levels %d" % (len(attrs), len(ranks)))
     noroll = [a for a in attrs if "roll" not in a]
