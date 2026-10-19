@@ -25844,70 +25844,6 @@
   },
   {
    "type": "digimon",
-   "key": "awakenordinemon",
-   "display": "(Awaken)Ordinemon",
-   "names": {
-    "en": [
-     "(Awaken)Ordinemon"
-    ],
-    "kr": [
-     "오르디네몬"
-    ],
-    "th": []
-   },
-   "anchor": "digimon.html#e697",
-   "servers": {
-    "na": [
-     {
-      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=697",
-      "date": "12-24-2024"
-     }
-    ],
-    "kr": [
-     {
-      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=795819&Btype=Update",
-      "date": ""
-     }
-    ],
-    "th": [
-     {
-      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-82/",
-      "date": "2025-12-24"
-     }
-    ]
-   }
-  },
-  {
-   "type": "digimon",
-   "key": "extremeomegamonresistance",
-   "display": "(Extreme) Omegamon(Resistance)",
-   "names": {
-    "en": [
-     "(Extreme) Omegamon(Resistance)"
-    ],
-    "kr": [
-     "오메가몬"
-    ],
-    "th": []
-   },
-   "anchor": "digimon.html#p4121",
-   "servers": {
-    "na": [
-     {
-      "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4121",
-      "date": "03-17-2026"
-     }
-    ],
-    "kr": [
-     {
-      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814935&Btype=Update",
-      "date": ""
-     }
-    ]
-   }
-  },
-  {
-   "type": "digimon",
    "key": "abbadomon",
    "display": "Abbadomon",
    "names": {
@@ -25968,10 +25904,11 @@
   {
    "type": "digimon",
    "key": "alphamonouryuken",
-   "display": "Alphamon Ouryuken",
+   "display": "Alphamon Ouryuken (Extreme)",
    "names": {
     "en": [
      "Alphamon Ouryuken",
+     "Alphamon Ouryuken (Extreme)",
      "Alphamon Ouryuken [Extreme]"
     ],
     "kr": [
@@ -26004,10 +25941,11 @@
   {
    "type": "digimon",
    "key": "angoramon",
-   "display": "ANGORAMON",
+   "display": "Angoramon",
    "names": {
     "en": [
-     "ANGORAMON"
+     "ANGORAMON",
+     "Angoramon"
     ],
     "kr": [
      "앙고라몬"
@@ -26067,35 +26005,6 @@
   },
   {
    "type": "digimon",
-   "key": "awakenedlilithmonresistance",
-   "display": "Awakened Lilithmon (Resistance)",
-   "names": {
-    "en": [
-     "Awakened Lilithmon (Resistance)"
-    ],
-    "kr": [
-     "리리스몬"
-    ],
-    "th": []
-   },
-   "anchor": "digimon.html#e791",
-   "servers": {
-    "na": [
-     {
-      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=791",
-      "date": "11-11-2025"
-     }
-    ],
-    "kr": [
-     {
-      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811713&Btype=Update",
-      "date": ""
-     }
-    ]
-   }
-  },
-  {
-   "type": "digimon",
    "key": "beelzebumonblastmodeawaken",
    "display": "Beelzebumon Blast Mode (Awaken)",
    "names": {
@@ -26132,9 +26041,10 @@
   {
    "type": "digimon",
    "key": "belphemonragemodeawaken",
-   "display": "Belphemon: Rage Mode(Awaken)",
+   "display": "Belphemon (Rage Mode) (Awaken)",
    "names": {
     "en": [
+     "Belphemon (Rage Mode) (Awaken)",
      "Belphemon: Rage Mode(Awaken)"
     ],
     "kr": [
@@ -26167,10 +26077,11 @@
   {
    "type": "digimon",
    "key": "bloomlordmon",
-   "display": "BloomLordMon",
+   "display": "Bloomlordmon",
    "names": {
     "en": [
-     "BloomLordMon"
+     "BloomLordMon",
+     "Bloomlordmon"
     ],
     "kr": [
      "블룸로드몬"
@@ -26306,10 +26217,11 @@
   {
    "type": "digimon",
    "key": "eosmon",
-   "display": "Eosmon",
+   "display": "Eosmon LV6",
    "names": {
     "en": [
-     "Eosmon"
+     "Eosmon",
+     "Eosmon LV6"
     ],
     "kr": [
      "에오스몬"
@@ -26341,9 +26253,10 @@
   {
    "type": "digimon",
    "key": "fanglongmonshin",
-   "display": "Fanglongmon (Shin)",
+   "display": "Fanglongmon (Awaken)",
    "names": {
     "en": [
+     "Fanglongmon (Awaken)",
      "Fanglongmon (Shin)"
     ],
     "kr": [],
@@ -26368,9 +26281,10 @@
   {
    "type": "digimon",
    "key": "gabumonbondoffriendship",
-   "display": "Gabumon – Bond of Friendship",
+   "display": "Gabumon - Bond of Friendship",
    "names": {
     "en": [
+     "Gabumon - Bond of Friendship",
      "Gabumon – Bond of Friendship"
     ],
     "kr": [],
@@ -26395,9 +26309,10 @@
   {
    "type": "digimon",
    "key": "gallantmoncrimsonmode",
-   "display": "Gallantmon Crimson Mode",
+   "display": "Gallantmon (Crimson Mode) (Awaken)",
    "names": {
     "en": [
+     "Gallantmon (Crimson Mode) (Awaken)",
      "Gallantmon Crimson Mode"
     ],
     "kr": [
@@ -26465,10 +26380,11 @@
   {
    "type": "digimon",
    "key": "holydramon",
-   "display": "Holydramon",
+   "display": "Holydramon (Awaken)",
    "names": {
     "en": [
-     "Holydramon"
+     "Holydramon",
+     "Holydramon (Awaken)"
     ],
     "kr": [
      "홀리드라몬"
@@ -26500,9 +26416,10 @@
   {
    "type": "digimon",
    "key": "imperialdramonfightermodeawaken",
-   "display": "Imperialdramon Fightermode(Awaken)",
+   "display": "Imperialdramon (Fighter Mode) (Awaken)",
    "names": {
     "en": [
+     "Imperialdramon (Fighter Mode) (Awaken)",
      "Imperialdramon Fightermode(Awaken)"
     ],
     "kr": [
@@ -26535,9 +26452,10 @@
   {
    "type": "digimon",
    "key": "imperialdramonpaladinmode",
-   "display": "Imperialdramon PaladinMode",
+   "display": "Imperialdramon Paladin Mode (Awaken)",
    "names": {
     "en": [
+     "Imperialdramon Paladin Mode (Awaken)",
      "Imperialdramon PaladinMode"
     ],
     "kr": [
@@ -26630,9 +26548,10 @@
   {
    "type": "digimon",
    "key": "kuzuhamonmikomode",
-   "display": "Kuzuhamon MikoMode",
+   "display": "Kuzuhamon - Miko Mode",
    "names": {
     "en": [
+     "Kuzuhamon - Miko Mode",
      "Kuzuhamon MikoMode"
     ],
     "kr": [
@@ -26699,36 +26618,30 @@
   },
   {
    "type": "digimon",
-   "key": "lucemonsatanmode",
-   "display": "Lucemon : Satan Mode",
+   "key": "awakenedlilithmonresistance",
+   "display": "Lilithmon (X-Antibody) (Awaken)",
    "names": {
     "en": [
-     "Lucemon : Satan Mode",
-     "[Extreme] Lucemon : Satan Mode"
+     "Awakened Lilithmon (Resistance)",
+     "Lilithmon (X-Antibody) (Awaken)"
     ],
     "kr": [
-     "루체몬"
+     "리리스몬"
     ],
     "th": []
    },
-   "anchor": "digimon.html#e759",
+   "anchor": "digimon.html#e791",
    "servers": {
     "na": [
      {
-      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=759",
-      "date": "07-22-2025"
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=791",
+      "date": "11-11-2025"
      }
     ],
     "kr": [
      {
-      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=808086&Btype=Update",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811713&Btype=Update",
       "date": ""
-     }
-    ],
-    "th": [
-     {
-      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/",
-      "date": "2026-06-11"
      }
     ]
    }
@@ -26736,9 +26649,10 @@
   {
    "type": "digimon",
    "key": "lucemonsatanmodeshin",
-   "display": "Lucemon Satan Mode(Shin)",
+   "display": "Lucemon (Satan Mode) (Awaken)",
    "names": {
     "en": [
+     "Lucemon (Satan Mode) (Awaken)",
      "Lucemon Satan Mode(Shin)"
     ],
     "kr": [
@@ -26764,6 +26678,43 @@
      {
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-47/",
       "date": "2023-02-23"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "lucemonsatanmode",
+   "display": "Lucemon: Satan Mode (Extreme)",
+   "names": {
+    "en": [
+     "Lucemon : Satan Mode",
+     "Lucemon: Satan Mode (Extreme)",
+     "[Extreme] Lucemon : Satan Mode"
+    ],
+    "kr": [
+     "루체몬"
+    ],
+    "th": []
+   },
+   "anchor": "digimon.html#e759",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=759",
+      "date": "07-22-2025"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=808086&Btype=Update",
+      "date": ""
+     }
+    ],
+    "th": [
+     {
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/",
+      "date": "2026-06-11"
      }
     ]
    }
@@ -26905,9 +26856,10 @@
   {
    "type": "digimon",
    "key": "omegamonmercifulmode",
-   "display": "Omegamon – Merciful Mode",
+   "display": "Omegamon - Merciful Mode",
    "names": {
     "en": [
+     "Omegamon - Merciful Mode",
      "Omegamon – Merciful Mode"
     ],
     "kr": [
@@ -26939,11 +26891,78 @@
   },
   {
    "type": "digimon",
-   "key": "quantumon",
-   "display": "QUANTUMON",
+   "key": "extremeomegamonresistance",
+   "display": "Omegamon X Extreme",
    "names": {
     "en": [
-     "QUANTUMON"
+     "(Extreme) Omegamon(Resistance)",
+     "Omegamon X Extreme"
+    ],
+    "kr": [
+     "오메가몬"
+    ],
+    "th": []
+   },
+   "anchor": "digimon.html#p4121",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4121",
+      "date": "03-17-2026"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814935&Btype=Update",
+      "date": ""
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "awakenordinemon",
+   "display": "Ordinemon (Awaken)",
+   "names": {
+    "en": [
+     "(Awaken)Ordinemon",
+     "Ordinemon (Awaken)"
+    ],
+    "kr": [
+     "오르디네몬"
+    ],
+    "th": []
+   },
+   "anchor": "digimon.html#e697",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=697",
+      "date": "12-24-2024"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=795819&Btype=Update",
+      "date": ""
+     }
+    ],
+    "th": [
+     {
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-82/",
+      "date": "2025-12-24"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "quantumon",
+   "display": "Quantumon",
+   "names": {
+    "en": [
+     "QUANTUMON",
+     "Quantumon"
     ],
     "kr": [
      "퀀텀몬"
@@ -26996,9 +27015,10 @@
   {
    "type": "digimon",
    "key": "sakuyamonawaken",
-   "display": "Sakuyamon(Awaken)",
+   "display": "Sakuyamon (Awaken)",
    "names": {
     "en": [
+     "Sakuyamon (Awaken)",
      "Sakuyamon(Awaken)"
     ],
     "kr": [],
@@ -27113,46 +27133,11 @@
   },
   {
    "type": "digimon",
-   "key": "susanoomon",
-   "display": "Susanoomon",
-   "names": {
-    "en": [
-     "Susanoomon",
-     "[Extreme] Susanoomon"
-    ],
-    "kr": [
-     "스사노오몬"
-    ],
-    "th": []
-   },
-   "anchor": "digimon.html#e784",
-   "servers": {
-    "na": [
-     {
-      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=784",
-      "date": "10-01-2025"
-     }
-    ],
-    "kr": [
-     {
-      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810988&Btype=Update",
-      "date": ""
-     }
-    ],
-    "th": [
-     {
-      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-90/",
-      "date": "2026-07-09"
-     }
-    ]
-   }
-  },
-  {
-   "type": "digimon",
    "key": "susanoomonshin",
-   "display": "Susanoomon(Shin)",
+   "display": "Susanoomon (Awaken)",
    "names": {
     "en": [
+     "Susanoomon (Awaken)",
      "Susanoomon(Shin)"
     ],
     "kr": [
@@ -27178,6 +27163,43 @@
      {
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-34/",
       "date": "2022-01-26"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "susanoomon",
+   "display": "Susanoomon (Extreme)",
+   "names": {
+    "en": [
+     "Susanoomon",
+     "Susanoomon (Extreme)",
+     "[Extreme] Susanoomon"
+    ],
+    "kr": [
+     "스사노오몬"
+    ],
+    "th": []
+   },
+   "anchor": "digimon.html#e784",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=784",
+      "date": "10-01-2025"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810988&Btype=Update",
+      "date": ""
+     }
+    ],
+    "th": [
+     {
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-90/",
+      "date": "2026-07-09"
      }
     ]
    }
@@ -27268,10 +27290,11 @@
   {
    "type": "digimon",
    "key": "zeedmillenniummon",
-   "display": "ZeedMillenniummon",
+   "display": "ZeedMillenniummon (Awaken)",
    "names": {
     "en": [
-     "ZeedMillenniummon"
+     "ZeedMillenniummon",
+     "ZeedMillenniummon (Awaken)"
     ],
     "kr": [
      "지드밀레니엄몬"

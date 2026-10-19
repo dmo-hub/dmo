@@ -16,6 +16,8 @@ import urllib.parse
 from collections import OrderedDict
 from pathlib import Path
 
+from wiki_names import wiki_name
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 PROJ = Path(__file__).resolve().parent.parent
@@ -208,7 +210,10 @@ def render_digimon(name: str, attrs: dict | None, show_name: bool = True) -> str
             )
 
     chip_block = "".join(rows)
-    name_html = f'<span class="digimon-name">{name}</span>' if show_name else ""
+    shown = wiki_name(name)
+    # the NA post's own spelling stays reachable on hover
+    tip = f' title="{html.escape(name)}"' if shown != name else ""
+    name_html = f'<span class="digimon-name"{tip}>{html.escape(shown)}</span>' if show_name else ""
     return f"{name_html}{chip_block}" or "&nbsp;"
 
 
@@ -276,7 +281,7 @@ def render() -> str:
         names = p["digimon"]
         n = len(names)
         attrs_map = p.get("attributes", {})
-        h2_text = ", ".join(names)
+        h2_text = html.escape(", ".join(wiki_name(n) for n in names))
 
         items = "\n        ".join(
             f"<li>{render_digimon(name, attrs_map.get(name), show_name=(n > 1))}</li>"
@@ -296,7 +301,7 @@ def render() -> str:
         if extra:
             img_block = '<div class="card-gallery">' + img_block + "".join(
                 f'<a href="{e["path"]}" target="_blank">'
-                f'<img class="card-image" src="{e["path"]}" alt="{html.escape(name)}" loading="lazy">'
+                f'<img class="card-image" src="{e["path"]}" alt="{html.escape(wiki_name(name))}" loading="lazy">'
                 f"</a>"
                 for name, e in extra.items()
             ) + "</div>"

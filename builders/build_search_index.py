@@ -32,6 +32,7 @@ sys.path.insert(0, str(PROJ / "builders"))
 sys.path.insert(0, str(PROJ / "enrichers"))
 from aliases import _strip_decoration, canonical, norm  # noqa: E402
 from enrich_digimon_kr import EN_TO_KR_KEYWORDS  # noqa: E402
+from wiki_names import wiki_name  # noqa: E402
 
 SEAL_DATA = PROJ / "docs" / "seal_data.json"
 KR_EN = PROJ / "data" / "kr_seal_en.json"
@@ -200,8 +201,8 @@ def main() -> None:
                 dig_entries.append({
                     "type": "digimon",
                     "key": norm(name),
-                    "display": canon,
-                    "names": {"en": sorted({name, canon, *alts}), "kr": sorted(set(kr_names)), "th": []},
+                    "display": wiki_name(name) if wiki_name(name) != name else canon,
+                    "names": {"en": sorted({name, canon, wiki_name(name), *alts}), "kr": sorted(set(kr_names)), "th": []},
                     "anchor": anchor,
                     "servers": servers,
                 })

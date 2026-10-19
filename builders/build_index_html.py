@@ -17,6 +17,8 @@ import sys
 from collections import OrderedDict
 from pathlib import Path
 
+from wiki_names import wiki_name
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 PROJ = Path(__file__).resolve().parent.parent
@@ -83,7 +85,7 @@ def main() -> None:
                     "topic": "digimon",
                     "idx": idx,
                     "date": p["date"],
-                    "title": ", ".join(p["digimon"]),
+                    "title": ", ".join(wiki_name(n) for n in p["digimon"]),
                     "href": f"digimon.html#{'e' if kind == 'event' else 'p'}{idx}",
                     "n_items": len(p["digimon"]),
                 }
