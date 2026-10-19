@@ -192,7 +192,7 @@
   </section>
 
   <section class="go-panel" id="panel-result" role="tabpanel" aria-labelledby="tab-result" hidden>
-    <div id="result-root">
+    <div id="result-root" role="status" aria-live="polite">
       <div class="go-card"><p class="go-sub" style="margin:0">ยังไม่ได้คำนวณ — ไปที่แท็บ <b>2 &middot; เป้าหมาย</b> แล้วกดคำนวณ</p></div>
     </div>
     <div class="go-actions">
@@ -424,24 +424,34 @@
   /* The clothing sets. Without this the solver has nothing to match items
      against and no set bonus is ever awarded on the real page. */
   var setRegistry = [];
+  /* Registry files that failed to load. Each loader falls back to an empty
+     list so the page still works, but the player has to be told what is
+     missing: an empty set registry silently drops every set bonus. */
+  var loadFailures = [];
+  function okOrFail(name) {
+    return function (r) {
+      if (!r.ok) loadFailures.push(name);
+      return r.ok ? r.json() : null;
+    };
+  }
 
   function loadSetRegistry() {
     return fetch("set_registry.json")
-      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(okOrFail("set_registry.json"))
       .then(function (d) { setRegistry = (d && d.sets) || []; })
-      .catch(function () { setRegistry = []; });
+      .catch(function () { loadFailures.push("set_registry.json"); setRegistry = []; });
   }
 
   function loadChipRegistry() {
     return fetch("chip_registry.json")
-      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(okOrFail("chip_registry.json"))
       .then(function (d) { chipRegistry = (d && d.items) || []; })
-      .catch(function () { chipRegistry = []; });
+      .catch(function () { loadFailures.push("chip_registry.json"); chipRegistry = []; });
   }
 
   function loadRegistry() {
     return fetch("gear_registry.json")
-      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(okOrFail("gear_registry.json"))
       .then(function (d) {
         registry = (d && d.items) || [];
         registryBySlot = {};
@@ -449,7 +459,7 @@
           (registryBySlot[it.slot] = registryBySlot[it.slot] || []).push(it);
         });
       })
-      .catch(function () { registry = []; registryBySlot = {}; });
+      .catch(function () { loadFailures.push("gear_registry.json"); registry = []; registryBySlot = {}; });
   }
 
   var LEVELS_KEY = "dmo_gear_levels";
@@ -639,12 +649,16 @@
     $("slot-hint").textContent = SLOTS.length + " \u0e0a\u0e48\u0e2d\u0e07 \u2014 " +
       SLOT_GROUPS.map(function (g) {
         return g + ": " + slotsInGroup(g).map(slotLabel).join(" · ");
+      }).join("  |  ") + " \u2014 \u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e48\u0e2d\u0e07\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e0a\u0e34\u0e49\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27";
     $("reg-hint").textContent = registry.length
       ? "\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e0a\u0e37\u0e48\u0e2d\u0e02\u0e2d\u0e07\u0e08\u0e32\u0e01\u0e0a\u0e48\u0e2d\u0e07\u0e0a\u0e37\u0e48\u0e2d \u0e41\u0e25\u0e49\u0e27\u0e04\u0e48\u0e32\u0e08\u0e30\u0e40\u0e15\u0e34\u0e21\u0e43\u0e2b\u0e49\u0e40\u0e2d\u0e07 \u2014 " + registry.length +
         " \u0e0a\u0e34\u0e49\u0e19\u0e43\u0e19\u0e17\u0e30\u0e40\u0e1a\u0e35\u0e22\u0e19 \u00b7 \u0e04\u0e48\u0e32\u0e17\u0e35\u0e48\u0e40\u0e15\u0e34\u0e21\u0e04\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14\u0e02\u0e2d\u0e07\u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e34\u0e49\u0e19"
       : "\u0e42\u0e2b\u0e25\u0e14\u0e17\u0e30\u0e40\u0e1a\u0e35\u0e22\u0e19\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49 \u2014 \u0e01\u0e23\u0e2d\u0e01\u0e04\u0e48\u0e32\u0e40\u0e2d\u0e07\u0e44\u0e14\u0e49\u0e15\u0e32\u0e21\u0e1b\u0e01\u0e15\u0e34";
-      }).join("  |  ") + " \u2014 \u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e48\u0e2d\u0e07\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e0a\u0e34\u0e49\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27";
-      SLOTS.join(" \u00b7 ") + ") \u2014 \u0e41\u0e15\u0e48\u0e25\u0e30\u0e0a\u0e48\u0e2d\u0e07\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e0a\u0e34\u0e49\u0e19\u0e40\u0e14\u0e35\u0e22\u0e27 \u0e23\u0e30\u0e1a\u0e1a\u0e08\u0e30\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e40\u0e2d\u0e07\u0e27\u0e48\u0e32\u0e0a\u0e48\u0e2d\u0e07\u0e44\u0e2b\u0e19\u0e43\u0e2a\u0e48\u0e2d\u0e30\u0e44\u0e23 \u0e2b\u0e23\u0e37\u0e2d\u0e1b\u0e25\u0e48\u0e2d\u0e22\u0e27\u0e48\u0e32\u0e07";
+    if (loadFailures.length) {
+      $("reg-hint").textContent += " \u00b7 \u0e42\u0e2b\u0e25\u0e14\u0e44\u0e21\u0e48\u0e2a\u0e33\u0e40\u0e23\u0e47\u0e08: " + loadFailures.join(", ") +
+        (loadFailures.indexOf("set_registry.json") >= 0
+          ? " \u2014 \u0e1c\u0e25\u0e25\u0e31\u0e1e\u0e18\u0e4c\u0e08\u0e30\u0e44\u0e21\u0e48\u0e19\u0e31\u0e1a\u0e42\u0e1a\u0e19\u0e31\u0e2a\u0e40\u0e0b\u0e47\u0e15" : "");
+    }
     // from the solver so the headline number cannot drift from the cap it uses
     $("hero-maxchips").textContent = MAX_CHIPS;
     $("chip-hint").textContent = "\u0e0a\u0e34\u0e1b\u0e2a\u0e25\u0e31\u0e1a\u0e0a\u0e48\u0e2d\u0e07\u0e44\u0e14\u0e49\u0e2d\u0e34\u0e2a\u0e23\u0e30 \u2014 \u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14 " + MAX_CHIPS + " \u0e0a\u0e34\u0e49\u0e19 \u0e23\u0e30\u0e1a\u0e1a\u0e08\u0e30\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e14\u0e35\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e43\u0e2b\u0e49\u0e40\u0e2d\u0e07";
