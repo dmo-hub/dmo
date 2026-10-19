@@ -764,9 +764,17 @@ def check_set_model():
     if "NODE ERR" in r.stdout:
         return ["__skip__: node unavailable"]
     if r.returncode != 0:
-        tail = [ln for ln in r.stdout.strip().splitlines() if ln][-6:]
-        label = "solver too slow:" if any(ln.startswith("SLOW") for ln in tail) else "DP and ILP disagree:"
-        return [label] + tail
+        lines = [ln for ln in r.stdout.strip().splitlines() if ln]
+        # Label from every line, not the tail: slow cases and wrong answers can
+        # both be present, and the last few lines would show only one kind.
+        slow = [ln for ln in lines if ln.startswith("SLOW")]
+        wrong = [ln for ln in lines if ln.startswith(("FEAS", "AT MISMATCH", "SET CREDIT"))]
+        out = []
+        if wrong:
+            out += ["DP and ILP disagree (%d):" % len(wrong)] + wrong[:5]
+        if slow:
+            out += ["solver too slow (%d):" % len(slow)] + slow[:5]
+        return out or (["DP vs ILP check failed:"] + lines[-6:])
     return []
 
 

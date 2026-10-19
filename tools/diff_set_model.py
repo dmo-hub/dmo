@@ -113,8 +113,8 @@ for vi, (vdata, vcases) in enumerate(variants):
                            timeout=CASE_BUDGET_MS / 1000 * (len(vcases) + 1))
     except subprocess.TimeoutExpired:
         bad += 1
-        print("SLOW v%d: %d cases did not finish within %d ms each"
-              % (vi, len(vcases), CASE_BUDGET_MS))
+        print("SLOW v%d: %d cases did not finish within %.0f s together (%d ms per case, +1 spare)"
+              % (vi, len(vcases), CASE_BUDGET_MS / 1000 * (len(vcases) + 1), CASE_BUDGET_MS))
         continue
     if r.returncode:
         print("NODE ERR", r.stderr[:600])
