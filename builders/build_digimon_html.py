@@ -298,6 +298,7 @@ def render() -> str:
             f"<li>{render_digimon(name, attrs_map.get(name), show_name=(n > 1))}</li>"
             for name in names
         )
+        badge = '<span class="kr-only-badge">KR เท่านั้น</span>' if kind == "kr" else ""
         if kind == "kr" and not attrs_map:
             # an empty box reads as missing data; say why there is none yet
             items = "<li>ยังไม่ออกในเซิร์ฟเวอร์ NA — ข้อมูลมาจากโพสต์ KR</li>"
@@ -330,7 +331,7 @@ def render() -> str:
                  data-attr="{",".join(all_attrs)}"
                  data-elem="{",".join(all_elems)}"
                  data-family="{",".join(all_fams)}">
-          <h2 class="card-title">{h2_text}</h2>
+          <h2 class="card-title">{h2_text}{badge}</h2>
           <div class="sources">{render_sources(p)}</div>
           <div class="card-body">
             {img_block}

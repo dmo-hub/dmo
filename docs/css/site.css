@@ -445,6 +445,13 @@ a.filter-pill:hover { text-decoration: none; color: var(--ink); }
   font-family: var(--display-font);
   letter-spacing: -0.4px;
 }
+/* a digimon only KR has so far -- same colour as the KR source chip */
+.kr-only-badge {
+  display: inline-block; vertical-align: 4px; margin-left: 8px;
+  font-family: inherit; font-size: 11px; font-weight: 600; letter-spacing: 0;
+  padding: 2px 8px; border-radius: 9999px;
+  background: var(--coral); color: var(--on-primary);
+}
 .card-body { padding: 0 20px 18px; }
 .card-image {
   display: block; max-width: 100%; max-height: 320px;
