@@ -131,6 +131,54 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -597,6 +645,22 @@
    "servers": {
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -681,6 +745,22 @@
      }
     ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-743",
       "date": "17.06.2025",
@@ -1078,6 +1158,14 @@
     ],
     "na": [
      {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "200"
+     },
+     {
       "post": "na-683",
       "date": "20.08.2024",
       "qty": "10",
@@ -1218,6 +1306,14 @@
      {
       "post": "na-683",
       "date": "20.08.2024",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "10",
       "tickets": "1",
       "stat": "BL",
@@ -1482,6 +1578,24 @@
       "value": "150"
      }
     ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "150"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "150"
+     }
+    ],
     "th": [
      {
       "post": "th-88",
@@ -1546,6 +1660,14 @@
     ],
     "na": [
      {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "300"
+     },
+     {
       "post": "na-673",
       "date": "11.06.2024",
       "qty": "5",
@@ -1556,6 +1678,14 @@
      {
       "post": "na-683",
       "date": "20.08.2024",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "300"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "5",
       "tickets": "1",
       "stat": "DS",
@@ -1636,6 +1766,14 @@
      {
       "post": "na-4121",
       "date": "17.03.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "10",
       "tickets": "1",
       "stat": "BL",
@@ -2054,6 +2192,14 @@
       "tickets": "1",
       "stat": "EV",
       "value": "100"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
      }
     ],
     "th": [
@@ -2114,6 +2260,14 @@
      {
       "post": "na-4114",
       "date": "04.03.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "EV",
+      "value": "400"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "1",
       "tickets": "25",
       "stat": "EV",
@@ -2191,6 +2345,30 @@
       "tickets": "2",
       "stat": "DE",
       "value": "100"
+     },
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
      },
      {
       "post": "na-743",
@@ -2311,6 +2489,24 @@
      {
       "post": "kr-814707",
       "date": "10.03.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "DS",
+      "value": "400"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "DS",
+      "value": "400"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "1",
       "tickets": "10",
       "stat": "DS",
@@ -2480,6 +2676,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "150"
+     },
      {
       "post": "na-673",
       "date": "11.06.2024",
@@ -2672,6 +2876,14 @@
       "tickets": "10",
       "stat": "EV",
       "value": "300"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "EV",
+      "value": "300"
      }
     ],
     "th": [
@@ -2720,6 +2932,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "HT",
+      "value": "400"
+     },
      {
       "post": "na-551",
       "date": "28.02.2022",
@@ -2837,6 +3057,30 @@
      }
     ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-743",
       "date": "17.06.2025",
@@ -2963,6 +3207,14 @@
       "tickets": "1",
       "stat": "AT",
       "value": "200"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "200"
      }
     ],
     "th": [
@@ -3039,7 +3291,8 @@
    "display": "BlackGatomon",
    "names": {
     "en": [
-     "BlackGatomon"
+     "BlackGatomon",
+     "Blackgatomon"
     ],
     "kr": [
      "블랙가트몬 씰"
@@ -3061,6 +3314,24 @@
      {
       "post": "kr-813439",
       "date": "20.01.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "200"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "200"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "5",
       "tickets": "1",
       "stat": "EV",
@@ -3253,6 +3524,14 @@
      {
       "post": "na-4100",
       "date": "28.01.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "DE",
+      "value": "300"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "1",
       "tickets": "25",
       "stat": "DE",
@@ -3663,6 +3942,30 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -3795,6 +4098,24 @@
       "value": "250"
      }
     ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HP",
+      "value": "250"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HP",
+      "value": "250"
+     }
+    ],
     "th": [
      {
       "post": "th-78",
@@ -3852,8 +4173,24 @@
     ],
     "na": [
      {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "200"
+     },
+     {
       "post": "na-673",
       "date": "11.06.2024",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "200"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "5",
       "tickets": "1",
       "stat": "HP",
@@ -3937,6 +4274,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "150"
+     },
      {
       "post": "na-782",
       "date": "23.09.2025",
@@ -4048,6 +4393,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
      {
       "post": "na-683",
       "date": "20.08.2024",
@@ -4240,6 +4593,14 @@
     ],
     "na": [
      {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "250"
+     },
+     {
       "post": "na-551",
       "date": "28.02.2022",
       "qty": "1",
@@ -4292,7 +4653,8 @@
    "display": "Commandramon",
    "names": {
     "en": [
-     "Commandramon"
+     "Commandramon",
+     "CommanDramon"
     ],
     "kr": [
      "코만드라몬 씰"
@@ -4319,6 +4681,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "150"
+     },
      {
       "post": "na-551",
       "date": "28.02.2022",
@@ -4389,6 +4759,30 @@
       "value": "150"
      },
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -4401,11 +4795,36 @@
   },
   {
    "type": "seal",
+   "key": "coolness",
+   "display": "Coolness",
+   "names": {
+    "en": [
+     "Coolness"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "coredramonblue",
    "display": "Coredramon(Blue)",
    "names": {
     "en": [
-     "Coredramon(Blue)"
+     "Coredramon(Blue)",
+     "Coredramon (Blue)"
     ],
     "kr": [
      "코어드라몬 ( 청 ) 씰"
@@ -4433,6 +4852,16 @@
       "value": "200"
      }
     ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "200"
+     }
+    ],
     "th": [
      {
       "post": "th-66",
@@ -4451,7 +4880,8 @@
    "display": "Coredramon(Green)",
    "names": {
     "en": [
-     "Coredramon(Green)"
+     "Coredramon(Green)",
+     "Coredramon (Green)"
     ],
     "kr": [
      "코어드라몬 ( 녹 ) 씰",
@@ -4482,6 +4912,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "300"
+     },
      {
       "post": "na-551",
       "date": "28.02.2022",
@@ -4594,6 +5032,30 @@
   },
   {
    "type": "seal",
+   "key": "craniummon",
+   "display": "Craniummon",
+   "names": {
+    "en": [
+     "Craniummon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HT",
+      "value": "500"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "craniummonx",
    "display": "Craniummon X",
    "names": {
@@ -4663,7 +5125,9 @@
    "display": "Crossup Mervamon",
    "names": {
     "en": [
-     "Crossup Mervamon"
+     "Crossup Mervamon",
+     "Cross-up Mervamon",
+     "CrossUp Mervamon"
     ],
     "kr": [
      "크로스업 메르바몬 씰"
@@ -4685,6 +5149,24 @@
      {
       "post": "kr-814707",
       "date": "10.03.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "BL",
+      "value": "250"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "BL",
+      "value": "250"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "1",
       "tickets": "25",
       "stat": "BL",
@@ -4736,6 +5218,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HT",
+      "value": "300"
+     },
      {
       "post": "na-683",
       "date": "20.08.2024",
@@ -4846,6 +5336,24 @@
       "value": "250"
      }
     ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "CT",
+      "value": "250"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "CT",
+      "value": "250"
+     }
+    ],
     "th": [
      {
       "post": "th-88",
@@ -4893,6 +5401,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "200"
+     },
      {
       "post": "na-530",
       "date": "12.10.2021",
@@ -5226,6 +5742,30 @@
   },
   {
    "type": "seal",
+   "key": "demimeramon",
+   "display": "DemiMeramon",
+   "names": {
+    "en": [
+     "DemiMeramon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "100"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "demonx",
    "display": "Demon X",
    "names": {
@@ -5477,6 +6017,48 @@
       "stat": "DS",
       "value": "500"
      }
+    ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "6",
+      "stat": "DS",
+      "value": "500"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "diarbbitmon",
+   "display": "Diarbbitmon",
+   "names": {
+    "en": [
+     "Diarbbitmon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "150"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "150"
+     }
     ]
    }
   },
@@ -5549,6 +6131,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "200"
+     },
      {
       "post": "na-4118",
       "date": "11.03.2026",
@@ -5754,6 +6344,16 @@
       "value": "100"
      }
     ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     }
+    ],
     "th": [
      {
       "post": "th-59",
@@ -5804,6 +6404,16 @@
       "tickets": "1",
       "stat": "CT",
       "value": "150"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -6781,6 +7391,30 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -6829,6 +7463,14 @@
      {
       "post": "na-4129",
       "date": "01.04.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "CT",
+      "value": "400"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "1",
       "tickets": "100",
       "stat": "CT",
@@ -6937,6 +7579,16 @@
       "value": "200"
      }
     ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "BL",
+      "value": "200"
+     }
+    ],
     "th": [
      {
       "post": "th-24",
@@ -7025,6 +7677,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
      {
       "post": "na-683",
       "date": "20.08.2024",
@@ -7169,6 +7829,30 @@
      }
     ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-743",
       "date": "17.06.2025",
@@ -7436,6 +8120,30 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -7472,6 +8180,16 @@
      {
       "post": "kr-813810",
       "date": "27.01.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "100"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
       "qty": "10",
       "tickets": "1",
       "stat": "HT",
@@ -7593,6 +8311,30 @@
       "tickets": "2",
       "stat": "BL",
       "value": "100"
+     },
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
      },
      {
       "post": "na-743",
@@ -7744,7 +8486,8 @@
    "display": "friendship",
    "names": {
     "en": [
-     "friendship"
+     "friendship",
+     "Friendship"
     ],
     "kr": [
      "우정의 씰",
@@ -7796,6 +8539,30 @@
      }
     ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-743",
       "date": "17.06.2025",
@@ -7865,6 +8632,14 @@
       "qty": "10",
       "tickets": "1",
       "stat": "BL",
+      "value": "100"
+     },
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HT",
       "value": "100"
      }
     ],
@@ -8119,6 +8894,14 @@
       "tickets": "1",
       "stat": "DE",
       "value": "200"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "200"
      }
     ],
     "th": [
@@ -8139,7 +8922,8 @@
    "display": "Gallantmon (Crimson Mode)",
    "names": {
     "en": [
-     "Gallantmon (Crimson Mode)"
+     "Gallantmon (Crimson Mode)",
+     "Gallantmon Crimson Mode"
     ],
     "kr": [
      "[ 각성 ] 듀크몬 크림존 모드 씰",
@@ -8194,6 +8978,22 @@
       "tickets": "100",
       "stat": "BL",
       "value": "300"
+     },
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HP",
+      "value": "600"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HP",
+      "value": "600"
      }
     ],
     "th": [
@@ -8319,6 +9119,14 @@
      {
       "post": "na-4121",
       "date": "17.03.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "100"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "10",
       "tickets": "1",
       "stat": "HT",
@@ -8552,6 +9360,30 @@
   },
   {
    "type": "seal",
+   "key": "gardromon",
+   "display": "Gardromon",
+   "names": {
+    "en": [
+     "Gardromon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "garmmon",
    "display": "Garmmon",
    "names": {
@@ -8679,6 +9511,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "200"
+     },
      {
       "post": "na-636",
       "date": "01.08.2023",
@@ -9010,7 +9850,8 @@
    "display": "GeoGreymon",
    "names": {
     "en": [
-     "GeoGreymon"
+     "GeoGreymon",
+     "Geogreymon"
     ],
     "kr": [
      "지오그레이몬 씰"
@@ -9056,6 +9897,14 @@
     ],
     "na": [
      {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "200"
+     },
+     {
       "post": "na-551",
       "date": "28.02.2022",
       "qty": "5",
@@ -9074,6 +9923,14 @@
      {
       "post": "na-683",
       "date": "20.08.2024",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "200"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "5",
       "tickets": "1",
       "stat": "HT",
@@ -9363,6 +10220,30 @@
   },
   {
    "type": "seal",
+   "key": "goblimon",
+   "display": "Goblimon",
+   "names": {
+    "en": [
+     "Goblimon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "100"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "goburimon",
    "display": "Goburimon",
    "names": {
@@ -9463,6 +10344,14 @@
     ],
     "na": [
      {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     },
+     {
       "post": "na-673",
       "date": "11.06.2024",
       "qty": "10",
@@ -9525,6 +10414,16 @@
       "value": "500"
      }
     ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "DS",
+      "value": "500"
+     }
+    ],
     "th": [
      {
       "post": "th-56",
@@ -9543,7 +10442,8 @@
    "display": "Greymon",
    "names": {
     "en": [
-     "Greymon"
+     "Greymon",
+     "Greymon©"
     ],
     "kr": [
      "그레이몬 씰"
@@ -9600,6 +10500,14 @@
       "qty": "5",
       "tickets": "1",
       "stat": "AT",
+      "value": "200"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "CT",
       "value": "200"
      }
     ]
@@ -9761,6 +10669,14 @@
     ],
     "na": [
      {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "200"
+     },
+     {
       "post": "na-782",
       "date": "23.09.2025",
       "qty": "1",
@@ -9877,6 +10793,30 @@
      }
     ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-743",
       "date": "17.06.2025",
@@ -10036,13 +10976,25 @@
    "key": "guilmon",
    "display": "Guilmon",
    "names": {
-    "en": [],
+    "en": [
+     "Guilmon"
+    ],
     "kr": [],
     "th": [
      "กิลมอน"
     ]
    },
    "servers": {
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     }
+    ],
     "th": [
      {
       "post": "th-24",
@@ -10097,6 +11049,14 @@
       "tickets": "1",
       "stat": "DS",
       "value": "400"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "400"
      }
     ],
     "th": [
@@ -10146,6 +11106,16 @@
       "value": "100"
      }
     ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "100"
+     }
+    ],
     "th": [
      {
       "post": "th-49",
@@ -10186,6 +11156,16 @@
      {
       "post": "kr-814707",
       "date": "10.03.2026",
+      "qty": "6",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "150"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
       "qty": "6",
       "tickets": "1",
       "stat": "EV",
@@ -10271,6 +11251,30 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -10301,6 +11305,30 @@
       "tickets": "1",
       "stat": "AT",
       "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "heat",
+   "display": "Heat",
+   "names": {
+    "en": [
+     "Heat"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -10357,6 +11385,30 @@
      }
     ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-743",
       "date": "17.06.2025",
@@ -10445,6 +11497,22 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "DE",
+      "value": "250"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "DE",
+      "value": "250"
+     },
      {
       "post": "na-782",
       "date": "23.09.2025",
@@ -10541,6 +11609,30 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -10597,6 +11689,14 @@
      {
       "post": "na-683",
       "date": "20.08.2024",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "BL",
+      "value": "350"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "1",
       "tickets": "100",
       "stat": "BL",
@@ -10750,7 +11850,8 @@
    "display": "Imperialdramon Paladin Mode",
    "names": {
     "en": [
-     "Imperialdramon Paladin Mode"
+     "Imperialdramon Paladin Mode",
+     "ImperialDramon Paladinmode"
     ],
     "kr": [
      "[ 각성 ] 황제드라몬 씰 팔라딘모드 씰",
@@ -10783,6 +11884,14 @@
      {
       "post": "na-4100",
       "date": "28.01.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "1",
       "tickets": "100",
       "stat": "AT",
@@ -11157,6 +12266,14 @@
     ],
     "na": [
      {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "CT",
+      "value": "250"
+     },
+     {
       "post": "na-782",
       "date": "23.09.2025",
       "qty": "1",
@@ -11200,6 +12317,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "200"
+     },
      {
       "post": "na-782",
       "date": "23.09.2025",
@@ -11329,7 +12454,8 @@
    "display": "KausGammamon",
    "names": {
     "en": [
-     "KausGammamon"
+     "KausGammamon",
+     "Kausgammamon"
     ],
     "kr": [
      "카우스감마몬 씰"
@@ -11361,6 +12487,14 @@
      {
       "post": "na-4100",
       "date": "28.01.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "200"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "5",
       "tickets": "1",
       "stat": "CT",
@@ -11407,6 +12541,16 @@
      {
       "post": "kr-813439",
       "date": "20.01.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
       "qty": "10",
       "tickets": "1",
       "stat": "HP",
@@ -11620,6 +12764,30 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -11648,6 +12816,16 @@
      {
       "post": "kr-813810",
       "date": "27.01.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "100"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
       "qty": "10",
       "tickets": "1",
       "stat": "CT",
@@ -11723,6 +12901,16 @@
       "stat": "CT",
       "value": "150"
      }
+    ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "150"
+     }
     ]
    }
   },
@@ -11772,6 +12960,14 @@
      {
       "post": "na-673",
       "date": "11.06.2024",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "1",
       "tickets": "100",
       "stat": "AT",
@@ -11849,6 +13045,14 @@
       "tickets": "100",
       "stat": "CT",
       "value": "400"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "CT",
+      "value": "400"
      }
     ],
     "th": [
@@ -11883,6 +13087,16 @@
      {
       "post": "kr-813810",
       "date": "27.01.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "200"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
       "qty": "5",
       "tickets": "1",
       "stat": "CT",
@@ -12087,6 +13301,14 @@
       "tickets": "1",
       "stat": "CT",
       "value": "150"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "150"
      }
     ],
     "th": [
@@ -12245,6 +13467,22 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -12343,6 +13581,16 @@
      {
       "post": "kr-813810",
       "date": "27.01.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "150"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
       "qty": "5",
       "tickets": "1",
       "stat": "DE",
@@ -12922,7 +14170,8 @@
    "display": "Lucemon: Falldown Mode",
    "names": {
     "en": [
-     "Lucemon: Falldown Mode"
+     "Lucemon: Falldown Mode",
+     "Lucemon : Falldown Mode"
     ],
     "kr": [
      "루체몬 : 폴다운 모드 씰"
@@ -12954,6 +14203,14 @@
      {
       "post": "na-4118",
       "date": "11.03.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "300"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "1",
       "tickets": "1",
       "stat": "HP",
@@ -13235,6 +14492,14 @@
       "tickets": "1",
       "stat": "HP",
       "value": "200"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "200"
      }
     ],
     "th": [
@@ -13464,6 +14729,30 @@
       "value": "100"
      },
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -13501,6 +14790,16 @@
      {
       "post": "kr-814707",
       "date": "10.03.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "EV",
+      "value": "400"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
       "qty": "1",
       "tickets": "100",
       "stat": "EV",
@@ -13718,6 +15017,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
      {
       "post": "na-551",
       "date": "28.02.2022",
@@ -14125,6 +15432,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "CT",
+      "value": "300"
+     },
      {
       "post": "na-551",
       "date": "28.02.2022",
@@ -14585,6 +15900,14 @@
     ],
     "na": [
      {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "EV",
+      "value": "350"
+     },
+     {
       "post": "na-551",
       "date": "28.02.2022",
       "qty": "1",
@@ -14801,6 +16124,14 @@
     ],
     "na": [
      {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
       "post": "na-551",
       "date": "28.02.2022",
       "qty": "10",
@@ -14879,6 +16210,30 @@
   },
   {
    "type": "seal",
+   "key": "moonmillenniumon",
+   "display": "MoonMillenniumon",
+   "names": {
+    "en": [
+     "MoonMillenniumon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "HT",
+      "value": "300"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "mugendramon",
    "display": "MugenDramon",
    "names": {
@@ -14892,6 +16247,14 @@
    },
    "servers": {
     "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
      {
       "post": "na-636",
       "date": "01.08.2023",
@@ -14955,6 +16318,14 @@
    "servers": {
     "na": [
      {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
       "post": "na-636",
       "date": "01.08.2023",
       "qty": "10",
@@ -15011,6 +16382,14 @@
     ],
     "na": [
      {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "AT",
+      "value": "250"
+     },
+     {
       "post": "na-530",
       "date": "12.10.2021",
       "qty": "1",
@@ -15051,6 +16430,30 @@
       "tickets": "10",
       "stat": "AT",
       "value": "250"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "mystimon",
+   "display": "Mystimon",
+   "names": {
+    "en": [
+     "Mystimon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "300"
      }
     ]
    }
@@ -15099,6 +16502,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "250"
+     },
      {
       "post": "na-636",
       "date": "01.08.2023",
@@ -15180,6 +16591,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "EV",
+      "value": "300"
+     },
      {
       "post": "na-530",
       "date": "12.10.2021",
@@ -15267,12 +16686,68 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
       "tickets": "1",
       "stat": "AT",
       "value": "150"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "numemon",
+   "display": "Numemon",
+   "names": {
+    "en": [
+     "Numemon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "100"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "100"
      }
     ]
    }
@@ -15393,6 +16868,14 @@
     ],
     "na": [
      {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "150"
+     },
+     {
       "post": "na-792",
       "date": "18.11.2025",
       "qty": "5",
@@ -15448,6 +16931,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
      {
       "post": "na-636",
       "date": "01.08.2023",
@@ -15884,6 +17375,24 @@
       "value": "250"
      }
     ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "AT",
+      "value": "250"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "AT",
+      "value": "250"
+     }
+    ],
     "th": [
      {
       "post": "th-88",
@@ -16179,6 +17688,30 @@
     ],
     "na": [
      {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "na-743",
       "date": "17.06.2025",
       "qty": "1",
@@ -16227,6 +17760,14 @@
      {
       "post": "na-4100",
       "date": "28.01.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "10",
       "tickets": "1",
       "stat": "AT",
@@ -16386,6 +17927,16 @@
       "value": "100"
      }
     ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "100"
+     }
+    ],
     "th": [
      {
       "post": "th-66",
@@ -16411,6 +17962,14 @@
    },
    "servers": {
     "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "300"
+     },
      {
       "post": "na-636",
       "date": "01.08.2023",
@@ -16622,6 +18181,16 @@
       "value": "150"
      }
     ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     }
+    ],
     "th": [
      {
       "post": "th-56",
@@ -16744,6 +18313,14 @@
      {
       "post": "na-4110",
       "date": "25.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "200"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "10",
       "tickets": "1",
       "stat": "DS",
@@ -16921,7 +18498,8 @@
    "display": "PrinceMamemon",
    "names": {
     "en": [
-     "PrinceMamemon"
+     "PrinceMamemon",
+     "Prince Mamemon"
     ],
     "kr": [
      "프린스콩알몬 씰"
@@ -16950,6 +18528,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "CT",
+      "value": "350"
+     },
      {
       "post": "na-530",
       "date": "12.10.2021",
@@ -17194,6 +18780,16 @@
      {
       "post": "kr-813439",
       "date": "20.01.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "EV",
+      "value": "300"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
       "qty": "1",
       "tickets": "10",
       "stat": "EV",
@@ -17577,6 +19173,16 @@
       "stat": "EV",
       "value": "200"
      }
+    ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "200"
+     }
     ]
    }
   },
@@ -17586,7 +19192,8 @@
    "display": "RizeGreymon",
    "names": {
     "en": [
-     "RizeGreymon"
+     "RizeGreymon",
+     "Rizegreymon"
     ],
     "kr": [
      "라이즈그레이몬 씰"
@@ -17666,6 +19273,14 @@
      {
       "post": "na-683",
       "date": "20.08.2024",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "CT",
+      "value": "250"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "1",
       "tickets": "10",
       "stat": "CT",
@@ -17772,6 +19387,16 @@
      {
       "post": "kr-813439",
       "date": "20.01.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HT",
+      "value": "400"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
       "qty": "1",
       "tickets": "25",
       "stat": "HT",
@@ -17930,6 +19555,16 @@
       "stat": "CT",
       "value": "300"
      }
+    ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "6",
+      "stat": "CT",
+      "value": "300"
+     }
     ]
    }
   },
@@ -17971,6 +19606,14 @@
      {
       "post": "na-4129",
       "date": "01.04.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "350"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "1",
       "tickets": "1",
       "stat": "EV",
@@ -18059,12 +19702,28 @@
       "value": "400"
      },
      {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "200"
+     },
+     {
       "post": "na-673",
       "date": "11.06.2024",
       "qty": "1",
       "tickets": "60",
       "stat": "HP",
       "value": "400"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "200"
      }
     ],
     "th": [
@@ -18100,13 +19759,25 @@
    "key": "salamon",
    "display": "Salamon",
    "names": {
-    "en": [],
+    "en": [
+     "Salamon"
+    ],
     "kr": [],
     "th": [
      "พล็อตมอน"
     ]
    },
    "servers": {
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "100"
+     }
+    ],
     "th": [
      {
       "post": "th-59",
@@ -18163,6 +19834,16 @@
      {
       "post": "kr-813439",
       "date": "20.01.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "150"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
       "qty": "5",
       "tickets": "1",
       "stat": "BL",
@@ -18412,6 +20093,16 @@
       "value": "200"
      }
     ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "200"
+     }
+    ],
     "th": [
      {
       "post": "th-64",
@@ -18452,6 +20143,30 @@
       "tickets": "1",
       "stat": "DE",
       "value": "100"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "sharmamon",
+   "display": "Sharmamon",
+   "names": {
+    "en": [
+     "Sharmamon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "150"
      }
     ]
    }
@@ -18616,6 +20331,14 @@
       "value": "250"
      },
      {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "BL",
+      "value": "250"
+     },
+     {
       "post": "na-810",
       "date": "14.01.2026",
       "qty": "1",
@@ -18735,6 +20458,14 @@
      {
       "post": "na-4129",
       "date": "01.04.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "200"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "5",
       "tickets": "1",
       "stat": "HT",
@@ -18929,6 +20660,16 @@
       "value": "250"
      }
     ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "AT",
+      "value": "250"
+     }
+    ],
     "th": [
      {
       "post": "th-56",
@@ -19015,6 +20756,30 @@
      }
     ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-743",
       "date": "17.06.2025",
@@ -19144,6 +20909,14 @@
      {
       "post": "na-4129",
       "date": "01.04.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "AT",
+      "value": "300"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "1",
       "tickets": "25",
       "stat": "AT",
@@ -19370,6 +21143,14 @@
     ],
     "na": [
      {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "DE",
+      "value": "250"
+     },
+     {
       "post": "na-530",
       "date": "12.10.2021",
       "qty": "1",
@@ -19486,6 +21267,16 @@
       "stat": "HP",
       "value": "200"
      }
+    ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "200"
+     }
     ]
    }
   },
@@ -19548,6 +21339,30 @@
   },
   {
    "type": "seal",
+   "key": "spring",
+   "display": "Spring",
+   "names": {
+    "en": [
+     "Spring"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "sprouts",
    "display": "Sprout’s",
    "names": {
@@ -19594,6 +21409,30 @@
       "tickets": "1",
       "stat": "HT",
       "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "summer",
+   "display": "Summer",
+   "names": {
+    "en": [
+     "Summer"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-740",
+      "date": "10.06.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -19724,6 +21563,14 @@
      {
       "post": "na-4110",
       "date": "25.02.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "DS",
+      "value": "600"
+     },
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "1",
       "tickets": "25",
       "stat": "DS",
@@ -20002,6 +21849,16 @@
       "value": "100"
      }
     ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     }
+    ],
     "th": [
      {
       "post": "th-15",
@@ -20140,6 +21997,14 @@
      {
       "post": "na-683",
       "date": "20.08.2024",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "150"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "5",
       "tickets": "1",
       "stat": "DE",
@@ -20446,6 +22311,16 @@
       "stat": "HP",
       "value": "150"
      }
+    ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
+     }
     ]
    }
   },
@@ -20694,6 +22569,14 @@
       "tickets": "25",
       "stat": "HP",
       "value": "500"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HP",
+      "value": "500"
      }
     ],
     "th": [
@@ -20819,6 +22702,64 @@
       "tickets": "1",
       "stat": "DE",
       "value": "80"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "80"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "vdramon",
+   "display": "V-dramon",
+   "names": {
+    "en": [
+     "V-dramon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "vmon",
+   "display": "V-mon",
+   "names": {
+    "en": [
+     "V-mon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
      }
     ]
    }
@@ -21002,6 +22943,30 @@
   },
   {
    "type": "seal",
+   "key": "venomvamdemon",
+   "display": "Venom Vamdemon",
+   "names": {
+    "en": [
+     "Venom Vamdemon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "venommyotismon",
    "display": "VenomMyotismon",
    "names": {
@@ -21161,6 +23126,14 @@
     ],
     "na": [
      {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "100"
+     },
+     {
       "post": "na-782",
       "date": "23.09.2025",
       "qty": "10",
@@ -21272,6 +23245,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HP",
+      "value": "500"
+     },
      {
       "post": "na-530",
       "date": "12.10.2021",
@@ -21408,6 +23389,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "150"
+     },
      {
       "post": "na-636",
       "date": "01.08.2023",
@@ -21587,6 +23576,14 @@
     ],
     "na": [
      {
+      "post": "na-4108",
+      "date": "11.02.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "DS",
+      "value": "400"
+     },
+     {
       "post": "na-551",
       "date": "28.02.2022",
       "qty": "1",
@@ -21646,6 +23643,16 @@
       "stat": "HT",
       "value": "300"
      }
+    ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HT",
+      "value": "300"
+     }
     ]
    }
   },
@@ -21655,7 +23662,8 @@
    "display": "WezenGammamon",
    "names": {
     "en": [
-     "WezenGammamon"
+     "WezenGammamon",
+     "Wezengammamon"
     ],
     "kr": [
      "웨즌감마몬 씰"
@@ -21687,6 +23695,14 @@
      {
       "post": "na-4118",
       "date": "11.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "150"
+     },
+     {
+      "post": "na-694",
+      "date": "26.11.2024",
       "qty": "5",
       "tickets": "1",
       "stat": "DE",
@@ -21742,6 +23758,16 @@
      {
       "post": "kr-814707",
       "date": "10.03.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HP",
+      "value": "250"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
       "qty": "1",
       "tickets": "10",
       "stat": "HP",
@@ -22016,6 +24042,14 @@
     ],
     "na": [
      {
+      "post": "na-4105",
+      "date": "04.02.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HP",
+      "value": "500"
+     },
+     {
       "post": "na-530",
       "date": "12.10.2021",
       "qty": "1",
@@ -22114,6 +24148,14 @@
     ],
     "na": [
      {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "300"
+     },
+     {
       "post": "na-636",
       "date": "01.08.2023",
       "qty": "1",
@@ -22168,10 +24210,44 @@
       "value": "550"
      }
     ],
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "HT",
+      "value": "550"
+     }
+    ],
     "th": [
      {
       "post": "th-88",
       "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "HT",
+      "value": "550"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "zeedmillenniumon",
+   "display": "ZeedMillenniumon",
+   "names": {
+    "en": [
+     "ZeedMillenniumon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-746",
+      "date": "24.06.2025",
       "qty": "1",
       "tickets": "100",
       "stat": "HT",
@@ -22206,6 +24282,16 @@
      {
       "post": "kr-813439",
       "date": "20.01.2026",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "DS",
+      "value": "600"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026",
       "qty": "1",
       "tickets": "25",
       "stat": "DS",
@@ -22796,6 +24882,54 @@
   },
   {
    "type": "patch",
+   "key": "na-4105",
+   "display": "na-4105 — Seal Exchange Ticket — Craft List",
+   "names": {
+    "en": [
+     "na-4105",
+     "Seal Exchange Ticket — Craft List"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-4105",
+   "n_tables": 1,
+   "n_rows": 30,
+   "servers": {
+    "na": [
+     {
+      "post": "na-4105",
+      "date": "04.02.2026"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "na-4108",
+   "display": "na-4108 — Seal Exchange Ticket — Craft List",
+   "names": {
+    "en": [
+     "na-4108",
+     "Seal Exchange Ticket — Craft List"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-4108",
+   "n_tables": 1,
+   "n_rows": 31,
+   "servers": {
+    "na": [
+     {
+      "post": "na-4108",
+      "date": "11.02.2026"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
    "key": "na-4110",
    "display": "na-4110 — Seal Exchange Ticket — Craft List (1)",
    "names": {
@@ -22887,6 +25021,30 @@
      {
       "post": "na-4121",
       "date": "17.03.2026"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "na-4126",
+   "display": "na-4126 — Seal Exchange Ticket — Craft List",
+   "names": {
+    "en": [
+     "na-4126",
+     "Seal Exchange Ticket — Craft List"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-4126",
+   "n_tables": 1,
+   "n_rows": 33,
+   "servers": {
+    "na": [
+     {
+      "post": "na-4126",
+      "date": "25.03.2026"
      }
     ]
    }
@@ -23037,6 +25195,102 @@
   },
   {
    "type": "patch",
+   "key": "na-694",
+   "display": "na-694 — Seal Exchange Ticket — Craft List",
+   "names": {
+    "en": [
+     "na-694",
+     "Seal Exchange Ticket — Craft List"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-694",
+   "n_tables": 1,
+   "n_rows": 27,
+   "servers": {
+    "na": [
+     {
+      "post": "na-694",
+      "date": "26.11.2024"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "na-703",
+   "display": "na-703 — Seal Exchange Ticket — Craft List",
+   "names": {
+    "en": [
+     "na-703",
+     "Seal Exchange Ticket — Craft List"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-703",
+   "n_tables": 1,
+   "n_rows": 24,
+   "servers": {
+    "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "na-715",
+   "display": "na-715 — Seal Exchange Ticket — Craft List",
+   "names": {
+    "en": [
+     "na-715",
+     "Seal Exchange Ticket — Craft List"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-715",
+   "n_tables": 1,
+   "n_rows": 24,
+   "servers": {
+    "na": [
+     {
+      "post": "na-715",
+      "date": "08.04.2025"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "na-740",
+   "display": "na-740 — Seal Exchange Ticket — Craft List",
+   "names": {
+    "en": [
+     "na-740",
+     "Seal Exchange Ticket — Craft List"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-740",
+   "n_tables": 1,
+   "n_rows": 23,
+   "servers": {
+    "na": [
+     {
+      "post": "na-740",
+      "date": "10.06.2025"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
    "key": "na-743",
    "display": "na-743 — Seal Exchange Ticket — Craft List",
    "names": {
@@ -23055,6 +25309,30 @@
      {
       "post": "na-743",
       "date": "17.06.2025"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "na-746",
+   "display": "na-746 — Seal Exchange Ticket — Craft List",
+   "names": {
+    "en": [
+     "na-746",
+     "Seal Exchange Ticket — Craft List"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-746",
+   "n_tables": 1,
+   "n_rows": 22,
+   "servers": {
+    "na": [
+     {
+      "post": "na-746",
+      "date": "24.06.2025"
      }
     ]
    }
