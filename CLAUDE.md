@@ -87,6 +87,15 @@ python extractors/extract_th_digimon_images.py # → image_th (becomes primary i
 python fetchers/fetch_dmowiki_digimon.py
 #     Saves to cache/dmowiki_<safe-slug>.html.
 
+# 11b. Same Chrome session, any page list. --mode html saves the rendered page
+#      (cache/dmowiki_<slug>.html, what scan_clothing/scan_chipsets read);
+#      --mode api calls api.php from inside the tab and saves raw wikitext
+#      (cache/dmowiki_<slug>.json), 50 titles per request. Cached files are
+#      skipped unless --force; --dry-run prints the plan without Chrome.
+python fetchers/fetch_dmowiki_pages.py Clothing ChipSets
+python fetchers/fetch_dmowiki_pages.py --mode api --category Digimon_Rank_U
+python fetchers/fetch_dmowiki_pages.py --mode api --list titles.txt
+
 # 12. Parse cache/dmowiki_*.html and seed `attributes` dict on each digimon.
 python enrichers/enrich_digimon_attributes.py            # missing only
 python enrichers/enrich_digimon_attributes.py --force    # re-parse every digimon
