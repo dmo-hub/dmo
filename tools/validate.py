@@ -737,19 +737,27 @@ def check_set_model():
         import pulp  # noqa: F401
     except ImportError:
         return ["__skip__: pulp not installed"]
-    r = subprocess.run(
-        [sys.executable, str(PROJ / "tools" / "diff_set_model.py")],
-        cwd=PROJ,
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-    )
+    # diff_set_model bounds each node run itself; this outer limit only catches
+    # a hang in the Python side (the ILP), so a stuck gate fails instead of
+    # blocking CI forever.
+    try:
+        r = subprocess.run(
+            [sys.executable, str(PROJ / "tools" / "diff_set_model.py")],
+            cwd=PROJ,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=1800,
+        )
+    except subprocess.TimeoutExpired:
+        return ["DP vs ILP check did not finish within 1800 s"]
     if "NODE ERR" in r.stdout:
         return ["__skip__: node unavailable"]
     if r.returncode != 0:
         tail = [ln for ln in r.stdout.strip().splitlines() if ln][-6:]
-        return ["DP and ILP disagree:"] + tail
+        label = "solver too slow:" if any(ln.startswith("SLOW") for ln in tail) else "DP and ILP disagree:"
+        return [label] + tail
     return []
 
 

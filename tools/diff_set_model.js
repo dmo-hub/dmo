@@ -13,11 +13,14 @@ if (!solver || typeof solver.solve !== "function") {
 
 var payload = JSON.parse(fs.readFileSync(process.argv[2], "utf8"));
 var out = payload.cases.map(function (c) {
+  var t0 = Date.now();
   var r = solver.solve(payload.data, c.base, c.targets);
-  if (!r) return { feasible: false, at: null };
+  var ms = Date.now() - t0;
+  if (!r) return { feasible: false, at: null, ms: ms };
   var res = r.result || {};
   var base = Number((c.base && c.base.AT) || 0);
   return {
+    ms: ms,
     feasible: !!r.feasible,
     /* Report the GAIN over base, which is what the ILP objective maximizes;
        the JS totals include the base AT the caller passed in. */

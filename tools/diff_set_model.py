@@ -95,13 +95,27 @@ if victim_slot:
 variants.append((data, [{"base": {"AT": 0, "HT": 0}, "targets": {"HT": h}}
                         for h in (6000, 8000, 10000)]))
 
+# The page runs this solver on the player's main thread, so a slow case is a
+# frozen tab, not just a slow test. Agreement with the ILP says nothing about
+# speed: adding sets once took a case from 3.6 s to past 120 s while every
+# answer stayed correct. Fail on time as well, and bound the whole node run so
+# a runaway solve fails the gate instead of hanging it.
+CASE_BUDGET_MS = int(os.environ.get("CASE_BUDGET_MS", "30000"))
+
 bad = feas = total = 0
 for vi, (vdata, vcases) in enumerate(variants):
     json.dump({"data": vdata, "cases": vcases},
               io.open(SP + "/.diff_cases.json", "w", encoding="utf-8"),
               ensure_ascii=False)
-    r = subprocess.run(["node", SP + "/diff_set_model.js", SP + "/.diff_cases.json"],
-                       capture_output=True, text=True, encoding="utf-8", cwd=PROJ)
+    try:
+        r = subprocess.run(["node", SP + "/diff_set_model.js", SP + "/.diff_cases.json"],
+                           capture_output=True, text=True, encoding="utf-8", cwd=PROJ,
+                           timeout=CASE_BUDGET_MS / 1000 * (len(vcases) + 1))
+    except subprocess.TimeoutExpired:
+        bad += 1
+        print("SLOW v%d: %d cases did not finish within %d ms each"
+              % (vi, len(vcases), CASE_BUDGET_MS))
+        continue
     if r.returncode:
         print("NODE ERR", r.stderr[:600])
         sys.exit(1)
@@ -110,6 +124,9 @@ for vi, (vdata, vcases) in enumerate(variants):
     for i, (c, j) in enumerate(zip(vcases, js)):
         total += 1
         tag = "v%d#%d" % (vi, i)
+        if j.get("ms", 0) > CASE_BUDGET_MS:
+            bad += 1
+            print("SLOW %s %s -> %d ms (budget %d)" % (tag, c["targets"], j["ms"], CASE_BUDGET_MS))
         p = ref_model.solve(vdata, c["base"], c["targets"])
         pf, jf = (p is not None), bool(j["feasible"])
         if pf:
