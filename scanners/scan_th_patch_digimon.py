@@ -37,6 +37,9 @@ NEW_DIGIMON_RE = re.compile(
     re.DOTALL,
 )
 
+# The same marker in raw HTML, where tags or &nbsp; can sit before the colon.
+REAL_MARKER_RE = re.compile(r"ดิจิมอนใหม่(?:\s|<[^>]+>|&nbsp;)*[:：]")
+
 THAI_MONTHS = {
     "มกราคม": 1,
     "กุมภาพันธ์": 2,
@@ -128,7 +131,37 @@ def parse_post(slug: str, url: str, raw_html: str) -> dict | None:
         "th_name": names[0],
         "th_names": names,
         "image_url": first_banner(raw_html),
+        "images": images_by_name(raw_html),
     }
+
+
+def images_by_name(raw_html: str) -> dict[str, str]:
+    """Each new digimon's own picture, keyed by its name.
+
+    Posts lay it out two ways: the picture right above that digimon's
+    "ดิจิมอนใหม่ :" heading (Ordinemon / Susanoomon Shin), or the heading
+    first with the picture under it (JetMervamon / Mervamon) -- and those
+    posts have no picture before their first heading at all, which is how the
+    two are told apart. A name with no picture of its own is left out."""
+    images = [(m.start(), m.group(0)) for m in IMG_RE.finditer(raw_html)
+              if not is_chrome(m.group(0)) and not is_thumbnail(m.group(0))]
+    marks = [m.start() for m in REAL_MARKER_RE.finditer(raw_html)]
+    if not marks:
+        return {}
+    picture_first = any(pos < marks[0] for pos, _ in images)
+    bounds = [0] + marks + [len(raw_html)]
+    out: dict[str, str] = {}
+    for k, start in enumerate(marks):
+        found = NEW_DIGIMON_RE.search(html_to_text(raw_html[start:start + 2000]))
+        name = found.group(1).strip() if found else None
+        if picture_first:
+            lo, hi, pick = bounds[k], start, -1
+        else:
+            lo, hi, pick = start, bounds[k + 2], 0
+        inside = [u for (pos, u) in images if lo <= pos < hi]
+        if name and inside and name not in out:
+            out[name] = inside[pick]
+    return out
 
 
 def process(post: dict) -> dict | None:

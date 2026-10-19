@@ -537,7 +537,9 @@
             "Nature Spirits"
           ]
         }
-      }
+      },
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2022/01/ss5.jpg",
+      "image_th": "img/digimon/e531_th.jpeg"
     },
     "578": {
       "date": "07-26-2022",
@@ -557,7 +559,12 @@
             "Virus Busters"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-51/",
+      "date_th": "2023-06-26",
+      "_th_name": "เชาท์มอน X7",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2023/06/s13.jpg",
+      "image_th": "img/digimon/e578_th.jpeg"
     },
     "602": {
       "date": "12-27-2022",
@@ -567,11 +574,10 @@
       ],
       "image": "img/digimon/e602.jpg",
       "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=808086&Btype=Update",
-      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/",
-      "date_th": "2026-06-11",
-      "_th_name": "[เอ็กซ์ตรีม] ลูเจมอน : ซาตานโหมด",
-      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/06/3.png",
-      "image_th": "img/digimon/e602_th.png",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-47/",
+      "date_th": "2023-02-23",
+      "_th_name": "ลูเจมอน ซาตานโหมด (ชิน)",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2023/02/10.jpg",
       "image_kr": "img/digimon/e602_kr.png",
       "attributes": {
         "Lucemon Satan Mode(Shin)": {
@@ -584,7 +590,8 @@
             "Virus Busters"
           ]
         }
-      }
+      },
+      "image_th": "img/digimon/e602_th.jpeg"
     },
     "614": {
       "date": "03-07-2023",
@@ -611,7 +618,12 @@
             "Nature Spirits"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-52/",
+      "date_th": "2023-07-26",
+      "_th_name": "เมอร์วามอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2023/07/m4.jpg",
+      "image_th": "img/digimon/e614_th.jpeg"
     },
     "620": {
       "date": "04-18-2023",
@@ -687,7 +699,12 @@
             "Nature Spirits"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-59/",
+      "date_th": "2024-02-22",
+      "_th_name": "ซาคุยามอน (อะเวคเค่น)",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/02/8.jpg",
+      "image_th": "img/digimon/e652_th.jpeg"
     },
     "655": {
       "date": "12-19-2023",
@@ -706,7 +723,12 @@
             "Dark Area"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-62/",
+      "date_th": "2024-05-23",
+      "_th_name": "เบลเฟมอน เรจโหมด (อะเวคเค่น)",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/05/2.jpg",
+      "image_th": "img/digimon/e655_th.jpeg"
     },
     "662": {
       "date": "02-27-2024",
@@ -725,7 +747,12 @@
             "Wind Guardians"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-61/",
+      "date_th": "2024-04-25",
+      "_th_name": "เบลเซบุมอน บลาสโหมด(อะเวคเค่น)",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/04/12.1.jpg",
+      "image_th": "img/digimon/e662_th.jpeg"
     },
     "666": {
       "date": "04-02-2024",
@@ -744,7 +771,12 @@
             "Metal Empire"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-93/",
+      "date_th": "2026-08-27",
+      "_th_name": "กาบูมอน – สายสัมพันธ์แห่งมิตรภาพ",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/08/g1.png",
+      "image_th": "img/digimon/e666_th.png"
     },
     "670": {
       "date": "05-14-2024",
@@ -771,7 +803,12 @@
             "TBD"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-73/",
+      "date_th": "2025-04-24",
+      "_th_name": "อังโกรามอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/04/ANGORAMON.jpg",
+      "image_th": "img/digimon/e670_th.jpeg"
     },
     "675": {
       "date": "06-25-2024",
@@ -789,7 +826,12 @@
             "Nightmare Soldiers"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-68/",
+      "date_th": "2024-11-26",
+      "_th_name": "ครอสอัพ เมอร์วามอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/11/12.png",
+      "image_th": "img/digimon/e675_th.png"
     },
     "691": {
       "date": "11-05-2024",
@@ -809,7 +851,12 @@
             "Wind Guardians"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-79/",
+      "date_th": "2025-10-24",
+      "_th_name": "อิมพีเรียลดรามอน ไฟเตอร์โหมด (อะเวคเค่น)",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/10/4.png",
+      "image_th": "img/digimon/e691_th.png"
     },
     "697": {
       "date": "12-24-2024",
@@ -839,7 +886,12 @@
             }
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-82/",
+      "date_th": "2025-12-24",
+      "_th_name": "โอดิเนมอน (อะเวคเค่น)",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/12/1.png",
+      "image_th": "img/digimon/e697_th.png"
     },
     "702": {
       "date": "01-21-2025",
@@ -870,7 +922,12 @@
             "Wind Guardians"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-76/",
+      "date_th": "2025-07-24",
+      "_th_name": "[อะเวคเค่น] วอร์เกรย์มอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/07/k4.png",
+      "image_th": "img/digimon/e702_th.png"
     },
     "332": {
       "date": "12-13-2016",
@@ -911,7 +968,9 @@
       ],
       "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-28/",
       "date_th": "2021-07-26",
-      "_th_name": "ฟานลอนมอน (ชิน)"
+      "_th_name": "ฟานลอนมอน (ชิน)",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2021/07/fl2.jpg",
+      "image_th": "img/digimon/e502_th.jpeg"
     }
   },
   "patch": {

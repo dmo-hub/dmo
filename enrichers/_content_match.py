@@ -36,15 +36,18 @@ def lookup_keyword(en_name: str, table: list[tuple]) -> tuple | None:
     return None
 
 
+def name_matches(kw: str, name: str, required_mod: str | None = None) -> bool:
+    """kw inside name (and required_mod if set). A leading "=" asks for the
+    whole name instead: "เมอร์วามอน" alone is also inside "เจ็ทเมอร์วามอน"
+    and "ครอสอัพ เมอร์วามอน"."""
+    nn = normalize(name)
+    if kw.startswith("="):
+        hit = nn == normalize(kw[1:])
+    else:
+        hit = normalize(kw) in nn
+    return hit and (required_mod is None or normalize(required_mod) in nn)
+
+
 def find_matches(kw: str, posts: list[dict], get_names, required_mod: str | None = None) -> list[dict]:
-    """Posts where any of get_names(post) contains kw (and required_mod if set)."""
-    norm_kw = normalize(kw)
-    norm_mod = normalize(required_mod) if required_mod else None
-    out = []
-    for p in posts:
-        for n in get_names(p):
-            nn = normalize(n)
-            if norm_kw in nn and (norm_mod is None or norm_mod in nn):
-                out.append(p)
-                break
-    return out
+    """Posts where any of get_names(post) matches kw (see name_matches)."""
+    return [p for p in posts if any(name_matches(kw, n, required_mod) for n in get_names(p))]

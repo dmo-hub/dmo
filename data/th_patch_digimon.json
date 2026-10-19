@@ -11,7 +11,10 @@
       "th_names": [
         "ดันเดวีมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/09/18.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/09/18.png",
+      "images": {
+        "ดันเดวีมอน": "https://www.vplay.in.th/wp-content/uploads/2026/09/18.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-93",
@@ -22,7 +25,11 @@
         "ลาสต์ อีโวลูชัน : คิซึนะ",
         "กาบูมอน – สายสัมพันธ์แห่งมิตรภาพ"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/08/5-1.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/08/5-1.png",
+      "images": {
+        "ลาสต์ อีโวลูชัน : คิซึนะ": "https://www.vplay.in.th/wp-content/uploads/2026/08/5-1.png",
+        "กาบูมอน – สายสัมพันธ์แห่งมิตรภาพ": "https://www.vplay.in.th/wp-content/uploads/2026/08/g1.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-91",
@@ -33,7 +40,11 @@
         "ก็อดดรามอน",
         "โฮลี่ดรามอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/07/6.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/07/6.png",
+      "images": {
+        "ก็อดดรามอน": "https://www.vplay.in.th/wp-content/uploads/2026/07/6.png",
+        "โฮลี่ดรามอน": "https://www.vplay.in.th/wp-content/uploads/2026/07/h2.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-90",
@@ -43,7 +54,10 @@
       "th_names": [
         "[เอ็กซ์ตรีม] ซูซาโนะโอมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/07/2.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/07/2.png",
+      "images": {
+        "[เอ็กซ์ตรีม] ซูซาโนะโอมอน": "https://www.vplay.in.th/wp-content/uploads/2026/07/2.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88",
@@ -53,7 +67,10 @@
       "th_names": [
         "[เอ็กซ์ตรีม] ลูเจมอน : ซาตานโหมด"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/06/3.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/06/3.png",
+      "images": {
+        "[เอ็กซ์ตรีม] ลูเจมอน : ซาตานโหมด": "https://www.vplay.in.th/wp-content/uploads/2026/06/3.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-87",
@@ -63,7 +80,10 @@
       "th_names": [
         "[เอ็กซ์ตรีม] อัลฟามอน โอริวเคน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/05/7.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/05/7.png",
+      "images": {
+        "[เอ็กซ์ตรีม] อัลฟามอน โอริวเคน": "https://www.vplay.in.th/wp-content/uploads/2026/05/7.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86",
@@ -73,7 +93,10 @@
       "th_names": [
         "อิมพีเรียลดรามอน พาราดินโหมด [อะเวคเค่น]"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/04/j22.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/04/j22.png",
+      "images": {
+        "อิมพีเรียลดรามอน พาราดินโหมด [อะเวคเค่น]": "https://www.vplay.in.th/wp-content/uploads/2026/04/j22.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-84",
@@ -83,7 +106,10 @@
       "th_names": [
         "บลูมลอร์ดมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/02/20.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2026/02/20.png",
+      "images": {
+        "บลูมลอร์ดมอน": "https://www.vplay.in.th/wp-content/uploads/2026/02/20.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-82",
@@ -93,7 +119,10 @@
       "th_names": [
         "โอดิเนมอน (อะเวคเค่น)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/12/1.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/12/1.png",
+      "images": {
+        "โอดิเนมอน (อะเวคเค่น)": "https://www.vplay.in.th/wp-content/uploads/2025/12/1.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-79",
@@ -103,7 +132,10 @@
       "th_names": [
         "อิมพีเรียลดรามอน ไฟเตอร์โหมด (อะเวคเค่น)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/10/4.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/10/4.png",
+      "images": {
+        "อิมพีเรียลดรามอน ไฟเตอร์โหมด (อะเวคเค่น)": "https://www.vplay.in.th/wp-content/uploads/2025/10/4.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-78",
@@ -113,7 +145,10 @@
       "th_names": [
         "อีออสมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/09/873659259779.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/09/873659259779.png",
+      "images": {
+        "อีออสมอน": "https://www.vplay.in.th/wp-content/uploads/2025/09/873659259779.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-77",
@@ -123,7 +158,10 @@
       "th_names": [
         "[อะเวคเค่น] เมทัลการูรูมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/08/4.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/08/4.png",
+      "images": {
+        "[อะเวคเค่น] เมทัลการูรูมอน": "https://www.vplay.in.th/wp-content/uploads/2025/08/4.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-76",
@@ -138,7 +176,15 @@
         "กันคูมอน X",
         "เอ็กซามอน X"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/07/k4.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/07/k4.png",
+      "images": {
+        "[อะเวคเค่น] วอร์เกรย์มอน": "https://www.vplay.in.th/wp-content/uploads/2025/07/k4.png",
+        "ลิลิธมอน X": "https://www.vplay.in.th/wp-content/uploads/2025/07/l6.png",
+        "บาร์บามอน X": "https://www.vplay.in.th/wp-content/uploads/2025/07/b1.png",
+        "เดมอน X": "https://www.vplay.in.th/wp-content/uploads/2025/07/d1.png",
+        "กันคูมอน X": "https://www.vplay.in.th/wp-content/uploads/2025/07/k3.png",
+        "เอ็กซามอน X": "https://www.vplay.in.th/wp-content/uploads/2025/07/x1.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-75",
@@ -148,7 +194,10 @@
       "th_names": [
         "ดุ๊คมอน คริมสันโหมด (อะเวคเค่น)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/06/4.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/06/4.png",
+      "images": {
+        "ดุ๊คมอน คริมสันโหมด (อะเวคเค่น)": "https://www.vplay.in.th/wp-content/uploads/2025/06/4.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-73",
@@ -159,7 +208,11 @@
         "เจลลีมอน",
         "อังโกรามอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/04/JellyMon.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2025/04/JellyMon.png",
+      "images": {
+        "เจลลีมอน": "https://www.vplay.in.th/wp-content/uploads/2025/04/JellyMon.png",
+        "อังโกรามอน": "https://www.vplay.in.th/wp-content/uploads/2025/04/ANGORAMON.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-68",
@@ -170,7 +223,10 @@
         "ครอสอัพ เมอร์วามอน",
         "อิมป์มอน บาอัลมอน , เบลเซบุมอน(C)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/11/12.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/11/12.png",
+      "images": {
+        "ครอสอัพ เมอร์วามอน": "https://www.vplay.in.th/wp-content/uploads/2024/11/12.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-66",
@@ -180,7 +236,10 @@
       "th_names": [
         "คุสุฮะมอน มิโกะ โหมด"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/09/10.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/09/10.jpg",
+      "images": {
+        "คุสุฮะมอน มิโกะ โหมด": "https://www.vplay.in.th/wp-content/uploads/2024/09/10.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-64",
@@ -190,7 +249,10 @@
       "th_names": [
         "เชาท์มอน X7 ซูพีเรียร์ โหมด"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/07/13.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/07/13.jpg",
+      "images": {
+        "เชาท์มอน X7 ซูพีเรียร์ โหมด": "https://www.vplay.in.th/wp-content/uploads/2024/07/13.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-62",
@@ -201,7 +263,11 @@
         "เบลเฟมอน เรจโหมด (อะเวคเค่น)",
         "แกมมามอน (เบเทลแกมมามอน, คาโนเวสมอน, ซิริอุสมอน)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/05/2.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/05/2.jpg",
+      "images": {
+        "เบลเฟมอน เรจโหมด (อะเวคเค่น)": "https://www.vplay.in.th/wp-content/uploads/2024/05/2.jpg",
+        "แกมมามอน (เบเทลแกมมามอน, คาโนเวสมอน, ซิริอุสมอน)": "https://www.vplay.in.th/wp-content/uploads/2024/05/New3.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-61",
@@ -211,7 +277,10 @@
       "th_names": [
         "เบลเซบุมอน บลาสโหมด(อะเวคเค่น)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/04/12.1.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/04/12.1.jpg",
+      "images": {
+        "เบลเซบุมอน บลาสโหมด(อะเวคเค่น)": "https://www.vplay.in.th/wp-content/uploads/2024/04/12.1.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-60",
@@ -221,7 +290,10 @@
       "th_names": [
         "โอเมกามอน-เมอซิฟูล โหมด"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/03/8.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/03/8.jpg",
+      "images": {
+        "โอเมกามอน-เมอซิฟูล โหมด": "https://www.vplay.in.th/wp-content/uploads/2024/03/8.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-59",
@@ -231,7 +303,10 @@
       "th_names": [
         "ซาคุยามอน (อะเวคเค่น)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/02/8.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/02/8.jpg",
+      "images": {
+        "ซาคุยามอน (อะเวคเค่น)": "https://www.vplay.in.th/wp-content/uploads/2024/02/8.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-58",
@@ -241,7 +316,10 @@
       "th_names": [
         "เซนต์การ์โกมอน (อะเวคเค่น)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/01/4.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2024/01/4.jpg",
+      "images": {
+        "เซนต์การ์โกมอน (อะเวคเค่น)": "https://www.vplay.in.th/wp-content/uploads/2024/01/4.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-52",
@@ -252,7 +330,11 @@
         "เจ็ทเมอร์วามอน",
         "เมอร์วามอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/07/j20.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/07/j20.jpg",
+      "images": {
+        "เจ็ทเมอร์วามอน": "https://www.vplay.in.th/wp-content/uploads/2023/07/j20.jpg",
+        "เมอร์วามอน": "https://www.vplay.in.th/wp-content/uploads/2023/07/m4.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-51",
@@ -265,7 +347,13 @@
         "บากรามอน",
         "ดาร์คไนท์มอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/06/s13.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/06/s13.jpg",
+      "images": {
+        "เชาท์มอน X7": "https://www.vplay.in.th/wp-content/uploads/2023/06/s13.jpg",
+        "ดาร์คเนสบากรามอน": "https://www.vplay.in.th/wp-content/uploads/2023/06/nd17n.jpg",
+        "บากรามอน": "https://www.vplay.in.th/wp-content/uploads/2023/06/bw.jpg",
+        "ดาร์คไนท์มอน": "https://www.vplay.in.th/wp-content/uploads/2023/06/ndnm.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-50",
@@ -275,7 +363,10 @@
       "th_names": [
         "อากูมอน – สายสัมพันธ์แห่งความกล้าหาญ"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/05/11.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/05/11.jpg",
+      "images": {
+        "อากูมอน – สายสัมพันธ์แห่งความกล้าหาญ": "https://www.vplay.in.th/wp-content/uploads/2023/05/11.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-48",
@@ -285,7 +376,10 @@
       "th_names": [
         "ดุ๊คมอน (ชิน)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/03/9.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/03/9.jpg",
+      "images": {
+        "ดุ๊คมอน (ชิน)": "https://www.vplay.in.th/wp-content/uploads/2023/03/9.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-47",
@@ -295,7 +389,10 @@
       "th_names": [
         "ลูเจมอน ซาตานโหมด (ชิน)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/02/10.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/02/10.jpg",
+      "images": {
+        "ลูเจมอน ซาตานโหมด (ชิน)": "https://www.vplay.in.th/wp-content/uploads/2023/02/10.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-46",
@@ -308,7 +405,13 @@
         "ซีคเกรย์มอน",
         "เชาท์มอน DX"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/01/omes8.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2023/01/omes8.jpg",
+      "images": {
+        "โอเมกาเชาท์มอน": "https://www.vplay.in.th/wp-content/uploads/2023/01/omes8.jpg",
+        "เมทัลเกร์ยมอน (C)": "https://www.vplay.in.th/wp-content/uploads/2023/01/me1.jpg",
+        "ซีคเกรย์มอน": "https://www.vplay.in.th/wp-content/uploads/2023/01/zek3.jpg",
+        "เชาท์มอน DX": "https://www.vplay.in.th/wp-content/uploads/2023/01/dx3.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-44",
@@ -318,7 +421,10 @@
       "th_names": [
         "เชาท์มอน X5"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/11/n6new.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/11/n6new.jpg",
+      "images": {
+        "เชาท์มอน X5": "https://www.vplay.in.th/wp-content/uploads/2022/11/6.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-43",
@@ -328,7 +434,10 @@
       "th_names": [
         "เชาท์มอน X4"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/10/X4.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/10/X4.jpg",
+      "images": {
+        "เชาท์มอน X4": "https://www.vplay.in.th/wp-content/uploads/2022/10/X4.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-42",
@@ -338,7 +447,10 @@
       "th_names": [
         "เชาท์มอนX2"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/09/fcoss.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/09/fcoss.jpg",
+      "images": {
+        "เชาท์มอนX2": "https://www.vplay.in.th/wp-content/uploads/2022/09/refsx2.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-40",
@@ -348,7 +460,10 @@
       "th_names": [
         "มิเนอร์วามอน X"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/07/d14.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/07/d14.jpg",
+      "images": {
+        "มิเนอร์วามอน X": "https://www.vplay.in.th/wp-content/uploads/2022/07/d14.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-39",
@@ -358,7 +473,10 @@
       "th_names": [
         "เมดิวอล ดุ๊คมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/06/mm2.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/06/mm2.jpg",
+      "images": {
+        "เมดิวอล ดุ๊คมอน": "https://www.vplay.in.th/wp-content/uploads/2022/06/mm2.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-38",
@@ -368,7 +486,10 @@
       "th_names": [
         "เคออสดรามอน X"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/05/k7.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/05/k7.jpg",
+      "images": {
+        "เคออสดรามอน X": "https://www.vplay.in.th/wp-content/uploads/2022/05/k7.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-37",
@@ -379,7 +500,10 @@
         "รัสท์ทีราโนมอน",
         "กิซามอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/04/6.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/04/6.jpg",
+      "images": {
+        "รัสท์ทีราโนมอน": "https://www.vplay.in.th/wp-content/uploads/2022/04/6.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-36",
@@ -390,7 +514,11 @@
         "ลอร์ดไนท์มอน X",
         "อีจิสดรามอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/03/5.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/03/5.jpg",
+      "images": {
+        "ลอร์ดไนท์มอน X": "https://www.vplay.in.th/wp-content/uploads/2022/03/5.jpg",
+        "อีจิสดรามอน": "https://www.vplay.in.th/wp-content/uploads/2022/03/e1.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-35",
@@ -400,7 +528,10 @@
       "th_names": [
         "เพรซีโอมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/02/2.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/02/2.jpg",
+      "images": {
+        "เพรซีโอมอน": "https://www.vplay.in.th/wp-content/uploads/2022/02/2.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-34",
@@ -411,7 +542,11 @@
         "โอดิเนมอน",
         "ซูซาโนะโอมอน(ชิน)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/01/o1.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2022/01/o1.jpg",
+      "images": {
+        "โอดิเนมอน": "https://www.vplay.in.th/wp-content/uploads/2022/01/o1.jpg",
+        "ซูซาโนะโอมอน(ชิน)": "https://www.vplay.in.th/wp-content/uploads/2022/01/ss5.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-33",
@@ -421,7 +556,10 @@
       "th_names": [
         "ไกโอมอน ร่างเจริญวัย X ร่างเต็มวัย X ร่างสมบูรณ์ X ร่างสุดยอด X อากูมอน X เกรย์มอน X เมทัลเกรย์มอน X ไกโอมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/12/4.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/12/4.jpg",
+      "images": {
+        "ไกโอมอน ร่างเจริญวัย X ร่างเต็มวัย X ร่างสมบูรณ์ X ร่างสุดยอด X อากูมอน X เกรย์มอน X เมทัลเกรย์มอน X ไกโอมอน": "https://www.vplay.in.th/wp-content/uploads/2021/12/4.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-32",
@@ -432,7 +570,11 @@
         "โอฟานีมอน ฟอลดาว์นโหมด",
         "วัลคารีมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/11/OP2.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/11/OP2.jpg",
+      "images": {
+        "โอฟานีมอน ฟอลดาว์นโหมด": "https://www.vplay.in.th/wp-content/uploads/2021/11/OP2.jpg",
+        "วัลคารีมอน": "https://www.vplay.in.th/wp-content/uploads/2021/11/fv.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-31",
@@ -442,7 +584,10 @@
       "th_names": [
         "รากูเอลมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/10/Raguelmon.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/10/Raguelmon.png",
+      "images": {
+        "รากูเอลมอน": "https://www.vplay.in.th/wp-content/uploads/2021/10/Raguelmon.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-30",
@@ -452,7 +597,10 @@
       "th_names": [
         "โรสมอน X"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/09/RM2.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/09/RM2.jpg",
+      "images": {
+        "โรสมอน X": "https://www.vplay.in.th/wp-content/uploads/2021/09/RM2.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-29",
@@ -462,7 +610,10 @@
       "th_names": [
         "เมกิดรามอน X"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/08/Megidramon.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/08/Megidramon.jpg",
+      "images": {
+        "เมกิดรามอน X": "https://www.vplay.in.th/wp-content/uploads/2021/08/Megidramon.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-28",
@@ -473,7 +624,11 @@
         "อัลฟามอนโอริวเคน (อะเวคเค่น)",
         "ฟานลอนมอน (ชิน)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/07/ap.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/07/ap.jpg",
+      "images": {
+        "อัลฟามอนโอริวเคน (อะเวคเค่น)": "https://www.vplay.in.th/wp-content/uploads/2021/07/ap.jpg",
+        "ฟานลอนมอน (ชิน)": "https://www.vplay.in.th/wp-content/uploads/2021/07/fl2.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-27",
@@ -483,7 +638,10 @@
       "th_names": [
         "ราเฟลเรซีมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/06/Rafflesimon.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/06/Rafflesimon.jpg",
+      "images": {
+        "ราเฟลเรซีมอน": "https://www.vplay.in.th/wp-content/uploads/2021/06/Rafflesimon.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-26",
@@ -494,7 +652,11 @@
         "เครเนียมมอนX",
         "โลตัสมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/05/CraniummonX.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/05/CraniummonX.jpg",
+      "images": {
+        "เครเนียมมอนX": "https://www.vplay.in.th/wp-content/uploads/2021/05/CraniummonX.jpg",
+        "โลตัสมอน": "https://www.vplay.in.th/wp-content/uploads/2021/05/Lotusmon-1.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-25",
@@ -505,7 +667,10 @@
         "เบลเซบุมอนX",
         "พัลมอน(ออริจินัล)"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/04/121272700_3397521253630081_4437964004111175190_n.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/04/121272700_3397521253630081_4437964004111175190_n.jpg",
+      "images": {
+        "เบลเซบุมอนX": "https://www.vplay.in.th/wp-content/uploads/2021/04/121272700_3397521253630081_4437964004111175190_n.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-24",
@@ -515,7 +680,10 @@
       "th_names": [
         "คาออสมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/03/os5.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/03/os5.jpg",
+      "images": {
+        "คาออสมอน": "https://www.vplay.in.th/wp-content/uploads/2021/03/os5.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-23",
@@ -525,7 +693,10 @@
       "th_names": [
         "สเลปมอน X"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/02/xf.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2021/02/xf.jpg",
+      "images": {
+        "สเลปมอน X": "https://www.vplay.in.th/wp-content/uploads/2021/02/xf.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-20",
@@ -535,7 +706,10 @@
       "th_names": [
         "โบลท์โบทามอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/11/1.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/11/1.jpg",
+      "images": {
+        "โบลท์โบทามอน": "https://www.vplay.in.th/wp-content/uploads/2020/11/1.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-18",
@@ -545,7 +719,10 @@
       "th_names": [
         "เจสมอน X"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/09/KakaoTalk_20200923_152210926-1.png"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/09/KakaoTalk_20200923_152210926-1.png",
+      "images": {
+        "เจสมอน X": "https://www.vplay.in.th/wp-content/uploads/2020/09/KakaoTalk_20200923_072923166.png"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-16",
@@ -555,7 +732,10 @@
       "th_names": [
         "เจสมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/07/JESMON.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/07/JESMON.jpg",
+      "images": {
+        "เจสมอน": "https://www.vplay.in.th/wp-content/uploads/2020/07/JESMON.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-15",
@@ -565,7 +745,10 @@
       "th_names": [
         "มาร์สเทมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/06/Mastemon.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/06/Mastemon.jpg",
+      "images": {
+        "มาร์สเทมอน": "https://www.vplay.in.th/wp-content/uploads/2020/06/Mastemon.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-14",
@@ -575,7 +758,10 @@
       "th_names": [
         "ซี๊ดมิลเลนเนียมมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/05/Zeedmill.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/05/Zeedmill.jpg",
+      "images": {
+        "ซี๊ดมิลเลนเนียมมอน": "https://www.vplay.in.th/wp-content/uploads/2020/05/Zeedmill.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-13",
@@ -585,7 +771,10 @@
       "th_names": [
         "กันคูมอน"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/04/GanGooMoneng-1.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/04/GanGooMoneng-1.jpg",
+      "images": {
+        "กันคูมอน": "https://www.vplay.in.th/wp-content/uploads/2020/04/GanGooMoneng-1.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-12",
@@ -595,7 +784,10 @@
       "th_names": [
         "โอเมกามอน อัลเทอร์- B"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/03/โอเมกามอน-อัลเทอร์-B-1.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/03/โอเมกามอน-อัลเทอร์-B-1.jpg",
+      "images": {
+        "โอเมกามอน อัลเทอร์- B": "https://www.vplay.in.th/wp-content/uploads/2020/03/โอเมกามอน-อัลเทอร์-B-1.jpg"
+      }
     },
     {
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-11",
@@ -605,7 +797,10 @@
       "th_names": [
         "ดูนัสมอน X"
       ],
-      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/02/KakaoTalk_20200225_093736742.jpg"
+      "image_url": "https://www.vplay.in.th/wp-content/uploads/2020/02/KakaoTalk_20200225_093736742.jpg",
+      "images": {
+        "ดูนัสมอน X": "https://www.vplay.in.th/wp-content/uploads/2020/02/KakaoTalk_20200225_093736742.jpg"
+      }
     }
   ]
 }

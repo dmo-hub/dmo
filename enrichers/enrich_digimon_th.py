@@ -17,7 +17,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from _content_match import find_matches, lookup_keyword, parse_iso, parse_mmddyyyy
+from _content_match import find_matches, lookup_keyword, name_matches, parse_iso, parse_mmddyyyy
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -50,8 +50,24 @@ EN_TO_TH_KEYWORDS: list[tuple[str, str, str | None]] = [
     # across rescans (colon spacing + bracket position), and no longer
     # contiguous-substring-matches the full form. Only Lucemon carries
     # "Satan Mode"; the เอ็กซ์ตรีม modifier keeps the TH Shin release out.
+    ("Satan Mode(Shin)", "ซาตานโหมด", "ชิน"),
     ("Satan Mode", "ซาตานโหมด", "เอ็กซ์ตรีม"),
     ("Omegamon – Merciful Mode", "เมอซิฟูล", None),
+    # "=" = the whole TH name: the plain forms are inside the longer ones.
+    ("Shoutmon X7", "=เชาท์มอน X7", None),
+    ("Xros Up Mervamon", "ครอสอัพ เมอร์วามอน", None),
+    ("JetMervamon", "=เจ็ทเมอร์วามอน", None),
+    ("Mervamon", "=เมอร์วามอน", None),
+    ("Bond of Friendship", "กาบูมอน – สายสัมพันธ์", None),
+    ("Imperialdramon Fighter", "อิมพีเรียลดรามอน ไฟเตอร์", None),
+    ("Beelzebumon Blast Mode", "เบลเซบุมอน บลาสโหมด", None),
+    ("Belphemon", "เบลเฟมอน", "อะเวค"),
+    ("Sakuyamon", "ซาคุยามอน", "อะเวค"),
+    ("(Awaken)Ordinemon", "โอดิเนมอน", "อะเวค"),
+    # NA released WarGreymon with MetalGarurumon in Jan 2025: the awakened pair.
+    ("WarGreymon", "วอร์เกรย์มอน", "อะเวค"),
+    ("Angoramon", "อังโกรามอน", None),
+    ("Jellymon", "เจลลีมอน", None),
     ("Omegamon X Extreme", "โอเมกามอน X", "เอ็กซ์ตรีม"),
     # Single-name digimon (Thai transliterations)
     ("Eosmon", "อีออสมอน", None),
@@ -118,13 +134,18 @@ def main() -> None:
                 post["date_th"] = th_post["date"]
                 # the name that actually matched, not the post's first digimon
                 post["_th_name"] = next(
-                    (n for n in th_post.get("th_names") or [] if via[1] in n),
+                    (n for n in th_post.get("th_names") or [] if name_matches(via[1], n, via[2])),
                     th_post["th_name"])
-                # image_url is the post's first banner, which shows the post's
-                # first digimon; a later one would get someone else's picture,
-                # so it keeps its NA image instead.
-                if post["_th_name"] == th_post["th_name"]:
-                    post["_th_image_url"] = th_post["image_url"]
+                # Each digimon's own picture from the post; failing that, the
+                # banner -- but only for the first digimon, since the banner
+                # shows that one and a later digimon would get its picture.
+                own = (th_post.get("images") or {}).get(post["_th_name"])
+                if not own and post["_th_name"] == th_post["th_name"]:
+                    own = th_post["image_url"]
+                if own:
+                    if own != post.get("_th_image_url"):
+                        post.pop("image_th", None)   # re-extract the new picture
+                    post["_th_image_url"] = own
                 else:
                     post.pop("_th_image_url", None)
                     post.pop("image_th", None)
