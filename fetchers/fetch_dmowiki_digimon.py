@@ -34,7 +34,6 @@ PROJ = Path(__file__).resolve().parent.parent
 SCAN = PROJ / "data" / "scan_result_digimon.json"
 RANK_U = PROJ / "rank_u.html"
 CACHE = PROJ / "cache"
-CDP_URL = "http://localhost:9222"
 
 # Manual gameking-name → dmowiki-slug overrides for cases where the dmowiki
 # page name can't be derived directly from the gameking name (Eosmon LV6,
@@ -44,6 +43,11 @@ OVERRIDES: dict[str, str] = {
     "Kuzuhamon MikoMode": "Kuzuhamon_-_Miko_Mode",
     "Eosmon": "Eosmon_LV6",
     "QUANTUMON": "Quantumon",
+    # one wiki page covers the species whichever line it evolves into
+    "Tsukaimon (Barbamon Line)": "Tsukaimon",
+    "Chaosmon": "Chaosmon",
+    "Rafflesimon": "Rafflesimon",
+    "Fanglongmon (Shin)": "Fanglongmon_(Shin)",
 }
 
 
@@ -110,32 +114,13 @@ def find_missing(data: dict, rank_map: dict[str, str]) -> list[tuple[str, str]]:
 
 def fetch_one(page, slug: str, out: Path) -> bool:
     url = f"https://dmowiki.com/{slug}"
-    print(f"  → {url}")
-    try:
-        page.goto(url, wait_until="domcontentloaded", timeout=60000)
-    except Exception as e:
-        print(f"    ! goto failed: {e}")
+    print(f"  \u2192 {url}")
+    status, html = page.get_html(url)
+    if status != 200 or 'id="firstHeading"' not in html:
+        print(f"    ! answered {status}, not a wiki page")
         return False
-
-    # Wait up to 60s for the page to render past Cloudflare / for firstHeading.
-    for _ in range(30):
-        title = page.title()
-        if "Just a moment" in title:
-            time.sleep(2)
-            continue
-        try:
-            if page.locator("#firstHeading").count() > 0:
-                break
-        except Exception:
-            pass
-        time.sleep(2)
-    else:
-        print(f"    ! timed out waiting for content (last title: {title!r})")
-        return False
-
-    html = page.content()
     out.write_text(html, encoding="utf-8")
-    print(f"    ✓ saved {len(html)} bytes → {out.relative_to(PROJ)}")
+    print(f"    \u2713 saved {len(html)} bytes \u2192 {out.relative_to(PROJ)}")
     return True
 
 
@@ -153,52 +138,24 @@ def main() -> None:
     for name, slug in missing:
         print(f"  - {name}  →  {slug}")
 
-    # lazy import: only the actual fetch needs playwright — helpers in this
-    # module (resolve_slug/safe_filename/...) are imported by builders that
-    # run in envs without it
-    from playwright.sync_api import sync_playwright
+    from _cdp_tab import RawTab
 
-    with sync_playwright() as p:
-        try:
-            browser = p.chromium.connect_over_cdp(CDP_URL)
-        except Exception as e:
-            print(f"\nERROR: can't connect to Chrome at {CDP_URL}: {e}")
-            print("Launch Chrome with --remote-debugging-port=9222 first.")
-            sys.exit(1)
-        if not browser.contexts:
-            print("ERROR: no browser context — open a tab in Chrome first.")
-            sys.exit(2)
-        ctx = browser.contexts[0]
-        # Reuse an existing dmowiki tab if there is one (CF cookies already set
-        # in this context, so a fresh page would work too — but reusing is
-        # friendlier on the user).
-        page = (
-            next(
-                (pg for pg in ctx.pages if "dmowiki.com" in pg.url),
-                None,
-            )
-            or ctx.new_page()
-        )
-        print(f"\nUsing tab: {page.url}")
+    page = RawTab()
+    print(f"\nUsing tab: {page.url}")
 
-        # Sanity-check Cloudflare clearance.
-        if "Just a moment" in (page.title() or ""):
-            print("ERROR: CAPTCHA not yet solved — click it in Chrome then re-run.")
-            sys.exit(3)
+    ok, skipped = 0, 0
+    for name, slug in missing:
+        out = CACHE / f"dmowiki_{safe_filename(slug)}.html"
+        if out.exists():
+            print(f"\n{name}  (cached, skip)")
+            skipped += 1
+            continue
+        print(f"\n{name}")
+        if fetch_one(page, slug, out):
+            ok += 1
+        time.sleep(1.2)  # polite delay
 
-        ok, skipped = 0, 0
-        for name, slug in missing:
-            out = CACHE / f"dmowiki_{safe_filename(slug)}.html"
-            if out.exists():
-                print(f"\n{name}  (cached, skip)")
-                skipped += 1
-                continue
-            print(f"\n{name}")
-            if fetch_one(page, slug, out):
-                ok += 1
-            time.sleep(1.2)  # polite delay
-
-        print(f"\n--- fetched {ok}, skipped {skipped} ---")
+    print(f"\n--- fetched {ok}, skipped {skipped} ---")
 
 
 if __name__ == "__main__":

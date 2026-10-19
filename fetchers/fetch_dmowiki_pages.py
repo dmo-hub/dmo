@@ -49,10 +49,10 @@ sys.stdout.reconfigure(encoding="utf-8")
 # dmowiki cache file named the same way no matter which fetcher wrote it.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fetch_dmowiki_digimon import safe_filename  # noqa: E402
+from _cdp_tab import ChallengeError, RawTab  # noqa: E402
 
 PROJ = Path(__file__).resolve().parent.parent
 CACHE = PROJ / "cache"
-CDP_URL = "http://localhost:9222"
 ORIGIN = "https://dmowiki.com"
 API = "/api.php"
 # MediaWiki's per-request title limit for non-bot clients.
@@ -65,10 +65,6 @@ JS_FETCH = """async (url) => {
   const r = await fetch(url, {credentials: 'same-origin'});
   return {status: r.status, type: r.headers.get('content-type') || '', body: await r.text()};
 }"""
-
-
-class ChallengeError(RuntimeError):
-    """Cloudflare clearance is gone; continuing would only collect 403s."""
 
 
 class ApiUnavailable(RuntimeError):
@@ -185,63 +181,18 @@ def fetch_api(page, titles: list[str], delay: float) -> tuple[int, list[str]]:
 
 def fetch_html_one(page, title: str, out: Path) -> bool:
     url = f"{ORIGIN}/{quote(title, safe=':_()')}"
-    try:
-        page.goto(url, wait_until="domcontentloaded", timeout=60000)
-    except Exception as e:
-        print(f"  ! {title}: goto failed: {e}")
-        return False
-    for _ in range(30):
-        if "Just a moment" in settled_title(page):
-            time.sleep(2)
-            continue
-        if page.locator("#firstHeading").count() > 0:
-            break
-        time.sleep(2)
-    else:
-        raise ChallengeError(f"stuck on challenge at {url} — solve it again in Chrome")
-    html = page.content()
-    # A missing page still renders (200, with an edit prompt); caching it would make
+    status, html = page.get_html(url)
+    # A missing page still renders (with an edit prompt); caching it would make
     # every later run skip the title as already fetched.
-    if "noarticletext" in html:
+    if status == 404 or "noarticletext" in html:
         print(f"  ! {title}: no such page")
         return False
+    if status != 200 or 'id="firstHeading"' not in html:
+        print(f"  ! {title}: answered {status}, not a wiki page")
+        return False
     out.write_text(html, encoding="utf-8")
-    print(f"  ✓ {title} {len(html)} bytes → {out.relative_to(PROJ)}")
+    print(f"  \u2713 {title} {len(html)} bytes \u2192 {out.relative_to(PROJ)}")
     return True
-
-
-def settled_title(page) -> str:
-    # The challenge page reloads itself once it clears, so reading the title can
-    # land mid-navigation ("Execution context was destroyed"); wait and re-read.
-    for _ in range(15):
-        try:
-            page.wait_for_load_state("domcontentloaded", timeout=10000)
-            return page.title() or ""
-        except Exception:
-            time.sleep(1)
-    return ""
-
-
-def open_dmowiki_tab(p):
-    try:
-        browser = p.chromium.connect_over_cdp(CDP_URL)
-    except Exception as e:
-        sys.exit(f"ERROR: can't connect to Chrome at {CDP_URL}: {e}\n"
-                 "Launch Chrome with --remote-debugging-port=9222 first.")
-    if not browser.contexts:
-        sys.exit("ERROR: no browser context — open a tab in Chrome first.")
-    ctx = browser.contexts[0]
-    page = next((pg for pg in ctx.pages if "dmowiki.com" in pg.url), None)
-    if page is None:
-        sys.exit("ERROR: no dmowiki.com tab — open https://dmowiki.com and solve the CAPTCHA.")
-    # Give a person who is still clicking the CAPTCHA a minute before giving up.
-    for n in range(30):
-        if "Just a moment" not in settled_title(page):
-            return page
-        if n == 0:
-            print("Waiting for the CAPTCHA to be solved in Chrome ...")
-        time.sleep(2)
-    sys.exit("ERROR: CAPTCHA not yet solved — click it in Chrome then re-run.")
 
 
 def main() -> None:
@@ -270,35 +221,31 @@ def main() -> None:
         return
 
     CACHE.mkdir(exist_ok=True)
-    # lazy import: --dry-run and the helpers must work without playwright
-    from playwright.sync_api import sync_playwright
-
-    with sync_playwright() as p:
-        page = open_dmowiki_tab(p)
-        print(f"Using tab: {page.url}")
-        try:
-            if args.category:
-                members = category_titles(page, args.category)
-                print(f"category {args.category}: {len(members)} pages")
-                titles = read_titles(argparse.Namespace(titles=titles + members, list=None))
-            todo = [t for t in titles if args.force or not cache_path(t, ext).exists()]
-            skipped = len(titles) - len(todo)
-            print(f"{len(todo)} to fetch, {skipped} cached\n")
-            if args.mode == "api":
-                ok, failed = fetch_api(page, todo, args.delay)
-            else:
-                ok, failed = 0, []
-                for n, t in enumerate(todo):
-                    if fetch_html_one(page, t, cache_path(t, ext)):
-                        ok += 1
-                    else:
-                        failed.append(t)
-                    if n + 1 < len(todo):
-                        time.sleep(args.delay)
-        except ChallengeError as e:
-            sys.exit(f"\nSTOPPED: {e}. Already-saved files stay in cache/; re-run to resume.")
-        except ApiUnavailable as e:
-            sys.exit(f"\nSTOPPED: {e}\nRe-run with --mode html to save the rendered pages instead.")
+    page = RawTab()
+    print(f"Using tab: {page.url}")
+    try:
+        if args.category:
+            members = category_titles(page, args.category)
+            print(f"category {args.category}: {len(members)} pages")
+            titles = read_titles(argparse.Namespace(titles=titles + members, list=None))
+        todo = [t for t in titles if args.force or not cache_path(t, ext).exists()]
+        skipped = len(titles) - len(todo)
+        print(f"{len(todo)} to fetch, {skipped} cached\n")
+        if args.mode == "api":
+            ok, failed = fetch_api(page, todo, args.delay)
+        else:
+            ok, failed = 0, []
+            for n, t in enumerate(todo):
+                if fetch_html_one(page, t, cache_path(t, ext)):
+                    ok += 1
+                else:
+                    failed.append(t)
+                if n + 1 < len(todo):
+                    time.sleep(args.delay)
+    except ChallengeError as e:
+        sys.exit(f"\nSTOPPED: {e}. Already-saved files stay in cache/; re-run to resume.")
+    except ApiUnavailable as e:
+        sys.exit(f"\nSTOPPED: {e}\nRe-run with --mode html to save the rendered pages instead.")
 
     print(f"\n--- fetched {ok}, skipped {skipped}, failed {len(failed)} ---")
     for t in failed:
