@@ -66,18 +66,20 @@ def main() -> None:
     for m in decks["matches"]:
         if not m.get("new_decks"):
             continue
-        if ("e" if m["kind"] == "event" else "p") + str(m["idx"]) in excluded:
+        post_id = ("e" if m["kind"] == "event" else "p") + str(m["idx"])
+        if post_id in excluded:
             continue
+        names = [n for n in m["new_decks"] if f"{post_id}/{n}" not in excluded]
         activity.append(
             {
                 "kind_label": "Decks · " + ("EventView" if m["kind"] == "event" else "PatchNote"),
                 "topic": "decks",
                 "idx": m["idx"],
                 "date": m["date"],
-                "title": ", ".join(m["new_decks"][:2])
-                + (f" + {len(m['new_decks']) - 2} more" if len(m["new_decks"]) > 2 else ""),
+                "title": ", ".join(names[:2])
+                + (f" + {len(names) - 2} more" if len(names) > 2 else ""),
                 "href": f"decks.html#{'e' if m['kind'] == 'event' else 'p'}{m['idx']}",
-                "n_items": len(m["new_decks"]),
+                "n_items": len(names),
             }
         )
     for kind, posts in (("event", digimon.get("event", {})), ("patch", digimon.get("patch", {}))):
