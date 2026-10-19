@@ -9,10 +9,12 @@ banner becomes the primary image for posts with a TH equivalent (per the user's
 Run after enrich_digimon_th.py. Pass --force to re-download existing.
 """
 
+import io
 import re
 import sys
 
 import requests
+from PIL import Image
 
 from _image_common import IMG_DIR, load_scan, save_scan
 
@@ -34,6 +36,55 @@ def ext_from(url: str, content_type: str = "") -> str:
     if "jpeg" in content_type or "jpg" in content_type:
         return "jpeg"
     return "jpg"
+
+
+# The card shows these at most 320px tall, but a click opens the file itself and
+# the posts carry their text inside the picture -- keep enough width to read it.
+# vplay serves multi-MB PNG screenshots that are fully opaque.
+MAX_W = 1200
+
+
+def shrink(content: bytes, ext: str) -> tuple[bytes, str]:
+    try:
+        im = Image.open(io.BytesIO(content))
+        im.load()
+    except Exception:
+        return content, ext
+    if ext in ("jpeg", "jpg") and im.width <= MAX_W:
+        return content, ext  # re-encoding a JPEG only loses quality on every run
+    if ext == "gif" or im.convert("RGBA").getextrema()[3][0] < 255:
+        return content, ext  # animation or real transparency: JPEG would break it
+    if im.width > MAX_W:
+        im = im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS)
+    buf = io.BytesIO()
+    im.convert("RGB").save(buf, "JPEG", quality=85, optimize=True, progressive=True)
+    out = buf.getvalue()
+    return (out, "jpeg") if len(out) < len(content) else (content, ext)
+
+
+def shrink_existing(data: dict) -> int:
+    """Re-encode files saved before shrink() existed; already-small ones stay put."""
+    done = 0
+    for kind in ("event", "patch"):
+        for post in data.get(kind, {}).values():
+            rel = post.get("image_th")
+            if not rel:
+                continue
+            src = IMG_DIR.parent.parent / rel
+            if not src.exists():
+                continue
+            raw = src.read_bytes()
+            body, ext = shrink(raw, src.suffix.lstrip("."))
+            if body is raw:
+                continue
+            out = src.with_suffix("." + ext)
+            if out != src:
+                src.unlink()
+            out.write_bytes(body)
+            post["image_th"] = f"img/digimon/{out.name}"
+            done += 1
+            print(f"  shrank {src.name} -> {out.name} ({len(raw) // 1024} -> {len(body) // 1024} KB)")
+    return done
 
 
 def delete_existing(prefix: str, idx: str, suffix: str = "") -> None:
@@ -71,16 +122,17 @@ def main() -> None:
                 print(f"  ERROR {kind}_{idx}: fetch {url[:60]} failed: {e}")
                 continue
 
-            ext = ext_from(url, r.headers.get("content-type", ""))
+            body, ext = shrink(r.content, ext_from(url, r.headers.get("content-type", "")))
             delete_existing(prefix, idx, suffix="_th")
             out = IMG_DIR / f"{prefix}{idx}_th.{ext}"
-            out.write_bytes(r.content)
+            out.write_bytes(body)
             post["image_th"] = f"img/digimon/{out.name}"
             extracted += 1
-            print(f"{kind}_{idx}: {out.name} ({len(r.content) // 1024} KB)")
+            print(f"{kind}_{idx}: {out.name} ({len(body) // 1024} KB)")
 
+    shrunk = shrink_existing(data)
     save_scan(data)
-    print(f"\nExtracted: {extracted}, kept existing: {skipped_existing}, no TH image URL: {no_url}")
+    print(f"\nExtracted: {extracted}, shrunk: {shrunk}, kept existing: {skipped_existing}, no TH image URL: {no_url}")
 
 
 if __name__ == "__main__":
