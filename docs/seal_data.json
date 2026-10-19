@@ -6991,6 +6991,280 @@
    ]
   ]
  },
+ "na-4126#0": {
+  "server": "na",
+  "date": "25.03.2026",
+  "caption": "Seal Exchange Ticket — Craft List",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Omegamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Myotismon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Venom Vamdemon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "[Awaken] Ordinemon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Numemon Seal",
+    "10",
+    "1",
+    "AT",
+    "100"
+   ],
+   [
+    "Cross-up Mervamon Seal",
+    "1",
+    "25",
+    "BL",
+    "250"
+   ],
+   [
+    "[Awaken] Sakuyamon Seal",
+    "1",
+    "1",
+    "BL",
+    "200"
+   ],
+   [
+    "Amphimon Seal",
+    "5",
+    "1",
+    "BL",
+    "150"
+   ],
+   [
+    "Vritramon Seal",
+    "10",
+    "1",
+    "CT",
+    "100"
+   ],
+   [
+    "Chakkumon Seal",
+    "5",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Grotmon Seal",
+    "1",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "KaiserGreymon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "BaoHackmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Diarbbitmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Salamon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "PawnChessmon W Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "HerculesKabuterimon Seal",
+    "1",
+    "25",
+    "DE",
+    "250"
+   ],
+   [
+    "GrandisKuwagamon Seal",
+    "1",
+    "100",
+    "DS",
+    "500"
+   ],
+   [
+    "Baalmon Seal",
+    "1",
+    "10",
+    "DS",
+    "400"
+   ],
+   [
+    "Yukidarumon Seal",
+    "1",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Peckmon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Angemon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Marsmon Seal",
+    "1",
+    "100",
+    "EV",
+    "400"
+   ],
+   [
+    "Hagurumon Seal",
+    "6",
+    "1",
+    "EV",
+    "150"
+   ],
+   [
+    "Reppamon Seal",
+    "10",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "[Awaken] Gallantmon (Crimson Mode) Seal",
+    "1",
+    "25",
+    "HP",
+    "600"
+   ],
+   [
+    "Gardromon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Centalmon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Whamon Seal",
+    "1",
+    "10",
+    "HP",
+    "250"
+   ],
+   [
+    "Gabumon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "DarkTyrannomon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "WereGarurumon(Black) Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "[Awaken] ZeedMillenniummon Seal",
+    "1",
+    "100",
+    "HT",
+    "550"
+   ]
+  ]
+ },
  "na-4121#0": {
   "server": "na",
   "date": "17.03.2026",
@@ -8225,6 +8499,514 @@
    ]
   ]
  },
+ "na-4108#0": {
+  "server": "na",
+  "date": "11.02.2026",
+  "caption": "Seal Exchange Ticket — Craft List",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Monodramon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Megidramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "MugenDramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Chaosmon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Etemon Seal",
+    "1",
+    "10",
+    "BL",
+    "200"
+   ],
+   [
+    "Tentomon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Dracmon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Sharmamon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Koromon Seal",
+    "10",
+    "1",
+    "CT",
+    "100"
+   ],
+   [
+    "Kunemon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Kyubimon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "CommanDramon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "MetalGarurumon Seal",
+    "1",
+    "25",
+    "CT",
+    "300"
+   ],
+   [
+    "Goblimon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Leomon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Upamon Seal",
+    "10",
+    "1",
+    "DE",
+    "80"
+   ],
+   [
+    "Chimairamon Seal",
+    "1",
+    "1",
+    "DE",
+    "250"
+   ],
+   [
+    "Diablomon Seal",
+    "1",
+    "6",
+    "DS",
+    "500"
+   ],
+   [
+    "Agumon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "WereGarurumon Seal",
+    "1",
+    "10",
+    "DS",
+    "400"
+   ],
+   [
+    "V-dramon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "Mystimon Seal",
+    "1",
+    "1",
+    "EV",
+    "300"
+   ],
+   [
+    "NeoDevimon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "V-mon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Soulmon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "WarGreymon Seal",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "Canoweissmon Seal",
+    "1",
+    "10",
+    "HP",
+    "250"
+   ],
+   [
+    "FanBeemon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "Coredramon (Blue) Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Dorugamon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Beelzebumon Seal",
+    "1",
+    "100",
+    "HT",
+    "400"
+   ]
+  ]
+ },
+ "na-4105#0": {
+  "server": "na",
+  "date": "04.02.2026",
+  "caption": "Seal Exchange Ticket — Craft List",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Xuanwumon Seal",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "Tsunomon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Keramon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Garurumon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Coredramon (Green) Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Zhuqiaomon Seal",
+    "1",
+    "25",
+    "DS",
+    "600"
+   ],
+   [
+    "DemiMeramon Seal",
+    "10",
+    "1",
+    "DS",
+    "100"
+   ],
+   [
+    "Guilmon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Mushroomon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Examon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Silphymon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "PicoDevimon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Nanomon Seal",
+    "1",
+    "1",
+    "CT",
+    "250"
+   ],
+   [
+    "SaberLeomon Seal",
+    "1",
+    "6",
+    "CT",
+    "300"
+   ],
+   [
+    "Darkness Bagramon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "Prince Mamemon Seal",
+    "1",
+    "25",
+    "CT",
+    "350"
+   ],
+   [
+    "GeoGreymon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Rosemon Seal",
+    "1",
+    "25",
+    "HT",
+    "400"
+   ],
+   [
+    "Crownmon Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "Hackmon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "Kaiserleomon Seal",
+    "1",
+    "1",
+    "DE",
+    "200"
+   ],
+   [
+    "Okuwamon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Sleipmon Seal",
+    "1",
+    "25",
+    "DE",
+    "250"
+   ],
+   [
+    "Gomamon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Shakkoumon Seal",
+    "1",
+    "1",
+    "BL",
+    "200"
+   ],
+   [
+    "Waspmon Seal",
+    "5",
+    "1",
+    "BL",
+    "150"
+   ],
+   [
+    "Sangloupmon Seal",
+    "5",
+    "1",
+    "BL",
+    "150"
+   ],
+   [
+    "Blackgatomon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "Rapidmon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "MirageGaogamon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ]
+  ]
+ },
  "na-4100#0": {
   "server": "na",
   "date": "28.01.2026",
@@ -9443,6 +10225,192 @@
    ]
   ]
  },
+ "na-746#0": {
+  "server": "na",
+  "date": "24.06.2025",
+  "caption": "Seal Exchange Ticket — Craft List",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Numemon Seal",
+    "10",
+    "1",
+    "AT",
+    "100"
+   ],
+   [
+    "[Awaken] Ordinemon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "[Awaken] ImperialDramon Paladinmode Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Shoutmon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "MoonMillenniumon Seal",
+    "1",
+    "5",
+    "HT",
+    "300"
+   ],
+   [
+    "[Awaken] ZeedMillenniumon Seal",
+    "1",
+    "100",
+    "HT",
+    "550"
+   ],
+   [
+    "Greymon© Seal",
+    "10",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Darkness Bagramon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "Eosmon Seal",
+    "1",
+    "100",
+    "CT",
+    "400"
+   ],
+   [
+    "MailBirdramon Seal",
+    "10",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Lucemon : Falldown Mode Seal",
+    "1",
+    "1",
+    "HP",
+    "300"
+   ],
+   [
+    "[Awaken] Gallantmon Crimson Mode Seal",
+    "1",
+    "25",
+    "HP",
+    "600"
+   ],
+   [
+    "Diarbbitmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "[Awaken] Gallantmon Seal",
+    "1",
+    "1",
+    "DE",
+    "200"
+   ],
+   [
+    "Bloomlordmon Seal",
+    "1",
+    "25",
+    "DE",
+    "300"
+   ],
+   [
+    "Amphimon Seal",
+    "5",
+    "1",
+    "BL",
+    "150"
+   ],
+   [
+    "[Awaken] Sakuyamon Seal",
+    "1",
+    "1",
+    "BL",
+    "200"
+   ],
+   [
+    "CrossUp Mervamon Seal",
+    "1",
+    "25",
+    "BL",
+    "250"
+   ],
+   [
+    "[Awaken] SaintGalgomon Seal",
+    "1",
+    "1",
+    "EV",
+    "350"
+   ],
+   [
+    "Armagemon Seal",
+    "1",
+    "25",
+    "EV",
+    "400"
+   ],
+   [
+    "GulusGammamon Seal",
+    "5",
+    "1",
+    "DS",
+    "400"
+   ],
+   [
+    "[Awaken] Susanoomon Seal",
+    "1",
+    "25",
+    "DS",
+    "600"
+   ]
+  ]
+ },
  "na-743#0": {
   "server": "na",
   "date": "17.06.2025",
@@ -9690,6 +10658,830 @@
     "5",
     "CT",
     "200"
+   ]
+  ]
+ },
+ "na-740#0": {
+  "server": "na",
+  "date": "10.06.2025",
+  "caption": "Seal Exchange Ticket — Craft List",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Grow Well Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Heat Wave Seal[Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Passionate Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Coolness Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Firm Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Marksman Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Conversion Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Armor Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Exploration Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Hope Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Happiness Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Environment Guardian Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Friendship Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Knowledge Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Sincerity Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Brave Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Dragon Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Beginning Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "New Semester Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Spring Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Family Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Heat Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Summer Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ]
+  ]
+ },
+ "na-715#0": {
+  "server": "na",
+  "date": "08.04.2025",
+  "caption": "Seal Exchange Ticket — Craft List",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Passionate Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "10th Year Anniversary Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Environment Guardian Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "12th Year Anniversary Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "New Semester Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Marksman Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Exploration Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Brave Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Conversion Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Hope Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Last Seal of 2023 [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Grow Well Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Sincerity Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Seal of Heat [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Heat Wave Seal[Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Happiness Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Beginning Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Armor Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Firm Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "friendship Seal[Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Seal of spring [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Seal Of Coolness [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Knowledge Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Family Seal [Event] x60",
+    "—",
+    "1",
+    "—",
+    "—"
+   ]
+  ]
+ },
+ "na-703#0": {
+  "server": "na",
+  "date": "04.02.2025",
+  "caption": "Seal Exchange Ticket — Craft List",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Passionate Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "10th Year Anniversary Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Environment Guardian Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "12th Year Anniversary Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "New Semester Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Marksman Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Exploration Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Brave Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Conversion Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Hope Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Last Seal of 2023 [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Grow Well Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Sincerity Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Seal of Heat [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Heat Wave Seal[Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Happiness Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Beginning Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Armor Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Firm Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "friendship Seal[Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Seal of spring [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Seal Of Coolness [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Knowledge Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Family Seal [Event] 60ea",
+    "—",
+    "1",
+    "—",
+    "—"
+   ]
+  ]
+ },
+ "na-694#0": {
+  "server": "na",
+  "date": "26.11.2024",
+  "caption": "Seal Exchange Ticket — Craft List",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Gammamon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "Angoramon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Agumon(S) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Armadimon Seal",
+    "10",
+    "1",
+    "EV",
+    "100"
+   ],
+   [
+    "Lalamon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Piyomon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Patamon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Kausgammamon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Wezengammamon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "BetelGammamon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Geogreymon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Angemon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Centalmon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Baalmon Seal",
+    "1",
+    "10",
+    "DS",
+    "400"
+   ],
+   [
+    "Bastemon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "Canoweissmon Seal",
+    "1",
+    "10",
+    "HP",
+    "250"
+   ],
+   [
+    "Rizegreymon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "Thunderballmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Blackgatomon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "Siriusmon Seal",
+    "1",
+    "25",
+    "AT",
+    "300"
+   ],
+   [
+    "ShineGreymon Seal",
+    "1",
+    "25",
+    "BL",
+    "250"
+   ],
+   [
+    "Craniummon Seal",
+    "1",
+    "25",
+    "HT",
+    "500"
+   ],
+   [
+    "HerculesKabuterimon Seal",
+    "1",
+    "25",
+    "DE",
+    "250"
+   ],
+   [
+    "Ulforce V-dramon Seal",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "Kuzuhamon Miko Mode",
+    "1",
+    "100",
+    "CT",
+    "400"
+   ],
+   [
+    "Huanglongmon Seal",
+    "1",
+    "100",
+    "BL",
+    "350"
+   ],
+   [
+    "Kuzuhamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
    ]
   ]
  },
@@ -14304,1798 +16096,6 @@
     "100",
     "AT",
     "—"
-   ]
-  ]
- },
- "na-746#0": {
-  "server": "na",
-  "date": "24.06.2025",
-  "caption": "Seal Exchange Ticket — Craft List",
-  "note": "",
-  "inf": [
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
-  ],
-  "rows": [
-   [
-    "Numemon Seal",
-    "10",
-    "1",
-    "AT",
-    "100"
-   ],
-   [
-    "[Awaken] Ordinemon Seal",
-    "1",
-    "10",
-    "AT",
-    "250"
-   ],
-   [
-    "[Awaken] ImperialDramon Paladinmode Seal",
-    "1",
-    "100",
-    "AT",
-    "300"
-   ],
-   [
-    "Shoutmon Seal",
-    "5",
-    "1",
-    "HT",
-    "200"
-   ],
-   [
-    "MoonMillenniumon Seal",
-    "1",
-    "5",
-    "HT",
-    "300"
-   ],
-   [
-    "[Awaken] ZeedMillenniumon Seal",
-    "1",
-    "100",
-    "HT",
-    "550"
-   ],
-   [
-    "Greymon© Seal",
-    "10",
-    "1",
-    "CT",
-    "200"
-   ],
-   [
-    "Darkness Bagramon Seal",
-    "1",
-    "10",
-    "CT",
-    "250"
-   ],
-   [
-    "Eosmon Seal",
-    "1",
-    "100",
-    "CT",
-    "400"
-   ],
-   [
-    "MailBirdramon Seal",
-    "10",
-    "1",
-    "HP",
-    "200"
-   ],
-   [
-    "Lucemon : Falldown Mode Seal",
-    "1",
-    "1",
-    "HP",
-    "300"
-   ],
-   [
-    "[Awaken] Gallantmon Crimson Mode Seal",
-    "1",
-    "25",
-    "HP",
-    "600"
-   ],
-   [
-    "Diarbbitmon Seal",
-    "5",
-    "1",
-    "DE",
-    "150"
-   ],
-   [
-    "[Awaken] Gallantmon Seal",
-    "1",
-    "1",
-    "DE",
-    "200"
-   ],
-   [
-    "Bloomlordmon Seal",
-    "1",
-    "25",
-    "DE",
-    "300"
-   ],
-   [
-    "Amphimon Seal",
-    "5",
-    "1",
-    "BL",
-    "150"
-   ],
-   [
-    "[Awaken] Sakuyamon Seal",
-    "1",
-    "1",
-    "BL",
-    "200"
-   ],
-   [
-    "CrossUp Mervamon Seal",
-    "1",
-    "25",
-    "BL",
-    "250"
-   ],
-   [
-    "[Awaken] SaintGalgomon Seal",
-    "1",
-    "1",
-    "EV",
-    "350"
-   ],
-   [
-    "Armagemon Seal",
-    "1",
-    "25",
-    "EV",
-    "400"
-   ],
-   [
-    "GulusGammamon Seal",
-    "5",
-    "1",
-    "DS",
-    "400"
-   ],
-   [
-    "[Awaken] Susanoomon Seal",
-    "1",
-    "25",
-    "DS",
-    "600"
-   ]
-  ]
- },
- "na-740#0": {
-  "server": "na",
-  "date": "10.06.2025",
-  "caption": "Seal Exchange Ticket — Craft List",
-  "note": "",
-  "inf": [
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
-  ],
-  "rows": [
-   [
-    "Grow Well Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Heat Wave Seal[Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Passionate Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Coolness Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Firm Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Marksman Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Conversion Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Armor Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Exploration Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Hope Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Happiness Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Environment Guardian Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Friendship Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Knowledge Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Sincerity Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Brave Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Dragon Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Beginning Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "New Semester Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Spring Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Family Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Heat Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Summer Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ]
-  ]
- },
- "na-715#0": {
-  "server": "na",
-  "date": "08.04.2025",
-  "caption": "Seal Exchange Ticket — Craft List",
-  "note": "",
-  "inf": [
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
-  ],
-  "rows": [
-   [
-    "Passionate Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "10th Year Anniversary Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Environment Guardian Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "12th Year Anniversary Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "New Semester Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Marksman Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Exploration Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Brave Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Conversion Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Hope Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Last Seal of 2023 [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Grow Well Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Sincerity Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Seal of Heat [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Heat Wave Seal[Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Happiness Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Beginning Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Armor Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Firm Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "friendship Seal[Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Seal of spring [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Seal Of Coolness [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Knowledge Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Family Seal [Event] x60",
-    "—",
-    "1",
-    "—",
-    "—"
-   ]
-  ]
- },
- "na-703#0": {
-  "server": "na",
-  "date": "04.02.2025",
-  "caption": "Seal Exchange Ticket — Craft List",
-  "note": "",
-  "inf": [
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
-  ],
-  "rows": [
-   [
-    "Passionate Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "10th Year Anniversary Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Environment Guardian Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "12th Year Anniversary Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "New Semester Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Marksman Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Exploration Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Brave Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Conversion Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Hope Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Last Seal of 2023 [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Grow Well Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Sincerity Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Seal of Heat [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Heat Wave Seal[Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Happiness Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Beginning Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Armor Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Firm Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "friendship Seal[Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Seal of spring [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Seal Of Coolness [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Knowledge Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ],
-   [
-    "Family Seal [Event] 60ea",
-    "—",
-    "1",
-    "—",
-    "—"
-   ]
-  ]
- },
- "na-694#0": {
-  "server": "na",
-  "date": "26.11.2024",
-  "caption": "Seal Exchange Ticket — Craft List",
-  "note": "",
-  "inf": [
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
-  ],
-  "rows": [
-   [
-    "Gammamon Seal",
-    "10",
-    "1",
-    "HT",
-    "100"
-   ],
-   [
-    "Angoramon Seal",
-    "10",
-    "1",
-    "BL",
-    "100"
-   ],
-   [
-    "Agumon(S) Seal",
-    "10",
-    "1",
-    "BL",
-    "100"
-   ],
-   [
-    "Armadimon Seal",
-    "10",
-    "1",
-    "EV",
-    "100"
-   ],
-   [
-    "Lalamon Seal",
-    "10",
-    "1",
-    "CT",
-    "150"
-   ],
-   [
-    "Piyomon Seal",
-    "10",
-    "1",
-    "DS",
-    "200"
-   ],
-   [
-    "Patamon Seal",
-    "10",
-    "1",
-    "AT",
-    "150"
-   ],
-   [
-    "Kausgammamon Seal",
-    "5",
-    "1",
-    "CT",
-    "200"
-   ],
-   [
-    "Wezengammamon Seal",
-    "5",
-    "1",
-    "DE",
-    "150"
-   ],
-   [
-    "BetelGammamon Seal",
-    "5",
-    "1",
-    "AT",
-    "200"
-   ],
-   [
-    "Geogreymon Seal",
-    "5",
-    "1",
-    "HT",
-    "200"
-   ],
-   [
-    "Angemon Seal",
-    "5",
-    "1",
-    "DS",
-    "300"
-   ],
-   [
-    "Centalmon Seal",
-    "5",
-    "1",
-    "HP",
-    "200"
-   ],
-   [
-    "Baalmon Seal",
-    "1",
-    "10",
-    "DS",
-    "400"
-   ],
-   [
-    "Bastemon Seal",
-    "1",
-    "10",
-    "EV",
-    "300"
-   ],
-   [
-    "Canoweissmon Seal",
-    "1",
-    "10",
-    "HP",
-    "250"
-   ],
-   [
-    "Rizegreymon Seal",
-    "1",
-    "10",
-    "CT",
-    "250"
-   ],
-   [
-    "Thunderballmon Seal",
-    "5",
-    "1",
-    "DE",
-    "150"
-   ],
-   [
-    "Blackgatomon Seal",
-    "5",
-    "1",
-    "EV",
-    "200"
-   ],
-   [
-    "Siriusmon Seal",
-    "1",
-    "25",
-    "AT",
-    "300"
-   ],
-   [
-    "ShineGreymon Seal",
-    "1",
-    "25",
-    "BL",
-    "250"
-   ],
-   [
-    "Craniummon Seal",
-    "1",
-    "25",
-    "HT",
-    "500"
-   ],
-   [
-    "HerculesKabuterimon Seal",
-    "1",
-    "25",
-    "DE",
-    "250"
-   ],
-   [
-    "Ulforce V-dramon Seal",
-    "1",
-    "25",
-    "HP",
-    "500"
-   ],
-   [
-    "Kuzuhamon Miko Mode",
-    "1",
-    "100",
-    "CT",
-    "400"
-   ],
-   [
-    "Huanglongmon Seal",
-    "1",
-    "100",
-    "BL",
-    "350"
-   ],
-   [
-    "Kuzuhamon Seal",
-    "1",
-    "100",
-    "AT",
-    "300"
-   ]
-  ]
- },
- "na-4126#0": {
-  "server": "na",
-  "date": "25.03.2026",
-  "caption": "Seal Exchange Ticket — Craft List",
-  "note": "",
-  "inf": [
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
-  ],
-  "rows": [
-   [
-    "Omegamon Seal",
-    "1",
-    "100",
-    "AT",
-    "300"
-   ],
-   [
-    "Myotismon Seal",
-    "1",
-    "10",
-    "AT",
-    "250"
-   ],
-   [
-    "Venom Vamdemon Seal",
-    "1",
-    "100",
-    "AT",
-    "300"
-   ],
-   [
-    "[Awaken] Ordinemon Seal",
-    "1",
-    "10",
-    "AT",
-    "250"
-   ],
-   [
-    "Numemon Seal",
-    "10",
-    "1",
-    "AT",
-    "100"
-   ],
-   [
-    "Cross-up Mervamon Seal",
-    "1",
-    "25",
-    "BL",
-    "250"
-   ],
-   [
-    "[Awaken] Sakuyamon Seal",
-    "1",
-    "1",
-    "BL",
-    "200"
-   ],
-   [
-    "Amphimon Seal",
-    "5",
-    "1",
-    "BL",
-    "150"
-   ],
-   [
-    "Vritramon Seal",
-    "10",
-    "1",
-    "CT",
-    "100"
-   ],
-   [
-    "Chakkumon Seal",
-    "5",
-    "1",
-    "CT",
-    "150"
-   ],
-   [
-    "Grotmon Seal",
-    "1",
-    "1",
-    "CT",
-    "200"
-   ],
-   [
-    "KaiserGreymon Seal",
-    "1",
-    "10",
-    "CT",
-    "250"
-   ],
-   [
-    "BaoHackmon Seal",
-    "5",
-    "1",
-    "DE",
-    "150"
-   ],
-   [
-    "Diarbbitmon Seal",
-    "5",
-    "1",
-    "DE",
-    "150"
-   ],
-   [
-    "Salamon Seal",
-    "10",
-    "1",
-    "DE",
-    "100"
-   ],
-   [
-    "PawnChessmon W Seal",
-    "10",
-    "1",
-    "DE",
-    "100"
-   ],
-   [
-    "HerculesKabuterimon Seal",
-    "1",
-    "25",
-    "DE",
-    "250"
-   ],
-   [
-    "GrandisKuwagamon Seal",
-    "1",
-    "100",
-    "DS",
-    "500"
-   ],
-   [
-    "Baalmon Seal",
-    "1",
-    "10",
-    "DS",
-    "400"
-   ],
-   [
-    "Yukidarumon Seal",
-    "1",
-    "1",
-    "DS",
-    "300"
-   ],
-   [
-    "Peckmon Seal",
-    "5",
-    "1",
-    "DS",
-    "300"
-   ],
-   [
-    "Angemon Seal",
-    "5",
-    "1",
-    "DS",
-    "300"
-   ],
-   [
-    "Marsmon Seal",
-    "1",
-    "100",
-    "EV",
-    "400"
-   ],
-   [
-    "Hagurumon Seal",
-    "6",
-    "1",
-    "EV",
-    "150"
-   ],
-   [
-    "Reppamon Seal",
-    "10",
-    "1",
-    "EV",
-    "200"
-   ],
-   [
-    "[Awaken] Gallantmon (Crimson Mode) Seal",
-    "1",
-    "25",
-    "HP",
-    "600"
-   ],
-   [
-    "Gardromon Seal",
-    "5",
-    "1",
-    "HP",
-    "200"
-   ],
-   [
-    "Centalmon Seal",
-    "5",
-    "1",
-    "HP",
-    "200"
-   ],
-   [
-    "Whamon Seal",
-    "1",
-    "10",
-    "HP",
-    "250"
-   ],
-   [
-    "Gabumon Seal",
-    "10",
-    "1",
-    "HT",
-    "100"
-   ],
-   [
-    "DarkTyrannomon Seal",
-    "5",
-    "1",
-    "HT",
-    "200"
-   ],
-   [
-    "WereGarurumon(Black) Seal",
-    "1",
-    "10",
-    "HT",
-    "300"
-   ],
-   [
-    "[Awaken] ZeedMillenniummon Seal",
-    "1",
-    "100",
-    "HT",
-    "550"
-   ]
-  ]
- },
- "na-4108#0": {
-  "server": "na",
-  "date": "11.02.2026",
-  "caption": "Seal Exchange Ticket — Craft List",
-  "note": "",
-  "inf": [
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
-  ],
-  "rows": [
-   [
-    "Monodramon Seal",
-    "10",
-    "1",
-    "AT",
-    "150"
-   ],
-   [
-    "Megidramon Seal",
-    "1",
-    "100",
-    "AT",
-    "300"
-   ],
-   [
-    "MugenDramon Seal",
-    "1",
-    "100",
-    "AT",
-    "300"
-   ],
-   [
-    "Chaosmon Seal",
-    "1",
-    "100",
-    "AT",
-    "300"
-   ],
-   [
-    "Etemon Seal",
-    "1",
-    "10",
-    "BL",
-    "200"
-   ],
-   [
-    "Tentomon Seal",
-    "10",
-    "1",
-    "BL",
-    "100"
-   ],
-   [
-    "Dracmon Seal",
-    "10",
-    "1",
-    "BL",
-    "100"
-   ],
-   [
-    "Sharmamon Seal",
-    "10",
-    "1",
-    "CT",
-    "150"
-   ],
-   [
-    "Koromon Seal",
-    "10",
-    "1",
-    "CT",
-    "100"
-   ],
-   [
-    "Kunemon Seal",
-    "10",
-    "1",
-    "CT",
-    "150"
-   ],
-   [
-    "Kyubimon Seal",
-    "5",
-    "1",
-    "CT",
-    "200"
-   ],
-   [
-    "CommanDramon Seal",
-    "10",
-    "1",
-    "CT",
-    "150"
-   ],
-   [
-    "MetalGarurumon Seal",
-    "1",
-    "25",
-    "CT",
-    "300"
-   ],
-   [
-    "Goblimon Seal",
-    "10",
-    "1",
-    "DE",
-    "100"
-   ],
-   [
-    "Leomon Seal",
-    "5",
-    "1",
-    "DE",
-    "150"
-   ],
-   [
-    "Upamon Seal",
-    "10",
-    "1",
-    "DE",
-    "80"
-   ],
-   [
-    "Chimairamon Seal",
-    "1",
-    "1",
-    "DE",
-    "250"
-   ],
-   [
-    "Diablomon Seal",
-    "1",
-    "6",
-    "DS",
-    "500"
-   ],
-   [
-    "Agumon Seal",
-    "10",
-    "1",
-    "DS",
-    "200"
-   ],
-   [
-    "WereGarurumon Seal",
-    "1",
-    "10",
-    "DS",
-    "400"
-   ],
-   [
-    "V-dramon Seal",
-    "5",
-    "1",
-    "EV",
-    "200"
-   ],
-   [
-    "Mystimon Seal",
-    "1",
-    "1",
-    "EV",
-    "300"
-   ],
-   [
-    "NeoDevimon Seal",
-    "1",
-    "10",
-    "EV",
-    "300"
-   ],
-   [
-    "V-mon Seal",
-    "10",
-    "1",
-    "HP",
-    "150"
-   ],
-   [
-    "Soulmon Seal",
-    "5",
-    "1",
-    "HP",
-    "200"
-   ],
-   [
-    "WarGreymon Seal",
-    "1",
-    "25",
-    "HP",
-    "500"
-   ],
-   [
-    "Canoweissmon Seal",
-    "1",
-    "10",
-    "HP",
-    "250"
-   ],
-   [
-    "FanBeemon Seal",
-    "10",
-    "1",
-    "HT",
-    "100"
-   ],
-   [
-    "Coredramon (Blue) Seal",
-    "5",
-    "1",
-    "HT",
-    "200"
-   ],
-   [
-    "Dorugamon Seal",
-    "5",
-    "1",
-    "HT",
-    "200"
-   ],
-   [
-    "Beelzebumon Seal",
-    "1",
-    "100",
-    "HT",
-    "400"
-   ]
-  ]
- },
- "na-4105#0": {
-  "server": "na",
-  "date": "04.02.2026",
-  "caption": "Seal Exchange Ticket — Craft List",
-  "note": "",
-  "inf": [
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
-  ],
-  "rows": [
-   [
-    "Xuanwumon Seal",
-    "1",
-    "25",
-    "HP",
-    "500"
-   ],
-   [
-    "Tsunomon Seal",
-    "10",
-    "1",
-    "HP",
-    "150"
-   ],
-   [
-    "Keramon Seal",
-    "10",
-    "1",
-    "HP",
-    "150"
-   ],
-   [
-    "Garurumon Seal",
-    "5",
-    "1",
-    "HP",
-    "200"
-   ],
-   [
-    "Coredramon (Green) Seal",
-    "5",
-    "1",
-    "DS",
-    "300"
-   ],
-   [
-    "Zhuqiaomon Seal",
-    "1",
-    "25",
-    "DS",
-    "600"
-   ],
-   [
-    "DemiMeramon Seal",
-    "10",
-    "1",
-    "DS",
-    "100"
-   ],
-   [
-    "Guilmon Seal",
-    "10",
-    "1",
-    "AT",
-    "150"
-   ],
-   [
-    "Mushroomon Seal",
-    "10",
-    "1",
-    "AT",
-    "150"
-   ],
-   [
-    "Examon Seal",
-    "1",
-    "100",
-    "AT",
-    "300"
-   ],
-   [
-    "Silphymon Seal",
-    "1",
-    "10",
-    "AT",
-    "250"
-   ],
-   [
-    "PicoDevimon Seal",
-    "10",
-    "1",
-    "AT",
-    "150"
-   ],
-   [
-    "Nanomon Seal",
-    "1",
-    "1",
-    "CT",
-    "250"
-   ],
-   [
-    "SaberLeomon Seal",
-    "1",
-    "6",
-    "CT",
-    "300"
-   ],
-   [
-    "Darkness Bagramon Seal",
-    "1",
-    "10",
-    "CT",
-    "250"
-   ],
-   [
-    "Prince Mamemon Seal",
-    "1",
-    "25",
-    "CT",
-    "350"
-   ],
-   [
-    "GeoGreymon Seal",
-    "5",
-    "1",
-    "HT",
-    "200"
-   ],
-   [
-    "Rosemon Seal",
-    "1",
-    "25",
-    "HT",
-    "400"
-   ],
-   [
-    "Crownmon Seal",
-    "1",
-    "10",
-    "HT",
-    "300"
-   ],
-   [
-    "Hackmon Seal",
-    "10",
-    "1",
-    "HT",
-    "100"
-   ],
-   [
-    "Kaiserleomon Seal",
-    "1",
-    "1",
-    "DE",
-    "200"
-   ],
-   [
-    "Okuwamon Seal",
-    "5",
-    "1",
-    "DE",
-    "150"
-   ],
-   [
-    "Sleipmon Seal",
-    "1",
-    "25",
-    "DE",
-    "250"
-   ],
-   [
-    "Gomamon Seal",
-    "10",
-    "1",
-    "BL",
-    "100"
-   ],
-   [
-    "Shakkoumon Seal",
-    "1",
-    "1",
-    "BL",
-    "200"
-   ],
-   [
-    "Waspmon Seal",
-    "5",
-    "1",
-    "BL",
-    "150"
-   ],
-   [
-    "Sangloupmon Seal",
-    "5",
-    "1",
-    "BL",
-    "150"
-   ],
-   [
-    "Blackgatomon Seal",
-    "5",
-    "1",
-    "EV",
-    "200"
-   ],
-   [
-    "Rapidmon Seal",
-    "1",
-    "10",
-    "EV",
-    "300"
-   ],
-   [
-    "MirageGaogamon Seal",
-    "1",
-    "25",
-    "EV",
-    "350"
    ]
   ]
  }
