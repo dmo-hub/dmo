@@ -662,6 +662,17 @@ def post_date(post, raw):
     return ""
 
 
+def page_cached(key):
+    """Whether the post behind a seal_tables key has its page in cache/, read
+    without fetching (get_html would go to the network for a missing one)."""
+    server, _, ident = key.partition("-")
+    if server == "kr":
+        return (CACHE / f"kr_view_o{ident}.html").exists()
+    if server == "na":
+        return any((CACHE / f"{k}_{ident}.html").exists() for k in ("event", "patch"))
+    return any(CACHE.glob(f"th_view_*-{ident}.html"))
+
+
 def extract(post):
     raw = get_html(post)
     if not raw:
@@ -835,10 +846,13 @@ def main():
 
     # Discovery only sees posts that happen to be in cache/, so a post found on an
     # earlier run can be absent now; carry its tables over rather than drop it.
+    # Only when its page really is missing, though: a post whose page is here
+    # and that discovery no longer picks was dropped on purpose.
+    carried = []
     for key, data in prev.items():
-        if key not in result and data.get("tables"):
+        if key not in result and data.get("tables") and not page_cached(key):
             result[key] = data
-            stale.append(key)
+            carried.append(key)
 
     # Discovered candidates only earn an entry by producing a table; curated
     # keys always stay (their empty entries drive card upkeep in seals.html).
@@ -853,6 +867,9 @@ def main():
     if stale:
         print(f"\n!! could not fetch {len(stale)} post(s); kept their previous tables: "
               + ", ".join(stale))
+    if carried:
+        print(f"\n!! {len(carried)} earlier-discovered post(s) not in cache; kept their "
+              "previous tables: " + ", ".join(carried))
     kept_new = [k for k in result if k not in curated_keys]
     if kept_new:
         print(f"\n!! NEW seal post(s) discovered — add a card to docs/seals.html: {kept_new}")
