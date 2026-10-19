@@ -115,6 +115,8 @@ ELEM_ICON = {
     "Ice": "Ice",
     "Neutral": "Neutral",
     "Pitch Black": "Pitch_Black",
+    # gameking posts say "Dark" for the element dmowiki calls Pitch Black
+    "Dark": "Pitch_Black",
 }
 # Full Natural-Attribute set, shown in the filter even when no digimon has
 # that element yet (ordered by element, not by what's present in the data).
