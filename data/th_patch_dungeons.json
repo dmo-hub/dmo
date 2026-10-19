@@ -3,6 +3,366 @@
   "scanned": 185,
   "dungeons": [
     {
+      "name": "ฟานลองมอน (ระดับง่าย)",
+      "location": null,
+      "npc": null,
+      "req": "Lv.80+",
+      "pass_item": "บัตรผ่านดันเจี้ยนฟานลองมอน (ระดับง่าย) 2 ใบ",
+      "party": null,
+      "clear_reward": null,
+      "monsters": [],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-10/",
+      "date": "2020-01-21"
+    },
+    {
+      "name": "เปลวเพลิงที่ลุกโชน [ระดับยาก]",
+      "location": null,
+      "npc": null,
+      "req": "Lv.80+",
+      "pass_item": "บัตรผ่านเปลวเพลิงที่ลุกโชน (ระดับยาก) ที่ NPC เรนามอน แผนที่ D-เทอร์ม",
+      "party": null,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "เบิร์ดดรามอน",
+          "title": null,
+          "level": null
+        },
+        {
+          "name": "การูดรามอน",
+          "title": null,
+          "level": null
+        },
+        {
+          "name": "โฮโอมอน",
+          "title": null,
+          "level": null
+        },
+        {
+          "name": "ซูเซมอน",
+          "title": null,
+          "level": null
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-11/",
+      "date": "2020-02-25"
+    },
+    {
+      "name": "เขาวงกตดิจิมอนแห่งความมืด (ระดับยาก)",
+      "location": null,
+      "npc": null,
+      "req": null,
+      "pass_item": "บัตรผ่านเขาวงกตดิจิมอนแห่งความมืด ได้วันละ 2 ใบ เพื่อเลือกเข้า เขาวงก",
+      "party": null,
+      "clear_reward": null,
+      "monsters": [],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-15/",
+      "date": "2020-06-26"
+    },
+    {
+      "name": "ร่องรอยแห่งเหล็กกล้า [ระดับยาก]",
+      "location": null,
+      "npc": null,
+      "req": null,
+      "pass_item": "บัตรผ่านดันเจี้ยนร่องรอยแห่งเหล็กกล้า 3 ใบ ได้โดยการรับเควสประจำวันจา",
+      "party": null,
+      "clear_reward": null,
+      "monsters": [],
+      "rewards": [
+        {
+          "item": "ความแข็งแกร่งที่สมบูรณ์แบบของไบฟูมอน",
+          "rate": null,
+          "qty": "8",
+          "box": null
+        },
+        {
+          "item": "ดิจิโซลที่สมบูรณ์แบบของไบฟูมอน",
+          "rate": null,
+          "qty": "8",
+          "box": null
+        },
+        {
+          "item": "พลังงานที่สมบูรณ์แบบของไบฟูมอน",
+          "rate": null,
+          "qty": "8",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [AT] +50%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [HP สูงสุด] +50%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [DS สูงสุด] +50%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [EXP] +1000%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของพยัคขาว [พลังโจมตีสกิล] +100%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของพยัคขาว [พลังโจมคริติคอล] +100%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของพยัคขาว [ความเร็วในการเคลื่อนที่] +35%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [DS] R10",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [DE] R10",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ผ้าโพกหัวที่สมบูรณ์แบบของไบฟูมอน [30 วัน]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "เสื้อคลุมที่สมบูรณ์แบบของไบฟูมอน [30 วัน]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ต่างหูชั้นดีที่ถูกผนึกของไบฟูมอน",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ความแข็งแกร่งที่สมบูรณ์แบบของไบฟูมอน",
+          "rate": null,
+          "qty": "11",
+          "box": null
+        },
+        {
+          "item": "ดิจิโซลที่สมบูรณ์แบบของไบฟูมอน",
+          "rate": null,
+          "qty": "11",
+          "box": null
+        },
+        {
+          "item": "พลังงานที่สมบูรณ์แบบของไบฟูมอน",
+          "rate": null,
+          "qty": "11",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [AT] +50%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [HP สูงสุด] +50%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [DS สูงสุด] +50%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [EXP] +1000%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของพยัคขาว [พลังโจมตีสกิล] +100%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของพยัคขาว [พลังโจมคริติคอล] +100%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของพยัคขาว [ความเร็วในการเคลื่อนที่] +35%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [EV] R10",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [HT] R10",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [CT] R10",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "เสื้อฮู้ดที่สมบูรณ์แบบของไบฟูมอน [30 วัน]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กางเกงขาสั้นที่สมบูรณ์แบบของไบฟูมอน [30 วัน]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ต่างหูชั้นดีที่ถูกผนึกของไบฟูมอน",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ความแข็งแกร่งที่สมบูรณ์แบบของไบฟูมอน",
+          "rate": null,
+          "qty": "15",
+          "box": null
+        },
+        {
+          "item": "ดิจิโซลที่สมบูรณ์แบบของไบฟูมอน",
+          "rate": null,
+          "qty": "15",
+          "box": null
+        },
+        {
+          "item": "พลังงานที่สมบูรณ์แบบของไบฟูมอน",
+          "rate": null,
+          "qty": "15",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [AT] +50%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [HP สูงสุด] +50%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [DS สูงสุด] +50%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "เขี้ยวเล็บของพยัคขาว [EXP] +1000%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของพยัคขาว [พลังโจมตีสกิล] +100%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของพยัคขาว [พลังโจมคริติคอล] +100%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของพยัคขาว [ความเร็วในการเคลื่อนที่] +35%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [HP] R10",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [AT] R10",
+          "rate": null,
+          "qty": "",
+          "box": null
+        },
+        {
+          "item": "ถุงมือที่สมบูรณ์แบบของไบฟูมอน [30 วัน]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ต่างหูชั้นดีที่ถูกผนึกของไบฟูมอน",
+          "rate": null,
+          "qty": "",
+          "box": null
+        },
+        {
+          "item": "ไบฟูมอน ซีล",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "คริสตัสแห่งการตัดสินที่ใจที่สมบูรณ์แบบ",
+          "rate": null,
+          "qty": "",
+          "box": null
+        }
+      ],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-19/",
+      "date": "2020-10-22"
+    },
+    {
       "name": "รอยร้าวของเดวีมอน",
       "location": null,
       "npc": "NPC <รอยร้าวของเดวีมอน>แอนโดมอน",
@@ -300,6 +660,161 @@
       "date": "2021-01-07"
     },
     {
+      "name": "ผู้สืบเชื้อสายเทพแห่งสายฟ้า [ระดับยาก]",
+      "location": null,
+      "npc": null,
+      "req": "Lv.80+",
+      "pass_item": "บัตรผ่านผู้สืบเชื้อสายเทพแห่งสายฟ้า (ระดับยาก) จาก NPC เรนามอน ที่ D-",
+      "party": null,
+      "clear_reward": null,
+      "monsters": [],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-28/",
+      "date": "2021-07-26"
+    },
+    {
+      "name": "จุดชมวิวโตเกียวทาวเวอร์ (ระดับง่าย)",
+      "location": null,
+      "npc": null,
+      "req": null,
+      "pass_item": null,
+      "party": null,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "2",
+          "title": null,
+          "level": null
+        }
+      ],
+      "rewards": [
+        {
+          "item": "พลังกายของเดธเมรามอน",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "พลังดิจิโซลของเดธเมรามอน",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "พลังงานของเดธเมรามอน",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเดธเมรามอน[AT]+50%",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเดธเมรามอน[HP สูงสุด]+50%",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเดธเมรามอน[DS สูงสุด]+50%",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเดธเมรามอน [DE สูงสุด] +50%",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเดธเมรามอน [EXP] +1000%",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "มอนสเตอร์ระดับสูง [Lv 2]",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ต [HP] R9",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [DS] R9",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [AT] R9",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [DE] R9",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [HT] R9",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปก้าวข้ามขีดจำกัด",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[HP] หินเสริมคุณลักษณะ ระดับ B Lv 4 (ไม่สามารถแลกเปลี่ยนได้)",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[DS] หินเสริมคุณลักษณะ ระดับ B Lv 4 (ไม่สามารถแลกเปลี่ยนได้)",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[AT] หินเสริมคุณลักษณะ ระดับ B Lv 4 (ไม่สามารถแลกเปลี่ยนได้)",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[DE] หินเสริมคุณลักษณะ ระดับ B Lv 4 (ไม่สามารถแลกเปลี่ยนได้)",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ดิจิคอร์ของเดธเมรามอนที่จางหาย (ไม่สามารถแลกเปลี่ยนได้)",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-34/",
+      "date": "2022-01-26"
+    },
+    {
       "name": "ดันเจี้ยนเรนโบว์ บริดจ์",
       "location": "มินาโตะซิตี้",
       "npc": "อิคคาคุมอน",
@@ -541,6 +1056,20 @@
       "detail_url": "https://www.vplay.in.th/__trashed/",
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-37/",
       "date": "2022-04-25"
+    },
+    {
+      "name": "วังวนแห่งความชั่วร้าย [ระดับง่าย]",
+      "location": null,
+      "npc": null,
+      "req": null,
+      "pass_item": "บัตรผ่านเข้าดันเจี้ยน",
+      "party": null,
+      "clear_reward": null,
+      "monsters": [],
+      "rewards": [],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b5%e0%b9%89%e0%b8%a2%e0%b8%99%e0%b8%a7%e0%b8%b1%e0%b8%87%e0%b8%a7%e0%b8%99%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-41/",
+      "date": "2022-08-25"
     },
     {
       "name": "อาณาเขตมารีนดรากอน",

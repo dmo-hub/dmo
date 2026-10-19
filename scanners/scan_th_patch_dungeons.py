@@ -40,7 +40,8 @@ BLOCK_RE = re.compile(r"<(p|figure|table|ul|ol|h[1-6])\b([^>]*)>(.*?)</\1>", re.
 BUTTON_RE = re.compile(r'<a\b[^>]*wp-block-button__link[^>]*href="([^"]+)"')
 HEADING_RE = re.compile(
     r"^(?:\d+\s*\.\s*)?(?:อัพเดทและ)?(?:เพิ่ม)?ดันเจี้ยนใหม่\s*(?:[:：–-]\s*|\s+)(.+)$")
-COLOR_RE = re.compile(r"\bhas-([a-z-]+)-color\b")
+TIER_HEADING_RE = re.compile(r"^(?:\d+\s*\.\s*)?(?:เพิ่ม)?ดันเจี้ยน(?!ใหม่)(.*ระดับ.*)$")
+COLOR_RE =re.compile(r"\bhas-([a-z-]+)-color\b")
 NOT_COLORS = {"text", "link", "background"}
 LEVEL_RE = re.compile(r"เลเวล\s*(?:มากกว่า\s*)?(\d{2,3})|Lv\.?\s*(\d{2,3})")
 PARTY_RE = re.compile(r"(\d+)\s*คน")
@@ -106,8 +107,18 @@ def detail_link(sec):
 def is_heading(b):
     if b["kind"] != "text" or len(b["text"]) > 100 or b["text"].startswith("เตรียมตัว"):
         return None
-    m = HEADING_RE.match(re.sub(r"\s+", " ", b["text"]))
-    return m.group(1).strip() if m else None
+    text = re.sub(r"\s+", " ", b["text"])
+    m = HEADING_RE.match(text)
+    if m:
+        return m.group(1).strip()
+    # Older posts (2019-2022) name the dungeon straight away, with its tier:
+    # "3. ดันเจี้ยนเปลวเพลิงที่ลุกโชน [ระดับยาก]". The same words also turn up
+    # in body text, so only a bold, coloured heading line counts.
+    if b.get("strong") and b.get("color") not in (None, "black", "vivid-red"):
+        m = TIER_HEADING_RE.match(text)
+        if m:
+            return re.sub(r"^ระดับง่าย\s*-\s*(.+)$", r"\1 (ระดับง่าย)", m.group(1).strip())
+    return None
 
 
 def section_end(bl, start):
@@ -229,6 +240,13 @@ def parse_section(name, sec):
             if m and not re.match(r"^\d+\.", ln) and "ต้อง" not in ln and "ดิจิมอน" not in m.group(1)[:8]:
                 monsters.append({"name": m.group(1).strip(), "title": (m.group(2) or "").strip("<>() ") or None,
                                  "level": int(m.group(3))})
+    # The four-holy-beast hard modes name one boss per reward box:
+    # "5.1 ให้จัดการ เบิร์ดดรามอน เพื่อรับรางวัล กล่องแห่งเปลวเพลิง(...)".
+    if not monsters:
+        for ln in lines:
+            m = re.match(r"^\d+\.\d+\s*(?:ให้)?(?:จัดการ)?\s*(\S+)\s+เพื่อรับรางวัล", ln)
+            if m:
+                monsters.append({"name": m.group(1), "title": None, "level": None})
     # Pages with an easy and a hard table list the same room twice.
     uniq = []
     for m in monsters:
@@ -281,7 +299,10 @@ def main():
             d["detail_url"] = detail_link(sec)
             # A teaser names the dungeon and nothing else; the release post
             # carries the details, so an empty one is not worth a card.
-            if not (d["req"] or d["monsters"] or d["rewards"] or d["npc"] or d["detail_url"]):
+            # A tier heading ("[ระดับยาก]") is the dungeon's own section, never
+            # a teaser, even when it only describes a daily-rotating roster.
+            tiered = not HEADING_RE.match(re.sub(r"\s+", " ", b["text"]))
+            if not (tiered or d["req"] or d["monsters"] or d["rewards"] or d["npc"] or d["detail_url"]):
                 continue
             d["url"], d["date"] = url, date
             key = re.sub(r"\W+", "", d["name"])
