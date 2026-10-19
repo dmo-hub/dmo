@@ -79,6 +79,20 @@ def index_icons(items):
     return exact, loose
 
 
+# The stats tables and the list that carries the pictures spell some items
+# differently: the list keeps the "Sealed" prefix the stats tables drop, and
+# singular/plural flips. Spelled out per item -- a general "drop the s" rule
+# would also join "Necklaces with 3 Options" to whatever "Necklace..." exists.
+ICON_ALIAS = {
+    "imperial earring": "imperial earrings",
+    "zero unit earrings": "zero unit earring",
+    "necklace of four holy beasts": "sealed necklace of four holy beasts",
+    "ring of four holy beasts": "sealed ring of four holy beasts",
+    "radiant necklace of four holy beasts": "sealed radiant necklace of four holy beasts",
+    "radiant ring of four holy beasts": "sealed radiant ring of four holy beasts",
+}
+
+
 def icon_by_name(row_names, name, icons):
     """Picture for an item whose own rows had none (the pivoted stats tables).
     Several pictures under one name -- "Knight's Bracelet" also matches the
@@ -90,6 +104,7 @@ def icon_by_name(row_names, name, icons):
         if len(found) == 1:
             return next(iter(found))
     key = icon_key(name)
+    key = ICON_ALIAS.get(key, key)
     found = loose.get(key) or set()
     if len(found) == 1:
         return next(iter(found))
