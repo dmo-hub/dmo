@@ -58,6 +58,10 @@ def clean(x):
     x = (x.replace("&nbsp;", " ").replace("&#160;", " ").replace("&amp;", "&")
           .replace("&#8211;", "-").replace("&#8217;", "'"))
     x = re.sub(r"[ \t]+", " ", x)
+    # Patch 95 spells the Thunder head "...แห่งสปิริ" once, dropping the ต the
+    # other 29 spirit pieces (and the same name elsewhere in that post) carry.
+    # Copied as-is, a correctly typed item never counts toward the set.
+    x = re.sub(r"แห่งสปิริ(?!ต)", "แห่งสปิริต", x)
     return re.sub(r"\n\s*", "\n", x).strip()
 
 
