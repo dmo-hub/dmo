@@ -35,6 +35,11 @@ MARKER_FIND = re.compile(
     re.IGNORECASE,
 )
 
+ALT_MARKER = re.compile(
+    r"(?:New Digimon Added|A new Digimon)\s*:\s*(.{2,60}?)\s+(?:has|have|The)\b",
+    re.IGNORECASE,
+)
+
 BASE = "https://dmo.gameking.com/news"
 URL_TEMPLATE = {
     "event": f"{BASE}/EventView.aspx?idx={{idx}}",
@@ -75,6 +80,21 @@ def parse_digimon(raw_html: str) -> list[str]:
         if "[" not in name and "," in name:
             names.extend(n.strip() for n in name.split(",") if n.strip())
         elif name:
+            names.append(name)
+    if names:
+        return names
+    # Older posts (2018-2019) skip the brackets: "#01. New Digimon Added:
+    # Chaosmon The Bug - ..." or "A new Digimon: Tsukaimon (Barbamon Line) has
+    # been newly updated". Only tried when no bracketed marker exists, so a
+    # player comment quoting the phrase cannot add to a normal post.
+    article = text.split(" Comments ")[0]
+    for m in ALT_MARKER.finditer(article):
+        name = m.group(1).strip()
+        # The heading is often repeated as the first line under it.
+        half = name.split(" ")
+        if len(half) % 2 == 0 and half[: len(half) // 2] == half[len(half) // 2 :]:
+            name = " ".join(half[: len(half) // 2])
+        if name and name not in names:
             names.append(name)
     return names
 

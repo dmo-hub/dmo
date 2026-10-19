@@ -871,6 +871,34 @@
           ]
         }
       }
+    },
+    "332": {
+      "date": "12-13-2016",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=332",
+      "digimon": [
+        "Tsukaimon (Barbamon Line)"
+      ]
+    },
+    "483": {
+      "date": "09-08-2020",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=483",
+      "digimon": [
+        "Chaosmon"
+      ]
+    },
+    "494": {
+      "date": "12-01-2020",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=494",
+      "digimon": [
+        "Rafflesimon"
+      ]
+    },
+    "502": {
+      "date": "01-26-2021",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=502",
+      "digimon": [
+        "Fanglongmon (Shin)"
+      ]
     }
   },
   "patch": {

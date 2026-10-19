@@ -26145,6 +26145,27 @@
   },
   {
    "type": "digimon",
+   "key": "chaosmon",
+   "display": "Chaosmon",
+   "names": {
+    "en": [
+     "Chaosmon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e483",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=483",
+      "date": "09-08-2020"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
    "key": "darkknightmon",
    "display": "DarkKnightmon",
    "names": {
@@ -26251,6 +26272,27 @@
      {
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-78/",
       "date": "2025-09-25"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "fanglongmonshin",
+   "display": "Fanglongmon (Shin)",
+   "names": {
+    "en": [
+     "Fanglongmon (Shin)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e502",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=502",
+      "date": "01-26-2021"
      }
     ]
    }
@@ -26816,6 +26858,27 @@
   },
   {
    "type": "digimon",
+   "key": "rafflesimon",
+   "display": "Rafflesimon",
+   "names": {
+    "en": [
+     "Rafflesimon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e494",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=494",
+      "date": "12-01-2020"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
    "key": "sakuyamonawaken",
    "display": "Sakuyamon(Awaken)",
    "names": {
@@ -26987,6 +27050,27 @@
      {
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-34/",
       "date": "2022-01-26"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "tsukaimonbarbamonline",
+   "display": "Tsukaimon (Barbamon Line)",
+   "names": {
+    "en": [
+     "Tsukaimon (Barbamon Line)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e332",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=332",
+      "date": "12-13-2016"
      }
     ]
    }
