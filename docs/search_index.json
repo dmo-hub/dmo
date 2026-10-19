@@ -27110,11 +27110,10 @@
   {
    "type": "digimon",
    "key": "shoutmonx7",
-   "display": "Shoutmon X7 Superior Mode",
+   "display": "Shoutmon X7",
    "names": {
     "en": [
-     "Shoutmon X7",
-     "Shoutmon X7 Superior Mode"
+     "Shoutmon X7"
     ],
     "kr": [
      "샤우트몬 X7"
