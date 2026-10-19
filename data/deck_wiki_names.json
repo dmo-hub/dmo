@@ -1,5 +1,5 @@
 {
-  "_README": "dmowiki page title (redirects followed) for each English digimon name on docs/decks.html; tools/apply_wiki_names_decks.py swaps them in. Only names that differ are listed. Names with no dmowiki page of the same form and variant are left out and stay as the post wrote them: (Extreme) ZeedMillenniumon, and the free-text cells (\"... and other Digimon\", \"Jogress (Omegamon)\"). The Four Holy Beasts map to their Mega pages: the bare names redirect to the Champion forms, which are not the deck's digimon.",
+  "_README": "dmowiki page title (redirects followed) for each English digimon name on docs/decks.html; tools/apply_wiki_names_decks.py swaps them in. Only names that differ are listed. Names with no dmowiki page of the same form and variant are left out and stay as the post wrote them: (Extreme) ZeedMillenniumon, and the free-text cells (\"... and other Digimon\", \"Jogress (Omegamon)\"). The Four Holy Beasts map to their Mega pages: the bare names redirect to the Champion forms, which are not the deck's digimon. Gallantmon Crimson Mode is the Rank U burst mode NA added with it (post 683), which dmowiki files as (Awaken).",
   "(Awaken) Alphamon Ouryuken": "Alphamon Ouryuken (Awaken)",
   "(Extreme) Alphamon Ouryuken": "Alphamon Ouryuken (Extreme)",
   "(Extreme) Lucemon Satan Mode": "Lucemon: Satan Mode (Extreme)",
@@ -23,7 +23,7 @@
   "Eosmon_LV5": "Eosmon LV5",
   "Eosmon_LV6": "Eosmon LV6",
   "Fairimon": "Kazemon",
-  "Gallantmon Crimson Mode": "Gallantmon (Crimson Mode)",
+  "Gallantmon Crimson Mode": "Gallantmon (Crimson Mode) (Awaken)",
   "Grotmon": "Grumblemon",
   "Kaiserleomon": "KaiserLeomon",
   "Kuzuhamon Miko Mode": "Kuzuhamon - Miko Mode",
