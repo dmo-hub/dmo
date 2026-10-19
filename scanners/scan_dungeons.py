@@ -143,8 +143,14 @@ def load_prev():
 
 def main():
     prev = load_prev()
+    sources = sorted(CACHE.glob("th_dungeon_*.html"))
+    # cache/ is gitignored, so a fresh clone has none of these; writing anyway would
+    # replace the tracked file (and its hand-filled na/kr/boss_en) with an empty list.
+    if not sources:
+        sys.exit("no cache/th_dungeon_*.html -- run fetchers/fetch_dungeons_th.py first; "
+                 "%s left untouched" % OUT.relative_to(PROJ))
     dungeons = {}
-    for f in sorted(CACHE.glob("th_dungeon_*.html")):
+    for f in sources:
         html = f.read_text(encoding="utf-8")
         title = title_from_html(html)
         lines = clean_lines(html)
