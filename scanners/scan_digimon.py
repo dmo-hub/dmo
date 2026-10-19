@@ -25,13 +25,15 @@ OUT = PROJ / "data" / "scan_result_digimon.json"
 # Reuse same date regex as scan_decks.py (MM-DD-YYYY format in raw HTML)
 DATE_RE = re.compile(r">\s*(\d{2}-\d{2}-\d{4})\s*<")
 
-# Match `[New Digimon ...]` with optional "Added"/"release" before the dash separator
+# Match `[New Digimon ...]` with optional "Added"/"release" before the dash separator.
+# A whole evolution line is announced as "New Digimon Line Added – Impmon(Baalmon)"
+# (post 675) or "New Digimon Series Added – Gammamon" (post 665).
 MARKER_PREFIX = re.compile(
-    r"^\s*New Digimon(?:\s+Added|\s+release)?\s*[–—-]\s*",
+    r"^\s*New Digimon(?:\s+(?:Line|Series))?(?:\s+Added|\s+release)?\s*[–—-]\s*",
     re.IGNORECASE,
 )
 MARKER_FIND = re.compile(
-    r"\[\s*New Digimon(?:\s+Added|\s+release)?\s*[–—-]\s*",
+    r"\[\s*New Digimon(?:\s+(?:Line|Series))?(?:\s+Added|\s+release)?\s*[–—-]\s*",
     re.IGNORECASE,
 )
 
@@ -116,7 +118,12 @@ def main() -> None:
         kind, _, idx = f.stem.partition("_")
         if kind not in ("event", "patch"):
             continue
-        if idx in result[kind]:  # curated entry — never touch
+        if idx in result[kind]:  # curated entry — never touch, but say what it lacks
+            missing = [n for n in parse_digimon(f.read_text(encoding="utf-8"))
+                       if n not in result[kind][idx]["digimon"]]
+            if missing:
+                print(f"  ! {kind} {idx}: post also announces {', '.join(missing)} "
+                      "-- not in the curated entry, add by hand if it belongs")
             continue
         raw = f.read_text(encoding="utf-8")
         digimon = parse_digimon(raw)

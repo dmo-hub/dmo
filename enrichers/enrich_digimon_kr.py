@@ -72,6 +72,11 @@ EN_TO_KR_KEYWORDS: list[tuple[str, str]] = [
     ("Beelzebumon", "베르제브몬"),
     ("Angoramon", "앙고라몬"),
     ("Ordinemon", "오르디네몬"),
+    ("Gammamon", "감마몬"),
+    ("Impmon(Baalmon)", "임프몬 ( 바알몬 )"),
+    ("Jellymon", "젤리몬"),
+    # the release list spells it 퀀타몬; the row above matches the other spelling
+    ("Quantumon", "퀀타몬"),
 ]
 
 # Digimon released only via deck/event posts (no `신규 디지몬` marker exists).

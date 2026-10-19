@@ -835,11 +835,20 @@
       "date": "06-25-2024",
       "source": "https://dmo.gameking.com/news/EventView.aspx?idx=675",
       "digimon": [
-        "Xros Up Mervamon"
+        "Xros Up Mervamon",
+        "Impmon(Baalmon)"
       ],
       "image": "img/digimon/e675.png",
       "attributes": {
         "Xros Up Mervamon": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Dark",
+          "families": [
+            "Nightmare Soldiers"
+          ]
+        },
+        "Impmon(Baalmon)": {
           "attribute": "Virus",
           "attribute_abbr": "VI",
           "natural_attribute": "Dark",
@@ -853,7 +862,8 @@
       "_th_name": "ครอสอัพ เมอร์วามอน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/11/12.png",
       "image_th": "img/digimon/e675_th.jpeg",
-      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787977&Btype=Update"
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787977&Btype=Update",
+      "image_kr": "img/digimon/e675_kr.png"
     },
     "691": {
       "date": "11-05-2024",
@@ -914,7 +924,8 @@
       "_th_name": "โอดิเนมอน (อะเวคเค่น)",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/12/1.png",
       "image_th": "img/digimon/e697_th.jpeg",
-      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=795819&Btype=Update"
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=795819&Btype=Update",
+      "image_kr": "img/digimon/e697_kr.png"
     },
     "702": {
       "date": "01-21-2025",
@@ -992,7 +1003,8 @@
             "Virus Busters"
           ]
         }
-      }
+      },
+      "image": "img/digimon/e483.png"
     },
     "494": {
       "date": "12-01-2020",
@@ -1011,7 +1023,8 @@
           "attribute_abbr": "DA",
           "natural_attribute": "Wood"
         }
-      }
+      },
+      "image": "img/digimon/e494.png"
     },
     "502": {
       "date": "01-26-2021",
@@ -1035,7 +1048,27 @@
             "Virus Busters"
           ]
         }
-      }
+      },
+      "image": "img/digimon/e502.jpg"
+    },
+    "665": {
+      "date": "03-19-2024",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=665",
+      "digimon": [
+        "Gammamon"
+      ],
+      "image": "img/digimon/e665.jpg",
+      "attributes": {
+        "Gammamon": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Fire",
+          "families": [
+            "TBD"
+          ]
+        }
+      },
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=782896&Btype=Update"
     }
   },
   "patch": {
