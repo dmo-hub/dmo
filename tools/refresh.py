@@ -43,6 +43,7 @@ STEPS = [
     ("th", False, "scanners/scan_dungeons.py", []),
     ("th", False, "scanners/scan_th_patch_decks.py", []),
     ("th", False, "tools/apply_th_decks.py", []),
+    ("", False, "tools/apply_wiki_names_decks.py", []),
     ("", False, "builders/build_dungeon_html.py", []),
     ("", False, "enrichers/enrich_digimon_gameking.py", []),
     ("", False, "enrichers/enrich_digimon_rebalance.py", []),
