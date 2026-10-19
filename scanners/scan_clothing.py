@@ -20,6 +20,7 @@ asserted, so a row can never disappear quietly -- rows the parsers cannot read
 are reported in "skipped" with a reason rather than dropped.
 """
 
+import html as html_lib
 import io
 import json
 import re
@@ -73,8 +74,9 @@ def strip_tags(html):
 
 
 def clean(html):
-    txt = strip_tags(html)
-    txt = txt.replace("&nbsp;", " ").replace("&amp;", "&")
+    # Full unescape: the wiki also writes numeric entities (&#160; before a
+    # colon in "Royal : ..."), which a two-name replace list leaves in item names.
+    txt = html_lib.unescape(strip_tags(html))
     return re.sub(r"\s+", " ", txt).strip()
 
 

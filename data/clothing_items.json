@@ -1474,22 +1474,22 @@
       ]
     },
     {
-      "id": "bracelets-royal-160-knight-s-bracelet",
-      "name": "Royal&#160;: Knight's Bracelet",
+      "id": "bracelets-royal-knight-s-bracelet",
+      "name": "Royal : Knight's Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
       "stats": []
     },
     {
-      "id": "bracelets-royal-160-radiant-knight-s-bracelet",
-      "name": "Royal&#160;: Radiant Knight's Bracelet",
+      "id": "bracelets-royal-radiant-knight-s-bracelet",
+      "name": "Royal : Radiant Knight's Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
       "stats": []
     },
     {
-      "id": "bracelets-royal-160-x-knight-s-bracelet",
-      "name": "Royal&#160;: X-Knight's Bracelet",
+      "id": "bracelets-royal-x-knight-s-bracelet",
+      "name": "Royal : X-Knight's Bracelet",
       "slot": "Bracelets",
       "axis": "unknown",
       "stats": []
