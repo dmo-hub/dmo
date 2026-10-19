@@ -50,6 +50,7 @@ EN_TO_KR_KEYWORDS: list[tuple[str, str]] = [
     ("Imperialdramon Fighter", "황제드라몬 파이터"),
     ("Alphamon Ouryuken", "알파몬 : 왕룡검"),
     ("Last Evolution: Kizuna", "라스트 에볼루션 : 인연"),
+    ("Xros Up Mervamon", "크로스업 메르바몬"),
     # Single-name digimon
     ("Kuzuhamon", "쿠즈하몬"),
     ("Gallantmon", "듀크몬"),  # Dukemon = Gallantmon
@@ -67,6 +68,10 @@ EN_TO_KR_KEYWORDS: list[tuple[str, str]] = [
     ("Omegamon", "오메가몬"),
     ("Quantumon", "퀀텀몬"),
     ("Apollomon", "아폴로몬"),
+    ("Belphemon", "벨페몬"),
+    ("Beelzebumon", "베르제브몬"),
+    ("Angoramon", "앙고라몬"),
+    ("Ordinemon", "오르디네몬"),
 ]
 
 # Digimon released only via deck/event posts (no `신규 디지몬` marker exists).
