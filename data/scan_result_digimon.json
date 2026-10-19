@@ -957,7 +957,19 @@
       "source": "https://dmo.gameking.com/news/EventView.aspx?idx=332",
       "digimon": [
         "Tsukaimon (Barbamon Line)"
-      ]
+      ],
+      "attributes": {
+        "Tsukaimon (Barbamon Line)": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Nature Spirits",
+            "Nightmare Soldiers",
+            "Wind Guardians"
+          ]
+        }
+      }
     },
     "483": {
       "date": "09-08-2020",
@@ -969,7 +981,18 @@
       "date_th": "2021-03-25",
       "_th_name": "คาออสมอน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2021/03/os5.jpg",
-      "image_th": "img/digimon/e483_th.jpeg"
+      "image_th": "img/digimon/e483_th.jpeg",
+      "attributes": {
+        "Chaosmon": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Unknown",
+            "Virus Busters"
+          ]
+        }
+      }
     },
     "494": {
       "date": "12-01-2020",
@@ -981,7 +1004,14 @@
       "date_th": "2021-06-24",
       "_th_name": "ราเฟลเรซีมอน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2021/06/Rafflesimon.jpg",
-      "image_th": "img/digimon/e494_th.jpeg"
+      "image_th": "img/digimon/e494_th.jpeg",
+      "attributes": {
+        "Rafflesimon": {
+          "attribute": "Data",
+          "attribute_abbr": "DA",
+          "natural_attribute": "Wood"
+        }
+      }
     },
     "502": {
       "date": "01-26-2021",
@@ -993,7 +1023,19 @@
       "date_th": "2021-07-26",
       "_th_name": "ฟานลอนมอน (ชิน)",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2021/07/fl2.jpg",
-      "image_th": "img/digimon/e502_th.jpeg"
+      "image_th": "img/digimon/e502_th.jpeg",
+      "attributes": {
+        "Fanglongmon (Shin)": {
+          "attribute": "Data",
+          "attribute_abbr": "DA",
+          "natural_attribute": "Earth",
+          "families": [
+            "Dragon's Roar",
+            "Metal Empire",
+            "Virus Busters"
+          ]
+        }
+      }
     }
   },
   "patch": {

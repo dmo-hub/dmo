@@ -35,6 +35,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 PROJ = Path(__file__).resolve().parent.parent
 SCAN = PROJ / "data" / "scan_result_digimon.json"
 CACHE = PROJ / "cache"
+# the fetcher owns name -> slug (rank_u.html + OVERRIDES); match through it
+sys.path.insert(0, str(PROJ / "fetchers"))
 CACHE.mkdir(exist_ok=True)
 
 ABBR = {"Vaccine": "VA", "Virus": "VI", "Data": "DA", "Free": "FR"}
@@ -90,7 +92,8 @@ def parse_infobox(html: str) -> dict | None:
     if m:
         cell = m.group(1)
         for fm in re.finditer(
-            r'href="/wiki/Category:([^"]+)" title="Category:[^"]+">([^<]+)</a>',
+            # older saves link /wiki/Category:..., current dmowiki drops the /wiki
+            r'href="(?:/wiki)?/Category:([^"]+)" title="Category:[^"]+">([^<]+)</a>',
             cell,
         ):
             label = fm.group(2).strip()
@@ -106,7 +109,8 @@ def parse_infobox(html: str) -> dict | None:
         if attr in ABBR:
             result["attribute_abbr"] = ABBR[attr]
     if natural:
-        result["natural_attribute"] = natural
+        # dmowiki's infobox says "Land" where the element icons say "Earth"
+        result["natural_attribute"] = {"Land": "Earth"}.get(natural, natural)
     if families:
         result["families"] = families
     return result
