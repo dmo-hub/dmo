@@ -2,7 +2,7 @@
  "coverage": {
   "na": "2026-07-15",
   "kr": "2026-07-14",
-  "th": "2026-08-13"
+  "th": "2026-09-17"
  },
  "entries": [
   {
@@ -23566,6 +23566,27 @@
   },
   {
    "type": "digimon",
+   "key": "awakenordinemon",
+   "display": "(Awaken)Ordinemon",
+   "names": {
+    "en": [
+     "(Awaken)Ordinemon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e697",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=697",
+      "date": "12-24-2024"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
    "key": "extremeomegamonresistance",
    "display": "(Extreme) Omegamon(Resistance)",
    "names": {
@@ -23690,6 +23711,27 @@
   },
   {
    "type": "digimon",
+   "key": "angoramon",
+   "display": "ANGORAMON",
+   "names": {
+    "en": [
+     "ANGORAMON"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e670",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=670",
+      "date": "05-14-2024"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
    "key": "apollomon",
    "display": "Apollomon",
    "names": {
@@ -23748,6 +23790,48 @@
   },
   {
    "type": "digimon",
+   "key": "beelzebumonblastmodeawaken",
+   "display": "Beelzebumon Blast Mode (Awaken)",
+   "names": {
+    "en": [
+     "Beelzebumon Blast Mode (Awaken)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e662",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=662",
+      "date": "02-27-2024"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "belphemonragemodeawaken",
+   "display": "Belphemon: Rage Mode(Awaken)",
+   "names": {
+    "en": [
+     "Belphemon: Rage Mode(Awaken)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e655",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=655",
+      "date": "12-19-2023"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
    "key": "bloomlordmon",
    "display": "BloomLordMon",
    "names": {
@@ -23783,6 +23867,48 @@
   },
   {
    "type": "digimon",
+   "key": "darkknightmon",
+   "display": "DarkKnightmon",
+   "names": {
+    "en": [
+     "DarkKnightmon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e620",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=620",
+      "date": "04-18-2023"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "deadlyaxemon",
+   "display": "Deadly Axemon",
+   "names": {
+    "en": [
+     "Deadly Axemon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e620",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=620",
+      "date": "04-18-2023"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
    "key": "donedevimon",
    "display": "DoneDevimon",
    "names": {
@@ -23806,6 +23932,12 @@
      {
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812305&Btype=Update",
       "date": ""
+     }
+    ],
+    "th": [
+     {
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/",
+      "date": "2026-09-17"
      }
     ]
    }
@@ -23841,6 +23973,27 @@
      {
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-78/",
       "date": "2025-09-25"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "gabumonbondoffriendship",
+   "display": "Gabumon – Bond of Friendship",
+   "names": {
+    "en": [
+     "Gabumon – Bond of Friendship"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e666",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=666",
+      "date": "04-02-2024"
      }
     ]
    }
@@ -23952,6 +24105,35 @@
   },
   {
    "type": "digimon",
+   "key": "imperialdramonfightermodeawaken",
+   "display": "Imperialdramon Fightermode(Awaken)",
+   "names": {
+    "en": [
+     "Imperialdramon Fightermode(Awaken)"
+    ],
+    "kr": [
+     "황제드라몬 파이터"
+    ],
+    "th": []
+   },
+   "anchor": "digimon.html#e691",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=691",
+      "date": "11-05-2024"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=793209&Btype=Update",
+      "date": ""
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
    "key": "imperialdramonpaladinmode",
    "display": "Imperialdramon PaladinMode",
    "names": {
@@ -23981,6 +24163,48 @@
      {
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86/",
       "date": "2026-04-23"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "jellymon",
+   "display": "Jellymon",
+   "names": {
+    "en": [
+     "Jellymon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e670",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=670",
+      "date": "05-14-2024"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "jetmervamon",
+   "display": "JetMervamon",
+   "names": {
+    "en": [
+     "JetMervamon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e614",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=614",
+      "date": "03-07-2023"
      }
     ]
    }
@@ -24046,6 +24270,12 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=809411&Btype=Update",
       "date": ""
      }
+    ],
+    "th": [
+     {
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-93/",
+      "date": "2026-08-27"
+     }
     ]
    }
   },
@@ -24081,6 +24311,104 @@
      {
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/",
       "date": "2026-06-11"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "lucemonsatanmodeshin",
+   "display": "Lucemon Satan Mode(Shin)",
+   "names": {
+    "en": [
+     "Lucemon Satan Mode(Shin)"
+    ],
+    "kr": [
+     "루체몬"
+    ],
+    "th": []
+   },
+   "anchor": "digimon.html#e602",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=602",
+      "date": "12-27-2022"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=808086&Btype=Update",
+      "date": ""
+     }
+    ],
+    "th": [
+     {
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/",
+      "date": "2026-06-11"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "megagalgomonawaken",
+   "display": "MegaGalgomon(Awaken)",
+   "names": {
+    "en": [
+     "MegaGalgomon(Awaken)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e646",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=646",
+      "date": "10-17-2023"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "mervamon",
+   "display": "Mervamon",
+   "names": {
+    "en": [
+     "Mervamon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e614",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=614",
+      "date": "03-07-2023"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "metalgarurumon",
+   "display": "MetalGarurumon",
+   "names": {
+    "en": [
+     "MetalGarurumon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e702",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=702",
+      "date": "01-21-2025"
      }
     ]
    }
@@ -24210,6 +24538,56 @@
   },
   {
    "type": "digimon",
+   "key": "sakuyamonawaken",
+   "display": "Sakuyamon(Awaken)",
+   "names": {
+    "en": [
+     "Sakuyamon(Awaken)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e652",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=652",
+      "date": "11-28-2023"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "shoutmonx7",
+   "display": "Shoutmon X7",
+   "names": {
+    "en": [
+     "Shoutmon X7"
+    ],
+    "kr": [
+     "샤우트몬 X7"
+    ],
+    "th": []
+   },
+   "anchor": "digimon.html#e578",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=578",
+      "date": "07-26-2022"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=784466&Btype=Update",
+      "date": ""
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
    "key": "shoutmonx7superiormode",
    "display": "Shoutmon X7 Superior Mode",
    "names": {
@@ -24239,6 +24617,27 @@
      {
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-64/",
       "date": "2024-07-25"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "skullknightmon",
+   "display": "SkullKnightmon",
+   "names": {
+    "en": [
+     "SkullKnightmon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e620",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=620",
+      "date": "04-18-2023"
      }
     ]
    }
@@ -24275,6 +24674,83 @@
      {
       "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-90/",
       "date": "2026-07-09"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "susanoomonshin",
+   "display": "Susanoomon(Shin)",
+   "names": {
+    "en": [
+     "Susanoomon(Shin)"
+    ],
+    "kr": [
+     "스사노오몬"
+    ],
+    "th": []
+   },
+   "anchor": "digimon.html#e531",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=531",
+      "date": "10-19-2021"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810988&Btype=Update",
+      "date": ""
+     }
+    ],
+    "th": [
+     {
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-90/",
+      "date": "2026-07-09"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "wargreymon",
+   "display": "WarGreymon",
+   "names": {
+    "en": [
+     "WarGreymon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e702",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=702",
+      "date": "01-21-2025"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "xrosupmervamon",
+   "display": "Xros Up Mervamon",
+   "names": {
+    "en": [
+     "Xros Up Mervamon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "digimon.html#e675",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/EventView.aspx?idx=675",
+      "date": "06-25-2024"
      }
     ]
    }

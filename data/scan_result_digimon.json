@@ -338,7 +338,12 @@
             "TBD"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-93/",
+      "date_th": "2026-08-27",
+      "_th_name": "ลาสต์ อีโวลูชัน : คิซึนะ",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/08/5-1.png",
+      "image_th": "img/digimon/e770_th.png"
     },
     "782": {
       "date": "09-23-2025",
@@ -462,7 +467,12 @@
             "Nightmare Soldiers"
           ]
         }
-      }
+      },
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/",
+      "date_th": "2026-09-17",
+      "_th_name": "ดันเดวีมอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/09/18.png",
+      "image_th": "img/digimon/e798_th.png"
     },
     "810": {
       "date": "01-14-2026",
@@ -503,6 +513,329 @@
         }
       },
       "image": "img/digimon/e810.jpeg"
+    },
+    "531": {
+      "date": "10-19-2021",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=531",
+      "digimon": [
+        "Susanoomon(Shin)"
+      ],
+      "image": "img/digimon/e531.png",
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810988&Btype=Update",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-90/",
+      "date_th": "2026-07-09",
+      "_th_name": "[เอ็กซ์ตรีม] ซูซาโนะโอมอน",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/07/2.png",
+      "image_th": "img/digimon/e531_th.png"
+    },
+    "578": {
+      "date": "07-26-2022",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=578",
+      "digimon": [
+        "Shoutmon X7"
+      ],
+      "image": "img/digimon/e578.png",
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=784466&Btype=Update"
+    },
+    "602": {
+      "date": "12-27-2022",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=602",
+      "digimon": [
+        "Lucemon Satan Mode(Shin)"
+      ],
+      "image": "img/digimon/e602.jpg",
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=808086&Btype=Update",
+      "source_th": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/",
+      "date_th": "2026-06-11",
+      "_th_name": "[เอ็กซ์ตรีม] ลูเจมอน : ซาตานโหมด",
+      "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2026/06/3.png",
+      "image_th": "img/digimon/e602_th.png"
+    },
+    "614": {
+      "date": "03-07-2023",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=614",
+      "digimon": [
+        "Mervamon",
+        "JetMervamon"
+      ],
+      "image": "img/digimon/e614.jpg",
+      "attributes": {
+        "Mervamon": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Steel",
+          "families": [
+            "Nature Spirits"
+          ]
+        },
+        "JetMervamon": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Steel",
+          "families": [
+            "Nature Spirits"
+          ]
+        }
+      }
+    },
+    "620": {
+      "date": "04-18-2023",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=620",
+      "digimon": [
+        "Deadly Axemon",
+        "SkullKnightmon",
+        "DarkKnightmon"
+      ],
+      "image": "img/digimon/e620.jpg",
+      "attributes": {
+        "Deadly Axemon": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Steel",
+          "families": [
+            "Nightmare Soldiers"
+          ]
+        },
+        "SkullKnightmon": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Nightmare Soldiers"
+          ]
+        },
+        "DarkKnightmon": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Nightmare Soldiers"
+          ]
+        }
+      }
+    },
+    "646": {
+      "date": "10-17-2023",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=646",
+      "digimon": [
+        "MegaGalgomon(Awaken)"
+      ],
+      "image": "img/digimon/e646.jpg",
+      "attributes": {
+        "MegaGalgomon(Awaken)": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Steel",
+          "families": [
+            "Virus Busters",
+            "Metal Empire",
+            "Nature Spirits"
+          ]
+        }
+      }
+    },
+    "652": {
+      "date": "11-28-2023",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=652",
+      "digimon": [
+        "Sakuyamon(Awaken)"
+      ],
+      "image": "img/digimon/e652.png",
+      "attributes": {
+        "Sakuyamon(Awaken)": {
+          "attribute": "Data",
+          "attribute_abbr": "DA",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Nightmare Soldiers",
+            "Wind Guardians",
+            "Nature Spirits"
+          ]
+        }
+      }
+    },
+    "655": {
+      "date": "12-19-2023",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=655",
+      "digimon": [
+        "Belphemon: Rage Mode(Awaken)"
+      ],
+      "image": "img/digimon/e655.jpg",
+      "attributes": {
+        "Belphemon: Rage Mode(Awaken)": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Nightmare Soldiers",
+            "Dark Area"
+          ]
+        }
+      }
+    },
+    "662": {
+      "date": "02-27-2024",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=662",
+      "digimon": [
+        "Beelzebumon Blast Mode (Awaken)"
+      ],
+      "image": "img/digimon/e662.jpg",
+      "attributes": {
+        "Beelzebumon Blast Mode (Awaken)": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Nightmare Soldiers",
+            "Wind Guardians"
+          ]
+        }
+      }
+    },
+    "666": {
+      "date": "04-02-2024",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=666",
+      "digimon": [
+        "Gabumon – Bond of Friendship"
+      ],
+      "image": "img/digimon/e666.png",
+      "attributes": {
+        "Gabumon – Bond of Friendship": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Steel",
+          "families": [
+            "Virus Busters",
+            "Metal Empire"
+          ]
+        }
+      }
+    },
+    "670": {
+      "date": "05-14-2024",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=670",
+      "digimon": [
+        "ANGORAMON",
+        "Jellymon"
+      ],
+      "image": "img/digimon/e670.png",
+      "attributes": {
+        "ANGORAMON": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Wind",
+          "families": [
+            "TBD"
+          ]
+        },
+        "Jellymon": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Wind",
+          "families": [
+            "TBD"
+          ]
+        }
+      }
+    },
+    "675": {
+      "date": "06-25-2024",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=675",
+      "digimon": [
+        "Xros Up Mervamon"
+      ],
+      "image": "img/digimon/e675.png",
+      "attributes": {
+        "Xros Up Mervamon": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Dark",
+          "families": [
+            "Nightmare Soldiers"
+          ]
+        }
+      }
+    },
+    "691": {
+      "date": "11-05-2024",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=691",
+      "digimon": [
+        "Imperialdramon Fightermode(Awaken)"
+      ],
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=793209&Btype=Update",
+      "attributes": {
+        "Imperialdramon Fightermode(Awaken)": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Light",
+          "families": [
+            "Metal Empire",
+            "Dragon's Roar",
+            "Wind Guardians"
+          ]
+        }
+      }
+    },
+    "697": {
+      "date": "12-24-2024",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=697",
+      "digimon": [
+        "(Awaken)Ordinemon"
+      ],
+      "image": "img/digimon/e697.png",
+      "attributes": {
+        "(Awaken)Ordinemon": {
+          "attribute": "Unknown",
+          "attribute_abbr": "UN",
+          "natural_attribute": "Dark",
+          "families": [
+            "TBD",
+            "Unknown"
+          ],
+          "rebalance_sources": [
+            {
+              "kind": "event",
+              "idx": "782",
+              "url": "https://dmo.gameking.com/news/EventView.aspx?idx=782",
+              "families": [
+                "TBD",
+                "Unknown"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "702": {
+      "date": "01-21-2025",
+      "source": "https://dmo.gameking.com/news/EventView.aspx?idx=702",
+      "digimon": [
+        "WarGreymon",
+        "MetalGarurumon"
+      ],
+      "image": "img/digimon/e702.png",
+      "attributes": {
+        "WarGreymon": {
+          "attribute": "Vaccine",
+          "attribute_abbr": "VA",
+          "natural_attribute": "Fire",
+          "families": [
+            "Virus Busters",
+            "Nature Spirits",
+            "Dragon's Roar"
+          ]
+        },
+        "MetalGarurumon": {
+          "attribute": "Data",
+          "attribute_abbr": "DA",
+          "natural_attribute": "Ice",
+          "families": [
+            "Virus Busters",
+            "Metal Empire",
+            "Wind Guardians"
+          ]
+        }
+      }
     }
   },
   "patch": {

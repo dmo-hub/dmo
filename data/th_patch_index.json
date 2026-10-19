@@ -1,12 +1,39 @@
 {
-  "fetched_at": "2026-08-15",
-  "total": 189,
+  "fetched_at": "2026-10-19",
+  "total": 205,
   "by_type": {
-    "patch": 86,
+    "patch": 94,
     "other": 21,
-    "coming-soon": 82
+    "coming-soon": 90
   },
   "posts": [
+    {
+      "id": "25565",
+      "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/",
+      "title": "รายละเอียดการอัพเดทประจำวันที่ 15 ตุลาคม 2569",
+      "date": "2026-10-15",
+      "type": "patch",
+      "classes": "seil-blog-post sticky post-25565 post type-post status-publish format-video hentry category-patch-note post_format-post-format-video"
+    },
+    {
+      "id": "25445",
+      "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/",
+      "title": "รายละเอียดการอัพเดทประจำวันที่ 17 กันยายน 2569",
+      "date": "2026-09-17",
+      "type": "patch",
+      "classes": "seil-blog-post  post-25445 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "25300",
+      "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-93",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-93/",
+      "title": "รายละเอียดการอัพเดทประจำวันที่ 27 สิงหาคม 2569",
+      "date": "2026-08-27",
+      "type": "patch",
+      "classes": "seil-blog-post  post-25300 post type-post status-publish format-standard hentry category-patch-note"
+    },
     {
       "id": "25150",
       "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-92",
@@ -14,7 +41,7 @@
       "title": "รายละเอียดการอัพเดทประจำวันที่ 13 สิงหาคม 2569",
       "date": "2026-08-13",
       "type": "patch",
-      "classes": "seil-blog-post sticky post-25150 post type-post status-publish format-video hentry category-patch-note post_format-post-format-video"
+      "classes": "seil-blog-post  post-25150 post type-post status-publish format-standard hentry category-patch-note"
     },
     {
       "id": "25011",
@@ -51,6 +78,51 @@
       "date": "2026-06-11",
       "type": "patch",
       "classes": "seil-blog-post  post-24716 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "24536",
+      "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-87",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-87/",
+      "title": "รายละเอียดการอัพเดทประจำวันที่ 21 พฤษภาคม 2569",
+      "date": "2026-05-21",
+      "type": "patch",
+      "classes": "seil-blog-post  post-24536 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "24355",
+      "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86/",
+      "title": "รายละเอียดการอัพเดทประจำวันที่ 23 เมษายน 2569",
+      "date": "2026-04-23",
+      "type": "patch",
+      "classes": "seil-blog-post  post-24355 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "24048",
+      "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-85",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-85/",
+      "title": "รายละเอียดการอัพเดทประจำวันที่ 26 มีนาคม 2569",
+      "date": "2026-03-26",
+      "type": "patch",
+      "classes": "seil-blog-post  post-24048 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "23884",
+      "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-84",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-84/",
+      "title": "รายละเอียดการอัพเดทประจำวันที่ 26 กุมภาพันธ์ 2569",
+      "date": "2026-02-26",
+      "type": "patch",
+      "classes": "seil-blog-post  post-23884 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "23755",
+      "slug": "%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-83",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-83/",
+      "title": "รายละเอียดการอัพเดทประจำวันที่ 23 มกราคม 2569",
+      "date": "2026-01-23",
+      "type": "patch",
+      "classes": "seil-blog-post  post-23755 post type-post status-publish format-standard hentry category-patch-note"
     },
     {
       "id": "23595",
@@ -791,6 +863,33 @@
       "classes": "seil-blog-post  post-1717 post type-post status-publish format-standard hentry category-patch-note"
     },
     {
+      "id": "25586",
+      "slug": "coming-soon-patch-october-2026a",
+      "url": "https://www.vplay.in.th/coming-soon-patch-october-2026a/",
+      "title": "Coming Soon – Patch October 2026A",
+      "date": null,
+      "type": "coming-soon",
+      "classes": "seil-blog-post  post-25586 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "25450",
+      "slug": "coming-soon-patch-september-2026",
+      "url": "https://www.vplay.in.th/coming-soon-patch-september-2026/",
+      "title": "Coming Soon – Patch September 2026",
+      "date": null,
+      "type": "coming-soon",
+      "classes": "seil-blog-post  post-25450 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "25306",
+      "slug": "coming-soon-patch-august-2026b",
+      "url": "https://www.vplay.in.th/coming-soon-patch-august-2026b/",
+      "title": "Coming Soon – Patch August 2026B",
+      "date": null,
+      "type": "coming-soon",
+      "classes": "seil-blog-post  post-25306 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
       "id": "25142",
       "slug": "coming-soon-patch-august-2026a",
       "url": "https://www.vplay.in.th/coming-soon-patch-august-2026a/",
@@ -834,6 +933,51 @@
       "date": null,
       "type": "coming-soon",
       "classes": "seil-blog-post  post-24724 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "24558",
+      "slug": "coming-soon-patch-may-2026",
+      "url": "https://www.vplay.in.th/coming-soon-patch-may-2026/",
+      "title": "Coming Soon – Patch May 2026",
+      "date": null,
+      "type": "coming-soon",
+      "classes": "seil-blog-post  post-24558 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "24366",
+      "slug": "coming-soon-patch-april-2026",
+      "url": "https://www.vplay.in.th/coming-soon-patch-april-2026/",
+      "title": "Coming Soon – Patch April 2026",
+      "date": null,
+      "type": "coming-soon",
+      "classes": "seil-blog-post  post-24366 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "24109",
+      "slug": "coming-soon-patch-march-2026",
+      "url": "https://www.vplay.in.th/coming-soon-patch-march-2026/",
+      "title": "Coming Soon – Patch March 2026",
+      "date": null,
+      "type": "coming-soon",
+      "classes": "seil-blog-post  post-24109 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "23903",
+      "slug": "coming-soon-patch-february-2026",
+      "url": "https://www.vplay.in.th/coming-soon-patch-february-2026/",
+      "title": "Coming Soon – Patch February 2026",
+      "date": null,
+      "type": "coming-soon",
+      "classes": "seil-blog-post  post-23903 post type-post status-publish format-standard hentry category-patch-note"
+    },
+    {
+      "id": "23768",
+      "slug": "coming-soon-patch-january-2026",
+      "url": "https://www.vplay.in.th/coming-soon-patch-january-2026/",
+      "title": "Coming Soon – Patch January 2026",
+      "date": null,
+      "type": "coming-soon",
+      "classes": "seil-blog-post  post-23768 post type-post status-publish format-standard hentry category-patch-note"
     },
     {
       "id": "23612",
