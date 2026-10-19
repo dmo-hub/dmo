@@ -23,6 +23,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 PROJ = Path(__file__).resolve().parent.parent
 SRC = PROJ / "data" / "scan_result_digimon.json"
 KR_INDEX = PROJ / "data" / "kr_news_index.json"
+KR_ONLY = PROJ / "data" / "kr_only_digimon.json"
 OUT = PROJ / "docs" / "digimon.html"
 
 
@@ -233,9 +234,19 @@ def render() -> str:
     # Build merged list, sorted by gameking date DESCENDING (newest first
     # — activity-feed convention). Tie-break by idx desc so same-day posts
     # are also stable.
+    # Digimon only KR has released so far (enrichers/find_kr_only_digimon.py)
+    # sit in the same feed, dated by the KR post.
+    kr_only: dict[str, dict] = {}
+    if KR_ONLY.exists():
+        for o, e in json.loads(KR_ONLY.read_text(encoding="utf-8")).items():
+            y, m, d = e["date"].split("-")
+            kr_only[o] = {"date": f"{m}-{d}-{y}", "date_kr": e["date"], "source": e["url"],
+                          "digimon": e["digimon"], "image_kr": e.get("image_kr")}
+
     merged: list[tuple[str, str, dict]] = sorted(
         [("event", idx, p) for idx, p in events.items()]
-        + [("patch", idx, p) for idx, p in patches.items()],
+        + [("patch", idx, p) for idx, p in patches.items()]
+        + [("kr", o, p) for o, p in kr_only.items()],
         key=lambda t: (date_key(t[2].get("date")), int(t[1])),
         reverse=True,
     )
@@ -277,7 +288,7 @@ def render() -> str:
 
     # --- One entry card ------------------------------------------------
     def render_entry(idx: str, p: dict, kind: str) -> str:
-        prefix = "e" if kind == "event" else "p"
+        prefix = {"event": "e", "patch": "p", "kr": "k"}[kind]
         names = p["digimon"]
         n = len(names)
         attrs_map = p.get("attributes", {})
@@ -287,6 +298,9 @@ def render() -> str:
             f"<li>{render_digimon(name, attrs_map.get(name), show_name=(n > 1))}</li>"
             for name in names
         )
+        if kind == "kr" and not attrs_map:
+            # an empty box reads as missing data; say why there is none yet
+            items = "<li>ยังไม่ออกในเซิร์ฟเวอร์ NA — ข้อมูลมาจากโพสต์ KR</li>"
         img_path = p.get("image_th") or p.get("image") or p.get("image_kr")
         img_block = (
             f'<a href="{img_path}" target="_blank">'
