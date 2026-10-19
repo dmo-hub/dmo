@@ -41,7 +41,7 @@ BUTTON_RE = re.compile(r'<a\b[^>]*wp-block-button__link[^>]*href="([^"]+)"')
 HEADING_RE = re.compile(
     r"^(?:\d+\s*\.\s*)?(?:อัพเดทและ)?(?:เพิ่ม)?ดันเจี้ยนใหม่\s*(?:[:：–-]\s*|\s+)(.+)$")
 TIER_HEADING_RE = re.compile(r"^(?:\d+\s*\.\s*)?(?:เพิ่ม)?ดันเจี้ยน(?!ใหม่)(.*ระดับ.*)$")
-COLOR_RE =re.compile(r"\bhas-([a-z-]+)-color\b")
+COLOR_RE = re.compile(r"\bhas-([a-z-]+)-color\b")
 NOT_COLORS = {"text", "link", "background"}
 LEVEL_RE = re.compile(r"เลเวล\s*(?:มากกว่า\s*)?(\d{2,3})|Lv\.?\s*(\d{2,3})")
 PARTY_RE = re.compile(r"(\d+)\s*คน")
@@ -117,7 +117,9 @@ def is_heading(b):
     if b.get("strong") and b.get("color") not in (None, "black", "vivid-red"):
         m = TIER_HEADING_RE.match(text)
         if m:
-            return re.sub(r"^ระดับง่าย\s*-\s*(.+)$", r"\1 (ระดับง่าย)", m.group(1).strip())
+            name = re.sub(r"^ระดับง่าย\s*-\s*(.+)$", r"\1 (ระดับง่าย)", m.group(1).strip())
+            # one spelling of the tier, whether the post bracketed it or not
+            return re.sub(r"\s*\[(ระดับ[^\]]+)\]\s*$", r" (\1)", name)
     return None
 
 
