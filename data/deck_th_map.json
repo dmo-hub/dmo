@@ -1,5 +1,5 @@
 {
-  "note": "NA deck in docs/decks.html -> the same deck on TH (data/th_patch_decks.json). Paired by identical buff numbers with TH released after NA, then checked by the translated name. Two pairs differ only by a typo in the TH post (a missing %): Savior Who Protects Peace, Abnormal Status Occurred: Virus.",
+  "note": "NA deck in docs/decks.html -> the same deck on TH (data/th_patch_decks.json). Paired by identical buff numbers with TH released after NA, then checked by the translated name. Two pairs differ only by a typo in the TH post (a missing %): Savior Who Protects Peace, Abnormal Status Occurred: Virus, Fight against the Virus!.",
   "pairs": [
     {"na_post": "e635", "na_name": "Knights of Vaccine", "th_date": "2024-01-25", "th_name": "นักรบแห่งวัคซีน"},
     {"na_post": "e663", "na_name": "White Wings: Gurei Tou of Courage", "th_date": "2024-04-25", "th_name": "ปีกสีขาว : กุเร ทูแห่งความกล้าหาญ"},
@@ -20,6 +20,7 @@
     {"na_post": "e784", "na_name": "Guardians of the Digital World", "th_date": "2026-07-09", "th_name": "ผู้ปกป้องโลกดิจิตอล"},
     {"na_post": "e784", "na_name": "Saviors Who Protect Peace", "th_date": "2026-07-09", "th_name": "ผู้กอบกู้ผู้พิทักษ์สันติภาพ"},
     {"na_post": "e798", "na_name": "Demon of the Final Phase", "th_date": "2026-09-17", "th_name": "ปีศาจแห่งการอวสาร"},
-    {"na_post": "e798", "na_name": "Abnormal Status Occurred: Virus", "th_date": "2026-09-17", "th_name": "เกิดสถานะการผิดปกติ : ไวรัส"}
+    {"na_post": "e798", "na_name": "Abnormal Status Occurred: Virus", "th_date": "2026-09-17", "th_name": "เกิดสถานะการผิดปกติ : ไวรัส"},
+    {"na_post": "e798", "na_name": "Fight against the Virus!", "th_date": "2026-09-17", "th_name": "ต่อสู้กับไวรัส"}
   ]
 }

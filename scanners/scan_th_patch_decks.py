@@ -42,8 +42,13 @@ def deck_section_end(bl, start):
     """Next heading in the deck heading's own colour. Sub-headings naming each
     deck under one "เพิ่มเด็คใหม่" are coloured differently, so they stay in."""
     color = bl[start].get("color")
+    heading = bl[start]["text"]
     for j in range(start + 1, len(bl)):
         b = bl[j]
+        # Post 94 colours its last sub-heading like the heading itself; a
+        # name the heading already lists is still one of its decks.
+        if b["kind"] == "text" and b["text"].strip() and b["text"].strip() in heading:
+            continue
         if b["kind"] == "text" and b.get("strong") and len(b["text"]) < 120:
             if (color not in (None, "black") and b.get("color") == color) or deck_heading(b) is not None:
                 return j
