@@ -16,7 +16,9 @@ Needs Chrome on --remote-debugging-port=9222 with a dmowiki.com tab open.
 import argparse
 import base64
 import json
+import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -27,7 +29,7 @@ sys.path.insert(0, str(PROJ / "builders"))
 sys.path.insert(0, str(PROJ / "fetchers"))
 
 from build_gear_registry import ICON_DIR, OUT as REGISTRY, icon_filename  # noqa: E402
-from fetch_dmowiki_pages import ORIGIN, ChallengeError, open_dmowiki_tab  # noqa: E402
+from fetch_dmowiki_pages import CDP_URL, ORIGIN, ChallengeError  # noqa: E402
 
 # Bytes cross the CDP boundary as base64; the content type is returned too so a
 # challenge page served with 200 is caught instead of saved as a .png.
@@ -38,6 +40,44 @@ JS_FETCH_BYTES = """async (url) => {
   for (let i = 0; i < buf.length; i += 0x8000) s += String.fromCharCode(...buf.subarray(i, i + 0x8000));
   return {status: r.status, type: r.headers.get("content-type") || "", b64: btoa(s)};
 }"""
+
+
+class RawTab:
+    """The dmowiki tab driven through fetchers/cdp_eval.js. Playwright's
+    connect_over_cdp attaches to every target in the browser and hangs on one
+    that never answers; this touches only the dmowiki tab."""
+
+    def __init__(self) -> None:
+        self.port = CDP_URL.rsplit(":", 1)[-1]
+        self._fn = {}
+        # Give a person who is still clicking the challenge a minute.
+        for n in range(30):
+            info = self._run("-")
+            if "Just a moment" not in info["title"]:
+                self.url = info["url"]
+                return
+            if n == 0:
+                print("Waiting for the challenge to be passed in Chrome ...")
+            time.sleep(2)
+        sys.exit("ERROR: challenge not yet passed -- finish it in Chrome then re-run.")
+
+    def _run(self, fn_file: str, arg=None) -> dict:
+        cmd = ["node", str(PROJ / "fetchers" / "cdp_eval.js"), self.port, fn_file]
+        if arg is not None:
+            cmd.append(json.dumps(arg))
+        r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", timeout=60)
+        if r.returncode:
+            sys.exit(f"ERROR: {r.stderr.strip()} -- open https://dmowiki.com in the Chrome "
+                     f"on {CDP_URL} and pass its challenge.")
+        return json.loads(r.stdout)
+
+    def evaluate(self, js: str, arg):
+        if js not in self._fn:
+            f = tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8")
+            f.write(js)
+            f.close()
+            self._fn[js] = f.name
+        return self._run(self._fn[js], arg)["value"]
 
 
 def wanted() -> dict[str, str]:
@@ -72,22 +112,19 @@ def main() -> None:
         return
 
     ICON_DIR.mkdir(parents=True, exist_ok=True)
-    from playwright.sync_api import sync_playwright
-
     ok, failed = 0, []
-    with sync_playwright() as p:
-        page = open_dmowiki_tab(p)
-        print(f"Using tab: {page.url}")
-        try:
-            for n, (f, path) in enumerate(todo.items()):
-                if fetch_one(page, path, ICON_DIR / f):
-                    ok += 1
-                else:
-                    failed.append(path)
-                if n + 1 < len(todo):
-                    time.sleep(args.delay)
-        except ChallengeError as e:
-            sys.exit(f"\nSTOPPED after {ok}: {e}\nSolve the CAPTCHA in Chrome and re-run; saved files are kept.")
+    page = RawTab()
+    print(f"Using tab: {page.url}")
+    try:
+        for n, (f, path) in enumerate(todo.items()):
+            if fetch_one(page, path, ICON_DIR / f):
+                ok += 1
+            else:
+                failed.append(path)
+            if n + 1 < len(todo):
+                time.sleep(args.delay)
+    except ChallengeError as e:
+        sys.exit(f"\nSTOPPED after {ok}: {e}\nPass the challenge in Chrome and re-run; saved files are kept.")
 
     print(f"\n--- fetched {ok}, failed {len(failed)} ---")
     for path in failed:
