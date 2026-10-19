@@ -129,7 +129,7 @@ def section_end(bl, start):
             continue
         nxt = is_heading(b)
         # Some posts repeat the heading as a banner line right under it.
-        if nxt and re.sub(r"\W+", "", nxt) != re.sub(r"\W+", "", is_heading(head)):
+        if nxt and re.sub(r"\W+", "", nxt) != re.sub(r"\W+", "", is_heading(head) or ""):
             return j
         if nxt:
             continue

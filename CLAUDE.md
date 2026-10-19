@@ -102,6 +102,14 @@ python fetchers/fetch_dmowiki_pages.py --mode api --list titles.txt
 #      challenge as the pages, so the download goes through the same tab.
 python fetchers/fetch_dmowiki_images.py      # then re-run build_gear_registry.py
 
+# 11d. TH wording on decks.html. scan_th_patch_decks reads every "เพิ่มเด็คใหม่"
+#      out of the cached TH posts; data/deck_th_map.json is the hand-checked
+#      NA deck -> TH deck pairing; apply_th_decks swaps those decks to the TH
+#      text (keeps NA names for the filter). Add a pair to the map when TH
+#      ships a deck the page already has, then re-run.
+python scanners/scan_th_patch_decks.py         # -> data/th_patch_decks.json
+python tools/apply_th_decks.py                 # -> docs/decks.html (idempotent)
+
 # 12. Parse cache/dmowiki_*.html and seed `attributes` dict on each digimon.
 python enrichers/enrich_digimon_attributes.py            # missing only
 python enrichers/enrich_digimon_attributes.py --force    # re-parse every digimon

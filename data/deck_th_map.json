@@ -1,0 +1,25 @@
+{
+  "note": "NA deck in docs/decks.html -> the same deck on TH (data/th_patch_decks.json). Paired by identical buff numbers with TH released after NA, then checked by the translated name. Two pairs differ only by a typo in the TH post (a missing %): Savior Who Protects Peace, Abnormal Status Occurred: Virus.",
+  "pairs": [
+    {"na_post": "e635", "na_name": "Knights of Vaccine", "th_date": "2024-01-25", "th_name": "นักรบแห่งวัคซีน"},
+    {"na_post": "e663", "na_name": "White Wings: Gurei Tou of Courage", "th_date": "2024-04-25", "th_name": "ปีกสีขาว : กุเร ทูแห่งความกล้าหาญ"},
+    {"na_post": "e663", "na_name": "White Wings: Garuru Hou of Friendship", "th_date": "2024-04-25", "th_name": "ปีกสีขาว : การูรู โฮแห่งมิตรภาพ"},
+    {"na_post": "e668", "na_name": "I'm the future Digimon King!", "th_date": "2024-07-25", "th_name": "ข้า! ราชาของดิจิมอน! แห่งอนาคต!"},
+    {"na_post": "e673", "na_name": "God's Will", "th_date": "2024-09-26", "th_name": "ก็อด วิล"},
+    {"na_post": "e692", "na_name": "The Goddess of the False Neverland", "th_date": "2025-09-25", "th_name": "ก็อดเดส ออฟ ฟอลซ์ เนเวอร์แลนด์"},
+    {"na_post": "e708", "na_name": "The End, The Ultimate Holy War!", "th_date": "2026-03-26", "th_name": "บทอวสาน, มหาสงครามศักดิ์สิทธิ์!"},
+    {"na_post": "e731", "na_name": "White Wings: Sorrow and Determination", "th_date": "2026-05-21", "th_name": "ปีกสีขาว: ความโศกเศร้าและความมุ่งมั่น"},
+    {"na_post": "e734", "na_name": "Justice Veiled in Darkness", "th_date": "2026-04-23", "th_name": "ความยุติธรรมที่ถูกปกคลุมด้วยความมืด"},
+    {"na_post": "e734", "na_name": "Savior Who Protects Peace", "th_date": "2026-04-23", "th_name": "ผู้กอบกู้ผู้พิทักษ์สันติภาพ"},
+    {"na_post": "e734", "na_name": "Corrupted Purification Ritual", "th_date": "2026-04-23", "th_name": "พิธีชำระล้างที่ผิดพลาด"},
+    {"na_post": "e743", "na_name": "Reunion", "th_date": "2026-05-21", "th_name": "การพบกันอีกครั้ง"},
+    {"na_post": "e759", "na_name": "Invasion of the Real World!", "th_date": "2026-06-11", "th_name": "การรุกรานโลกแห่งความเป็นจริง"},
+    {"na_post": "e770", "na_name": "Last Evolution: Kizuna", "th_date": "2026-08-27", "th_name": "ลาสต์ อีโวลูชัน : คิซึนะ"},
+    {"na_post": "e782", "na_name": "Our hope, our light", "th_date": "2026-07-23", "th_name": "ความหวังของพวกเรา, แสงสว่างของพวกเรา"},
+    {"na_post": "e784", "na_name": "Transcending Time, The Beginning of a Legend!", "th_date": "2026-07-09", "th_name": "ก้าวข้ามกาลเวลา จุดเริ่มต้นของตำนาน!"},
+    {"na_post": "e784", "na_name": "Guardians of the Digital World", "th_date": "2026-07-09", "th_name": "ผู้ปกป้องโลกดิจิตอล"},
+    {"na_post": "e784", "na_name": "Saviors Who Protect Peace", "th_date": "2026-07-09", "th_name": "ผู้กอบกู้ผู้พิทักษ์สันติภาพ"},
+    {"na_post": "e798", "na_name": "Demon of the Final Phase", "th_date": "2026-09-17", "th_name": "ปีศาจแห่งการอวสาร"},
+    {"na_post": "e798", "na_name": "Abnormal Status Occurred: Virus", "th_date": "2026-09-17", "th_name": "เกิดสถานะการผิดปกติ : ไวรัส"}
+  ]
+}
