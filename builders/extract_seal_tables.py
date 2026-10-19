@@ -787,10 +787,18 @@ def main():
         for p in discovered:
             print(f"    {p['key']}")
     posts = curated + discovered
+    # cache/ is gitignored, so a site outage on a fresh checkout returns no html for
+    # every post of that server; an empty entry here makes build_seal_tables delete
+    # the published card. Keep the last good tables instead.
+    prev = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
+    stale = []
     result = {}
     print(f"Extracting seal tables from {len(posts)} posts...\n")
     for p in posts:
         data = extract(p)
+        if data.get("error") == "no html" and prev.get(p["key"], {}).get("tables"):
+            data = prev[p["key"]]
+            stale.append(p["key"])
         result[p["key"]] = data
         tbls = data.get("tables", [])
         flag = "" if tbls else "  <-- NO TABLE"
@@ -835,6 +843,9 @@ def main():
     if dropped:
         print(f"\nDropped {len(dropped)} discovered candidate(s) with no seal table:")
         print("    " + ", ".join(dropped))
+    if stale:
+        print(f"\n!! could not fetch {len(stale)} post(s); kept their previous tables: "
+              + ", ".join(stale))
     kept_new = [k for k in result if k not in curated_keys]
     if kept_new:
         print(f"\n!! NEW seal post(s) discovered — add a card to docs/seals.html: {kept_new}")
