@@ -452,6 +452,12 @@ a.filter-pill:hover { text-decoration: none; color: var(--ink); }
   border-radius: var(--radius); border: 1px solid var(--hairline);
   object-fit: contain; background: var(--surface-soft);
 }
+/* one picture per digimon of a post: side by side when the card is wide */
+.card-gallery {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0 12px; align-items: start;
+}
+.card-gallery .card-image { margin: 4px 0 14px; width: 100%; }
 
 /* Source links */
 .sources { display: flex; flex-wrap: wrap; gap: 4px 14px;

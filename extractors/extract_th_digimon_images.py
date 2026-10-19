@@ -93,6 +93,44 @@ def delete_existing(prefix: str, idx: str, suffix: str = "") -> None:
         print(f"  deleted {f.name}")
 
 
+def fetch_extra(post: dict, stem: str, force: bool) -> int:
+    """Pictures of the post's other digimon -> images_th_extra {name: {url, path}}.
+    A name whose source URL is unchanged and whose file is on disk is kept."""
+    wanted = post.get("_th_extra_image_urls") or {}
+    have = post.get("images_th_extra") or {}
+    out_map, got = {}, 0
+    for name, url in wanted.items():
+        old = have.get(name)
+        if old and old["url"] == url and (IMG_DIR.parent.parent / old["path"]).exists() and not force:
+            out_map[name] = old
+            continue
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=30)
+            r.raise_for_status()
+        except Exception as e:
+            print(f"  ERROR {stem} {name}: fetch {url[:60]} failed: {e}")
+            if old:
+                out_map[name] = old
+            continue
+        body, ext = shrink(r.content, ext_from(url, r.headers.get("content-type", "")))
+        slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+        for f in IMG_DIR.glob(f"{stem}_th_{slug}.*"):
+            f.unlink()
+        out = IMG_DIR / f"{stem}_th_{slug}.{ext}"
+        out.write_bytes(body)
+        out_map[name] = {"url": url, "path": f"img/digimon/{out.name}"}
+        got += 1
+        print(f"{stem} {name}: {out.name} ({len(body) // 1024} KB)")
+    for name, old in have.items():
+        if name not in out_map and old["path"] not in {v["path"] for v in out_map.values()}:
+            (IMG_DIR.parent.parent / old["path"]).unlink(missing_ok=True)
+    if out_map:
+        post["images_th_extra"] = out_map
+    else:
+        post.pop("images_th_extra", None)
+    return got
+
+
 def main() -> None:
     force = "--force" in sys.argv
     IMG_DIR.mkdir(parents=True, exist_ok=True)
@@ -129,6 +167,11 @@ def main() -> None:
             post["image_th"] = f"img/digimon/{out.name}"
             extracted += 1
             print(f"{kind}_{idx}: {out.name} ({len(body) // 1024} KB)")
+
+    for kind in ("event", "patch"):
+        prefix = "e" if kind == "event" else "p"
+        for idx, post in data.get(kind, {}).items():
+            extracted += fetch_extra(post, f"{prefix}{idx}", force)
 
     shrunk = shrink_existing(data)
     save_scan(data)

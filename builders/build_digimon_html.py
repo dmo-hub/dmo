@@ -8,6 +8,7 @@ timeline rail. Visual language is shared across all docs/ pages via
 the external stylesheet at css/site.css.
 """
 
+import html
 import json
 import re
 import sys
@@ -287,6 +288,16 @@ def render() -> str:
             if img_path
             else ""
         )
+        # Only the Thai banner sits beside these; a KR/NA banner may already
+        # show every digimon in the post.
+        extra = (p.get("images_th_extra") or {}) if p.get("image_th") else {}
+        if extra:
+            img_block = '<div class="card-gallery">' + img_block + "".join(
+                f'<a href="{e["path"]}" target="_blank">'
+                f'<img class="card-image" src="{e["path"]}" alt="{html.escape(name)}" loading="lazy">'
+                f"</a>"
+                for name, e in extra.items()
+            ) + "</div>"
 
         all_attrs = sorted({a.get("attribute") for a in attrs_map.values() if a.get("attribute")})
         all_elems = sorted(

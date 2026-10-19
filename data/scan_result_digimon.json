@@ -623,7 +623,16 @@
       "date_th": "2023-07-26",
       "_th_name": "เมอร์วามอน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2023/07/m4.jpg",
-      "image_th": "img/digimon/e614_th.jpeg"
+      "image_th": "img/digimon/e614_th.jpeg",
+      "_th_extra_image_urls": {
+        "JetMervamon": "https://www.vplay.in.th/wp-content/uploads/2023/07/j20.jpg"
+      },
+      "images_th_extra": {
+        "JetMervamon": {
+          "url": "https://www.vplay.in.th/wp-content/uploads/2023/07/j20.jpg",
+          "path": "img/digimon/e614_th_jetmervamon.jpeg"
+        }
+      }
     },
     "620": {
       "date": "04-18-2023",
@@ -808,7 +817,16 @@
       "date_th": "2025-04-24",
       "_th_name": "อังโกรามอน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/04/ANGORAMON.jpg",
-      "image_th": "img/digimon/e670_th.jpeg"
+      "image_th": "img/digimon/e670_th.jpeg",
+      "_th_extra_image_urls": {
+        "Jellymon": "https://www.vplay.in.th/wp-content/uploads/2025/04/JellyMon.png"
+      },
+      "images_th_extra": {
+        "Jellymon": {
+          "url": "https://www.vplay.in.th/wp-content/uploads/2025/04/JellyMon.png",
+          "path": "img/digimon/e670_th_jellymon.jpeg"
+        }
+      }
     },
     "675": {
       "date": "06-25-2024",

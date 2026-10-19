@@ -149,13 +149,31 @@ def main() -> None:
                 else:
                     post.pop("_th_image_url", None)
                     post.pop("image_th", None)
+                # The post's other digimon have pictures of their own too
+                # (Mervamon + JetMervamon); the card shows them beside the first.
+                extra = {}
+                for other in post["digimon"]:
+                    row = lookup_keyword(other, EN_TO_TH_KEYWORDS) if other != via[0] else None
+                    if not row:
+                        continue
+                    th_n = next((n for n in th_post.get("th_names") or []
+                                 if name_matches(row[1], n, row[2])), None)
+                    url = (th_post.get("images") or {}).get(th_n)
+                    if url and url != own:
+                        extra[other] = url
+                if extra:
+                    post["_th_extra_image_urls"] = extra
+                else:
+                    post.pop("_th_extra_image_urls", None)
+                    post.pop("images_th_extra", None)
                 matched += 1
                 tag = f" [{via[3]} candidates]" if via[3] > 1 else ""
                 print(
                     f"  {kind} {idx} ({post['date']}) → TH {th_post['date']}{tag}: {th_post['th_name']}"
                 )
             else:
-                for k in ("source_th", "date_th", "_th_name", "_th_image_url"):
+                for k in ("source_th", "date_th", "_th_name", "_th_image_url",
+                          "_th_extra_image_urls", "images_th_extra"):
                     post.pop(k, None)
                 no_match.append(f"{kind} {idx} ({post['date']}): {post['digimon']}")
 
