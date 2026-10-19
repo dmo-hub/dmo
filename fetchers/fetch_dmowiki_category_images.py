@@ -54,14 +54,24 @@ def canonical(tab: RawTab, titles: list[str]) -> dict[str, str]:
     return {t: red.get(norm.get(t, t), norm.get(t, t)) for t in titles}
 
 
+def clean(part: str) -> str:
+    # names come off a web page: keep a plain file name, never a path ("..", "/")
+    return re.sub(r"[^A-Za-z0-9._+()~-]+", "_", part).strip(".") or "_"
+
+
 def target(path: str, title: str | None) -> Path:
     name = unquote(path.rsplit("/", 1)[-1])
-    stem, ext = name.rsplit(".", 1)
+    stem, _, ext = name.rpartition(".")
+    ext = re.sub(r"[^A-Za-z0-9]", "", ext) or "png"
     if RANK_RE.match(stem):
-        return OUT / "rank" / name
-    if not title:
-        return OUT / "digimon" / name
-    return OUT / "digimon" / f"{safe_filename(title.replace(' ', '_'))}.{ext}"
+        out = OUT / "rank" / clean(name)
+    elif not title:
+        out = OUT / "digimon" / clean(name)
+    else:
+        out = OUT / "digimon" / f"{clean(safe_filename(title.replace(' ', '_')))}.{ext}"
+    if not out.resolve().is_relative_to(OUT.resolve()):
+        raise ValueError(f"refusing to write outside {OUT}: {out}")
+    return out
 
 
 def main() -> None:
