@@ -62,8 +62,11 @@ def main() -> None:
 
     # Build a unified activity list (newest first)
     activity: list[dict] = []
+    excluded = json.loads((PROJ / "data" / "deck_excluded.json").read_text(encoding="utf-8"))
     for m in decks["matches"]:
         if not m.get("new_decks"):
+            continue
+        if ("e" if m["kind"] == "event" else "p") + str(m["idx"]) in excluded:
             continue
         activity.append(
             {

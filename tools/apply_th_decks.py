@@ -74,8 +74,11 @@ def main():
     page = PAGE.read_text(encoding="utf-8")
     pairs = json.loads(MAP.read_text(encoding="utf-8"))["pairs"]
     th_decks = {(d["date"], d["name"]): d for d in json.loads(TH.read_text(encoding="utf-8"))["decks"]}
+    excluded = json.loads((PROJ / "data" / "deck_excluded.json").read_text(encoding="utf-8"))
     done = skipped = 0
     for p in pairs:
+        if p["na_post"] in excluded:  # left off the page on purpose
+            continue
         th = th_decks.get((p["th_date"], p["th_name"]))
         if not th:
             sys.exit("TH deck not found: %s %s" % (p["th_date"], p["th_name"]))

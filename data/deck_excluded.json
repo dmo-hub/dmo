@@ -1,0 +1,5 @@
+{
+  "_README": "Deck posts left off docs/decks.html on purpose: none of their digimon is Rank U. Keyed by the section id (e = EventView, p = PatchNote). builders/diff_report.py stops listing them as missed, build_index_html.py drops them from the home feed, and tools/apply_th_decks.py skips their TH pairs.",
+  "e622": "D5 and Ultimate DigiXros -- Shoutmon X5 and four other DigiXros digimon, none Rank U",
+  "e635": "Knights of Vaccine / \u0e19\u0e31\u0e01\u0e23\u0e1a\u0e41\u0e2b\u0e48\u0e07\u0e27\u0e31\u0e04\u0e0b\u0e35\u0e19 -- Omegamon and other digimon, none Rank U"
+}

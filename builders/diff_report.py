@@ -65,8 +65,12 @@ def main():
     print()
 
     # Build idx sets per kind
+    # posts left off the page on purpose are not "missed"
+    excluded = json.loads((PROJ / "data" / "deck_excluded.json").read_text(encoding="utf-8"))
     scan_by_kind = {"event": {}, "patch": {}}
     for r in scan["matches"]:
+        if ("e" if r["kind"] == "event" else "p") + str(r["idx"]) in excluded:
+            continue
         if r.get("new_decks"):
             scan_by_kind[r["kind"]][r["idx"]] = r
 
