@@ -1,5 +1,5 @@
 {
-  "note": "NA deck in docs/decks.html -> the same deck on TH (data/th_patch_decks.json). Paired by identical buff numbers with TH released after NA, then checked by the translated name. Two pairs differ only by a typo in the TH post (a missing %): Savior Who Protects Peace, Abnormal Status Occurred: Virus, Fight against the Virus!.",
+  "note": "NA deck in docs/decks.html -> the same deck on TH (data/th_patch_decks.json). Paired by the same buff numbers with TH released after NA, then checked by the translated name. Exceptions: Abnormal Status Occurred: Virus and Fight against the Virus! were paired by hand because the TH post writes 170 without its %; White Wings: Sorrow and Determination matches although TH drops the 10s duration NA gives (apply_th_decks carries it over).",
   "pairs": [
     {"na_post": "e635", "na_name": "Knights of Vaccine", "th_date": "2024-01-25", "th_name": "นักรบแห่งวัคซีน"},
     {"na_post": "e663", "na_name": "White Wings: Gurei Tou of Courage", "th_date": "2024-04-25", "th_name": "ปีกสีขาว : กุเร ทูแห่งความกล้าหาญ"},

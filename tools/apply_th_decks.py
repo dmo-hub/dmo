@@ -43,11 +43,22 @@ def th_block(deck_html, th, na_name):
     eff = re.search(r'<table class="gk-table effect-table">.*?</table>', deck_html, re.S).group(0)
     na_digimon = [html.unescape(r[0]) for r in cells(digi) if r]
     na_effect = [html.unescape(r[0]) for r in cells(eff) if r]
+    effects = [list(e) for e in th["effects"]]
+    na_rows = [r for r in cells(eff) if len(r) >= 3]
+    # TH sometimes drops a timed buff's duration that NA states ("30%
+    # Increase for 10s" vs "+30%"). Same row, same number: carry it over,
+    # marked as NA's, rather than show a timed buff as permanent.
+    if len(na_rows) == len(effects):
+        for e, r in zip(effects, na_rows):
+            dur = re.search(r"for (\d+)\s*s\b", r[2])
+            num = re.search(r"(\d+(?:\.\d+)?)\s*%", r[2])
+            if dur and num and "วินาที" not in (e[1] or "") + e[2] and num.group(1) in e[2]:
+                e[2] = "%s นาน %s วินาที (ตาม NA)" % (e[2], dur.group(1))
     rows = "".join("<tr><td>%s</td></tr>" % esc(m) for m in th["digimon"])
     new_digi = ('<table class="gk-table digimon-table"><tr><th>%s<br><span class="deck-alt">NA: %s</span>'
                 '</th></tr>\n          %s</table>' % (esc(th["name"]), esc(na_name), rows))
     erows = "\n".join("          <tr><td>%s</td><td>%s</td><td>%s</td></tr>"
-                      % (esc(a), esc(b) if b else "—", esc(c)) for a, b, c in th["effects"])
+                      % (esc(a), esc(b) if b else "—", esc(c)) for a, b, c in effects)
     new_eff = ('<table class="gk-table effect-table">\n          <tr><th>สเตตัส</th><th>โอกาส</th>'
                '<th>ผล</th></tr>\n%s\n          </table>' % erows)
     out = deck_html.replace(digi, new_digi, 1).replace(eff, new_eff, 1)
