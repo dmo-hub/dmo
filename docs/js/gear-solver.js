@@ -106,51 +106,17 @@
     return PCT_STATS[stat] ? v / 100 : v;
   }
 
-  /* A state key packs the targeted stat totals plus the chip count. Every value
-     is already capped at its target, so all of them stay small integers. */
-  function key(vals, n, setKey) {
-    return vals.join("|") + "|" + n + "|" + (setKey || "");
+  /* A state key packs the targeted stat totals, the chip count and the piece
+     count of each set the current plan tracks. Every value is capped (stats at
+     their target, counts at the set's top threshold), so all stay small. */
+  function key(vals, n, counts) {
+    return vals.join("|") + "|" + n + "|" + counts.join(",");
   }
 
-  /* Set progress rides in the state key as one pair PER GROUP of sets that
-     compete for the same slots -- not one counter per set, and not a single
-     pair for everything.
-
-     Sets that share slots are mutually exclusive: the three tamer sets all
-     claim the same six clothing slots, so a loadout can only ever be building
-     one of them and a single pair covers all three (1 + 3x6 = 19 states rather
-     than 7x7x7 = 343).
-
-     But that only holds WITHIN a group. Last Evolution sits on its own two
-     accessory slots, so it can be worn alongside a clothing set -- and while
-     progress was a single pair, putting on its digivice wiped whatever
-     clothing set was in progress. Grouping is computed from the registry
-     (see groupSets) instead of assumed, so the next disjoint set added does
-     not silently repeat the bug. */
-  function setProgress(prev, item, index) {
-    var owner = index.owner[item && item.name];
-    if (!owner) return prev;                 // not a set piece: progress stands
-    var group = index.group[owner];
-    var parts = (prev || "").split(",").filter(Boolean);
-    var out = [];
-    var found = false;
-    for (var i = 0; i < parts.length; i++) {
-      var p = parts[i].split(":");
-      if (index.group[p[0]] !== group) {      // another group's run: untouched
-        out.push(parts[i]);
-        continue;
-      }
-      found = true;
-      if (p[0] === owner) out.push(owner + ":" + (Number(p[1]) + 1));
-      else out.push(owner + ":1");            // switched sets within a group
-    }
-    if (!found) out.push(owner + ":1");
-    out.sort();                               // keys must not depend on order
-    return out.join(",");
-  }
-
-  /* Partition the sets into groups that share at least one slot, so each group
-     needs only one progress counter. Union-find over the slot lists. */
+  /* Partition the sets into groups that share at least one slot. Sets in one
+     group compete for the same slots, so a loadout can complete at most one of
+     them; sets in different groups (Last Evolution sits on its own two
+     accessory slots) can pay out together. Union-find over the slot lists. */
   function groupSets(sets) {
     var parent = {};
     function find(a) {
@@ -181,7 +147,7 @@
   /* Flatten docs/set_registry.json into the two lookups the DP needs: which
      set an item belongs to, and what a given count of that set is worth. */
   function indexSets(sets) {
-    var owner = {}, bonus = {}, label = {}, proc = {};
+    var owner = {}, bonus = {}, label = {}, proc = {}, thresholds = {};
     (sets || []).forEach(function (s) {
       label[s.set] = s.set_th || s.set;
       (s.slots || []).forEach(function (sl) {
@@ -194,10 +160,18 @@
         });
         bonus[s.set + ":" + b.pieces] = add;
         proc[s.set + ":" + b.pieces] = !b.permanent;
+        (thresholds[s.set] = thresholds[s.set] || []).push(Number(b.pieces) || 0);
       });
     });
     return { owner: owner, bonus: bonus, label: label, proc: proc,
-             group: groupSets(sets) };
+             thresholds: thresholds, group: groupSets(sets) };
+  }
+
+  /* "set:worn" and "set:pieces" are split on the LAST colon: dmowiki names
+     some sets with a colon of their own ("Fire : Spirit"). */
+  function splitPair(pair) {
+    var i = pair.lastIndexOf(":");
+    return [pair.slice(0, i), pair.slice(i + 1)];
   }
 
   /* What a state's set progress is worth right now. Bonuses stack by
@@ -209,10 +183,10 @@
     /* The key now holds one "set:worn" pair per group, comma separated, so a
        clothing set and Last Evolution can both be paying out at once. */
     setKey.split(",").filter(Boolean).forEach(function (pair) {
-      var parts = pair.split(":");
+      var parts = splitPair(pair);
       var name = parts[0], worn = Number(parts[1]);
       Object.keys(index.bonus).forEach(function (k) {
-        var kp = k.split(":");
+        var kp = splitPair(k);
         if (kp[0] !== name) return;
         if (worn < Number(kp[1])) return;
         var add = index.bonus[k];
@@ -255,66 +229,194 @@
       }
     });
 
-    var zero = axes.map(function () { return 0; });
-    var states = {};
-    states[key(zero, 0, "")] = { at: 0, v: zero, n: 0, set: "", prev: null,
-                                pick: null };
+    /* Set progress used to ride in the state key for EVERY set, as a run per
+       group. That key is what blew up: the five element-spirit sets share one
+       template, so their pieces carry identical stats and differ only in which
+       set they feed, and every one of them still forked the table. Adding them
+       took a validate case from 3.6 s to past 120 s with every answer correct.
 
-    // Advance one state by one item, capping every axis at its target.
-    function advance(st, it) {
-      return axes.map(function (stat, i) {
-        return Math.min(caps[i], st.v[i] + scale(stat, it[stat]));
+       Instead the search runs once per PLAN: for each group, either no set or
+       one named set is tracked. Inside a plan only the tracked sets count
+       pieces; every other piece is a plain item -- and plain items with equal or
+       worse stats than another item in the same slot can be dropped outright,
+       which folds the identical spirit pieces back into one. The best loadout
+       over all plans is the answer: a loadout that completes set S is scored in
+       full by the plan tracking S, and under-scored (never over-scored) by every
+       other plan. */
+    /* Chips never belong to a set, so what the pool can add does not depend on
+       the plan. Running the chip knapsack inside every plan repeated the same
+       work once per plan and on every gear state -- with 18 chips that phase
+       was ~99% of a solve. It is built once here as a table of capped gain
+       vectors and joined to each plan's finished gear states below. */
+    var chipTable = runChips(chips, axes, caps);
+    var plans = setPlans(data && data.sets, index);
+    var best = null;
+    var bestShort = null;
+    plans.forEach(function (plan) {
+      var gear = runPlan(plan, accessories, axes, caps, index);
+      Object.keys(gear).forEach(function (k) {
+       chipTable.forEach(function (ch) {
+        var g = gear[k];
+        var st = {
+          at: g.at + ch.at,
+          v: axes.map(function (stat, i) { return Math.min(caps[i], g.v[i] + ch.v[i]); }),
+          gear: g, chips: ch,
+        };
+        var meets = axes.every(function (stat, i) { return st.v[i] >= caps[i]; });
+        if (meets && (!best || st.at > best.at)) best = st;
+
+        // Fallback candidate: least total shortfall, then highest AT. The AT
+        // tiebreak is what stops "closest to target" from also meaning "weakest
+        // possible" — a pure min-shortfall pass happily leaves free slots empty.
+        // Shortfalls are summed in display units so a percentage stat short by 5
+        // does not outweigh a flat stat short by 500.
+        var short = {};
+        var pen = 0;
+        axes.forEach(function (stat, i) {
+          var gap = Math.max(0, caps[i] - st.v[i]);
+          short[stat] = unscale(stat, gap);
+          pen += short[stat];
+        });
+        if (!bestShort || pen < bestShort.pen || (pen === bestShort.pen && st.at > bestShort.st.at)) {
+          bestShort = { pen: pen, st: st, short: short };
+        }
+       });
       });
+    });
+
+    var feasible = !!best;
+    var joined = best || (bestShort && bestShort.st);
+    if (!joined) return null;
+    var winner = chainChips(joined);
+
+    return buildResult(winner, base, feasible, bestShort, axes, index);
+  }
+
+  /* Every combination of "track nothing / track one set" across the groups. */
+  function setPlans(sets, index) {
+    var byGroup = {};
+    (sets || []).forEach(function (s) {
+      var g = index.group[s.set];
+      (byGroup[g] = byGroup[g] || []).push(s.set);
+    });
+    var plans = [[]];
+    Object.keys(byGroup).sort().forEach(function (g) {
+      var next = [];
+      plans.forEach(function (p) {
+        next.push(p);
+        byGroup[g].forEach(function (name) { next.push(p.concat([name])); });
+      });
+      plans = next;
+    });
+    return plans;
+  }
+
+  /* ladder[k] = the bonus a tracked set pays with k pieces worn. Bonuses stack
+     by threshold: six pieces earns the 4-set bonus as well as the 6-set one,
+     which is how the wiki lists them. */
+  function bonusLadder(name, index) {
+    var top = Math.max.apply(null, [0].concat(index.thresholds[name] || []));
+    var ladder = [];
+    for (var k = 0; k <= top; k++) {
+      var add = {};
+      (index.thresholds[name] || []).forEach(function (t) {
+        if (k < t) return;
+        var b = index.bonus[name + ":" + t] || {};
+        Object.keys(b).forEach(function (st) { add[st] = (add[st] || 0) + b[st]; });
+      });
+      ladder.push(add);
     }
+    return ladder;
+  }
 
-    /* Same, plus the change in set bonus this pick causes. `after` and
-       `before` are the bonus totals for the new and old set progress, so the
-       difference is what this one piece unlocked (zero until a threshold). */
-    function advanceWith(st, it, after, before) {
-      return axes.map(function (stat, i) {
-        var gain = scale(stat, it[stat])
-                 + scale(stat, num(after[stat]) - num(before[stat]));
-        return Math.min(caps[i], st.v[i] + gain);
-      });
+  /* Keep only the plain items no other plain item in the slot beats. b beats a
+     when it is at least as good on every tracked axis and on AT; then any
+     loadout wearing a does at least as well wearing b instead, so dropping a
+     cannot lose the optimum. Exact ties keep the first, so equal pieces of
+     different untracked sets collapse to one. */
+  function paretoPlain(items, axes) {
+    var vecs = items.map(function (it) {
+      return axes.map(function (st) { return scale(st, it[st]); }).concat([num(it.AT)]);
+    });
+    return items.filter(function (it, i) {
+      for (var j = 0; j < items.length; j++) {
+        if (j === i) continue;
+        var ge = true, gt = false;
+        for (var d = 0; d < vecs[i].length; d++) {
+          if (vecs[j][d] < vecs[i][d]) { ge = false; break; }
+          if (vecs[j][d] > vecs[i][d]) gt = true;
+        }
+        if (ge && (gt || j < i)) return false;
+      }
+      return true;
+    });
+  }
+
+  function runPlan(plan, accessories, axes, caps, index) {
+    var ladders = plan.map(function (name) { return bonusLadder(name, index); });
+    var tracked = {};
+    plan.forEach(function (name, i) { tracked[name] = i; });
+
+    var zero = axes.map(function () { return 0; });
+    var zeroCounts = plan.map(function () { return 0; });
+    var states = {};
+    states[key(zero, 0, zeroCounts)] = { at: 0, v: zero, n: 0, c: zeroCounts,
+                                         plan: plan, prev: null, pick: null };
+
+    function step(st, it) {
+      var ti = tracked[index.owner[it.name]];
+      var c = st.c;
+      var bonusAT = 0;
+      var gain = axes.map(function (stat) { return scale(stat, it[stat]); });
+      if (ti !== undefined && c[ti] < ladders[ti].length - 1) {
+        c = c.slice();
+        c[ti] += 1;
+        var after = ladders[ti][c[ti]], before = ladders[ti][c[ti] - 1];
+        axes.forEach(function (stat, i) {
+          gain[i] += scale(stat, num(after[stat]) - num(before[stat]));
+        });
+        bonusAT = num(after.AT) - num(before.AT);
+      }
+      var v = axes.map(function (stat, i) { return Math.min(caps[i], st.v[i] + gain[i]); });
+      return { v: v, c: c, at: st.at + num(it.AT) + bonusAT };
     }
 
     // --- accessories: exactly one choice per slot, "leave empty" included ---
     SLOTS.forEach(function (slot) {
-      var candidates = accessories.filter(function (it) { return it.slot === slot; });
+      var inSlot = accessories.filter(function (it) { return it.slot === slot; });
+      var setPieces = inSlot.filter(function (it) { return tracked[index.owner[it.name]] !== undefined; });
+      var plain = paretoPlain(inSlot.filter(function (it) {
+        return tracked[index.owner[it.name]] === undefined;
+      }), axes);
+      var candidates = plain.concat(setPieces);
       var next = {};
       Object.keys(states).forEach(function (k) {
         var st = states[k];
-        /* Empty slot. The set progress CARRIES OVER: a set claims six of the
-           thirteen slots, so leaving a ring empty says nothing about whether
-           its clothing pieces are worn. Clearing the key here meant every
-           slot after the last set piece wiped the run, and no set was ever
-           credited. Only another set's piece ends a run. */
-        var ek = key(st.v, st.n, st.set);
-        if (!next[ek] || next[ek].at < st.at) {
-          next[ek] = { at: st.at, v: st.v, n: st.n, set: st.set, prev: st,
-                       pick: null };
+        // empty slot: totals and set counts carry over unchanged
+        if (!next[k] || next[k].at < st.at) {
+          next[k] = { at: st.at, v: st.v, n: st.n, c: st.c, plan: plan, prev: st, pick: null };
         }
         candidates.forEach(function (it) {
-          var sk = setProgress(st.set, it, index);
-          /* The bonus is re-applied from scratch at each step rather than
-             added incrementally: crossing the 4-piece threshold is worth the
-             whole 4-set bonus at once, and the delta from the previous state
-             is exactly that jump. */
-          var before = setBonusFor(st.set, index);
-          var after = setBonusFor(sk, index);
-          var v = advanceWith(st, it, after, before);
-          var at = st.at + num(it.AT)
-                 + (num(after.AT) - num(before.AT));
-          var nk = key(v, st.n, sk);
-          if (!next[nk] || next[nk].at < at) {
-            next[nk] = { at: at, v: v, n: st.n, set: sk, prev: st, pick: it };
+          var r = step(st, it);
+          var nk = key(r.v, st.n, r.c);
+          if (!next[nk] || next[nk].at < r.at) {
+            next[nk] = { at: r.at, v: r.v, n: st.n, c: r.c, plan: plan, prev: st, pick: it };
           }
         });
       });
       states = next;
     });
 
-    // --- chips: 0/1 knapsack over the pool, capped at MAX_CHIPS ---
+    return states;
+  }
+
+  /* Every distinct capped gain the chip pool can add with at most MAX_CHIPS
+     chips, keeping the best AT per gain and dropping any row another row beats
+     on every axis and AT (the join only ever wants the better one). */
+  function runChips(chips, axes, caps) {
+    var zero = axes.map(function () { return 0; });
+    var states = {};
+    states[zero.join("|") + "|0"] = { at: 0, v: zero, n: 0, prev: null, pick: null };
     chips.forEach(function (it) {
       var next = {};
       // carry every state forward unchanged (this chip not taken)
@@ -322,47 +424,59 @@
       Object.keys(states).forEach(function (k) {
         var st = states[k];
         if (st.n >= MAX_CHIPS) return;
-        var v = advance(st, it);
+        var v = axes.map(function (stat, i) {
+          return Math.min(caps[i], st.v[i] + scale(stat, it[stat]));
+        });
         var at = st.at + num(it.AT);
-        var nk = key(v, st.n + 1, st.set);
+        var nk = v.join("|") + "|" + (st.n + 1);
         if (!next[nk] || next[nk].at < at) {
-          next[nk] = { at: at, v: v, n: st.n + 1, set: st.set, prev: st,
-                       pick: it, chip: true };
+          next[nk] = { at: at, v: v, n: st.n + 1, prev: st, pick: it };
         }
       });
       states = next;
     });
-
-    // --- pick the winner ---
-    var best = null;
-    var bestShort = null;
+    var byGain = {};
     Object.keys(states).forEach(function (k) {
-      var st = states[k];
-      var meets = axes.every(function (stat, i) { return st.v[i] >= caps[i]; });
-      if (meets && (!best || st.at > best.at)) best = st;
-
-      // Fallback candidate: least total shortfall, then highest AT. The AT
-      // tiebreak is what stops "closest to target" from also meaning "weakest
-      // possible" — a pure min-shortfall pass happily leaves free slots empty.
-      // Shortfalls are summed in display units so a percentage stat short by 5
-      // does not outweigh a flat stat short by 500.
-      var short = {};
-      var pen = 0;
-      axes.forEach(function (stat, i) {
-        var gap = Math.max(0, caps[i] - st.v[i]);
-        short[stat] = unscale(stat, gap);
-        pen += short[stat];
-      });
-      if (!bestShort || pen < bestShort.pen || (pen === bestShort.pen && st.at > bestShort.st.at)) {
-        bestShort = { pen: pen, st: st, short: short };
-      }
+      var st = states[k], g = st.v.join("|");
+      if (!byGain[g] || byGain[g].at < st.at) byGain[g] = st;
     });
+    var rows = Object.keys(byGain).map(function (g) { return byGain[g]; });
+    return rows.filter(function (a) {
+      return !rows.some(function (b) {
+        if (b === a || b.at < a.at) return false;
+        var strict = b.at > a.at;
+        for (var i = 0; i < a.v.length; i++) {
+          if (b.v[i] < a.v[i]) return false;
+          if (b.v[i] > a.v[i]) strict = true;
+        }
+        return strict;
+      });
+    });
+  }
 
-    var feasible = !!best;
-    var winner = best || (bestShort && bestShort.st);
-    if (!winner) return null;
+  /* A joined answer is a gear state plus a chip row. Re-thread the chip picks
+     onto the end of the gear state's parent chain so the result builder walks
+     one chain, exactly as it did when chips were the last DP phase. */
+  function chainChips(joined) {
+    var picks = [];
+    for (var node = joined.chips; node && node.prev; node = node.prev) {
+      if (node.pick) picks.push(node.pick);
+    }
+    picks.reverse();
+    var tip = joined.gear;
+    picks.forEach(function (it) {
+      tip = { at: tip.at, v: tip.v, c: tip.c, plan: tip.plan, prev: tip, pick: it, chip: true };
+    });
+    return { at: joined.at, v: joined.v, c: joined.gear.c, plan: joined.gear.plan,
+             prev: tip.prev, pick: tip.pick, chip: tip.chip };
+  }
 
-    return buildResult(winner, base, feasible, bestShort, axes, index);
+  /* The "set:worn" pairs a state has earned, in the form setBonusFor and the
+     result builder read. */
+  function setKeyOf(st) {
+    return (st.plan || []).map(function (name, i) {
+      return st.c[i] > 0 ? name + ":" + st.c[i] : "";
+    }).filter(Boolean).sort().join(",");
   }
 
   /* Walk the parent chain back to the root, collecting the picks. Following
@@ -394,7 +508,8 @@
        search, but these totals are rebuilt from the chosen items alone, so
        leaving it out would report numbers the solver did not actually
        optimise for -- the answer would look worse than the loadout is. */
-    var setBonus = index ? setBonusFor(winner.set, index) : {};
+    var winnerSet = setKeyOf(winner);
+    var setBonus = index ? setBonusFor(winnerSet, index) : {};
 
     var totals = {
       AT: base.AT
@@ -412,13 +527,13 @@
        this to explain a jump in the numbers, and decision 06 requires saying
        that a proc bonus is counted at full value. */
     var setsOut = [];
-    if (index && winner.set) {
+    if (index && winnerSet) {
       // one "set:worn" pair per group, so more than one set can be earned
-      winner.set.split(",").filter(Boolean).forEach(function (pair) {
-      var parts = pair.split(":");
+      winnerSet.split(",").filter(Boolean).forEach(function (pair) {
+      var parts = splitPair(pair);
       var worn = Number(parts[1]);
       Object.keys(index.bonus).forEach(function (k) {
-        var kp = k.split(":");
+        var kp = splitPair(k);
         if (kp[0] !== parts[0] || worn < Number(kp[1])) return;
         var b = index.bonus[k] || {};
         setsOut.push({

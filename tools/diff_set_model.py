@@ -100,7 +100,7 @@ variants.append((data, [{"base": {"AT": 0, "HT": 0}, "targets": {"HT": h}}
 # speed: adding sets once took a case from 3.6 s to past 120 s while every
 # answer stayed correct. Fail on time as well, and bound the whole node run so
 # a runaway solve fails the gate instead of hanging it.
-CASE_BUDGET_MS = int(os.environ.get("CASE_BUDGET_MS", "30000"))
+CASE_BUDGET_MS = int(os.environ.get("CASE_BUDGET_MS", "2000"))
 
 bad = feas = total = 0
 for vi, (vdata, vcases) in enumerate(variants):
