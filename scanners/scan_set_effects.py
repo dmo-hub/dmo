@@ -34,9 +34,11 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
 sys.stdout.reconfigure(encoding="utf-8")
 
 from scan_clothing import canon_stat, strip_tags  # noqa: E402
+from stamped_json import write_stamped  # noqa: E402
 
 PROJ = Path(__file__).resolve().parent.parent
 SRC = PROJ / "cache" / "dmowiki_clothing.html"
@@ -247,7 +249,7 @@ def main():
     read = sum(len(s["effects"]) for s in sets)
     scoreable = sum(1 for s in sets for e in s["effects"] if e["scoreable"])
 
-    OUT.write_text(json.dumps({
+    write_stamped(OUT, {
         "fetched_at": date.today().isoformat(),
         "source": ", ".join(["cache/dmowiki_clothing.html"]
                             + [str(p.relative_to(PROJ)).replace("\\", "/")
@@ -259,7 +261,7 @@ def main():
                  "data/set_rosters.json"),
         "sub_effects": {"total": total, "read": read, "scoreable": scoreable},
         "sets": sets,
-    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    }, "fetched_at")
 
     print("wrote %s" % OUT.relative_to(PROJ))
     print("  set rows %d  (permanent %d / proc %d)  merged from files %d"

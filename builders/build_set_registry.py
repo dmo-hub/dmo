@@ -28,6 +28,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from stamped_json import write_stamped
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 PROJ = Path(__file__).resolve().parent.parent
@@ -155,13 +157,13 @@ def main():
             } for b in sorted(bonuses, key=lambda b: b["pieces"] or 0)],
         })
 
-    OUT.write_text(json.dumps({
+    write_stamped(OUT, {
         "built_at": date.today().isoformat(),
         "source": "data/set_rosters.json + data/set_effects.json + docs/gear_registry.json",
         "note": ("a set is complete when all its SLOTS are filled; each slot "
                  "accepts either the base item or its shin variant"),
         "sets": out,
-    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    }, "built_at")
 
     print("wrote %s" % OUT.relative_to(PROJ))
     print("  sets joined %d" % len(out))

@@ -28,6 +28,8 @@ from collections import defaultdict
 from datetime import date
 from pathlib import Path
 
+from stamped_json import write_stamped
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 PROJ = Path(__file__).resolve().parent.parent
@@ -164,8 +166,7 @@ def main():
                  "side the stat feeds"),
         "items": out,
     }
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-                   encoding="utf-8", newline="\n")
+    write_stamped(OUT, payload, "built_at")
 
     by_slot = defaultdict(int)
     by_axis = defaultdict(int)

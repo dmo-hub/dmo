@@ -20,6 +20,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from stamped_json import write_stamped
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 PROJ = Path(__file__).resolve().parent.parent
@@ -59,13 +61,13 @@ def main():
         out.append(rec)
 
     out.sort(key=lambda r: r["grade"])
-    OUT.write_text(json.dumps({
+    write_stamped(OUT, {
         "built_at": date.today().isoformat(),
         "source": "data/chip_double.json",
         "note": ("Double ChipSets only (R16-R18); each value is the primary and "
                  "secondary sets added together, both of which the item grants"),
         "items": out,
-    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    }, "built_at")
 
     print("wrote %s" % OUT.relative_to(PROJ))
     print("  chips %d" % len(out))

@@ -26,11 +26,13 @@ Not every set has a page: the element-spirit sets (dmowiki's "*:Spirit ...")
 have no roster in the cache, so they stay unlinked and B05 stays partly open.
 """
 
-import json
 import re
 import sys
 from datetime import date
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
+from stamped_json import write_stamped  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -145,13 +147,13 @@ def main():
             "source": sources[name],
         })
 
-    OUT.write_text(json.dumps({
+    write_stamped(OUT, {
         "fetched_at": date.today().isoformat(),
         "source": "cache_vplay",
         "note": ("which item belongs to which clothing set -- dmowiki does not "
                  "record this; the element-spirit sets are still missing"),
         "sets": sets,
-    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    }, "fetched_at")
 
     print("wrote %s" % OUT.relative_to(PROJ))
     print("  sets %d" % len(sets))
