@@ -22,8 +22,9 @@ A second layout appears on the Four Holy Beasts pages, where the header reads
 "เช็ต | รายการเซ็ต | เอฟเฟกต์ เซ็ต 6" and a third column carries the 6-piece
 bonus. Both are read here; the difference is only how many columns follow.
 
-Not every set has a page: the element-spirit sets (dmowiki's "*:Spirit ...")
-have no roster in the cache, so they stay unlinked and B05 stays partly open.
+The element-spirit sets (dmowiki's "*:Spirit ...") arrived with the Thai
+Digimon Frontier patch post, whose roster table has the same two-column shape,
+so it is read like any other page once that post is in cache_vplay.
 """
 
 import re
@@ -151,7 +152,7 @@ def main():
         "fetched_at": date.today().isoformat(),
         "source": "cache_vplay",
         "note": ("which item belongs to which clothing set -- dmowiki does not "
-                 "record this; the element-spirit sets are still missing"),
+                 "record this"),
         "sets": sets,
     }, "fetched_at")
 

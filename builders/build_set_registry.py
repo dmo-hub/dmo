@@ -45,13 +45,17 @@ OUT = PROJ / "docs" / "set_registry.json"
 SHIN = "(ชิน)"
 
 # The Thai set names as vplay writes them, against dmowiki's English names in
-# the bonus table. Only these three overlap: vplay also documents two sets
-# dmowiki never recorded, and dmowiki's element-spirit sets have not been
-# released in the Thai client, so they have no roster at all.
+# the bonus table (spelled exactly as dmowiki does, spacing included). vplay
+# also documents sets dmowiki never recorded.
 SET_NAMES = {
     "พลังแห่งความกล้า": "Davis-Power of Courage",
     "แสงแห่งความหวัง": "T.K-Light of Hope",
     "จิตใจแห่งรัก": "Yolei-Heart of Love",
+    "ไฟ : สปิริต": "Fire : Spirit",
+    "แสง : สปิริต": "Light: Spirit",
+    "น้ำแข็ง : สปิริต": "Ice: Spirit",
+    "ลม : สปิริต": "Wind: Spirit",
+    "สายฟ้า : สปิริต": "Thunder: Spirit",
     # dmowiki never recorded this one, so the English name is ours: it is only
     # a join key, and the page shows set_th to the player either way.
     "ลาสต์ อีโวลูชัน": "Last Evolution",
@@ -69,8 +73,13 @@ SLOT_ORDER_BY_SET = {
     "Last Evolution": ["digivice", "aura"],
 }
 
-# The dmowiki template row that carries the stats for these sets' slots.
+# The dmowiki template row that carries the stats for a set's slots: one row
+# per slot stands in for every set of its group, so the group picks the row.
 TEMPLATE = "Yolei,T.K,Davis"
+SPIRIT_TEMPLATE = "*:Spirit"
+TEMPLATE_BY_SET = {name: SPIRIT_TEMPLATE for name in
+                   ("Fire : Spirit", "Light: Spirit", "Ice: Spirit", "Wind: Spirit",
+                    "Thunder: Spirit")}
 
 
 def main():
@@ -87,8 +96,9 @@ def main():
 
     by_slot = {}
     for it in registry:
-        if it["name"].startswith(TEMPLATE):
-            by_slot[it["slot"]] = it
+        for prefix in (TEMPLATE, SPIRIT_TEMPLATE):
+            if it["name"].startswith(prefix):
+                by_slot[(prefix, it["slot"])] = it
 
     # Those items are in no dmowiki registry either, so their stats come
     # straight from the hand-kept file rather than the template rows above.
@@ -121,7 +131,7 @@ def main():
 
         slots = []
         for slot, base, shin in zip(slot_order, r["items"], shins):
-            tmpl = by_slot.get(slot)
+            tmpl = by_slot.get((TEMPLATE_BY_SET.get(english, TEMPLATE), slot))
             stats = {}
             stats_from = None
             if base in stats_by_item:

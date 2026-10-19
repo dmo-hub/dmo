@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-09-07",
+  "built_at": "2026-10-19",
   "source": "data/set_rosters.json + data/set_effects.json + docs/gear_registry.json",
   "note": "a set is complete when all its SLOTS are filled; each slot accepts either the base item or its shin variant",
   "sets": [
@@ -140,6 +140,106 @@
               "unit": "pct",
               "scoreable": false,
               "text": "Reduce DMG taken 30%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set_th": "น้ำแข็ง : สปิริต",
+      "set": "Ice: Spirit",
+      "pieces": 6,
+      "slots": [
+        {
+          "slot": "head",
+          "item": "น้ำแข็ง : หมวกเกราะแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "น้ำแข็ง : หมวกเกราะแห่งสปิริต"
+          ],
+          "stats": {
+            "CT": 5500.0
+          },
+          "stats_from": "*:Spirit Helmet"
+        },
+        {
+          "slot": "fashion",
+          "item": "น้ำแข็ง : เครื่องประดับแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "น้ำแข็ง : เครื่องประดับแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 2500,
+            "HT": 5500
+          },
+          "stats_from": "*:Spirit Accessory"
+        },
+        {
+          "slot": "top",
+          "item": "น้ำแข็ง : เสื้อแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "น้ำแข็ง : เสื้อแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Top"
+        },
+        {
+          "slot": "bottom",
+          "item": "น้ำแข็ง : กางเกงแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "น้ำแข็ง : กางเกงแห่งสปิริต"
+          ],
+          "stats": {
+            "DS": 8000
+          },
+          "stats_from": "*:Spirit Bottom"
+        },
+        {
+          "slot": "gloves",
+          "item": "น้ำแข็ง : ถุงมือแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "น้ำแข็ง : ถุงมือแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 5000
+          },
+          "stats_from": "*:Spirit Gloves"
+        },
+        {
+          "slot": "shoes",
+          "item": "น้ำแข็ง : รองเท้าแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "น้ำแข็ง : รองเท้าแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Shoes"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 6,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "HT",
+              "value": 3000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "HT 3000"
+            },
+            {
+              "stat": "CT",
+              "value": 70.0,
+              "unit": "pct",
+              "scoreable": true,
+              "text": "CT 70%"
             }
           ]
         }
@@ -288,6 +388,106 @@
       ]
     },
     {
+      "set_th": "ลม : สปิริต",
+      "set": "Wind: Spirit",
+      "pieces": 6,
+      "slots": [
+        {
+          "slot": "head",
+          "item": "ลม : หมวกเกราะแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ลม : หมวกเกราะแห่งสปิริต"
+          ],
+          "stats": {
+            "CT": 5500.0
+          },
+          "stats_from": "*:Spirit Helmet"
+        },
+        {
+          "slot": "fashion",
+          "item": "ลม : เครื่องประดับแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ลม : เครื่องประดับแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 2500,
+            "HT": 5500
+          },
+          "stats_from": "*:Spirit Accessory"
+        },
+        {
+          "slot": "top",
+          "item": "ลม : เสื้อแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ลม : เสื้อแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Top"
+        },
+        {
+          "slot": "bottom",
+          "item": "ลม : กางเกงแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ลม : กางเกงแห่งสปิริต"
+          ],
+          "stats": {
+            "DS": 8000
+          },
+          "stats_from": "*:Spirit Bottom"
+        },
+        {
+          "slot": "gloves",
+          "item": "ลม : ถุงมือแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ลม : ถุงมือแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 5000
+          },
+          "stats_from": "*:Spirit Gloves"
+        },
+        {
+          "slot": "shoes",
+          "item": "ลม : รองเท้าแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ลม : รองเท้าแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Shoes"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 6,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "AT",
+              "value": 4000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "ATK 4000"
+            },
+            {
+              "stat": "AS",
+              "value": 5.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "ATK Speed 5%"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "set_th": "ลาสต์ อีโวลูชัน",
       "set": "Last Evolution",
       "pieces": 2,
@@ -350,6 +550,206 @@
               "unit": "pct",
               "scoreable": false,
               "text": "+1% Final DMG"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set_th": "สายฟ้า : สปิริต",
+      "set": "Thunder: Spirit",
+      "pieces": 6,
+      "slots": [
+        {
+          "slot": "head",
+          "item": "สายฟ้า : หมวกเกราะแห่งสปิริ",
+          "shin": null,
+          "accepts": [
+            "สายฟ้า : หมวกเกราะแห่งสปิริ"
+          ],
+          "stats": {
+            "CT": 5500.0
+          },
+          "stats_from": "*:Spirit Helmet"
+        },
+        {
+          "slot": "fashion",
+          "item": "สายฟ้า : เครื่องประดับแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "สายฟ้า : เครื่องประดับแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 2500,
+            "HT": 5500
+          },
+          "stats_from": "*:Spirit Accessory"
+        },
+        {
+          "slot": "top",
+          "item": "สายฟ้า : เสื้อแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "สายฟ้า : เสื้อแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Top"
+        },
+        {
+          "slot": "bottom",
+          "item": "สายฟ้า : กางเกงแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "สายฟ้า : กางเกงแห่งสปิริต"
+          ],
+          "stats": {
+            "DS": 8000
+          },
+          "stats_from": "*:Spirit Bottom"
+        },
+        {
+          "slot": "gloves",
+          "item": "สายฟ้า : ถุงมือแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "สายฟ้า : ถุงมือแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 5000
+          },
+          "stats_from": "*:Spirit Gloves"
+        },
+        {
+          "slot": "shoes",
+          "item": "สายฟ้า : รองเท้าแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "สายฟ้า : รองเท้าแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Shoes"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 6,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "EXP",
+              "value": 4000.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "EXP 4000%"
+            },
+            {
+              "stat": "AS",
+              "value": 3.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "AtkSpeed 3%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set_th": "แสง : สปิริต",
+      "set": "Light: Spirit",
+      "pieces": 6,
+      "slots": [
+        {
+          "slot": "head",
+          "item": "แสง : หมวกเกราะแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "แสง : หมวกเกราะแห่งสปิริต"
+          ],
+          "stats": {
+            "CT": 5500.0
+          },
+          "stats_from": "*:Spirit Helmet"
+        },
+        {
+          "slot": "fashion",
+          "item": "แสง : เครื่องประดับแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "แสง : เครื่องประดับแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 2500,
+            "HT": 5500
+          },
+          "stats_from": "*:Spirit Accessory"
+        },
+        {
+          "slot": "top",
+          "item": "แสง : เสื้อแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "แสง : เสื้อแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Top"
+        },
+        {
+          "slot": "bottom",
+          "item": "แสง : กางเกงแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "แสง : กางเกงแห่งสปิริต"
+          ],
+          "stats": {
+            "DS": 8000
+          },
+          "stats_from": "*:Spirit Bottom"
+        },
+        {
+          "slot": "gloves",
+          "item": "แสง : ถุงมือแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "แสง : ถุงมือแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 5000
+          },
+          "stats_from": "*:Spirit Gloves"
+        },
+        {
+          "slot": "shoes",
+          "item": "แสง : รองเท้าแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "แสง : รองเท้าแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Shoes"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 6,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "HT",
+              "value": 7000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "HT 7000"
+            },
+            {
+              "stat": "CT",
+              "value": 30.0,
+              "unit": "pct",
+              "scoreable": true,
+              "text": "CT 30%"
             }
           ]
         }
@@ -492,6 +892,106 @@
               "unit": "flat",
               "scoreable": true,
               "text": "3000 ATK"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set_th": "ไฟ : สปิริต",
+      "set": "Fire : Spirit",
+      "pieces": 6,
+      "slots": [
+        {
+          "slot": "head",
+          "item": "ไฟ : หมวกเกราะแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ไฟ : หมวกเกราะแห่งสปิริต"
+          ],
+          "stats": {
+            "CT": 5500.0
+          },
+          "stats_from": "*:Spirit Helmet"
+        },
+        {
+          "slot": "fashion",
+          "item": "ไฟ : เครื่องประดับแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ไฟ : เครื่องประดับแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 2500,
+            "HT": 5500
+          },
+          "stats_from": "*:Spirit Accessory"
+        },
+        {
+          "slot": "top",
+          "item": "ไฟ : เสื้อแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ไฟ : เสื้อแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Top"
+        },
+        {
+          "slot": "bottom",
+          "item": "ไฟ : กางเกงแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ไฟ : กางเกงแห่งสปิริต"
+          ],
+          "stats": {
+            "DS": 8000
+          },
+          "stats_from": "*:Spirit Bottom"
+        },
+        {
+          "slot": "gloves",
+          "item": "ไฟ : ถุงมือแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ไฟ : ถุงมือแห่งสปิริต"
+          ],
+          "stats": {
+            "AT": 5000
+          },
+          "stats_from": "*:Spirit Gloves"
+        },
+        {
+          "slot": "shoes",
+          "item": "ไฟ : รองเท้าแห่งสปิริต",
+          "shin": null,
+          "accepts": [
+            "ไฟ : รองเท้าแห่งสปิริต"
+          ],
+          "stats": {},
+          "stats_from": "*:Spirit Shoes"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 6,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "HP",
+              "value": 4000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Max Hp +4000"
+            },
+            {
+              "stat": "DS",
+              "value": 4000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "DS 4000"
             }
           ]
         }
