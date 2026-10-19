@@ -92,7 +92,9 @@
   var MAX_CHIPS = 8;
 
   /* Stats that are percentages are held as hundredths so the DP works in whole
-     numbers -- 7.05% would otherwise make state keys float-unstable. */
+     numbers -- 7.05% would otherwise make state keys float-unstable. The gear
+     page reads this list too; tools/validate.py checks it against
+     builders/stat_units.py, which the Python side uses. */
   var PCT_STATS = { CT: true, EV: true, BL: true };
   var STATS = ["HT", "CT", "DS", "DE", "EV", "BL"];
 
@@ -675,6 +677,7 @@
     slotLabel: slotLabel,
     slotGroup: slotGroup,
     MAX_CHIPS: MAX_CHIPS,
+    PCT_STATS: PCT_STATS,
     solve: solve,
     findDuplicateIds: findDuplicateIds,
     applyUpgradeLevels: applyUpgradeLevels,

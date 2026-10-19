@@ -34,6 +34,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
 from stamped_json import write_stamped  # noqa: E402
+from stat_units import PCT_STATS  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -51,7 +52,7 @@ STAT_ALIASES = {
     "hit rate": "HT", "critical": "CT", "evade": "EV", "block": "BL",
     "move speed": "MS",
 }
-PCT = {"CT", "EV", "BL", "MS"}
+PCT = PCT_STATS | {"MS"}
 
 
 def clean(html):

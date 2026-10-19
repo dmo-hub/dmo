@@ -31,6 +31,8 @@ except Exception:
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 PROJ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJ / "builders"))
+from stat_units import PCT_STATS  # noqa: E402
 VOID = {
     "br",
     "img",
@@ -559,7 +561,7 @@ def check_chip_registry():
         for key in sorted(set(prim) & set(sec)):
             want = prim[key] * 0.6
             # whole-stat values are rounded; CT/EV/BL keep their decimals
-            slack = 0.5 if key not in ("CT", "EV", "BL") else 0.011
+            slack = 0.5 if key not in PCT_STATS else 0.011
             if abs(sec[key] - want) > slack:
                 bad.append(
                     f"{it['id']}: secondary {key} is {sec[key]}, "
@@ -778,6 +780,24 @@ def check_set_model():
     return []
 
 
+def check_pct_units():
+    """The solver's percentage stats against builders/stat_units.py.
+
+    Both sides scale those stats by 100. If one side lists a stat the other
+    does not, a 8.5% floor becomes 850 on the page and 8 or 9 in Python, and
+    nothing crashes -- the answers just stop agreeing.
+    """
+    js = (PROJ / "docs" / "js" / "gear-solver.js").read_text(encoding="utf-8")
+    m = re.search(r"var PCT_STATS = \{([^}]*)\}", js)
+    if not m:
+        return ["docs/js/gear-solver.js: PCT_STATS not found"]
+    got = set(re.findall(r"(\w+)\s*:\s*true", m.group(1)))
+    if got != set(PCT_STATS):
+        return ["gear-solver.js PCT_STATS %s != builders/stat_units.py %s"
+                % (sorted(got), sorted(PCT_STATS))]
+    return []
+
+
 def main():
     no_build = "--no-build" in sys.argv
     checks = [
@@ -786,6 +806,7 @@ def main():
         ("inline JS syntax", check_scripts),
         ("parser fixtures", check_parsers),
         ("chip registry", check_chip_registry),
+        ("percent stats agree", check_pct_units),
         ("set rosters", check_set_rosters),
         ("set registry", check_set_registry),
         ("DP vs ILP model", check_set_model),

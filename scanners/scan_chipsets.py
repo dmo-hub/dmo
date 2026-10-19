@@ -35,6 +35,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
 from stamped_json import write_stamped  # noqa: E402
+from stat_units import PCT_STATS  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -46,7 +47,7 @@ STAT_ALIASES = {
     "max hp": "HP", "max ds": "DS", "attack": "AT", "defense": "DE",
     "hit rate": "HT", "critical": "CT", "evade": "EV", "block": "BL",
 }
-PCT = {"CT", "EV", "BL"}
+PCT = PCT_STATS
 # The image filenames that mark the all-family tables.
 ALL_FAMILY_MARK = re.compile(r"_All\.png|_Chip_All", re.I)
 

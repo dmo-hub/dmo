@@ -346,8 +346,8 @@
     inp.step = step;
     inp.value = item[field];
     inp.addEventListener("input", function () {
-      // CT keeps its decimals (7.05); AT/HT are whole numbers, rounded not truncated
-      item[field] = field === "CT" ? num(inp.value) : Math.round(num(inp.value));
+      // percentages keep their decimals (7.05); the rest are whole numbers, rounded not truncated
+      item[field] = window.GearSolver.PCT_STATS[field] ? num(inp.value) : Math.round(num(inp.value));
       save();
     });
     td.appendChild(inp);
@@ -796,14 +796,16 @@
      step and the "%" suffix; AT is base-only because it is what gets maximized
      rather than something you set a floor on. */
   var STAT_FIELDS = [
-    { key: "AT", label: "AT", pct: false, targetable: false },
-    { key: "HT", label: "HT", pct: false, targetable: true },
-    { key: "CT", label: "CT", pct: true, targetable: true },
-    { key: "DS", label: "DS", pct: false, targetable: true },
-    { key: "DE", label: "DE", pct: false, targetable: true },
-    { key: "EV", label: "EV", pct: true, targetable: true },
-    { key: "BL", label: "BL", pct: true, targetable: true }
+    { key: "AT", label: "AT", targetable: false },
+    { key: "HT", label: "HT", targetable: true },
+    { key: "CT", label: "CT", targetable: true },
+    { key: "DS", label: "DS", targetable: true },
+    { key: "DE", label: "DE", targetable: true },
+    { key: "EV", label: "EV", targetable: true },
+    { key: "BL", label: "BL", targetable: true }
   ];
+  // which ones are percentages comes from the solver, so the two cannot drift
+  STAT_FIELDS.forEach(function (f) { f.pct = !!window.GearSolver.PCT_STATS[f.key]; });
   var GOAL_FIELDS = [];
   var PCT_LABEL = {};
 

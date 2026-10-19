@@ -30,6 +30,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 from stamped_json import write_stamped
+from stat_units import PCT_STATS, js_round
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -229,8 +230,8 @@ def main():
             key = st.get("stat")
             top = top_of(st)
             if key in SOLVER_STATS and top is not None:
-                rec[key] = rec.get(key, 0) + (top if key in ("CT", "EV", "BL")
-                                              else round(top))
+                rec[key] = rec.get(key, 0) + (top if key in PCT_STATS
+                                              else js_round(top))
                 if st.get("min") is not None and st.get("max") != st.get("min"):
                     ranged = True
             elif key and top is not None:

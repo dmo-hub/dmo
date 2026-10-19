@@ -42,6 +42,7 @@ Scope
 """
 
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -60,14 +61,17 @@ SLOTS = [
     "digivice", "aura",
 ]
 STATS = ["HT", "CT", "DS", "DE", "EV", "BL"]
-PCT_STATS = {"CT"}
+# Every percentage stat, as the JS holds them. This once listed only CT, which
+# turned an EV/BL floor of 8.5 into 8 or 9 here while the page used 850.
+PCT_STATS = {"CT", "EV", "BL"}
 MAX_CHIPS = 8
 
 
 def scale(stat, v):
-    """Percent stats carry 2 decimals; integers keep CBC off floating point."""
+    """Percent stats carry 2 decimals; integers keep CBC off floating point.
+    floor(x + 0.5) is Math.round: Python's round() sends halves to even."""
     v = float(v or 0)
-    return int(round(v * 100)) if stat in PCT_STATS else int(round(v))
+    return math.floor((v * 100 if stat in PCT_STATS else v) + 0.5)
 
 
 def index_sets(sets):

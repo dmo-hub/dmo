@@ -36,6 +36,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
 from stamped_json import write_stamped  # noqa: E402
+from stat_units import PCT_STATS  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -53,7 +54,7 @@ GRADE_RE = re.compile(r"R(\d+)")
 NAME_TH = "ดับเบิ้ลชิปเซ็ท"
 
 STATS = {"HP", "DS", "AT", "DE", "HT", "EV", "CT", "BL"}
-PCT = {"CT", "EV", "BL"}
+PCT = PCT_STATS
 
 
 def clean(html):

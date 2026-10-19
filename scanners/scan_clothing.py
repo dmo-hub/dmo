@@ -28,6 +28,9 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
+from stat_units import PCT_STATS  # noqa: E402
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 PROJ = Path(__file__).resolve().parent.parent
@@ -37,7 +40,7 @@ OUT = PROJ / "data" / "clothing_items.json"
 # Stat vocabulary, resolved in ticket 01. HT is hit rate, NOT hit points -- the
 # game shows HP and HT as separate stats, so they must never be merged.
 FLAT = ["HP", "DS", "AT", "HT", "DE", "Skill DMG"]
-PCT = ["CT", "BL", "EV", "EXP"]
+PCT = PCT_STATS | {"EXP"}
 DECIMAL = ["AS"]
 
 # Wiki spellings -> canonical key.

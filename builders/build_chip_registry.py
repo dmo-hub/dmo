@@ -21,6 +21,7 @@ from datetime import date
 from pathlib import Path
 
 from stamped_json import write_stamped
+from stat_units import round_stat
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -53,7 +54,7 @@ def main():
                 if got:
                     total += float(got["value"])
             if total:
-                rec[key] = round(total, 2) if key in ("CT", "EV", "BL") else round(total)
+                rec[key] = round_stat(key, total)
         rec["parts"] = {
             "primary": {k: v["value"] for k, v in sorted(primary.items())},
             "secondary": {k: v["value"] for k, v in sorted(secondary.items())},
