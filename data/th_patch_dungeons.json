@@ -1,0 +1,2074 @@
+{
+  "fetched_at": "2026-10-19",
+  "scanned": 185,
+  "dungeons": [
+    {
+      "name": "รอยร้าวของเดวีมอน",
+      "location": null,
+      "npc": "NPC <รอยร้าวของเดวีมอน>แอนโดมอน",
+      "req": "Lv.99+",
+      "pass_item": "บัตรผ่านรอยร้าวของเดวีมอน [ระดับทั่วไป – 4 คน] 1 ใบ",
+      "party": 4,
+      "clear_reward": null,
+      "monsters": [],
+      "rewards": [
+        {
+          "item": "โค้ดฟื้นฟู HP แห่งรอยร้าว",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "โค้ดฟื้นฟู DS แห่งรอยร้าว",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "โค้ดฟื้นฟูสารพัดประโยชน์ แห่งรอยร้าว",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "ผลไม้ของอิกดราชิล",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "บูสเตอร์เพิ่มค่าประสบการณ์ + 500%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "หินพลังดิจิทารี่ชั้นดี",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "หินเพิ่มแต้มฟื้นฟูชั้นดี",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "D-โค้ด การ์ด",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ไอเทมเปลี่ยนตัวเทมเมอร์[แอดเวนเจอร์] [กิจกรรม]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ไข่สุ่มดิจิทามะ",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องอัพเกรดชิพชิปเซ็ท R2",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ผลไม้ลึกลับ",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แบ็คอัพ ดิจิทามะ ระดับ 4",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มบัฟ [กิจกรรม]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "โค้ดฟื้นฟู HP เร่งรัด แห่งรอยร้าว",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "โค้ดฟื้นฟู DS เร่งรัด แห่งรอยร้าว",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "โค้ดฟื้นฟูสารพัดประโยชน์ แบบเร่งรัด",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "ผลไม้ของอิกดราชิล",
+          "rate": null,
+          "qty": "6",
+          "box": null
+        },
+        {
+          "item": "บูสเตอร์เพิ่มค่าประสบการณ์+1000%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "หินพลังดิจิทารี่ชั้นดี",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "หินเพิ่มแต้มฟื้นฟูชั้นดี",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "D-โค้ด การ์ด II",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ไอเทมเปลี่ยนตัวเทมเมอร์",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ไข่สุ่มดิจิทามะ [ระดับ 4-5]",
+          "rate": null,
+          "qty": "1",
+          "box": ""
+        },
+        {
+          "item": "กล่องอัพเกรดชิพชิปเซ็ท R3",
+          "rate": null,
+          "qty": "1",
+          "box": ""
+        },
+        {
+          "item": "ผลนางฟ้า",
+          "rate": null,
+          "qty": "1",
+          "box": ""
+        },
+        {
+          "item": "แบ็คอัพ ดิจิทามะ ระดับ 5",
+          "rate": null,
+          "qty": "1",
+          "box": ""
+        },
+        {
+          "item": "กล่องสุ่มบัฟ [กิจกรรม]",
+          "rate": null,
+          "qty": "1",
+          "box": ""
+        },
+        {
+          "item": "กล้วยหอม",
+          "rate": null,
+          "qty": "100",
+          "box": null
+        },
+        {
+          "item": "แสงสีแดงแห่งชีวิต",
+          "rate": null,
+          "qty": "100",
+          "box": null
+        },
+        {
+          "item": "แสงสีฟ้าแห่งดิจิโซล",
+          "rate": null,
+          "qty": "100",
+          "box": null
+        },
+        {
+          "item": "ดาต้าประเภทสัตว์ระดับกลาง",
+          "rate": null,
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "ดาต้าประเภทมังกรระดับกลาง",
+          "rate": null,
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "ดาต้าประเภทน้ำระดับกลาง",
+          "rate": null,
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "ดาต้าประเภทปีศาจระดับกลาง",
+          "rate": null,
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "การ์ดเปิดผนึก",
+          "rate": null,
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "การ์ดปิดผนึก",
+          "rate": null,
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "รีเซ็ทแคปซูล (1 ระดับ)",
+          "rate": null,
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "อีโวลูเตอร์",
+          "rate": null,
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "แคปซูลเมมโมรี่สกิล [โจมตี]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แคปซูลเมมโมรี่สกิล [ป้องกัน]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แคปซูลเมมโมรี่สกิล [สนับสนุน]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "เปลี่ยนชื่อดิจิมอน",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "รีเซ็ทสกิล",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แบ็คอัพ ดิสก์",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "โหมดซีเลคเตอร์",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ผลไม้แห่งอุตรพิษ",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-21/",
+      "date": "2021-01-07"
+    },
+    {
+      "name": "ดันเจี้ยนเรนโบว์ บริดจ์",
+      "location": "มินาโตะซิตี้",
+      "npc": "อิคคาคุมอน",
+      "req": "Lv.100+",
+      "pass_item": null,
+      "party": null,
+      "clear_reward": "แก่นแท้ของวิวัฒนาการ 1ชิ้น",
+      "monsters": [
+        {
+          "name": "เกโซมอน, เชลล์มอน, เมก้าดรามอน",
+          "title": null,
+          "level": null
+        }
+      ],
+      "rewards": [
+        {
+          "item": "มอนสเตอร์การ์ดระดับสูง Lv 3",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องดิจิโคลน[A-S]",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "[DS]หินเสริมคุณลักษณะ ระดับB Lv4",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[HP]หินเสริมคุณลักษณะ ระดับB Lv4",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [HP] R10",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ผงของวิวัฒนาการ",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ชาโคมอน ดิจิทามะ [กิจกรรม]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "มอนสเตอร์การ์ดระดับสูง Lv 3",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องดิจิโคลน[A-S]",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "[DS]หินเสริมคุณลักษณะ ระดับB Lv4",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[HP]หินเสริมคุณลักษณะ ระดับB Lv4",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [HP] R10",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ผงของวิวัฒนาการ",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "เชลล์มอน ซีล",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "มอนสเตอร์การ์ดระดับสูง Lv 3",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มชิปก้าวข้ามขีดจำกัดระดับกลาง",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "พลังของเมก้าซีดรามอน",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "พลังดิจิโซลของเมก้าซีดรามอน",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "พลังงานของเมก้าซีดรามอน",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเมก้าซีดรามอน [AT]+50%",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเมก้าซีดรามอน [HP สูงสุด]+50%",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเมก้าซีดรามอน [DS สูงสุด]+50%",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเมก้าซีดรามอน [DE สูงสุด]+50%",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ความเมตตาของเมก้าซีดรามอน [EXP] +1000%",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของเมก้าซีดรามอน [พลังโจมตีสกิล]+100%",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของเมก้าซีดรามอน [พลังโจมตีคริติคอล]+100%",
+          "rate": null,
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ความเกรี้ยวกราดของเมก้าซีดรามอน [ความเร็วในการเคลื่อนที่]+35%",
+          "rate": null,
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [HP] R11",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [DS] R11",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [AT] R11",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [DE] R11",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ท [HT] R11",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[HP]หินเสริมคุณลักษณะ ระดับB LvMax",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[DS]หินเสริมคุณลักษณะ ระดับB LvMax",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[AT]หินเสริมคุณลักษณะ ระดับB LvMax",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "[DE]หินเสริมคุณลักษณะ ระดับB LvMax",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แก่นแท้ของวิวัฒนาการที่สมบูรณ์",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": "https://www.vplay.in.th/__trashed/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-37/",
+      "date": "2022-04-25"
+    },
+    {
+      "name": "อาณาเขตมารีนดรากอน",
+      "location": "ป่าแห่งการเริ่มต้น",
+      "npc": "ไทจิ",
+      "req": "Lv.110+",
+      "pass_item": "บัตรผ่านอาณาเขตมารีนดรากอน [NORMAL] 1 ชิ้น",
+      "party": 4,
+      "clear_reward": "พลังชั่วร้าย [เมทัลซีดรามอน] 1 ชิ้น",
+      "monsters": [
+        {
+          "name": "เมทัลซีดรามอน",
+          "title": null,
+          "level": null
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-42/",
+      "date": "2022-09-26"
+    },
+    {
+      "name": "กรีนโซน, หมู่บ้านแห่งรอยยิ้ม",
+      "location": "D-เทอร์มินัล",
+      "npc": "NPC <สงสัย>จิจิมอน",
+      "req": "Lv.80+",
+      "pass_item": "[ร่องรอยของโค้ด เคราน์ [บัตรผ่านกรีนโซน] 1ชิ้น",
+      "party": 4,
+      "clear_reward": "สมบัติของกรีนโซน",
+      "monsters": [
+        {
+          "name": "แมดเลโอมอน:อาร์มโหมด (เจ้าของกรีนโซน)",
+          "title": null,
+          "level": null
+        }
+      ],
+      "rewards": [
+        {
+          "item": "กล้วยหอมแสนอร่อย",
+          "rate": null,
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "มอนสเตอร์การ์ด แบบสุ่ม",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ผลไม้มิราเคิล",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มบัฟ (+ 50%) [กิจกรรม]",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "บูสเตอร์เพิ่มค่าประสบการณ์ +500%",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องชิปเซ็ทขั้นสูง",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แบ็คอัพ ดิสก์",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "เหรียญหายาก",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "D – โค้ด การ์ด",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-43/",
+      "date": "2022-10-25"
+    },
+    {
+      "name": "สนามหน้าบ้านตุ๊กตา",
+      "location": "ป่าแห่งหุ่นเชิด",
+      "npc": "ไทจิ",
+      "req": "Lv.110+",
+      "pass_item": "บัตรผ่านสนามหน้าบ้านตุ๊กตา [NORMAL] 1 ชิ้น",
+      "party": 4,
+      "clear_reward": "พลังแห่งความชั่วร้าย [พิน็อคคิมอน] 1 ชิ้น",
+      "monsters": [
+        {
+          "name": "พิน็อคคิมอน",
+          "title": null,
+          "level": null
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-45/",
+      "date": "2022-12-27"
+    },
+    {
+      "name": "สนามกีฬา ระดับ [NORMAL]",
+      "location": "ชินจูกุตะวันออก (กลางคืน)",
+      "npc": "<สมาชิกDAT>พาวน์เชสมอนไวท์",
+      "req": "Lv.100+",
+      "pass_item": "บัตรผ่านสนามกีฬา [NORMAL] 1 ชิ้น",
+      "party": 1,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "(เทวา) วาจิรามอน",
+          "title": null,
+          "level": 118
+        },
+        {
+          "name": "(สมุนเทวา) เซนทารุมอน",
+          "title": null,
+          "level": 118
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-46/",
+      "date": "2023-01-25"
+    },
+    {
+      "name": "ถนน[EASY]",
+      "location": "ชินจูกุตะวันตก (กลางวัน)",
+      "npc": "<สมาชิกDAT>พาวน์เชสมอนไวท์",
+      "req": "Lv.110+",
+      "pass_item": null,
+      "party": 1,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "(เทวา) วิการาลามอน",
+          "title": null,
+          "level": 117
+        },
+        {
+          "name": "(สมุนเทวา) โมโนคุโรมอน",
+          "title": null,
+          "level": 118
+        },
+        {
+          "name": "(สมุนเทวา) เมทัลทีราโนมอน",
+          "title": null,
+          "level": 119
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-46/",
+      "date": "2023-01-25"
+    },
+    {
+      "name": "ด้านหลังของอาณาจักร",
+      "location": "เมืองใต้ดิน",
+      "npc": "NPC ไทจิ",
+      "req": "Lv.110+",
+      "pass_item": "บัตรผ่านด้านหลังของอาณาจักร[ระดับธรรมดา] 1 ชิ้น",
+      "party": 4,
+      "clear_reward": "พลังแห่งความชั่วร้าย[มุเกนดรามอน] 1 ชิ้น",
+      "monsters": [
+        {
+          "name": "วารุมอนซาเอมอน",
+          "title": "ผู้พิทักษ์ที่โหดร้าย",
+          "level": 126
+        },
+        {
+          "name": "มุเกนดรามอน",
+          "title": "ดาร์คมาสเตอร์",
+          "level": 126
+        },
+        {
+          "name": "มุเกนดรามอน",
+          "title": "ระเบิดพลีชีพ",
+          "level": 126
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-47/",
+      "date": "2023-02-23"
+    },
+    {
+      "name": "เวทีของตัวตลก",
+      "location": "จุดสูงสุดของฝันร้าย",
+      "npc": null,
+      "req": "Lv.110+",
+      "pass_item": "บัตรผ่านเวทีของตัวตลก [NORMAL] 1ชิ้น",
+      "party": 4,
+      "clear_reward": "พลังแห่งความชั่วร้าย [ปิเอมอน] 1 ชิ้น",
+      "monsters": [
+        {
+          "name": "ปิเอมอน",
+          "title": "ดาร์คมาสเตอร์",
+          "level": 129
+        },
+        {
+          "name": "อีวิลมอน",
+          "title": "ลูกสมุน",
+          "level": 129
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-50/",
+      "date": "2023-05-25"
+    },
+    {
+      "name": "พื้นที่แห่งความว่างเปล่า",
+      "location": "พื้นที่แห่งความว่างเปล่า",
+      "npc": "ไทจิ",
+      "req": "Lv.110+",
+      "pass_item": "บัตรผ่านพื้นที่แห่งความวางเปล่า [NORMAL] 1 ชิ้น",
+      "party": 4,
+      "clear_reward": "พลังแห่งความชั่วร้าย [อาโพคารีมอน] 1 ชิ้น ความมืดที่ปิดผนึก 1 ชิ้น",
+      "monsters": [
+        {
+          "name": "อาโพคารีมอน",
+          "title": "จอมบงการ",
+          "level": 130
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-52/",
+      "date": "2023-07-26"
+    },
+    {
+      "name": "ดันเจี้ยนฟานลองมอน (ระดับยาก)",
+      "location": "D-เทอร์มินัล",
+      "npc": "NPC <ไกด์ดันเจี้ยนสี่สัตว์เทพ>เทเรียมอน",
+      "req": "Lv.90+",
+      "pass_item": "บัตรผ่านดันเจี้ยนฟานลองมอน [ระดับยาก] 1 ชิ้น",
+      "party": 4,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "เชนวูมอน",
+          "title": "ผู้ปกครองทิศเหนือ",
+          "level": 130
+        },
+        {
+          "name": "ซูเซมอน",
+          "title": "ผู้ปกครองทิศใต้",
+          "level": 130
+        },
+        {
+          "name": "ไบฟูมอน",
+          "title": "ผู้ปกครองทิศตะวันตก",
+          "level": 130
+        },
+        {
+          "name": "จินลอนมอน",
+          "title": "ผู้ปกครองทิศตะวันออก",
+          "level": 130
+        },
+        {
+          "name": "ฟานลอนมอน",
+          "title": null,
+          "level": 130
+        }
+      ],
+      "rewards": [],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b5%e0%b9%89%e0%b8%a2%e0%b8%99%e0%b8%9f%e0%b8%b2%e0%b8%99%e0%b8%a5%e0%b8%ad%e0%b8%87%e0%b8%a1%e0%b8%ad%e0%b8%99-%e0%b8%a3%e0%b8%b0%e0%b8%94%e0%b8%b1/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-53/",
+      "date": "2023-08-24"
+    },
+    {
+      "name": "สถานีชินจูกุ",
+      "location": "ออฟฟิศ",
+      "npc": "ยามาคิ มิตสึโอะ",
+      "req": "Lv.105+",
+      "pass_item": "บัตรผ่านสถานีชินจูกุ [NORMAL] 1ชิ้น",
+      "party": 4,
+      "clear_reward": "พลังงานเมทริกซ์ 1 ชิ้น",
+      "monsters": [
+        {
+          "name": "D-รีพเปอร์ ADR-04",
+          "title": null,
+          "level": 130
+        },
+        {
+          "name": "D-รีพเปอร์ ADR-05",
+          "title": "โจมตี",
+          "level": 130
+        },
+        {
+          "name": "D-รีพเปอร์ ADR-05",
+          "title": "สกิล",
+          "level": 130
+        },
+        {
+          "name": "D-รีพเปอร์ ADR-05",
+          "title": "ป้องกัน",
+          "level": 130
+        },
+        {
+          "name": "D-รีพเปอร์ ADR-06",
+          "title": null,
+          "level": 130
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-55/",
+      "date": "2023-10-26"
+    },
+    {
+      "name": "สวนชินจูกุ (D-รีพเปอร์)",
+      "location": "ออฟฟิศ",
+      "npc": "ยามาคิ มิตสึโอะ",
+      "req": "Lv.105+",
+      "pass_item": "บัตรผ่านสวนชินจูกุ (D-รีพเปอร์) [NORMAL] 1 ชิ้น",
+      "party": 1,
+      "clear_reward": "พลังงานเมทริกซ์ 1 ชิ้น",
+      "monsters": [
+        {
+          "name": "รีพเปอร์",
+          "title": null,
+          "level": 140
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-57/",
+      "date": "2023-12-21"
+    },
+    {
+      "name": "พื้นที่ D-รีพเปอร์",
+      "location": "พื้นที่ปลอดภัย",
+      "npc": "ทาคาโตะ",
+      "req": "Lv.105+",
+      "pass_item": "บัตรผ่านพื้นที่ D-รีพเปอร์ [NORMAL] 1 ชิ้น",
+      "party": 4,
+      "clear_reward": "พลังงานที่ปลอดภัย 1 ชิ้น",
+      "monsters": [
+        {
+          "name": "รีพเปอร์",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "มาเธอร์ D-รีพเปอร์",
+          "title": null,
+          "level": 140
+        }
+      ],
+      "rewards": [],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-57/",
+      "date": "2023-12-21"
+    },
+    {
+      "name": "รอยัลเบส (ระดับยาก)",
+      "location": null,
+      "npc": null,
+      "req": "Lv.140+",
+      "pass_item": "บัตรผ่านรอยัลเบส ( ระดับยาก)",
+      "party": null,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "ลอร์ดไนท์มอน",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "ดูนัสมอน",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "อัลฟอร์ซ วีดรามอน",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "สเลปมอน",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "เอ็กซามอน",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "เดธ X โดรุเกรย์มอน",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "ประตูมิติ",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "X-ดาต้า คอร์",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "เดธ X โดรุโกรามอน",
+          "title": null,
+          "level": 140
+        },
+        {
+          "name": "เดธ X มอน",
+          "title": null,
+          "level": 140
+        }
+      ],
+      "rewards": [
+        {
+          "item": "X-แอนติบอดี้-คอร์ที่ปนเปื้อน",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องดับเบิลอัพเกรดชิพชิปเซ็ท",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แพ็คเกจสุ่มซีล มาสเตอร์",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ทองคำ 2T",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มชิปเซ็ท ระดับ 16 ~ 18",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "X-แอนติบอดี้-คอร์ที่ปนเปื้อน",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แพ็คเกจสุ่มซีล มาสเตอร์",
+          "rate": "100%",
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มชิปเซ็ท ระดับ 16 ~ 18",
+          "rate": "20%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "X-แอนติบอดี้-คอร์ที่ปนเปื้อน",
+          "rate": "10%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องดับเบิลอัพเกรดชิพชิปเซ็ท",
+          "rate": "10%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ทองคำ 5 ~ 10T",
+          "rate": "5%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "X-แอนติบอดี้-คอร์ที่ปนเปื้อน",
+          "rate": "100%",
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "กล่องดับเบิลอัพเกรดชิพชิปเซ็ท",
+          "rate": "100%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "แพ็คเกจสุ่มซีล มาสเตอร์",
+          "rate": "100%",
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ทองคำ 5T",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มชิปเซ็ท ระดับ 16 ~ 18",
+          "rate": "100%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "X-แอนติบอดี้-คอร์ที่ปนเปื้อน",
+          "rate": "100%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "แพ็คเกจสุ่มซีล มาสเตอร์",
+          "rate": "100%",
+          "qty": "15",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มชิปเซ็ท ระดับ 16 ~ 18",
+          "rate": "30%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องดับเบิลอัพเกรดชิพชิปเซ็ท",
+          "rate": "25%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "X-แอนติบอดี้-คอร์ที่ปนเปื้อน",
+          "rate": "20%",
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "ทองคำ 5 ~ 10T",
+          "rate": "10%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "X-แอนติบอดี้-คอร์ที่ปนเปื้อน",
+          "rate": "100%",
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "กล่องดับเบิลอัพเกรดชิพชิปเซ็ท",
+          "rate": "100%",
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "แพ็คเกจสุ่มซีล มาสเตอร์",
+          "rate": "100%",
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "ทองคำ 10T",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มชิปเซ็ท ระดับ 16 ~ 18",
+          "rate": "100%",
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "X-แอนติบอดี้-คอร์ที่ปนเปื้อน",
+          "rate": "100%",
+          "qty": "4",
+          "box": null
+        },
+        {
+          "item": "แพ็คเกจสุ่มซีล มาสเตอร์",
+          "rate": "100%",
+          "qty": "20",
+          "box": null
+        },
+        {
+          "item": "X-แอนติบอดี้-คอร์ที่ปนเปื้อน",
+          "rate": "50%",
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มชิปเซ็ท ระดับ 16 ~ 18",
+          "rate": "40%",
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "กล่องดับเบิลอัพเกรดชิพชิปเซ็ท",
+          "rate": "25%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ทองคำ 10 ~ 15T",
+          "rate": "20%",
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%ad%e0%b8%a2%e0%b8%b1%e0%b8%a5%e0%b9%80%e0%b8%9a%e0%b8%aa-%e0%b8%a3%e0%b8%b0%e0%b8%94%e0%b8%b1%e0%b8%9a%e0%b8%a2%e0%b8%b2%e0%b8%81/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-61/",
+      "date": "2024-04-25"
+    },
+    {
+      "name": "การทำลายล้างและการฟื้นฟู",
+      "location": null,
+      "npc": null,
+      "req": "Lv.140+",
+      "pass_item": "ร่องรอยของซูซาโนะโอมอน 3 ชิ้น",
+      "party": 4,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "ซูซาโนะโอมอน",
+          "title": null,
+          "level": 140
+        }
+      ],
+      "rewards": [
+        {
+          "item": "ชิ้นส่วนดิจิโค๊ด",
+          "rate": "100%",
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "ทองคำ 20T",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แพ็คเกจซีลโจเกรส การทำลายและฟื้นฟู",
+          "rate": "100%",
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "ชิ้นส่วนดิจิโค๊ด",
+          "rate": "100%",
+          "qty": "4",
+          "box": null
+        },
+        {
+          "item": "แพ็คเกจสุ่มซีลมาสเตอร์ การทำลายและฟื้นฟู",
+          "rate": "100%",
+          "qty": "15",
+          "box": null
+        },
+        {
+          "item": "ชิ้นส่วนดิจิโค๊ด",
+          "rate": "50%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ทองคำ 10~15T",
+          "rate": "20%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "เชาท์มอน X7 ซูพีเรียร์ โหมด ซีล",
+          "rate": "1%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องครอสโหลดเดอร์ที่ถูกผนึก",
+          "rate": "0.5%",
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b5%e0%b9%89%e0%b8%a2%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%97%e0%b8%b3%e0%b8%a5%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b9%89%e0%b8%b2%e0%b8%87%e0%b9%81/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-64/",
+      "date": "2024-07-25"
+    },
+    {
+      "name": "โกดังใต้ศูนย์บัญชาการ",
+      "location": "ศูนย์บัญชาการ DATS",
+      "npc": "<แม่บ้าน>ซายูริ",
+      "req": "Lv.120+",
+      "pass_item": "มาสเตอร์คีย์ศูนย์บัญชาการ 1 ชิ้น",
+      "party": 1,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "พาวน์แชสมอน ไวท์",
+          "title": "ระดับ 1",
+          "level": null
+        },
+        {
+          "name": "ไนท์เชสมอน ไวท์",
+          "title": "ระดับ 2",
+          "level": null
+        },
+        {
+          "name": "บิชอปเชสมอน",
+          "title": "ระดับ 3",
+          "level": null
+        },
+        {
+          "name": "คิงเชสมอน",
+          "title": "ระดับ 4",
+          "level": null
+        },
+        {
+          "name": "มาเมมอน",
+          "title": "ระดับ 5",
+          "level": null
+        },
+        {
+          "name": "บิ๊กมาเมมอน",
+          "title": "ระดับ 6",
+          "level": null
+        },
+        {
+          "name": "ปรินซ์มาเมมอน",
+          "title": "ระดับ 7",
+          "level": null
+        },
+        {
+          "name": "โกคิมอน",
+          "title": null,
+          "level": null
+        }
+      ],
+      "rewards": [],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b5%e0%b9%89%e0%b8%a2%e0%b8%99-%e0%b9%82%e0%b8%81%e0%b8%94%e0%b8%b1%e0%b8%87%e0%b9%83%e0%b8%95%e0%b9%89%e0%b8%a8%e0%b8%b9%e0%b8%99%e0%b8%a2/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-65/",
+      "date": "2024-08-22"
+    },
+    {
+      "name": "ดิจิมอนไกเซอร์",
+      "location": "D-เทอร์มินอล",
+      "npc": "NPC<ผู้ต้อนรับสู่ดันเจี้ยนดิจิมอนไกเซอร์ > วีมอน",
+      "req": "Lv.150+",
+      "pass_item": "อุปกรณ์เชื่อมต่อโลกดิจิตอล 1 ชิ้น",
+      "party": 4,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "แบล็คเมทัลเกรย์มอน",
+          "title": null,
+          "level": 150
+        }
+      ],
+      "rewards": [
+        {
+          "item": "พลังชั่วร้าย",
+          "rate": "100%",
+          "qty": "6",
+          "box": null
+        },
+        {
+          "item": "กล่องสแกนชิ้นส่วนข้อมูลอุปกรณ์",
+          "rate": "100%",
+          "qty": "28",
+          "box": null
+        },
+        {
+          "item": "15T",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "พลังชั่วร้าย",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "พลังชั่วร้าย",
+          "rate": "50%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ทองคำ 5T",
+          "rate": "20%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "(ชิน) กล่องสุ่มอุปกรณ์",
+          "rate": "0.05%",
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-76/",
+      "date": "2025-07-24"
+    },
+    {
+      "name": "แหล่งร้านค้า",
+      "location": "D-เทอร์มินัล",
+      "npc": "<ผู้ต้อนรับแหล่งร้านค้า>ฮิโระ",
+      "req": "Lv.150+",
+      "pass_item": "Dim การ์ด 1ชิ้น",
+      "party": 1,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "กูลัส แกมมามอน [ระดับง่าย]",
+          "title": null,
+          "level": 150
+        },
+        {
+          "name": "กูลัส แกมมามอน [ทั่วไป]",
+          "title": null,
+          "level": 166
+        }
+      ],
+      "rewards": [
+        {
+          "item": "ดิจิโค๊ดที่ปนเปื้อน",
+          "rate": "100%",
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "7T",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่ง (ง่าย)",
+          "rate": "100%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ดิจิโค๊ดที่ปนเปื้อน",
+          "rate": "100%",
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "มีดของเพชฌฆาต",
+          "rate": "100%",
+          "qty": "7",
+          "box": null
+        },
+        {
+          "item": "20T",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่ง (ทั่วไป)",
+          "rate": "100%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ดิจิโค๊ดที่ปนเปื้อน",
+          "rate": "50%",
+          "qty": "1-2",
+          "box": null
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่ง (ง่าย)",
+          "rate": "25%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "ดิจิโค๊ดที่ปนเปื้อน",
+          "rate": "50%",
+          "qty": "4",
+          "box": null
+        },
+        {
+          "item": "มีดของเพชฌฆาต",
+          "rate": "50%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่ง (ทั่วไป)",
+          "rate": "25%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "(ชิน) กล่องสุ่มอุปกรณ์",
+          "rate": "0.05%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ชิ้นส่วนข้อมูลอุปกรณ์",
+          "rate": "50%",
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "ข้อมูลอุปกรณ์ : น้ำเงิน",
+          "rate": "40%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "แฮกกิ้งทูล",
+          "rate": "9%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แบ็คอัพชิป",
+          "rate": "1%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ชิ้นส่วนข้อมูลอุปกรณ์",
+          "rate": "50%",
+          "qty": "20",
+          "box": null
+        },
+        {
+          "item": "ข้อมูลอุปกรณ์ : น้ำเงิน",
+          "rate": "30%",
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "แฮกกิ้งทูล",
+          "rate": "15%",
+          "qty": "5",
+          "box": null
+        },
+        {
+          "item": "แบ็คอัพชิป",
+          "rate": "5%",
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b5%e0%b9%89%e0%b8%a2%e0%b8%99%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b9%81%e0%b8%ab%e0%b8%a5%e0%b9%88%e0%b8%87%e0%b8%a3%e0%b9%89%e0%b8%b2/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-78/",
+      "date": "2025-09-25"
+    },
+    {
+      "name": "ดันเจี้ยนพื้นที่ของไกเซอร์",
+      "location": null,
+      "npc": null,
+      "req": "Lv.140+",
+      "pass_item": "อีวิล สไปรอล 1 ชิ้น",
+      "party": 1,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "โมโนคุโรมอน",
+          "title": "บอส",
+          "level": 150
+        },
+        {
+          "name": "สกัลเกรย์มอน",
+          "title": "บอส",
+          "level": 150
+        },
+        {
+          "name": "โกคิมอน",
+          "title": "บอส",
+          "level": 150
+        },
+        {
+          "name": "ซีดรามอน",
+          "title": "บอส",
+          "level": 150
+        },
+        {
+          "name": "สตาร์มอน",
+          "title": "บอส",
+          "level": 150
+        },
+        {
+          "name": "วารุมอนซาเอมอน",
+          "title": "บอส",
+          "level": 150
+        }
+      ],
+      "rewards": [
+        {
+          "item": "ข้อมูลอุปกรณ์ : น้ำเงิน",
+          "rate": null,
+          "qty": "3-7",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มชิ้นส่วนข้อมูลอุปกรณ์",
+          "rate": null,
+          "qty": "5-10",
+          "box": null
+        },
+        {
+          "item": "กล่องสแกนเศษส่วนข้อมูลอุปกรณ์",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แบ็คอัพชิป",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "แฮกกิ้งทูล",
+          "rate": null,
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ข้อมูลอุปกรณ์ : หัว",
+          "rate": null,
+          "qty": "1-3",
+          "box": null
+        },
+        {
+          "item": "ข้อมูลอุปกรณ์ : เสื้อ",
+          "rate": null,
+          "qty": "1-3",
+          "box": null
+        },
+        {
+          "item": "ข้อมูลอุปกรณ์ : กางเกง",
+          "rate": null,
+          "qty": "1-3",
+          "box": null
+        },
+        {
+          "item": "ข้อมูลอุปกรณ์ : มือ",
+          "rate": null,
+          "qty": "1-3",
+          "box": null
+        },
+        {
+          "item": "ข้อมูลอุปกรณ์ : รองเท้า",
+          "rate": null,
+          "qty": "1-3",
+          "box": null
+        },
+        {
+          "item": "ข้อมูลอุปกรณ์ : เครื่องประดับ",
+          "rate": null,
+          "qty": "1-3",
+          "box": null
+        }
+      ],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b5%e0%b9%89%e0%b8%a2%e0%b8%99%e0%b8%9e%e0%b8%b7%e0%b9%89%e0%b8%99%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b9%84%e0%b8%81%e0%b9%80/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-82/",
+      "date": "2025-12-24"
+    },
+    {
+      "name": "สวนลับแห่งโยโกฮาม่า",
+      "location": "หมู่บ้านโยโกฮาม่า ฝั่งตะวันออก",
+      "npc": "NPC <แมวจร>ทัลบง",
+      "req": null,
+      "pass_item": "ทูน่ากระป๋องของแมวที่แสนพิเศษ 1 ชิ้น",
+      "party": 1,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "สตาร์มอนส์",
+          "title": null,
+          "level": 20
+        },
+        {
+          "name": "สตาร์มอนส์",
+          "title": "หัวหน้า",
+          "level": 20
+        },
+        {
+          "name": "โกคิมอน",
+          "title": null,
+          "level": 50
+        },
+        {
+          "name": "โกคิมอน",
+          "title": "หัวหน้า",
+          "level": 50
+        },
+        {
+          "name": "โดกุมอน",
+          "title": null,
+          "level": 80
+        },
+        {
+          "name": "โดกุมอน",
+          "title": "หัวหน้า",
+          "level": 80
+        },
+        {
+          "name": "มาคุรามอน",
+          "title": null,
+          "level": 110
+        },
+        {
+          "name": "มาคุรามอน",
+          "title": "หัวหน้า",
+          "level": 110
+        }
+      ],
+      "rewards": [
+        {
+          "item": "ผลโฮเมโอสทาซิส [กิจกรรม]",
+          "rate": "30%",
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "ไข่สุ่มดิจิทามะ-แรร์มอน [ระดับ 4-5] [กิจกรรม]",
+          "rate": "50%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "เหรียญแลกเปลี่ยนชิปก้าวข้ามขีดจำกัดระดับกลาง [กิจกรรม]",
+          "rate": "70%",
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b5%e0%b9%89%e0%b8%a2%e0%b8%99%e0%b8%aa%e0%b8%a7%e0%b8%99%e0%b8%a5%e0%b8%b1%e0%b8%9a%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b9%82%e0%b8%a2%e0%b9%82/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-82/",
+      "date": "2025-12-24"
+    },
+    {
+      "name": "ฐานทัพของไกเซอร์",
+      "location": "D- เทอร์มินัล",
+      "npc": "<ผู้ต้อนรับดันเจี้ยนดิจิมอนไกเซอร์>วีมอน",
+      "req": "Lv.150+",
+      "pass_item": "ขุมพลังฟันเฟือง 5 ชิ้น",
+      "party": 4,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "คิเมรามอน",
+          "title": "สังเคราะห์",
+          "level": 155
+        },
+        {
+          "name": "คิเมรามอน",
+          "title": "สัตว์ประหลาด",
+          "level": 155
+        },
+        {
+          "name": "คิเมรามอน",
+          "title": "ชั่วร้าย",
+          "level": 155
+        },
+        {
+          "name": "คิเมรามอน",
+          "title": "สังเคราะห์",
+          "level": 166
+        },
+        {
+          "name": "คิเมรามอน",
+          "title": "สัตว์ประหลาด",
+          "level": 166
+        },
+        {
+          "name": "คิเมรามอน",
+          "title": "ชั่วร้าย",
+          "level": 166
+        }
+      ],
+      "rewards": [
+        {
+          "item": "พลังชั่วร้ายของคิเมรามอน",
+          "rate": "100%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "7T",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่งของอุปกรณ์ (ง่าย)",
+          "rate": "100%",
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "พลังชั่วร้ายของคิเมรามอน",
+          "rate": "100%",
+          "qty": "10",
+          "box": null
+        },
+        {
+          "item": "แหวนนิลของไกเซอร์",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "20T",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่งของอุปกรณ์ (ทั่วไป)",
+          "rate": "100%",
+          "qty": "3",
+          "box": null
+        },
+        {
+          "item": "พลังชั่วร้ายของคิเมรามอน",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่งของอุปกรณ์ (ง่าย)",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "พลังชั่วร้ายของคิเมรามอน",
+          "rate": "100%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่งของอุปกรณ์ (ทั่วไป)",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "พลังชั่วร้ายของคิเมรามอน",
+          "rate": "50%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "พลังชั่วร้ายของคิเมรามอน",
+          "rate": "50%",
+          "qty": "2",
+          "box": null
+        },
+        {
+          "item": "พลังชั่วร้ายของคิเมรามอน",
+          "rate": "20%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "5T",
+          "rate": "20%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องครอสโหลดเดอร์ที่ถูกผนึก",
+          "rate": "0.5%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "(ชิน) กล่องสุ่มอุปกรณ์",
+          "rate": "0.05%",
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b5%e0%b9%89%e0%b8%a2%e0%b8%99%e0%b8%90%e0%b8%b2%e0%b8%99%e0%b8%97%e0%b8%b1%e0%b8%9e%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b9%84%e0%b8%81%e0%b9%80%e0%b8%8b/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-84/",
+      "date": "2026-02-26"
+    },
+    {
+      "name": "ดาร์คเว็บ",
+      "location": "D-เทอร์มินัล",
+      "npc": "<ผู้ต้อนรับสู่ดาร์คเว็บ>โคจิโร่",
+      "req": "Lv.150+",
+      "pass_item": null,
+      "party": 2,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "เดียโบโรมอน",
+          "title": null,
+          "level": 160
+        },
+        {
+          "name": "???",
+          "title": null,
+          "level": 160
+        }
+      ],
+      "rewards": [
+        {
+          "item": "ข้อมูลของคุรามอน",
+          "rate": "100%",
+          "qty": "15",
+          "box": "กล่องของรางวัลดาร์คเว็บ [NORMAL]"
+        },
+        {
+          "item": "20T",
+          "rate": "100%",
+          "qty": "1",
+          "box": "กล่องของรางวัลดาร์คเว็บ [NORMAL]"
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่ง (ทั่วไป)",
+          "rate": "100%",
+          "qty": "5",
+          "box": "กล่องของรางวัลดาร์คเว็บ [NORMAL]"
+        },
+        {
+          "item": "กล่องไอเทมปลดขีดจำกัด [กิจกรรม]",
+          "rate": "100%",
+          "qty": "1",
+          "box": "กล่องของรางวัลดาร์คเว็บ [NORMAL]"
+        }
+      ],
+      "detail_url": "https://www.vplay.in.th/%e0%b8%94%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%b5%e0%b9%89%e0%b8%a2%e0%b8%99%e0%b8%94%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%84%e0%b9%80%e0%b8%a7%e0%b9%87%e0%b8%9a/",
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-86/",
+      "date": "2026-04-23"
+    },
+    {
+      "name": "เนเวอร์แลนด์",
+      "location": "D-เทอร์มินัล",
+      "npc": "<ผู้ต้อนรับสู่ดันเจี้ยน>โคจิโร่",
+      "req": "Lv.160+",
+      "pass_item": null,
+      "party": 4,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "อีออสมอน",
+          "title": null,
+          "level": 160
+        }
+      ],
+      "rewards": [
+        {
+          "item": "วงแหวนแห่งแสง",
+          "rate": null,
+          "qty": "20",
+          "box": "กล่องของรางวัลเนเวอร์แลนด์ [NORMAL]"
+        },
+        {
+          "item": "ทองคำ 40 T",
+          "rate": null,
+          "qty": "1",
+          "box": "กล่องของรางวัลเนเวอร์แลนด์ [NORMAL]"
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่ง (ทั่วไป)",
+          "rate": null,
+          "qty": "7",
+          "box": "กล่องของรางวัลเนเวอร์แลนด์ [NORMAL]"
+        },
+        {
+          "item": "กล่องไอเทมปลดขีดจำกัด [กิจกรรม]",
+          "rate": null,
+          "qty": "1",
+          "box": "กล่องของรางวัลเนเวอร์แลนด์ [NORMAL]"
+        },
+        {
+          "item": "เหรียญดันเจี้ยนดิจิมอน มาสเตอร์ส",
+          "rate": null,
+          "qty": "1",
+          "box": "กล่องของรางวัลเนเวอร์แลนด์ [NORMAL]"
+        },
+        {
+          "item": "กล่องไอเทมปลดขีดจำกัด [กิจกรรม] / สุ่ม",
+          "rate": null,
+          "qty": "1",
+          "box": "กล่องของรางวัลเนเวอร์แลนด์ [NORMAL]"
+        },
+        {
+          "item": "กล่องเฟิร์สท์ ดิจิไวซ์ที่ถูกผนึก / สุ่ม",
+          "rate": null,
+          "qty": "1",
+          "box": "กล่องของรางวัลเนเวอร์แลนด์ [NORMAL]"
+        }
+      ],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-93/",
+      "date": "2026-08-27"
+    },
+    {
+      "name": "ฝันร้าย",
+      "location": "D-เทอร์มินัล",
+      "npc": "<ผู้ต้อนรับสู่ดันเจี้ยน>วีมอน",
+      "req": "Lv.160+",
+      "pass_item": null,
+      "party": 1,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "เบเรียลแวมเดมอน",
+          "title": null,
+          "level": 160
+        }
+      ],
+      "rewards": [
+        {
+          "item": "ดอกไม้แห่งความมืด",
+          "rate": null,
+          "qty": "20",
+          "box": "กล่องของรางวัลฝันร้าย [HARD]"
+        },
+        {
+          "item": "ทองคำ 40 T",
+          "rate": null,
+          "qty": "1",
+          "box": "กล่องของรางวัลฝันร้าย [HARD]"
+        },
+        {
+          "item": "กล่องวัตถุดิบเสริมแกร่ง (ทั่วไป)",
+          "rate": null,
+          "qty": "7",
+          "box": "กล่องของรางวัลฝันร้าย [HARD]"
+        },
+        {
+          "item": "กล่องไอเทมปลดขีดจำกัด [กิจกรรม]",
+          "rate": null,
+          "qty": "2",
+          "box": "กล่องของรางวัลฝันร้าย [HARD]"
+        },
+        {
+          "item": "เหรียญดันเจี้ยนดิจิมอน มาสเตอร์ส",
+          "rate": null,
+          "qty": "1",
+          "box": "กล่องของรางวัลฝันร้าย [HARD]"
+        }
+      ],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/",
+      "date": "2026-09-17"
+    },
+    {
+      "name": "เทอร์มินัลใต้ดิน",
+      "location": "โลกดิจิตอล",
+      "npc": "<โลกดิจิตอล>โบโคมอน",
+      "req": null,
+      "pass_item": "บัตรผ่านเทอร์มินัลใต้ดิน [กิจกรรม] 1 ชิ้น",
+      "party": 1,
+      "clear_reward": null,
+      "monsters": [
+        {
+          "name": "แรร์มอน",
+          "title": null,
+          "level": 175
+        }
+      ],
+      "rewards": [
+        {
+          "item": "ดิจิโค้ดที่ไม่เสถียร",
+          "rate": "100%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มอุปกรณ์ฟรอนเทียร์ [กิจกรรม]",
+          "rate": "3.85%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "กล่องสุ่มอุปกรณ์ฟรอนเทียร์",
+          "rate": "1%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ถุงคริสตัลพลังดิจิทารี่ [กิจกรรม]",
+          "rate": "15%",
+          "qty": "1",
+          "box": null
+        },
+        {
+          "item": "ถุงสุ่มแอปถ่ายโอนข้อมูล & ชุดชิ้นส่วนข้อมูลการเสริมแกร่ง",
+          "rate": "15%",
+          "qty": "1",
+          "box": null
+        }
+      ],
+      "detail_url": null,
+      "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/",
+      "date": "2026-10-15"
+    }
+  ]
+}

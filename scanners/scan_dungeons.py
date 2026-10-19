@@ -20,10 +20,12 @@ merging onto the previous data/dungeons.json when present.
 """
 
 import datetime as dt
+import hashlib
 import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import unquote
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "builders"))
 from stamped_json import write_stamped  # noqa: E402
@@ -33,6 +35,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 PROJ = Path(__file__).resolve().parent.parent
 CACHE = PROJ / "cache"
 OUT = PROJ / "data" / "dungeons.json"
+PATCH = PROJ / "data" / "th_patch_dungeons.json"
 
 LEVEL_RE = re.compile(r"(?:Lv\.?\s*(\d+)|เลเวล\s*(\d+)|เทมเมอร์\s*(?:มี)?เลเวล\s*(\d+))")
 PASS_RE = re.compile(r"บัตรผ่าน[^\n]{0,60}")
@@ -141,29 +144,99 @@ def load_prev():
     return {}
 
 
+def url_key(url):
+    return unquote(url or "").rstrip("/").lower()
+
+
+def iso_date(text):
+    try:
+        return dt.datetime.strptime(text.replace(",", ""), "%b %d %Y").date().isoformat()
+    except (AttributeError, ValueError):
+        return text
+
+
+# Not "ผู้ปกครอง": the four holy beasts carry it and are only the way to
+# Fanglongmon, who is listed last with no title.
+BOSS_MARKS = ("มาสเตอร์", "เจ้าของ", "จอมบงการ", "เทวา", "บอส")
+
+
+def pick_boss(mons):
+    """The strongest monster listed, minions and placeholders ("???", "–")
+    aside. Equal levels are common -- the whole room shares one -- so a boss
+    title wins the tie, then the last one, which is where posts put the final
+    boss."""
+    def tag(m):
+        return "%s %s" % (m["name"], m.get("title") or "")
+    real = [m for m in mons if m["name"].strip("?–- ") and "สมุน" not in tag(m)]
+    if not real:
+        return None
+    def strength(m):
+        # Stage tables give a floor ("ระดับ 7") instead of a level.
+        floor = re.search(r"ระดับ\s*(\d+)", m.get("title") or "")
+        return m.get("level") or (int(floor.group(1)) if floor else 0)
+    ranked = sorted(enumerate(real), key=lambda im: (
+        strength(im[1]), any(k in tag(im[1]) for k in BOSS_MARKS), im[0]))
+    return ranked[-1][1]["name"]
+
+
+def patch_entry(p, prev):
+    """One dungeon from a patch post (scan_th_patch_dungeons.py)."""
+    sid = "thp-" + hashlib.md5(p["name"].encode("utf-8")).hexdigest()[:8]
+    mons = [m for m in p.get("monsters") or [] if m.get("name")]
+    boss = pick_boss(mons) or p["name"]
+    drop = ["%s %s" % (r["item"], r["qty"] or "") for r in p.get("rewards") or []]
+    th = {
+        "name": p["name"], "url": p["url"], "date": p["date"], "boss": boss,
+        "summary": None, "req": p.get("req"), "pass_item": p.get("pass_item"),
+        "drop": [x.strip() for x in drop],
+        "location": p.get("location"), "npc": p.get("npc"), "party": p.get("party"),
+        "monsters": mons, "rewards": p.get("rewards") or [],
+        "clear_reward": p.get("clear_reward"), "detail_url": p.get("detail_url"),
+    }
+    base = prev.get(sid, {"id": sid, "boss_en": "", "image": "", "na": None, "kr": None})
+    base["th"] = th
+    return sid, base
+
+
 def main():
     prev = load_prev()
+    prev_by_url = {url_key((d.get("th") or {}).get("url")): d for d in prev.values()}
+    patch = (json.loads(PATCH.read_text(encoding="utf-8"))["dungeons"]
+             if PATCH.exists() else [])
+    details = {url_key(p.get("detail_url")) for p in patch if p.get("detail_url")}
     sources = sorted(CACHE.glob("th_dungeon_*.html"))
     # cache/ is gitignored, so a fresh clone has none of these; writing anyway would
     # replace the tracked file (and its hand-filled na/kr/boss_en) with an empty list.
-    if not sources:
-        sys.exit("no cache/th_dungeon_*.html -- run fetchers/fetch_dungeons_th.py first; "
-                 "%s left untouched" % OUT.relative_to(PROJ))
+    if not sources and not patch:
+        sys.exit("no cache/th_dungeon_*.html and no %s -- run fetchers/fetch_dungeons_th.py "
+                 "first; %s left untouched" % (PATCH.relative_to(PROJ), OUT.relative_to(PROJ)))
     dungeons = {}
+    for sid, d in (patch_entry(p, prev) for p in patch):
+        dungeons[sid] = d
+    seen_urls = set()
     for f in sources:
         html = f.read_text(encoding="utf-8")
+        url_m = re.search(r'<link rel="canonical" href="([^"]+)"', html)
+        # A page a patch post links for details is already folded into that
+        # patch dungeon; reading it again here would list the dungeon twice.
+        if url_m and url_key(url_m.group(1)) in details:
+            continue
+        if url_m:
+            seen_urls.add(url_key(url_m.group(1)))
         title = title_from_html(html)
         lines = clean_lines(html)
         # trim leading nav: start at first reoccurrence of the post title
         ti = next((j for j, ln in enumerate(lines) if title[:12] and title[:12] in ln and j > 3), 0)
         body = lines[ti:]
-        url_m = re.search(r'<link rel="canonical" href="([^"]+)"', html)
         boss = boss_from_title(title)
-        sid = slug(title, f.name)
+        # Keep the id a page already had: it was hashed from the cache file
+        # name, and that name has changed since.
+        known = prev_by_url.get(url_key(url_m.group(1))) if url_m else None
+        sid = known["id"] if known else slug(title, f.name)
         th = {
             "name": title,
             "url": url_m.group(1) if url_m else None,
-            "date": parse_date(body),
+            "date": iso_date(parse_date(body)),
             "boss": boss,
             "summary": parse_summary(body[1:]),
             "req": parse_req(body),
@@ -173,6 +246,13 @@ def main():
         base = prev.get(sid, {"id": sid, "boss_en": "", "image": "", "na": None, "kr": None})
         base["th"] = th
         dungeons[sid] = base
+
+    # A dedicated post whose cache file is gone (fresh clone) keeps its entry.
+    for sid, d in prev.items():
+        if sid not in dungeons and not sid.startswith("thp-"):
+            u = url_key((d.get("th") or {}).get("url"))
+            if u not in seen_urls and u not in details:
+                dungeons[sid] = d
 
     payload = {
         "fetched_at": dt.date.today().isoformat(),

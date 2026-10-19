@@ -35,6 +35,13 @@ STEPS = [
     ("th", True, "scanners/scan_th_patch_digimon.py", []),
     ("th", False, "enrichers/enrich_digimon_th.py", []),
     ("th", False, "extractors/extract_th_digimon_images.py", []),
+    # Twice on purpose: the first pass finds the detail links the fetcher
+    # follows, the second folds those pages in.
+    ("th", False, "scanners/scan_th_patch_dungeons.py", []),
+    ("th", True, "fetchers/fetch_dungeons_th.py", []),
+    ("th", False, "scanners/scan_th_patch_dungeons.py", []),
+    ("th", False, "scanners/scan_dungeons.py", []),
+    ("", False, "builders/build_dungeon_html.py", []),
     ("", False, "enrichers/enrich_digimon_gameking.py", []),
     ("", False, "enrichers/enrich_digimon_rebalance.py", []),
     ("", False, "builders/extract_seal_tables.py", []),
