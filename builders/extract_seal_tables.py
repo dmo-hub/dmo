@@ -464,6 +464,8 @@ def normalize_table(tb, server):
         maxcell = row[imax] if imax is not None and imax < len(row) else ""
         sm = _STAT.search(statcell) or _STAT.search(maxcell)
         stat = sm.group(1) if sm else statcell.strip()
+        if stat == "SCD":  # skill damage — same label the gear pages use
+            stat = "Skill DMG"
         mx = _num(maxcell)
         if not mx:  # stat & max combined e.g. "AT +150"
             mx = _num(statcell)
