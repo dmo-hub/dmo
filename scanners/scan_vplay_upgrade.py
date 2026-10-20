@@ -72,14 +72,14 @@ STAT_ALIASES = {
     "อัตราโจมตี": "HT",
     "โจมตี": "AT",
     "ป้องกัน": "DE",
-    "พลังโจมตีคริติคอล": "Crit DMG",
+    "พลังโจมตีคริติคอล": "CT DMG",
     "ความเร็วในการโจมตี": "AS",
     "ความเร็วในการเคลื่อนที่": "Speed",
     "เป็นมิตร": "Affinity",
     "scd": "SCD",
     "ms": "Speed",
 }
-PCT_STATS = {"CT", "EV", "BL", "Skill DMG", "Final DMG", "EXP", "Crit DMG"}
+PCT_STATS = {"CT", "EV", "BL", "Skill DMG", "Final DMG", "EXP", "CT DMG"}
 
 # Frontier gear: one table holds a block per slot, each opened by
 # [LEVEL_HEADER, <slot>] instead of a 1-cell title. The table never names the

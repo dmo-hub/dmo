@@ -4770,6 +4770,13 @@
           "random": false,
           "min": 16.0,
           "max": 20.0
+        },
+        {
+          "stat": "CT DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 30.0,
+          "max": 40.0
         }
       ],
       "upgrade": 5,
@@ -4788,6 +4795,13 @@
           "random": false,
           "min": 25.0,
           "max": 30.0
+        },
+        {
+          "stat": "CT DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 50.0,
+          "max": 55.0
         },
         {
           "stat": "CT",
@@ -4897,6 +4911,13 @@
           "random": false,
           "min": 6.5,
           "max": 7.5
+        },
+        {
+          "stat": "CT DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 10.0,
+          "max": 14.0
         }
       ],
       "upgrade": 5,
@@ -4916,6 +4937,13 @@
           "random": false,
           "min": 7.75,
           "max": 15.0
+        },
+        {
+          "stat": "CT DMG",
+          "unit": "pct",
+          "random": false,
+          "min": 15.0,
+          "max": 40.0
         },
         {
           "stat": "CT",

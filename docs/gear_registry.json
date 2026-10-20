@@ -1821,6 +1821,13 @@
       "icon": "img/gear/mdghead-davis.png",
       "CT": 25.0,
       "ranged": true,
+      "extra": [
+        {
+          "stat": "CT DMG",
+          "value": 40.0,
+          "unit": "pct"
+        }
+      ],
       "nameTh": "ผ้าโพกหัวของไดสุเกะ",
       "nameThShin": "(ชิน) ผ้าโพกหัวของไดสุเกะ"
     },
@@ -1849,6 +1856,13 @@
       "icon": "img/gear/digimonfrontierhead-fire.png",
       "CT": 55.0,
       "ranged": true,
+      "extra": [
+        {
+          "stat": "CT DMG",
+          "value": 55.0,
+          "unit": "pct"
+        }
+      ],
       "nameTh": "ไฟ : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -1864,6 +1878,13 @@
       "icon": "img/gear/digimonfrontierhead-ice.png",
       "CT": 55.0,
       "ranged": true,
+      "extra": [
+        {
+          "stat": "CT DMG",
+          "value": 55.0,
+          "unit": "pct"
+        }
+      ],
       "nameTh": "น้ำแข็ง : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -1901,6 +1922,13 @@
       "icon": "img/gear/digimonfrontierhead-light.png",
       "CT": 55.0,
       "ranged": true,
+      "extra": [
+        {
+          "stat": "CT DMG",
+          "value": 55.0,
+          "unit": "pct"
+        }
+      ],
       "nameTh": "แสง : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -1969,6 +1997,13 @@
       "icon": "img/gear/mdghead-tk.png",
       "CT": 25.0,
       "ranged": true,
+      "extra": [
+        {
+          "stat": "CT DMG",
+          "value": 40.0,
+          "unit": "pct"
+        }
+      ],
       "nameTh": "หมวกของทาเครุ",
       "nameThShin": "(ชิน) หมวกของทาเครุ"
     },
@@ -1985,6 +2020,13 @@
       "icon": "img/gear/digimonfrontierhead-thunder.png",
       "CT": 55.0,
       "ranged": true,
+      "extra": [
+        {
+          "stat": "CT DMG",
+          "value": 55.0,
+          "unit": "pct"
+        }
+      ],
       "nameTh": "สายฟ้า : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -2012,6 +2054,13 @@
       "icon": "img/gear/digimonfrontierhead-wind.png",
       "CT": 55.0,
       "ranged": true,
+      "extra": [
+        {
+          "stat": "CT DMG",
+          "value": 55.0,
+          "unit": "pct"
+        }
+      ],
       "nameTh": "ลม : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -2045,6 +2094,13 @@
       "icon": "img/gear/mdghead-yolei.png",
       "CT": 25.0,
       "ranged": true,
+      "extra": [
+        {
+          "stat": "CT DMG",
+          "value": 40.0,
+          "unit": "pct"
+        }
+      ],
       "nameTh": "หมวกของมิยาโกะ",
       "nameThShin": "(ชิน) หมวกของมิยาโกะ"
     },

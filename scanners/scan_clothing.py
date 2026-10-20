@@ -58,6 +58,7 @@ STAT_ALIASES = {
     "skill dmg": "Skill DMG", "skilldmg": "Skill DMG", "skill damage": "Skill DMG",
     "finaldmg": "Final DMG", "final dmg": "Final DMG",
     "speed": "Speed", "affinity": "Affinity",
+    "ctdmg": "CT DMG",
 }
 
 # Headings whose tables describe something other than a wearable item.
@@ -106,7 +107,7 @@ def canon_stat(label):
 TRAILING_ONE = re.compile(
     r"^\s*(\d+(?:\.\d+)?)\s*(%?)"
     r"(?:\s*[-~]\s*(\d+(?:\.\d+)?)\s*(%?))?"
-    r"\s*([A-Za-z][A-Za-z /]*?)\s*$"
+    r"\s*([A-Za-z][A-Za-z /-]*?)\s*$"       # "-" for "CT-DMG"
 )
 # "1500 HT- 3000 HT" repeats the stat name on both ends of the range.
 TRAILING_DUP = re.compile(

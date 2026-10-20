@@ -3422,7 +3422,7 @@
               "value": 16.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 30.0
             }
@@ -3437,7 +3437,7 @@
               "value": 17.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 34.0
             }
@@ -3452,7 +3452,7 @@
               "value": 18.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 36.0
             }
@@ -3467,7 +3467,7 @@
               "value": 19.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 38.0
             }
@@ -3482,7 +3482,7 @@
               "value": 20.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 40.0
             }
@@ -3497,7 +3497,7 @@
               "value": 45.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 50.0
             }
@@ -3512,7 +3512,7 @@
               "value": 47.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 51.0
             }
@@ -3527,7 +3527,7 @@
               "value": 49.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 52.0
             }
@@ -3542,7 +3542,7 @@
               "value": 51.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 53.0
             }
@@ -3557,7 +3557,7 @@
               "value": 53.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 54.0
             }
@@ -3572,7 +3572,7 @@
               "value": 55.0
             },
             {
-              "stat": "Crit DMG",
+              "stat": "CT DMG",
               "unit": "pct",
               "value": 55.0
             }
