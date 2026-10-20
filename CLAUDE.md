@@ -385,3 +385,17 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   `cache/_stale-<date>/` after gameking stopped answering, and Gammamon plus
   three NA banners went missing until the files were copied back. Use the
   fetchers' `--force` instead.
+- vplay's whole post archive is open through WordPress:
+  `https://www.vplay.in.th/wp-json/wp/v2/posts?per_page=100&page=N` (685 posts
+  across every category on 2026-10-20). The cache only covers the patch-note
+  category, so a Thai name or per-level table not found in `cache/` is often in
+  an event/promotion post -- that is where 7 Thai gear names and the Spirit /
+  Four Holy Beasts level tables came from.
+- `scanners/scan_clothing.py` is not a `refresh.py` step. After changing it
+  run it by hand, then `builders/build_gear_registry.py`, then
+  `tools/validate.py` twice: the first run fails "builders idempotent" because
+  `docs/set_registry.json` still holds the old values, the second passes.
+- An item missing from the wiki-built registry is not proof NA lacks it. grep
+  the NA notices in `cache/event_*.html` / `cache/patch_*.html` first: the 2025
+  Four Holy Beasts gear (Noble Head Ornament of Huanglongmon ...) is absent
+  from dmowiki's Clothing page but sold in event_740 / event_784.
