@@ -1,6 +1,6 @@
 {
-  "scanned": 126,
-  "release_posts": 26,
+  "scanned": 139,
+  "release_posts": 27,
   "posts": [
     {
       "o": "823928",
@@ -147,6 +147,16 @@
         "블룸로드몬"
       ],
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=797630&Btype=Update"
+    },
+    {
+      "o": "796519",
+      "date": "2025-01-22",
+      "num": 882,
+      "kr_names": [
+        "[ 각성 ] 워그레이몬",
+        "[ 각성 ] 메탈가루몬"
+      ],
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=796519&Btype=Update"
     },
     {
       "o": "795819",

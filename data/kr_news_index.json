@@ -1,9 +1,25 @@
 {
-  "fetched_at": "2026-10-19",
+  "fetched_at": "2026-10-20",
   "stop_date": "2024-01-01",
-  "total": 234,
-  "update_count": 126,
+  "total": 260,
+  "update_count": 139,
   "posts": [
+    {
+      "o": "825344",
+      "num": 1053,
+      "date": "2026-10-20",
+      "type": "update",
+      "title": "10월 20일(화) 업데이트 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=825344&Btype=Update"
+    },
+    {
+      "o": "825343",
+      "num": 1052,
+      "date": "2026-10-20",
+      "type": "promotion",
+      "title": "10월 20일(화) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=825343&Btype=Update"
+    },
     {
       "o": "824740",
       "num": 1051,
@@ -75,6 +91,14 @@
       "type": "update",
       "title": "9월 15일(화) 업데이트 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=823928&Btype=Update"
+    },
+    {
+      "o": "823927",
+      "num": 1042,
+      "date": "2026-09-15",
+      "type": "promotion",
+      "title": "9월 15일(화) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=823927&Btype=Update"
     },
     {
       "o": "823533",
@@ -149,6 +173,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=819630&Btype=Update"
     },
     {
+      "o": "819032",
+      "num": 1032,
+      "date": "2026-08-04",
+      "type": "update",
+      "title": "8월 4일(화) 업데이트 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=819032&Btype=Update"
+    },
+    {
       "o": "819031",
       "num": 1031,
       "date": "2026-08-04",
@@ -219,6 +251,14 @@
       "type": "promotion",
       "title": "7월 7일(화) 프로모션 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=818554&Btype=Update"
+    },
+    {
+      "o": "818351",
+      "num": 1022,
+      "date": "2026-06-30",
+      "type": "update",
+      "title": "6월 30일(화) 업데이트 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=818351&Btype=Update"
     },
     {
       "o": "818350",
@@ -293,6 +333,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=817853&Btype=Update"
     },
     {
+      "o": "817019",
+      "num": 1012,
+      "date": "2026-05-26",
+      "type": "update",
+      "title": "5월 26일(화) 업데이트 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=817019&Btype=Update"
+    },
+    {
       "o": "816756",
       "num": 1011,
       "date": "2026-05-19",
@@ -363,6 +411,14 @@
       "type": "update",
       "title": "4월 21일(화) 업데이트 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=815862&Btype=Update"
+    },
+    {
+      "o": "815861",
+      "num": 1002,
+      "date": "2026-04-21",
+      "type": "promotion",
+      "title": "4월 21일(화) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=815861&Btype=Update"
     },
     {
       "o": "815632",
@@ -437,6 +493,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814935&Btype=Update"
     },
     {
+      "o": "814934",
+      "num": 992,
+      "date": "2026-03-17",
+      "type": "promotion",
+      "title": "3월 17일(화) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814934&Btype=Update"
+    },
+    {
       "o": "814707",
       "num": 991,
       "date": "2026-03-10",
@@ -507,6 +571,14 @@
       "type": "update",
       "title": "2월 3일(화) 업데이트 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814064&Btype=Update"
+    },
+    {
+      "o": "814063",
+      "num": 982,
+      "date": "2026-02-03",
+      "type": "promotion",
+      "title": "2월 3일(화) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=814063&Btype=Update"
     },
     {
       "o": "813810",
@@ -581,6 +653,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812545&Btype=Update"
     },
     {
+      "o": "812544",
+      "num": 972,
+      "date": "2025-12-30",
+      "type": "promotion",
+      "title": "12월 30일(화) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812544&Btype=Update"
+    },
+    {
       "o": "812465",
       "num": 971,
       "date": "2025-12-23",
@@ -651,6 +731,14 @@
       "type": "promotion",
       "title": "11월 25일(화) 프로모션 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812031&Btype=Update"
+    },
+    {
+      "o": "811897",
+      "num": 962,
+      "date": "2025-11-19",
+      "type": "update",
+      "title": "11월 19일(수) 업데이트 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811897&Btype=Update"
     },
     {
       "o": "811896",
@@ -725,6 +813,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811362&Btype=Update"
     },
     {
+      "o": "811361",
+      "num": 952,
+      "date": "2025-10-15",
+      "type": "promotion",
+      "title": "10월 15일(수) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811361&Btype=Update"
+    },
+    {
       "o": "811059",
       "num": 951,
       "date": "2025-10-03",
@@ -795,6 +891,14 @@
       "type": "promotion",
       "title": "9월 10일(수) 프로모션 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810774&Btype=Update"
+    },
+    {
+      "o": "810629",
+      "num": 942,
+      "date": "2025-09-03",
+      "type": "update",
+      "title": "9월 3일(수) 업데이트 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810629&Btype=Update"
     },
     {
       "o": "810628",
@@ -869,6 +973,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=809162&Btype=Update"
     },
     {
+      "o": "808517",
+      "num": 932,
+      "date": "2025-07-30",
+      "type": "update",
+      "title": "7월 30일(수) 업데이트 안내(수정)",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=808517&Btype=Update"
+    },
+    {
       "o": "808516",
       "num": 931,
       "date": "2025-07-30",
@@ -939,6 +1051,14 @@
       "type": "promotion",
       "title": "7월 2일(수) 프로모션 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=807741&Btype=Update"
+    },
+    {
+      "o": "807555",
+      "num": 922,
+      "date": "2025-06-25",
+      "type": "update",
+      "title": "6월 25일(수) 업데이트 안내(수정)",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=807555&Btype=Update"
     },
     {
       "o": "807554",
@@ -1013,6 +1133,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=803069&Btype=Update"
     },
     {
+      "o": "802858",
+      "num": 912,
+      "date": "2025-05-21",
+      "type": "update",
+      "title": "5월 21일(수) 업데이트 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=802858&Btype=Update"
+    },
+    {
       "o": "802857",
       "num": 911,
       "date": "2025-05-21",
@@ -1083,6 +1211,14 @@
       "type": "update",
       "title": "4월 16일(수) 업데이트 안내(수정)",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=800260&Btype=Update"
+    },
+    {
+      "o": "800259",
+      "num": 902,
+      "date": "2025-04-16",
+      "type": "promotion",
+      "title": "4월 16일(수) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=800259&Btype=Update"
     },
     {
       "o": "800036",
@@ -1157,6 +1293,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=798287&Btype=Update"
     },
     {
+      "o": "798286",
+      "num": 892,
+      "date": "2025-03-12",
+      "type": "promotion",
+      "title": "3월 12일(수) 프로모션 안내(수정)",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=798286&Btype=Update"
+    },
+    {
       "o": "798164",
       "num": 891,
       "date": "2025-03-05",
@@ -1227,6 +1371,14 @@
       "type": "promotion",
       "title": "2월 5일(수) 프로모션 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=797209&Btype=Update"
+    },
+    {
+      "o": "796519",
+      "num": 882,
+      "date": "2025-01-22",
+      "type": "update",
+      "title": "1월 22일(수) 업데이트 안내(수정)",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=796519&Btype=Update"
     },
     {
       "o": "796518",
@@ -1301,6 +1453,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=795654&Btype=Update"
     },
     {
+      "o": "795653",
+      "num": 872,
+      "date": "2024-12-11",
+      "type": "promotion",
+      "title": "12월 11일(수) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=795653&Btype=Update"
+    },
+    {
       "o": "795477",
       "num": 871,
       "date": "2024-12-04",
@@ -1371,6 +1531,14 @@
       "type": "update",
       "title": "10월 23일(수) 업데이트 안내 (수정)",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=793209&Btype=Update"
+    },
+    {
+      "o": "793207",
+      "num": 862,
+      "date": "2024-10-23",
+      "type": "promotion",
+      "title": "10월 23일(수) 프로모션 안내(수정)",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=793207&Btype=Update"
     },
     {
       "o": "793037",
@@ -1445,6 +1613,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=789966&Btype=Update"
     },
     {
+      "o": "789965",
+      "num": 852,
+      "date": "2024-09-04",
+      "type": "promotion",
+      "title": "9월 4일(수) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=789965&Btype=Update"
+    },
+    {
       "o": "789846",
       "num": 851,
       "date": "2024-08-28",
@@ -1515,6 +1691,14 @@
       "type": "promotion",
       "title": "7월 24일(수) 프로모션 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=789044&Btype=Update"
+    },
+    {
+      "o": "788760",
+      "num": 842,
+      "date": "2024-07-17",
+      "type": "update",
+      "title": "7월 17일(수) 업데이트 안내(수정)",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=788760&Btype=Update"
     },
     {
       "o": "788597",
@@ -1589,6 +1773,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787976&Btype=Update"
     },
     {
+      "o": "787843",
+      "num": 832,
+      "date": "2024-06-05",
+      "type": "update",
+      "title": "6월 5일(수) 업데이트 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787843&Btype=Update"
+    },
+    {
       "o": "787646",
       "num": 831,
       "date": "2024-05-29",
@@ -1659,6 +1851,14 @@
       "type": "update",
       "title": "4월 30일(화) 업데이트 안내(수정)",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=786816&Btype=Update"
+    },
+    {
+      "o": "786815",
+      "num": 822,
+      "date": "2024-04-30",
+      "type": "promotion",
+      "title": "4월 30일(화) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=786815&Btype=Update"
     },
     {
       "o": "786566",
@@ -1733,6 +1933,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=783359&Btype=Update"
     },
     {
+      "o": "783358",
+      "num": 812,
+      "date": "2024-03-06",
+      "type": "promotion",
+      "title": "3월 6일(수) 프로모션 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=783358&Btype=Update"
+    },
+    {
       "o": "782987",
       "num": 811,
       "date": "2024-02-28",
@@ -1805,6 +2013,14 @@
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=781497&Btype=Update"
     },
     {
+      "o": "781399",
+      "num": 802,
+      "date": "2024-01-03",
+      "type": "update",
+      "title": "1월 3일 (수) 업데이트 안내",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=781399&Btype=Update"
+    },
+    {
       "o": "781398",
       "num": 801,
       "date": "2024-01-03",
@@ -1867,14 +2083,6 @@
       "type": "update",
       "title": "12월 06일 (수) 업데이트 안내",
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=779280&Btype=Update"
-    },
-    {
-      "o": "779279",
-      "num": 793,
-      "date": "2023-12-06",
-      "type": "promotion",
-      "title": "12월 06일 (수) 프로모션 안내",
-      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=779279&Btype=Update"
     }
   ]
 }
