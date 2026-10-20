@@ -70,12 +70,14 @@ def entry_key(raw_name, th_to_en):
 
 def main() -> None:
     seal_data = json.loads(SEAL_DATA.read_text(encoding="utf-8"))
-    kr_rel_path = PROJ / "data" / "kr_digimon_releases.json"
-    kr_date_by_o = (
-        {r["o"]: r["date"] for r in json.loads(kr_rel_path.read_text(encoding="utf-8"))["posts"]}
-        if kr_rel_path.exists()
-        else {}
-    )
+    kr_date_by_o: dict[str, str] = {}
+    # releases first; the news index dates OVERRIDES posts that carry no
+    # 신규 디지몬 marker (o=780048 for Omegamon Merciful Mode)
+    for name in ("kr_digimon_releases.json", "kr_news_index.json"):
+        path = PROJ / "data" / name
+        if path.exists():
+            for r in json.loads(path.read_text(encoding="utf-8"))["posts"]:
+                kr_date_by_o.setdefault(r["o"], r["date"])
     kr_to_en = json.loads(KR_EN.read_text(encoding="utf-8"))
     th_to_en = json.loads(TH_EN.read_text(encoding="utf-8"))
     digimon = json.loads(DIGIMON.read_text(encoding="utf-8"))
@@ -178,9 +180,11 @@ def main() -> None:
             # KR side: enricher-pinned date_kr, else the matched release
             # post's date (coverage used to ignore digimon KR entirely, so
             # it reported the seal side's much older max)
+            kr_date = ""
             if p.get("source_kr"):
                 mo = re.search(r"[?&]o=(\d+)", p["source_kr"])
-                bump("kr", p.get("date_kr") or (kr_date_by_o.get(mo.group(1)) if mo else ""))
+                kr_date = p.get("date_kr") or (kr_date_by_o.get(mo.group(1)) if mo else "") or ""
+                bump("kr", kr_date)
             anchor = f"digimon.html#{'e' if kind == 'event' else 'p'}{idx}"
             for name in p.get("digimon", []):
                 canon = canonical(name)
@@ -195,7 +199,7 @@ def main() -> None:
                 servers = {}
                 servers["na"] = [{"url": p.get("source", ""), "date": p.get("date", "")}]
                 if p.get("source_kr"):
-                    servers["kr"] = [{"url": p["source_kr"], "date": ""}]
+                    servers["kr"] = [{"url": p["source_kr"], "date": kr_date}]
                 if p.get("source_th"):
                     servers["th"] = [{"url": p["source_th"], "date": p.get("date_th", "")}]
                 dig_entries.append({
