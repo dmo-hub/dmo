@@ -54,6 +54,7 @@ EXISTING_MARKER_RE = re.compile(
     r"\[\s*(?:Existing\s+Deck\s+Effect\s+Changed|Modify\s+Existing\s+Deck)\b[^\]]*\]",
     re.IGNORECASE,
 )
+POST_DATE_RE = re.compile(r">\s*\d{2}-\d{2}-\d{4}\s*<")
 DIGIMON_LIST_RE = re.compile(r"\[\s*([^\]]{3,90}?)\s*\]\s*Digimon\s*List", re.IGNORECASE)
 
 
@@ -194,12 +195,16 @@ def process_one(session, kind, item):
     idx = int(item["idx"])
     try:
         html, cached = fetch_detail(session, kind, idx)
+        # Cache every post, not only deck posts: the digimon/seal/name-tag
+        # scanners read cache/ alone, so a post left out here is invisible
+        # to them. A post date marks a real post page, so an error page from
+        # a struggling gameking is not cached for good.
+        if not cached and POST_DATE_RE.search(html):
+            (CACHE / f"{kind}_{idx}.html").write_text(html, encoding="utf-8")
         if not has_marker(html):
             return None
         text = html_to_text(html)
         parsed = parse_decks(text)
-        if not cached:
-            (CACHE / f"{kind}_{idx}.html").write_text(html, encoding="utf-8")
         return {
             "kind": kind,
             "idx": idx,

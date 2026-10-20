@@ -389,6 +389,12 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   `cache/_stale-<date>/` after gameking stopped answering, and Gammamon plus
   three NA banners went missing until the files were copied back. Use the
   fetchers' `--force` instead.
+- `scan_decks.py` is what fills `cache/` with NA posts during `refresh.py`, so
+  it caches every post it fetches (any page carrying a post date), not just
+  deck posts. It once kept deck posts only, and a refresh then showed no new
+  NA digimon/seal content for three months although the list had the posts:
+  `scan_digimon.py` and the seal extractor saw nothing they had not been
+  handed. A deck marker can also be plural -- `[New Decks Added]` (post 4199).
 - vplay's post archive is open through WordPress:
   `https://www.vplay.in.th/wp-json/wp/v2/posts?per_page=100&page=N` (685 posts
   on 2026-10-20) -- but that listing leaves out the GM-note category (id 5, 56
