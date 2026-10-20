@@ -4,6 +4,53 @@
   "note": "accessories roll random options; rows are what each option can roll (min/max, or the cap), not what a piece has",
   "items": [
     {
+      "name": "Miracle Bracelet [Special]",
+      "slot": "bracelet",
+      "iconWiki": "/images/7/7e/Miracle_Bracelet_-Special-.png",
+      "icon": "img/gear/miracle_bracelet_-special-.png",
+      "options": "5",
+      "numberChange": true,
+      "obtain": "Trading Miracle Bracelet [Level 10] + Royal : X-Knight's Bracelet with Magnamon NPC",
+      "rows": [
+        {
+          "label": "Max HP",
+          "max": "+1200"
+        },
+        {
+          "label": "Max DS",
+          "max": "+1200"
+        },
+        {
+          "label": "Attack",
+          "max": "+600"
+        },
+        {
+          "label": "Defense",
+          "max": "+150"
+        },
+        {
+          "label": "Critical",
+          "max": "+10%"
+        },
+        {
+          "label": "Skill",
+          "max": "+450"
+        },
+        {
+          "label": "Critical Damage",
+          "max": "+30%"
+        },
+        {
+          "label": "Hit Rate",
+          "max": "+750"
+        },
+        {
+          "label": "Evasion",
+          "max": "+9%"
+        }
+      ]
+    },
+    {
       "name": "Royal : X-Knight's Bracelet",
       "slot": "bracelet",
       "iconWiki": "/images/a/ad/Royal_-_X-Knight%27s_Bracelet.png",

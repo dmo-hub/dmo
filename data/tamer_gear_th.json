@@ -1,0 +1,5569 @@
+{
+  "fetched_at": "2026-10-20",
+  "source": [
+    "https://www.vplay.in.th/%e0%b8%aa%e0%b9%84%e0%b8%9b%e0%b8%a3%e0%b8%ad%e0%b8%a5-%e0%b8%84%e0%b8%b5%e0%b8%a2%e0%b9%8c%e0%b8%a3%e0%b8%b4%e0%b8%87/",
+    "https://www.vplay.in.th/digi-%e0%b8%84%e0%b8%b5%e0%b8%a2%e0%b9%8c%e0%b8%a3%e0%b8%b4%e0%b8%87/",
+    "https://www.vplay.in.th/%e0%b8%94%e0%b8%b4%e0%b8%88%e0%b8%b4%e0%b9%84%e0%b8%a7%e0%b8%8b%e0%b9%8c-%e0%b8%84%e0%b8%a3%e0%b8%ad%e0%b8%aa%e0%b9%82%e0%b8%ab%e0%b8%a5%e0%b8%94%e0%b9%80%e0%b8%94%e0%b8%ad%e0%b8%a3%e0%b9%8c/",
+    "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b9%84%e0%b8%a7%e0%b8%97%e0%b8%b1%e0%b8%a5-%e0%b9%80%e0%b8%9a%e0%b8%a3%e0%b8%98-%e0%b8%94/",
+    "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%94%e0%b8%b4%e0%b8%88%e0%b8%b4%e0%b9%84%e0%b8%a7%e0%b8%8b%e0%b9%8c%e0%b8%97%e0%b8%b5/",
+    "https://www.vplay.in.th/%e0%b8%94%e0%b8%b4%e0%b8%88%e0%b8%b4%e0%b9%84%e0%b8%a7%e0%b8%8b%e0%b9%8c-%e0%b8%94%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%84%e0%b9%80%e0%b8%99%e0%b8%aa-%e0%b9%82%e0%b8%ab%e0%b8%a5%e0%b8%94%e0%b9%80/",
+    "https://www.vplay.in.th/%e0%b9%81%e0%b8%a1%e0%b8%81%e0%b9%80%e0%b8%99%e0%b8%95%e0%b8%b4%e0%b8%81-id-card-%e0%b9%80%e0%b8%aa%e0%b8%a3%e0%b8%b4%e0%b8%a1%e0%b9%81%e0%b8%81%e0%b8%a3%e0%b9%88%e0%b8%87-heaven-wings-%e0%b8%8b/",
+    "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%94%e0%b8%b4%e0%b8%88%e0%b8%b4%e0%b8%ad%e0%b8%ad%e0%b8%a3%e0%b9%88%e0%b8%b2%e0%b9%81/",
+    "https://www.vplay.in.th/%e0%b9%81%e0%b8%a1%e0%b8%81%e0%b9%80%e0%b8%99%e0%b8%95%e0%b8%b4%e0%b8%81-id-card-%e0%b9%80%e0%b8%aa%e0%b8%a3%e0%b8%b4%e0%b8%a1%e0%b9%81%e0%b8%81%e0%b8%a3%e0%b9%88%e0%b8%87%e0%b8%8b%e0%b8%b5%e0%b8%a3/",
+    "https://www.vplay.in.th/%e0%b9%80%e0%b8%9e%e0%b8%b4%e0%b9%88%e0%b8%a1%e0%b9%81%e0%b8%a1%e0%b8%81%e0%b9%80%e0%b8%99%e0%b8%95%e0%b8%b4%e0%b8%81-id-card-%e0%b9%80%e0%b8%aa%e0%b8%a3%e0%b8%b4%e0%b8%a1%e0%b9%81%e0%b8%81%e0%b8%a3/"
+  ],
+  "note": "Thai-server digivices, Digi-Aura, key rings and magnetic ID cards at each line's top tier; 'rows' is what each option can roll, a digivice's pool is never summed; CT printed without % is raw (100 per 1%); 'picture' is the dmowiki file the item borrows.",
+  "items": [
+    {
+      "name": "First Digivice",
+      "nameTh": "เฟิร์สท์ ดิจิไวซ์",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "EosDvice.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "15%",
+          "max": "20%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "15%",
+          "max": "20%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "15%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "14%",
+          "max": "17.5%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ดิน",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ลม",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ไม้",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "แสง",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "20%",
+          "max": "25%"
+        }
+      ],
+      "info": "ค่าที่ระดับสมบูรณ์ (8 ชิปเซ็ท) พลังดิจิทารี่ 100% · สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "DigiAura of Bracery and Friendship",
+      "nameTh": "ดิจิออร่าแห่งความกล้าหาญและมิตรภาพ",
+      "slot": "aura",
+      "axis": "digimon",
+      "picture": "DigiAura_of_Bracery_and_Friendship.png",
+      "ranged": true,
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "min": "400",
+          "max": "2000"
+        },
+        {
+          "label": "AT",
+          "min": "300",
+          "max": "1500"
+        },
+        {
+          "label": "Skill DMG",
+          "min": "2%",
+          "max": "10%"
+        }
+      ]
+    },
+    {
+      "name": "Digimon Xros Loader",
+      "nameTh": "ครอสโหลดเดอร์-ซากุระ",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "SusaLoaderMax.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 20.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "ค่าออปชันที่ Lv. Max · สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "Digimon Fusion Loader",
+      "nameTh": "ครอสโหลดเดอร์-ดิซีดวซ",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "SusaLoaderMax.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 20.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "ค่าออปชันที่ Lv. Max · สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "Digimon Darkness Loader",
+      "nameTh": "ดาร์กเนส โหลดเดอร์",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "SusaLoaderMax.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 20.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "ค่าออปชันที่ Lv. Max · สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Courage",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความกล้าหาญ",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Courage.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Friendship",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งมิตรภาพ",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Friendship.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Love",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความรัก",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Love.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Purity",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความบริสุทธิ์",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Purity.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Knowledge",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความรู้",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Knowledge.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Sincerity",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความซื่อสัตย์",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Reliability.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Hope",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความหวัง",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Hope.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Light",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งแสง",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Light.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Kindness",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความเมตตา",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Kindness.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Fate",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งโชคชะตา",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Fate.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True Digivice of Miracles",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งปาฏิหาริย์",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "Digivice_of_Miracles.PNG",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True D-Ark Hazard",
+      "nameTh": "D – อาร์ค ฮาซาร์ดที่แท้จริง",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "D-Ark-Item-Hazard.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True D-Ark Saint",
+      "nameTh": "D – อาร์ค เซนท์ที่แท้จริง",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "D-Ark-Item-Saint.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True D-Ark Sakuya",
+      "nameTh": "D – อาร์ค ซากุยาที่แท้จริง",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "D-Ark-Item-Sakuya.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True D-Ark Justice",
+      "nameTh": "D – อาร์ค จัสติสที่แท้จริง",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "D-Ark-Item-JUSTICE.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "True D-Ark Destiny",
+      "nameTh": "D – อาร์ค เดสทินีที่แท้จริง",
+      "slot": "digivice",
+      "axis": "digimon",
+      "picture": "D-Ark-Item-DESTINY.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": []
+        }
+      ],
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "name": "Spiral Key Ring Lv.Max",
+      "nameTh": "สไปรอลคีย์ริง Lv Max",
+      "slot": "keyring",
+      "axis": "tamer",
+      "picture": "Spiral_Key_Ring_Lv.6+.png",
+      "ranged": true,
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1550.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 222.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "DE",
+              "value": 156.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "min": "775",
+          "max": "1550,"
+        },
+        {
+          "label": "AT",
+          "min": "111",
+          "max": "222,"
+        },
+        {
+          "label": "DE",
+          "min": "78",
+          "max": "156"
+        }
+      ]
+    },
+    {
+      "name": "Spiral Key Ring (Families) Lv.Max",
+      "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max",
+      "slot": "keyring",
+      "axis": "unknown",
+      "ranged": true,
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1940.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 278.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "min": "388",
+          "max": "1,940"
+        },
+        {
+          "label": "AT",
+          "min": "55",
+          "max": "278"
+        },
+        {
+          "label": "Skill DMG",
+          "min": "2%",
+          "max": "10%"
+        }
+      ],
+      "families": [
+        "DA",
+        "DR",
+        "DS",
+        "JT",
+        "ME",
+        "NSO",
+        "NSP",
+        "TBD",
+        "UK",
+        "VB",
+        "WG"
+      ],
+      "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล"
+    },
+    {
+      "name": "DIGI-Key Ring (Families)",
+      "nameTh": "DIGI-ที่เก็บคีย์ริง [ตระกูล]",
+      "slot": "keyring",
+      "axis": "unknown",
+      "ranged": true,
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1940.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 278.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "min": "388",
+          "max": "1,940"
+        },
+        {
+          "label": "AT",
+          "min": "55",
+          "max": "278"
+        },
+        {
+          "label": "Skill DMG",
+          "min": "2%",
+          "max": "10%"
+        }
+      ],
+      "families": [
+        "DA",
+        "DR",
+        "DS",
+        "JT",
+        "ME",
+        "NSO",
+        "NSP",
+        "TBD",
+        "UK",
+        "VB",
+        "WG"
+      ],
+      "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล"
+    },
+    {
+      "name": "Ghost Keyring ( Families )",
+      "nameTh": "โกสท์ คีย์ริง [ตระกูล]",
+      "slot": "keyring",
+      "axis": "digimon",
+      "picture": "Ghost_Key_Ring.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 175.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 225.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 250.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 500.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 600.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 350.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 700.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 400.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 800.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 450.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 900.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 1000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 30.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 550.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 32.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 600.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 2000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 35.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 650.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 2500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 37.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 750.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 3000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 40.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 5000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 50.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ],
+      "families": [
+        "DA",
+        "DR",
+        "DS",
+        "JT",
+        "ME",
+        "NSO",
+        "NSP",
+        "TBD",
+        "UK",
+        "VB",
+        "WG"
+      ],
+      "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล"
+    },
+    {
+      "name": "Magnetic ID Card - Digimon King [AT]",
+      "nameTh": "แมกเนติก ID Card – Digimon King [AT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "DigimonKing.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 50.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 250.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 500.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 350.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1000.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 400.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1200.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 450.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1400.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1600.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 600.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1800.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 700.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 2000.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 900.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 2500.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 1000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 3000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 4000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 5000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Digimon King [HP]",
+      "nameTh": "แมกเนติก ID Card – Digimon King [HP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "DigimonKing.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 700.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 800.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 900.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1000.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 500.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1700.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1000.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1900.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1200.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2100.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1400.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1600.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1800.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2800.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 2000.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 3000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 2500.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 3500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 3000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 4000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 4000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 5000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 5000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Digimon King [HT]",
+      "nameTh": "แมกเนติก ID Card – Digimon King [HT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "DigimonKing.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 50.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 250.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 500.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 350.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1000.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 400.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1200.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 450.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1400.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1600.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 600.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 1800.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 700.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 2000.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 900.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 2500.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 3000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 4000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 5000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Digimon King [CT]",
+      "nameTh": "แมกเนติก ID Card – Digimon King [CT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "DigimonKing.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 0.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 1.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 2.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 500.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 3.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 1000.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 1200.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 4.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 1400.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 1600.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 1800.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 7.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 2000.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 2500.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 3000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 4000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 15.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EXP",
+              "value": 5000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Heaven Wing [AT]",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [AT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "HeavenWing.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 50.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 250.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 350.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 400.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 450.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 600.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 700.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 900.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 1000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Heaven Wing [EXP]",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [EXP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "HeavenWing.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 100.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 150.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 200.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 250.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 300.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 400.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 450.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 500.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 550.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 600.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 700.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 800.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 1000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 1100.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 1200.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 1500.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Heaven Wing [HP]",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [HP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "HeavenWing.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 700.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 800.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 900.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1000.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1500.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1700.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1900.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2100.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2800.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 3000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 3500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 4000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 5000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Heaven Wing [HT]",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [HT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "HeavenWing.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 50.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 250.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 300.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 350.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 400.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 450.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 600.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 700.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 900.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Heaven Wing [CT]",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [CT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "HeavenWing.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 0.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 1.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 2.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 3.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 4.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 7.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 15.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Time Ruler [AT]",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [AT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "TimeRuler.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 50.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 250.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 350.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 400.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 450.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 600.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 700.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 900.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 1000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Time Ruler [EXP]",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [EXP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "TimeRuler.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 100.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 150.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 200.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 250.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 300.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 400.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 450.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 500.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 550.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 600.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 700.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 800.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 1000.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 1100.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 1200.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "EXP",
+              "value": 1500.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Time Ruler [HP]",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [HP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "TimeRuler.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 700.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 800.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 900.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1000.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1700.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1900.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2100.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 2800.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 3000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 3500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 4000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 5000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Time Ruler [HT]",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [HT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "TimeRuler.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 50.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 250.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 350.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 400.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 450.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 600.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 700.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 900.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "value": 1500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnetic ID Card - Time Ruler [CT]",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [CT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "picture": "TimeRuler.png",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 0.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 1.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 2.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 3.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 4.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 7.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 8.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 1.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 9.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 2.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "CT",
+              "value": 15.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 3.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

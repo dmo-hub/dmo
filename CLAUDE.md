@@ -433,7 +433,9 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   bracelet despite the name.
   Accessories the owner left out are listed in `data/accessory_excluded.json`;
   one entry drops both the gear-names row and the optimizer's stats row
-  (matched with the level/duration tail dropped). Remove a Thai name for a
+  (matched with only a level/duration tail dropped -- `excluded_key`, not
+  `icon_key`, which drops any bracket and once took "Miracle Bracelet
+  [Special]" out with "[Level 1]"). Remove a Thai name for a
   dropped piece from `gear_th_names.json` too, or the builder warns.
 - Goggles come from vplay, not dmowiki: `scanners/scan_vplay_goggles.py`
   (posts 19820 Adventure · 25445 Kaiser · 17826 Tamer, cached as
@@ -443,3 +445,14 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   Adventure Goggles are 25 fixed main/third-option pairs, axis digimon (the
   post says so); Kaiser goggles are read as digimon too -- their post never
   says, but AT 4000 / CT 40% is digimon-scale, not the tamer goggles' AT 400.
+- Digivices, the Digi-Aura, key rings and magnetic ID cards also come from
+  vplay: `scanners/scan_vplay_tamer_gear.py` (GM-note posts, category id 5 --
+  not in `/wp-json/wp/v2/posts` without `?categories=5`) ->
+  `data/tamer_gear_th.json` -> `build_gear_registry.add_th_tamer_gear`, which
+  drops every wiki key ring row and adds the wiki's XAI + Final Digivice (no
+  vplay post). Each line is kept at its top tier only, one item per line;
+  family key rings list their 11 families instead of 11 items. A digivice's
+  attribute/element options go to `rows` (gear-names) and never to stats.
+  Axis: digivices/aura/Ghost digimon (posts say so), Spiral base tamer (post),
+  ID cards tamer (wiki), Spiral-family / DIGI-Key Ring / XAI unknown (nothing
+  says). Not a `refresh.py` step: run it by hand like scan_clothing.

@@ -673,7 +673,8 @@
           "item": "เฟิร์สท์ ดิจิไวซ์",
           "shin": null,
           "accepts": [
-            "เฟิร์สท์ ดิจิไวซ์"
+            "เฟิร์สท์ ดิจิไวซ์",
+            "First Digivice"
           ],
           "stats": {},
           "stats_from": "le-digivice"
@@ -683,7 +684,8 @@
           "item": "ดิจิออร่าแห่งความกล้าหาญและมิตรภาพ",
           "shin": null,
           "accepts": [
-            "ดิจิออร่าแห่งความกล้าหาญและมิตรภาพ"
+            "ดิจิออร่าแห่งความกล้าหาญและมิตรภาพ",
+            "DigiAura of Bracery and Friendship"
           ],
           "stats": {
             "AT": 1500,

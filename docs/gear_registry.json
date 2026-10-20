@@ -4,6 +4,46 @@
   "note": "stat values are the TOP of each roll range and the highest upgrade band; axis 'unknown' means the wiki never said which side the stat feeds",
   "items": [
     {
+      "id": "aura-digiaura-of-bracery-and-friendship",
+      "name": "DigiAura of Bracery and Friendship",
+      "slot": "aura",
+      "axis": "digimon",
+      "nameTh": "ดิจิออร่าแห่งความกล้าหาญและมิตรภาพ",
+      "AT": 1500,
+      "ranged": true,
+      "iconWiki": "/images/6/64/DigiAura_of_Bracery_and_Friendship.png",
+      "icon": "img/gear/digiaura_of_bracery_and_friendship.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "min": "400",
+          "max": "2000"
+        },
+        {
+          "label": "AT",
+          "min": "300",
+          "max": "1500"
+        },
+        {
+          "label": "Skill DMG",
+          "min": "2%",
+          "max": "10%"
+        }
+      ]
+    },
+    {
       "id": "bottom-agumon-bottom",
       "name": "Agumon Bottom",
       "slot": "bottom",
@@ -997,6 +1037,29 @@
       "nameTh": "กางเกงขาสั้นสีแดงเพลิงของซูเซมอน"
     },
     {
+      "id": "bracelets-miracle-bracelet-special-2",
+      "name": "Miracle Bracelet [Special]",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "iconWiki": "/images/7/7e/Miracle_Bracelet_-Special-.png",
+      "icon": "img/gear/miracle_bracelet_-special-.png",
+      "DS": 1200,
+      "AT": 600,
+      "DE": 150,
+      "CT": 10.0,
+      "HT": 750,
+      "EV": 9.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1200.0,
+          "unit": "flat"
+        }
+      ],
+      "nameTh": "กำไลแห่งปาฏิหาริย์[ระดับพิเศษ]"
+    },
+    {
       "id": "bracelets-royal-x-knight-s-bracelet-2",
       "name": "Royal : X-Knight's Bracelet",
       "slot": "bracelet",
@@ -1067,6 +1130,1655 @@
           "unit": "flat"
         }
       ]
+    },
+    {
+      "id": "digivice-digimon-darkness-loader",
+      "name": "Digimon Darkness Loader",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดาร์กเนส โหลดเดอร์",
+      "AT": 20,
+      "iconWiki": "/images/d/d2/SusaLoaderMax.PNG",
+      "icon": "img/gear/susaloadermax.png",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "ค่าออปชันที่ Lv. Max · สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-digimon-fusion-loader",
+      "name": "Digimon Fusion Loader",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ครอสโหลดเดอร์-ดิซีดวซ",
+      "AT": 20,
+      "iconWiki": "/images/d/d2/SusaLoaderMax.PNG",
+      "icon": "img/gear/susaloadermax.png",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "ค่าออปชันที่ Lv. Max · สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-digimon-xros-loader",
+      "name": "Digimon Xros Loader",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ครอสโหลดเดอร์-ซากุระ",
+      "AT": 20,
+      "iconWiki": "/images/d/d2/SusaLoaderMax.PNG",
+      "icon": "img/gear/susaloadermax.png",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "ค่าออปชันที่ Lv. Max · สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "eos-digivice-final-digivice",
+      "name": "Final Digivice",
+      "slot": "digivice",
+      "wikiSlot": "Eos Digivice",
+      "axis": "unknown",
+      "iconWiki": "/images/a/a0/EosDviceMax.PNG",
+      "icon": "img/gear/eosdvicemax.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า",
+      "obtain": "Update with Ring of Light Weekly Quest Neverland"
+    },
+    {
+      "id": "digivice-first-digivice",
+      "name": "First Digivice",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "เฟิร์สท์ ดิจิไวซ์",
+      "iconWiki": "/images/3/36/EosDvice.PNG",
+      "icon": "img/gear/eosdvice.png",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "15%",
+          "max": "20%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "15%",
+          "max": "20%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "15%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "14%",
+          "max": "17.5%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ดิน",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ลม",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ไม้",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "แสง",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "20%",
+          "max": "25%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "20%",
+          "max": "25%"
+        }
+      ],
+      "info": "ค่าที่ระดับสมบูรณ์ (8 ชิปเซ็ท) พลังดิจิทารี่ 100% · สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-d-ark-destiny",
+      "name": "True D-Ark Destiny",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "D – อาร์ค เดสทินีที่แท้จริง",
+      "iconWiki": "/images/2/27/D-Ark-Item-DESTINY.png",
+      "icon": "img/gear/d-ark-item-destiny.png",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-d-ark-hazard",
+      "name": "True D-Ark Hazard",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "D – อาร์ค ฮาซาร์ดที่แท้จริง",
+      "iconWiki": "/images/d/da/D-Ark-Item-Hazard.png",
+      "icon": "img/gear/d-ark-item-hazard.png",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-d-ark-justice",
+      "name": "True D-Ark Justice",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "D – อาร์ค จัสติสที่แท้จริง",
+      "iconWiki": "/images/e/eb/D-Ark-Item-JUSTICE.png",
+      "icon": "img/gear/d-ark-item-justice.png",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-d-ark-saint",
+      "name": "True D-Ark Saint",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "D – อาร์ค เซนท์ที่แท้จริง",
+      "iconWiki": "/images/2/24/D-Ark-Item-Saint.png",
+      "icon": "img/gear/d-ark-item-saint.png",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-d-ark-sakuya",
+      "name": "True D-Ark Sakuya",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "D – อาร์ค ซากุยาที่แท้จริง",
+      "iconWiki": "/images/2/26/D-Ark-Item-Sakuya.png",
+      "icon": "img/gear/d-ark-item-sakuya.png",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "rowsFrom": "ดิจิไวซ์ที่แท้จริง (โพสต์ไม่แยกตาราง D-อาร์ค)",
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-courage",
+      "name": "True Digivice of Courage",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความกล้าหาญ",
+      "iconWiki": "/images/6/6a/Digivice_of_Courage.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-fate",
+      "name": "True Digivice of Fate",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งโชคชะตา",
+      "iconWiki": "/images/4/47/Digivice_of_Fate.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-friendship",
+      "name": "True Digivice of Friendship",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งมิตรภาพ",
+      "iconWiki": "/images/9/91/Digivice_of_Friendship.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-hope",
+      "name": "True Digivice of Hope",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความหวัง",
+      "iconWiki": "/images/2/29/Digivice_of_Hope.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-kindness",
+      "name": "True Digivice of Kindness",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความเมตตา",
+      "iconWiki": "/images/6/68/Digivice_of_Kindness.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-knowledge",
+      "name": "True Digivice of Knowledge",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความรู้",
+      "iconWiki": "/images/1/15/Digivice_of_Knowledge.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-light",
+      "name": "True Digivice of Light",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งแสง",
+      "iconWiki": "/images/3/3d/Digivice_of_Light.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-love",
+      "name": "True Digivice of Love",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความรัก",
+      "iconWiki": "/images/4/4e/Digivice_of_Love.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-miracles",
+      "name": "True Digivice of Miracles",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งปาฏิหาริย์",
+      "iconWiki": "/images/e/e5/Digivice_of_Miracles.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-purity",
+      "name": "True Digivice of Purity",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความบริสุทธิ์",
+      "iconWiki": "/images/d/d8/Digivice_of_Purity.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
+    },
+    {
+      "id": "digivice-true-digivice-of-sincerity",
+      "name": "True Digivice of Sincerity",
+      "slot": "digivice",
+      "axis": "digimon",
+      "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความซื่อสัตย์",
+      "iconWiki": "/images/7/78/Digivice_of_Reliability.PNG",
+      "rows": [
+        {
+          "label": "ดาต้า",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "วัคซีน",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไวรัส",
+          "min": "8%",
+          "max": "15%"
+        },
+        {
+          "label": "ไม่ระบุประเภท",
+          "min": "7%",
+          "max": "12%"
+        },
+        {
+          "label": "น้ำแข็ง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "น้ำ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไฟ",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ดิน",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ลม",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ไม้",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "แสง",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "ความมืด",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "สายฟ้า",
+          "min": "10%",
+          "max": "20%"
+        },
+        {
+          "label": "เหล็ก",
+          "min": "10%",
+          "max": "20%"
+        }
+      ],
+      "info": "สุ่มออปชันจากรายการ"
     },
     {
       "id": "earrings-brilliant-kindness-earring-2",
@@ -5112,16 +6824,1196 @@
       "nameTh": "ผ้าโพกสีแดงเพลิงของซูเซมอน"
     },
     {
-      "id": "ghost-key-ring-ghost-keyring-families-16",
+      "id": "idcard-magnetic-id-card-digimon-king-at",
+      "name": "Magnetic ID Card - Digimon King [AT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Digimon King [AT]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "AT": 50
+        },
+        "1": {
+          "AT": 100
+        },
+        "2": {
+          "AT": 150
+        },
+        "3": {
+          "AT": 200
+        },
+        "4": {
+          "AT": 250
+        },
+        "5": {
+          "AT": 300
+        },
+        "6": {
+          "AT": 350
+        },
+        "7": {
+          "AT": 400
+        },
+        "8": {
+          "AT": 450
+        },
+        "9": {
+          "AT": 500
+        },
+        "10": {
+          "AT": 600
+        },
+        "11": {
+          "AT": 700
+        },
+        "12": {
+          "AT": 900
+        },
+        "13": {
+          "AT": 1000
+        },
+        "14": {
+          "AT": 1200
+        },
+        "15": {
+          "AT": 1500
+        }
+      },
+      "AT": 1500,
+      "iconWiki": "/images/9/97/DigimonKing.png",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 5000.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "AT",
+          "fixed": "1500"
+        },
+        {
+          "label": "EXP",
+          "fixed": "5000%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-digimon-king-ct",
+      "name": "Magnetic ID Card - Digimon King [CT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Digimon King [CT]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "CT": 0.5
+        },
+        "1": {
+          "CT": 1.0
+        },
+        "2": {
+          "CT": 1.5
+        },
+        "3": {
+          "CT": 2.0
+        },
+        "4": {
+          "CT": 2.5
+        },
+        "5": {
+          "CT": 3.0
+        },
+        "6": {
+          "CT": 3.5
+        },
+        "7": {
+          "CT": 4.0
+        },
+        "8": {
+          "CT": 4.5
+        },
+        "9": {
+          "CT": 5.0
+        },
+        "10": {
+          "CT": 6.0
+        },
+        "11": {
+          "CT": 7.0
+        },
+        "12": {
+          "CT": 9.0
+        },
+        "13": {
+          "CT": 10.0
+        },
+        "14": {
+          "CT": 12.0
+        },
+        "15": {
+          "CT": 15.0
+        }
+      },
+      "CT": 15.0,
+      "iconWiki": "/images/9/97/DigimonKing.png",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 5000.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "CT",
+          "fixed": "15%"
+        },
+        {
+          "label": "EXP",
+          "fixed": "5000%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-digimon-king-hp",
+      "name": "Magnetic ID Card - Digimon King [HP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Digimon King [HP]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
+      "iconWiki": "/images/9/97/DigimonKing.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 5000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 5000.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "fixed": "5000"
+        },
+        {
+          "label": "EXP",
+          "fixed": "5000%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-digimon-king-ht",
+      "name": "Magnetic ID Card - Digimon King [HT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Digimon King [HT]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "HT": 50
+        },
+        "1": {
+          "HT": 100
+        },
+        "2": {
+          "HT": 150
+        },
+        "3": {
+          "HT": 200
+        },
+        "4": {
+          "HT": 250
+        },
+        "5": {
+          "HT": 300
+        },
+        "6": {
+          "HT": 350
+        },
+        "7": {
+          "HT": 400
+        },
+        "8": {
+          "HT": 450
+        },
+        "9": {
+          "HT": 500
+        },
+        "10": {
+          "HT": 600
+        },
+        "11": {
+          "HT": 700
+        },
+        "12": {
+          "HT": 900
+        },
+        "13": {
+          "HT": 1000
+        },
+        "14": {
+          "HT": 1200
+        },
+        "15": {
+          "HT": 1500
+        }
+      },
+      "HT": 1500,
+      "iconWiki": "/images/9/97/DigimonKing.png",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 5000.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "HT",
+          "fixed": "1500"
+        },
+        {
+          "label": "EXP",
+          "fixed": "5000%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-heaven-wing-at",
+      "name": "Magnetic ID Card - Heaven Wing [AT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [AT]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "AT": 50
+        },
+        "1": {
+          "AT": 100
+        },
+        "2": {
+          "AT": 150
+        },
+        "3": {
+          "AT": 200
+        },
+        "4": {
+          "AT": 250
+        },
+        "5": {
+          "AT": 300
+        },
+        "6": {
+          "AT": 350
+        },
+        "7": {
+          "AT": 400
+        },
+        "8": {
+          "AT": 450
+        },
+        "9": {
+          "AT": 500
+        },
+        "10": {
+          "AT": 600
+        },
+        "11": {
+          "AT": 700
+        },
+        "12": {
+          "AT": 900
+        },
+        "13": {
+          "AT": 1000
+        },
+        "14": {
+          "AT": 1200
+        },
+        "15": {
+          "AT": 1500
+        }
+      },
+      "AT": 1500,
+      "iconWiki": "/images/e/eb/HeavenWing.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "AT",
+          "fixed": "1500"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-heaven-wing-ct",
+      "name": "Magnetic ID Card - Heaven Wing [CT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [CT]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "CT": 0.5
+        },
+        "1": {
+          "CT": 1.0
+        },
+        "2": {
+          "CT": 1.5
+        },
+        "3": {
+          "CT": 2.0
+        },
+        "4": {
+          "CT": 2.5
+        },
+        "5": {
+          "CT": 3.0
+        },
+        "6": {
+          "CT": 3.5
+        },
+        "7": {
+          "CT": 4.0
+        },
+        "8": {
+          "CT": 4.5
+        },
+        "9": {
+          "CT": 5.0
+        },
+        "10": {
+          "CT": 6.0
+        },
+        "11": {
+          "CT": 7.0
+        },
+        "12": {
+          "CT": 9.0
+        },
+        "13": {
+          "CT": 10.0
+        },
+        "14": {
+          "CT": 12.0
+        },
+        "15": {
+          "CT": 15.0
+        }
+      },
+      "CT": 15.0,
+      "iconWiki": "/images/e/eb/HeavenWing.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "CT",
+          "fixed": "15%"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-heaven-wing-exp",
+      "name": "Magnetic ID Card - Heaven Wing [EXP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [EXP]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
+      "iconWiki": "/images/e/eb/HeavenWing.png",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 1500.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "EXP",
+          "fixed": "1500%"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-heaven-wing-hp",
+      "name": "Magnetic ID Card - Heaven Wing [HP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [HP]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
+      "iconWiki": "/images/e/eb/HeavenWing.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 5000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "fixed": "5000"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-heaven-wing-ht",
+      "name": "Magnetic ID Card - Heaven Wing [HT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Heaven Wings [HT]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "HT": 50
+        },
+        "1": {
+          "HT": 100
+        },
+        "2": {
+          "HT": 150
+        },
+        "3": {
+          "HT": 200
+        },
+        "4": {
+          "HT": 250
+        },
+        "5": {
+          "HT": 300
+        },
+        "6": {
+          "HT": 350
+        },
+        "7": {
+          "HT": 400
+        },
+        "8": {
+          "HT": 450
+        },
+        "9": {
+          "HT": 500
+        },
+        "10": {
+          "HT": 600
+        },
+        "11": {
+          "HT": 700
+        },
+        "12": {
+          "HT": 900
+        },
+        "13": {
+          "HT": 1000
+        },
+        "14": {
+          "HT": 1200
+        },
+        "15": {
+          "HT": 1500
+        }
+      },
+      "HT": 1500,
+      "iconWiki": "/images/e/eb/HeavenWing.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "HT",
+          "fixed": "1500"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-time-ruler-at",
+      "name": "Magnetic ID Card - Time Ruler [AT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [AT]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "AT": 50
+        },
+        "1": {
+          "AT": 100
+        },
+        "2": {
+          "AT": 150
+        },
+        "3": {
+          "AT": 200
+        },
+        "4": {
+          "AT": 250
+        },
+        "5": {
+          "AT": 300
+        },
+        "6": {
+          "AT": 350
+        },
+        "7": {
+          "AT": 400
+        },
+        "8": {
+          "AT": 450
+        },
+        "9": {
+          "AT": 500
+        },
+        "10": {
+          "AT": 600
+        },
+        "11": {
+          "AT": 700
+        },
+        "12": {
+          "AT": 900
+        },
+        "13": {
+          "AT": 1000
+        },
+        "14": {
+          "AT": 1200
+        },
+        "15": {
+          "AT": 1500
+        }
+      },
+      "AT": 1500,
+      "iconWiki": "/images/a/a8/TimeRuler.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "AT",
+          "fixed": "1500"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-time-ruler-ct",
+      "name": "Magnetic ID Card - Time Ruler [CT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [CT]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "CT": 0.5
+        },
+        "1": {
+          "CT": 1.0
+        },
+        "2": {
+          "CT": 1.5
+        },
+        "3": {
+          "CT": 2.0
+        },
+        "4": {
+          "CT": 2.5
+        },
+        "5": {
+          "CT": 3.0
+        },
+        "6": {
+          "CT": 3.5
+        },
+        "7": {
+          "CT": 4.0
+        },
+        "8": {
+          "CT": 4.5
+        },
+        "9": {
+          "CT": 5.0
+        },
+        "10": {
+          "CT": 6.0
+        },
+        "11": {
+          "CT": 7.0
+        },
+        "12": {
+          "CT": 9.0
+        },
+        "13": {
+          "CT": 10.0
+        },
+        "14": {
+          "CT": 12.0
+        },
+        "15": {
+          "CT": 15.0
+        }
+      },
+      "CT": 15.0,
+      "iconWiki": "/images/a/a8/TimeRuler.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "CT",
+          "fixed": "15%"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-time-ruler-exp",
+      "name": "Magnetic ID Card - Time Ruler [EXP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [EXP]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
+      "iconWiki": "/images/a/a8/TimeRuler.png",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 1500.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "EXP",
+          "fixed": "1500%"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-time-ruler-hp",
+      "name": "Magnetic ID Card - Time Ruler [HP]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [HP]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
+      "iconWiki": "/images/a/a8/TimeRuler.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 5000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "fixed": "5000"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "idcard-magnetic-id-card-time-ruler-ht",
+      "name": "Magnetic ID Card - Time Ruler [HT]",
+      "slot": "idcard",
+      "axis": "tamer",
+      "nameTh": "แมกเนติก ID Card – Time Ruler [HT]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "HT": 50
+        },
+        "1": {
+          "HT": 100
+        },
+        "2": {
+          "HT": 150
+        },
+        "3": {
+          "HT": 200
+        },
+        "4": {
+          "HT": 250
+        },
+        "5": {
+          "HT": 300
+        },
+        "6": {
+          "HT": 350
+        },
+        "7": {
+          "HT": 400
+        },
+        "8": {
+          "HT": 450
+        },
+        "9": {
+          "HT": 500
+        },
+        "10": {
+          "HT": 600
+        },
+        "11": {
+          "HT": 700
+        },
+        "12": {
+          "HT": 900
+        },
+        "13": {
+          "HT": 1000
+        },
+        "14": {
+          "HT": 1200
+        },
+        "15": {
+          "HT": 1500
+        }
+      },
+      "HT": 1500,
+      "iconWiki": "/images/a/a8/TimeRuler.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 12.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 3.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "HT",
+          "fixed": "1500"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "12%"
+        },
+        {
+          "label": "Final DMG",
+          "fixed": "3%"
+        }
+      ]
+    },
+    {
+      "id": "keyring-digi-key-ring-families",
+      "name": "DIGI-Key Ring (Families)",
+      "slot": "keyring",
+      "axis": "unknown",
+      "nameTh": "DIGI-ที่เก็บคีย์ริง [ตระกูล]",
+      "AT": 278,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1940.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "min": "388",
+          "max": "1,940"
+        },
+        {
+          "label": "AT",
+          "min": "55",
+          "max": "278"
+        },
+        {
+          "label": "Skill DMG",
+          "min": "2%",
+          "max": "10%"
+        }
+      ],
+      "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล",
+      "families": [
+        "DA",
+        "DR",
+        "DS",
+        "JT",
+        "ME",
+        "NSO",
+        "NSP",
+        "TBD",
+        "UK",
+        "VB",
+        "WG"
+      ]
+    },
+    {
+      "id": "keyring-ghost-keyring-families",
       "name": "Ghost Keyring ( Families )",
       "slot": "keyring",
-      "wikiSlot": "Ghost Key Ring",
-      "axis": "unknown",
-      "upgrade": 15,
-      "bands": 16,
+      "axis": "digimon",
+      "nameTh": "โกสท์ คีย์ริง [ตระกูล]",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {
+          "HT": 100
+        },
+        "1": {
+          "HT": 150
+        },
+        "2": {
+          "HT": 175
+        },
+        "3": {
+          "HT": 200
+        },
+        "4": {
+          "HT": 225
+        },
+        "5": {
+          "HT": 250
+        },
+        "6": {
+          "HT": 300
+        },
+        "7": {
+          "HT": 350
+        },
+        "8": {
+          "HT": 400
+        },
+        "9": {
+          "HT": 450
+        },
+        "10": {
+          "HT": 500
+        },
+        "11": {
+          "HT": 550
+        },
+        "12": {
+          "HT": 600
+        },
+        "13": {
+          "HT": 650
+        },
+        "14": {
+          "HT": 750
+        },
+        "15": {
+          "HT": 1000
+        }
+      },
+      "HT": 1000,
       "iconWiki": "/images/6/66/Ghost_Key_Ring.png",
       "icon": "img/gear/ghost_key_ring.png",
-      "HT": 1000,
       "extra": [
         {
           "stat": "HP",
@@ -5134,41 +8026,98 @@
           "unit": "pct"
         }
       ],
-      "nameTh": "โกสท์ คีย์ริง"
+      "rows": [
+        {
+          "label": "HT",
+          "fixed": "1000"
+        },
+        {
+          "label": "HP",
+          "fixed": "5000"
+        },
+        {
+          "label": "Skill DMG",
+          "fixed": "50%"
+        }
+      ],
+      "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล",
+      "families": [
+        "DA",
+        "DR",
+        "DS",
+        "JT",
+        "ME",
+        "NSO",
+        "NSP",
+        "TBD",
+        "UK",
+        "VB",
+        "WG"
+      ]
     },
     {
-      "id": "key-rings-spiral-key-ring-lv-7",
-      "name": "Spiral Key Ring",
+      "id": "keyring-spiral-key-ring-families-lv-max",
+      "name": "Spiral Key Ring (Families) Lv.Max",
       "slot": "keyring",
-      "wikiSlot": "Key Rings",
-      "axis": "tamer",
-      "bands": 7,
-      "level": 7,
-      "iconWiki": "/images/8/8e/Spiral_Key_Ring_Lv.6%2B.png",
-      "icon": "img/gear/spiral_key_ring_lv.6_.png",
-      "AT": 168,
-      "DE": 119,
+      "axis": "unknown",
+      "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max",
+      "AT": 278,
       "ranged": true,
       "extra": [
         {
           "stat": "HP",
-          "value": 1180.0,
+          "value": 1940.0,
           "unit": "flat"
+        },
+        {
+          "stat": "Skill DMG",
+          "value": 10.0,
+          "unit": "pct"
         }
       ],
-      "nameTh": "สไปรอลคีย์ริง"
+      "rows": [
+        {
+          "label": "HP",
+          "min": "388",
+          "max": "1,940"
+        },
+        {
+          "label": "AT",
+          "min": "55",
+          "max": "278"
+        },
+        {
+          "label": "Skill DMG",
+          "min": "2%",
+          "max": "10%"
+        }
+      ],
+      "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล",
+      "families": [
+        "DA",
+        "DR",
+        "DS",
+        "JT",
+        "ME",
+        "NSO",
+        "NSP",
+        "TBD",
+        "UK",
+        "VB",
+        "WG"
+      ]
     },
     {
-      "id": "key-rings-spiral-key-ring-lv-max",
+      "id": "keyring-spiral-key-ring-lv-max",
       "name": "Spiral Key Ring Lv.Max",
       "slot": "keyring",
-      "wikiSlot": "Key Rings",
       "axis": "tamer",
-      "iconWiki": "/images/8/8e/Spiral_Key_Ring_Lv.6%2B.png",
-      "icon": "img/gear/spiral_key_ring_lv.6_.png",
+      "nameTh": "สไปรอลคีย์ริง Lv Max",
       "AT": 222,
       "DE": 156,
       "ranged": true,
+      "iconWiki": "/images/8/8e/Spiral_Key_Ring_Lv.6%2B.png",
+      "icon": "img/gear/spiral_key_ring_lv.6_.png",
       "extra": [
         {
           "stat": "HP",
@@ -5176,187 +8125,23 @@
           "unit": "flat"
         }
       ],
-      "nameTh": "สไปรอลคีย์ริง Lv Max"
-    },
-    {
-      "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-7",
-      "name": "Spiral Key Ring(DS)",
-      "slot": "keyring",
-      "wikiSlot": "Spiral Key Ring (DS)",
-      "axis": "digimon",
-      "bands": 7,
-      "level": 7,
-      "iconWiki": "/images/4/4b/Spiral_Key_Ring_DS_Level_7.png",
-      "icon": "img/gear/spiral_key_ring_ds_level_7.png",
-      "AT": 210,
-      "ranged": true,
-      "extra": [
+      "rows": [
         {
-          "stat": "HP",
-          "value": 1470.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "สไปรอลคีย์ริง[DS]"
-    },
-    {
-      "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-max",
-      "name": "Spiral Key Ring(DS) Lv.Max",
-      "slot": "keyring",
-      "wikiSlot": "Spiral Key Ring (DS)",
-      "axis": "digimon",
-      "iconWiki": "/images/4/4b/Spiral_Key_Ring_DS_Level_7.png",
-      "icon": "img/gear/spiral_key_ring_ds_level_7.png",
-      "AT": 210,
-      "ranged": true,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1940.0,
-          "unit": "flat"
+          "label": "HP",
+          "min": "775",
+          "max": "1550,"
         },
         {
-          "stat": "Skill DMG",
-          "value": 10.0,
-          "unit": "pct"
-        }
-      ],
-      "nameTh": "สไปรอลคีย์ริง[DS] Lv Max"
-    },
-    {
-      "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-7",
-      "name": "Spiral Key Ring(JT)",
-      "slot": "keyring",
-      "wikiSlot": "Spiral Key Ring (JT)",
-      "axis": "digimon",
-      "bands": 7,
-      "level": 7,
-      "iconWiki": "/images/6/65/Spiral_Key_Ring_JT_Level_7.png",
-      "icon": "img/gear/spiral_key_ring_jt_level_7.png",
-      "AT": 210,
-      "ranged": true,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1470.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "สไปรอลคีย์ริง[JT]"
-    },
-    {
-      "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-max",
-      "name": "Spiral Key Ring(JT) Lv.Max",
-      "slot": "keyring",
-      "wikiSlot": "Spiral Key Ring (JT)",
-      "axis": "digimon",
-      "iconWiki": "/images/6/65/Spiral_Key_Ring_JT_Level_7.png",
-      "icon": "img/gear/spiral_key_ring_jt_level_7.png",
-      "AT": 210,
-      "ranged": true,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1940.0,
-          "unit": "flat"
+          "label": "AT",
+          "min": "111",
+          "max": "222,"
         },
         {
-          "stat": "Skill DMG",
-          "value": 10.0,
-          "unit": "pct"
+          "label": "DE",
+          "min": "78",
+          "max": "156"
         }
-      ],
-      "nameTh": "สไปรอลคีย์ริง[JT] Lv Max"
-    },
-    {
-      "id": "spiral-key-ring-me-spiral-key-ring-me-lv-7",
-      "name": "Spiral Key Ring(ME)",
-      "slot": "keyring",
-      "wikiSlot": "Spiral Key Ring (ME)",
-      "axis": "digimon",
-      "bands": 7,
-      "level": 7,
-      "iconWiki": "/images/8/81/Spiral_Key_Ring_ME_Level_7.png",
-      "icon": "img/gear/spiral_key_ring_me_level_7.png",
-      "AT": 210,
-      "ranged": true,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1470.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "สไปรอลคีย์ริง [ME]"
-    },
-    {
-      "id": "spiral-key-ring-me-spiral-key-ring-me-lv-max",
-      "name": "Spiral Key Ring(ME) Lv.Max",
-      "slot": "keyring",
-      "wikiSlot": "Spiral Key Ring (ME)",
-      "axis": "digimon",
-      "iconWiki": "/images/8/81/Spiral_Key_Ring_ME_Level_7.png",
-      "icon": "img/gear/spiral_key_ring_me_level_7.png",
-      "AT": 210,
-      "ranged": true,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1940.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "Skill DMG",
-          "value": 10.0,
-          "unit": "pct"
-        }
-      ],
-      "nameTh": "สไปรอลคีย์ริง[ME] Lv Max"
-    },
-    {
-      "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-7",
-      "name": "Spiral Key Ring(WG)",
-      "slot": "keyring",
-      "wikiSlot": "Spiral Key Ring (WG)",
-      "axis": "digimon",
-      "bands": 7,
-      "level": 7,
-      "iconWiki": "/images/9/9e/Spiral_Key_Ring_WG_Level_7.png",
-      "icon": "img/gear/spiral_key_ring_wg_level_7.png",
-      "AT": 210,
-      "ranged": true,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1470.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "สไปรอลคีย์ริง[WG]"
-    },
-    {
-      "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-max",
-      "name": "Spiral Key Ring(WG) Lv.Max",
-      "slot": "keyring",
-      "wikiSlot": "Spiral Key Ring (WG)",
-      "axis": "digimon",
-      "iconWiki": "/images/9/9e/Spiral_Key_Ring_WG_Level_7.png",
-      "icon": "img/gear/spiral_key_ring_wg_level_7.png",
-      "AT": 210,
-      "ranged": true,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1940.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "Skill DMG",
-          "value": 10.0,
-          "unit": "pct"
-        }
-      ],
-      "nameTh": "สไปรอลคีย์ริง[WG] Lv Max"
+      ]
     },
     {
       "id": "necklaces-radiant-miracle-necklace-2",
@@ -7146,6 +9931,250 @@
         }
       ],
       "nameTh": "เสื้อฮู้ดสีแดงเพลิงของซูเซมอน"
+    },
+    {
+      "id": "xai-system-sakura-xai-ver-vi",
+      "name": "Sakura XAI Ver. VI",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 200.0,
+          "unit": "pct"
+        }
+      ],
+      "iconWiki": "/images/b/bf/XAI_Ver_VI_Sakura.png",
+      "rows": [
+        {
+          "label": "EXP",
+          "fixed": "200%"
+        }
+      ],
+      "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
+      "obtain": "Event cash shop item"
+    },
+    {
+      "id": "xai-system-xai-ver-anniversary",
+      "name": "XAI Ver. Anniversary",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "AT": 500,
+      "DS": 1500,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ],
+      "iconWiki": "/images/5/59/XAI_Ver._Anniversary.png",
+      "rows": [
+        {
+          "label": "AT",
+          "fixed": "500"
+        },
+        {
+          "label": "DS",
+          "fixed": "1500"
+        },
+        {
+          "label": "HP",
+          "fixed": "1500"
+        }
+      ],
+      "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
+      "obtain": "Event/Cash shop"
+    },
+    {
+      "id": "xai-system-xai-ver-i",
+      "name": "XAI Ver. I",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/a/a2/XAI_ver_i.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า",
+      "obtain": "Quest Reward (Verdandi)"
+    },
+    {
+      "id": "xai-system-xai-ver-ii",
+      "name": "XAI Ver. II",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/1/19/XAI_Ver_ii.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า",
+      "obtain": "Digitamamon (Item Make) Event reward"
+    },
+    {
+      "id": "xai-system-xai-ver-iii",
+      "name": "XAI Ver. III",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/8/8c/XAI_ver_iii.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า",
+      "obtain": "Digitamamon (Item Make) Event reward"
+    },
+    {
+      "id": "xai-system-xai-ver-iv",
+      "name": "XAI Ver. IV",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า"
+    },
+    {
+      "id": "xai-system-xai-ver-ix",
+      "name": "XAI Ver. IX",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า"
+    },
+    {
+      "id": "xai-system-xai-ver-storm",
+      "name": "XAI Ver. Storm",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "AT": 200,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ],
+      "iconWiki": "/images/9/91/XAI_ver_storm.png",
+      "rows": [
+        {
+          "label": "AT",
+          "fixed": "200"
+        },
+        {
+          "label": "HP",
+          "fixed": "1000"
+        }
+      ],
+      "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
+      "obtain": "Event cash shop item"
+    },
+    {
+      "id": "xai-system-xai-ver-storm-ii",
+      "name": "XAI Ver. Storm II",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "AT": 200,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ],
+      "iconWiki": "/images/1/14/XAI_ver_storm_ii.png",
+      "rows": [
+        {
+          "label": "AT",
+          "fixed": "200"
+        },
+        {
+          "label": "HP",
+          "fixed": "1000"
+        }
+      ],
+      "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
+      "obtain": "Event cash shop item"
+    },
+    {
+      "id": "xai-system-xai-ver-v",
+      "name": "XAI Ver. V",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/c/c4/XAI_ver_v.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า"
+    },
+    {
+      "id": "xai-system-xai-ver-vi",
+      "name": "XAI Ver. VI",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/f/f3/XAI_ver_vi.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า",
+      "obtain": "Cash shop item"
+    },
+    {
+      "id": "xai-system-xai-ver-vii",
+      "name": "XAI Ver. VII",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า"
+    },
+    {
+      "id": "xai-system-xai-ver-viii",
+      "name": "XAI Ver. VIII",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า"
+    },
+    {
+      "id": "xai-system-xai-ver-x",
+      "name": "XAI Ver. X",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "rows": [],
+      "info": "dmowiki ยังไม่มีค่า"
+    },
+    {
+      "id": "xai-system-xai-ver-x-mas",
+      "name": "XAI Ver. X-Mas",
+      "slot": "xai",
+      "wikiSlot": "XAI System",
+      "axis": "unknown",
+      "AT": 200,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1000.0,
+          "unit": "flat"
+        }
+      ],
+      "iconWiki": "/images/9/9e/XAI_ver_x-mas.png",
+      "rows": [
+        {
+          "label": "AT",
+          "fixed": "200"
+        },
+        {
+          "label": "HP",
+          "fixed": "1000"
+        }
+      ],
+      "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
+      "obtain": "Event cash shop item"
     }
   ]
 }

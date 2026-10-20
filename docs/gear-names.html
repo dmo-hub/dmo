@@ -132,10 +132,13 @@
     ["head", "หัว"], ["top", "เสื้อ"], ["bottom", "กางเกง"], ["gloves", "ถุงมือ"],
     ["shoes", "รองเท้า"], ["fashion", "เครื่องแต่งกาย"], ["glasses", "แว่นตา"],
     ["earring", "ต่างหู"], ["necklace", "สร้อยคอ"], ["ring", "แหวน"],
-    ["bracelet", "กำไล"], ["keyring", "พวงกุญแจ"]
+    ["bracelet", "กำไล"], ["keyring", "พวงกุญแจ"], ["digivice", "ดิจิไวซ์"],
+    ["aura", "ดิจิออร่า"], ["idcard", "ID Card"], ["xai", "XAI"]
   ];
   var CLOTHING = ["head", "top", "bottom", "gloves", "shoes", "fashion"];
   var ACCESSORY = ["earring", "necklace", "ring", "bracelet"];
+  /* Slots whose cards carry a value table, like an accessory's roll table. */
+  var DETAIL = ACCESSORY.concat(["keyring", "digivice", "aura", "idcard", "xai"]);
   var items = [];
   var sets = [];
   var byName = {};
@@ -180,6 +183,9 @@
     if (it.options) meta.push(it.options + " ออปชัน");
     if (it.numberChange === true) meta.push("ต้องใช้ Number Change Stone ให้ถึงค่าสูงสุด");
     if (it.numberChange === false) meta.push("ได้ค่าสูงสุดมาแล้ว");
+    if (it.upgradeMax) meta.push("ค่าที่ +" + it.upgradeMax);
+    if (it.info) meta.push(it.info);
+    if (it.families) meta.push("ตระกูล: " + it.families.join(" "));
     var m = el("div", "gn-meta", meta.join(" · "));
     if (it.recommended === false) m.appendChild(el("span", "low", (meta.length ? " · " : "") + "ค่าสูงสุดต่ำ วิกิไม่แนะนำ"));
     if (meta.length || it.recommended === false) t.appendChild(m);
@@ -300,7 +306,7 @@
       var h = el("h2", "", s[1]);
       h.appendChild(el("span", "n", rows.length + " ชิ้น"));
       sec.appendChild(h);
-      var acc = ACCESSORY.indexOf(s[0]) >= 0;
+      var acc = DETAIL.indexOf(s[0]) >= 0;
       var g = el("div", "gn-grid" + (acc ? " acc" : ""));
       rows.forEach(function (it) { g.appendChild(acc ? accCard(it) : card(it)); });
       sec.appendChild(g);

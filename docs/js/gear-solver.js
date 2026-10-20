@@ -37,7 +37,7 @@
   var SLOTS = [
     "ring", "necklace", "bracelet", "earring", "glasses", "wing",
     "head", "fashion", "top", "bottom", "gloves", "shoes", "keyring",
-    "digivice", "aura"
+    "digivice", "aura", "idcard", "xai"
   ];
 
   /* Thai label and group for each slot. The ID above stays English on purpose:
@@ -60,7 +60,9 @@
     wing:     { label: "\u0e1b\u0e35\u0e01",     group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
     keyring:  { label: "\u0e04\u0e35\u0e22\u0e4c\u0e23\u0e34\u0e07", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
     digivice: { label: "\u0e14\u0e34\u0e08\u0e34\u0e44\u0e27\u0e0b\u0e4c", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
-    aura:     { label: "\u0e2d\u0e2d\u0e23\u0e48\u0e32", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" }
+    aura:     { label: "\u0e2d\u0e2d\u0e23\u0e48\u0e32", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
+    idcard:   { label: "ID Card", group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" },
+    xai:      { label: "XAI",     group: "\u0e2d\u0e37\u0e48\u0e19 \u0e46" }
   };
 
   /* Wearing order within each group, so the dropdown reads head-to-toe rather
@@ -68,7 +70,7 @@
   var SLOT_ORDER = [
     "head", "top", "bottom", "gloves", "shoes", "fashion",
     "ring", "necklace", "bracelet", "earring",
-    "glasses", "wing", "keyring", "digivice", "aura"
+    "glasses", "wing", "keyring", "digivice", "aura", "idcard", "xai"
   ];
 
   function slotsInGroup(group) {

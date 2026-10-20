@@ -10,7 +10,8 @@ What this has to reconcile:
   * The wiki groups items into 28 slots; the solver has 13. "Rings" -> "ring",
     the four "Spiral Key Ring (XX)" groups all -> "keyring", and several wiki
     groups (Old Avatar/Costume, DigiAura, XAI System) have no wearable slot at
-    all and are dropped.
+    all and are dropped. Digivices, the aura, key rings and ID cards come from
+    vplay instead (add_th_tamer_gear), which also carries the wiki's XAI rows.
   * Most stats are RANGES ("HP 12~60"). The picker fills in the top of the
     range -- an upgraded piece is what a player actually wears, and it matches
     the "default to the maximum" rule for upgrade levels.
@@ -58,6 +59,12 @@ GOGGLES_PICTURE = {"Adventure Goggles": "Adventure Goggles",
 # what the tamer-side goggles give, so they are read as digimon too.
 GOGGLES_AXIS = {"Adventure Goggles": "digimon", "Digimon Kaiser's Goggles": "digimon",
                 "Tamer’s Goggles": "tamer", "Complete Tamer’s Goggles": "tamer"}
+# Digivices, Digi-Aura, key rings and ID cards from vplay (scan_vplay_tamer_gear).
+# The wiki's key ring rows (every level, four of eleven families) give way to
+# them; XAI and the Final Digivice have no vplay post, so the wiki's rows stay.
+TAMER_GEAR_TH = PROJ / "data" / "tamer_gear_th.json"
+WIKI_ONLY_TAMER_GEAR = {"XAI System": "xai", "Eos Digivice": "digivice"}
+WIKI_ONLY_NAMES = {"Eos Digivice": {"Final Digivice"}}
 
 # vplay's per-level Spirit tables name the piece, not the element: one table
 # serves all five "*:Spirit X" items.
@@ -330,6 +337,96 @@ def add_th_goggles(out):
     return added
 
 
+def wiki_picture(basename, items):
+    """iconWiki path of the dmowiki file a Thai item borrows, matched by the
+    file's own name so a group sharing one row name still gets the right one."""
+    for it in items:
+        p = it.get("icon")
+        if p and unquote(p.rsplit("/", 1)[-1]) == basename:
+            return p
+    return None
+
+
+def display_rows(stats):
+    """A fixed-value piece shown like an accessory's roll table, one row per stat."""
+    return [{"label": s["stat"], "fixed": "%g%s" % (s["value"], "%" if s["unit"] == "pct" else "")}
+            for s in stats]
+
+
+def add_th_tamer_gear(out, items):
+    """Thai-server digivices, aura, key rings and ID cards, plus the wiki's XAI
+    and Final Digivice rows (stat-less ones too: the page lists them by name)."""
+    if not TAMER_GEAR_TH.exists():
+        print(f"  ! missing {TAMER_GEAR_TH.name}")
+        return 0
+    out[:] = [r for r in out if r["slot"] != "keyring"]
+    added = 0
+    for src in json.loads(TAMER_GEAR_TH.read_text(encoding="utf-8"))["items"]:
+        table, top = level_table(src["levels"])
+        rec = {
+            "id": re.sub(r"[^a-z0-9]+", "-", f"{src['slot']}-{src['name']}".lower()).strip("-"),
+            "name": src["name"],
+            "slot": src["slot"],
+            "axis": src["axis"],
+            "nameTh": src["nameTh"],
+        }
+        if top:
+            rec.update(upgrade=0, upgradeMax=top, levelStats=table)
+        rec.update(table[str(top)])
+        if src.get("ranged"):
+            rec["ranged"] = True
+        wiki_icon = wiki_picture(src["picture"], items) if src.get("picture") else None
+        if wiki_icon:
+            rec["iconWiki"] = wiki_icon
+            icon = local_icon(wiki_icon)
+            if icon:
+                rec["icon"] = icon
+        extra = non_solver_at(src["levels"], top)
+        if extra:
+            rec["extra"] = extra
+        top_stats = next(l["stats"] for l in src["levels"] if l["upgrade"] == top)
+        rec["rows"] = src.get("rows") or display_rows(top_stats)
+        for field in ("rowsFrom", "info", "families"):
+            if src.get(field):
+                rec[field] = src[field]
+        out.append(rec)
+        added += 1
+
+    seen = set()
+    for it in items:
+        slot = WIKI_ONLY_TAMER_GEAR.get(it.get("slot"))
+        names = WIKI_ONLY_NAMES.get(it.get("slot"))
+        if not slot or (names and it["name"] not in names) or it["name"] in seen:
+            continue
+        seen.add(it["name"])
+        rec = {"id": it["id"], "name": it["name"], "slot": slot,
+               "wikiSlot": it["slot"], "axis": it.get("axis") or "unknown"}
+        stats = []
+        for st in it.get("stats", []):
+            top = top_of(st)
+            if not st.get("stat") or top is None:
+                continue
+            stats.append({"stat": st["stat"], "value": top, "unit": st.get("unit", "flat")})
+            if st["stat"] in SOLVER_STATS:
+                rec[st["stat"]] = rec.get(st["stat"], 0) + (top if st["stat"] in PCT_STATS
+                                                            else js_round(top))
+        other = [s for s in stats if s["stat"] not in SOLVER_STATS]
+        if other:
+            rec["extra"] = other
+        if it.get("icon"):
+            rec["iconWiki"] = it["icon"]
+            icon = local_icon(it["icon"])
+            if icon:
+                rec["icon"] = icon
+        rec["rows"] = display_rows(stats)
+        rec["info"] = "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)" if stats else "dmowiki ยังไม่มีค่า"
+        if it.get("obtain"):
+            rec["obtain"] = it["obtain"]
+        out.append(rec)
+        added += 1
+    return added
+
+
 def add_shin_pieces(out):
     """Split each Daisuke/Takeru/Miyako piece's shin tier into its own item.
 
@@ -442,20 +539,30 @@ def local_icon(wiki_icon):
     return local.relative_to(PROJ / "docs").as_posix() if local.exists() else None
 
 
+def excluded_key(name):
+    """Name with only a level or duration tail dropped. icon_key drops any
+    bracket, which would take "Miracle Bracelet [Special]" out along with the
+    "Miracle Bracelet [Level 1]" the list names -- a different item."""
+    name = re.sub(r"\s*\[\s*(?:(?:Level|Lv)\.?\s*[\d-][^\]]*)?\]\s*$", "", name, flags=re.I)
+    name = re.sub(r"\s*\[\s*\d+\s*Days?\s*\]\s*$", "", name, flags=re.I)
+    name = re.sub(r"\s*Lv\.?\s*[\d-]+$", "", name, flags=re.I)
+    key = full_key(name)
+    return ICON_ALIAS.get(key, key)
+
+
 def excluded_accessories():
-    """Keys of the accessories the site leaves out, tail-free and aliased so
-    one list entry removes the list row and its stats row alike."""
+    """Keys of the accessories the site leaves out, aliased so one list entry
+    removes the list row and its stats row alike."""
     if not ACCESSORY_EXCLUDED.exists():
         return set()
     names = json.loads(ACCESSORY_EXCLUDED.read_text(encoding="utf-8"))["items"]
-    return {ICON_ALIAS.get(icon_key(n), icon_key(n)) for n in names}
+    return {excluded_key(n) for n in names}
 
 
 def is_excluded(it, keys):
     if it.get("slot") not in ACCESSORY_SLOTS:
         return False
-    key = icon_key(it["name"])
-    return ICON_ALIAS.get(key, key) in keys
+    return excluded_key(it["name"]) in keys
 
 
 def build_accessory_ref(items, icons):
@@ -607,6 +714,7 @@ def main():
 
     leveled = add_level_stats(out)
     goggles = add_th_goggles(out)
+    tamer_gear = add_th_tamer_gear(out, items)
     named_th = add_thai_names(out)
     shin = add_shin_pieces(out)
     out.sort(key=lambda r: (r["slot"], r["name"]))
@@ -631,6 +739,7 @@ def main():
     print("  per-level stats on %d items" % leveled)
     print("  shin pieces split out %d" % shin)
     print("  Thai-server goggles %d" % goggles)
+    print("  digivice/aura/key ring/ID card/XAI %d" % tamer_gear)
     print("  axis  %s" % dict(by_axis))
     print("  slots %s" % ", ".join("%s=%d" % kv for kv in sorted(by_slot.items())))
     if dropped:
