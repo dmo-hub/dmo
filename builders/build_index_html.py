@@ -188,6 +188,7 @@ def main() -> None:
       <a href="digimon.html">Digimon</a>
       <a href="seals.html">Seal</a>
       <a href="gear.html">Gear Optimizer</a>
+      <a href="gear-names.html">Gear Names</a>
     </nav>
     <span class="nav-meta">scrape: dmo.gameking.com</span>
   </div>
