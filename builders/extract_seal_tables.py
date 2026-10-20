@@ -878,9 +878,12 @@ def main():
     if carried:
         print(f"\n!! {len(carried)} earlier-discovered post(s) not in cache; kept their "
               "previous tables: " + ", ".join(carried))
-    kept_new = [k for k in result if k not in curated_keys]
+    # build_seal_tables.py creates the card itself, so a discovered post is
+    # only news until that card exists
+    seals_html = (PROJ / "docs" / "seals.html").read_text(encoding="utf-8")
+    kept_new = [k for k in result if k not in curated_keys and f'id="{k}"' not in seals_html]
     if kept_new:
-        print(f"\n!! NEW seal post(s) discovered — add a card to docs/seals.html: {kept_new}")
+        print(f"\n!! NEW seal post(s) discovered — build_seal_tables.py will add a stub card: {kept_new}")
 
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     n_tbl = sum(len(v.get("tables", [])) for v in result.values())
