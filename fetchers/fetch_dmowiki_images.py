@@ -26,7 +26,8 @@ PROJ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJ / "builders"))
 sys.path.insert(0, str(PROJ / "fetchers"))
 
-from build_gear_registry import ICON_DIR, OUT as REGISTRY, icon_filename  # noqa: E402
+from build_gear_registry import (  # noqa: E402
+    ACCESSORY_OUT, ICON_DIR, OUT as REGISTRY, icon_filename)
 from _cdp_tab import ORIGIN, ChallengeError, RawTab  # noqa: E402
 
 # Bytes cross the CDP boundary as base64; the content type is returned too so a
@@ -41,7 +42,10 @@ JS_FETCH_BYTES = """async (url) => {
 
 
 def wanted() -> dict[str, str]:
-    items = json.loads(REGISTRY.read_text(encoding="utf-8"))["items"]
+    items = []
+    for path in (REGISTRY, ACCESSORY_OUT):
+        if path.exists():
+            items += json.loads(path.read_text(encoding="utf-8"))["items"]
     return {icon_filename(i["iconWiki"]): i["iconWiki"] for i in items if i.get("iconWiki")}
 
 

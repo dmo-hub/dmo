@@ -64,6 +64,21 @@ STAT_ALIASES = {
 # Headings whose tables describe something other than a wearable item.
 NON_ITEM_HEADINGS = {"Set-Effect´s", "Set-Effects", "Set Effect"}
 
+# Accessories roll random options. Their tables say how many options a piece
+# gets and how high each can roll, never what one piece actually has.
+ACCESSORY_HEADINGS = {"Rings", "Necklaces", "Earrings", "Bracelets"}
+# Pivot columns that describe a roll rather than an item. When they appear the
+# item is named by the table's caption (or a one-cell title row), which is how
+# "Minimum" and "Maximum" used to land in the registry as items.
+ROLL_COLUMNS = {"minimum": "min", "maximum": "max", "fixed": "fixed",
+                "fixed value": "fixed", "multi same option": "multi"}
+# "Ring with 3 Options", "Regular Earrings": the cap for a whole kind of
+# accessory, not a piece anyone can wear.
+CATEGORY_COLUMN = re.compile(r"\bwith \d.*options?$|^regular ", re.I)
+# The accessory list tables carry these beside the name.
+LIST_FIELDS = {"number of options": "options", "options": "options",
+               "use number change": "number_change", "how to obtain": "obtain"}
+
 
 def unit_for(stat):
     if stat in PCT:
@@ -352,40 +367,101 @@ def parse_rowwise(rows, path, seen, stats_cols, name_col, upgrade_col, header):
         icon = re.search(r'<img[^>]+src="(/images/[^"]+)"', "".join(cells[:name_col + 1]))
         if icon:
             rec["icon"] = icon.group(1)
+        for i, h in enumerate(header):
+            field = LIST_FIELDS.get(h.lower().strip())
+            if field and i < len(texts) and texts[i]:
+                value = texts[i]
+                if field == "number_change":
+                    value = {"✅": True, "❌": False}.get(value, value)
+                rec[field] = value
         items.append(rec)
     return items, unread
 
 
-def parse_pivot(rows, path, seen):
-    """Transposed tables: item names are column headers, stats are row labels."""
+def spread_cells(row_html):
+    """Cells with each colspan repeated, so column i is level i again.
+
+    The per-level tables merge equal neighbours ("+5%" over Lv.2-4); reading
+    them one cell per column shifted every later level onto the wrong one.
+    """
+    out = []
+    for c in split_cells(row_html):
+        span = re.search(r'colspan="?(\d+)', c[:c.find(">")])
+        out.extend([clean(c)] * (int(span.group(1)) if span else 1))
+    return out
+
+
+def signed(cell):
+    """parse_stat_cell needs the "+"; a few bracelet tables print "1440"."""
+    return "+" + cell if re.match(r"^\d", cell or "") else cell
+
+
+def parse_pivot(rows, path, seen, title=None):
+    """Transposed tables: item names are column headers, stats are row labels.
+
+    Accessory tables bend this two ways. Roll columns (Minimum / Maximum /
+    Fixed) mean the whole table is ONE item, named by `title`; a "Multi Same
+    Option" column belongs to every item in the table, never one of its own.
+    Each item also keeps its rows as printed ("option_rows"), because labels
+    such as "Def %" have no solver stat and would otherwise vanish.
+    """
     header = header_labels(rows[0])
     if len(header) < 2:
         return [], len(rows)
     names = header[1:]
-    columns = {n: [] for n in names}
+    kinds = [ROLL_COLUMNS.get(n.lower().strip()) for n in names]
+    rolled = any(k in ("min", "max", "fixed") for k in kinds)
+    if rolled and not title:
+        return [], len(rows)
+    owners = [title] if rolled else [n for n, k in zip(names, kinds) if not k]
+    columns = {n: [] for n in owners}
+    printed = {n: [] for n in owners}
 
     unread = 0
     for row in rows[1:]:
-        cells = [clean(c) for c in split_cells(row)]
+        cells = spread_cells(row)
         if len(cells) < 2:
             unread += 1
             continue
+        roll = {}
+        for i, k in enumerate(kinds):
+            if k and i + 1 < len(cells):
+                roll[k] = cells[i + 1]
+        # printed before the stat check: "Attribute" and "Def %" have no solver
+        # stat but are still options a player can roll
+        if rolled:
+            printed[title].append(dict(roll, label=cells[0]))
+        else:
+            for i, name in enumerate(names):
+                if not kinds[i] and i + 1 < len(cells) and cells[i + 1] not in ("", "-"):
+                    line = {"label": cells[0], "max": cells[i + 1]}
+                    if roll.get("multi"):
+                        line["multi"] = roll["multi"]
+                    printed[name].append(line)
         stat = canon_stat(cells[0])
         if not stat:
             unread += 1
             continue
+        if rolled:
+            lo = parse_stat_cell("%s %s" % (cells[0], signed(roll.get("min") or roll.get("fixed", ""))))
+            hi = parse_stat_cell("%s %s" % (cells[0], signed(roll.get("max") or roll.get("fixed", ""))))
+            for a, b in zip(lo, hi):
+                if "value" in a and "value" in b and a["value"] != b["value"]:
+                    a = dict(a, min=a.pop("value"), max=b["value"])
+                columns[title].append(a)
+            continue
         for i, name in enumerate(names):
-            if i + 1 >= len(cells):
+            if kinds[i] or i + 1 >= len(cells):
                 continue
-            parsed = parse_stat_cell("%s %s" % (cells[0], cells[i + 1]))
+            parsed = parse_stat_cell("%s %s" % (cells[0], signed(cells[i + 1])))
             columns[name].extend(parsed)
 
     slot = slot_from(path)
     items = []
-    for name in names:
+    for name in owners:
         if not columns[name]:
             continue
-        items.append({
+        rec = {
             "id": mk_id(name, slot, seen),
             "name": name,
             "slot": slot,
@@ -393,7 +469,12 @@ def parse_pivot(rows, path, seen):
             # genuinely unknown here rather than assumed.
             "axis": "unknown",
             "stats": columns[name],
-        })
+        }
+        if slot in ACCESSORY_HEADINGS:
+            rec["option_rows"] = printed[name]
+            if CATEGORY_COLUMN.search(name):
+                rec["category"] = True
+        items.append(rec)
     return items, unread
 
 
@@ -426,11 +507,16 @@ def main():
     items, skipped = [], []
     seen_ids = set()
     counted = 0
+    prev_end = 0
 
     for idx, (pos, table) in enumerate(tables):
         path = path_at(pos)
         heading = slot_from(path)
         rows = split_rows(table)
+        lead = clean(html[prev_end:pos]).lower()
+        prev_end = pos + len(table)
+        caption = re.search(r"<caption[^>]*>(.*?)</caption>", table, flags=re.S)
+        title = clean(caption.group(1)) if caption else None
         # Count <tr> openings, not matched pairs: table 6 wraps the Spiral Key
         # Ring tables, and the inner table's </tr> closes the outer row first,
         # so pairing loses exactly one row against the page total.
@@ -442,6 +528,12 @@ def main():
             continue
 
         header = header_labels(rows[0])
+        # A one-cell header row is the item's name ("Shining Arena Ring"),
+        # with the real column headers on the row below it.
+        if len(header) == 1 and len(rows) > 2 and heading in ACCESSORY_HEADINGS:
+            title = title or header[0]
+            rows = rows[1:]
+            header = header_labels(rows[0])
 
         if heading in NON_ITEM_HEADINGS:
             skipped.append({"table": idx, "heading": heading, "rows": len(rows),
@@ -465,18 +557,30 @@ def main():
             got, unread = parse_rowwise(rows, path, seen_ids, stats_cols,
                                         name_col, upgrade_col, header)
         elif header[0] == "" or canon_stat(header[0]) or header[0].lower() == "stats":
-            got, unread = parse_pivot(rows, path, seen_ids)
+            got, unread = parse_pivot(rows, path, seen_ids, title)
         else:
             skipped.append({"table": idx, "heading": heading, "rows": len(rows),
                             "reason": "unrecognised header: %s" % " | ".join(header[:5])})
             continue
 
+        if heading in ACCESSORY_HEADINGS:
+            for it in got:
+                # the page splits each list into "not recommended" (low caps)
+                # and recommended pieces, saying so in the line above
+                if "name" in [h.lower() for h in header] and "not recommended" in lead[-200:]:
+                    it["recommended"] = False
         items.extend(got)
         if unread:
             skipped.append({"table": idx, "heading": heading, "rows": unread,
                             "reason": "rows without a readable name or stat"})
 
     assert counted == total_rows, "row accounting: walked %d of %d" % (counted, total_rows)
+    # roll tables are titled by hand ("Zero unit ring"); the list beside them
+    # spells the same piece properly, and the registry joins on the name
+    spelled = {(i["slot"], i["name"].lower()): i["name"] for i in items
+               if i["slot"] in ACCESSORY_HEADINGS and not i["stats"]}
+    for i in items:
+        i["name"] = spelled.get((i["slot"], i["name"].lower()), i["name"])
     # "unknown" is deliberate. Ticket 01 showed slot cannot imply axis (the
     # Spiral Key Ring grants digimon stats while other key rings grant tamer),
     # and this page proves it again: Bottom holds tamer items AND items whose

@@ -417,6 +417,17 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   numbers per element), joined through `BONUS_ALIASES` in
   `build_set_registry.py`. A set dmowiki never recorded gets a hand-kept
   bonus file listed in `scan_set_effects.EXTRA_SOURCES`
-  (`data/last_evolution.json`, `data/four_holy_beasts.json`) plus a
-  `SET_NAMES` entry; its slot stats come from the registry piece whose nameTh
-  is the roster item.
+  (`data/last_evolution.json`) plus a `SET_NAMES` entry.
+- The vplay-only Four Holy Beasts clothing ("มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน
+  [อัลติเมท]" ...) is kept out of the registry on the owner's call, so
+  "พลังของสี่สัตว์เทพเซ็ต" prints "not joined" in build_set_registry -- expected.
+- Accessories (rings, necklaces, earrings, bracelets) roll random options. The
+  wiki's tables give option counts and what each option can roll, never one
+  piece's stats, so the registry's numbers for them are only a cap (axis
+  "unknown", the solver skips them). `build_gear_registry` also writes
+  `docs/accessory_registry.json` -- list row joined to its roll table -- for
+  the gear-names page. In `scan_clothing`, Minimum/Maximum/Fixed columns mean
+  the table is one item named by its `<caption>` (or a one-cell title row),
+  "... with N Options"/"Regular ..." columns are category caps (`category`),
+  and per-level cells are spread by colspan. "Vital Breath Digivice -V-" is a
+  bracelet despite the name.

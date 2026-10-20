@@ -579,6 +579,35 @@ def check_chip_registry():
     return bad
 
 
+def check_accessories():
+    """Accessory roll tables and the list the gear-names page shows.
+
+    A roll table's column headers ("Minimum", "Ring with 3 Options") are not
+    pieces; read as names they put rows into the picker that no player owns.
+    """
+    bad = []
+    reg = json.loads((PROJ / "docs" / "gear_registry.json").read_text(encoding="utf-8"))["items"]
+    roll_words = {"minimum", "maximum", "fixed", "fixed value", "multi same option"}
+    for it in reg:
+        name = it["name"].lower()
+        if name in roll_words or re.search(r"\bwith \d.*options?$|^regular ", name):
+            bad.append("gear_registry: %r is a roll-table column, not a piece" % it["name"])
+    p = PROJ / "docs" / "accessory_registry.json"
+    if not p.exists():
+        return bad + ["docs/accessory_registry.json missing -- run builders/build_gear_registry.py"]
+    acc = json.loads(p.read_text(encoding="utf-8"))["items"]
+    slots = {"ring", "necklace", "earring", "bracelet"}
+    for it in acc:
+        if it["slot"] not in slots:
+            bad.append("accessory %r: slot %s" % (it["name"], it["slot"]))
+        for r in it.get("rows") or []:
+            if not r.get("label") or not (r.get("max") or r.get("fixed")):
+                bad.append("accessory %r: row without a label or value: %r" % (it["name"], r))
+    if not any(it.get("rows") for it in acc):
+        bad.append("no accessory carries roll rows")
+    return bad
+
+
 def check_set_rosters():
     """The roster artifact: which item belongs to which clothing set.
 
@@ -643,14 +672,11 @@ def check_set_registry():
     # shin variants.
     SPIRIT = {"Fire : Spirit", "Light: Spirit", "Ice: Spirit", "Wind: Spirit",
               "Thunder: Spirit"}
-    # Four Holy Beasts fills the six clothing slots too, but pays only at six.
-    HOLY = "Four Holy Beasts"
     CLOTHING = TAMER | SPIRIT
     names = {s["set"] for s in sets}
-    expected = CLOTHING | {"Last Evolution", HOLY}
+    expected = CLOTHING | {"Last Evolution"}
     if names != expected:
-        bad.append("expected the 3 tamer sets, 5 spirit sets, Four Holy Beasts "
-                   "and Last Evolution; "
+        bad.append("expected the 3 tamer sets, 5 spirit sets and Last Evolution; "
                    "missing %s, unexpected %s"
                    % (sorted(expected - names), sorted(names - expected)))
 
@@ -709,9 +735,6 @@ def check_set_registry():
         sizes = sorted(b["pieces"] for b in s["bonuses"])
         if clothing and sizes != [4, 6]:
             bad.append("%s: bonus sizes %s, expected [4, 6]" % (s["set"], sizes))
-        if s["set"] == HOLY and (len(s["slots"]) != 6 or sizes != [6]):
-            bad.append("%s: %d slots, bonus sizes %s, expected 6 and [6]"
-                       % (s["set"], len(s["slots"]), sizes))
         if not sizes:
             bad.append("%s: no bonuses joined" % s["set"])
         # a threshold can never ask for more pieces than the set has
@@ -826,6 +849,7 @@ def main():
         ("inline JS syntax", check_scripts),
         ("parser fixtures", check_parsers),
         ("chip registry", check_chip_registry),
+        ("accessories", check_accessories),
         ("percent stats agree", check_pct_units),
         ("set rosters", check_set_rosters),
         ("set registry", check_set_registry),

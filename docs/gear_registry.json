@@ -733,291 +733,6 @@
       "nameTh": "สายฟ้า : กางเกงแห่งสปิริต"
     },
     {
-      "id": "bottom-thunderbolt-bottom-of-qinglongmon-legend",
-      "name": "Thunderbolt Bottom of Qinglongmon [Legend]",
-      "slot": "bottom",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [เลเจนด์]",
-      "levelStats": {
-        "0": {
-          "DE": 16,
-          "HT": 180
-        },
-        "1": {
-          "DE": 27,
-          "HT": 315
-        },
-        "2": {
-          "DE": 54,
-          "HT": 342
-        },
-        "3": {
-          "DE": 81,
-          "HT": 369
-        },
-        "4": {
-          "DE": 108,
-          "HT": 396
-        },
-        "5": {
-          "DE": 135,
-          "HT": 423
-        },
-        "6": {
-          "DE": 162,
-          "HT": 450
-        },
-        "7": {
-          "DE": 189,
-          "HT": 477
-        },
-        "8": {
-          "DE": 216,
-          "HT": 504
-        },
-        "9": {
-          "DE": 243,
-          "HT": 531
-        },
-        "10": {
-          "DE": 270,
-          "HT": 558
-        }
-      },
-      "DE": 270,
-      "HT": 558
-    },
-    {
-      "id": "bottom-thunderbolt-bottom-of-qinglongmon-normal",
-      "name": "Thunderbolt Bottom of Qinglongmon [Normal]",
-      "slot": "bottom",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [ปกติ]",
-      "levelStats": {
-        "0": {
-          "DE": 4,
-          "HT": 120
-        },
-        "1": {
-          "DE": 18,
-          "HT": 210
-        },
-        "2": {
-          "DE": 36,
-          "HT": 228
-        },
-        "3": {
-          "DE": 54,
-          "HT": 246
-        },
-        "4": {
-          "DE": 72,
-          "HT": 264
-        },
-        "5": {
-          "DE": 90,
-          "HT": 282
-        },
-        "6": {
-          "DE": 108,
-          "HT": 300
-        },
-        "7": {
-          "DE": 126,
-          "HT": 318
-        },
-        "8": {
-          "DE": 144,
-          "HT": 336
-        },
-        "9": {
-          "DE": 162,
-          "HT": 354
-        },
-        "10": {
-          "DE": 180,
-          "HT": 372
-        }
-      },
-      "DE": 180,
-      "HT": 372
-    },
-    {
-      "id": "bottom-thunderbolt-bottom-of-qinglongmon-rare",
-      "name": "Thunderbolt Bottom of Qinglongmon [Rare]",
-      "slot": "bottom",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [แรร์]",
-      "levelStats": {
-        "0": {
-          "DE": 8,
-          "HT": 140
-        },
-        "1": {
-          "DE": 21,
-          "HT": 245
-        },
-        "2": {
-          "DE": 42,
-          "HT": 266
-        },
-        "3": {
-          "DE": 63,
-          "HT": 287
-        },
-        "4": {
-          "DE": 84,
-          "HT": 308
-        },
-        "5": {
-          "DE": 105,
-          "HT": 329
-        },
-        "6": {
-          "DE": 126,
-          "HT": 350
-        },
-        "7": {
-          "DE": 147,
-          "HT": 371
-        },
-        "8": {
-          "DE": 168,
-          "HT": 392
-        },
-        "9": {
-          "DE": 189,
-          "HT": 413
-        },
-        "10": {
-          "DE": 210,
-          "HT": 434
-        }
-      },
-      "DE": 210,
-      "HT": 434
-    },
-    {
-      "id": "bottom-thunderbolt-bottom-of-qinglongmon-ultimate",
-      "name": "Thunderbolt Bottom of Qinglongmon [Ultimate]",
-      "slot": "bottom",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [อัลติเมท]",
-      "levelStats": {
-        "0": {
-          "DE": 20,
-          "HT": 200
-        },
-        "1": {
-          "DE": 30,
-          "HT": 350
-        },
-        "2": {
-          "DE": 60,
-          "HT": 380
-        },
-        "3": {
-          "DE": 90,
-          "HT": 410
-        },
-        "4": {
-          "DE": 120,
-          "HT": 440
-        },
-        "5": {
-          "DE": 150,
-          "HT": 470
-        },
-        "6": {
-          "DE": 180,
-          "HT": 500
-        },
-        "7": {
-          "DE": 210,
-          "HT": 530
-        },
-        "8": {
-          "DE": 240,
-          "HT": 560
-        },
-        "9": {
-          "DE": 270,
-          "HT": 590
-        },
-        "10": {
-          "DE": 300,
-          "HT": 620
-        }
-      },
-      "DE": 300,
-      "HT": 620
-    },
-    {
-      "id": "bottom-thunderbolt-bottom-of-qinglongmon-unique",
-      "name": "Thunderbolt Bottom of Qinglongmon [Unique]",
-      "slot": "bottom",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [ยูนีค]",
-      "levelStats": {
-        "0": {
-          "DE": 12,
-          "HT": 160
-        },
-        "1": {
-          "DE": 24,
-          "HT": 280
-        },
-        "2": {
-          "DE": 48,
-          "HT": 304
-        },
-        "3": {
-          "DE": 72,
-          "HT": 328
-        },
-        "4": {
-          "DE": 96,
-          "HT": 352
-        },
-        "5": {
-          "DE": 120,
-          "HT": 376
-        },
-        "6": {
-          "DE": 144,
-          "HT": 400
-        },
-        "7": {
-          "DE": 168,
-          "HT": 424
-        },
-        "8": {
-          "DE": 192,
-          "HT": 448
-        },
-        "9": {
-          "DE": 216,
-          "HT": 472
-        },
-        "10": {
-          "DE": 240,
-          "HT": 496
-        }
-      },
-      "DE": 240,
-      "HT": 496
-    },
-    {
       "id": "bottom-trendy-wide-pants-event",
       "name": "Trendy Wide Pants [Event]",
       "slot": "bottom",
@@ -1282,6 +997,27 @@
       "nameTh": "กางเกงขาสั้นสีแดงเพลิงของซูเซมอน"
     },
     {
+      "id": "bracelets-fancy-bracelet-of-ancient-breath-2",
+      "name": "Fancy Bracelet of Ancient Breath",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "iconWiki": "/images/4/41/Fancy_Bracelet_of_Ancient_Breath.png",
+      "icon": "img/gear/fancy_bracelet_of_ancient_breath.png",
+      "DS": 299,
+      "DE": 37,
+      "CT": 2.0,
+      "HT": 187,
+      "EV": 2.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 299.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
       "id": "bracelets-knight-s-bracelet-2",
       "name": "Knight's Bracelet",
       "slot": "bracelet",
@@ -1293,61 +1029,12 @@
       "DE": 100,
       "CT": 7.0,
       "HT": 500,
+      "EV": 6.0,
       "extra": [
         {
           "stat": "HP",
           "value": 800.0,
           "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "bracelets-maximum",
-      "name": "Maximum",
-      "slot": "bracelet",
-      "wikiSlot": "Bracelets",
-      "axis": "unknown",
-      "DS": 2500,
-      "DE": 500,
-      "AT": 1500,
-      "CT": 10.0,
-      "HT": 1200,
-      "EV": 15.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 3000.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "Final DMG",
-          "value": 5.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "bracelets-minimum",
-      "name": "Minimum",
-      "slot": "bracelet",
-      "wikiSlot": "Bracelets",
-      "axis": "unknown",
-      "DS": 1500,
-      "DE": 300,
-      "AT": 1000,
-      "CT": 5.0,
-      "HT": 800,
-      "EV": 10.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 2000.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "Final DMG",
-          "value": 1.0,
-          "unit": "pct"
         }
       ]
     },
@@ -1364,7 +1051,9 @@
       "DS": 1152,
       "AT": 576,
       "DE": 144,
+      "CT": 9.0,
       "HT": 720,
+      "EV": 9.0,
       "extra": [
         {
           "stat": "HP",
@@ -1385,7 +1074,9 @@
       "DS": 1200,
       "AT": 600,
       "DE": 150,
+      "CT": 10.0,
       "HT": 750,
+      "EV": 9.0,
       "extra": [
         {
           "stat": "HP",
@@ -1403,6 +1094,69 @@
       "axis": "unknown",
       "iconWiki": "/images/8/8f/Knight%27s_Bracelet.png",
       "icon": "img/gear/knight_s_bracelet.png",
+      "DS": 800,
+      "DE": 100,
+      "CT": 7.0,
+      "HT": 500,
+      "EV": 6.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 800.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-royal-knight-s-bracelet-2",
+      "name": "Royal : Knight's Bracelet",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "iconWiki": "/images/e/eb/Royal_Bracelet.png",
+      "icon": "img/gear/royal_bracelet.png",
+      "DS": 800,
+      "DE": 100,
+      "CT": 7.0,
+      "HT": 500,
+      "EV": 6.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 800.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-royal-radiant-knight-s-bracelet-2",
+      "name": "Royal : Radiant Knight's Bracelet",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "iconWiki": "/images/e/eb/Royal_Bracelet.png",
+      "icon": "img/gear/royal_bracelet.png",
+      "DS": 800,
+      "DE": 100,
+      "CT": 7.0,
+      "HT": 500,
+      "EV": 6.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 800.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-royal-x-knight-s-bracelet-2",
+      "name": "Royal : X-Knight's Bracelet",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "iconWiki": "/images/a/ad/Royal_-_X-Knight%27s_Bracelet.png",
+      "icon": "img/gear/royal_-_x-knight_s_bracelet.png",
       "DS": 960,
       "AT": 480,
       "DE": 120,
@@ -1413,6 +1167,78 @@
         {
           "stat": "HP",
           "value": 960.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-vital-breath-digivice-v-2",
+      "name": "Vital Breath Digivice -V-",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "iconWiki": "/images/9/9e/Vital_Breath_Digivice_-V-.png",
+      "icon": "img/gear/vital_breath_digivice_-v-.png",
+      "DS": 2500,
+      "DE": 500,
+      "AT": 1500,
+      "CT": 10.0,
+      "HT": 1200,
+      "EV": 15.0,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 3000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "Final DMG",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "bracelets-zero-unit-bracelet-2",
+      "name": "Zero Unit Bracelet",
+      "slot": "bracelet",
+      "wikiSlot": "Bracelets",
+      "axis": "unknown",
+      "iconWiki": "/images/7/7b/Zero_Unit_Bracelet.png",
+      "icon": "img/gear/zero_unit_bracelet.png",
+      "DS": 1440,
+      "AT": 720,
+      "DE": 180,
+      "CT": 12.0,
+      "HT": 900,
+      "EV": 10.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1440.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "earrings-brilliant-kindness-earring-2",
+      "name": "Brilliant Kindness Earring",
+      "slot": "earring",
+      "wikiSlot": "Earrings",
+      "axis": "unknown",
+      "iconWiki": "/images/e/ec/Brilliant_Kindness_Earring.png",
+      "icon": "img/gear/brilliant_kindness_earring.png",
+      "DS": 1500,
+      "DE": 200,
+      "CT": 12.0,
+      "HT": 1000,
+      "EV": 10.0,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1500.0,
           "unit": "flat"
         }
       ]
@@ -1429,7 +1255,10 @@
       "icon": "img/gear/earrings_of_four_holy_beasts.png",
       "DS": 880,
       "DE": 110,
+      "CT": 8.0,
       "HT": 550,
+      "EV": 8.0,
+      "BL": 7.0,
       "extra": [
         {
           "stat": "HP",
@@ -1477,44 +1306,6 @@
       "nameTh": "ต่างหูแห่งราชัน"
     },
     {
-      "id": "earrings-maximum",
-      "name": "Maximum",
-      "slot": "earring",
-      "wikiSlot": "Earrings",
-      "axis": "unknown",
-      "DS": 1500,
-      "DE": 200,
-      "CT": 12.0,
-      "HT": 1000,
-      "EV": 10.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1500.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "earrings-minimum",
-      "name": "Minimum",
-      "slot": "earring",
-      "wikiSlot": "Earrings",
-      "axis": "unknown",
-      "DS": 750,
-      "DE": 100,
-      "CT": 6.0,
-      "HT": 500,
-      "EV": 1.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 750.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
       "id": "earrings-nanomon-s-shiny-earring",
       "name": "Nanomon's Shiny Earring",
       "slot": "earring",
@@ -1544,7 +1335,10 @@
       "icon": "img/gear/radiant_earrings_of_four_holy_beasts.png",
       "DS": 1040,
       "DE": 130,
+      "CT": 10.0,
       "HT": 650,
+      "EV": 10.0,
+      "BL": 8.0,
       "extra": [
         {
           "stat": "HP",
@@ -1553,26 +1347,6 @@
         }
       ],
       "nameTh": "ต่างหูที่เปล่งประกายของสี่สัตว์เทพ"
-    },
-    {
-      "id": "earrings-regular-earrings",
-      "name": "Regular Earrings",
-      "slot": "earring",
-      "wikiSlot": "Earrings",
-      "axis": "unknown",
-      "DS": 800,
-      "DE": 100,
-      "CT": 7.0,
-      "HT": 500,
-      "EV": 7.0,
-      "BL": 6.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 800.0,
-          "unit": "flat"
-        }
-      ]
     },
     {
       "id": "earrings-zero-unit-earrings",
@@ -1587,6 +1361,7 @@
       "CT": 9.0,
       "HT": 600,
       "EV": 8.0,
+      "BL": 7.0,
       "extra": [
         {
           "stat": "HP",
@@ -2116,266 +1891,6 @@
         }
       },
       "nameTh": "แสง : เครื่องประดับแห่งสปิริต"
-    },
-    {
-      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-legend",
-      "name": "Phoenix Feather Robe of Zhuqiaomon [Legend]",
-      "slot": "fashion",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [เลเจนด์]",
-      "levelStats": {
-        "0": {
-          "AT": 175
-        },
-        "1": {
-          "AT": 225
-        },
-        "2": {
-          "AT": 248
-        },
-        "3": {
-          "AT": 270
-        },
-        "4": {
-          "AT": 293
-        },
-        "5": {
-          "AT": 315
-        },
-        "6": {
-          "AT": 338
-        },
-        "7": {
-          "AT": 360
-        },
-        "8": {
-          "AT": 383
-        },
-        "9": {
-          "AT": 405
-        },
-        "10": {
-          "AT": 428
-        }
-      },
-      "AT": 428,
-      "extra": [
-        {
-          "stat": "SCD",
-          "value": 8.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-normal",
-      "name": "Phoenix Feather Robe of Zhuqiaomon [Normal]",
-      "slot": "fashion",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [ปกติ]",
-      "levelStats": {
-        "0": {
-          "AT": 100
-        },
-        "1": {
-          "AT": 150
-        },
-        "2": {
-          "AT": 165
-        },
-        "3": {
-          "AT": 180
-        },
-        "4": {
-          "AT": 195
-        },
-        "5": {
-          "AT": 210
-        },
-        "6": {
-          "AT": 225
-        },
-        "7": {
-          "AT": 240
-        },
-        "8": {
-          "AT": 255
-        },
-        "9": {
-          "AT": 270
-        },
-        "10": {
-          "AT": 285
-        }
-      },
-      "AT": 285,
-      "extra": [
-        {
-          "stat": "SCD",
-          "value": 2.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-rare",
-      "name": "Phoenix Feather Robe of Zhuqiaomon [Rare]",
-      "slot": "fashion",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [แรร์]",
-      "levelStats": {
-        "0": {
-          "AT": 125
-        },
-        "1": {
-          "AT": 175
-        },
-        "2": {
-          "AT": 193
-        },
-        "3": {
-          "AT": 210
-        },
-        "4": {
-          "AT": 228
-        },
-        "5": {
-          "AT": 245
-        },
-        "6": {
-          "AT": 263
-        },
-        "7": {
-          "AT": 280
-        },
-        "8": {
-          "AT": 298
-        },
-        "9": {
-          "AT": 315
-        },
-        "10": {
-          "AT": 333
-        }
-      },
-      "AT": 333,
-      "extra": [
-        {
-          "stat": "SCD",
-          "value": 4.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-ultimate",
-      "name": "Phoenix Feather Robe of Zhuqiaomon [Ultimate]",
-      "slot": "fashion",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [อัลติเมท]",
-      "levelStats": {
-        "0": {
-          "AT": 200
-        },
-        "1": {
-          "AT": 250
-        },
-        "2": {
-          "AT": 275
-        },
-        "3": {
-          "AT": 300
-        },
-        "4": {
-          "AT": 325
-        },
-        "5": {
-          "AT": 350
-        },
-        "6": {
-          "AT": 375
-        },
-        "7": {
-          "AT": 400
-        },
-        "8": {
-          "AT": 425
-        },
-        "9": {
-          "AT": 450
-        },
-        "10": {
-          "AT": 475
-        }
-      },
-      "AT": 475,
-      "extra": [
-        {
-          "stat": "SCD",
-          "value": 10.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-unique",
-      "name": "Phoenix Feather Robe of Zhuqiaomon [Unique]",
-      "slot": "fashion",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [ยูนีค]",
-      "levelStats": {
-        "0": {
-          "AT": 150
-        },
-        "1": {
-          "AT": 200
-        },
-        "2": {
-          "AT": 220
-        },
-        "3": {
-          "AT": 240
-        },
-        "4": {
-          "AT": 260
-        },
-        "5": {
-          "AT": 280
-        },
-        "6": {
-          "AT": 300
-        },
-        "7": {
-          "AT": 320
-        },
-        "8": {
-          "AT": 340
-        },
-        "9": {
-          "AT": 360
-        },
-        "10": {
-          "AT": 380
-        }
-      },
-      "AT": 380,
-      "extra": [
-        {
-          "stat": "SCD",
-          "value": 6.0,
-          "unit": "pct"
-        }
-      ]
     },
     {
       "id": "fashion-qinglongmon-s-lightning-cape",
@@ -3479,201 +2994,6 @@
         }
       },
       "nameTh": "น้ำแข็ง : ถุงมือแห่งสปิริต"
-    },
-    {
-      "id": "gloves-immaculate-gauntlet-of-baihumon-legend",
-      "name": "Immaculate Gauntlet of Baihumon [Legend]",
-      "slot": "gloves",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [เลเจนด์]",
-      "levelStats": {
-        "0": {},
-        "1": {},
-        "2": {
-          "CT": 1.0
-        },
-        "3": {
-          "CT": 2.0
-        },
-        "4": {
-          "CT": 3.0
-        },
-        "5": {
-          "CT": 4.0
-        },
-        "6": {
-          "CT": 5.0
-        },
-        "7": {
-          "CT": 6.0
-        },
-        "8": {
-          "CT": 7.0
-        },
-        "9": {
-          "CT": 8.0
-        },
-        "10": {
-          "CT": 10.0
-        }
-      },
-      "CT": 10.0
-    },
-    {
-      "id": "gloves-immaculate-gauntlet-of-baihumon-normal",
-      "name": "Immaculate Gauntlet of Baihumon [Normal]",
-      "slot": "gloves",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [ปกติ]",
-      "levelStats": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {},
-        "4": {},
-        "5": {
-          "CT": 1.0
-        },
-        "6": {
-          "CT": 2.0
-        },
-        "7": {
-          "CT": 3.0
-        },
-        "8": {
-          "CT": 4.0
-        },
-        "9": {
-          "CT": 5.0
-        },
-        "10": {
-          "CT": 6.0
-        }
-      },
-      "CT": 6.0
-    },
-    {
-      "id": "gloves-immaculate-gauntlet-of-baihumon-rare",
-      "name": "Immaculate Gauntlet of Baihumon [Rare]",
-      "slot": "gloves",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [แรร์]",
-      "levelStats": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {},
-        "4": {
-          "CT": 1.0
-        },
-        "5": {
-          "CT": 2.0
-        },
-        "6": {
-          "CT": 3.0
-        },
-        "7": {
-          "CT": 4.0
-        },
-        "8": {
-          "CT": 5.0
-        },
-        "9": {
-          "CT": 6.0
-        },
-        "10": {
-          "CT": 7.0
-        }
-      },
-      "CT": 7.0
-    },
-    {
-      "id": "gloves-immaculate-gauntlet-of-baihumon-ultimate",
-      "name": "Immaculate Gauntlet of Baihumon [Ultimate]",
-      "slot": "gloves",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [อัลติเมท]",
-      "levelStats": {
-        "0": {},
-        "1": {
-          "CT": 1.0
-        },
-        "2": {
-          "CT": 2.0
-        },
-        "3": {
-          "CT": 3.0
-        },
-        "4": {
-          "CT": 4.0
-        },
-        "5": {
-          "CT": 5.0
-        },
-        "6": {
-          "CT": 6.0
-        },
-        "7": {
-          "CT": 7.0
-        },
-        "8": {
-          "CT": 8.0
-        },
-        "9": {
-          "CT": 9.0
-        },
-        "10": {
-          "CT": 12.0
-        }
-      },
-      "CT": 12.0
-    },
-    {
-      "id": "gloves-immaculate-gauntlet-of-baihumon-unique",
-      "name": "Immaculate Gauntlet of Baihumon [Unique]",
-      "slot": "gloves",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [ยูนีค]",
-      "levelStats": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {
-          "CT": 1.0
-        },
-        "4": {
-          "CT": 2.0
-        },
-        "5": {
-          "CT": 3.0
-        },
-        "6": {
-          "CT": 4.0
-        },
-        "7": {
-          "CT": 5.0
-        },
-        "8": {
-          "CT": 6.0
-        },
-        "9": {
-          "CT": 7.0
-        },
-        "10": {
-          "CT": 8.0
-        }
-      },
-      "CT": 8.0
     },
     {
       "id": "gloves-lanamon-s-gauntlet-event",
@@ -4817,291 +4137,6 @@
       "nameTh": "แสง : หมวกเกราะแห่งสปิริต"
     },
     {
-      "id": "head-noble-head-ornament-of-huanglongmon-legend",
-      "name": "Noble Head Ornament of Huanglongmon [Legend]",
-      "slot": "head",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [เลเจนด์]",
-      "levelStats": {
-        "0": {
-          "HT": 130,
-          "AT": 25
-        },
-        "1": {
-          "HT": 225,
-          "AT": 270
-        },
-        "2": {
-          "HT": 239,
-          "AT": 293
-        },
-        "3": {
-          "HT": 252,
-          "AT": 315
-        },
-        "4": {
-          "HT": 266,
-          "AT": 338
-        },
-        "5": {
-          "HT": 279,
-          "AT": 360
-        },
-        "6": {
-          "HT": 293,
-          "AT": 383
-        },
-        "7": {
-          "HT": 306,
-          "AT": 405
-        },
-        "8": {
-          "HT": 320,
-          "AT": 428
-        },
-        "9": {
-          "HT": 333,
-          "AT": 450
-        },
-        "10": {
-          "HT": 347,
-          "AT": 473
-        }
-      },
-      "HT": 347,
-      "AT": 473
-    },
-    {
-      "id": "head-noble-head-ornament-of-huanglongmon-normal",
-      "name": "Noble Head Ornament of Huanglongmon [Normal]",
-      "slot": "head",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [ปกติ]",
-      "levelStats": {
-        "0": {
-          "HT": 80,
-          "AT": 10
-        },
-        "1": {
-          "HT": 150,
-          "AT": 180
-        },
-        "2": {
-          "HT": 159,
-          "AT": 195
-        },
-        "3": {
-          "HT": 168,
-          "AT": 210
-        },
-        "4": {
-          "HT": 177,
-          "AT": 225
-        },
-        "5": {
-          "HT": 186,
-          "AT": 240
-        },
-        "6": {
-          "HT": 195,
-          "AT": 255
-        },
-        "7": {
-          "HT": 204,
-          "AT": 270
-        },
-        "8": {
-          "HT": 213,
-          "AT": 285
-        },
-        "9": {
-          "HT": 222,
-          "AT": 300
-        },
-        "10": {
-          "HT": 231,
-          "AT": 315
-        }
-      },
-      "HT": 231,
-      "AT": 315
-    },
-    {
-      "id": "head-noble-head-ornament-of-huanglongmon-rare",
-      "name": "Noble Head Ornament of Huanglongmon [Rare]",
-      "slot": "head",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [แรร์]",
-      "levelStats": {
-        "0": {
-          "HT": 100,
-          "AT": 15
-        },
-        "1": {
-          "HT": 175,
-          "AT": 210
-        },
-        "2": {
-          "HT": 186,
-          "AT": 228
-        },
-        "3": {
-          "HT": 196,
-          "AT": 245
-        },
-        "4": {
-          "HT": 207,
-          "AT": 263
-        },
-        "5": {
-          "HT": 217,
-          "AT": 280
-        },
-        "6": {
-          "HT": 228,
-          "AT": 298
-        },
-        "7": {
-          "HT": 238,
-          "AT": 315
-        },
-        "8": {
-          "HT": 249,
-          "AT": 333
-        },
-        "9": {
-          "HT": 259,
-          "AT": 350
-        },
-        "10": {
-          "HT": 270,
-          "AT": 368
-        }
-      },
-      "HT": 270,
-      "AT": 368
-    },
-    {
-      "id": "head-noble-head-ornament-of-huanglongmon-ultimate",
-      "name": "Noble Head Ornament of Huanglongmon [Ultimate]",
-      "slot": "head",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [อัลติเมท]",
-      "levelStats": {
-        "0": {
-          "HT": 150,
-          "AT": 30
-        },
-        "1": {
-          "HT": 250,
-          "AT": 300
-        },
-        "2": {
-          "HT": 265,
-          "AT": 325
-        },
-        "3": {
-          "HT": 280,
-          "AT": 350
-        },
-        "4": {
-          "HT": 295,
-          "AT": 375
-        },
-        "5": {
-          "HT": 310,
-          "AT": 400
-        },
-        "6": {
-          "HT": 325,
-          "AT": 425
-        },
-        "7": {
-          "HT": 340,
-          "AT": 450
-        },
-        "8": {
-          "HT": 355,
-          "AT": 475
-        },
-        "9": {
-          "HT": 370,
-          "AT": 500
-        },
-        "10": {
-          "HT": 385,
-          "AT": 525
-        }
-      },
-      "HT": 385,
-      "AT": 525
-    },
-    {
-      "id": "head-noble-head-ornament-of-huanglongmon-unique",
-      "name": "Noble Head Ornament of Huanglongmon [Unique]",
-      "slot": "head",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [ยูนีค]",
-      "levelStats": {
-        "0": {
-          "HT": 120,
-          "AT": 20
-        },
-        "1": {
-          "HT": 200,
-          "AT": 240
-        },
-        "2": {
-          "HT": 212,
-          "AT": 260
-        },
-        "3": {
-          "HT": 224,
-          "AT": 280
-        },
-        "4": {
-          "HT": 236,
-          "AT": 300
-        },
-        "5": {
-          "HT": 248,
-          "AT": 320
-        },
-        "6": {
-          "HT": 260,
-          "AT": 340
-        },
-        "7": {
-          "HT": 272,
-          "AT": 360
-        },
-        "8": {
-          "HT": 284,
-          "AT": 380
-        },
-        "9": {
-          "HT": 296,
-          "AT": 400
-        },
-        "10": {
-          "HT": 308,
-          "AT": 420
-        }
-      },
-      "HT": 308,
-      "AT": 420
-    },
-    {
       "id": "head-qinglongmon-s-lightning-ornament",
       "name": "Qinglongmon's Lightning Ornament",
       "slot": "head",
@@ -5921,42 +4956,6 @@
       "nameTh": "สร้อยแห่งราชัน"
     },
     {
-      "id": "necklaces-maximum",
-      "name": "Maximum",
-      "slot": "necklace",
-      "wikiSlot": "Necklaces",
-      "axis": "unknown",
-      "DS": 1200,
-      "AT": 300,
-      "DE": 100,
-      "CT": 10.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1200.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "necklaces-minimum",
-      "name": "Minimum",
-      "slot": "necklace",
-      "wikiSlot": "Necklaces",
-      "axis": "unknown",
-      "DS": 600,
-      "AT": 150,
-      "DE": 50,
-      "CT": 5.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 600.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
       "id": "necklaces-necklace-of-four-holy-beasts-lv-5",
       "name": "Necklace of Four Holy Beasts [ ]",
       "slot": "necklace",
@@ -5969,52 +4968,38 @@
       "DS": 880,
       "AT": 220,
       "DE": 55,
+      "CT": 6.0,
       "extra": [
         {
           "stat": "HP",
           "value": 880.0,
           "unit": "flat"
+        },
+        {
+          "stat": "AS",
+          "value": 15.0,
+          "unit": "pct"
         }
       ],
       "nameTh": "สร้อยของสี่สัตว์เทพ"
     },
     {
-      "id": "necklaces-necklaces-with-3-options",
-      "name": "Necklaces with 3 Options",
+      "id": "necklaces-radiant-miracle-necklace-2",
+      "name": "Radiant Miracle Necklace",
       "slot": "necklace",
       "wikiSlot": "Necklaces",
       "axis": "unknown",
-      "DS": 500,
-      "AT": 100,
-      "DE": 25,
-      "CT": 2.0,
+      "iconWiki": "/images/7/7c/Radiant_Miracle_Necklace.png",
+      "icon": "img/gear/radiant_miracle_necklace.png",
+      "DS": 1200,
+      "AT": 300,
+      "DE": 100,
+      "CT": 10.0,
+      "ranged": true,
       "extra": [
         {
           "stat": "HP",
-          "value": 500.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "AS",
-          "value": 4.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "necklaces-necklaces-with-4-or-5-options",
-      "name": "Necklaces with 4 or 5 Options",
-      "slot": "necklace",
-      "wikiSlot": "Necklaces",
-      "axis": "unknown",
-      "DS": 800,
-      "AT": 200,
-      "DE": 50,
-      "CT": 5.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 800.0,
+          "value": 1200.0,
           "unit": "flat"
         },
         {
@@ -6037,11 +5022,17 @@
       "DS": 1040,
       "AT": 260,
       "DE": 65,
+      "CT": 7.0,
       "extra": [
         {
           "stat": "HP",
           "value": 1040.0,
           "unit": "flat"
+        },
+        {
+          "stat": "AS",
+          "value": 15.0,
+          "unit": "pct"
         }
       ],
       "nameTh": "สร้อยที่เปล่งประกายของสี่สัตว์เทพที่ถูกผนึก"
@@ -6057,6 +5048,53 @@
       "nameTh": "สร้อยคอแห่งยมโลก"
     },
     {
+      "id": "necklaces-zero-unit-necklace-2",
+      "name": "Zero Unit Necklace",
+      "slot": "necklace",
+      "wikiSlot": "Necklaces",
+      "axis": "unknown",
+      "iconWiki": "/images/d/dc/Zero_Unit_Necklace.png",
+      "icon": "img/gear/zero_unit_necklace.png",
+      "DS": 960,
+      "AT": 240,
+      "DE": 60,
+      "CT": 6.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 960.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "AS",
+          "value": 15.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "rings-brilliant-ring-of-hope-2",
+      "name": "Brilliant Ring of Hope",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "iconWiki": "/images/b/be/Brilliant_Ring_of_Hope.png",
+      "icon": "img/gear/brilliant_ring_of_hope.png",
+      "DS": 1500,
+      "AT": 1000,
+      "DE": 100,
+      "CT": 10.0,
+      "HT": 2000,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
       "id": "rings-fanglongmon-s-ancient-ring-lv-10",
       "name": "Fanglongmon's Ancient Ring [ ]",
       "slot": "ring",
@@ -6068,6 +5106,7 @@
       "icon": "img/gear/fanglongmon_ring.png",
       "DS": 960,
       "AT": 360,
+      "DE": 30,
       "extra": [
         {
           "stat": "HP",
@@ -6090,44 +5129,6 @@
       "nameTh": "แหวนแห่งราชัน"
     },
     {
-      "id": "rings-maximum",
-      "name": "Maximum",
-      "slot": "ring",
-      "wikiSlot": "Rings",
-      "axis": "unknown",
-      "DS": 1500,
-      "AT": 1000,
-      "DE": 100,
-      "CT": 10.0,
-      "HT": 2000,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1500.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "rings-minimum",
-      "name": "Minimum",
-      "slot": "ring",
-      "wikiSlot": "Rings",
-      "axis": "unknown",
-      "DS": 750,
-      "AT": 500,
-      "DE": 50,
-      "CT": 2.0,
-      "HT": 1000,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 750.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
       "id": "rings-radiant-ring-of-four-holy-beasts-lv-5",
       "name": "Radiant Ring of Four Holy Beasts [ ]",
       "slot": "ring",
@@ -6140,6 +5141,7 @@
       "DS": 1040,
       "AT": 390,
       "DE": 33,
+      "CT": 7.0,
       "extra": [
         {
           "stat": "HP",
@@ -6162,6 +5164,7 @@
       "DS": 880,
       "AT": 330,
       "DE": 28,
+      "CT": 6.0,
       "extra": [
         {
           "stat": "HP",
@@ -6172,37 +5175,23 @@
       "nameTh": "แหวนของสี่สัตว์เทพ"
     },
     {
-      "id": "rings-ring-with-3-options",
-      "name": "Ring with 3 Options",
+      "id": "rings-shining-arena-ring-2",
+      "name": "Shining Arena Ring",
       "slot": "ring",
       "wikiSlot": "Rings",
       "axis": "unknown",
-      "DS": 500,
-      "AT": 150,
-      "DE": 15,
-      "CT": 4.0,
+      "iconWiki": "/images/4/42/Shining_Arena_Ring.png",
+      "icon": "img/gear/shining_arena_ring.png",
+      "DS": 960,
+      "AT": 360,
+      "DE": 30,
+      "CT": 6.0,
+      "HT": 500,
+      "ranged": true,
       "extra": [
         {
           "stat": "HP",
-          "value": 500.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "rings-ring-with-4-or-5-options",
-      "name": "Ring with 4 or 5 Options",
-      "slot": "ring",
-      "wikiSlot": "Rings",
-      "axis": "unknown",
-      "DS": 800,
-      "AT": 300,
-      "DE": 25,
-      "CT": 5.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 800.0,
+          "value": 960.0,
           "unit": "flat"
         }
       ]
@@ -6216,6 +5205,26 @@
       "AT": 450,
       "CT": 7.0,
       "nameTh": "แหวนแห่งยมโลก"
+    },
+    {
+      "id": "rings-zero-unit-ring-2",
+      "name": "Zero Unit Ring",
+      "slot": "ring",
+      "wikiSlot": "Rings",
+      "axis": "unknown",
+      "iconWiki": "/images/1/1d/Zero_Unit_Ring.png",
+      "icon": "img/gear/zero_unit_ring.png",
+      "DS": 960,
+      "AT": 360,
+      "DE": 30,
+      "CT": 6.0,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 960.0,
+          "unit": "flat"
+        }
+      ]
     },
     {
       "id": "shoes-agumon-feet-shoes-30d",
@@ -6475,176 +5484,6 @@
         "15": {}
       },
       "nameTh": "แสง : รองเท้าแห่งสปิริต"
-    },
-    {
-      "id": "shoes-shoes-of-the-four-holy-beasts-legend",
-      "name": "Shoes of the Four Holy Beasts [Legend]",
-      "slot": "shoes",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [เลเจนด์]",
-      "levelStats": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {},
-        "4": {},
-        "5": {},
-        "6": {},
-        "7": {},
-        "8": {},
-        "9": {},
-        "10": {}
-      },
-      "extra": [
-        {
-          "stat": "EXP",
-          "value": 150.0,
-          "unit": "pct"
-        },
-        {
-          "stat": "Speed",
-          "value": 20.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "shoes-shoes-of-the-four-holy-beasts-normal",
-      "name": "Shoes of the Four Holy Beasts [Normal]",
-      "slot": "shoes",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [ปกติ]",
-      "levelStats": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {},
-        "4": {},
-        "5": {},
-        "6": {},
-        "7": {},
-        "8": {},
-        "9": {},
-        "10": {}
-      },
-      "extra": [
-        {
-          "stat": "EXP",
-          "value": 60.0,
-          "unit": "pct"
-        },
-        {
-          "stat": "Speed",
-          "value": 5.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "shoes-shoes-of-the-four-holy-beasts-rare",
-      "name": "Shoes of the Four Holy Beasts [Rare]",
-      "slot": "shoes",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [แรร์]",
-      "levelStats": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {},
-        "4": {},
-        "5": {},
-        "6": {},
-        "7": {},
-        "8": {},
-        "9": {},
-        "10": {}
-      },
-      "extra": [
-        {
-          "stat": "EXP",
-          "value": 80.0,
-          "unit": "pct"
-        },
-        {
-          "stat": "Speed",
-          "value": 10.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "shoes-shoes-of-the-four-holy-beasts-ultimate",
-      "name": "Shoes of the Four Holy Beasts [Ultimate]",
-      "slot": "shoes",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [อัลติเมท]",
-      "levelStats": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {},
-        "4": {},
-        "5": {},
-        "6": {},
-        "7": {},
-        "8": {},
-        "9": {},
-        "10": {}
-      },
-      "extra": [
-        {
-          "stat": "EXP",
-          "value": 500.0,
-          "unit": "pct"
-        },
-        {
-          "stat": "Speed",
-          "value": 25.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "shoes-shoes-of-the-four-holy-beasts-unique",
-      "name": "Shoes of the Four Holy Beasts [Unique]",
-      "slot": "shoes",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [ยูนีค]",
-      "levelStats": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {},
-        "4": {},
-        "5": {},
-        "6": {},
-        "7": {},
-        "8": {},
-        "9": {},
-        "10": {}
-      },
-      "extra": [
-        {
-          "stat": "EXP",
-          "value": 100.0,
-          "unit": "pct"
-        },
-        {
-          "stat": "Speed",
-          "value": 15.0,
-          "unit": "pct"
-        }
-      ]
     },
     {
       "id": "shoes-spooky-wizardmon-shoes-30-days",
@@ -6947,266 +5786,6 @@
           "stat": "EXP",
           "value": 3000.0,
           "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "top-abyssal-armor-of-xuanwumon-legend",
-      "name": "Abyssal Armor of Xuanwumon [Legend]",
-      "slot": "top",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [เลเจนด์]",
-      "levelStats": {
-        "0": {
-          "DS": 120
-        },
-        "1": {
-          "DS": 180
-        },
-        "2": {
-          "DS": 360
-        },
-        "3": {
-          "DS": 540
-        },
-        "4": {
-          "DS": 720
-        },
-        "5": {
-          "DS": 900
-        },
-        "6": {
-          "DS": 1170
-        },
-        "7": {
-          "DS": 1440
-        },
-        "8": {
-          "DS": 1710
-        },
-        "9": {
-          "DS": 1980
-        },
-        "10": {
-          "DS": 2250
-        }
-      },
-      "DS": 2250,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 2250.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "top-abyssal-armor-of-xuanwumon-normal",
-      "name": "Abyssal Armor of Xuanwumon [Normal]",
-      "slot": "top",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [ปกติ]",
-      "levelStats": {
-        "0": {
-          "DS": 30
-        },
-        "1": {
-          "DS": 120
-        },
-        "2": {
-          "DS": 240
-        },
-        "3": {
-          "DS": 360
-        },
-        "4": {
-          "DS": 480
-        },
-        "5": {
-          "DS": 600
-        },
-        "6": {
-          "DS": 780
-        },
-        "7": {
-          "DS": 960
-        },
-        "8": {
-          "DS": 1140
-        },
-        "9": {
-          "DS": 1320
-        },
-        "10": {
-          "DS": 1500
-        }
-      },
-      "DS": 1500,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1500.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "top-abyssal-armor-of-xuanwumon-rare",
-      "name": "Abyssal Armor of Xuanwumon [Rare]",
-      "slot": "top",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [แรร์]",
-      "levelStats": {
-        "0": {
-          "DS": 60
-        },
-        "1": {
-          "DS": 140
-        },
-        "2": {
-          "DS": 280
-        },
-        "3": {
-          "DS": 420
-        },
-        "4": {
-          "DS": 560
-        },
-        "5": {
-          "DS": 700
-        },
-        "6": {
-          "DS": 910
-        },
-        "7": {
-          "DS": 1120
-        },
-        "8": {
-          "DS": 1330
-        },
-        "9": {
-          "DS": 1540
-        },
-        "10": {
-          "DS": 1750
-        }
-      },
-      "DS": 1750,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1750.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "top-abyssal-armor-of-xuanwumon-ultimate",
-      "name": "Abyssal Armor of Xuanwumon [Ultimate]",
-      "slot": "top",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [อัลติเมท]",
-      "levelStats": {
-        "0": {
-          "DS": 150
-        },
-        "1": {
-          "DS": 200
-        },
-        "2": {
-          "DS": 400
-        },
-        "3": {
-          "DS": 600
-        },
-        "4": {
-          "DS": 800
-        },
-        "5": {
-          "DS": 1000
-        },
-        "6": {
-          "DS": 1300
-        },
-        "7": {
-          "DS": 1600
-        },
-        "8": {
-          "DS": 1900
-        },
-        "9": {
-          "DS": 2200
-        },
-        "10": {
-          "DS": 2500
-        }
-      },
-      "DS": 2500,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 2500.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "top-abyssal-armor-of-xuanwumon-unique",
-      "name": "Abyssal Armor of Xuanwumon [Unique]",
-      "slot": "top",
-      "axis": "digimon",
-      "upgrade": 0,
-      "upgradeMax": 10,
-      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [ยูนีค]",
-      "levelStats": {
-        "0": {
-          "DS": 90
-        },
-        "1": {
-          "DS": 160
-        },
-        "2": {
-          "DS": 320
-        },
-        "3": {
-          "DS": 480
-        },
-        "4": {
-          "DS": 640
-        },
-        "5": {
-          "DS": 800
-        },
-        "6": {
-          "DS": 1040
-        },
-        "7": {
-          "DS": 1280
-        },
-        "8": {
-          "DS": 1520
-        },
-        "9": {
-          "DS": 1760
-        },
-        "10": {
-          "DS": 2000
-        }
-      },
-      "DS": 2000,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 2000.0,
-          "unit": "flat"
         }
       ]
     },

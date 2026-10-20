@@ -37,6 +37,11 @@ sys.stdout.reconfigure(encoding="utf-8")
 PROJ = Path(__file__).resolve().parent.parent
 SRC = PROJ / "data" / "clothing_items.json"
 OUT = PROJ / "docs" / "gear_registry.json"
+# Accessories roll random options, so the registry's numbers are only a cap.
+# What a player needs to judge one -- how many options, how high each rolls,
+# where it drops -- goes to its own file for the gear-names page.
+ACCESSORY_OUT = PROJ / "docs" / "accessory_registry.json"
+ACCESSORY_SLOTS = ("Rings", "Necklaces", "Earrings", "Bracelets")
 ICON_DIR = PROJ / "docs" / "img" / "gear"
 TH_NAMES = PROJ / "data" / "gear_th_names.json"
 UPGRADE_LEVELS = PROJ / "data" / "upgrade_levels.json"
@@ -51,20 +56,6 @@ SPIRIT_PIECES = {
     "ถุงมือแห่งสปิริต": "Gloves",
     "รองเท้าแห่งสปิริต": "Shoes",
 }
-# The 2026 Four Holy Beasts pieces exist only in vplay's tables. Neither source
-# names a slot, so each takes the slot its kind fills in the six-piece sets
-# (the old Four Holy Beasts cape sits in fashion). NA names only the Ultimate
-# grade; the other English grade words mirror vplay's Thai ones.
-HOLY_SLOTS = {
-    "Noble Head Ornament of Huanglongmon": "head",
-    "Phoenix Feather Robe of Zhuqiaomon": "fashion",
-    "Abyssal Armor of Xuanwumon": "top",
-    "Thunderbolt Bottom of Qinglongmon": "bottom",
-    "Immaculate Gauntlet of Baihumon": "gloves",
-    "Shoes of the Four Holy Beasts": "shoes",
-}
-GRADE_EN = {"ปกติ": "Normal", "แรร์": "Rare", "ยูนีค": "Unique",
-            "เลเจนด์": "Legend", "อัลติเมท": "Ultimate"}
 
 
 def icon_filename(wiki_path):
@@ -118,6 +109,8 @@ ICON_ALIAS = {
     "ring of four holy beasts": "sealed ring of four holy beasts",
     "radiant necklace of four holy beasts": "sealed radiant necklace of four holy beasts",
     "radiant ring of four holy beasts": "sealed radiant ring of four holy beasts",
+    "earrings of four holy beasts": "sealed earrings of four holy beasts",
+    "radiant earrings of four holy beasts": "sealed radiant earrings of four holy beasts",
 }
 
 
@@ -280,36 +273,6 @@ def add_level_stats(out):
             rec.pop("ranged", None)          # exact per level now, not a roll top
             done += 1
 
-    for src in items:
-        en = src.get("piece_en")
-        if not en:
-            continue
-        m = re.fullmatch(r"(.+) \[(.+)\]", src["name"])
-        grade = GRADE_EN.get(m.group(2)) if m else None
-        slot = HOLY_SLOTS.get(en)
-        if not (grade and slot):
-            print(f"  ! {UPGRADE_LEVELS.name}: cannot place {src['name']!r}")
-            continue
-        table, top = level_table(src["levels"])
-        name = f"{en} [{grade}]"
-        rec = {
-            "id": re.sub(r"[^a-z0-9]+", "-", f"{slot}-{name}".lower()).strip("-"),
-            "name": name,
-            "slot": slot,
-            # vplay never says tamer or digimon; the site owner ruled digimon
-            # so the solver counts the set instead of skipping it.
-            "axis": "digimon",
-            "upgrade": 0,
-            "upgradeMax": top,
-            "nameTh": src["name"],
-            "levelStats": table,
-        }
-        rec.update(table[str(top)])
-        extra = non_solver_at(src["levels"], top)
-        if extra:
-            rec["extra"] = extra
-        out.append(rec)
-        done += 1
     return done
 
 
@@ -417,6 +380,81 @@ def split_level(name):
     return LEVEL_IN_NAME.sub(" ", name).strip().rstrip(",").strip(), lvl
 
 
+def local_icon(wiki_icon):
+    """Page-relative path of a picture fetch_dmowiki_images.py saved, else None."""
+    if not wiki_icon:
+        return None
+    local = ICON_DIR / icon_filename(wiki_icon)
+    return local.relative_to(PROJ / "docs").as_posix() if local.exists() else None
+
+
+def build_accessory_ref(items, icons):
+    """One record per accessory: the list row (options, drop) joined to the
+    roll table that belongs to it. A piece with no table of its own takes the
+    cap for its kind ("Ring with 3 Options"), named in rowsFrom."""
+    rows_by = defaultdict(list)
+    caps = defaultdict(dict)
+    lists = {}
+    for it in items:
+        if it.get("slot") not in ACCESSORY_SLOTS:
+            continue
+        key = icon_key(it["name"])
+        key = (it["slot"], ICON_ALIAS.get(key, key))
+        if it.get("category"):
+            caps[it["slot"]][it["name"]] = it.get("option_rows") or []
+        elif it.get("option_rows"):
+            rows_by[key].append(it)
+        elif not it.get("stats"):
+            lists.setdefault(key, it)
+
+    def cap_for(slot, options):
+        n = [int(x) for x in re.findall(r"\d+", options or "")]
+        for name, rows in caps[slot].items():
+            low = name.lower()
+            if low.startswith("regular") or (n and "with %d" % n[0] in low) \
+                    or (n and n[0] in (4, 5) and "4 or 5" in low):
+                return name, rows
+        return None, []
+
+    out = []
+    for key in sorted(set(lists) | set(rows_by)):
+        slot = key[0]
+        head = lists.get(key)
+        tables = sorted(rows_by.get(key, []), key=lambda r: split_level(r["name"])[1] or 0)
+        top = tables[-1] if tables else None
+        rec = {"name": (head or top)["name"], "slot": SLOT_MAP[slot]}
+        wiki_icon = ((head or {}).get("icon") or (top or {}).get("icon")
+                     or icon_by_name([rec["name"]], rec["name"], icons))
+        if wiki_icon:
+            rec["iconWiki"] = wiki_icon
+            icon = local_icon(wiki_icon)
+            if icon:
+                rec["icon"] = icon
+        for field, to in (("options", "options"), ("number_change", "numberChange"),
+                          ("obtain", "obtain"), ("recommended", "recommended")):
+            if head and head.get(field) is not None:
+                rec[to] = head[field]
+        if top:
+            rec["rows"] = top["option_rows"]
+            if len(tables) > 1:
+                rec["rowsFrom"] = top["name"]   # the highest level printed
+        else:
+            name, rows = cap_for(slot, rec.get("options"))
+            if rows:
+                rec["rows"] = rows
+                rec["rowsFrom"] = name
+        out.append(rec)
+
+    write_stamped(ACCESSORY_OUT, {
+        "built_at": date.today().isoformat(),
+        "source": "data/clothing_items.json",
+        "note": ("accessories roll random options; rows are what each option "
+                 "can roll (min/max, or the cap), not what a piece has"),
+        "items": out,
+    }, "built_at")
+    return out
+
+
 def band_key(item):
     """Sort key that puts the highest upgrade band last."""
     if item.get("_name_level") is not None:
@@ -433,7 +471,8 @@ def main():
     groups = defaultdict(list)
     dropped = defaultdict(int)
     for it in items:
-        if not it.get("stats"):
+        # a category column is the cap for a kind of accessory, not a piece
+        if not it.get("stats") or it.get("category"):
             continue
         slot = SLOT_MAP.get(it.get("slot"))
         if not slot:
@@ -507,6 +546,7 @@ def main():
         "items": out,
     }
     write_stamped(OUT, payload, "built_at")
+    accessories = build_accessory_ref(items, icons)
 
     by_slot = defaultdict(int)
     by_axis = defaultdict(int)
