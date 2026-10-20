@@ -85,13 +85,13 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "value": 450.0
+          "value": 4.5
         },
         {
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "value": 275.0
+          "value": 2.75
         }
       ],
       "upgrade": 0,
@@ -107,15 +107,15 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 500.0,
-          "max": 1200.0
+          "min": 5.0,
+          "max": 12.0
         },
         {
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 300.0,
-          "max": 800.0
+          "min": 3.0,
+          "max": 8.0
         }
       ],
       "upgrade": 1,
@@ -132,13 +132,13 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "value": 2000.0
+          "value": 20.0
         },
         {
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "value": 1000.0
+          "value": 10.0
         }
       ],
       "icon": "/images/1/11/Adv_Goggles_Max.png"
@@ -1705,8 +1705,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 3000.0,
-          "max": 4000.0
+          "min": 30.0,
+          "max": 40.0
         }
       ],
       "upgrade": 1,
@@ -4750,8 +4750,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 1000.0,
-          "max": 1500.0
+          "min": 10.0,
+          "max": 15.0
         }
       ],
       "upgrade": 0,
@@ -4768,8 +4768,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 1600.0,
-          "max": 2000.0
+          "min": 16.0,
+          "max": 20.0
         }
       ],
       "upgrade": 5,
@@ -4786,15 +4786,15 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 2500.0,
-          "max": 3000.0
+          "min": 25.0,
+          "max": 30.0
         },
         {
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 2000.0,
-          "max": 2500.0
+          "min": 20.0,
+          "max": 25.0
         }
       ],
       "upgrade": 10,
@@ -4876,8 +4876,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 500.0,
-          "max": 625.0
+          "min": 5.0,
+          "max": 6.25
         }
       ],
       "upgrade": 0,
@@ -4895,8 +4895,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 650.0,
-          "max": 750.0
+          "min": 6.5,
+          "max": 7.5
         }
       ],
       "upgrade": 5,
@@ -4914,15 +4914,15 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 775.0,
-          "max": 1500.0
+          "min": 7.75,
+          "max": 15.0
         },
         {
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 500.0,
-          "max": 1000.0
+          "min": 5.0,
+          "max": 10.0
         }
       ],
       "upgrade": 10,
@@ -8869,8 +8869,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 50.0,
-          "max": 300.0
+          "min": 0.5,
+          "max": 3.0
         }
       ],
       "upgrade": 0,
@@ -8888,8 +8888,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 350.0,
-          "max": 900.0
+          "min": 3.5,
+          "max": 9.0
         },
         {
           "stat": "Skill DMG",
@@ -8914,8 +8914,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 1000.0,
-          "max": 1500.0
+          "min": 10.0,
+          "max": 15.0
         },
         {
           "stat": "Skill DMG",
@@ -9103,8 +9103,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 50.0,
-          "max": 300.0
+          "min": 0.5,
+          "max": 3.0
         }
       ],
       "upgrade": 0,
@@ -9122,8 +9122,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 350.0,
-          "max": 900.0
+          "min": 3.5,
+          "max": 9.0
         },
         {
           "stat": "Skill DMG",
@@ -9148,8 +9148,8 @@
           "stat": "CT",
           "unit": "pct",
           "random": false,
-          "min": 1000.0,
-          "max": 1500.0
+          "min": 10.0,
+          "max": 15.0
         },
         {
           "stat": "Skill DMG",

@@ -5788,7 +5788,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 50.0
+              "value": 0.5
             }
           ]
         },
@@ -5798,7 +5798,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 100.0
+              "value": 1.0
             }
           ]
         },
@@ -5808,7 +5808,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 150.0
+              "value": 1.5
             }
           ]
         },
@@ -5818,7 +5818,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 200.0
+              "value": 2.0
             }
           ]
         },
@@ -5828,7 +5828,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 250.0
+              "value": 2.5
             }
           ]
         },
@@ -5838,7 +5838,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 300.0
+              "value": 3.0
             },
             {
               "stat": "EXP",
@@ -5853,7 +5853,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 350.0
+              "value": 3.5
             },
             {
               "stat": "EXP",
@@ -5868,7 +5868,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 400.0
+              "value": 4.0
             },
             {
               "stat": "EXP",
@@ -5883,7 +5883,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 450.0
+              "value": 4.5
             },
             {
               "stat": "EXP",
@@ -5898,7 +5898,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 500.0
+              "value": 5.0
             },
             {
               "stat": "EXP",
@@ -5913,7 +5913,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 600.0
+              "value": 6.0
             },
             {
               "stat": "EXP",
@@ -5928,7 +5928,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 700.0
+              "value": 7.0
             },
             {
               "stat": "EXP",
@@ -5943,7 +5943,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 900.0
+              "value": 9.0
             },
             {
               "stat": "EXP",
@@ -5958,7 +5958,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 1000.0
+              "value": 10.0
             },
             {
               "stat": "EXP",
@@ -5978,7 +5978,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 1200.0
+              "value": 12.0
             },
             {
               "stat": "EXP",
@@ -5998,7 +5998,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 1500.0
+              "value": 15.0
             },
             {
               "stat": "EXP",
@@ -6732,7 +6732,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 50.0
+              "value": 0.5
             }
           ]
         },
@@ -6742,7 +6742,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 100.0
+              "value": 1.0
             }
           ]
         },
@@ -6752,7 +6752,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 150.0
+              "value": 1.5
             }
           ]
         },
@@ -6762,7 +6762,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 200.0
+              "value": 2.0
             }
           ]
         },
@@ -6772,7 +6772,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 250.0
+              "value": 2.5
             }
           ]
         },
@@ -6782,7 +6782,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 300.0
+              "value": 3.0
             }
           ]
         },
@@ -6792,7 +6792,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 350.0
+              "value": 3.5
             },
             {
               "stat": "Skill DMG",
@@ -6807,7 +6807,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 400.0
+              "value": 4.0
             },
             {
               "stat": "Skill DMG",
@@ -6822,7 +6822,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 450.0
+              "value": 4.5
             },
             {
               "stat": "Skill DMG",
@@ -6837,7 +6837,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 500.0
+              "value": 5.0
             },
             {
               "stat": "Skill DMG",
@@ -6852,7 +6852,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 600.0
+              "value": 6.0
             },
             {
               "stat": "Skill DMG",
@@ -6867,7 +6867,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 700.0
+              "value": 7.0
             },
             {
               "stat": "Skill DMG",
@@ -6882,7 +6882,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 900.0
+              "value": 9.0
             },
             {
               "stat": "Skill DMG",
@@ -6897,7 +6897,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 1000.0
+              "value": 10.0
             },
             {
               "stat": "Skill DMG",
@@ -6917,7 +6917,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 1200.0
+              "value": 12.0
             },
             {
               "stat": "Skill DMG",
@@ -6937,7 +6937,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 1500.0
+              "value": 15.0
             },
             {
               "stat": "Skill DMG",
@@ -7892,7 +7892,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 50.0
+              "value": 0.5
             }
           ]
         },
@@ -7902,7 +7902,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 100.0
+              "value": 1.0
             }
           ]
         },
@@ -7912,7 +7912,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 150.0
+              "value": 1.5
             }
           ]
         },
@@ -7922,7 +7922,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 200.0
+              "value": 2.0
             }
           ]
         },
@@ -7932,7 +7932,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 250.0
+              "value": 2.5
             }
           ]
         },
@@ -7942,7 +7942,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 300.0
+              "value": 3.0
             },
             {
               "stat": "Skill DMG",
@@ -7957,7 +7957,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 350.0
+              "value": 3.5
             },
             {
               "stat": "Skill DMG",
@@ -7972,7 +7972,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 400.0
+              "value": 4.0
             },
             {
               "stat": "Skill DMG",
@@ -7987,7 +7987,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 450.0
+              "value": 4.5
             },
             {
               "stat": "Skill DMG",
@@ -8002,7 +8002,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 500.0
+              "value": 5.0
             },
             {
               "stat": "Skill DMG",
@@ -8017,7 +8017,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 600.0
+              "value": 6.0
             },
             {
               "stat": "Skill DMG",
@@ -8032,7 +8032,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 700.0
+              "value": 7.0
             },
             {
               "stat": "Skill DMG",
@@ -8047,7 +8047,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 900.0
+              "value": 9.0
             },
             {
               "stat": "Skill DMG",
@@ -8062,7 +8062,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 1000.0
+              "value": 10.0
             },
             {
               "stat": "Skill DMG",
@@ -8082,7 +8082,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 1200.0
+              "value": 12.0
             },
             {
               "stat": "Skill DMG",
@@ -8102,7 +8102,7 @@
             {
               "stat": "CT",
               "unit": "pct",
-              "value": 1500.0
+              "value": 15.0
             },
             {
               "stat": "Skill DMG",

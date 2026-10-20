@@ -1170,7 +1170,7 @@
       "bands": 3,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
-      "CT": 2000.0,
+      "CT": 20.0,
       "ranged": true,
       "nameTh": "แว่นตาของเทมเมอร์"
     },
@@ -1184,7 +1184,7 @@
       "upgradeMax": 10,
       "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
       "icon": "img/gear/kaiser_goggles.png",
-      "CT": 4000.0,
+      "CT": 40.0,
       "ranged": true,
       "nameTh": "แว่นตาของเทมเมอร์"
     },
@@ -1819,7 +1819,7 @@
       "bands": 3,
       "iconWiki": "/images/b/ba/MDGHead.png",
       "icon": "img/gear/mdghead-davis.png",
-      "CT": 2500.0,
+      "CT": 25.0,
       "ranged": true,
       "nameTh": "ผ้าโพกหัวของไดสุเกะ",
       "nameThShin": "(ชิน) ผ้าโพกหัวของไดสุเกะ"
@@ -1847,7 +1847,7 @@
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-fire.png",
-      "CT": 5500.0,
+      "CT": 55.0,
       "ranged": true,
       "nameTh": "ไฟ : หมวกเกราะแห่งสปิริต"
     },
@@ -1862,7 +1862,7 @@
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-ice.png",
-      "CT": 5500.0,
+      "CT": 55.0,
       "ranged": true,
       "nameTh": "น้ำแข็ง : หมวกเกราะแห่งสปิริต"
     },
@@ -1899,7 +1899,7 @@
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-light.png",
-      "CT": 5500.0,
+      "CT": 55.0,
       "ranged": true,
       "nameTh": "แสง : หมวกเกราะแห่งสปิริต"
     },
@@ -1967,7 +1967,7 @@
       "bands": 3,
       "iconWiki": "/images/b/ba/MDGHead.png",
       "icon": "img/gear/mdghead-tk.png",
-      "CT": 2500.0,
+      "CT": 25.0,
       "ranged": true,
       "nameTh": "หมวกของทาเครุ",
       "nameThShin": "(ชิน) หมวกของทาเครุ"
@@ -1983,7 +1983,7 @@
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-thunder.png",
-      "CT": 5500.0,
+      "CT": 55.0,
       "ranged": true,
       "nameTh": "สายฟ้า : หมวกเกราะแห่งสปิริต"
     },
@@ -2010,7 +2010,7 @@
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-wind.png",
-      "CT": 5500.0,
+      "CT": 55.0,
       "ranged": true,
       "nameTh": "ลม : หมวกเกราะแห่งสปิริต"
     },
@@ -2043,7 +2043,7 @@
       "bands": 3,
       "iconWiki": "/images/b/ba/MDGHead.png",
       "icon": "img/gear/mdghead-yolei.png",
-      "CT": 2500.0,
+      "CT": 25.0,
       "ranged": true,
       "nameTh": "หมวกของมิยาโกะ",
       "nameThShin": "(ชิน) หมวกของมิยาโกะ"

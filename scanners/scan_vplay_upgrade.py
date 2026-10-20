@@ -142,6 +142,12 @@ def parse_value(text):
     return float(m.group(1)), bool(m.group(2))
 
 
+def raw_to_pct(stat, val, pct):
+    """A CT value printed without "%" is the game's raw number, 100 per 1%
+    (ID Card "CT +1500" is 15%; the Spirit Helmet table prints "10%")."""
+    return (val / 100.0, True) if stat == "CT" and not pct else (val, pct)
+
+
 def parse_blocks(html):
     """Pull every (item name, [levels]) pair out of one post."""
     items = []
@@ -201,7 +207,7 @@ def parse_blocks(html):
                 got = parse_value(raw)
                 if got is None:
                     continue
-                val, pct = got
+                val, pct = raw_to_pct(stat, *got)
                 unit = "pct" if (pct or stat in PCT_STATS) else "flat"
                 # Frontier options repeat a stat (CT twice on the helmet);
                 # the game adds them, as the registry does.
@@ -247,7 +253,7 @@ def parse_grade_tables(html):
                 stats = by_grade[grade].setdefault(lvl, [])
                 if got is None:
                     continue
-                val, pct = got
+                val, pct = raw_to_pct(key, *got)
                 stats.append({"stat": key,
                               "unit": "pct" if (pct or key in PCT_STATS) else "flat",
                               "value": val})

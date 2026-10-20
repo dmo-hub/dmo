@@ -143,10 +143,13 @@ def _trailing_records(label, lo, hi, pct):
             return []          # an unknown name means the whole cell is not a stat
         unit = "pct" if pct else unit_for(stat)
         rec = {"stat": stat, "unit": unit, "random": False}
+        # A bare "1000-1500 CT" is the game's raw critical value, 100 per 1%:
+        # vplay prints the same Spirit Helmet +0 as "10%".
+        scale = 100.0 if stat == "CT" and not pct else 1.0
         if hi is not None and hi != lo:
-            rec["min"], rec["max"] = float(lo), float(hi)
+            rec["min"], rec["max"] = float(lo) / scale, float(hi) / scale
         else:
-            rec["value"] = float(lo)
+            rec["value"] = float(lo) / scale
         out.append(rec)
     return out
 
