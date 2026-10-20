@@ -78,6 +78,14 @@ STAT_ALIASES = {
     "เป็นมิตร": "Affinity",
     "scd": "SCD",
     "ms": "Speed",
+    # Daisuke/Takeru/Miyako gear labels.
+    "โจมตีแบบคริติคอล": "CT",
+    "พลังโจมตีแบบคริติคอล": "CT DMG",
+    "การโจมตี": "AT",
+    "ค่าป้องกัน": "DE",
+    "max hp": "HP",
+    "max ds": "DS",
+    "ความเร็ว": "Speed",
 }
 PCT_STATS = {"CT", "EV", "BL", "Skill DMG", "Final DMG", "EXP", "CT DMG"}
 
@@ -93,6 +101,37 @@ SLOT_PIECES = {
     "อุปกรณ์ส่วนมือ": "ถุงมือแห่งสปิริต",
     "อุปกรณ์ส่วนรองเท้า": "รองเท้าแห่งสปิริต",
 }
+
+# Daisuke/Takeru/Miyako gear: the same one-table-many-blocks shape, opened by
+# [CHAR_LEVEL_HEADER, <slot>]. One block serves all three sets (their pieces
+# share stats), and the shin tier gets its own block with SHIN in front of
+# the slot. The slot words overlap SLOT_PIECES, so the header word is what
+# tells the two posts apart.
+CHAR_LEVEL_HEADER = "เลเวล"
+SHIN = "(ชิน)"
+CHAR_SLOTS = {
+    "อุปกรณ์ส่วนหัว": "head",
+    "อุปกรณ์เครื่องประดับ": "fashion",
+    "อุปกรณ์เสื้อ": "top",
+    "อุปกรณ์กางเกง": "bottom",
+    "อุปกรณ์ส่วนมือ": "gloves",
+    "อุปกรณ์รองเท้า": "shoes",
+}
+CHAR_PIECE = "ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : "
+
+
+def char_block(c):
+    """[CHAR_LEVEL_HEADER, "(ชิน) อุปกรณ์ส่วนหัว"] -> (name, slot, shin)."""
+    if len(c) != 2 or c[0] != CHAR_LEVEL_HEADER:
+        return None
+    label = c[1]
+    shin = label.startswith(SHIN)
+    if shin:
+        label = label[len(SHIN):].strip()
+    slot = CHAR_SLOTS.get(label)
+    if not slot:
+        return None
+    return (SHIN + " " if shin else "") + CHAR_PIECE + label, slot, shin
 OPTION_ROW = "ออฟชั่น"
 
 # Four Holy Beasts gear: one table per piece, a column per grade, and a
@@ -152,10 +191,11 @@ def parse_blocks(html):
     """Pull every (item name, [levels]) pair out of one post."""
     items = []
     for table in re.findall(r"<table.*?</table>", html, re.S):
-        if LEVEL_HEADER not in table:
+        if LEVEL_HEADER not in table and CHAR_LEVEL_HEADER not in table:
             continue
         rows = re.findall(r"<tr[^>]*>.*?</tr>", table, re.S)
         name = None
+        tags = {}
         stat_names = []
         levels = []
         awaiting_labels = False
@@ -163,23 +203,35 @@ def parse_blocks(html):
             c = cells(row)
             if len(c) == 2 and c[0] == LEVEL_HEADER and c[1] in SLOT_PIECES:
                 if name and levels:
-                    items.append({"name": name, "levels": levels})
-                name, stat_names, levels = SLOT_PIECES[c[1]], [], []
+                    items.append({"name": name, "levels": levels, **tags})
+                name, tags, stat_names, levels = SLOT_PIECES[c[1]], {}, [], []
+                awaiting_labels = True
+                continue
+            block = char_block(c)
+            if block:
+                if name and levels:
+                    items.append({"name": name, "levels": levels, **tags})
+                name, stat_names, levels = block[0], [], []
+                tags = {"char_slot": block[1], "shin": block[2]}
                 awaiting_labels = True
                 continue
             if awaiting_labels:
                 # "ออฟชั่น 1/2/3" first, then the row that names each option
                 if c and not c[0].startswith(OPTION_ROW):
-                    stat_names, awaiting_labels = c, False
+                    # the character-gear post opens this row with a label
+                    # cell; left in, every stat would pair with the value
+                    # one column to its right
+                    stat_names = c[1:] if c[0] == GRADE_HEADER[1] else c
+                    awaiting_labels = False
                 continue
             if len(c) == 1:
                 # a heading row closes the previous block and opens the next
                 if name and levels:
-                    items.append({"name": name, "levels": levels})
+                    items.append({"name": name, "levels": levels, **tags})
                 title = c[0]
                 name = (title[len(TITLE_PREFIX):].strip()
                         if title.startswith(TITLE_PREFIX) else None)
-                stat_names, levels = [], []
+                tags, stat_names, levels = {}, [], []
                 continue
             if not c:
                 continue
@@ -220,7 +272,7 @@ def parse_blocks(html):
             if stats:
                 levels.append({"upgrade": lvl, "stats": stats})
         if name and levels:
-            items.append({"name": name, "levels": levels})
+            items.append({"name": name, "levels": levels, **tags})
     return items
 
 

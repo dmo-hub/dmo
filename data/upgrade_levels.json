@@ -3,6 +3,1374 @@
   "source": "vplay.in.th",
   "items": [
     {
+      "name": "(ชิน) ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์กางเกง",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2050.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2300.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2350.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 11.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 13.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 14.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 4600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 15.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 4800.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 18.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 5000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 21.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 5200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 24.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 5500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 7000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 40.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "bottom",
+      "shin": true,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "(ชิน) ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์รองเท้า",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3000.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "shoes",
+      "shin": true,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "(ชิน) ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์ส่วนมือ",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1550.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1650.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1750.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1800.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1850.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1900.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1950.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2000.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2625.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2750.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2875.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 3000.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 3200.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 4000.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "gloves",
+      "shin": true,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "(ชิน) ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์ส่วนหัว",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 10.25
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 10.5
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 10.75
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 11.5
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 12.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 25.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 12.5
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 26.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 13.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 27.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 13.5
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 14.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 33.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 26.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 36.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 28.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 39.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 42.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 32.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 45.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 35.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 45.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 60.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "head",
+      "shin": true,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "(ชิน) ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์เครื่องประดับ",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1050.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1300.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1350.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 850.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1400.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 900.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1450.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 950.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 2600.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 2800.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 3000.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 3200.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 3500.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 4500.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2000.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "fashion",
+      "shin": true,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "(ชิน) ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์เสื้อ",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2050.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2300.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2350.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 625.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2400.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 650.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2450.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 675.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2500.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 700.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 4600.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 750.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 4800.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 5000.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 850.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 5200.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 900.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 5500.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 7000.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 1500.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "top",
+      "shin": true,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
       "name": "กางเกงแห่งสปิริต",
       "levels": [
         {
@@ -1082,6 +2450,1374 @@
       ],
       "piece_en": "Thunderbolt Bottom of Qinglongmon",
       "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์กางเกง",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1050.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1300.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1350.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 8.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 9.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 12.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2800.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 15.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 3000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 18.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 3200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 21.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 3500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 25.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 4500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "bottom",
+      "shin": false,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์รองเท้า",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 25.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 25.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 25.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 25.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 25.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 25.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 30.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2000.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "shoes",
+      "shin": false,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์ส่วนมือ",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 550.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 650.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 750.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 800.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 850.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 900.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 950.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1000.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1400.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1550.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1700.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1850.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2000.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2700.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "gloves",
+      "shin": false,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์ส่วนหัว",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 5.25
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 5.5
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 5.75
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 6.25
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 6.5
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 6.75
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 11.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 7.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 12.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 7.25
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 13.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 7.5
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 14.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 12.75
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 15.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 13.5
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 18.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 14.5
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 21.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 15.5
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 25.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 17.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 25.0
+            },
+            {
+              "stat": "CT DMG",
+              "unit": "pct",
+              "value": 40.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "head",
+      "shin": false,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์เครื่องประดับ",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 550.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 650.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 750.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 800.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 850.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 550.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 900.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 950.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 650.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1000.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 700.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1600.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 750.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1800.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 2000.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 850.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 2200.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 900.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 2500.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 3500.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1500.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "fashion",
+      "shin": false,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
+    },
+    {
+      "name": "ชุดไดสุเกะ/ทาเครุ/มิยาโกะ : อุปกรณ์เสื้อ",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1050.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1300.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1350.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 225.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1400.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1450.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 275.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2600.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 350.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2800.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 3000.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 3200.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 3500.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 700.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 4500.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        }
+      ],
+      "char_slot": "top",
+      "shin": false,
+      "post": "https://www.vplay.in.th/%e0%b8%ad%e0%b8%b8%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b8%a1%e0%b9%88-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b9%81%e0%b8%ab%e0%b9%88%e0%b8%87%e0%b8%84/"
     },
     {
       "name": "ถุงมือแห่งสปิริต",
