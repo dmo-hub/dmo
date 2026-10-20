@@ -45,6 +45,17 @@ ACCESSORY_SLOTS = ("Rings", "Necklaces", "Earrings", "Bracelets")
 ICON_DIR = PROJ / "docs" / "img" / "gear"
 TH_NAMES = PROJ / "data" / "gear_th_names.json"
 UPGRADE_LEVELS = PROJ / "data" / "upgrade_levels.json"
+GOGGLES_TH = PROJ / "data" / "goggles_th.json"
+# dmowiki files these goggles under a "Tamer's Goggles" name with NA rolls;
+# the Thai server's own variants (scan_vplay_goggles) replace those rows.
+GOGGLES_WIKI_SLOTS = {"Adventure Goggles", "Digimon Kaiser´s Goggles", "Tamer`s Goggles"}
+# which wiki heading's picture a Thai variant borrows when no row shares its name
+GOGGLES_PICTURE = {"Adventure Goggles": "Adventure Goggles",
+                   "Digimon Kaiser's Goggles": "Digimon Kaiser´s Goggles"}
+# vplay's Adventure Goggles post says the stats go to the digimon; the Kaiser
+# post never says, so those stay unscored until someone confirms the side.
+GOGGLES_AXIS = {"Adventure Goggles": "digimon", "Tamer’s Goggles": "tamer",
+                "Complete Tamer’s Goggles": "tamer"}
 
 # vplay's per-level Spirit tables name the piece, not the element: one table
 # serves all five "*:Spirit X" items.
@@ -274,6 +285,47 @@ def add_level_stats(out):
             done += 1
 
     return done
+
+
+def add_th_goggles(out):
+    """Swap the wiki's goggles rows for the Thai-server variants."""
+    if not GOGGLES_TH.exists():
+        print(f"  ! missing {GOGGLES_TH.name}")
+        return 0
+    old = [r for r in out if r.get("wikiSlot") in GOGGLES_WIKI_SLOTS]
+    out[:] = [r for r in out if r.get("wikiSlot") not in GOGGLES_WIKI_SLOTS]
+    pic_by_name = {r["name"]: r for r in old if r.get("iconWiki")}
+    pic_by_slot = {}
+    for r in old:
+        if r.get("iconWiki"):
+            pic_by_slot.setdefault(r["wikiSlot"], r)
+    added = 0
+    for src in json.loads(GOGGLES_TH.read_text(encoding="utf-8"))["items"]:
+        table, top = level_table(src["levels"])
+        family = src["name"].split(" [")[0]
+        rec = {
+            "id": re.sub(r"[^a-z0-9]+", "-", f"glasses-{src['name']}".lower()).strip("-"),
+            "name": src["name"],
+            "slot": "glasses",
+            "axis": GOGGLES_AXIS.get(family, "unknown"),
+            "nameTh": src["nameTh"],
+        }
+        if top:
+            rec.update(upgrade=0, upgradeMax=top, levelStats=table)
+        rec.update(table[str(top)])
+        if src.get("ranged"):
+            rec["ranged"] = True
+        pic = pic_by_name.get(src["name"]) or pic_by_slot.get(GOGGLES_PICTURE.get(family))
+        if pic:
+            rec["iconWiki"] = pic["iconWiki"]
+            if pic.get("icon"):
+                rec["icon"] = pic["icon"]
+        extra = non_solver_at(src["levels"], top)
+        if extra:
+            rec["extra"] = extra
+        out.append(rec)
+        added += 1
+    return added
 
 
 def add_shin_pieces(out):
@@ -534,6 +586,7 @@ def main():
         out.extend(split_sets(rec))
 
     leveled = add_level_stats(out)
+    goggles = add_th_goggles(out)
     named_th = add_thai_names(out)
     shin = add_shin_pieces(out)
     out.sort(key=lambda r: (r["slot"], r["name"]))
@@ -557,6 +610,7 @@ def main():
     print("  items %d in %d slots, %d with a Thai name" % (len(out), len(by_slot), named_th))
     print("  per-level stats on %d items" % leveled)
     print("  shin pieces split out %d" % shin)
+    print("  Thai-server goggles %d" % goggles)
     print("  axis  %s" % dict(by_axis))
     print("  slots %s" % ", ".join("%s=%d" % kv for kv in sorted(by_slot.items())))
     if dropped:

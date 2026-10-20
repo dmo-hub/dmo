@@ -2430,19 +2430,505 @@
       "nameTh": "เสื้อคลุมสีแดงเพลิงของซูเซมอน"
     },
     {
-      "id": "tamer-s-goggles-complete-tamer-s-goggles",
+      "id": "glasses-adventure-goggles-at-at",
+      "name": "Adventure Goggles [AT/AT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/AT]",
+      "AT": 2200,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-at-ct",
+      "name": "Adventure Goggles [AT/CT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/CT]",
+      "AT": 1200,
+      "CT": 10.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-at-ev",
+      "name": "Adventure Goggles [AT/EV]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/EV]",
+      "AT": 1200,
+      "EV": 8.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-at-hp",
+      "name": "Adventure Goggles [AT/HP]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/HP]",
+      "AT": 1200,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-at-ht",
+      "name": "Adventure Goggles [AT/HT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/HT]",
+      "AT": 1200,
+      "HT": 500,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ct-at",
+      "name": "Adventure Goggles [CT/AT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/AT]",
+      "CT": 15.0,
+      "AT": 1000,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ct-ct",
+      "name": "Adventure Goggles [CT/CT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/CT]",
+      "CT": 25.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ct-ev",
+      "name": "Adventure Goggles [CT/EV]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/EV]",
+      "CT": 15.0,
+      "EV": 8.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ct-hp",
+      "name": "Adventure Goggles [CT/HP]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/HP]",
+      "CT": 15.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ct-ht",
+      "name": "Adventure Goggles [CT/HT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/HT]",
+      "CT": 15.0,
+      "HT": 500,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ev-at",
+      "name": "Adventure Goggles [EV/AT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/AT]",
+      "EV": 10.0,
+      "AT": 1000,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ev-ct",
+      "name": "Adventure Goggles [EV/CT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/CT]",
+      "EV": 10.0,
+      "CT": 10.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ev-ev",
+      "name": "Adventure Goggles [EV/EV]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/EV]",
+      "EV": 18.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ev-hp",
+      "name": "Adventure Goggles [EV/HP]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/HP]",
+      "EV": 10.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ev-ht",
+      "name": "Adventure Goggles [EV/HT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/HT]",
+      "EV": 10.0,
+      "HT": 500,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-hp-at",
+      "name": "Adventure Goggles [HP/AT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/AT]",
+      "AT": 1000,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-hp-ct",
+      "name": "Adventure Goggles [HP/CT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/CT]",
+      "CT": 10.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-hp-ev",
+      "name": "Adventure Goggles [HP/EV]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/EV]",
+      "EV": 8.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-hp-hp",
+      "name": "Adventure Goggles [HP/HP]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/HP]",
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-hp-ht",
+      "name": "Adventure Goggles [HP/HT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/HT]",
+      "HT": 500,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ht-at",
+      "name": "Adventure Goggles [HT/AT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/AT]",
+      "HT": 750,
+      "AT": 1000,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ht-ct",
+      "name": "Adventure Goggles [HT/CT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/CT]",
+      "HT": 750,
+      "CT": 10.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ht-ev",
+      "name": "Adventure Goggles [HT/EV]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/EV]",
+      "HT": 750,
+      "EV": 8.0,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ht-hp",
+      "name": "Adventure Goggles [HT/HP]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/HP]",
+      "HT": 750,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-adventure-goggles-ht-ht",
+      "name": "Adventure Goggles [HT/HT]",
+      "slot": "glasses",
+      "axis": "digimon",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/HT]",
+      "HT": 1250,
+      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
+      "icon": "img/gear/adv_goggles_15.png",
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-complete-tamer-s-goggles",
       "name": "Complete Tamer’s Goggles",
       "slot": "glasses",
-      "wikiSlot": "Tamer`s Goggles",
       "axis": "tamer",
-      "iconWiki": "/images/f/f1/Tamer%E2%80%99s_Goggles_Lv.Max.png",
-      "icon": "img/gear/tamer_s_goggles_lv.max.png",
+      "nameTh": "แว่นตาของเทมเมอร์ที่สมบูรณ์",
       "AT": 500,
       "ranged": true,
+      "iconWiki": "/images/f/f1/Tamer%E2%80%99s_Goggles_Lv.Max.png",
+      "icon": "img/gear/tamer_s_goggles_lv.max.png",
       "extra": [
         {
           "stat": "EXP",
-          "value": 20.0,
+          "value": 100.0,
           "unit": "pct"
         },
         {
@@ -2450,25 +2936,314 @@
           "value": 1000.0,
           "unit": "flat"
         }
-      ],
-      "nameTh": "แว่นตาของเทมเมอร์ที่สมบูรณ์"
+      ]
     },
     {
-      "id": "tamer-s-goggles-tamer-s-goggles-lv-15",
+      "id": "glasses-digimon-kaiser-s-goggles-at",
+      "name": "Digimon Kaiser's Goggles [AT]",
+      "slot": "glasses",
+      "axis": "unknown",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [AT]",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "levelStats": {
+        "0": {},
+        "1": {
+          "AT": 2500
+        },
+        "2": {
+          "AT": 2600
+        },
+        "3": {
+          "AT": 2700
+        },
+        "4": {
+          "AT": 2800
+        },
+        "5": {
+          "AT": 2900
+        },
+        "6": {
+          "AT": 3000
+        },
+        "7": {
+          "AT": 3200
+        },
+        "8": {
+          "AT": 3400
+        },
+        "9": {
+          "AT": 3600
+        },
+        "10": {
+          "AT": 4000
+        }
+      },
+      "AT": 4000,
+      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
+      "icon": "img/gear/kaiser_goggles.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 20.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-digimon-kaiser-s-goggles-ct",
+      "name": "Digimon Kaiser's Goggles [CT]",
+      "slot": "glasses",
+      "axis": "unknown",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [CT]",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "levelStats": {
+        "0": {},
+        "1": {
+          "CT": 30.0
+        },
+        "2": {
+          "CT": 30.5
+        },
+        "3": {
+          "CT": 31.0
+        },
+        "4": {
+          "CT": 31.5
+        },
+        "5": {
+          "CT": 32.0
+        },
+        "6": {
+          "CT": 32.5
+        },
+        "7": {
+          "CT": 34.0
+        },
+        "8": {
+          "CT": 35.5
+        },
+        "9": {
+          "CT": 37.0
+        },
+        "10": {
+          "CT": 40.0
+        }
+      },
+      "CT": 40.0,
+      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
+      "icon": "img/gear/kaiser_goggles.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 20.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-digimon-kaiser-s-goggles-ev",
+      "name": "Digimon Kaiser's Goggles [EV]",
+      "slot": "glasses",
+      "axis": "unknown",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [EV]",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "levelStats": {
+        "0": {},
+        "1": {
+          "EV": 20.0
+        },
+        "2": {
+          "EV": 20.5
+        },
+        "3": {
+          "EV": 21.0
+        },
+        "4": {
+          "EV": 21.5
+        },
+        "5": {
+          "EV": 22.0
+        },
+        "6": {
+          "EV": 22.5
+        },
+        "7": {
+          "EV": 24.0
+        },
+        "8": {
+          "EV": 25.5
+        },
+        "9": {
+          "EV": 27.0
+        },
+        "10": {
+          "EV": 30.0
+        }
+      },
+      "EV": 30.0,
+      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
+      "icon": "img/gear/kaiser_goggles.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 20.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-digimon-kaiser-s-goggles-hp",
+      "name": "Digimon Kaiser's Goggles [HP]",
+      "slot": "glasses",
+      "axis": "unknown",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [HP]",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {}
+      },
+      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
+      "icon": "img/gear/kaiser_goggles.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 20.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 5000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "glasses-digimon-kaiser-s-goggles-ht",
+      "name": "Digimon Kaiser's Goggles [HT]",
+      "slot": "glasses",
+      "axis": "unknown",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [HT]",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "levelStats": {
+        "0": {},
+        "1": {
+          "HT": 1500
+        },
+        "2": {
+          "HT": 1600
+        },
+        "3": {
+          "HT": 1700
+        },
+        "4": {
+          "HT": 1800
+        },
+        "5": {
+          "HT": 1900
+        },
+        "6": {
+          "HT": 2000
+        },
+        "7": {
+          "HT": 2200
+        },
+        "8": {
+          "HT": 2400
+        },
+        "9": {
+          "HT": 2600
+        },
+        "10": {
+          "HT": 3000
+        }
+      },
+      "HT": 3000,
+      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
+      "icon": "img/gear/kaiser_goggles.png",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 20.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "glasses-tamer-s-goggles",
       "name": "Tamer’s Goggles",
       "slot": "glasses",
-      "wikiSlot": "Tamer`s Goggles",
       "axis": "tamer",
-      "bands": 14,
-      "level": 15,
-      "iconWiki": "/images/b/bc/Tamer%E2%80%99s_Goggles_Lv.11-15.png",
-      "icon": "img/gear/tamer_s_goggles_lv.11-15.png",
+      "nameTh": "แว่นตาของเทมเมอร์",
+      "upgrade": 0,
+      "upgradeMax": 15,
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {
+          "AT": 50
+        },
+        "3": {
+          "AT": 100
+        },
+        "4": {
+          "AT": 125
+        },
+        "5": {
+          "AT": 150
+        },
+        "6": {
+          "AT": 175
+        },
+        "7": {
+          "AT": 200
+        },
+        "8": {
+          "AT": 225
+        },
+        "9": {
+          "AT": 250
+        },
+        "10": {
+          "AT": 275
+        },
+        "11": {
+          "AT": 300
+        },
+        "12": {
+          "AT": 340
+        },
+        "13": {
+          "AT": 360
+        },
+        "14": {
+          "AT": 380
+        },
+        "15": {
+          "AT": 400
+        }
+      },
       "AT": 400,
       "ranged": true,
+      "iconWiki": "/images/b/bc/Tamer%E2%80%99s_Goggles_Lv.11-15.png",
+      "icon": "img/gear/tamer_s_goggles_lv.11-15.png",
       "extra": [
         {
           "stat": "EXP",
-          "value": 16.0,
+          "value": 80.0,
           "unit": "pct"
         },
         {
@@ -2476,95 +3251,7 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ],
-      "nameTh": "แว่นตาของเทมเมอร์"
-    },
-    {
-      "id": "adventure-goggles-tamer-s-goggles-at-at-2",
-      "name": "Tamer’s Goggles [AT/AT]",
-      "slot": "glasses",
-      "wikiSlot": "Adventure Goggles",
-      "axis": "unknown",
-      "upgrade": 1,
-      "upgradeMax": 15,
-      "bands": 3,
-      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
-      "icon": "img/gear/adv_goggles_15.png",
-      "AT": 1760,
-      "ranged": true,
-      "nameTh": "แว่นตาของเทมเมอร์"
-    },
-    {
-      "id": "digimon-kaiser-s-goggles-tamer-s-goggles-at",
-      "name": "Tamer’s Goggles [AT]",
-      "slot": "glasses",
-      "wikiSlot": "Digimon Kaiser´s Goggles",
-      "axis": "unknown",
-      "upgrade": 1,
-      "upgradeMax": 10,
-      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
-      "icon": "img/gear/kaiser_goggles.png",
-      "AT": 4000,
-      "ranged": true,
-      "nameTh": "แว่นตาของเทมเมอร์"
-    },
-    {
-      "id": "adventure-goggles-tamer-s-goggles-ct-ct-2",
-      "name": "Tamer’s Goggles [CT/CT]",
-      "slot": "glasses",
-      "wikiSlot": "Adventure Goggles",
-      "axis": "unknown",
-      "upgrade": 1,
-      "upgradeMax": 15,
-      "bands": 3,
-      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
-      "icon": "img/gear/adv_goggles_15.png",
-      "CT": 20.0,
-      "ranged": true,
-      "nameTh": "แว่นตาของเทมเมอร์"
-    },
-    {
-      "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ct",
-      "name": "Tamer’s Goggles [CT]",
-      "slot": "glasses",
-      "wikiSlot": "Digimon Kaiser´s Goggles",
-      "axis": "unknown",
-      "upgrade": 1,
-      "upgradeMax": 10,
-      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
-      "icon": "img/gear/kaiser_goggles.png",
-      "CT": 40.0,
-      "ranged": true,
-      "nameTh": "แว่นตาของเทมเมอร์"
-    },
-    {
-      "id": "adventure-goggles-tamer-s-goggles-ht-ht-2",
-      "name": "Tamer’s Goggles [HT/HT]",
-      "slot": "glasses",
-      "wikiSlot": "Adventure Goggles",
-      "axis": "unknown",
-      "upgrade": 1,
-      "upgradeMax": 15,
-      "bands": 3,
-      "iconWiki": "/images/8/87/Adv_Goggles_15.png",
-      "icon": "img/gear/adv_goggles_15.png",
-      "HT": 1050,
-      "ranged": true,
-      "nameTh": "แว่นตาของเทมเมอร์"
-    },
-    {
-      "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ht",
-      "name": "Tamer’s Goggles [HT]",
-      "slot": "glasses",
-      "wikiSlot": "Digimon Kaiser´s Goggles",
-      "axis": "unknown",
-      "upgrade": 1,
-      "upgradeMax": 10,
-      "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
-      "icon": "img/gear/kaiser_goggles.png",
-      "HT": 3000,
-      "ranged": true,
-      "nameTh": "แว่นตาของเทมเมอร์"
+      ]
     },
     {
       "id": "gloves-agumon-paw-gloves",

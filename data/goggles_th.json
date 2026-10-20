@@ -1,0 +1,1714 @@
+{
+  "fetched_at": "2026-10-20",
+  "source": [
+    "https://www.vplay.in.th/%e0%b9%81%e0%b8%a7%e0%b9%88%e0%b8%99%e0%b8%99%e0%b8%b4%e0%b8%a3%e0%b8%a0%e0%b8%b1%e0%b8%a2%e0%b9%81%e0%b8%ad%e0%b8%94%e0%b9%80%e0%b8%a7%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b9%8c/",
+    "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/",
+    "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-53/"
+  ],
+  "note": "Thai-server goggles; CT/EV printed without % are raw (100 per 1%). Adventure Goggles keep only the complete row.",
+  "items": [
+    {
+      "name": "Adventure Goggles [HT/HT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/HT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 750.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HT",
+              "value": 500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [HT/EV]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/EV]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 750.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EV",
+              "value": 8.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [HT/CT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/CT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 750.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "CT",
+              "value": 10.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [HT/HP]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/HP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 750.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 1500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [HT/AT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/AT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 750.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 1000.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [EV/HT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/HT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [EV/EV]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/EV]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 8.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [EV/CT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/CT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 10.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [EV/HP]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/HP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 1500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [EV/AT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/AT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1000.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [AT/HT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/HT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HT",
+              "value": 500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [AT/EV]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/EV]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EV",
+              "value": 8.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [AT/CT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/CT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "CT",
+              "value": 10.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [AT/HP]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/HP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 1500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [AT/AT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/AT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 1000.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [CT/HT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/HT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 15.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [CT/EV]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/EV]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 15.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 8.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [CT/CT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/CT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 15.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 10.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [CT/HP]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/HP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 15.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 1500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [CT/AT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/AT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 15.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1000.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [HP/HT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/HT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 2000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HT",
+              "value": 500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [HP/EV]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/EV]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 2000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EV",
+              "value": 8.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [HP/CT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/CT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 2000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "CT",
+              "value": 10.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [HP/HP]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/HP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 2000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 1500.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Adventure Goggles [HP/AT]",
+      "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/AT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "SCD",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 2000.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 1000.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Digimon Kaiser's Goggles [HT]",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [HT]",
+      "levels": [
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 1500.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 1600.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 1700.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 1800.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 1900.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 2000.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 2200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 2400.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 14.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 2600.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 20.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 3000.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Digimon Kaiser's Goggles [EV]",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [EV]",
+      "levels": [
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 20.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 20.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 21.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 21.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 22.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 22.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 24.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 25.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 14.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 27.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 20.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 30.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Digimon Kaiser's Goggles [CT]",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [CT]",
+      "levels": [
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 30.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 30.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 31.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 31.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 32.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 32.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 34.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 35.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 14.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 37.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 20.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 40.0,
+              "unit": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Digimon Kaiser's Goggles [HP]",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [HP]",
+      "levels": [
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 4000.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 4050.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 4100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 4150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 4200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 4250.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 4400.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 4550.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 14.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 4700.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 20.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 5000.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Digimon Kaiser's Goggles [AT]",
+      "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [AT]",
+      "levels": [
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 2500.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 10.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 2600.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 2700.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 11.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 2800.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 2900.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 12.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 3000.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 3200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 13.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 3400.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 14.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 3600.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 20.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 4000.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tamer’s Goggles",
+      "nameTh": "แว่นตาของเทมเมอร์",
+      "ranged": true,
+      "levels": [
+        {
+          "upgrade": 1,
+          "stats": []
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 50.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 5.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 100.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 10.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 125.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 15.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 150.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 20.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 175.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 25.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 30.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 225.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 35.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 250.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 40.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 275.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 50.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 70.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 340.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 74.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 180.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 360.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 76.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 250.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 380.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 78.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 450.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 400.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 80.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 700.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Complete Tamer’s Goggles",
+      "nameTh": "แว่นตาของเทมเมอร์ที่สมบูรณ์",
+      "ranged": true,
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "value": 500.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EXP",
+              "value": 100.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 1000.0,
+              "unit": "flat"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

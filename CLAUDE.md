@@ -431,3 +431,11 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   "... with N Options"/"Regular ..." columns are category caps (`category`),
   and per-level cells are spread by colspan. "Vital Breath Digivice -V-" is a
   bracelet despite the name.
+- Goggles come from vplay, not dmowiki: `scanners/scan_vplay_goggles.py`
+  (posts 19820 Adventure · 25445 Kaiser · 17826 Tamer, cached as
+  `cache_vplay/wp_<id>.json`) -> `data/goggles_th.json`, and
+  `build_gear_registry.add_th_goggles` drops the wiki's goggles rows (named
+  "Tamer's Goggles [..]" under every goggles heading, NA rolls) for them.
+  Adventure Goggles are 25 fixed main/third-option pairs, axis digimon (the
+  post says so); Kaiser goggles stay axis "unknown" because their post never
+  says which side the stats feed.

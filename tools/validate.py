@@ -61,6 +61,8 @@ IDEMPOTENT_BUILDS = [
     ["builders/build_nametag_html.py"],
     ["builders/build_search_index.py"],
     ["builders/build_index_html.py"],
+    # reads cached vplay posts, so it is safe to re-run in the gate
+    ["scanners/scan_vplay_goggles.py"],
     ["builders/build_gear_registry.py"],
     ["builders/build_chip_registry.py"],
     # reads a cached page, so it is safe to re-run in the gate
