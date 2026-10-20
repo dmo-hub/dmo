@@ -317,6 +317,10 @@ fetchers/fetch_th_patch_index.py ──► cache/th_list_p<N>.html
                       ├──► cache/th_view_<slug>.html
                       └──► data/th_patch_digimon.json (53 posts w/ `ดิจิมอนใหม่` markers)
 
+fetchers/fetch_th_links.py  (by hand, not a refresh.py step)
+    reads cache/th_view_*.html, fetches each vplay page they link to
+    ──► cache/th_link_<sha1[:12]>.html + cache/th_link_index.json
+
 docs/index.html  (hand-written landing page linking to decks.html + digimon.html)
 
 scanners/reparse_cache.py: rebuilds data/scan_result.json from cache/ without network
