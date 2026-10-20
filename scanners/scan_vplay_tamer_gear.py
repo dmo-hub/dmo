@@ -320,7 +320,9 @@ def main():
     body = {pid: p["content"]["rendered"] for pid, p in posts.items()}
     items = first_digivice(body[FIRST_POST])
     items.append(loader(body[XROS_POST], "Digimon Xros Loader", "ครอสโหลดเดอร์-ซากุระ"))
-    items.append(loader(body[XROS_POST], "Digimon Fusion Loader", "ครอสโหลดเดอร์-ดิซีดวซ"))
+    # The post's Thai name for this one is a keyboard slip; the owner picked
+    # the transliteration of the English name instead.
+    items.append(loader(body[XROS_POST], "Digimon Fusion Loader", "ฟิวชั่นโหลดเดอร์"))
     items.append(loader(body[DARKNESS_POST], "Digimon Darkness Loader", "ดาร์กเนส โหลดเดอร์"))
     items += true_digivices(body[TRUE_POST])
     items += spiral(body[SPIRAL_POST])

@@ -65,8 +65,9 @@ GOGGLES_AXIS = {"Adventure Goggles": "digimon", "Digimon Kaiser's Goggles": "dig
 TAMER_GEAR_TH = PROJ / "data" / "tamer_gear_th.json"
 WIKI_ONLY_TAMER_GEAR = {"XAI System": "xai", "Eos Digivice": "digivice"}
 WIKI_ONLY_NAMES = {"Eos Digivice": {"Final Digivice"}}
-# The wiki leaves XAI's side blank; the owner confirmed it feeds the digimon.
-WIKI_ONLY_AXIS = {"xai": "digimon"}
+# The wiki leaves XAI's and the Final Digivice's side blank; the owner
+# confirmed both feed the digimon.
+WIKI_ONLY_AXIS = {"xai": "digimon", "digivice": "digimon"}
 
 # vplay's per-level Spirit tables name the piece, not the element: one table
 # serves all five "*:Spirit X" items.

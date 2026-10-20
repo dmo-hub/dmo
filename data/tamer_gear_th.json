@@ -241,7 +241,7 @@
     },
     {
       "name": "Digimon Fusion Loader",
-      "nameTh": "ครอสโหลดเดอร์-ดิซีดวซ",
+      "nameTh": "ฟิวชั่นโหลดเดอร์",
       "slot": "digivice",
       "axis": "digimon",
       "picture": "SusaLoaderMax.PNG",
