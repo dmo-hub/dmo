@@ -61,8 +61,6 @@ SET_NAMES = {
     # dmowiki never recorded this one, so the English name is ours: it is only
     # a join key, and the page shows set_th to the player either way.
     "ลาสต์ อีโวลูชัน": "Last Evolution",
-    # The 2025 Four Holy Beasts set, likewise missing from dmowiki's table.
-    "พลังของสี่สัตว์เทพเซ็ต": "Four Holy Beasts",
 }
 
 # vplay's slot words, in roster order, against the solver's slot ids. The
@@ -164,12 +162,6 @@ def main():
                     if tmpl.get(k):
                         stats[k] = tmpl[k]
                 stats_from = tmpl["name"]
-            elif base in en_by_th:
-                # no template row covers this set, but the registry already
-                # holds the exact piece under its Thai name
-                own = en_by_th[base]
-                stats = {k: own[k] for k in STAT_KEYS if own.get(k)}
-                stats_from = own["name"]
             entry = {
                 "slot": slot,
                 "item": base,
