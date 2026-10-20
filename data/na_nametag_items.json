@@ -7,12 +7,335 @@
     "Name Tag Reinforcement Hacking Tool",
     "Equipment Data: Name Tag"
   ],
-  "total_posts": 14,
+  "total_posts": 21,
   "posts": [
     {
       "kind": "patch",
+      "idx": 4212,
+      "date": "10-14-2026",
+      "subject": "14.10.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4212",
+      "items": {
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "10ea",
+            "source": "box",
+            "header": "Week 4 Mission Completion Reward Information",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "10ea"
+            ]
+          },
+          {
+            "amount": "1ea",
+            "source": "exchange",
+            "header": "DATS Center &lt;17th Anniversary&gt; Baihumon - Exchange List",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1ea",
+              "Baihumon's Coin",
+              "5ea",
+              "-",
+              "-",
+              "Once per week"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "5ea",
+            "source": "exchange",
+            "header": "DATS Center &lt;17th Anniversary&gt; Baihumon - Exchange List",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "5ea",
+              "Baihumon's Coin",
+              "5ea",
+              "-",
+              "-",
+              "Once per week"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4207,
+      "date": "10-07-2026",
+      "subject": "07.10.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4207",
+      "items": {
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Glory Shard Exchange List",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "1",
+              "Glory Shard",
+              "10",
+              "-",
+              "0",
+              "Not Tradable"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Glory Shard Exchange List",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1",
+              "Glory Shard",
+              "25",
+              "-",
+              "0",
+              "Not Tradable"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4194,
+      "date": "09-02-2026",
+      "subject": "02.09.2026 Update (Updated)",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4194",
+      "items": {
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "10",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "10"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "10 times per week",
+            "source": "box",
+            "header": "Item Name Purchase Limit Price",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "10 times per week",
+              "80 T"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "10 times per week",
+            "source": "box",
+            "header": "Item Name Purchase Limit Price",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "10 times per week",
+              "50 T"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4192,
+      "date": "08-26-2026",
+      "subject": "26.8.2026 Update-2",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4192",
+      "items": {
+        "Name Tag Reinforcement Backup Chip": [
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Heaven Wings [Event] – 3 Times per account",
+            "row": [
+              "Name Tag Reinforcement Backup Chip [Event]",
+              "5ea"
+            ]
+          },
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Time Ruler [Event] – 3 Times per account",
+            "row": [
+              "Name Tag Reinforcement Backup Chip [Event]",
+              "5ea"
+            ]
+          },
+          {
+            "amount": "5ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Digimon King [Event] – 3 Times per account",
+            "row": [
+              "Name Tag Reinforcement Backup Chip [Event]",
+              "5ea"
+            ]
+          }
+        ],
+        "Name Tag Reinforcement Hacking Tool": [
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Heaven Wings [Event] – 3 Times per account",
+            "row": [
+              "Name Tag Reinforcement Hacking Tool [Event]",
+              "20ea"
+            ]
+          },
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Time Ruler [Event] – 3 Times per account",
+            "row": [
+              "Name Tag Reinforcement Hacking Tool [Event]",
+              "20ea"
+            ]
+          },
+          {
+            "amount": "20ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Digimon King [Event] – 3 Times per account",
+            "row": [
+              "Name Tag Reinforcement Hacking Tool [Event]",
+              "20ea"
+            ]
+          }
+        ],
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Heaven Wings [Event] – 3 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          },
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Time Ruler [Event] – 3 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          },
+          {
+            "amount": "30ea",
+            "source": "package",
+            "header": "- Enhanced Magnetic Package - Digimon King [Event] – 3 Times per account",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "30ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4183,
+      "date": "08-05-2026",
+      "subject": "5.8.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4183",
+      "items": {
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Glory Pendant Exchange List",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "1",
+              "Glory Pendant",
+              "10",
+              "-",
+              "0",
+              "Event"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1",
+            "source": "exchange",
+            "header": "Glory Pendant Exchange List",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1",
+              "Glory Pendant",
+              "25",
+              "-",
+              "0",
+              "Event"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4169,
+      "date": "07-08-2026",
+      "subject": "8.7.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4169",
+      "items": {
+        "Equipment Data: Name Tag": [
+          {
+            "amount": "10ea",
+            "source": "box",
+            "header": "Box Name Item Name Amount",
+            "row": [
+              "Equipment Data: Name Tag [Event]",
+              "10ea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
+      "idx": 4164,
+      "date": "07-01-2026",
+      "subject": "1.7.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4164",
+      "items": {
+        "Name Tag Enhancement Hacking Tool": [
+          {
+            "amount": "5",
+            "source": "box",
+            "header": "Life Reversal II Potion Pouch [Event]",
+            "row": [
+              "Name Tag Enhancement Hacking Tool [Event]",
+              "5"
+            ]
+          }
+        ],
+        "Name Tag Enhancement Backup Chip": [
+          {
+            "amount": "1",
+            "source": "box",
+            "header": "Life Reversal II Potion Pouch [Event]",
+            "row": [
+              "Name Tag Enhancement Backup Chip [Event]",
+              "1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "patch",
       "idx": 4157,
-      "date": "",
+      "date": "06-10-2026",
       "subject": "10.6.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4157",
       "items": {
@@ -53,7 +376,7 @@
     {
       "kind": "patch",
       "idx": 4146,
-      "date": "",
+      "date": "05-13-2026",
       "subject": "13.5.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4146",
       "items": {
@@ -121,7 +444,7 @@
     {
       "kind": "patch",
       "idx": 4136,
-      "date": "",
+      "date": "04-15-2026",
       "subject": "15.4.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4136",
       "items": {
@@ -226,7 +549,7 @@
     {
       "kind": "patch",
       "idx": 4126,
-      "date": "",
+      "date": "03-25-2026",
       "subject": "25.3.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4126",
       "items": {
@@ -268,7 +591,7 @@
     {
       "kind": "patch",
       "idx": 4118,
-      "date": "",
+      "date": "03-11-2026",
       "subject": "11.3.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4118",
       "items": {
@@ -311,7 +634,7 @@
     {
       "kind": "patch",
       "idx": 4100,
-      "date": "",
+      "date": "01-28-2026",
       "subject": "28.1.2026 Update",
       "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4100",
       "items": {
@@ -465,7 +788,7 @@
     {
       "kind": "event",
       "idx": 810,
-      "date": "",
+      "date": "01-14-2026",
       "subject": "14.1.2026 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=810",
       "items": {
@@ -522,7 +845,7 @@
     {
       "kind": "event",
       "idx": 798,
-      "date": "",
+      "date": "12-10-2025",
       "subject": "10.12.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=798",
       "items": {
@@ -564,7 +887,7 @@
     {
       "kind": "event",
       "idx": 797,
-      "date": "",
+      "date": "12-03-2025",
       "subject": "3.12.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=797",
       "items": {
@@ -696,7 +1019,7 @@
     {
       "kind": "event",
       "idx": 793,
-      "date": "",
+      "date": "11-26-2025",
       "subject": "26.11.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=793",
       "items": {
@@ -787,7 +1110,7 @@
     {
       "kind": "event",
       "idx": 784,
-      "date": "",
+      "date": "10-01-2025",
       "subject": "01.10.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=784",
       "items": {
@@ -892,7 +1215,7 @@
     {
       "kind": "event",
       "idx": 779,
-      "date": "",
+      "date": "09-16-2025",
       "subject": "09.16.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=779",
       "items": {
@@ -934,7 +1257,7 @@
     {
       "kind": "event",
       "idx": 774,
-      "date": "",
+      "date": "08-26-2025",
       "subject": "26.08.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=774",
       "items": {
@@ -994,7 +1317,7 @@
     {
       "kind": "event",
       "idx": 765,
-      "date": "",
+      "date": "08-05-2025",
       "subject": "05.08.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=765",
       "items": {
