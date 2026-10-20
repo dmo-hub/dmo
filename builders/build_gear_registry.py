@@ -313,6 +313,53 @@ def add_level_stats(out):
     return done
 
 
+def add_shin_pieces(out):
+    """Split each Daisuke/Takeru/Miyako piece's shin tier into its own item.
+
+    The roster names both tiers per slot but dmowiki only has the base one, so
+    the shin tier used to ride along as a second Thai name on the base item --
+    and a player who owns the shin piece got the base numbers. vplay tables
+    both tiers per level; one table serves all three sets. Needs nameThShin,
+    so it runs after add_thai_names."""
+    items = json.loads(UPGRADE_LEVELS.read_text(encoding="utf-8"))["items"]
+    tiers = {(it["char_slot"], it["shin"]): it for it in items if it.get("char_slot")}
+    added = []
+    for rec in out:
+        shin_th = rec.get("nameThShin")
+        if not shin_th or not re.fullmatch(r"(Davis|T\.K|Yolei) \w+", rec["name"]):
+            continue
+        base, shin = tiers.get((rec["slot"], False)), tiers.get((rec["slot"], True))
+        if not (base and shin):
+            print(f"  ! {UPGRADE_LEVELS.name}: no per-level tiers for {rec['name']}")
+            continue
+        table, top = level_table(base["levels"])
+        for key in SOLVER_STATS:
+            if rec.get(key, 0) != table[str(top)].get(key, 0):
+                print(f"  ! {rec['name']} {key}: wiki {rec.get(key, 0)} "
+                      f"vs vplay +{top} {table[str(top)].get(key, 0)}")
+        rec["levelStats"] = table
+        rec.pop("ranged", None)
+        rec.pop("nameThShin")
+
+        table, top = level_table(shin["levels"])
+        twin = {k: rec[k] for k in ("slot", "axis") if k in rec}
+        twin.update({
+            "id": rec["id"] + "-shin",
+            "name": rec["name"] + " (Shin)",
+            "upgrade": 0,
+            "upgradeMax": top,
+            "nameTh": shin_th,
+            "levelStats": table,
+        })
+        twin.update(table[str(top)])
+        extra = non_solver_at(shin["levels"], top)
+        if extra:
+            twin["extra"] = extra
+        added.append(twin)
+    out.extend(added)
+    return len(added)
+
+
 # Wiki slot -> solver slot id. Anything absent is not wearable gear for the
 # optimizer and is left out; the counts are printed so a drop is never silent.
 SLOT_MAP = {
@@ -448,6 +495,7 @@ def main():
 
     leveled = add_level_stats(out)
     named_th = add_thai_names(out)
+    shin = add_shin_pieces(out)
     out.sort(key=lambda r: (r["slot"], r["name"]))
     payload = {
         "built_at": date.today().isoformat(),
@@ -467,6 +515,7 @@ def main():
     print("wrote %s" % OUT.relative_to(PROJ))
     print("  items %d in %d slots, %d with a Thai name" % (len(out), len(by_slot), named_th))
     print("  per-level stats on %d items" % leveled)
+    print("  shin pieces split out %d" % shin)
     print("  axis  %s" % dict(by_axis))
     print("  slots %s" % ", ".join("%s=%d" % kv for kv in sorted(by_slot.items())))
     if dropped:

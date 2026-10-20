@@ -43,6 +43,8 @@ REGISTRY = PROJ / "docs" / "gear_registry.json"
 OUT = PROJ / "docs" / "set_registry.json"
 
 SHIN = "(ชิน)"
+SHIN_EN = " (Shin)"         # build_gear_registry's suffix for the shin item
+STAT_KEYS = ("AT", "HT", "CT", "DS", "DE", "EV", "BL", "HP")
 
 # The Thai set names as vplay writes them, against dmowiki's English names in
 # the bonus table (spelled exactly as dmowiki does, spacing included). vplay
@@ -99,7 +101,15 @@ def main():
     # places would award them twice.
 
     by_slot = {}
+    # The optimizer's rows carry the registry's English name, and the solver
+    # finds a row's set by that name -- with only the Thai names in "accepts"
+    # a row picked from the registry never counted toward its set.
+    en_by_th = {}
     for it in registry:
+        if it.get("nameTh"):
+            en_by_th[it["nameTh"]] = it
+        if it["name"].endswith(SHIN_EN):
+            continue        # same prefix as its base piece; would replace it
         for prefix in (TEMPLATE, *TEMPLATE_BY_SET.values()):
             if it["name"].startswith(prefix):
                 by_slot[(prefix, it["slot"])] = it
@@ -145,7 +155,7 @@ def main():
                     if tmpl.get(k):
                         stats[k] = tmpl[k]
                 stats_from = tmpl["name"]
-            slots.append({
+            entry = {
                 "slot": slot,
                 "item": base,
                 "shin": shin,
@@ -154,7 +164,15 @@ def main():
                 "accepts": [n for n in (base, shin) if n],
                 "stats": stats,
                 "stats_from": stats_from,
-            })
+            }
+            entry["accepts"] += [en_by_th[n]["name"] for n in entry["accepts"]
+                                 if n in en_by_th]
+            # the shin tier is its own registry item with its own numbers
+            twin = en_by_th.get(shin)
+            if twin:
+                entry["stats_shin"] = {k: twin[k] for k in STAT_KEYS if twin.get(k)}
+                entry["stats_shin_from"] = twin["name"]
+            slots.append(entry)
 
         bonuses = [e for e in effects if e["set"] == english]
         out.append({

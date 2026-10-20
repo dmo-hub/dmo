@@ -14,12 +14,18 @@
           "shin": "(ชิน) หมวกของมิยาโกะ",
           "accepts": [
             "หมวกของมิยาโกะ",
-            "(ชิน) หมวกของมิยาโกะ"
+            "(ชิน) หมวกของมิยาโกะ",
+            "Yolei Head",
+            "Yolei Head (Shin)"
           ],
           "stats": {
             "CT": 25.0
           },
-          "stats_from": "Yolei Head"
+          "stats_from": "Yolei Head",
+          "stats_shin": {
+            "CT": 45.0
+          },
+          "stats_shin_from": "Yolei Head (Shin)"
         },
         {
           "slot": "fashion",
@@ -27,13 +33,20 @@
           "shin": "(ชิน) กระเป๋าของมิยาโกะ",
           "accepts": [
             "กระเป๋าของมิยาโกะ",
-            "(ชิน) กระเป๋าของมิยาโกะ"
+            "(ชิน) กระเป๋าของมิยาโกะ",
+            "Yolei Fashion",
+            "Yolei Fashion (Shin)"
           ],
           "stats": {
             "AT": 1500,
             "HT": 3500
           },
-          "stats_from": "Yolei Fashion"
+          "stats_from": "Yolei Fashion",
+          "stats_shin": {
+            "AT": 2000,
+            "HT": 4500
+          },
+          "stats_shin_from": "Yolei Fashion (Shin)"
         },
         {
           "slot": "top",
@@ -41,12 +54,18 @@
           "shin": "(ชิน) เสื้อของมิยาโกะ",
           "accepts": [
             "เสื้อของมิยาโกะ",
-            "(ชิน) เสื้อของมิยาโกะ"
+            "(ชิน) เสื้อของมิยาโกะ",
+            "Yolei Top",
+            "Yolei Top (Shin)"
           ],
           "stats": {
             "DE": 1000
           },
-          "stats_from": "Yolei Top"
+          "stats_from": "Yolei Top",
+          "stats_shin": {
+            "DE": 1500
+          },
+          "stats_shin_from": "Yolei Top (Shin)"
         },
         {
           "slot": "bottom",
@@ -54,12 +73,18 @@
           "shin": "(ชิน) กางเกงของมิยาโกะ",
           "accepts": [
             "กางเกงของมิยาโกะ",
-            "(ชิน) กางเกงของมิยาโกะ"
+            "(ชิน) กางเกงของมิยาโกะ",
+            "Yolei Bottom",
+            "Yolei Bottom (Shin)"
           ],
           "stats": {
             "DS": 4500
           },
-          "stats_from": "Yolei Bottom"
+          "stats_from": "Yolei Bottom",
+          "stats_shin": {
+            "DS": 7000
+          },
+          "stats_shin_from": "Yolei Bottom (Shin)"
         },
         {
           "slot": "gloves",
@@ -67,12 +92,18 @@
           "shin": "(ชิน) ถุงมือของมิยาโกะ",
           "accepts": [
             "ถุงมือของมิยาโกะ",
-            "(ชิน) ถุงมือของมิยาโกะ"
+            "(ชิน) ถุงมือของมิยาโกะ",
+            "Yolei Gloves",
+            "Yolei Gloves (Shin)"
           ],
           "stats": {
             "AT": 2700
           },
-          "stats_from": "Yolei Gloves"
+          "stats_from": "Yolei Gloves",
+          "stats_shin": {
+            "AT": 4000
+          },
+          "stats_shin_from": "Yolei Gloves (Shin)"
         },
         {
           "slot": "shoes",
@@ -80,10 +111,14 @@
           "shin": "(ชิน) รองเท้าของมิยาโกะ",
           "accepts": [
             "รองเท้าของมิยาโกะ",
-            "(ชิน) รองเท้าของมิยาโกะ"
+            "(ชิน) รองเท้าของมิยาโกะ",
+            "Yolei Shoes",
+            "Yolei Shoes (Shin)"
           ],
           "stats": {},
-          "stats_from": "Yolei Shoes"
+          "stats_from": "Yolei Shoes",
+          "stats_shin": {},
+          "stats_shin_from": "Yolei Shoes (Shin)"
         }
       ],
       "bonuses": [
@@ -157,7 +192,8 @@
           "item": "น้ำแข็ง : หมวกเกราะแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "น้ำแข็ง : หมวกเกราะแห่งสปิริต"
+            "น้ำแข็ง : หมวกเกราะแห่งสปิริต",
+            "Ice:Spirit Helmet"
           ],
           "stats": {
             "CT": 55.0
@@ -169,7 +205,8 @@
           "item": "น้ำแข็ง : เครื่องประดับแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "น้ำแข็ง : เครื่องประดับแห่งสปิริต"
+            "น้ำแข็ง : เครื่องประดับแห่งสปิริต",
+            "Ice:Spirit Accessory"
           ],
           "stats": {
             "AT": 2500,
@@ -182,7 +219,8 @@
           "item": "น้ำแข็ง : เสื้อแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "น้ำแข็ง : เสื้อแห่งสปิริต"
+            "น้ำแข็ง : เสื้อแห่งสปิริต",
+            "Ice:Spirit Top"
           ],
           "stats": {
             "DE": 2000
@@ -194,7 +232,8 @@
           "item": "น้ำแข็ง : กางเกงแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "น้ำแข็ง : กางเกงแห่งสปิริต"
+            "น้ำแข็ง : กางเกงแห่งสปิริต",
+            "Ice:Spirit Bottom"
           ],
           "stats": {
             "DS": 8000
@@ -206,7 +245,8 @@
           "item": "น้ำแข็ง : ถุงมือแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "น้ำแข็ง : ถุงมือแห่งสปิริต"
+            "น้ำแข็ง : ถุงมือแห่งสปิริต",
+            "Ice:Spirit Gloves"
           ],
           "stats": {
             "AT": 5000
@@ -218,7 +258,8 @@
           "item": "น้ำแข็ง : รองเท้าแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "น้ำแข็ง : รองเท้าแห่งสปิริต"
+            "น้ำแข็ง : รองเท้าแห่งสปิริต",
+            "Ice:Spirit Shoes"
           ],
           "stats": {},
           "stats_from": "Ice:Spirit Shoes"
@@ -260,12 +301,18 @@
           "shin": "(ชิน) ผ้าโพกหัวของไดสุเกะ",
           "accepts": [
             "ผ้าโพกหัวของไดสุเกะ",
-            "(ชิน) ผ้าโพกหัวของไดสุเกะ"
+            "(ชิน) ผ้าโพกหัวของไดสุเกะ",
+            "Davis Head",
+            "Davis Head (Shin)"
           ],
           "stats": {
             "CT": 25.0
           },
-          "stats_from": "Davis Head"
+          "stats_from": "Davis Head",
+          "stats_shin": {
+            "CT": 45.0
+          },
+          "stats_shin_from": "Davis Head (Shin)"
         },
         {
           "slot": "fashion",
@@ -273,13 +320,20 @@
           "shin": "(ชิน) กระเป๋าของไดสุเกะ",
           "accepts": [
             "กระเป๋าของไดสุเกะ",
-            "(ชิน) กระเป๋าของไดสุเกะ"
+            "(ชิน) กระเป๋าของไดสุเกะ",
+            "Davis Fashion",
+            "Davis Fashion (Shin)"
           ],
           "stats": {
             "AT": 1500,
             "HT": 3500
           },
-          "stats_from": "Davis Fashion"
+          "stats_from": "Davis Fashion",
+          "stats_shin": {
+            "AT": 2000,
+            "HT": 4500
+          },
+          "stats_shin_from": "Davis Fashion (Shin)"
         },
         {
           "slot": "top",
@@ -287,12 +341,18 @@
           "shin": "(ชิน) แจ็กเก็ตของไดสุเกะ",
           "accepts": [
             "แจ็กเก็ตของไดสุเกะ",
-            "(ชิน) แจ็กเก็ตของไดสุเกะ"
+            "(ชิน) แจ็กเก็ตของไดสุเกะ",
+            "Davis Top",
+            "Davis Top (Shin)"
           ],
           "stats": {
             "DE": 1000
           },
-          "stats_from": "Davis Top"
+          "stats_from": "Davis Top",
+          "stats_shin": {
+            "DE": 1500
+          },
+          "stats_shin_from": "Davis Top (Shin)"
         },
         {
           "slot": "bottom",
@@ -300,12 +360,18 @@
           "shin": "(ชิน) กางเกงของไดสุเกะ",
           "accepts": [
             "กางเกงของไดสุเกะ",
-            "(ชิน) กางเกงของไดสุเกะ"
+            "(ชิน) กางเกงของไดสุเกะ",
+            "Davis Bottom",
+            "Davis Bottom (Shin)"
           ],
           "stats": {
             "DS": 4500
           },
-          "stats_from": "Davis Bottom"
+          "stats_from": "Davis Bottom",
+          "stats_shin": {
+            "DS": 7000
+          },
+          "stats_shin_from": "Davis Bottom (Shin)"
         },
         {
           "slot": "gloves",
@@ -313,12 +379,18 @@
           "shin": "(ชิน) ถุงมือของไดสุเกะ",
           "accepts": [
             "ถุงมือของไดสุเกะ",
-            "(ชิน) ถุงมือของไดสุเกะ"
+            "(ชิน) ถุงมือของไดสุเกะ",
+            "Davis Gloves",
+            "Davis Gloves (Shin)"
           ],
           "stats": {
             "AT": 2700
           },
-          "stats_from": "Davis Gloves"
+          "stats_from": "Davis Gloves",
+          "stats_shin": {
+            "AT": 4000
+          },
+          "stats_shin_from": "Davis Gloves (Shin)"
         },
         {
           "slot": "shoes",
@@ -326,10 +398,14 @@
           "shin": "(ชิน) รองเท้าของไดสุเกะ",
           "accepts": [
             "รองเท้าของไดสุเกะ",
-            "(ชิน) รองเท้าของไดสุเกะ"
+            "(ชิน) รองเท้าของไดสุเกะ",
+            "Davis Shoes",
+            "Davis Shoes (Shin)"
           ],
           "stats": {},
-          "stats_from": "Davis Shoes"
+          "stats_from": "Davis Shoes",
+          "stats_shin": {},
+          "stats_shin_from": "Davis Shoes (Shin)"
         }
       ],
       "bonuses": [
@@ -403,7 +479,8 @@
           "item": "ลม : หมวกเกราะแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ลม : หมวกเกราะแห่งสปิริต"
+            "ลม : หมวกเกราะแห่งสปิริต",
+            "Wind:Spirit Helmet"
           ],
           "stats": {
             "CT": 55.0
@@ -415,7 +492,8 @@
           "item": "ลม : เครื่องประดับแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ลม : เครื่องประดับแห่งสปิริต"
+            "ลม : เครื่องประดับแห่งสปิริต",
+            "Wind:Spirit Accessory"
           ],
           "stats": {
             "AT": 2500,
@@ -428,7 +506,8 @@
           "item": "ลม : เสื้อแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ลม : เสื้อแห่งสปิริต"
+            "ลม : เสื้อแห่งสปิริต",
+            "Wind:Spirit Top"
           ],
           "stats": {
             "DE": 2000
@@ -440,7 +519,8 @@
           "item": "ลม : กางเกงแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ลม : กางเกงแห่งสปิริต"
+            "ลม : กางเกงแห่งสปิริต",
+            "Wind:Spirit Bottom"
           ],
           "stats": {
             "DS": 8000
@@ -452,7 +532,8 @@
           "item": "ลม : ถุงมือแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ลม : ถุงมือแห่งสปิริต"
+            "ลม : ถุงมือแห่งสปิริต",
+            "Wind:Spirit Gloves"
           ],
           "stats": {
             "AT": 5000
@@ -464,7 +545,8 @@
           "item": "ลม : รองเท้าแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ลม : รองเท้าแห่งสปิริต"
+            "ลม : รองเท้าแห่งสปิริต",
+            "Wind:Spirit Shoes"
           ],
           "stats": {},
           "stats_from": "Wind:Spirit Shoes"
@@ -573,7 +655,8 @@
           "item": "สายฟ้า : หมวกเกราะแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "สายฟ้า : หมวกเกราะแห่งสปิริต"
+            "สายฟ้า : หมวกเกราะแห่งสปิริต",
+            "Thunder:Spirit Helmet"
           ],
           "stats": {
             "CT": 55.0
@@ -585,7 +668,8 @@
           "item": "สายฟ้า : เครื่องประดับแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "สายฟ้า : เครื่องประดับแห่งสปิริต"
+            "สายฟ้า : เครื่องประดับแห่งสปิริต",
+            "Thunder:Spirit Accessory"
           ],
           "stats": {
             "AT": 2500,
@@ -598,7 +682,8 @@
           "item": "สายฟ้า : เสื้อแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "สายฟ้า : เสื้อแห่งสปิริต"
+            "สายฟ้า : เสื้อแห่งสปิริต",
+            "Thunder:Spirit Top"
           ],
           "stats": {
             "DE": 2000
@@ -610,7 +695,8 @@
           "item": "สายฟ้า : กางเกงแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "สายฟ้า : กางเกงแห่งสปิริต"
+            "สายฟ้า : กางเกงแห่งสปิริต",
+            "Thunder:Spirit Bottom"
           ],
           "stats": {
             "DS": 8000
@@ -622,7 +708,8 @@
           "item": "สายฟ้า : ถุงมือแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "สายฟ้า : ถุงมือแห่งสปิริต"
+            "สายฟ้า : ถุงมือแห่งสปิริต",
+            "Thunder:Spirit Gloves"
           ],
           "stats": {
             "AT": 5000
@@ -634,7 +721,8 @@
           "item": "สายฟ้า : รองเท้าแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "สายฟ้า : รองเท้าแห่งสปิริต"
+            "สายฟ้า : รองเท้าแห่งสปิริต",
+            "Thunder:Spirit Shoes"
           ],
           "stats": {},
           "stats_from": "Thunder:Spirit Shoes"
@@ -675,7 +763,8 @@
           "item": "แสง : หมวกเกราะแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "แสง : หมวกเกราะแห่งสปิริต"
+            "แสง : หมวกเกราะแห่งสปิริต",
+            "Light:Spirit Helmet"
           ],
           "stats": {
             "CT": 55.0
@@ -687,7 +776,8 @@
           "item": "แสง : เครื่องประดับแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "แสง : เครื่องประดับแห่งสปิริต"
+            "แสง : เครื่องประดับแห่งสปิริต",
+            "Light:Spirit Accessory"
           ],
           "stats": {
             "AT": 2500,
@@ -700,7 +790,8 @@
           "item": "แสง : เสื้อแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "แสง : เสื้อแห่งสปิริต"
+            "แสง : เสื้อแห่งสปิริต",
+            "Light:Spirit Top"
           ],
           "stats": {
             "DE": 2000
@@ -712,7 +803,8 @@
           "item": "แสง : กางเกงแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "แสง : กางเกงแห่งสปิริต"
+            "แสง : กางเกงแห่งสปิริต",
+            "Light:Spirit Bottom"
           ],
           "stats": {
             "DS": 8000
@@ -724,7 +816,8 @@
           "item": "แสง : ถุงมือแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "แสง : ถุงมือแห่งสปิริต"
+            "แสง : ถุงมือแห่งสปิริต",
+            "Light:Spirit Gloves"
           ],
           "stats": {
             "AT": 5000
@@ -736,7 +829,8 @@
           "item": "แสง : รองเท้าแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "แสง : รองเท้าแห่งสปิริต"
+            "แสง : รองเท้าแห่งสปิริต",
+            "Light:Spirit Shoes"
           ],
           "stats": {},
           "stats_from": "Light:Spirit Shoes"
@@ -778,12 +872,18 @@
           "shin": "(ชิน) หมวกของทาเครุ",
           "accepts": [
             "หมวกของทาเครุ",
-            "(ชิน) หมวกของทาเครุ"
+            "(ชิน) หมวกของทาเครุ",
+            "T.K Head",
+            "T.K Head (Shin)"
           ],
           "stats": {
             "CT": 25.0
           },
-          "stats_from": "T.K Head"
+          "stats_from": "T.K Head",
+          "stats_shin": {
+            "CT": 45.0
+          },
+          "stats_shin_from": "T.K Head (Shin)"
         },
         {
           "slot": "fashion",
@@ -791,13 +891,20 @@
           "shin": "(ชิน) กระเป๋าของทาเครุ",
           "accepts": [
             "กระเป๋าของทาเครุ",
-            "(ชิน) กระเป๋าของทาเครุ"
+            "(ชิน) กระเป๋าของทาเครุ",
+            "T.K Fashion",
+            "T.K Fashion (Shin)"
           ],
           "stats": {
             "AT": 1500,
             "HT": 3500
           },
-          "stats_from": "T.K Fashion"
+          "stats_from": "T.K Fashion",
+          "stats_shin": {
+            "AT": 2000,
+            "HT": 4500
+          },
+          "stats_shin_from": "T.K Fashion (Shin)"
         },
         {
           "slot": "top",
@@ -805,12 +912,18 @@
           "shin": "(ชิน) เสื้อของทาเครุ",
           "accepts": [
             "เสื้อของทาเครุ",
-            "(ชิน) เสื้อของทาเครุ"
+            "(ชิน) เสื้อของทาเครุ",
+            "T.K Top",
+            "T.K Top (Shin)"
           ],
           "stats": {
             "DE": 1000
           },
-          "stats_from": "T.K Top"
+          "stats_from": "T.K Top",
+          "stats_shin": {
+            "DE": 1500
+          },
+          "stats_shin_from": "T.K Top (Shin)"
         },
         {
           "slot": "bottom",
@@ -818,12 +931,18 @@
           "shin": "(ชิน) กางเกงของทาเครุ",
           "accepts": [
             "กางเกงของทาเครุ",
-            "(ชิน) กางเกงของทาเครุ"
+            "(ชิน) กางเกงของทาเครุ",
+            "T.K Bottom",
+            "T.K Bottom (Shin)"
           ],
           "stats": {
             "DS": 4500
           },
-          "stats_from": "T.K Bottom"
+          "stats_from": "T.K Bottom",
+          "stats_shin": {
+            "DS": 7000
+          },
+          "stats_shin_from": "T.K Bottom (Shin)"
         },
         {
           "slot": "gloves",
@@ -831,12 +950,18 @@
           "shin": "(ชิน) แส้ของดิจิมอนไกเซอร์",
           "accepts": [
             "แส้ของดิจิมอนไกเซอร์",
-            "(ชิน) แส้ของดิจิมอนไกเซอร์"
+            "(ชิน) แส้ของดิจิมอนไกเซอร์",
+            "T.K Gloves",
+            "T.K Gloves (Shin)"
           ],
           "stats": {
             "AT": 2700
           },
-          "stats_from": "T.K Gloves"
+          "stats_from": "T.K Gloves",
+          "stats_shin": {
+            "AT": 4000
+          },
+          "stats_shin_from": "T.K Gloves (Shin)"
         },
         {
           "slot": "shoes",
@@ -844,10 +969,14 @@
           "shin": "(ชิน) รองเท้าของทาเครุ",
           "accepts": [
             "รองเท้าของทาเครุ",
-            "(ชิน) รองเท้าของทาเครุ"
+            "(ชิน) รองเท้าของทาเครุ",
+            "T.K Shoes",
+            "T.K Shoes (Shin)"
           ],
           "stats": {},
-          "stats_from": "T.K Shoes"
+          "stats_from": "T.K Shoes",
+          "stats_shin": {},
+          "stats_shin_from": "T.K Shoes (Shin)"
         }
       ],
       "bonuses": [
@@ -921,7 +1050,8 @@
           "item": "ไฟ : หมวกเกราะแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ไฟ : หมวกเกราะแห่งสปิริต"
+            "ไฟ : หมวกเกราะแห่งสปิริต",
+            "Fire:Spirit Helmet"
           ],
           "stats": {
             "CT": 55.0
@@ -933,7 +1063,8 @@
           "item": "ไฟ : เครื่องประดับแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ไฟ : เครื่องประดับแห่งสปิริต"
+            "ไฟ : เครื่องประดับแห่งสปิริต",
+            "Fire:Spirit Accessory"
           ],
           "stats": {
             "AT": 2500,
@@ -946,7 +1077,8 @@
           "item": "ไฟ : เสื้อแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ไฟ : เสื้อแห่งสปิริต"
+            "ไฟ : เสื้อแห่งสปิริต",
+            "Fire:Spirit Top"
           ],
           "stats": {
             "DE": 2000
@@ -958,7 +1090,8 @@
           "item": "ไฟ : กางเกงแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ไฟ : กางเกงแห่งสปิริต"
+            "ไฟ : กางเกงแห่งสปิริต",
+            "Fire:Spirit Bottom"
           ],
           "stats": {
             "DS": 8000
@@ -970,7 +1103,8 @@
           "item": "ไฟ : ถุงมือแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ไฟ : ถุงมือแห่งสปิริต"
+            "ไฟ : ถุงมือแห่งสปิริต",
+            "Fire:Spirit Gloves"
           ],
           "stats": {
             "AT": 5000
@@ -982,7 +1116,8 @@
           "item": "ไฟ : รองเท้าแห่งสปิริต",
           "shin": null,
           "accepts": [
-            "ไฟ : รองเท้าแห่งสปิริต"
+            "ไฟ : รองเท้าแห่งสปิริต",
+            "Fire:Spirit Shoes"
           ],
           "stats": {},
           "stats_from": "Fire:Spirit Shoes"

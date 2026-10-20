@@ -403,3 +403,11 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   the NA notices in `cache/event_*.html` / `cache/patch_*.html` first: the 2025
   Four Holy Beasts gear (Noble Head Ornament of Huanglongmon ...) is absent
   from dmowiki's Clothing page but sold in event_740 / event_784.
+- Daisuke/Takeru/Miyako gear has a "(ชิน)" tier with higher numbers. It is
+  its own registry item (`<name> (Shin)`, built by `add_shin_pieces` from the
+  vplay per-level tables) but the SAME set: vplay lists all 12 pieces under
+  one set and one bonus table, so base and shin pieces worn mixed both count.
+- The solver finds a row's set by the row's name, and rows carry the
+  registry's English name. `set_registry.json` "accepts" therefore lists the
+  Thai pair first, then the registry names whose nameTh is one of them;
+  without the English names no registry-picked row ever earned a set bonus.

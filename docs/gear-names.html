@@ -189,16 +189,26 @@
     var c = el("div", "gn-set");
     c.appendChild(el("h3", "", s.set_th));
     c.appendChild(el("div", "en", s.set));
-    var row = el("div", "gn-pieces");
-    s.slots.forEach(function (x) {
-      var it = byName[x.stats_from] || {};
-      var piece = el("div", "gn-piece");
-      piece.title = [it.name, x.shin].filter(Boolean).join(" · ");
-      piece.appendChild(imgBox(it.icon, x.item));
-      piece.appendChild(el("span", "", x.item));
-      row.appendChild(piece);
-    });
-    c.appendChild(row);
+    function pieces(nameOf, fromOf) {
+      var row = el("div", "gn-pieces");
+      s.slots.forEach(function (x) {
+        if (!nameOf(x)) return;
+        var it = byName[fromOf(x)] || {};
+        var piece = el("div", "gn-piece");
+        piece.title = it.name || "";
+        piece.appendChild(imgBox(it.icon, nameOf(x)));
+        piece.appendChild(el("span", "", nameOf(x)));
+        row.appendChild(piece);
+      });
+      return row;
+    }
+    c.appendChild(pieces(function (x) { return x.item; }, function (x) { return x.stats_from; }));
+    /* The shin tier has its own numbers but the same set: worn mixed with
+       base pieces, both count toward the bonus. */
+    if (s.slots.some(function (x) { return x.shin; })) {
+      c.appendChild(el("div", "en", "แบบ (ชิน) — ค่าสูงกว่า ใส่ปนกับแบบปกติได้ นับรวมเป็นเซ็ตเดียว"));
+      c.appendChild(pieces(function (x) { return x.shin; }, function (x) { return x.stats_shin_from; }));
+    }
     (s.bonuses || []).forEach(function (b) { c.appendChild(bonusLine(b)); });
     return c;
   }
@@ -272,7 +282,12 @@
       SLOTS.forEach(function (s) { known[s[0]] = true; });
       /* Clothing slots list set pieces only; accessories have no sets and stay whole. */
       var inSet = {};
-      sets.forEach(function (s) { s.slots.forEach(function (x) { inSet[x.stats_from] = true; }); });
+      sets.forEach(function (s) {
+        s.slots.forEach(function (x) {
+          inSet[x.stats_from] = true;
+          if (x.stats_shin_from) inSet[x.stats_shin_from] = true;
+        });
+      });
       items = (d.items || []).filter(function (it) {
         return known[it.slot] && (CLOTHING.indexOf(it.slot) < 0 || inSet[it.name]);
       });

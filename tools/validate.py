@@ -652,6 +652,9 @@ def check_set_registry():
                    % (sorted(expected - names), sorted(names - expected)))
 
     SHIN = "(\u0e0a\u0e34\u0e19)"
+    reg_p = PROJ / "docs" / "gear_registry.json"
+    th_of = {it["name"]: it.get("nameTh")
+             for it in json.loads(reg_p.read_text(encoding="utf-8"))["items"]}
     for s in sets:
         clothing = s["set"] in CLOTHING
         tamer = s["set"] in TAMER
@@ -671,7 +674,10 @@ def check_set_registry():
             seen.add(sl["slot"])
             # a slot takes the base item or its shin variant, never both at once
             want = [n for n in (sl["item"], sl["shin"]) if n]
-            if sl["accepts"] != want:
+            # after the Thai pair come the registry names the optimizer's rows
+            # carry; each must be one of those two pieces, not some other item
+            en = sl["accepts"][len(want):]
+            if sl["accepts"][:len(want)] != want or any(th_of.get(n) not in want for n in en):
                 bad.append("%s/%s: accepts does not match item+shin"
                            % (s["set"], sl["slot"]))
             if sl["shin"] and not sl["shin"].startswith(SHIN):
