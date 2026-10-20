@@ -19,7 +19,7 @@
           "stats": {
             "CT": 2500.0
           },
-          "stats_from": "Yolei,T.K,Davis Head"
+          "stats_from": "Yolei Head"
         },
         {
           "slot": "fashion",
@@ -33,7 +33,7 @@
             "AT": 1500,
             "HT": 3500
           },
-          "stats_from": "Yolei,T.K,Davis Fashion"
+          "stats_from": "Yolei Fashion"
         },
         {
           "slot": "top",
@@ -44,7 +44,7 @@
             "(ชิน) เสื้อของมิยาโกะ"
           ],
           "stats": {},
-          "stats_from": "Yolei,T.K,Davis Top"
+          "stats_from": "Yolei Top"
         },
         {
           "slot": "bottom",
@@ -57,7 +57,7 @@
           "stats": {
             "DS": 4500
           },
-          "stats_from": "Yolei,T.K,Davis Bottom"
+          "stats_from": "Yolei Bottom"
         },
         {
           "slot": "gloves",
@@ -70,7 +70,7 @@
           "stats": {
             "AT": 2700
           },
-          "stats_from": "Yolei,T.K,Davis Gloves"
+          "stats_from": "Yolei Gloves"
         },
         {
           "slot": "shoes",
@@ -81,7 +81,7 @@
             "(ชิน) รองเท้าของมิยาโกะ"
           ],
           "stats": {},
-          "stats_from": "Yolei,T.K,Davis Shoes"
+          "stats_from": "Yolei Shoes"
         }
       ],
       "bonuses": [
@@ -261,7 +261,7 @@
           "stats": {
             "CT": 2500.0
           },
-          "stats_from": "Yolei,T.K,Davis Head"
+          "stats_from": "Davis Head"
         },
         {
           "slot": "fashion",
@@ -275,7 +275,7 @@
             "AT": 1500,
             "HT": 3500
           },
-          "stats_from": "Yolei,T.K,Davis Fashion"
+          "stats_from": "Davis Fashion"
         },
         {
           "slot": "top",
@@ -286,7 +286,7 @@
             "(ชิน) แจ็กเก็ตของไดสุเกะ"
           ],
           "stats": {},
-          "stats_from": "Yolei,T.K,Davis Top"
+          "stats_from": "Davis Top"
         },
         {
           "slot": "bottom",
@@ -299,7 +299,7 @@
           "stats": {
             "DS": 4500
           },
-          "stats_from": "Yolei,T.K,Davis Bottom"
+          "stats_from": "Davis Bottom"
         },
         {
           "slot": "gloves",
@@ -312,7 +312,7 @@
           "stats": {
             "AT": 2700
           },
-          "stats_from": "Yolei,T.K,Davis Gloves"
+          "stats_from": "Davis Gloves"
         },
         {
           "slot": "shoes",
@@ -323,7 +323,7 @@
             "(ชิน) รองเท้าของไดสุเกะ"
           ],
           "stats": {},
-          "stats_from": "Yolei,T.K,Davis Shoes"
+          "stats_from": "Davis Shoes"
         }
       ],
       "bonuses": [
@@ -771,7 +771,7 @@
           "stats": {
             "CT": 2500.0
           },
-          "stats_from": "Yolei,T.K,Davis Head"
+          "stats_from": "T.K Head"
         },
         {
           "slot": "fashion",
@@ -785,7 +785,7 @@
             "AT": 1500,
             "HT": 3500
           },
-          "stats_from": "Yolei,T.K,Davis Fashion"
+          "stats_from": "T.K Fashion"
         },
         {
           "slot": "top",
@@ -796,7 +796,7 @@
             "(ชิน) เสื้อของทาเครุ"
           ],
           "stats": {},
-          "stats_from": "Yolei,T.K,Davis Top"
+          "stats_from": "T.K Top"
         },
         {
           "slot": "bottom",
@@ -809,7 +809,7 @@
           "stats": {
             "DS": 4500
           },
-          "stats_from": "Yolei,T.K,Davis Bottom"
+          "stats_from": "T.K Bottom"
         },
         {
           "slot": "gloves",
@@ -822,7 +822,7 @@
           "stats": {
             "AT": 2700
           },
-          "stats_from": "Yolei,T.K,Davis Gloves"
+          "stats_from": "T.K Gloves"
         },
         {
           "slot": "shoes",
@@ -833,7 +833,7 @@
             "(ชิน) รองเท้าของทาเครุ"
           ],
           "stats": {},
-          "stats_from": "Yolei,T.K,Davis Shoes"
+          "stats_from": "T.K Shoes"
         }
       ],
       "bonuses": [

@@ -112,30 +112,34 @@ def icon_by_name(row_names, name, icons):
     named = [p for p in found if stem_key(p) == key]
     return named[0] if len(named) == 1 else None
 
-# The wiki lists one "*:Spirit X" row per slot for five in-game sets ("*" is
-# the element, as in its "Fire : Spirit" set-effect rows) and draws all five
-# pieces side by side in one picture, left to right in that same order
-# (Agunimon, Lobomon, Kumamon, Kazemon, Beetlemon). Each set becomes its own
-# pick with its own cut-out icon. Stats are per row on the wiki, so all five
-# share them.
+# The wiki lists one row per slot for a group of in-game sets and draws every
+# set's piece side by side in one picture. Each set becomes its own pick with
+# its own cut-out icon; stats are per row on the wiki, so the sets share them.
+#   "*:Spirit X"            "*" is the element, as in the wiki's "Fire : Spirit"
+#                           set-effect rows; pictured in that same order
+#                           (Agunimon, Lobomon, Kumamon, Kazemon, Beetlemon).
+#   "Yolei,T.K,Davis X"     pictured Davis, T.K, Yolei -- NOT the name's order:
+#                           the middle gloves are the Kaiser whip T.K's set
+#                           lists, the left top is Davis's flame jacket.
+# Each entry: (sets in picture order, left edge of each piece's frame, piece
+# width, new name from (set, rest of the row's name)). The last Spirit piece
+# is cut by the picture's edge.
 SPLIT_SETS = {
-    "*:Spirit ": ["Fire", "Light", "Ice", "Wind", "Thunder"],
+    "*:Spirit ": (["Fire", "Light", "Ice", "Wind", "Thunder"],
+                  [2, 40, 77, 116, 155], 34, lambda s, rest: f"{s}:Spirit {rest}"),
+    "Yolei,T.K,Davis ": (["Davis", "T.K", "Yolei"],
+                         [1, 43, 86], 34, lambda s, rest: f"{s} {rest}"),
 }
-# Left edge of each piece's frame in those pictures (all six share one
-# layout, 188 px wide); a piece is 34 px wide, the last one is cut by the
-# picture's edge.
-SPLIT_TILE_X = [2, 40, 77, 116, 155]
-SPLIT_TILE_W = 34
 
 
-def split_icon(src, i, tag):
-    """Cut piece i out of a combined picture, saved next to it. Rewritten
+def split_icon(src, box, tag):
+    """Cut one piece out of a combined picture, saved next to it. Rewritten
     only when the bytes differ, so a rebuild leaves the files alone."""
     from io import BytesIO
     from PIL import Image
     im = Image.open(src)
-    x = SPLIT_TILE_X[i]
-    tile = im.crop((x, 0, min(x + SPLIT_TILE_W, im.width), im.height))
+    x, w = box
+    tile = im.crop((x, 0, min(x + w, im.width), im.height))
     buf = BytesIO()
     tile.save(buf, "PNG", optimize=True)
     dst = src.with_name(f"{src.stem}-{tag}.png")
@@ -145,16 +149,17 @@ def split_icon(src, i, tag):
 
 
 def split_sets(rec):
-    """One registry record, or one per set for a "*:" row."""
-    for prefix, sets in SPLIT_SETS.items():
+    """One registry record, or one per set for a grouped row."""
+    for prefix, (sets, xs, w, rename) in SPLIT_SETS.items():
         if not rec["name"].startswith(prefix):
             continue
-        piece = rec["name"][len("*:"):]
+        rest = rec["name"][len(prefix):]
         out = []
-        for i, el in enumerate(sets):
-            r = dict(rec, id=f"{rec['id']}-{el.lower()}", name=f"{el}:{piece}")
+        for s, x in zip(sets, xs):
+            tag = re.sub(r"[^a-z0-9]+", "", s.lower())
+            r = dict(rec, id=f"{rec['id']}-{tag}", name=rename(s, rest))
             if rec.get("icon"):
-                tile = split_icon(PROJ / "docs" / rec["icon"], i, el.lower())
+                tile = split_icon(PROJ / "docs" / rec["icon"], (x, w), tag)
                 r["icon"] = tile.relative_to(PROJ / "docs").as_posix()
             out.append(r)
         return out

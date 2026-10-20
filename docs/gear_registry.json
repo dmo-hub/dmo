@@ -74,6 +74,27 @@
       "DS": 1200
     },
     {
+      "id": "bottom-yolei-t-k-davis-bottom-3-davis",
+      "name": "Davis Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/6/69/MDGBottom.png",
+      "icon": "img/gear/mdgbottom-davis.png",
+      "DS": 4500,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 30.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
       "id": "bottom-fairimon-s-lower-armor-event",
       "name": "Fairimon's Lower Armor [Event]",
       "slot": "bottom",
@@ -225,6 +246,27 @@
       "DS": 500
     },
     {
+      "id": "bottom-yolei-t-k-davis-bottom-3-tk",
+      "name": "T.K Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/6/69/MDGBottom.png",
+      "icon": "img/gear/mdgbottom-tk.png",
+      "DS": 4500,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 30.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
       "id": "bottom-spirit-bottom-3-thunder",
       "name": "Thunder:Spirit Bottom",
       "slot": "bottom",
@@ -308,8 +350,8 @@
       "DS": 1100
     },
     {
-      "id": "bottom-yolei-t-k-davis-bottom-3",
-      "name": "Yolei,T.K,Davis Bottom",
+      "id": "bottom-yolei-t-k-davis-bottom-3-yolei",
+      "name": "Yolei Bottom",
       "slot": "bottom",
       "wikiSlot": "Bottom",
       "axis": "digimon",
@@ -317,7 +359,7 @@
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/6/69/MDGBottom.png",
-      "icon": "img/gear/mdgbottom.png",
+      "icon": "img/gear/mdgbottom-yolei.png",
       "DS": 4500,
       "ranged": true,
       "extra": [
@@ -728,6 +770,21 @@
       ]
     },
     {
+      "id": "fashion-yolei-t-k-davis-fashion-3-davis",
+      "name": "Davis Fashion",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/3/34/MDGFashion.png",
+      "icon": "img/gear/mdgfashion-davis.png",
+      "HT": 3500,
+      "AT": 1500,
+      "ranged": true
+    },
+    {
       "id": "fashion-fairimon-s-fairy-wings-event",
       "name": "Fairimon's Fairy Wings [Event]",
       "slot": "fashion",
@@ -843,6 +900,21 @@
       ]
     },
     {
+      "id": "fashion-yolei-t-k-davis-fashion-3-tk",
+      "name": "T.K Fashion",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/3/34/MDGFashion.png",
+      "icon": "img/gear/mdgfashion-tk.png",
+      "HT": 3500,
+      "AT": 1500,
+      "ranged": true
+    },
+    {
       "id": "fashion-spirit-accessory-3-thunder",
       "name": "Thunder:Spirit Accessory",
       "slot": "fashion",
@@ -923,8 +995,8 @@
       ]
     },
     {
-      "id": "fashion-yolei-t-k-davis-fashion-3",
-      "name": "Yolei,T.K,Davis Fashion",
+      "id": "fashion-yolei-t-k-davis-fashion-3-yolei",
+      "name": "Yolei Fashion",
       "slot": "fashion",
       "wikiSlot": "Fashion",
       "axis": "digimon",
@@ -932,7 +1004,7 @@
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/3/34/MDGFashion.png",
-      "icon": "img/gear/mdgfashion.png",
+      "icon": "img/gear/mdgfashion-yolei.png",
       "HT": 3500,
       "AT": 1500,
       "ranged": true
@@ -1215,6 +1287,20 @@
       ]
     },
     {
+      "id": "gloves-yolei-t-k-davis-gloves-3-davis",
+      "name": "Davis Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/b/b7/MDGGloves.png",
+      "icon": "img/gear/mdggloves-davis.png",
+      "AT": 2700,
+      "ranged": true
+    },
+    {
       "id": "gloves-fairimon-s-gauntlet-event",
       "name": "Fairimon's Gauntlet [Event]",
       "slot": "gloves",
@@ -1437,6 +1523,20 @@
       ]
     },
     {
+      "id": "gloves-yolei-t-k-davis-gloves-3-tk",
+      "name": "T.K Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/b/b7/MDGGloves.png",
+      "icon": "img/gear/mdggloves-tk.png",
+      "AT": 2700,
+      "ranged": true
+    },
+    {
       "id": "gloves-spirit-gloves-3-thunder",
       "name": "Thunder:Spirit Gloves",
       "slot": "gloves",
@@ -1523,8 +1623,8 @@
       "AT": 330
     },
     {
-      "id": "gloves-yolei-t-k-davis-gloves-3",
-      "name": "Yolei,T.K,Davis Gloves",
+      "id": "gloves-yolei-t-k-davis-gloves-3-yolei",
+      "name": "Yolei Gloves",
       "slot": "gloves",
       "wikiSlot": "Gloves",
       "axis": "digimon",
@@ -1532,7 +1632,7 @@
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/b/b7/MDGGloves.png",
-      "icon": "img/gear/mdggloves.png",
+      "icon": "img/gear/mdggloves-yolei.png",
       "AT": 2700,
       "ranged": true
     },
@@ -1613,6 +1713,20 @@
           "unit": "pct"
         }
       ]
+    },
+    {
+      "id": "head-yolei-t-k-davis-head-3-davis",
+      "name": "Davis Head",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/b/ba/MDGHead.png",
+      "icon": "img/gear/mdghead-davis.png",
+      "CT": 2500.0,
+      "ranged": true
     },
     {
       "id": "head-fairimon-s-wing-googles-event",
@@ -1739,6 +1853,20 @@
       ]
     },
     {
+      "id": "head-yolei-t-k-davis-head-3-tk",
+      "name": "T.K Head",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/b/ba/MDGHead.png",
+      "icon": "img/gear/mdghead-tk.png",
+      "CT": 2500.0,
+      "ranged": true
+    },
+    {
       "id": "head-spirit-helmet-3-thunder",
       "name": "Thunder:Spirit Helmet",
       "slot": "head",
@@ -1795,8 +1923,8 @@
       ]
     },
     {
-      "id": "head-yolei-t-k-davis-head-3",
-      "name": "Yolei,T.K,Davis Head",
+      "id": "head-yolei-t-k-davis-head-3-yolei",
+      "name": "Yolei Head",
       "slot": "head",
       "wikiSlot": "Head",
       "axis": "digimon",
@@ -1804,7 +1932,7 @@
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/b/ba/MDGHead.png",
-      "icon": "img/gear/mdghead.png",
+      "icon": "img/gear/mdghead-yolei.png",
       "CT": 2500.0,
       "ranged": true
     },
@@ -2420,6 +2548,35 @@
       "DE": 200
     },
     {
+      "id": "shoes-yolei-t-k-davis-shoes-3-davis",
+      "name": "Davis Shoes",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/3/38/MDGShoes.png",
+      "icon": "img/gear/mdgshoes-davis.png",
+      "extra": [
+        {
+          "stat": "Speed",
+          "value": 30.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Affinity",
+          "value": 30.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 2000.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
       "id": "shoes-spirit-shoes-3-fire",
       "name": "Fire:Spirit Shoes",
       "slot": "shoes",
@@ -2527,6 +2684,35 @@
       "DE": 200
     },
     {
+      "id": "shoes-yolei-t-k-davis-shoes-3-tk",
+      "name": "T.K Shoes",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/3/38/MDGShoes.png",
+      "icon": "img/gear/mdgshoes-tk.png",
+      "extra": [
+        {
+          "stat": "Speed",
+          "value": 30.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Affinity",
+          "value": 30.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 2000.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
       "id": "shoes-spirit-shoes-3-thunder",
       "name": "Thunder:Spirit Shoes",
       "slot": "shoes",
@@ -2585,8 +2771,8 @@
       ]
     },
     {
-      "id": "shoes-yolei-t-k-davis-shoes-3",
-      "name": "Yolei,T.K,Davis Shoes",
+      "id": "shoes-yolei-t-k-davis-shoes-3-yolei",
+      "name": "Yolei Shoes",
       "slot": "shoes",
       "wikiSlot": "Shoes",
       "axis": "digimon",
@@ -2594,7 +2780,7 @@
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/3/38/MDGShoes.png",
-      "icon": "img/gear/mdgshoes.png",
+      "icon": "img/gear/mdgshoes-yolei.png",
       "extra": [
         {
           "stat": "Speed",
@@ -2706,6 +2892,30 @@
         {
           "stat": "HP",
           "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-yolei-t-k-davis-top-3-davis",
+      "name": "Davis Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/7/7e/MDGTop.png",
+      "icon": "img/gear/mdgtop-davis.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 2500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 2000.0,
           "unit": "flat"
         }
       ]
@@ -2929,6 +3139,30 @@
       ]
     },
     {
+      "id": "top-yolei-t-k-davis-top-3-tk",
+      "name": "T.K Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "digimon",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/7/7e/MDGTop.png",
+      "icon": "img/gear/mdgtop-tk.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 2500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
       "id": "top-spirit-top-3-thunder",
       "name": "Thunder:Spirit Top",
       "slot": "top",
@@ -3062,8 +3296,8 @@
       ]
     },
     {
-      "id": "top-yolei-t-k-davis-top-3",
-      "name": "Yolei,T.K,Davis Top",
+      "id": "top-yolei-t-k-davis-top-3-yolei",
+      "name": "Yolei Top",
       "slot": "top",
       "wikiSlot": "Top",
       "axis": "digimon",
@@ -3071,7 +3305,7 @@
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/7/7e/MDGTop.png",
-      "icon": "img/gear/mdgtop.png",
+      "icon": "img/gear/mdgtop-yolei.png",
       "extra": [
         {
           "stat": "HP",

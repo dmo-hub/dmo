@@ -76,11 +76,14 @@ SLOT_ORDER_BY_SET = {
 # The dmowiki template row that carries the stats for a set's slots: one row
 # per slot stands in for every set of its group, so the group picks the row.
 TEMPLATE = "Yolei,T.K,Davis"
-# The gear registry splits the wiki's "*:Spirit X" rows into one item per
-# element ("Fire:Spirit Helmet"), so each Spirit set reads its own pieces.
+# The gear registry splits the wiki's grouped rows into one item per set
+# ("Fire:Spirit Helmet", "T.K Head"), so each set reads its own pieces.
 TEMPLATE_BY_SET = {name: name.split(":")[0].strip() + ":Spirit" for name in
                    ("Fire : Spirit", "Light: Spirit", "Ice: Spirit", "Wind: Spirit",
                     "Thunder: Spirit")}
+TEMPLATE_BY_SET.update({name: name.split("-")[0] + " " for name in
+                        ("Davis-Power of Courage", "T.K-Light of Hope",
+                         "Yolei-Heart of Love")})
 
 
 def main():
