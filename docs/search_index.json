@@ -1,6 +1,6 @@
 {
  "coverage": {
-  "na": "2026-07-15",
+  "na": "2026-09-16",
   "kr": "2026-07-14",
   "th": "2026-09-17"
  },
@@ -26247,6 +26247,29 @@
      {
       "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=818643&Btype=Update",
       "date": "2026-07-14"
+     }
+    ]
+   }
+  },
+  {
+   "type": "digimon",
+   "key": "apollomonwhispered",
+   "display": "Apollomon Whispered",
+   "names": {
+    "en": [
+     "Apollomon Whispered"
+    ],
+    "kr": [
+     "아폴로몬"
+    ],
+    "th": []
+   },
+   "anchor": "digimon.html#p4199",
+   "servers": {
+    "na": [
+     {
+      "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4199",
+      "date": "09-16-2026"
      }
     ]
    }

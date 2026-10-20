@@ -192,7 +192,7 @@
       <button class="filter-btn" id="f-reset" title="ล้างฟิลเตอร์">Reset</button>
     </div>
   </div>
-  <div class="filter-status" id="f-status">แสดงทั้งหมด <b id="f-count">35</b> deck จาก <b>21</b> โพสต์</div>
+  <div class="filter-status" id="f-status">แสดงทั้งหมด <b id="f-count">38</b> deck จาก <b>22</b> โพสต์</div>
 
   <!-- ============ 663 ============ -->
   <section class="post" id="e663">
@@ -1051,6 +1051,71 @@
     </div>
   </section>
 
+  <!-- ============ 4199 ============ -->
+  <section class="post" id="p4199">
+    <div class="sources"><span class="src-item is-na"><a class="src-label" href="https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4199" target="_blank" title="PatchNoteView.aspx?idx=4199">NA</a><span class="src-date">16.09.2026</span></span></div>
+
+    <div class="deck">
+      <div class="deck-body">
+        <div>
+          <p class="gk-label">Digimon List</p>
+          <table class="gk-table digimon-table"><tr><th>Sun of Sorrow, Whispered</th></tr>
+          <tr><td>Apollomon Whispered</td></tr></table>
+        </div>
+        <div>
+          <p class="gk-label">Effect</p>
+          <table class="gk-table effect-table">
+          <tr><th>Effect</th><th>Chance</th><th>Detail</th></tr>
+          <tr><td>Attack Speed</td><td>Passive</td><td>16% Increase</td></tr>
+          <tr><td>Skill Damage</td><td>Passive</td><td>165% Increase</td></tr>
+          <tr><td>Critical Damage</td><td>Passive</td><td>200% Increase</td></tr>
+          <tr><td>HP</td><td>Passive</td><td>20% Increase</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck">
+      <div class="deck-body">
+        <div>
+          <p class="gk-label">Digimon List</p>
+          <table class="gk-table digimon-table"><tr><th>The Dark Side of the Inverted Sun</th></tr>
+          <tr><td>Apollomon Whispered</td></tr><tr><td>Apollomon</td></tr></table>
+        </div>
+        <div>
+          <p class="gk-label">Effect</p>
+          <table class="gk-table effect-table">
+          <tr><th>Effect</th><th>Chance</th><th>Detail</th></tr>
+          <tr><td>Attack Speed</td><td>Passive</td><td>20% Increase</td></tr>
+          <tr><td>Skill Damage</td><td>Passive</td><td>180% Increase</td></tr>
+          <tr><td>Critical Damage</td><td>Passive</td><td>150% Increase</td></tr>
+          <tr><td>Hit Rate</td><td>Passive</td><td>12% Increase</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="deck">
+      <div class="deck-body">
+        <div>
+          <p class="gk-label">Digimon List</p>
+          <table class="gk-table digimon-table"><tr><th>Eternal Destruction and Chaos</th></tr>
+          <tr><td>Apollomon Whispered</td></tr><tr><td title="(Ultimate) Lucemon Satan Mode">Lucemon: Satan Mode (Extreme)</td></tr><tr><td title="(Awaken) Zeed Millenniumon">ZeedMillenniummon (Awaken)</td></tr><tr><td>Abbadomon</td></tr><tr><td>Abbadomon Core</td></tr></table>
+        </div>
+        <div>
+          <p class="gk-label">Effect</p>
+          <table class="gk-table effect-table">
+          <tr><th>Effect</th><th>Chance</th><th>Detail</th></tr>
+          <tr><td>Attack Speed</td><td>Passive</td><td>25% Increase</td></tr>
+          <tr><td>Skill Damage</td><td>Passive</td><td>170% Increase</td></tr>
+          <tr><td>Attribute Damage</td><td>Passive</td><td>8% Increase</td></tr>
+          <tr><td>HP</td><td>Passive</td><td>35% Increase</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script>
     (function() {
       const inDigimon = document.getElementById('f-digimon');
@@ -1061,12 +1126,14 @@
       const decks = Array.from(document.querySelectorAll('.deck'));
       const posts = Array.from(document.querySelectorAll('.post'));
 
-      // Rank U Digimon list from dmowiki (Category:Digimon_Rank_U, 20 total)
+      // Rank U Digimon list from dmowiki (Category:Digimon_Rank_U, 22 total)
       // Each entry: [wiki display name, regex to match against deck digimon text]
       const rankU = [
         ["Abbadomon",                              /\babbadomon\b(?!\s*core)/i],
         ["Abbadomon Core",                         /abbadomon\s+core/i],
         ["Alphamon Ouryuken (Extreme)",            /alphamon\s+ouryuken/i],
+        ["Apollomon",                              /\bapollomon\b(?!\s*whispered)/i],
+        ["Apollomon Whispered",                    /apollomon\s+whispered/i],
         ["Bloomlordmon",                           /bloomlordmon/i],
         ["DoneDevimon",                            /donedevimon/i],
         ["Eosmon LV6",                             /eosmon/i],
@@ -1080,6 +1147,7 @@
         ["Lucemon: Satan Mode (Extreme)",          /lucemon[^|]*satan/i],
         ["Omegamon - Merciful Mode",               /omegamon[^|]*merciful/i],
         ["Omegamon X Extreme",                     /\(?\s*extreme\s*\)?\s*omegamon|omegamon\s*x\s+extreme/i],
+        ["Quantumon",                              /quantumon/i],
         ["Shoutmon X7 Superior Mode",              /shoutmon\s*x7/i],
         ["Susanoomon (Extreme)",                   /susanoomon/i],
         ["ZeedMillenniummon (Awaken)",             /zeedmillennium/i],
