@@ -215,7 +215,8 @@
       "axis": "tamer",
       "iconWiki": "/images/3/3d/Qinglongmon%27s_Thunder_Short_Pants.png",
       "icon": "img/gear/qinglongmon_s_thunder_short_pants.png",
-      "DS": 1100
+      "DS": 1100,
+      "nameTh": "กางเกงขาสั้นสีฟ้าของจินลอนมอน"
     },
     {
       "id": "bottom-radiant-short-pants-of-qinglongmon",
@@ -581,7 +582,8 @@
           "value": 960.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ต่างหูศักดิ์สิทธิ์ของฟานลองมอน"
     },
     {
       "id": "earrings-imperial-earring",
@@ -592,7 +594,8 @@
       "iconWiki": "/images/6/6e/Imperial_Earrings.png",
       "icon": "img/gear/imperial_earrings.png",
       "CT": 7.0,
-      "HT": 700
+      "HT": 700,
+      "nameTh": "ต่างหูแห่งราชัน"
     },
     {
       "id": "earrings-maximum",
@@ -711,7 +714,8 @@
           "value": 960.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ต่างหูซีโร่ยูนิตที่ถูกปิดผนึก"
     },
     {
       "id": "fashion-agumon-ornament",
@@ -728,7 +732,8 @@
           "value": 200.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "อมยิ้มของอากูมอน"
     },
     {
       "id": "fashion-arbormon-s-vine-barrel-event",
@@ -796,7 +801,8 @@
           "value": 100.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ที่คาดผมหูแมวสีขาว"
     },
     {
       "id": "fashion-yolei-t-k-davis-fashion-3-davis",
@@ -863,7 +869,8 @@
           "value": 50.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ชุดหูฟัง"
     },
     {
       "id": "fashion-spirit-accessory-3-ice",
@@ -933,7 +940,8 @@
           "value": 7.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "เสื้อคลุมสีฟ้าของจินลอนมอน"
     },
     {
       "id": "fashion-yolei-t-k-davis-fashion-3-tk",
@@ -1133,7 +1141,8 @@
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
       "AT": 1760,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แว่นตาของเทมเมอร์"
     },
     {
       "id": "digimon-kaiser-s-goggles-tamer-s-goggles-at",
@@ -1146,7 +1155,8 @@
       "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
       "icon": "img/gear/kaiser_goggles.png",
       "AT": 4000,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แว่นตาของเทมเมอร์"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ct-ct-2",
@@ -1160,7 +1170,8 @@
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
       "CT": 2000.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แว่นตาของเทมเมอร์"
     },
     {
       "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ct",
@@ -1173,7 +1184,8 @@
       "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
       "icon": "img/gear/kaiser_goggles.png",
       "CT": 4000.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แว่นตาของเทมเมอร์"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-ht-ht-2",
@@ -1187,7 +1199,8 @@
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
       "HT": 1050,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แว่นตาของเทมเมอร์"
     },
     {
       "id": "digimon-kaiser-s-goggles-tamer-s-goggles-ht",
@@ -1200,7 +1213,8 @@
       "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
       "icon": "img/gear/kaiser_goggles.png",
       "HT": 3000,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แว่นตาของเทมเมอร์"
     },
     {
       "id": "gloves-agumon-paw-gloves",
@@ -1509,7 +1523,8 @@
       "axis": "tamer",
       "iconWiki": "/images/3/39/Qinglongmon%27s_Thunder_Gloves.png",
       "icon": "img/gear/qinglongmon_s_thunder_gloves.png",
-      "AT": 330
+      "AT": 330,
+      "nameTh": "ถุงมือสีฟ้าของจินลอนมอน"
     },
     {
       "id": "gloves-qinglongmon-s-radiant-gloves",
@@ -1546,7 +1561,8 @@
           "value": 100.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "อมยิ้มทรงกลม"
     },
     {
       "id": "gloves-square-lollipop",
@@ -1899,7 +1915,8 @@
           "value": 50.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ผ้าโพกหัวสีฟ้าของจินลอนมอน"
     },
     {
       "id": "head-soulmon-halloween-hat",
@@ -2321,7 +2338,8 @@
           "value": 15.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สร้อยศักดิ์สิทธิ์ของฟานลองมอน"
     },
     {
       "id": "necklaces-imperial-necklaces",
@@ -2339,7 +2357,8 @@
           "value": 20.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สร้อยแห่งราชัน"
     },
     {
       "id": "necklaces-maximum",
@@ -2464,7 +2483,8 @@
           "value": 1040.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "สร้อยที่เปล่งประกายของสี่สัตว์เทพที่ถูกผนึก"
     },
     {
       "id": "necklaces-underworld-necklaces",
@@ -2494,7 +2514,8 @@
           "value": 960.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แหวนศักดิ์สิทธิ์ของฟานลองมอน"
     },
     {
       "id": "rings-imperial-ring",
@@ -2505,7 +2526,8 @@
       "iconWiki": "/images/1/12/Imperial_Ring.png",
       "icon": "img/gear/imperial_ring.png",
       "AT": 450,
-      "CT": 7.0
+      "CT": 7.0,
+      "nameTh": "แหวนแห่งราชัน"
     },
     {
       "id": "rings-maximum",
@@ -2564,7 +2586,8 @@
           "value": 1040.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แหวนที่เปล่งประกายของสี่สัตว์เทพที่ถูกผนึก"
     },
     {
       "id": "rings-ring-of-four-holy-beasts-lv-5",
@@ -3237,7 +3260,8 @@
           "value": 900.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดสีฟ้าของจินลอนมอน"
     },
     {
       "id": "top-radiant-hooded-shirt-of-qinglongmon",
