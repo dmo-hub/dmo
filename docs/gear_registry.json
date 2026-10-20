@@ -12,7 +12,8 @@
       "iconWiki": "/images/4/4a/Agumon_Bottom.png",
       "icon": "img/gear/agumon_bottom.png",
       "AT": 200,
-      "DS": 1200
+      "DS": 1200,
+      "nameTh": "กางเกงของอากูมอน"
     },
     {
       "id": "bottom-arbormon-s-lower-armor-event",
@@ -29,7 +30,8 @@
           "value": 50.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "กางเกงของอัลบอร์มอน [กิจกรรม]"
     },
     {
       "id": "bottom-aural-short-pants-of-baihumon",
@@ -49,7 +51,8 @@
       "axis": "tamer",
       "iconWiki": "/images/0/04/Baihumon%27s_Flawless_Short_Pants.png",
       "icon": "img/gear/baihumon_s_flawless_short_pants.png",
-      "DS": 1100
+      "DS": 1100,
+      "nameTh": "กางเกงขาสั้นที่สมบูรณ์แบบของไบฟูมอน"
     },
     {
       "id": "bottom-chakkumon-s-snowman-event",
@@ -60,7 +63,8 @@
       "iconWiki": "/images/2/2f/Chakkumon%27s_Snowman.png",
       "icon": "img/gear/chakkumon_s_snowman.png",
       "DS": 700,
-      "AT": 150
+      "AT": 150,
+      "nameTh": "ตุ๊กตาหิมะของชัคมอน [กิจกรรม]"
     },
     {
       "id": "bottom-cozy-and-warm-pants",
@@ -71,7 +75,8 @@
       "iconWiki": "/images/c/c6/Cozy_and_warm_Pants.png",
       "icon": "img/gear/cozy_and_warm_pants.png",
       "AT": 200,
-      "DS": 1200
+      "DS": 1200,
+      "nameTh": "กางเกงแสนอุ่น"
     },
     {
       "id": "bottom-yolei-t-k-davis-bottom-3-davis",
@@ -105,7 +110,8 @@
       "iconWiki": "/images/5/5f/Fairimon%27s_Lower_Armor.png",
       "icon": "img/gear/fairimon_s_lower_armor.png",
       "DS": 1000,
-      "CT": 3.0
+      "CT": 3.0,
+      "nameTh": "กางเกงนางฟ้าของแฟรี่มอน [กิจกรรม]"
     },
     {
       "id": "bottom-spirit-bottom-3-fire",
@@ -176,7 +182,8 @@
           "value": 1500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ถุงน่องของลานามอน [กิจกรรม]"
     },
     {
       "id": "bottom-spirit-bottom-3-light",
@@ -304,7 +311,8 @@
       "iconWiki": "/images/5/57/Trendy_Wide_Pants_Event.png",
       "icon": "img/gear/trendy_wide_pants_event.png",
       "DS": 1000,
-      "AT": 200
+      "AT": 200,
+      "nameTh": "กางเกงเทรนดี้ [กิจกรรม]"
     },
     {
       "id": "bottom-spirit-bottom-3-wind",
@@ -389,7 +397,8 @@
       "axis": "tamer",
       "iconWiki": "/images/c/c5/Zhuqiamon%27s_Infernal_Short_Pants.png",
       "icon": "img/gear/zhuqiamon_s_infernal_short_pants.png",
-      "DS": 1100
+      "DS": 1100,
+      "nameTh": "กางเกงขาสั้นสีแดงเพลิงของซูเซมอน"
     },
     {
       "id": "bracelets-knight-s-bracelet-2",
@@ -481,7 +490,8 @@
           "value": 1152.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "กำไลแห่งปาฏิหาริย์"
     },
     {
       "id": "bracelets-miracle-bracelet-special-2",
@@ -501,7 +511,8 @@
           "value": 1200.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "กำไลแห่งปาฏิหาริย์[ระดับพิเศษ]"
     },
     {
       "id": "bracelets-radiant-knight-s-bracelet-2",
@@ -634,7 +645,8 @@
           "value": 600.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ต่างหูที่เปล่งประกายของนาโนมอน"
     },
     {
       "id": "earrings-radiant-earrings-of-four-holy-beasts-lv-5",
@@ -729,7 +741,8 @@
           "value": 5.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "เถาวัลย์ของอัลบอร์มอน [กิจกรรม]"
     },
     {
       "id": "fashion-baihumon-s-flawless-cape",
@@ -745,7 +758,8 @@
           "value": 5.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "เสื้อคลุมที่สมบูรณ์แบบของไบฟูมอน"
     },
     {
       "id": "fashion-chakkumon-s-ski-board-event",
@@ -762,7 +776,8 @@
           "value": 5.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สกีของชัคมอน [กิจกรรม]"
     },
     {
       "id": "fashion-cute-cat-ears",
@@ -812,7 +827,8 @@
           "value": 5.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ปีกนางฟ้าของแฟรี่มอน [กิจกรรม]"
     },
     {
       "id": "fashion-spirit-accessory-3-fire",
@@ -881,7 +897,8 @@
           "value": 2000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "หอยมุกของลานามอน [กิจกรรม]"
     },
     {
       "id": "fashion-spirit-accessory-3-light",
@@ -963,7 +980,8 @@
           "value": 5.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "หูฟังไร้สายเทรนดี้ [กิจกรรม]"
     },
     {
       "id": "fashion-warm-hand-warmer",
@@ -980,7 +998,8 @@
           "value": 200.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "โอ้! ฮอตแพค ร้อนๆ!"
     },
     {
       "id": "fashion-spirit-accessory-3-wind",
@@ -1045,7 +1064,8 @@
           "value": 5.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "เสื้อคลุมสีแดงเพลิงของซูเซมอน"
     },
     {
       "id": "tamer-s-goggles-complete-tamer-s-goggles",
@@ -1068,7 +1088,8 @@
           "value": 1000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แว่นตาของเทมเมอร์ที่สมบูรณ์"
     },
     {
       "id": "tamer-s-goggles-tamer-s-goggles-lv-15",
@@ -1093,7 +1114,8 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แว่นตาของเทมเมอร์"
     },
     {
       "id": "adventure-goggles-tamer-s-goggles-at-at-2",
@@ -1191,7 +1213,8 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ถุงมืออากูมอน"
     },
     {
       "id": "gloves-arbormon-s-gauntlet-event",
@@ -1208,7 +1231,8 @@
           "value": 100.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ถุงมือของอัลบอร์มอน [กิจกรรม]"
     },
     {
       "id": "gloves-baihumon-aural-gloves",
@@ -1238,7 +1262,8 @@
       "axis": "tamer",
       "iconWiki": "/images/b/b0/Baihumon%27s_Flawless_Gloves.png",
       "icon": "img/gear/baihumon_s_flawless_gloves.png",
-      "AT": 400
+      "AT": 400,
+      "nameTh": "ถุงมือที่สมบูรณ์แบบของไบฟูมอน"
     },
     {
       "id": "gloves-boundless-advanced-gloves-30-days",
@@ -1289,7 +1314,8 @@
       "iconWiki": "/images/d/d0/Chakkumon%27s_Romeo.png",
       "icon": "img/gear/chakkumon_s_romeo.png",
       "CT": 5.0,
-      "AT": 300
+      "AT": 300,
+      "nameTh": "โรมิโอของชัคมอน [กิจกรรม]"
     },
     {
       "id": "gloves-cozy-and-warm-leather-gloves",
@@ -1306,7 +1332,8 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ถุงมือคลายหนาว"
     },
     {
       "id": "gloves-yolei-t-k-davis-gloves-3-davis",
@@ -1332,7 +1359,8 @@
       "axis": "unknown",
       "iconWiki": "/images/e/ee/Fairimon%27s_Gauntlet.png",
       "icon": "img/gear/fairimon_s_gauntlet.png",
-      "CT": 5.0
+      "CT": 5.0,
+      "nameTh": "ถุงมือของแฟรี่มอน [กิจกรรม]"
     },
     {
       "id": "gloves-spirit-gloves-3-fire",
@@ -1393,7 +1421,8 @@
       "iconWiki": "/images/f/f9/Lanamon%27s_Gauntlet.png",
       "icon": "img/gear/lanamon_s_gauntlet.png",
       "CT": 5.0,
-      "DS": 2000
+      "DS": 2000,
+      "nameTh": "ถุงมือของลานามอน [กิจกรรม]"
     },
     {
       "id": "gloves-spirit-gloves-3-light",
@@ -1589,7 +1618,8 @@
       "iconWiki": "/images/1/12/Trendy_Watch_Event.png",
       "icon": "img/gear/trendy_watch_event.png",
       "AT": 300,
-      "DS": 1000
+      "DS": 1000,
+      "nameTh": "นาฬิกาเทรนดี้ [กิจกรรม]"
     },
     {
       "id": "gloves-warumonzaemon-gloves",
@@ -1677,7 +1707,8 @@
       "axis": "tamer",
       "iconWiki": "/images/8/80/Zhuqiamon%27s_Infernal_Gloves.png",
       "icon": "img/gear/zhuqiamon_s_infernal_gloves.png",
-      "AT": 330
+      "AT": 330,
+      "nameTh": "ถุงมือสีแดงเพลิงของซูเซมอน"
     },
     {
       "id": "head-arbormon-s-helmet-event",
@@ -1694,7 +1725,8 @@
           "value": 200.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "หมวกเกราะของอัลบอร์มอน [กิจกรรม]"
     },
     {
       "id": "head-baihumon-s-flawless-ornament",
@@ -1711,7 +1743,8 @@
           "value": 50.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ผ้าโพกหัวที่สมบูรณ์แบบของไบฟูมอน"
     },
     {
       "id": "head-chakkumon-s-integrated-ear-muffs-event",
@@ -1728,7 +1761,8 @@
           "value": 100.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ที่ปิดหูของชัคมอน [กิจกรรม]"
     },
     {
       "id": "head-cozy-and-warm-hat",
@@ -1745,7 +1779,8 @@
           "value": 200.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "หมวกเกาลัดที่อบอุ่น"
     },
     {
       "id": "head-yolei-t-k-davis-head-3-davis",
@@ -1772,7 +1807,8 @@
       "iconWiki": "/images/a/af/Fairimon%27s_Wing_Googles.png",
       "icon": "img/gear/fairimon_s_wing_googles.png",
       "AT": 150,
-      "CT": 3.0
+      "CT": 3.0,
+      "nameTh": "แว่นกันลมของแฟรี่มอน [กิจกรรม]"
     },
     {
       "id": "head-spirit-helmet-3-fire",
@@ -1823,7 +1859,8 @@
           "value": 100.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "หมวกเกราะของลานามอน [กิจกรรม]"
     },
     {
       "id": "head-spirit-helmet-3-light",
@@ -1871,7 +1908,8 @@
           "value": 100.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "หมวกโซลมอน"
     },
     {
       "id": "head-spooky-pumpkinmon-s-mask-30-days",
@@ -1930,7 +1968,8 @@
       "iconWiki": "/images/b/b1/Trendy_Ball_Cap_Event.png",
       "icon": "img/gear/trendy_ball_cap_event.png",
       "AT": 100,
-      "HT": 300
+      "HT": 300,
+      "nameTh": "หมวกแก็ปเทรนดี้ [กิจกรรม]"
     },
     {
       "id": "head-spirit-helmet-3-wind",
@@ -1995,7 +2034,8 @@
           "value": 200.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ผ้าโพกสีแดงเพลิงของซูเซมอน"
     },
     {
       "id": "ghost-key-ring-ghost-keyring-families-16",
@@ -2019,7 +2059,8 @@
           "value": 50.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "โกสท์ คีย์ริง"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-7",
@@ -2040,7 +2081,8 @@
           "value": 1180.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง"
     },
     {
       "id": "key-rings-spiral-key-ring-lv-max",
@@ -2059,7 +2101,8 @@
           "value": 1550.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง Lv Max"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-7",
@@ -2079,7 +2122,8 @@
           "value": 1470.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง[DS]"
     },
     {
       "id": "spiral-key-ring-ds-spiral-key-ring-ds-lv-max",
@@ -2102,7 +2146,8 @@
           "value": 10.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง[DS] Lv Max"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-7",
@@ -2122,7 +2167,8 @@
           "value": 1470.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง[JT]"
     },
     {
       "id": "spiral-key-ring-jt-spiral-key-ring-jt-lv-max",
@@ -2145,7 +2191,8 @@
           "value": 10.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง[JT] Lv Max"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-7",
@@ -2165,7 +2212,8 @@
           "value": 1470.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง [ME]"
     },
     {
       "id": "spiral-key-ring-me-spiral-key-ring-me-lv-max",
@@ -2208,7 +2256,8 @@
           "value": 1470.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง[WG]"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-max",
@@ -2231,7 +2280,8 @@
           "value": 10.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง[WG] Lv Max"
     },
     {
       "id": "necklaces-fanglongmon-s-ancient-necklace-lv-10",
@@ -2413,7 +2463,8 @@
       "wikiSlot": "Necklaces",
       "axis": "unknown",
       "AT": 450,
-      "CT": 7.0
+      "CT": 7.0,
+      "nameTh": "สร้อยคอแห่งยมโลก"
     },
     {
       "id": "rings-fanglongmon-s-ancient-ring-lv-10",
@@ -2524,7 +2575,8 @@
           "value": 880.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แหวนของสี่สัตว์เทพ"
     },
     {
       "id": "rings-ring-with-3-options",
@@ -2569,7 +2621,8 @@
       "wikiSlot": "Rings",
       "axis": "unknown",
       "AT": 450,
-      "CT": 7.0
+      "CT": 7.0,
+      "nameTh": "แหวนแห่งยมโลก"
     },
     {
       "id": "shoes-agumon-feet-shoes-30d",
@@ -2579,7 +2632,8 @@
       "axis": "unknown",
       "iconWiki": "/images/e/e2/Agumon_Feet_Shoes.png",
       "icon": "img/gear/agumon_feet_shoes.png",
-      "DE": 200
+      "DE": 200,
+      "nameTh": "รองเท้าอากูมอน [30วัน]"
     },
     {
       "id": "shoes-cozy-and-warm-socks",
@@ -2589,7 +2643,8 @@
       "axis": "unknown",
       "iconWiki": "/images/2/25/Cozy_and_warm_Socks.png",
       "icon": "img/gear/cozy_and_warm_socks.png",
-      "DE": 200
+      "DE": 200,
+      "nameTh": "ถุงเท้าแสนอุ่น"
     },
     {
       "id": "shoes-yolei-t-k-davis-shoes-3-davis",
@@ -2730,7 +2785,8 @@
       "axis": "unknown",
       "iconWiki": "/images/a/a4/Swimming_Gears_-_Flippers_%2830D%29.png",
       "icon": "img/gear/swimming_gears_-_flippers__30d_.png",
-      "DE": 200
+      "DE": 200,
+      "nameTh": "อุปกรณ์เล่นน้ำ – ตีนกบ [30 วัน]"
     },
     {
       "id": "shoes-yolei-t-k-davis-shoes-3-tk",
@@ -2868,7 +2924,8 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อของอากูมอน"
     },
     {
       "id": "top-arbormon-s-upper-armor-event",
@@ -2884,7 +2941,8 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อของอัลบอร์มอน [กิจกรรม]"
     },
     {
       "id": "top-aural-hooded-shirt-of-baihumon",
@@ -2916,7 +2974,8 @@
           "value": 1100.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดที่สมบูรณ์แบบของไบฟูมอน"
     },
     {
       "id": "top-chakkumon-s-ice-vest-event",
@@ -2933,7 +2992,8 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อกั๊กน้ำแข็งของชัคมอน [กิจกรรม]"
     },
     {
       "id": "top-cozy-and-warm-quilting-jacket",
@@ -2949,7 +3009,8 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อกันหนาวแสนอุ่น"
     },
     {
       "id": "top-yolei-t-k-davis-top-3-davis",
@@ -2992,7 +3053,8 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อนางฟ้าของแฟรี่มอน [กิจกรรม]"
     },
     {
       "id": "top-spirit-top-3-fire",
@@ -3123,7 +3185,8 @@
           "value": 700.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ชุดว่ายน้ำของลานามอน [กิจกรรม]"
     },
     {
       "id": "top-spirit-top-3-light",
@@ -3268,7 +3331,8 @@
           "value": 1000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อเชิ้ตเทรนดี้ [กิจกรรม]"
     },
     {
       "id": "top-unlimited-advanced-t-shirt-30-days",
@@ -3399,7 +3463,8 @@
           "value": 900.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดสีแดงเพลิงของซูเซมอน"
     }
   ]
 }

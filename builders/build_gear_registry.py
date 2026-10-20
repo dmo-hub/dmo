@@ -38,6 +38,7 @@ PROJ = Path(__file__).resolve().parent.parent
 SRC = PROJ / "data" / "clothing_items.json"
 OUT = PROJ / "docs" / "gear_registry.json"
 ICON_DIR = PROJ / "docs" / "img" / "gear"
+TH_NAMES = PROJ / "data" / "gear_th_names.json"
 
 
 def icon_filename(wiki_path):
@@ -188,6 +189,18 @@ def add_thai_names(out):
             hits[0]["nameTh"] = base
             if shin:
                 hits[0]["nameThShin"] = shin
+            named += 1
+
+    # Gear outside the rosters: names found in vplay posts, keyed by the
+    # registry's English name. A key that matches nothing is a rename upstream.
+    extra = json.loads(TH_NAMES.read_text(encoding="utf-8"))["items"]
+    by_name = {it["name"]: it for it in out}
+    for en, th in extra.items():
+        it = by_name.get(en)
+        if not it:
+            print(f"  ! {TH_NAMES.name}: no registry item named {en!r}")
+        elif not it.get("nameTh"):
+            it["nameTh"] = th
             named += 1
     return named
 
