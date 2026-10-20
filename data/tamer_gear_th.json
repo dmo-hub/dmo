@@ -1857,6 +1857,7 @@
       "slot": "keyring",
       "axis": "digimon",
       "ranged": true,
+      "picture": "Spiral_Key_Ring_DS_Level_7.png",
       "levels": [
         {
           "upgrade": 0,

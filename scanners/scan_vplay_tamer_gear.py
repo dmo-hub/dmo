@@ -242,6 +242,9 @@ def spiral(content):
                 "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max", "slot": "keyring",
                 # No post names the side; the owner confirmed digimon in game.
                 "axis": "digimon", "ranged": True,
+                # One record stands for all eleven families; the wiki only
+                # pictures four, so one of them represents the lot.
+                "picture": "Spiral_Key_Ring_DS_Level_7.png",
                 "levels": [{"upgrade": 0, "stats": stats}], "rows": rows,
                 "families": fams, "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล"})
     return out

@@ -8088,6 +8088,8 @@
       "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max",
       "AT": 278,
       "ranged": true,
+      "iconWiki": "/images/4/4b/Spiral_Key_Ring_DS_Level_7.png",
+      "icon": "img/gear/spiral_key_ring_ds_level_7.png",
       "extra": [
         {
           "stat": "HP",
