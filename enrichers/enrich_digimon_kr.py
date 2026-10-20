@@ -75,6 +75,8 @@ EN_TO_KR_KEYWORDS: list[tuple[str, str]] = [
     ("Gammamon", "감마몬"),
     ("Impmon(Baalmon)", "임프몬 ( 바알몬 )"),
     ("Jellymon", "젤리몬"),
+    ("MetalGarurumon", "메탈가루몬"),
+    ("WarGreymon", "워그레이몬"),
     # the release list spells it 퀀타몬; the row above matches the other spelling
     ("Quantumon", "퀀타몬"),
 ]

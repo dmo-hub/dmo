@@ -862,8 +862,8 @@
       "_th_name": "ครอสอัพ เมอร์วามอน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2024/11/12.png",
       "image_th": "img/digimon/e675_th.jpeg",
-      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787977&Btype=Update",
-      "image_kr": "img/digimon/e675_kr.png"
+      "image_kr": "img/digimon/e675_kr.png",
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787977&Btype=Update"
     },
     "691": {
       "date": "11-05-2024",
@@ -961,7 +961,9 @@
       "date_th": "2025-07-24",
       "_th_name": "[อะเวคเค่น] วอร์เกรย์มอน",
       "_th_image_url": "https://www.vplay.in.th/wp-content/uploads/2025/07/k4.png",
-      "image_th": "img/digimon/e702_th.jpeg"
+      "image_th": "img/digimon/e702_th.jpeg",
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=796519&Btype=Update",
+      "image_kr": "img/digimon/e702_kr.png"
     },
     "332": {
       "date": "12-13-2016",
