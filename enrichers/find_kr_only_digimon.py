@@ -24,6 +24,7 @@ PROJ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJ / "extractors"))
 from _image_common import CACHE, IMG_DIR, extract_image  # noqa: E402
 from enrich_digimon_kr import EN_TO_KR_KEYWORDS  # noqa: E402
+from enrich_digimon_attributes import lookup  # noqa: E402
 
 RELEASES = PROJ / "data" / "kr_digimon_releases.json"
 DIGIMON = PROJ / "data" / "scan_result_digimon.json"
@@ -76,7 +77,15 @@ def main() -> None:
             continue
         entry = {"date": r["date"], "url": r["url"], "kr_names": names,
                  "digimon": [KR_TO_EN.get(n, n) for n in names]}
-        cf = CACHE / f"kr_view_o{r['o']}.html"
+        # same {name: parsed} shape enrich_digimon_attributes.py puts on NA posts
+        attrs = {}
+        for en in entry["digimon"]:
+            got = lookup(en)
+            if got:
+                attrs[en] = got[0]
+        if attrs:
+            entry["attributes"] = attrs
+        cf =CACHE / f"kr_view_o{r['o']}.html"
         if cf.exists():
             got = extract_image(cf.read_text(encoding="utf-8"),
                                 url_ok=lambda s: not any(k in s.lower() for k in SKIP_URL_KEYWORDS),

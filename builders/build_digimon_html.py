@@ -252,7 +252,8 @@ def render() -> str:
         for o, e in json.loads(KR_ONLY.read_text(encoding="utf-8")).items():
             y, m, d = e["date"].split("-")
             kr_only[o] = {"date": f"{m}-{d}-{y}", "date_kr": e["date"], "source": e["url"],
-                          "digimon": e["digimon"], "image_kr": e.get("image_kr")}
+                          "digimon": e["digimon"], "image_kr": e.get("image_kr"),
+                          "attributes": e.get("attributes") or {}}
 
     merged: list[tuple[str, str, dict]] = sorted(
         [("event", idx, p) for idx, p in events.items()]

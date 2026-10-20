@@ -8,6 +8,18 @@
     "digimon": [
       "Apollomon Whispered"
     ],
+    "attributes": {
+      "Apollomon Whispered": {
+        "attribute": "Virus",
+        "attribute_abbr": "VI",
+        "natural_attribute": "Pitch Black",
+        "families": [
+          "Dragon's Roar",
+          "Nature Spirits",
+          "TBD"
+        ]
+      }
+    },
     "image_kr": "img/digimon/k823928_kr.png"
   }
 }
