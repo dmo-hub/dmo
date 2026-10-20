@@ -389,9 +389,12 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   `cache/_stale-<date>/` after gameking stopped answering, and Gammamon plus
   three NA banners went missing until the files were copied back. Use the
   fetchers' `--force` instead.
-- vplay's whole post archive is open through WordPress:
+- vplay's post archive is open through WordPress:
   `https://www.vplay.in.th/wp-json/wp/v2/posts?per_page=100&page=N` (685 posts
-  across every category on 2026-10-20). The cache only covers the patch-note
+  on 2026-10-20) -- but that listing leaves out the GM-note category (id 5, 56
+  posts, where the equipment posts live); fetch it with `&categories=5`. A
+  post's id is in its page HTML (`?p=<id>`) when its slug will not match
+  `?slug=`. The cache only covers the patch-note
   category, so a Thai name or per-level table not found in `cache/` is often in
   an event/promotion post -- that is where 7 Thai gear names and the Spirit /
   Four Holy Beasts level tables came from.
