@@ -658,6 +658,10 @@ def check_set_registry():
     reg_p = PROJ / "docs" / "gear_registry.json"
     th_of = {it["name"]: it.get("nameTh")
              for it in json.loads(reg_p.read_text(encoding="utf-8"))["items"]}
+    en_of = {}
+    for n, th in th_of.items():
+        if th:
+            en_of.setdefault(th, []).append(n)
     for s in sets:
         clothing = s["set"] in CLOTHING
         tamer = s["set"] in TAMER
@@ -683,6 +687,12 @@ def check_set_registry():
             if sl["accepts"][:len(want)] != want or any(th_of.get(n) not in want for n in en):
                 bad.append("%s/%s: accepts does not match item+shin"
                            % (s["set"], sl["slot"]))
+            # a registry row missing here still scores its stats but silently
+            # never counts toward the set -- the bug this list exists to fix
+            lost = [n for th in want for n in en_of.get(th, []) if n not in en]
+            if lost:
+                bad.append("%s/%s: accepts lacks registry name %s"
+                           % (s["set"], sl["slot"], ", ".join(lost)))
             if sl["shin"] and not sl["shin"].startswith(SHIN):
                 bad.append("%s/%s: shin variant is not marked"
                            % (s["set"], sl["slot"]))

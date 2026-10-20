@@ -411,3 +411,12 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   registry's English name. `set_registry.json` "accepts" therefore lists the
   Thai pair first, then the registry names whose nameTh is one of them;
   without the English names no registry-picked row ever earned a set bonus.
+  `validate.py` fails a slot whose accepts misses any of those names.
+- A set bonus can sit under another name. dmowiki's "Digimon Frontier"
+  4-piece row is the element-spirit 4-piece bonus (vplay lists the same
+  numbers per element), joined through `BONUS_ALIASES` in
+  `build_set_registry.py`. A set dmowiki never recorded gets a hand-kept
+  bonus file listed in `scan_set_effects.EXTRA_SOURCES`
+  (`data/last_evolution.json`, `data/four_holy_beasts.json`) plus a
+  `SET_NAMES` entry; its slot stats come from the registry piece whose nameTh
+  is the roster item.
