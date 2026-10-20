@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ชื่ออุปกรณ์สวมใส่ dmowiki คู่กับชื่อไทยของ vplay พร้อมภาพทุกชิ้น">
+<meta property="og:title" content="DMO Tracker — ชื่ออุปกรณ์ EN / TH">
+<meta property="og:description" content="ชื่ออุปกรณ์สวมใส่ dmowiki คู่กับชื่อไทยของ vplay พร้อมภาพทุกชิ้น">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128218;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>DMO Tracker — ชื่ออุปกรณ์ EN / TH</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/site.css">
+<style>
+  /* page-local only — colours and typography come from the shared tokens */
+  .gn-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 18px; }
+  .gn-bar input[type=search] { flex: 1 1 240px; min-width: 0; font: inherit; font-size: 14px;
+    padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px;
+    background: var(--surface-soft); color: var(--ink); }
+  .gn-chip { cursor: pointer; font: inherit; font-size: 13px; font-weight: 600; padding: 7px 12px;
+    border: 1px solid var(--border); border-radius: 999px; background: var(--surface-soft); color: var(--muted); }
+  .gn-chip[aria-pressed="true"] { background: var(--primary); color: var(--on-primary); border-color: transparent; }
+  .gn-chip .n { font-weight: 400; opacity: .8; margin-left: 4px; }
+  .gn-slot { margin: 0 0 22px; }
+  .gn-slot h2 { font-size: 15px; margin: 0 0 10px; color: var(--ink); }
+  .gn-slot h2 .n { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 6px; }
+  .gn-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+  .gn-card { display: flex; gap: 10px; align-items: center; padding: 8px 10px;
+    border: 1px solid var(--border); border-radius: 10px; background: var(--surface-card); min-width: 0; }
+  .gn-img { width: 40px; height: 40px; flex: none; display: grid; place-items: center;
+    border-radius: 6px; background: var(--surface-soft); overflow: hidden; }
+  .gn-img img { width: 40px; height: 40px; object-fit: contain; image-rendering: pixelated; }
+  .gn-img.none { color: var(--muted); font-size: 11px; border: 1px dashed var(--border); }
+  .gn-txt { min-width: 0; line-height: 1.35; }
+  .gn-en { font-size: 13px; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
+  .gn-th { font-size: 13px; color: var(--body); overflow-wrap: anywhere; }
+  .gn-th.none { color: var(--muted); font-style: italic; }
+  .gn-shin { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+  .gn-empty { color: var(--muted); padding: 18px 0; }
+  .gn-note { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: 0 0 16px; }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="gear.html">Gear Optimizer</a>
+    </nav>
+    <span class="nav-meta">dmowiki + vplay.in.th</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <div>
+      <h1>&#128218; ชื่ออุปกรณ์ EN / TH</h1>
+      <p class="lead">ชื่ออุปกรณ์สวมใส่ตาม dmowiki คู่กับชื่อที่เซิร์ฟไทย (vplay) ใช้ พร้อมภาพของแต่ละชิ้น — ชุดเดียวกับที่ Gear Optimizer ให้เลือก</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num" id="st-all">0</div><div class="lbl">ชิ้น</div></div>
+      <div class="hero-stat"><div class="num" id="st-th">0</div><div class="lbl">มีชื่อไทย</div></div>
+      <div class="hero-stat"><div class="num" id="st-img">0</div><div class="lbl">มีภาพ</div></div>
+    </div>
+  </div>
+
+  <p class="gn-note">ชื่อไทยมาจากรายการชิ้นในเซ็ตและโพสต์ของ vplay · ชิ้นที่ยังหาชื่อไทยไม่เจอหรือวิกิไม่มีภาพก็แสดงไว้ด้วย · แถว "Maximum / Minimum / … Options" เป็นแถวสรุปของวิกิ ไม่ใช่ของจริง &nbsp;<a class="back" href="gear.html">&larr; กลับหน้า Gear Optimizer</a></p>
+
+  <div class="gn-bar">
+    <input type="search" id="q" placeholder="ค้นชื่อ อังกฤษ หรือ ไทย" aria-label="ค้นชื่ออุปกรณ์">
+    <button type="button" class="gn-chip" data-f="all" aria-pressed="true">ทั้งหมด<span class="n" id="n-all"></span></button>
+    <button type="button" class="gn-chip" data-f="noth" aria-pressed="false">ไม่มีชื่อไทย<span class="n" id="n-noth"></span></button>
+    <button type="button" class="gn-chip" data-f="noimg" aria-pressed="false">ไม่มีภาพ<span class="n" id="n-noimg"></span></button>
+  </div>
+
+  <div id="list"><p class="gn-empty">กำลังโหลด…</p></div>
+
+</main>
+
+<footer class="site-footer">
+  Built by <a href="https://github.com/kongpop1405" target="_blank">@kongpop1405</a>
+  &nbsp;&middot;&nbsp; Generated with <a href="https://claude.ai/" target="_blank">Claude AI</a>
+  &nbsp;&middot;&nbsp; <a href="https://github.com/dmo-hub/dmo" target="_blank">Source on GitHub</a>
+  &nbsp;&middot;&nbsp; <a href="styleguide.html">Style Guide</a>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var SLOTS = [
+    ["head", "หัว"], ["top", "เสื้อ"], ["bottom", "กางเกง"], ["gloves", "ถุงมือ"],
+    ["shoes", "รองเท้า"], ["fashion", "เครื่องแต่งกาย"], ["glasses", "แว่นตา"],
+    ["earring", "ต่างหู"], ["necklace", "สร้อยคอ"], ["ring", "แหวน"],
+    ["bracelet", "กำไล"], ["keyring", "พวงกุญแจ"]
+  ];
+  var items = [];
+  var filter = "all";
+  var $ = function (id) { return document.getElementById(id); };
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  function card(it) {
+    var c = el("div", "gn-card");
+    var box = el("div", "gn-img" + (it.icon ? "" : " none"));
+    if (it.icon) {
+      var img = document.createElement("img");
+      img.src = it.icon;
+      img.alt = it.nameTh || it.name;
+      img.loading = "lazy";
+      box.appendChild(img);
+    } else {
+      box.textContent = "ไม่มีภาพ";
+    }
+    c.appendChild(box);
+    var t = el("div", "gn-txt");
+    t.appendChild(el("div", "gn-en", it.name));
+    t.appendChild(el("div", "gn-th" + (it.nameTh ? "" : " none"), it.nameTh || "ยังไม่มีชื่อไทย"));
+    if (it.nameThShin) t.appendChild(el("div", "gn-shin", it.nameThShin));
+    c.appendChild(t);
+    return c;
+  }
+
+  function render() {
+    var q = $("q").value.trim().toLowerCase();
+    var host = $("list");
+    host.textContent = "";
+    var shown = 0;
+    SLOTS.forEach(function (s) {
+      var rows = items.filter(function (it) {
+        if (it.slot !== s[0]) return false;
+        if (filter === "noth" && it.nameTh) return false;
+        if (filter === "noimg" && it.icon) return false;
+        if (!q) return true;
+        return [it.name, it.nameTh, it.nameThShin].some(function (v) {
+          return v && v.toLowerCase().indexOf(q) >= 0;
+        });
+      });
+      if (!rows.length) return;
+      shown += rows.length;
+      var sec = el("section", "gn-slot");
+      var h = el("h2", "", s[1]);
+      h.appendChild(el("span", "n", rows.length + " ชิ้น"));
+      sec.appendChild(h);
+      var g = el("div", "gn-grid");
+      rows.forEach(function (it) { g.appendChild(card(it)); });
+      sec.appendChild(g);
+      host.appendChild(sec);
+    });
+    if (!shown) host.appendChild(el("p", "gn-empty", "ไม่พบชิ้นที่ตรงกับเงื่อนไข"));
+  }
+
+  document.querySelectorAll(".gn-chip").forEach(function (b) {
+    b.addEventListener("click", function () {
+      filter = b.getAttribute("data-f");
+      document.querySelectorAll(".gn-chip").forEach(function (x) {
+        x.setAttribute("aria-pressed", x === b ? "true" : "false");
+      });
+      render();
+    });
+  });
+  $("q").addEventListener("input", render);
+
+  fetch("gear_registry.json")
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      var known = {};
+      SLOTS.forEach(function (s) { known[s[0]] = true; });
+      items = (d.items || []).filter(function (it) { return known[it.slot]; });
+      var th = items.filter(function (it) { return it.nameTh; }).length;
+      var img = items.filter(function (it) { return it.icon; }).length;
+      $("st-all").textContent = items.length;
+      $("st-th").textContent = th;
+      $("st-img").textContent = img;
+      $("n-all").textContent = items.length;
+      $("n-noth").textContent = items.length - th;
+      $("n-noimg").textContent = items.length - img;
+      render();
+    })
+    .catch(function () {
+      $("list").textContent = "";
+      $("list").appendChild(el("p", "gn-empty", "โหลดรายการไม่ได้ — เปิดหน้านี้ผ่านเว็บ (http) ไม่ใช่จากไฟล์โดยตรง"));
+    });
+})();
+</script>
+</body>
+</html>
