@@ -42,6 +42,7 @@ OUT = PROJ / "docs" / "gear_registry.json"
 # where it drops -- goes to its own file for the gear-names page.
 ACCESSORY_OUT = PROJ / "docs" / "accessory_registry.json"
 ACCESSORY_SLOTS = ("Rings", "Necklaces", "Earrings", "Bracelets")
+ACCESSORY_EXCLUDED = PROJ / "data" / "accessory_excluded.json"
 ICON_DIR = PROJ / "docs" / "img" / "gear"
 TH_NAMES = PROJ / "data" / "gear_th_names.json"
 UPGRADE_LEVELS = PROJ / "data" / "upgrade_levels.json"
@@ -441,6 +442,22 @@ def local_icon(wiki_icon):
     return local.relative_to(PROJ / "docs").as_posix() if local.exists() else None
 
 
+def excluded_accessories():
+    """Keys of the accessories the site leaves out, tail-free and aliased so
+    one list entry removes the list row and its stats row alike."""
+    if not ACCESSORY_EXCLUDED.exists():
+        return set()
+    names = json.loads(ACCESSORY_EXCLUDED.read_text(encoding="utf-8"))["items"]
+    return {ICON_ALIAS.get(icon_key(n), icon_key(n)) for n in names}
+
+
+def is_excluded(it, keys):
+    if it.get("slot") not in ACCESSORY_SLOTS:
+        return False
+    key = icon_key(it["name"])
+    return ICON_ALIAS.get(key, key) in keys
+
+
 def build_accessory_ref(items, icons):
     """One record per accessory: the list row (options, drop) joined to the
     roll table that belongs to it. A piece with no table of its own takes the
@@ -448,8 +465,9 @@ def build_accessory_ref(items, icons):
     rows_by = defaultdict(list)
     caps = defaultdict(dict)
     lists = {}
+    skip = excluded_accessories()
     for it in items:
-        if it.get("slot") not in ACCESSORY_SLOTS:
+        if it.get("slot") not in ACCESSORY_SLOTS or is_excluded(it, skip):
             continue
         key = icon_key(it["name"])
         key = (it["slot"], ICON_ALIAS.get(key, key))
@@ -523,9 +541,10 @@ def main():
 
     groups = defaultdict(list)
     dropped = defaultdict(int)
+    skip = excluded_accessories()
     for it in items:
         # a category column is the cap for a kind of accessory, not a piece
-        if not it.get("stats") or it.get("category"):
+        if not it.get("stats") or it.get("category") or is_excluded(it, skip):
             continue
         slot = SLOT_MAP.get(it.get("slot"))
         if not slot:

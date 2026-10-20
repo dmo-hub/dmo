@@ -431,6 +431,10 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   "... with N Options"/"Regular ..." columns are category caps (`category`),
   and per-level cells are spread by colspan. "Vital Breath Digivice -V-" is a
   bracelet despite the name.
+  Accessories the owner left out are listed in `data/accessory_excluded.json`;
+  one entry drops both the gear-names row and the optimizer's stats row
+  (matched with the level/duration tail dropped). Remove a Thai name for a
+  dropped piece from `gear_th_names.json` too, or the builder warns.
 - Goggles come from vplay, not dmowiki: `scanners/scan_vplay_goggles.py`
   (posts 19820 Adventure · 25445 Kaiser · 17826 Tamer, cached as
   `cache_vplay/wp_<id>.json`) -> `data/goggles_th.json`, and

@@ -1244,86 +1244,6 @@
       ]
     },
     {
-      "id": "earrings-earrings-of-four-holy-beasts-lv-5",
-      "name": "Earrings of Four Holy Beasts [ ]",
-      "slot": "earring",
-      "wikiSlot": "Earrings",
-      "axis": "unknown",
-      "bands": 5,
-      "level": 5,
-      "iconWiki": "/images/9/9d/Earrings_of_Four_Holy_Beasts.png",
-      "icon": "img/gear/earrings_of_four_holy_beasts.png",
-      "DS": 880,
-      "DE": 110,
-      "CT": 8.0,
-      "HT": 550,
-      "EV": 8.0,
-      "BL": 7.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 880.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "ต่างหูของสี่สัตว์เทพ"
-    },
-    {
-      "id": "earrings-fanglongmon-s-ancient-earring-lv-10",
-      "name": "Fanglongmon's Ancient Earring [ ]",
-      "slot": "earring",
-      "wikiSlot": "Earrings",
-      "axis": "unknown",
-      "bands": 10,
-      "level": 10,
-      "iconWiki": "/images/c/ca/Fanglongmon_Earring.png",
-      "icon": "img/gear/fanglongmon_earring.png",
-      "DS": 960,
-      "DE": 120,
-      "CT": 9.0,
-      "HT": 600,
-      "EV": 8.0,
-      "BL": 7.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 960.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "ต่างหูศักดิ์สิทธิ์ของฟานลองมอน"
-    },
-    {
-      "id": "earrings-imperial-earring",
-      "name": "Imperial Earring",
-      "slot": "earring",
-      "wikiSlot": "Earrings",
-      "axis": "unknown",
-      "iconWiki": "/images/6/6e/Imperial_Earrings.png",
-      "icon": "img/gear/imperial_earrings.png",
-      "CT": 7.0,
-      "HT": 700,
-      "nameTh": "ต่างหูแห่งราชัน"
-    },
-    {
-      "id": "earrings-nanomon-s-shiny-earring",
-      "name": "Nanomon's Shiny Earring",
-      "slot": "earring",
-      "wikiSlot": "Earrings",
-      "axis": "unknown",
-      "DS": 600,
-      "HT": 300,
-      "BL": 5.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 600.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "ต่างหูที่เปล่งประกายของนาโนมอน"
-    },
-    {
       "id": "earrings-radiant-earrings-of-four-holy-beasts-lv-5",
       "name": "Radiant Earrings of Four Holy Beasts [ ]",
       "slot": "earring",
@@ -5592,85 +5512,6 @@
       "nameTh": "สไปรอลคีย์ริง[WG] Lv Max"
     },
     {
-      "id": "necklaces-fanglongmon-s-ancient-necklace-lv-10",
-      "name": "Fanglongmon's Ancient Necklace [ ]",
-      "slot": "necklace",
-      "wikiSlot": "Necklaces",
-      "axis": "unknown",
-      "bands": 10,
-      "level": 10,
-      "iconWiki": "/images/f/f7/Fanglongmon_Necklace.png",
-      "icon": "img/gear/fanglongmon_necklace.png",
-      "AT": 240,
-      "DE": 60,
-      "CT": 6.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 960.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "HP",
-          "value": 960.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "AS",
-          "value": 15.0,
-          "unit": "pct"
-        }
-      ],
-      "nameTh": "สร้อยศักดิ์สิทธิ์ของฟานลองมอน"
-    },
-    {
-      "id": "necklaces-imperial-necklaces",
-      "name": "Imperial Necklaces",
-      "slot": "necklace",
-      "wikiSlot": "Necklaces",
-      "axis": "unknown",
-      "iconWiki": "/images/8/85/Imperial_Necklaces.png",
-      "icon": "img/gear/imperial_necklaces.png",
-      "AT": 450,
-      "CT": 7.0,
-      "extra": [
-        {
-          "stat": "AS",
-          "value": 20.0,
-          "unit": "pct"
-        }
-      ],
-      "nameTh": "สร้อยแห่งราชัน"
-    },
-    {
-      "id": "necklaces-necklace-of-four-holy-beasts-lv-5",
-      "name": "Necklace of Four Holy Beasts [ ]",
-      "slot": "necklace",
-      "wikiSlot": "Necklaces",
-      "axis": "unknown",
-      "bands": 5,
-      "level": 5,
-      "iconWiki": "/images/0/04/Sealed_Necklace_of_Four_Holy_Beasts.png",
-      "icon": "img/gear/sealed_necklace_of_four_holy_beasts.png",
-      "DS": 880,
-      "AT": 220,
-      "DE": 55,
-      "CT": 6.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 880.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "AS",
-          "value": 15.0,
-          "unit": "pct"
-        }
-      ],
-      "nameTh": "สร้อยของสี่สัตว์เทพ"
-    },
-    {
       "id": "necklaces-radiant-miracle-necklace-2",
       "name": "Radiant Miracle Necklace",
       "slot": "necklace",
@@ -5725,16 +5566,6 @@
       "nameTh": "สร้อยที่เปล่งประกายของสี่สัตว์เทพที่ถูกผนึก"
     },
     {
-      "id": "necklaces-underworld-necklaces",
-      "name": "Underworld Necklaces",
-      "slot": "necklace",
-      "wikiSlot": "Necklaces",
-      "axis": "unknown",
-      "AT": 450,
-      "CT": 7.0,
-      "nameTh": "สร้อยคอแห่งยมโลก"
-    },
-    {
       "id": "necklaces-zero-unit-necklace-2",
       "name": "Zero Unit Necklace",
       "slot": "necklace",
@@ -5781,40 +5612,6 @@
         }
       ],
       "nameTh": "แหวนแห่งความหวังอันเปล่งประกาย"
-    },
-    {
-      "id": "rings-fanglongmon-s-ancient-ring-lv-10",
-      "name": "Fanglongmon's Ancient Ring [ ]",
-      "slot": "ring",
-      "wikiSlot": "Rings",
-      "axis": "unknown",
-      "bands": 10,
-      "level": 10,
-      "iconWiki": "/images/c/c8/Fanglongmon_Ring.png",
-      "icon": "img/gear/fanglongmon_ring.png",
-      "DS": 960,
-      "AT": 360,
-      "DE": 30,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 960.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "แหวนศักดิ์สิทธิ์ของฟานลองมอน"
-    },
-    {
-      "id": "rings-imperial-ring",
-      "name": "Imperial Ring",
-      "slot": "ring",
-      "wikiSlot": "Rings",
-      "axis": "unknown",
-      "iconWiki": "/images/1/12/Imperial_Ring.png",
-      "icon": "img/gear/imperial_ring.png",
-      "AT": 450,
-      "CT": 7.0,
-      "nameTh": "แหวนแห่งราชัน"
     },
     {
       "id": "rings-radiant-ring-of-four-holy-beasts-lv-5",
