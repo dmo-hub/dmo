@@ -148,6 +148,9 @@ python tools/apply_th_decks.py                 # -> docs/decks.html (idempotent)
 #        match on it. A map key hits EVERY post spelled that way: before adding
 #        one, check each post using it ("Shoutmon X7" once relabelled the 2023
 #        SSS+ post as the Rank U Superior Mode).
+#      - A new NA variant tag ("(Ultimate) Lucemon Satan Mode", post 4199) is
+#        settled by the KR post of the same deck, not by guessing: KR writes
+#        "극의" for every form NA calls Extreme and "각성" for Awaken.
 #      - Digimon only KR has released: enrichers/find_kr_only_digimon.py ->
 #        data/kr_only_digimon.json (cards with a "KR เท่านั้น" badge). A KR name
 #        it cannot place needs a KR_TO_EN row, or an EN_TO_KR row in
