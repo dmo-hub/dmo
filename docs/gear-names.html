@@ -90,7 +90,7 @@
     </div>
   </div>
 
-  <p class="gn-note">ชื่อไทยมาจากรายการชิ้นในเซ็ตและโพสต์ของ vplay · ชิ้นที่ยังหาชื่อไทยไม่เจอหรือวิกิไม่มีภาพก็แสดงไว้ด้วย · แถว "Maximum / Minimum / … Options" เป็นแถวสรุปของวิกิ ไม่ใช่ของจริง &nbsp;<a class="back" href="gear.html">&larr; กลับหน้า Gear Optimizer</a></p>
+  <p class="gn-note">ชื่อไทยมาจากรายการชิ้นในเซ็ตและโพสต์ของ vplay · หมวดชุด (หัว เสื้อ กางเกง ถุงมือ รองเท้า เครื่องแต่งกาย) แสดงเฉพาะชิ้นที่รวมเป็นเซ็ตได้ · เครื่องประดับแสดงครบ รวมชิ้นที่ยังหาชื่อไทยไม่เจอหรือวิกิไม่มีภาพ · แถว "Maximum / Minimum / … Options" เป็นแถวสรุปของวิกิ ไม่ใช่ของจริง &nbsp;<a class="back" href="gear.html">&larr; กลับหน้า Gear Optimizer</a></p>
 
   <div class="gn-bar">
     <input type="search" id="q" placeholder="ค้นชื่อ อังกฤษ หรือ ไทย" aria-label="ค้นชื่ออุปกรณ์">
@@ -124,6 +124,7 @@
     ["earring", "ต่างหู"], ["necklace", "สร้อยคอ"], ["ring", "แหวน"],
     ["bracelet", "กำไล"], ["keyring", "พวงกุญแจ"]
   ];
+  var CLOTHING = ["head", "top", "bottom", "gloves", "shoes", "fashion"];
   var items = [];
   var sets = [];
   var byName = {};
@@ -268,7 +269,12 @@
       sets = both[1].sets || [];
       var known = {};
       SLOTS.forEach(function (s) { known[s[0]] = true; });
-      items = (d.items || []).filter(function (it) { return known[it.slot]; });
+      /* Clothing slots list set pieces only; accessories have no sets and stay whole. */
+      var inSet = {};
+      sets.forEach(function (s) { s.slots.forEach(function (x) { inSet[x.stats_from] = true; }); });
+      items = (d.items || []).filter(function (it) {
+        return known[it.slot] && (CLOTHING.indexOf(it.slot) < 0 || inSet[it.name]);
+      });
       items.forEach(function (it) { byName[it.name] = it; });
       $("st-set").textContent = sets.length;
       var th = items.filter(function (it) { return it.nameTh; }).length;
