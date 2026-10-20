@@ -342,7 +342,8 @@ def add_shin_pieces(out):
         rec.pop("nameThShin")
 
         table, top = level_table(shin["levels"])
-        twin = {k: rec[k] for k in ("slot", "axis") if k in rec}
+        # the shin piece looks the same in game, so it borrows the base icon
+        twin = {k: rec[k] for k in ("slot", "axis", "icon") if k in rec}
         twin.update({
             "id": rec["id"] + "-shin",
             "name": rec["name"] + " (Shin)",

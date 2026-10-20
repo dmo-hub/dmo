@@ -152,6 +152,7 @@
     {
       "slot": "bottom",
       "axis": "digimon",
+      "icon": "img/gear/mdgbottom-davis.png",
       "id": "bottom-yolei-t-k-davis-bottom-3-davis-shin",
       "name": "Davis Bottom (Shin)",
       "upgrade": 0,
@@ -595,6 +596,7 @@
     {
       "slot": "bottom",
       "axis": "digimon",
+      "icon": "img/gear/mdgbottom-tk.png",
       "id": "bottom-yolei-t-k-davis-bottom-3-tk-shin",
       "name": "T.K Bottom (Shin)",
       "upgrade": 0,
@@ -1203,6 +1205,7 @@
     {
       "slot": "bottom",
       "axis": "digimon",
+      "icon": "img/gear/mdgbottom-yolei.png",
       "id": "bottom-yolei-t-k-davis-bottom-3-yolei-shin",
       "name": "Yolei Bottom (Shin)",
       "upgrade": 0,
@@ -1759,6 +1762,7 @@
     {
       "slot": "fashion",
       "axis": "digimon",
+      "icon": "img/gear/mdgfashion-davis.png",
       "id": "fashion-yolei-t-k-davis-fashion-3-davis-shin",
       "name": "Davis Fashion (Shin)",
       "upgrade": 0,
@@ -2469,6 +2473,7 @@
     {
       "slot": "fashion",
       "axis": "digimon",
+      "icon": "img/gear/mdgfashion-tk.png",
       "id": "fashion-yolei-t-k-davis-fashion-3-tk-shin",
       "name": "T.K Fashion (Shin)",
       "upgrade": 0,
@@ -2822,6 +2827,7 @@
     {
       "slot": "fashion",
       "axis": "digimon",
+      "icon": "img/gear/mdgfashion-yolei.png",
       "id": "fashion-yolei-t-k-davis-fashion-3-yolei-shin",
       "name": "Yolei Fashion (Shin)",
       "upgrade": 0,
@@ -3250,6 +3256,7 @@
     {
       "slot": "gloves",
       "axis": "digimon",
+      "icon": "img/gear/mdggloves-davis.png",
       "id": "gloves-yolei-t-k-davis-gloves-3-davis-shin",
       "name": "Davis Gloves (Shin)",
       "upgrade": 0,
@@ -3954,6 +3961,7 @@
     {
       "slot": "gloves",
       "axis": "digimon",
+      "icon": "img/gear/mdggloves-tk.png",
       "id": "gloves-yolei-t-k-davis-gloves-3-tk-shin",
       "name": "T.K Gloves (Shin)",
       "upgrade": 0,
@@ -4274,6 +4282,7 @@
     {
       "slot": "gloves",
       "axis": "digimon",
+      "icon": "img/gear/mdggloves-yolei.png",
       "id": "gloves-yolei-t-k-davis-gloves-3-yolei-shin",
       "name": "Yolei Gloves (Shin)",
       "upgrade": 0,
@@ -4495,6 +4504,7 @@
     {
       "slot": "head",
       "axis": "digimon",
+      "icon": "img/gear/mdghead-davis.png",
       "id": "head-yolei-t-k-davis-head-3-davis-shin",
       "name": "Davis Head (Shin)",
       "upgrade": 0,
@@ -5218,6 +5228,7 @@
     {
       "slot": "head",
       "axis": "digimon",
+      "icon": "img/gear/mdghead-tk.png",
       "id": "head-yolei-t-k-davis-head-3-tk-shin",
       "name": "T.K Head (Shin)",
       "upgrade": 0,
@@ -5528,6 +5539,7 @@
     {
       "slot": "head",
       "axis": "digimon",
+      "icon": "img/gear/mdghead-yolei.png",
       "id": "head-yolei-t-k-davis-head-3-yolei-shin",
       "name": "Yolei Head (Shin)",
       "upgrade": 0,
@@ -6278,6 +6290,7 @@
     {
       "slot": "shoes",
       "axis": "digimon",
+      "icon": "img/gear/mdgshoes-davis.png",
       "id": "shoes-yolei-t-k-davis-shoes-3-davis-shin",
       "name": "Davis Shoes (Shin)",
       "upgrade": 0,
@@ -6706,6 +6719,7 @@
     {
       "slot": "shoes",
       "axis": "digimon",
+      "icon": "img/gear/mdgshoes-tk.png",
       "id": "shoes-yolei-t-k-davis-shoes-3-tk-shin",
       "name": "T.K Shoes (Shin)",
       "upgrade": 0,
@@ -6894,6 +6908,7 @@
     {
       "slot": "shoes",
       "axis": "digimon",
+      "icon": "img/gear/mdgshoes-yolei.png",
       "id": "shoes-yolei-t-k-davis-shoes-3-yolei-shin",
       "name": "Yolei Shoes (Shin)",
       "upgrade": 0,
@@ -7366,6 +7381,7 @@
     {
       "slot": "top",
       "axis": "digimon",
+      "icon": "img/gear/mdgtop-davis.png",
       "id": "top-yolei-t-k-davis-top-3-davis-shin",
       "name": "Davis Top (Shin)",
       "upgrade": 0,
@@ -7837,6 +7853,7 @@
     {
       "slot": "top",
       "axis": "digimon",
+      "icon": "img/gear/mdgtop-tk.png",
       "id": "top-yolei-t-k-davis-top-3-tk-shin",
       "name": "T.K Top (Shin)",
       "upgrade": 0,
@@ -8180,6 +8197,7 @@
     {
       "slot": "top",
       "axis": "digimon",
+      "icon": "img/gear/mdgtop-yolei.png",
       "id": "top-yolei-t-k-davis-top-3-yolei-shin",
       "name": "Yolei Top (Shin)",
       "upgrade": 0,
