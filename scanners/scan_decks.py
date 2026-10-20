@@ -223,8 +223,12 @@ def main():
     if patches:
         idxs = [int(p["idx"]) for p in patches]
         print(f"  -> {len(patches)} posts, idx range {min(idxs)}..{max(idxs)}")
+    if not events or not patches:
+        # an unreachable site lists nothing; writing that out would wipe every
+        # deck match and the refresh would carry on as if NA had no posts
+        sys.exit("ERROR: gameking list came back empty -- site unreachable? scan_result.json left as is")
 
-    print("\n=== Step 2: Fetch detail pages (parallel) ===")
+    print("\n=== Step 2:Fetch detail pages (parallel) ===")
     all_tasks = [("event", e) for e in events] + [("patch", p) for p in patches]
     total = len(all_tasks)
     results, errors = [], []
