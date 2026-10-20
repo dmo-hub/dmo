@@ -44,6 +44,7 @@
     border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
   table.go-tbl td.go-name input { min-width: 120px; }
   .go-name-row { display: flex; align-items: center; gap: 6px; }
+  .go-th { font-size: 12px; color: var(--muted); margin: 3px 0 0 30px; line-height: 1.4; }
   .go-icon { width: 24px; height: 24px; flex: none; object-fit: contain; }
   .go-list .go-icon { vertical-align: middle; margin-right: 6px; }
   /* --muted-soft on white is 2.65:1 -- too faint to read, and 19px is under
@@ -381,6 +382,15 @@
     row.appendChild(inp);
     td.appendChild(row);
 
+    var pick = item.name && item.slot ? findInRegistry(item.name, item.slot) : null;
+    if (pick && pick.nameTh) {
+      var th = document.createElement("div");
+      th.className = "go-th";
+      th.textContent = pick.nameTh;
+      if (pick.nameThShin) th.title = "ร่างชิน: " + pick.nameThShin;
+      td.appendChild(th);
+    }
+
     var flag = registryFlag(item);
     if (flag) td.appendChild(flag);
     return td;
@@ -576,7 +586,9 @@
       (registryBySlot[slot] || []).forEach(function (it) {
         var o = document.createElement("option");
         o.value = it.name;
-        var parts = [];
+        /* The browser filters a datalist on the label too, so typing the
+           Thai name finds the piece. */
+        var parts = it.nameTh ? [it.nameTh] : [];
         STAT_FIELDS.forEach(function (f) {
           if (it[f.key]) parts.push(f.key + " " + it[f.key]);
         });

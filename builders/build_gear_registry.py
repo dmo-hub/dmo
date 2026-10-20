@@ -166,6 +166,32 @@ def split_sets(rec):
     return [rec]
 
 
+def add_thai_names(out):
+    """Thai names exist only for set pieces (vplay's set rosters). Joined the
+    way build_set_registry.py joins them -- (set, slot) to the set's own split
+    pieces -- so the two pages never disagree on which piece is which."""
+    import build_set_registry as sr
+    rosters = json.loads(sr.ROSTERS.read_text(encoding="utf-8"))["sets"]
+    named = 0
+    for r in rosters:
+        english = sr.SET_NAMES.get(r["set"])
+        prefix = sr.TEMPLATE_BY_SET.get(english)
+        if not prefix:
+            continue
+        slot_order = sr.SLOT_ORDER_BY_SET.get(english, sr.CLOTHING_SLOTS)
+        shins = r["shin_items"] or [None] * len(r["items"])
+        for slot, base, shin in zip(slot_order, r["items"], shins):
+            hits = [it for it in out if it["slot"] == slot and it["name"].startswith(prefix)]
+            if len(hits) != 1:
+                print(f"  ! no single {prefix!r} {slot} piece for {base}")
+                continue
+            hits[0]["nameTh"] = base
+            if shin:
+                hits[0]["nameThShin"] = shin
+            named += 1
+    return named
+
+
 # Wiki slot -> solver slot id. Anything absent is not wearable gear for the
 # optimizer and is left out; the counts are printed so a drop is never silent.
 SLOT_MAP = {
@@ -299,6 +325,7 @@ def main():
             rec["extra"] = other
         out.extend(split_sets(rec))
 
+    named_th = add_thai_names(out)
     out.sort(key=lambda r: (r["slot"], r["name"]))
     payload = {
         "built_at": date.today().isoformat(),
@@ -316,7 +343,7 @@ def main():
         by_slot[r["slot"]] += 1
         by_axis[r["axis"]] += 1
     print("wrote %s" % OUT.relative_to(PROJ))
-    print("  items %d in %d slots" % (len(out), len(by_slot)))
+    print("  items %d in %d slots, %d with a Thai name" % (len(out), len(by_slot), named_th))
     print("  axis  %s" % dict(by_axis))
     print("  slots %s" % ", ".join("%s=%d" % kv for kv in sorted(by_slot.items())))
     if dropped:

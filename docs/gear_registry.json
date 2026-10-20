@@ -92,7 +92,9 @@
           "value": 30.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "กางเกงของไดสุเกะ",
+      "nameThShin": "(ชิน) กางเกงของไดสุเกะ"
     },
     {
       "id": "bottom-fairimon-s-lower-armor-event",
@@ -124,7 +126,8 @@
           "value": 45.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ไฟ : กางเกงแห่งสปิริต"
     },
     {
       "id": "bottom-flame-short-pants-of-zhuqiaomon",
@@ -155,7 +158,8 @@
           "value": 45.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "น้ำแข็ง : กางเกงแห่งสปิริต"
     },
     {
       "id": "bottom-lanamon-s-tights-event",
@@ -193,7 +197,8 @@
           "value": 45.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "แสง : กางเกงแห่งสปิริต"
     },
     {
       "id": "bottom-qinglongmon-s-lightning-short-pants",
@@ -264,7 +269,9 @@
           "value": 30.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "กางเกงของทาเครุ",
+      "nameThShin": "(ชิน) กางเกงของทาเครุ"
     },
     {
       "id": "bottom-spirit-bottom-3-thunder",
@@ -285,7 +292,8 @@
           "value": 45.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สายฟ้า : กางเกงแห่งสปิริต"
     },
     {
       "id": "bottom-trendy-wide-pants-event",
@@ -317,7 +325,8 @@
           "value": 45.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ลม : กางเกงแห่งสปิริต"
     },
     {
       "id": "bottom-xuanwumon-shiny-short-pants",
@@ -368,7 +377,9 @@
           "value": 30.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "กางเกงของมิยาโกะ",
+      "nameThShin": "(ชิน) กางเกงของมิยาโกะ"
     },
     {
       "id": "bottom-zhuqiamon-s-infernal-short-pants",
@@ -782,7 +793,9 @@
       "icon": "img/gear/mdgfashion-davis.png",
       "HT": 3500,
       "AT": 1500,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "กระเป๋าของไดสุเกะ",
+      "nameThShin": "(ชิน) กระเป๋าของไดสุเกะ"
     },
     {
       "id": "fashion-fairimon-s-fairy-wings-event",
@@ -814,7 +827,8 @@
       "icon": "img/gear/digimonfrontierfashion-fire.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "ไฟ : เครื่องประดับแห่งสปิริต"
     },
     {
       "id": "fashion-headphones",
@@ -845,7 +859,8 @@
       "icon": "img/gear/digimonfrontierfashion-ice.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "น้ำแข็ง : เครื่องประดับแห่งสปิริต"
     },
     {
       "id": "fashion-lanamon-s-shell-event",
@@ -881,7 +896,8 @@
       "icon": "img/gear/digimonfrontierfashion-light.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แสง : เครื่องประดับแห่งสปิริต"
     },
     {
       "id": "fashion-qinglongmon-s-lightning-cape",
@@ -912,7 +928,9 @@
       "icon": "img/gear/mdgfashion-tk.png",
       "HT": 3500,
       "AT": 1500,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "กระเป๋าของทาเครุ",
+      "nameThShin": "(ชิน) กระเป๋าของทาเครุ"
     },
     {
       "id": "fashion-spirit-accessory-3-thunder",
@@ -927,7 +945,8 @@
       "icon": "img/gear/digimonfrontierfashion-thunder.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "สายฟ้า : เครื่องประดับแห่งสปิริต"
     },
     {
       "id": "fashion-trendy-wireless-earphones-event",
@@ -976,7 +995,8 @@
       "icon": "img/gear/digimonfrontierfashion-wind.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "ลม : เครื่องประดับแห่งสปิริต"
     },
     {
       "id": "fashion-xuanwumon-s-aquatic-cape",
@@ -1007,7 +1027,9 @@
       "icon": "img/gear/mdgfashion-yolei.png",
       "HT": 3500,
       "AT": 1500,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "กระเป๋าของมิยาโกะ",
+      "nameThShin": "(ชิน) กระเป๋าของมิยาโกะ"
     },
     {
       "id": "fashion-zhuqiaomon-s-infernal-cape",
@@ -1298,7 +1320,9 @@
       "iconWiki": "/images/b/b7/MDGGloves.png",
       "icon": "img/gear/mdggloves-davis.png",
       "AT": 2700,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "ถุงมือของไดสุเกะ",
+      "nameThShin": "(ชิน) ถุงมือของไดสุเกะ"
     },
     {
       "id": "gloves-fairimon-s-gauntlet-event",
@@ -1322,7 +1346,8 @@
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-fire.png",
       "AT": 5000,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "ไฟ : ถุงมือแห่งสปิริต"
     },
     {
       "id": "gloves-flame-gloves-of-zhuqiaomon",
@@ -1356,7 +1381,8 @@
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-ice.png",
       "AT": 5000,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "น้ำแข็ง : ถุงมือแห่งสปิริต"
     },
     {
       "id": "gloves-lanamon-s-gauntlet-event",
@@ -1381,7 +1407,8 @@
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-light.png",
       "AT": 5000,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แสง : ถุงมือแห่งสปิริต"
     },
     {
       "id": "gloves-power-gloves-1-7-15-or-30-days",
@@ -1534,7 +1561,9 @@
       "iconWiki": "/images/b/b7/MDGGloves.png",
       "icon": "img/gear/mdggloves-tk.png",
       "AT": 2700,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แส้ของดิจิมอนไกเซอร์",
+      "nameThShin": "(ชิน) แส้ของดิจิมอนไกเซอร์"
     },
     {
       "id": "gloves-spirit-gloves-3-thunder",
@@ -1548,7 +1577,8 @@
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-thunder.png",
       "AT": 5000,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "สายฟ้า : ถุงมือแห่งสปิริต"
     },
     {
       "id": "gloves-trendy-watch-event",
@@ -1590,7 +1620,8 @@
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-wind.png",
       "AT": 5000,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "ลม : ถุงมือแห่งสปิริต"
     },
     {
       "id": "gloves-xuanwumon-gloves",
@@ -1634,7 +1665,9 @@
       "iconWiki": "/images/b/b7/MDGGloves.png",
       "icon": "img/gear/mdggloves-yolei.png",
       "AT": 2700,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "ถุงมือของมิยาโกะ",
+      "nameThShin": "(ชิน) ถุงมือของมิยาโกะ"
     },
     {
       "id": "gloves-zhuqiamon-s-infernal-gloves",
@@ -1726,7 +1759,9 @@
       "iconWiki": "/images/b/ba/MDGHead.png",
       "icon": "img/gear/mdghead-davis.png",
       "CT": 2500.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "ผ้าโพกหัวของไดสุเกะ",
+      "nameThShin": "(ชิน) ผ้าโพกหัวของไดสุเกะ"
     },
     {
       "id": "head-fairimon-s-wing-googles-event",
@@ -1751,7 +1786,8 @@
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-fire.png",
       "CT": 5500.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "ไฟ : หมวกเกราะแห่งสปิริต"
     },
     {
       "id": "head-spirit-helmet-3-ice",
@@ -1765,7 +1801,8 @@
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-ice.png",
       "CT": 5500.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "น้ำแข็ง : หมวกเกราะแห่งสปิริต"
     },
     {
       "id": "head-lanamon-s-helmet-event",
@@ -1800,7 +1837,8 @@
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-light.png",
       "CT": 5500.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "แสง : หมวกเกราะแห่งสปิริต"
     },
     {
       "id": "head-qinglongmon-s-lightning-ornament",
@@ -1864,7 +1902,9 @@
       "iconWiki": "/images/b/ba/MDGHead.png",
       "icon": "img/gear/mdghead-tk.png",
       "CT": 2500.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "หมวกของทาเครุ",
+      "nameThShin": "(ชิน) หมวกของทาเครุ"
     },
     {
       "id": "head-spirit-helmet-3-thunder",
@@ -1878,7 +1918,8 @@
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-thunder.png",
       "CT": 5500.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "สายฟ้า : หมวกเกราะแห่งสปิริต"
     },
     {
       "id": "head-trendy-ball-cap-event",
@@ -1903,7 +1944,8 @@
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-wind.png",
       "CT": 5500.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "ลม : หมวกเกราะแห่งสปิริต"
     },
     {
       "id": "head-xuanwumon-s-aquatic-ornament",
@@ -1934,7 +1976,9 @@
       "iconWiki": "/images/b/ba/MDGHead.png",
       "icon": "img/gear/mdghead-yolei.png",
       "CT": 2500.0,
-      "ranged": true
+      "ranged": true,
+      "nameTh": "หมวกของมิยาโกะ",
+      "nameThShin": "(ชิน) หมวกของมิยาโกะ"
     },
     {
       "id": "head-zhuqiaomon-s-infernal-ornament",
@@ -2574,7 +2618,9 @@
           "value": 2000.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "รองเท้าของไดสุเกะ",
+      "nameThShin": "(ชิน) รองเท้าของไดสุเกะ"
     },
     {
       "id": "shoes-spirit-shoes-3-fire",
@@ -2603,7 +2649,8 @@
           "value": 3500.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ไฟ : รองเท้าแห่งสปิริต"
     },
     {
       "id": "shoes-spirit-shoes-3-ice",
@@ -2632,7 +2679,8 @@
           "value": 3500.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "น้ำแข็ง : รองเท้าแห่งสปิริต"
     },
     {
       "id": "shoes-spirit-shoes-3-light",
@@ -2661,7 +2709,8 @@
           "value": 3500.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "แสง : รองเท้าแห่งสปิริต"
     },
     {
       "id": "shoes-spooky-wizardmon-shoes-30-days",
@@ -2710,7 +2759,9 @@
           "value": 2000.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "รองเท้าของทาเครุ",
+      "nameThShin": "(ชิน) รองเท้าของทาเครุ"
     },
     {
       "id": "shoes-spirit-shoes-3-thunder",
@@ -2739,7 +2790,8 @@
           "value": 3500.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สายฟ้า : รองเท้าแห่งสปิริต"
     },
     {
       "id": "shoes-spirit-shoes-3-wind",
@@ -2768,7 +2820,8 @@
           "value": 3500.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ลม : รองเท้าแห่งสปิริต"
     },
     {
       "id": "shoes-yolei-t-k-davis-shoes-3-yolei",
@@ -2797,7 +2850,9 @@
           "value": 2000.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "รองเท้าของมิยาโกะ",
+      "nameThShin": "(ชิน) รองเท้าของมิยาโกะ"
     },
     {
       "id": "top-agumon-top",
@@ -2918,7 +2973,9 @@
           "value": 2000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แจ็กเก็ตของไดสุเกะ",
+      "nameThShin": "(ชิน) แจ็กเก็ตของไดสุเกะ"
     },
     {
       "id": "top-fairimon-s-upper-armor-event",
@@ -2959,7 +3016,8 @@
           "value": 3500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ไฟ : เสื้อแห่งสปิริต"
     },
     {
       "id": "top-flame-hooded-shirt-of-zhuqiaomon",
@@ -3047,7 +3105,8 @@
           "value": 3500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "น้ำแข็ง : เสื้อแห่งสปิริต"
     },
     {
       "id": "top-lanamon-s-swimsuit-event",
@@ -3088,7 +3147,8 @@
           "value": 3500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แสง : เสื้อแห่งสปิริต"
     },
     {
       "id": "top-qinglongmon-s-lightning-hooded-shirt",
@@ -3160,7 +3220,9 @@
           "value": 2000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อของทาเครุ",
+      "nameThShin": "(ชิน) เสื้อของทาเครุ"
     },
     {
       "id": "top-spirit-top-3-thunder",
@@ -3184,7 +3246,8 @@
           "value": 3500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "สายฟ้า : เสื้อแห่งสปิริต"
     },
     {
       "id": "top-trendy-white-shirt-event",
@@ -3245,7 +3308,8 @@
           "value": 3500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ลม : เสื้อแห่งสปิริต"
     },
     {
       "id": "top-xuanwumon-hooded-shirt",
@@ -3317,7 +3381,9 @@
           "value": 2000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อของมิยาโกะ",
+      "nameThShin": "(ชิน) เสื้อของมิยาโกะ"
     },
     {
       "id": "top-zhuqiamon-s-infernal-hooded-shirt",
