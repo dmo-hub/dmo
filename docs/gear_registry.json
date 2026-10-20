@@ -2440,7 +2440,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2458,7 +2458,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2476,7 +2476,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2493,7 +2493,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         },
@@ -2516,7 +2516,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2534,7 +2534,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2551,7 +2551,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2569,7 +2569,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2586,7 +2586,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         },
@@ -2609,7 +2609,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2627,7 +2627,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2645,7 +2645,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2662,7 +2662,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2679,7 +2679,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         },
@@ -2702,7 +2702,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2719,7 +2719,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         },
@@ -2741,7 +2741,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         },
@@ -2763,7 +2763,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         },
@@ -2784,7 +2784,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         },
@@ -2811,7 +2811,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         },
@@ -2834,7 +2834,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2852,7 +2852,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2870,7 +2870,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }
@@ -2887,7 +2887,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         },
@@ -2909,7 +2909,7 @@
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
         {
-          "stat": "SCD",
+          "stat": "Skill DMG",
           "value": 10.0,
           "unit": "pct"
         }

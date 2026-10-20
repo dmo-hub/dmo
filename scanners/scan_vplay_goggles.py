@@ -40,10 +40,11 @@ ADVENTURE_POST = 19820
 KAISER_POST = 25445
 TAMER_POST = 17826
 
-# Column labels in these tables. "SCD" and "พลังโจมตีสกิล" have no solver stat;
-# they are kept as extras, the way vplay prints them.
+# Column labels in these tables. "SCD" is skill damage (dmowiki prints "Skill
+# Damage %" in the same option slot); like "พลังโจมตีสกิล" it has no solver
+# stat and is kept as an extra.
 STAT_LABELS = {"HT": "HT", "EV": "EV", "CT": "CT", "HP": "HP", "AT": "AT",
-               "SCD": "SCD", "พลังโจมตีสกิล": "Skill DMG"}
+               "SCD": "Skill DMG", "พลังโจมตีสกิล": "Skill DMG"}
 # Printed without "%", these three are the game's raw number, 100 per 1%:
 # Adventure Goggles list CT 1500 for the 15% the item shows.
 RAW_PCT = {"CT", "EV", "BL"}

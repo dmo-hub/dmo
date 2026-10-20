@@ -76,7 +76,9 @@ STAT_ALIASES = {
     "ความเร็วในการโจมตี": "AS",
     "ความเร็วในการเคลื่อนที่": "Speed",
     "เป็นมิตร": "Affinity",
-    "scd": "SCD",
+    # vplay's "SCD" is skill damage: dmowiki prints "Skill Damage %" in the
+    # same option slot of the same items
+    "scd": "Skill DMG",
     "ms": "Speed",
     # Daisuke/Takeru/Miyako gear labels.
     "โจมตีแบบคริติคอล": "CT",

@@ -7510,7 +7510,7 @@
               "value": 285.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 2.0
             }
@@ -7612,7 +7612,7 @@
               "value": 340.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 2.0
             }
@@ -7627,7 +7627,7 @@
               "value": 360.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 4.0
             }
@@ -7642,7 +7642,7 @@
               "value": 380.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 6.0
             }
@@ -7724,7 +7724,7 @@
               "value": 375.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 2.0
             }
@@ -7739,7 +7739,7 @@
               "value": 400.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 4.0
             }
@@ -7754,7 +7754,7 @@
               "value": 425.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 6.0
             }
@@ -7769,7 +7769,7 @@
               "value": 450.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 8.0
             }
@@ -7784,7 +7784,7 @@
               "value": 475.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 10.0
             }
@@ -7876,7 +7876,7 @@
               "value": 360.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 2.0
             }
@@ -7891,7 +7891,7 @@
               "value": 383.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 4.0
             }
@@ -7906,7 +7906,7 @@
               "value": 405.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 6.0
             }
@@ -7921,7 +7921,7 @@
               "value": 428.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 8.0
             }
@@ -8033,7 +8033,7 @@
               "value": 315.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 2.0
             }
@@ -8048,7 +8048,7 @@
               "value": 333.0
             },
             {
-              "stat": "SCD",
+              "stat": "Skill DMG",
               "unit": "pct",
               "value": 4.0
             }
