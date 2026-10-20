@@ -65,6 +65,8 @@ GOGGLES_AXIS = {"Adventure Goggles": "digimon", "Digimon Kaiser's Goggles": "dig
 TAMER_GEAR_TH = PROJ / "data" / "tamer_gear_th.json"
 WIKI_ONLY_TAMER_GEAR = {"XAI System": "xai", "Eos Digivice": "digivice"}
 WIKI_ONLY_NAMES = {"Eos Digivice": {"Final Digivice"}}
+# The wiki leaves XAI's side blank; the owner confirmed it feeds the digimon.
+WIKI_ONLY_AXIS = {"xai": "digimon"}
 
 # vplay's per-level Spirit tables name the piece, not the element: one table
 # serves all five "*:Spirit X" items.
@@ -400,7 +402,8 @@ def add_th_tamer_gear(out, items):
             continue
         seen.add(it["name"])
         rec = {"id": it["id"], "name": it["name"], "slot": slot,
-               "wikiSlot": it["slot"], "axis": it.get("axis") or "unknown"}
+               "wikiSlot": it["slot"],
+               "axis": WIKI_ONLY_AXIS.get(slot) or it.get("axis") or "unknown"}
         stats = []
         for st in it.get("stats", []):
             top = top_of(st)

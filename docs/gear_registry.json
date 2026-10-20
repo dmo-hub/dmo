@@ -1896,6 +1896,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความกล้าหาญ",
       "iconWiki": "/images/6/6a/Digivice_of_Courage.PNG",
+      "icon": "img/gear/digivice_of_courage.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -1977,6 +1978,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งโชคชะตา",
       "iconWiki": "/images/4/47/Digivice_of_Fate.PNG",
+      "icon": "img/gear/digivice_of_fate.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -2058,6 +2060,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งมิตรภาพ",
       "iconWiki": "/images/9/91/Digivice_of_Friendship.PNG",
+      "icon": "img/gear/digivice_of_friendship.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -2139,6 +2142,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความหวัง",
       "iconWiki": "/images/2/29/Digivice_of_Hope.PNG",
+      "icon": "img/gear/digivice_of_hope.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -2220,6 +2224,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความเมตตา",
       "iconWiki": "/images/6/68/Digivice_of_Kindness.PNG",
+      "icon": "img/gear/digivice_of_kindness.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -2301,6 +2306,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความรู้",
       "iconWiki": "/images/1/15/Digivice_of_Knowledge.PNG",
+      "icon": "img/gear/digivice_of_knowledge.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -2382,6 +2388,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งแสง",
       "iconWiki": "/images/3/3d/Digivice_of_Light.PNG",
+      "icon": "img/gear/digivice_of_light.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -2463,6 +2470,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความรัก",
       "iconWiki": "/images/4/4e/Digivice_of_Love.PNG",
+      "icon": "img/gear/digivice_of_love.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -2544,6 +2552,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งปาฏิหาริย์",
       "iconWiki": "/images/e/e5/Digivice_of_Miracles.PNG",
+      "icon": "img/gear/digivice_of_miracles.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -2625,6 +2634,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความบริสุทธิ์",
       "iconWiki": "/images/d/d8/Digivice_of_Purity.PNG",
+      "icon": "img/gear/digivice_of_purity.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -2706,6 +2716,7 @@
       "axis": "digimon",
       "nameTh": "ดิจิไวซ์ที่แท้จริงแห่งความซื่อสัตย์",
       "iconWiki": "/images/7/78/Digivice_of_Reliability.PNG",
+      "icon": "img/gear/digivice_of_reliability.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -6883,6 +6894,7 @@
       },
       "AT": 1500,
       "iconWiki": "/images/9/97/DigimonKing.png",
+      "icon": "img/gear/digimonking.png",
       "extra": [
         {
           "stat": "EXP",
@@ -6970,6 +6982,7 @@
       },
       "CT": 15.0,
       "iconWiki": "/images/9/97/DigimonKing.png",
+      "icon": "img/gear/digimonking.png",
       "extra": [
         {
           "stat": "EXP",
@@ -7024,6 +7037,7 @@
         "15": {}
       },
       "iconWiki": "/images/9/97/DigimonKing.png",
+      "icon": "img/gear/digimonking.png",
       "extra": [
         {
           "stat": "HP",
@@ -7116,6 +7130,7 @@
       },
       "HT": 1500,
       "iconWiki": "/images/9/97/DigimonKing.png",
+      "icon": "img/gear/digimonking.png",
       "extra": [
         {
           "stat": "EXP",
@@ -7203,6 +7218,7 @@
       },
       "AT": 1500,
       "iconWiki": "/images/e/eb/HeavenWing.png",
+      "icon": "img/gear/heavenwing.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -7290,6 +7306,7 @@
       },
       "CT": 15.0,
       "iconWiki": "/images/e/eb/HeavenWing.png",
+      "icon": "img/gear/heavenwing.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -7344,6 +7361,7 @@
         "15": {}
       },
       "iconWiki": "/images/e/eb/HeavenWing.png",
+      "icon": "img/gear/heavenwing.png",
       "extra": [
         {
           "stat": "EXP",
@@ -7403,6 +7421,7 @@
         "15": {}
       },
       "iconWiki": "/images/e/eb/HeavenWing.png",
+      "icon": "img/gear/heavenwing.png",
       "extra": [
         {
           "stat": "HP",
@@ -7495,6 +7514,7 @@
       },
       "HT": 1500,
       "iconWiki": "/images/e/eb/HeavenWing.png",
+      "icon": "img/gear/heavenwing.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -7582,6 +7602,7 @@
       },
       "AT": 1500,
       "iconWiki": "/images/a/a8/TimeRuler.png",
+      "icon": "img/gear/timeruler.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -7669,6 +7690,7 @@
       },
       "CT": 15.0,
       "iconWiki": "/images/a/a8/TimeRuler.png",
+      "icon": "img/gear/timeruler.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -7723,6 +7745,7 @@
         "15": {}
       },
       "iconWiki": "/images/a/a8/TimeRuler.png",
+      "icon": "img/gear/timeruler.png",
       "extra": [
         {
           "stat": "EXP",
@@ -7782,6 +7805,7 @@
         "15": {}
       },
       "iconWiki": "/images/a/a8/TimeRuler.png",
+      "icon": "img/gear/timeruler.png",
       "extra": [
         {
           "stat": "HP",
@@ -7874,6 +7898,7 @@
       },
       "HT": 1500,
       "iconWiki": "/images/a/a8/TimeRuler.png",
+      "icon": "img/gear/timeruler.png",
       "extra": [
         {
           "stat": "Skill DMG",
@@ -7905,7 +7930,7 @@
       "id": "keyring-digi-key-ring-families",
       "name": "DIGI-Key Ring (Families)",
       "slot": "keyring",
-      "axis": "unknown",
+      "axis": "digimon",
       "nameTh": "DIGI-ที่เก็บคีย์ริง [ตระกูล]",
       "AT": 278,
       "ranged": true,
@@ -8059,7 +8084,7 @@
       "id": "keyring-spiral-key-ring-families-lv-max",
       "name": "Spiral Key Ring (Families) Lv.Max",
       "slot": "keyring",
-      "axis": "unknown",
+      "axis": "digimon",
       "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max",
       "AT": 278,
       "ranged": true,
@@ -9937,7 +9962,7 @@
       "name": "Sakura XAI Ver. VI",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "extra": [
         {
           "stat": "EXP",
@@ -9946,6 +9971,7 @@
         }
       ],
       "iconWiki": "/images/b/bf/XAI_Ver_VI_Sakura.png",
+      "icon": "img/gear/xai_ver_vi_sakura.png",
       "rows": [
         {
           "label": "EXP",
@@ -9960,7 +9986,7 @@
       "name": "XAI Ver. Anniversary",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "AT": 500,
       "DS": 1500,
       "extra": [
@@ -9971,6 +9997,7 @@
         }
       ],
       "iconWiki": "/images/5/59/XAI_Ver._Anniversary.png",
+      "icon": "img/gear/xai_ver._anniversary.png",
       "rows": [
         {
           "label": "AT",
@@ -9993,8 +10020,9 @@
       "name": "XAI Ver. I",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/a/a2/XAI_ver_i.png",
+      "icon": "img/gear/xai_ver_i.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
       "obtain": "Quest Reward (Verdandi)"
@@ -10004,8 +10032,9 @@
       "name": "XAI Ver. II",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/1/19/XAI_Ver_ii.png",
+      "icon": "img/gear/xai_ver_ii.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
       "obtain": "Digitamamon (Item Make) Event reward"
@@ -10015,8 +10044,9 @@
       "name": "XAI Ver. III",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/8/8c/XAI_ver_iii.png",
+      "icon": "img/gear/xai_ver_iii.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
       "obtain": "Digitamamon (Item Make) Event reward"
@@ -10026,8 +10056,9 @@
       "name": "XAI Ver. IV",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า"
     },
@@ -10036,8 +10067,9 @@
       "name": "XAI Ver. IX",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า"
     },
@@ -10046,7 +10078,7 @@
       "name": "XAI Ver. Storm",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "AT": 200,
       "extra": [
         {
@@ -10056,6 +10088,7 @@
         }
       ],
       "iconWiki": "/images/9/91/XAI_ver_storm.png",
+      "icon": "img/gear/xai_ver_storm.png",
       "rows": [
         {
           "label": "AT",
@@ -10074,7 +10107,7 @@
       "name": "XAI Ver. Storm II",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "AT": 200,
       "extra": [
         {
@@ -10084,6 +10117,7 @@
         }
       ],
       "iconWiki": "/images/1/14/XAI_ver_storm_ii.png",
+      "icon": "img/gear/xai_ver_storm_ii.png",
       "rows": [
         {
           "label": "AT",
@@ -10102,8 +10136,9 @@
       "name": "XAI Ver. V",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/c/c4/XAI_ver_v.png",
+      "icon": "img/gear/xai_ver_v.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า"
     },
@@ -10112,8 +10147,9 @@
       "name": "XAI Ver. VI",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/f/f3/XAI_ver_vi.png",
+      "icon": "img/gear/xai_ver_vi.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
       "obtain": "Cash shop item"
@@ -10123,8 +10159,9 @@
       "name": "XAI Ver. VII",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า"
     },
@@ -10133,8 +10170,9 @@
       "name": "XAI Ver. VIII",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า"
     },
@@ -10143,8 +10181,9 @@
       "name": "XAI Ver. X",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
+      "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า"
     },
@@ -10153,7 +10192,7 @@
       "name": "XAI Ver. X-Mas",
       "slot": "xai",
       "wikiSlot": "XAI System",
-      "axis": "unknown",
+      "axis": "digimon",
       "AT": 200,
       "extra": [
         {
@@ -10163,6 +10202,7 @@
         }
       ],
       "iconWiki": "/images/9/9e/XAI_ver_x-mas.png",
+      "icon": "img/gear/xai_ver_x-mas.png",
       "rows": [
         {
           "label": "AT",

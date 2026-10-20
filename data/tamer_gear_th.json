@@ -1855,7 +1855,7 @@
       "name": "Spiral Key Ring (Families) Lv.Max",
       "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max",
       "slot": "keyring",
-      "axis": "unknown",
+      "axis": "digimon",
       "ranged": true,
       "levels": [
         {
@@ -1915,7 +1915,7 @@
       "name": "DIGI-Key Ring (Families)",
       "nameTh": "DIGI-ที่เก็บคีย์ริง [ตระกูล]",
       "slot": "keyring",
-      "axis": "unknown",
+      "axis": "digimon",
       "ranged": true,
       "levels": [
         {

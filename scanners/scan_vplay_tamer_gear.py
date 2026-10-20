@@ -240,7 +240,8 @@ def spiral(content):
     stats, rows = key_detail(fam_rows[0][-1])
     out.append({"name": "Spiral Key Ring (Families) Lv.Max",
                 "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max", "slot": "keyring",
-                "axis": "unknown", "ranged": True,
+                # No post names the side; the owner confirmed digimon in game.
+                "axis": "digimon", "ranged": True,
                 "levels": [{"upgrade": 0, "stats": stats}], "rows": rows,
                 "families": fams, "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล"})
     return out
@@ -253,7 +254,8 @@ def digi_key(content):
         print("  ! DIGI-key ring rows disagree: %r" % details)
     stats, rows = key_detail(rows_[0][-1])
     return {"name": "DIGI-Key Ring (Families)", "nameTh": "DIGI-ที่เก็บคีย์ริง [ตระกูล]",
-            "slot": "keyring", "axis": "unknown", "ranged": True,
+            # Same as the Spiral families: digimon per the owner, not a post.
+            "slot": "keyring", "axis": "digimon", "ranged": True,
             "levels": [{"upgrade": 0, "stats": stats}], "rows": rows,
             "families": families([r[2] for r in rows_], r"\[(\w+)\]"),
             "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล"}
