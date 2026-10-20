@@ -1661,7 +1661,7 @@
           "unit": "flat"
         }
       ],
-      "nameTh": "ถุงมือสยองขวัญของวารุมอนซาเอมอน"
+      "nameTh": "ถุงมือของวารุมอนซาเอมอน"
     },
     {
       "id": "gloves-spirit-gloves-3-wind",
@@ -2813,7 +2813,7 @@
       "iconWiki": "/images/f/f5/Spooky_Wizardmon_Shoes%2830_days%29.png",
       "icon": "img/gear/spooky_wizardmon_shoes_30_days_.png",
       "DE": 100,
-      "nameTh": "รองเท้าของวิซาร์มอน [30 วัน]"
+      "nameTh": "รองเท้าสยองขวัญของวิซาร์มอน [30 วัน]"
     },
     {
       "id": "shoes-swimming-gears-flippers-30d",
