@@ -85,10 +85,17 @@ python extractors/extract_th_digimon_images.py # → image_th (becomes primary i
 #       chrome.exe --remote-debugging-port=9222 --user-data-dir=C:\temp\chrome-cdp
 #     then open https://dmowiki.com, solve the CAPTCHA, then:
 python fetchers/fetch_dmowiki_digimon.py
-#     Saves to cache/dmowiki_<safe-slug>.html.
+#     Saves to cache/dmowiki_<safe-slug>.html. Names the rank_u.html map
+#     misses go in its OVERRIDES.
+#     Every dmowiki fetcher drives that one tab over raw CDP
+#     (fetchers/_cdp_tab.py -> fetchers/cdp_eval.js, needs Node 22): Playwright's
+#     connect_over_cdp attaches to every target in the browser and hangs on one
+#     that never answers ("Timeout ... <ws connected>"). Requests run as fetch()
+#     inside the tab; nothing navigates or clicks. A 403 "Just a moment..." means
+#     the challenge is back -- a person passes it, the scripts stop.
 
-# 11b. Same Chrome session, any page list. --mode html saves the rendered page
-#      (cache/dmowiki_<slug>.html, what scan_clothing/scan_chipsets read);
+# 11b. Same Chrome session, any page list. --mode html saves the page HTML as
+#      fetched inside the tab (cache/dmowiki_<slug>.html, what scan_clothing/scan_chipsets read);
 #      --mode api calls api.php from inside the tab and saves raw wikitext
 #      (cache/dmowiki_<slug>.json), 50 titles per request. Cached files are
 #      skipped unless --force; --dry-run prints the plan without Chrome.
@@ -109,6 +116,28 @@ python fetchers/fetch_dmowiki_images.py      # then re-run build_gear_registry.p
 #      ships a deck the page already has, then re-run.
 python scanners/scan_th_patch_decks.py         # -> data/th_patch_decks.json
 python tools/apply_th_decks.py                 # -> docs/decks.html (idempotent)
+
+# 11e. The site follows Rank U, and shows dmowiki's names.
+#      - Rank U = a page in dmowiki Category:Digimon_Rank_U, saved as rank_u.html
+#        (builders/wiki_names.is_rank_u). digimon.html lists Rank U digimon only;
+#        refresh does NOT update rank_u.html -- re-fetch it when the wiki adds one:
+#          python fetchers/fetch_dmowiki_pages.py Category:Digimon_Rank_U --force
+#          cp cache/dmowiki_category~digimon_rank_u.html rank_u.html
+#        fetch_dmowiki_category_images.py <Category> saves that page's pictures
+#        to docs/img/wiki/ (portraits named after their page).
+#      - Decks with no Rank U digimon are left off decks.html and listed in
+#        data/deck_excluded.json ("e622" whole post, "e673/<deck name>" one deck);
+#        diff_report, the home feed and apply_th_decks all read it.
+#      - Display names: data/digimon_wiki_names.json (digimon page) and
+#        data/deck_wiki_names.json + tools/apply_wiki_names_decks.py (decks page).
+#        scan_result_digimon.json keeps the NA spelling -- the TH/KR enrichers
+#        match on it. A map key hits EVERY post spelled that way: before adding
+#        one, check each post using it ("Shoutmon X7" once relabelled the 2023
+#        SSS+ post as the Rank U Superior Mode).
+#      - Digimon only KR has released: enrichers/find_kr_only_digimon.py ->
+#        data/kr_only_digimon.json (cards with a "KR เท่านั้น" badge). A KR name
+#        it cannot place needs a KR_TO_EN row, or an EN_TO_KR row in
+#        enrich_digimon_kr.py when NA already has it under another spelling.
 
 # 12. Parse cache/dmowiki_*.html and seed `attributes` dict on each digimon.
 python enrichers/enrich_digimon_attributes.py            # missing only
@@ -337,3 +366,8 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
 - All scripts force UTF-8 stdout at startup (`sys.stdout.reconfigure`) because the project path contains Thai characters and the default Windows console encoding will crash on prints.
 - `BASE` host, the two AJAX endpoints, and the two view-URL templates are centralized in the `CONFIGS` dict at the top of [scan_decks.py](scan_decks.py) — other scripts import from there rather than duplicating URLs.
 - Post dates in cached HTML are `MM-DD-YYYY` (US format), extracted with `DATE_RE = r">\s*(\d{2}-\d{2}-\d{4})\s*<"`.
+- Scanners read `cache/*.html` only. Never move cache files aside to force a
+  refetch while a source might be down: the NA posts once sat in
+  `cache/_stale-<date>/` after gameking stopped answering, and Gammamon plus
+  three NA banners went missing until the files were copied back. Use the
+  fetchers' `--force` instead.
