@@ -267,6 +267,49 @@
       ],
       "bonuses": [
         {
+          "pieces": 4,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "Skill DMG Taken",
+              "value": -20.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Skill Damage Reduction + 20%"
+            },
+            {
+              "stat": "DMG Taken",
+              "value": -30.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Damage Reduction + 30%"
+            },
+            {
+              "stat": "HP",
+              "value": 4500.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Max HP + 4500"
+            },
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Hit Rate + 1000"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 25.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Final Damage +25%"
+            }
+          ]
+        },
+        {
           "pieces": 6,
           "permanent": true,
           "chance": "100%",
@@ -285,6 +328,122 @@
               "unit": "pct",
               "scoreable": true,
               "text": "CT 70%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set_th": "พลังของสี่สัตว์เทพเซ็ต",
+      "set": "Four Holy Beasts",
+      "pieces": 6,
+      "slots": [
+        {
+          "slot": "head",
+          "item": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [อัลติเมท]",
+          "shin": null,
+          "accepts": [
+            "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [อัลติเมท]",
+            "Noble Head Ornament of Huanglongmon [Ultimate]"
+          ],
+          "stats": {
+            "AT": 525,
+            "HT": 385
+          },
+          "stats_from": "Noble Head Ornament of Huanglongmon [Ultimate]"
+        },
+        {
+          "slot": "fashion",
+          "item": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [อัลติเมท]",
+          "shin": null,
+          "accepts": [
+            "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [อัลติเมท]",
+            "Phoenix Feather Robe of Zhuqiaomon [Ultimate]"
+          ],
+          "stats": {
+            "AT": 475
+          },
+          "stats_from": "Phoenix Feather Robe of Zhuqiaomon [Ultimate]"
+        },
+        {
+          "slot": "top",
+          "item": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [อัลติเมท]",
+          "shin": null,
+          "accepts": [
+            "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [อัลติเมท]",
+            "Abyssal Armor of Xuanwumon [Ultimate]"
+          ],
+          "stats": {
+            "DS": 2500
+          },
+          "stats_from": "Abyssal Armor of Xuanwumon [Ultimate]"
+        },
+        {
+          "slot": "bottom",
+          "item": "กางเกงแห่งสายฟ้าของจินลอนมอน [อัลติเมท]",
+          "shin": null,
+          "accepts": [
+            "กางเกงแห่งสายฟ้าของจินลอนมอน [อัลติเมท]",
+            "Thunderbolt Bottom of Qinglongmon [Ultimate]"
+          ],
+          "stats": {
+            "HT": 620,
+            "DE": 300
+          },
+          "stats_from": "Thunderbolt Bottom of Qinglongmon [Ultimate]"
+        },
+        {
+          "slot": "gloves",
+          "item": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [อัลติเมท]",
+          "shin": null,
+          "accepts": [
+            "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [อัลติเมท]",
+            "Immaculate Gauntlet of Baihumon [Ultimate]"
+          ],
+          "stats": {
+            "CT": 12.0
+          },
+          "stats_from": "Immaculate Gauntlet of Baihumon [Ultimate]"
+        },
+        {
+          "slot": "shoes",
+          "item": "รองเท้าแห่งสี่สัตว์เทพ [อัลติเมท]",
+          "shin": null,
+          "accepts": [
+            "รองเท้าแห่งสี่สัตว์เทพ [อัลติเมท]",
+            "Shoes of the Four Holy Beasts [Ultimate]"
+          ],
+          "stats": {},
+          "stats_from": "Shoes of the Four Holy Beasts [Ultimate]"
+        }
+      ],
+      "bonuses": [
+        {
+          "pieces": 6,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "HT",
+              "value": 500,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "HT +500"
+            },
+            {
+              "stat": "AT",
+              "value": 500,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "AT +500"
+            },
+            {
+              "stat": "SCD",
+              "value": 2,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "SCD +2%"
             }
           ]
         }
@@ -554,6 +713,49 @@
       ],
       "bonuses": [
         {
+          "pieces": 4,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "Skill DMG Taken",
+              "value": -20.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Skill Damage Reduction + 20%"
+            },
+            {
+              "stat": "DMG Taken",
+              "value": -30.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Damage Reduction + 30%"
+            },
+            {
+              "stat": "HP",
+              "value": 4500.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Max HP + 4500"
+            },
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Hit Rate + 1000"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 25.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Final Damage +25%"
+            }
+          ]
+        },
+        {
           "pieces": 6,
           "permanent": true,
           "chance": "100%",
@@ -730,6 +932,49 @@
       ],
       "bonuses": [
         {
+          "pieces": 4,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "Skill DMG Taken",
+              "value": -20.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Skill Damage Reduction + 20%"
+            },
+            {
+              "stat": "DMG Taken",
+              "value": -30.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Damage Reduction + 30%"
+            },
+            {
+              "stat": "HP",
+              "value": 4500.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Max HP + 4500"
+            },
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Hit Rate + 1000"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 25.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Final Damage +25%"
+            }
+          ]
+        },
+        {
           "pieces": 6,
           "permanent": true,
           "chance": "100%",
@@ -837,6 +1082,49 @@
         }
       ],
       "bonuses": [
+        {
+          "pieces": 4,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "Skill DMG Taken",
+              "value": -20.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Skill Damage Reduction + 20%"
+            },
+            {
+              "stat": "DMG Taken",
+              "value": -30.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Damage Reduction + 30%"
+            },
+            {
+              "stat": "HP",
+              "value": 4500.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Max HP + 4500"
+            },
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Hit Rate + 1000"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 25.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Final Damage +25%"
+            }
+          ]
+        },
         {
           "pieces": 6,
           "permanent": true,
@@ -1124,6 +1412,49 @@
         }
       ],
       "bonuses": [
+        {
+          "pieces": 4,
+          "permanent": true,
+          "chance": "100%",
+          "operation": "None",
+          "effects": [
+            {
+              "stat": "Skill DMG Taken",
+              "value": -20.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Skill Damage Reduction + 20%"
+            },
+            {
+              "stat": "DMG Taken",
+              "value": -30.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Received Damage Reduction + 30%"
+            },
+            {
+              "stat": "HP",
+              "value": 4500.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Max HP + 4500"
+            },
+            {
+              "stat": "HT",
+              "value": 1000.0,
+              "unit": "flat",
+              "scoreable": true,
+              "text": "Hit Rate + 1000"
+            },
+            {
+              "stat": "Final DMG",
+              "value": 25.0,
+              "unit": "pct",
+              "scoreable": false,
+              "text": "Final Damage +25%"
+            }
+          ]
+        },
         {
           "pieces": 6,
           "permanent": true,

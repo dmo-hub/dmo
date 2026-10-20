@@ -640,14 +640,17 @@ def check_set_registry():
     # a 4-piece plus 6-piece bonus, so one name serves both kinds of rule.
     TAMER = {"Yolei-Heart of Love", "T.K-Light of Hope", "Davis-Power of Courage"}
     # The element-spirit sets also fill the six clothing slots, but have no
-    # shin variants and pay only at six pieces.
+    # shin variants.
     SPIRIT = {"Fire : Spirit", "Light: Spirit", "Ice: Spirit", "Wind: Spirit",
               "Thunder: Spirit"}
+    # Four Holy Beasts fills the six clothing slots too, but pays only at six.
+    HOLY = "Four Holy Beasts"
     CLOTHING = TAMER | SPIRIT
     names = {s["set"] for s in sets}
-    expected = CLOTHING | {"Last Evolution"}
+    expected = CLOTHING | {"Last Evolution", HOLY}
     if names != expected:
-        bad.append("expected the 3 tamer sets, 5 spirit sets and Last Evolution; "
+        bad.append("expected the 3 tamer sets, 5 spirit sets, Four Holy Beasts "
+                   "and Last Evolution; "
                    "missing %s, unexpected %s"
                    % (sorted(expected - names), sorted(names - expected)))
 
@@ -694,10 +697,11 @@ def check_set_registry():
                            % (s["set"], sl["slot"]))
         # the clothing sets each have a 4-piece and a 6-piece bonus
         sizes = sorted(b["pieces"] for b in s["bonuses"])
-        if tamer and sizes != [4, 6]:
+        if clothing and sizes != [4, 6]:
             bad.append("%s: bonus sizes %s, expected [4, 6]" % (s["set"], sizes))
-        if s["set"] in SPIRIT and sizes != [6]:
-            bad.append("%s: bonus sizes %s, expected [6]" % (s["set"], sizes))
+        if s["set"] == HOLY and (len(s["slots"]) != 6 or sizes != [6]):
+            bad.append("%s: %d slots, bonus sizes %s, expected 6 and [6]"
+                       % (s["set"], len(s["slots"]), sizes))
         if not sizes:
             bad.append("%s: no bonuses joined" % s["set"])
         # a threshold can never ask for more pieces than the set has

@@ -61,6 +61,8 @@ SET_NAMES = {
     # dmowiki never recorded this one, so the English name is ours: it is only
     # a join key, and the page shows set_th to the player either way.
     "ลาสต์ อีโวลูชัน": "Last Evolution",
+    # The 2025 Four Holy Beasts set, likewise missing from dmowiki's table.
+    "พลังของสี่สัตว์เทพเซ็ต": "Four Holy Beasts",
 }
 
 # vplay's slot words, in roster order, against the solver's slot ids. The
@@ -86,6 +88,13 @@ TEMPLATE_BY_SET = {name: name.split(":")[0].strip() + ":Spirit" for name in
 TEMPLATE_BY_SET.update({name: name.split("-")[0] + " " for name in
                         ("Davis-Power of Courage", "T.K-Light of Hope",
                          "Yolei-Heart of Love")})
+
+# Bonus rows a set shares under another name. dmowiki writes the element-spirit
+# 4-piece bonus once, as "Digimon Frontier", while vplay lists the same numbers
+# under each element -- four pieces of ONE element, so it stays per set.
+BONUS_ALIASES = {name: ["Digimon Frontier"] for name in
+                 ("Fire : Spirit", "Light: Spirit", "Ice: Spirit", "Wind: Spirit",
+                  "Thunder: Spirit")}
 
 
 def main():
@@ -155,6 +164,12 @@ def main():
                     if tmpl.get(k):
                         stats[k] = tmpl[k]
                 stats_from = tmpl["name"]
+            elif base in en_by_th:
+                # no template row covers this set, but the registry already
+                # holds the exact piece under its Thai name
+                own = en_by_th[base]
+                stats = {k: own[k] for k in STAT_KEYS if own.get(k)}
+                stats_from = own["name"]
             entry = {
                 "slot": slot,
                 "item": base,
@@ -174,7 +189,8 @@ def main():
                 entry["stats_shin_from"] = twin["name"]
             slots.append(entry)
 
-        bonuses = [e for e in effects if e["set"] == english]
+        bonus_names = {english, *BONUS_ALIASES.get(english, [])}
+        bonuses = [e for e in effects if e["set"] in bonus_names]
         out.append({
             "set_th": r["set"],
             "set": english,
