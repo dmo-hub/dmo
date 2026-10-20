@@ -49,7 +49,7 @@ SEARCH = ("https://www.vplay.in.th/wp-json/wp/v2/search"
           "?search={q}&per_page=50&page={page}")
 # Only these two turned up real upgrade tables across 279 searched posts;
 # the wider terms match craft tables and event calendars instead.
-QUERIES = ["ระดับการเสริมแกร่ง", "เสริมแกร่ง", "ค่าสเตตัส"]
+QUERIES = ["ระดับการเสริมแกร่ง", "เสริมแกร่ง", "ค่าสเตตัส", "ประเภทสเตตัส"]
 
 LEVEL_HEADER = "ระดับการเสริมแกร่ง"
 BASE_ROW = "พื้นฐาน"
@@ -76,6 +76,8 @@ STAT_ALIASES = {
     "ความเร็วในการโจมตี": "AS",
     "ความเร็วในการเคลื่อนที่": "Speed",
     "เป็นมิตร": "Affinity",
+    "scd": "SCD",
+    "ms": "Speed",
 }
 PCT_STATS = {"CT", "EV", "BL", "Skill DMG", "Final DMG", "EXP", "Crit DMG"}
 
@@ -92,6 +94,20 @@ SLOT_PIECES = {
     "อุปกรณ์ส่วนรองเท้า": "รองเท้าแห่งสปิริต",
 }
 OPTION_ROW = "ออฟชั่น"
+
+# Four Holy Beasts gear: one table per piece, a column per grade, and a
+# second stat restarting at Lv.0 under a repeated header row. NA sells these
+# under the English names below (its Four Holy Beasts fragment exchange);
+# dmowiki has no page for them yet, so this is the only stat source.
+GRADE_HEADER = ["ประเภทไอเทม", "ประเภทสเตตัส"]
+GRADE_PIECE_EN = {
+    "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน": "Noble Head Ornament of Huanglongmon",
+    "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน": "Phoenix Feather Robe of Zhuqiaomon",
+    "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน": "Abyssal Armor of Xuanwumon",
+    "กางเกงแห่งสายฟ้าของจินลอนมอน": "Thunderbolt Bottom of Qinglongmon",
+    "สนับมือศักดิ์สิทธิ์ของไบฟูมอน": "Immaculate Gauntlet of Baihumon",
+    "รองเท้าแห่งสี่สัตว์เทพ": "Shoes of the Four Holy Beasts",
+}
 
 
 def clean(html):
@@ -202,6 +218,52 @@ def parse_blocks(html):
     return items
 
 
+def parse_grade_tables(html):
+    """Pull (piece [grade], [levels]) pairs out of the per-grade tables."""
+    items = []
+    for table in re.findall(r"<table.*?</table>", html, re.S):
+        rows = [cells(r) for r in re.findall(r"<tr[^>]*>.*?</tr>", table, re.S)]
+        if not rows or rows[0][:2] != GRADE_HEADER:
+            continue
+        grades = rows[0][3:]
+        piece, stat = None, None
+        by_grade = {g: {} for g in grades}     # grade -> level -> stats
+        for c in rows[1:]:
+            if len(c) == len(grades) + 3:
+                piece, stat, lvl_cell, values = c[0], c[1], c[2], c[3:]
+            elif len(c) == len(grades) + 2:
+                stat, lvl_cell, values = c[0], c[1], c[2:]
+            elif len(c) == len(grades) + 1:
+                lvl_cell, values = c[0], c[1:]
+            else:
+                continue
+            m = re.fullmatch(r"Lv\.?\s*(\d{1,2})", lvl_cell)
+            key = canon_stat(stat or "")
+            if not (m and key and piece):
+                continue
+            lvl = int(m.group(1))
+            for grade, raw in zip(grades, values):
+                got = parse_value(raw)
+                stats = by_grade[grade].setdefault(lvl, [])
+                if got is None:
+                    continue
+                val, pct = got
+                stats.append({"stat": key,
+                              "unit": "pct" if (pct or key in PCT_STATS) else "flat",
+                              "value": val})
+        if not piece:
+            continue
+        for grade in grades:
+            levels = [{"upgrade": lvl, "stats": st}
+                      for lvl, st in sorted(by_grade[grade].items()) if st]
+            if levels:
+                item = {"name": "%s [%s]" % (piece, grade), "levels": levels}
+                if piece in GRADE_PIECE_EN:
+                    item["piece_en"] = GRADE_PIECE_EN[piece]
+                items.append(item)
+    return items
+
+
 def cache_path(url):
     import hashlib
     return CACHE / (hashlib.sha1(url.encode()).hexdigest()[:16] + ".html")
@@ -250,9 +312,9 @@ def main():
         except Exception as exc:
             print("  ERR %s %s" % (url[:60], exc))
             continue
-        if LEVEL_HEADER not in html:
+        if LEVEL_HEADER not in html and GRADE_HEADER[1] not in html:
             continue
-        for block in parse_blocks(html):
+        for block in parse_blocks(html) + parse_grade_tables(html):
             key = block["name"]
             if key in seen:      # the same table is reposted in the patch note
                 continue

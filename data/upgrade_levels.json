@@ -224,6 +224,866 @@
       "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
     },
     {
+      "name": "กางเกงแห่งสายฟ้าของจินลอนมอน [ปกติ]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 4.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 120.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 18.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 210.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 36.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 228.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 54.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 246.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 72.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 264.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 90.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 282.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 108.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 126.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 318.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 144.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 336.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 162.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 354.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 180.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 372.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Thunderbolt Bottom of Qinglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "กางเกงแห่งสายฟ้าของจินลอนมอน [ยูนีค]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 12.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 160.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 24.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 280.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 48.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 304.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 72.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 328.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 96.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 352.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 120.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 376.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 144.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 168.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 424.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 192.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 448.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 216.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 472.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 240.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 496.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Thunderbolt Bottom of Qinglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "กางเกงแห่งสายฟ้าของจินลอนมอน [อัลติเมท]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 20.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 30.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 350.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 60.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 380.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 90.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 410.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 120.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 440.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 150.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 470.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 180.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 210.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 530.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 240.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 560.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 270.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 590.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 300.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 620.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Thunderbolt Bottom of Qinglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "กางเกงแห่งสายฟ้าของจินลอนมอน [เลเจนด์]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 16.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 180.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 27.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 315.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 54.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 342.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 81.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 369.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 108.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 396.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 135.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 423.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 162.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 450.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 189.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 477.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 216.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 504.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 243.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 531.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 270.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 558.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Thunderbolt Bottom of Qinglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "กางเกงแห่งสายฟ้าของจินลอนมอน [แรร์]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 8.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 140.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 21.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 245.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 42.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 266.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 63.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 287.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 84.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 308.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 105.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 329.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 126.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 350.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 147.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 371.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 168.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 392.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 189.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 413.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 210.0
+            },
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 434.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Thunderbolt Bottom of Qinglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
       "name": "ถุงมือแห่งสปิริต",
       "levels": [
         {
@@ -443,6 +1303,866 @@
         }
       ],
       "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
+    },
+    {
+      "name": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [ปกติ]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 80.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 10.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 150.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 180.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 159.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 195.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 168.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 210.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 177.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 225.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 186.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 240.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 195.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 255.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 204.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 270.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 213.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 285.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 222.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 231.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 315.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Noble Head Ornament of Huanglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [ยูนีค]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 120.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 200.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 240.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 212.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 260.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 224.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 280.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 236.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 248.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 320.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 260.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 340.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 272.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 360.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 284.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 380.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 296.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 308.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 420.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Noble Head Ornament of Huanglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [อัลติเมท]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 150.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 250.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 265.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 325.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 280.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 350.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 295.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 375.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 310.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 325.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 425.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 340.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 450.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 355.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 475.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 370.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 385.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 525.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Noble Head Ornament of Huanglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [เลเจนด์]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 130.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 25.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 225.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 270.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 239.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 293.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 252.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 315.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 266.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 338.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 279.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 360.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 293.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 383.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 306.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 405.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 320.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 428.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 333.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 450.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 347.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 473.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Noble Head Ornament of Huanglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [แรร์]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 100.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 15.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 175.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 210.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 186.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 228.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 196.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 245.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 207.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 263.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 217.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 280.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 228.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 298.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 238.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 315.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 249.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 333.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 259.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 350.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 270.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 368.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Noble Head Ornament of Huanglongmon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
     },
     {
       "name": "รองเท้าแห่งสปิริต",
@@ -696,6 +2416,951 @@
       "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
     },
     {
+      "name": "รองเท้าแห่งสี่สัตว์เทพ [ปกติ]",
+      "levels": [
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 60.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Shoes of the Four Holy Beasts",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "รองเท้าแห่งสี่สัตว์เทพ [ยูนีค]",
+      "levels": [
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 60.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 70.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 80.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 90.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 100.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 15.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Shoes of the Four Holy Beasts",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "รองเท้าแห่งสี่สัตว์เทพ [อัลติเมท]",
+      "levels": [
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 60.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 80.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 120.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 140.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 200.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 15.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 250.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 500.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 25.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Shoes of the Four Holy Beasts",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "รองเท้าแห่งสี่สัตว์เทพ [เลเจนด์]",
+      "levels": [
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 70.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 90.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 110.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 130.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 15.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 150.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Shoes of the Four Holy Beasts",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "รองเท้าแห่งสี่สัตว์เทพ [แรร์]",
+      "levels": [
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 60.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 70.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 80.0
+            },
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Shoes of the Four Holy Beasts",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [ปกติ]",
+      "levels": [
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Immaculate Gauntlet of Baihumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [ยูนีค]",
+      "levels": [
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 8.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Immaculate Gauntlet of Baihumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [อัลติเมท]",
+      "levels": [
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 8.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 9.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 12.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Immaculate Gauntlet of Baihumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [เลเจนด์]",
+      "levels": [
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 8.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Immaculate Gauntlet of Baihumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [แรร์]",
+      "levels": [
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 7.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Immaculate Gauntlet of Baihumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
       "name": "หมวกเกราะแห่งสปิริต",
       "levels": [
         {
@@ -917,6 +3582,866 @@
       "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
     },
     {
+      "name": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [ปกติ]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 30.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 120.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 120.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 240.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 240.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 360.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 360.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 480.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 480.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 600.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 780.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 780.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 960.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 960.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1140.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1140.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1320.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1320.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1500.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Abyssal Armor of Xuanwumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [ยูนีค]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 90.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 90.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 160.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 160.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 320.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 320.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 480.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 480.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 640.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 640.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 800.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1040.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1040.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1280.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1280.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1520.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1520.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1760.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1760.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2000.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2000.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Abyssal Armor of Xuanwumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [อัลติเมท]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 150.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 200.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 400.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 600.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 800.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1000.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1300.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1600.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1900.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1900.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2200.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2500.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2500.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Abyssal Armor of Xuanwumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [เลเจนด์]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 120.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 120.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 180.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 180.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 360.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 360.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 540.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 540.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 720.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 720.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 900.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 900.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1170.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1170.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1440.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1440.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1710.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1710.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1980.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1980.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2250.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2250.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Abyssal Armor of Xuanwumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [แรร์]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 60.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 60.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 140.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 140.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 280.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 280.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 420.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 420.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 560.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 560.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 700.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 700.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 910.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 910.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1120.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1120.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1330.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1330.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1540.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1540.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1750.0
+            },
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 1750.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Abyssal Armor of Xuanwumon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
       "name": "เครื่องประดับแห่งสปิริต",
       "levels": [
         {
@@ -1136,6 +4661,666 @@
         }
       ],
       "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
+    },
+    {
+      "name": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [ปกติ]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 165.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 180.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 195.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 210.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 225.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 240.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 255.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 270.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 285.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Phoenix Feather Robe of Zhuqiaomon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [ยูนีค]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 220.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 240.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 260.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 280.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 320.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 340.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 360.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 380.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Phoenix Feather Robe of Zhuqiaomon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [อัลติเมท]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 275.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 325.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 350.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 375.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 400.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 425.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 450.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 8.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 475.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Phoenix Feather Robe of Zhuqiaomon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [เลเจนด์]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 175.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 225.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 248.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 270.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 293.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 315.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 338.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 360.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 383.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 405.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 6.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 428.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 8.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Phoenix Feather Robe of Zhuqiaomon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
+    },
+    {
+      "name": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [แรร์]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 125.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 175.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 193.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 210.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 228.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 245.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 263.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 280.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 298.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 315.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 333.0
+            },
+            {
+              "stat": "SCD",
+              "unit": "pct",
+              "value": 4.0
+            }
+          ]
+        }
+      ],
+      "piece_en": "Phoenix Feather Robe of Zhuqiaomon",
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-88/"
     },
     {
       "name": "เสื้อแห่งสปิริต",
