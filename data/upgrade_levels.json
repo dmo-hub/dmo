@@ -1,7 +1,2307 @@
 {
-  "fetched_at": "2026-09-07",
+  "fetched_at": "2026-10-20",
   "source": "vplay.in.th",
   "items": [
+    {
+      "name": "กางเกงแห่งสปิริต",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2050.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2300.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 20.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2350.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 24.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 26.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2450.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 28.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 2500.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 7000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 7200.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 41.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 7400.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 42.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 7600.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 43.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 7800.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 44.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "DS",
+              "unit": "flat",
+              "value": 8000.0
+            },
+            {
+              "stat": "Skill DMG",
+              "unit": "pct",
+              "value": 45.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
+    },
+    {
+      "name": "ถุงมือแห่งสปิริต",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1550.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1650.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1750.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1800.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1850.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1900.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1950.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2000.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 4000.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 4200.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 4400.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 4600.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 4800.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 5000.0
+            },
+            {
+              "stat": "AS",
+              "unit": "pct",
+              "value": 5.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
+    },
+    {
+      "name": "รองเท้าแห่งสปิริต",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "Speed",
+              "unit": "pct",
+              "value": 30.0
+            },
+            {
+              "stat": "Affinity",
+              "unit": "flat",
+              "value": 40.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3500.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
+    },
+    {
+      "name": "หมวกเกราะแห่งสปิริต",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 10.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 12.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 13.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 14.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 15.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 16.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 30.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 17.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 34.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 18.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 36.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 19.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 38.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 20.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 40.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 45.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 47.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 51.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 49.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 52.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 51.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 53.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 53.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 54.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 55.0
+            },
+            {
+              "stat": "Crit DMG",
+              "unit": "pct",
+              "value": 55.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
+    },
+    {
+      "name": "เครื่องประดับแห่งสปิริต",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1050.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1300.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1350.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1400.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1450.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 4500.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 4700.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 4900.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 5100.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2300.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 5300.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 5500.0
+            },
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 2500.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
+    },
+    {
+      "name": "เสื้อแห่งสปิริต",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2050.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2300.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2350.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 625.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2400.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 650.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2450.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 675.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2500.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 700.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 7000.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 1500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 7200.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 1600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 7400.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 1700.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 7600.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 1800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 7800.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 1900.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 8000.0
+            },
+            {
+              "stat": "DE",
+              "unit": "flat",
+              "value": 2000.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Digimon King [AT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 300.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 350.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 400.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 450.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 500.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 600.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 700.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 900.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1000.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1200.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 4000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "AT",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 5000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Digimon King [CT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 300.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 350.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 400.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 450.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 500.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 600.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 700.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 900.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1000.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1200.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 4000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "CT",
+              "unit": "pct",
+              "value": 1500.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 5000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Digimon King [HP]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 700.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 900.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1700.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 1900.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2100.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2300.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2500.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 2800.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 3000.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 3500.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 4000.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 4000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HP",
+              "unit": "flat",
+              "value": 5000.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 5000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/"
+    },
+    {
+      "name": "แมกเนติก ID Card - Digimon King [HT]",
+      "levels": [
+        {
+          "upgrade": 0,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 50.0
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 100.0
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 150.0
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 250.0
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 300.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 350.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 400.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1200.0
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 450.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1400.0
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 500.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1600.0
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 600.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 1800.0
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 700.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2000.0
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 900.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 2500.0
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1000.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 3000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1200.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 4000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 2.0
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "HT",
+              "unit": "flat",
+              "value": 1500.0
+            },
+            {
+              "stat": "EXP",
+              "unit": "pct",
+              "value": 5000.0
+            },
+            {
+              "stat": "Final DMG",
+              "unit": "pct",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "post": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/"
+    },
     {
       "name": "แมกเนติก ID Card - Heaven Wings [AT]",
       "levels": [

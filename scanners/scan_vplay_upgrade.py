@@ -67,8 +67,31 @@ STAT_ALIASES = {
     "ความแม่นยำ": "HT",
     "คริติคอล": "CT",
     "ความเร็วโจมตี": "AS",
+    # Frontier (Spirit) gear labels. "อัตราโจมตี" is hit rate, not attack:
+    # summed over its two options at +15 it gives dmowiki's HT 5500.
+    "อัตราโจมตี": "HT",
+    "โจมตี": "AT",
+    "ป้องกัน": "DE",
+    "พลังโจมตีคริติคอล": "Crit DMG",
+    "ความเร็วในการโจมตี": "AS",
+    "ความเร็วในการเคลื่อนที่": "Speed",
+    "เป็นมิตร": "Affinity",
 }
-PCT_STATS = {"CT", "EV", "BL", "Skill DMG", "Final DMG", "EXP"}
+PCT_STATS = {"CT", "EV", "BL", "Skill DMG", "Final DMG", "EXP", "Crit DMG"}
+
+# Frontier gear: one table holds a block per slot, each opened by
+# [LEVEL_HEADER, <slot>] instead of a 1-cell title. The table never names the
+# piece, so the slot maps to the piece name its own post lists; every element
+# (Fire/Light/Ice/Wind/Thunder) shares the block.
+SLOT_PIECES = {
+    "อุปกรณ์ส่วนหัว": "หมวกเกราะแห่งสปิริต",
+    "อุปกรณ์เครื่องประดับ": "เครื่องประดับแห่งสปิริต",
+    "อุปกรณ์ส่วนเสื้อ": "เสื้อแห่งสปิริต",
+    "อุปกรณ์กางเกง": "กางเกงแห่งสปิริต",
+    "อุปกรณ์ส่วนมือ": "ถุงมือแห่งสปิริต",
+    "อุปกรณ์ส่วนรองเท้า": "รองเท้าแห่งสปิริต",
+}
+OPTION_ROW = "ออฟชั่น"
 
 
 def clean(html):
@@ -113,8 +136,20 @@ def parse_blocks(html):
         name = None
         stat_names = []
         levels = []
+        awaiting_labels = False
         for row in rows:
             c = cells(row)
+            if len(c) == 2 and c[0] == LEVEL_HEADER and c[1] in SLOT_PIECES:
+                if name and levels:
+                    items.append({"name": name, "levels": levels})
+                name, stat_names, levels = SLOT_PIECES[c[1]], [], []
+                awaiting_labels = True
+                continue
+            if awaiting_labels:
+                # "ออฟชั่น 1/2/3" first, then the row that names each option
+                if c and not c[0].startswith(OPTION_ROW):
+                    stat_names, awaiting_labels = c, False
+                continue
             if len(c) == 1:
                 # a heading row closes the previous block and opens the next
                 if name and levels:
@@ -151,11 +186,15 @@ def parse_blocks(html):
                 if got is None:
                     continue
                 val, pct = got
-                stats.append({
-                    "stat": stat,
-                    "unit": "pct" if (pct or stat in PCT_STATS) else "flat",
-                    "value": val,
-                })
+                unit = "pct" if (pct or stat in PCT_STATS) else "flat"
+                # Frontier options repeat a stat (CT twice on the helmet);
+                # the game adds them, as the registry does.
+                same = next((s for s in stats
+                             if s["stat"] == stat and s["unit"] == unit), None)
+                if same:
+                    same["value"] += val
+                    continue
+                stats.append({"stat": stat, "unit": unit, "value": val})
             if stats:
                 levels.append({"upgrade": lvl, "stats": stats})
         if name and levels:
