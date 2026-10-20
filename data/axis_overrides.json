@@ -253,6 +253,114 @@
       "name": "Magnetic ID Card - Time Ruler [HT]",
       "slot": "Perma ID Cards",
       "source": "vplay: ID Card \"สวมใส่เครื่องประดับจะถูกนำไปใช้กับชื่อของเทมเมอร์\" + ชนิด NamePlate Item ในภาพ"
+    },
+    "bottom-spirit-bottom": {
+      "axis": "digimon",
+      "name": "*:Spirit Bottom",
+      "slot": "Bottom",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "bottom-spirit-bottom-2": {
+      "axis": "digimon",
+      "name": "*:Spirit Bottom",
+      "slot": "Bottom",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "bottom-spirit-bottom-3": {
+      "axis": "digimon",
+      "name": "*:Spirit Bottom",
+      "slot": "Bottom",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "fashion-spirit-accessory": {
+      "axis": "digimon",
+      "name": "*:Spirit Accessory",
+      "slot": "Fashion",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "fashion-spirit-accessory-2": {
+      "axis": "digimon",
+      "name": "*:Spirit Accessory",
+      "slot": "Fashion",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "fashion-spirit-accessory-3": {
+      "axis": "digimon",
+      "name": "*:Spirit Accessory",
+      "slot": "Fashion",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "gloves-spirit-gloves": {
+      "axis": "digimon",
+      "name": "*:Spirit Gloves",
+      "slot": "Gloves",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "gloves-spirit-gloves-2": {
+      "axis": "digimon",
+      "name": "*:Spirit Gloves",
+      "slot": "Gloves",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "gloves-spirit-gloves-3": {
+      "axis": "digimon",
+      "name": "*:Spirit Gloves",
+      "slot": "Gloves",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "head-spirit-helmet": {
+      "axis": "digimon",
+      "name": "*:Spirit Helmet",
+      "slot": "Head",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "head-spirit-helmet-2": {
+      "axis": "digimon",
+      "name": "*:Spirit Helmet",
+      "slot": "Head",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "head-spirit-helmet-3": {
+      "axis": "digimon",
+      "name": "*:Spirit Helmet",
+      "slot": "Head",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "shoes-spirit-shoes": {
+      "axis": "digimon",
+      "name": "*:Spirit Shoes",
+      "slot": "Shoes",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "shoes-spirit-shoes-2": {
+      "axis": "digimon",
+      "name": "*:Spirit Shoes",
+      "slot": "Shoes",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "shoes-spirit-shoes-3": {
+      "axis": "digimon",
+      "name": "*:Spirit Shoes",
+      "slot": "Shoes",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "top-spirit-top": {
+      "axis": "digimon",
+      "name": "*:Spirit Top",
+      "slot": "Top",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "top-spirit-top-2": {
+      "axis": "digimon",
+      "name": "*:Spirit Top",
+      "slot": "Top",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
+    },
+    "top-spirit-top-3": {
+      "axis": "digimon",
+      "name": "*:Spirit Top",
+      "slot": "Top",
+      "source": "vplay 2026-10-15 (อุปกรณ์ฟรอนเทียร์): \"ค่าความสามารถจะเพิ่มให้กับดิจิมอนไม่ใช่เทมเมอร์\""
     }
   }
 }

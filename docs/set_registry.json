@@ -43,7 +43,9 @@
             "เสื้อของมิยาโกะ",
             "(ชิน) เสื้อของมิยาโกะ"
           ],
-          "stats": {},
+          "stats": {
+            "DE": 1000
+          },
           "stats_from": "Yolei Top"
         },
         {
@@ -182,7 +184,9 @@
           "accepts": [
             "น้ำแข็ง : เสื้อแห่งสปิริต"
           ],
-          "stats": {},
+          "stats": {
+            "DE": 2000
+          },
           "stats_from": "Ice:Spirit Top"
         },
         {
@@ -285,7 +289,9 @@
             "แจ็กเก็ตของไดสุเกะ",
             "(ชิน) แจ็กเก็ตของไดสุเกะ"
           ],
-          "stats": {},
+          "stats": {
+            "DE": 1000
+          },
           "stats_from": "Davis Top"
         },
         {
@@ -424,7 +430,9 @@
           "accepts": [
             "ลม : เสื้อแห่งสปิริต"
           ],
-          "stats": {},
+          "stats": {
+            "DE": 2000
+          },
           "stats_from": "Wind:Spirit Top"
         },
         {
@@ -592,7 +600,9 @@
           "accepts": [
             "สายฟ้า : เสื้อแห่งสปิริต"
           ],
-          "stats": {},
+          "stats": {
+            "DE": 2000
+          },
           "stats_from": "Thunder:Spirit Top"
         },
         {
@@ -692,7 +702,9 @@
           "accepts": [
             "แสง : เสื้อแห่งสปิริต"
           ],
-          "stats": {},
+          "stats": {
+            "DE": 2000
+          },
           "stats_from": "Light:Spirit Top"
         },
         {
@@ -795,7 +807,9 @@
             "เสื้อของทาเครุ",
             "(ชิน) เสื้อของทาเครุ"
           ],
-          "stats": {},
+          "stats": {
+            "DE": 1000
+          },
           "stats_from": "T.K Top"
         },
         {
@@ -934,7 +948,9 @@
           "accepts": [
             "ไฟ : เสื้อแห่งสปิริต"
           ],
-          "stats": {},
+          "stats": {
+            "DE": 2000
+          },
           "stats_from": "Fire:Spirit Top"
         },
         {

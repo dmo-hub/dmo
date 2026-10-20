@@ -427,14 +427,20 @@
      renamed -- the chipsets went from an invented English name to the one the
      game uses -- that saved name no longer matches anything, so the row would
      quietly lose its flag and its level lock while still holding the right
-     numbers. regId does not change, so it can put the name back. */
+     numbers. regId does not change, so it can put the name back. The axis is
+     refreshed the same way: it was copied at pick time, and a later answer
+     (the Spirit set moved from unknown to digimon) must reach rows already
+     saved, or the solver keeps dropping them. Stats are left alone -- the
+     player may have typed their own. */
   function relinkByRegId(rows, list) {
     var byId = {};
     (list || []).forEach(function (it) { byId[it.id] = it; });
     (rows || []).forEach(function (row) {
       if (!row.regId) return;
       var pick = byId[row.regId];
-      if (pick && pick.name !== row.name) row.name = pick.name;
+      if (!pick) return;
+      if (pick.name !== row.name) row.name = pick.name;
+      if (pick.axis && pick.axis !== row.regAxis) row.regAxis = pick.axis;
     });
   }
 
@@ -457,6 +463,23 @@
       levels[pick.name] = pick.level;
       saveLevels();
     }
+    applyLevelStats(row, pick, levels[pick.name]);
+  }
+
+  /* Pieces with a per-level table (vplay) follow the player's own upgrade
+     level instead of the wiki's top band. A level past the table clamps to
+     its top; a level whose stats have not unlocked yet is genuinely zero. */
+  function applyLevelStats(row, pick, lvl) {
+    if (!pick || !pick.levelStats) return;
+    var top = pick.upgradeMax !== undefined ? pick.upgradeMax
+      : Math.max.apply(null, Object.keys(pick.levelStats).map(Number));
+    var want = (lvl === undefined || lvl === null || lvl === "") ? top : num(lvl);
+    var at = Math.min(Math.max(0, Math.round(want)), top);
+    var s = pick.levelStats[String(at)] || {};
+    STAT_FIELDS.forEach(function (f) {
+      row[f.key] = s[f.key] !== undefined ? s[f.key] : 0;
+    });
+    row.regRanged = false;
   }
 
   /* An item whose axis the wiki never stated might feed the tamer instead of
@@ -566,11 +589,22 @@
     inp.placeholder = "+0";
     var key = it.name || "";
     inp.value = (key && levels[key] !== undefined) ? levels[key] : "";
+    var pick = it.name && it.slot ? findInRegistry(it.name, it.slot) : null;
+    if (pick && pick.upgradeMax !== undefined) inp.max = String(pick.upgradeMax);
     inp.addEventListener("input", function () {
       var k = it.name || "";
       if (!k) return;
       if (inp.value === "") { delete levels[k]; } else { levels[k] = num(inp.value); }
       saveLevels();
+    });
+    /* Re-rendering on every keystroke would steal focus mid-typing, so the
+       stats follow the level once the field is committed. */
+    inp.addEventListener("change", function () {
+      var p = it.name && it.slot ? findInRegistry(it.name, it.slot) : null;
+      if (!p || !p.levelStats) return;
+      applyLevelStats(it, p, levels[it.name]);
+      save();
+      renderAcc();
     });
     td.appendChild(inp);
     return td;
@@ -777,7 +811,7 @@
     if (registryBuiltAt) add("ข้อมูลอัปเดต <b>" + registryBuiltAt + "</b>");
     add("ทะเบียน: ของสวม " + registry.length +
         " · ชิป " + chipRegistry.length + " · เซ็ต " + setRegistry.length);
-    add("ยังไม่รวม: อุปกรณ์ฟรอนเทียร์ · ค่าที่วิกิให้เป็นช่วงใช้ค่าสูงสุดของช่วง", "go-gap");
+    add("ชุดสปิริตและสี่สัตว์เทพใหม่ใช้ค่าตามระดับตีบวก · ค่าที่วิกิให้เป็นช่วงใช้ค่าสูงสุดของช่วง", "go-gap");
     box.hidden = false;
 
     var by = {};

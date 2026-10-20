@@ -50,7 +50,7 @@ STAT_ALIASES = {
     "attack": "AT", "at": "AT", "atk": "AT",
     "hit rate": "HT", "ht": "HT", "hit": "HT",
     "critical": "CT", "ct": "CT", "crit": "CT",
-    "defense": "DE", "de": "DE", "def": "DE",
+    "defense": "DE", "de": "DE", "def": "DE", "deff": "DE",
     "evade": "EV", "ev": "EV", "evasion": "EV",
     "block": "BL", "bl": "BL",
     "attack speed": "AS", "as": "AS",

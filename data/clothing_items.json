@@ -477,7 +477,7 @@
       "id": "bottom-spirit-bottom",
       "name": "*:Spirit Bottom",
       "slot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "DS",
@@ -489,13 +489,14 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
-      "icon": "/images/e/ed/DigimonFrontierBottom.png"
+      "icon": "/images/e/ed/DigimonFrontierBottom.png",
+      "axis_source": "override"
     },
     {
       "id": "bottom-spirit-bottom-2",
       "name": "*:Spirit Bottom",
       "slot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "DS",
@@ -514,13 +515,14 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
-      "icon": "/images/e/ed/DigimonFrontierBottom.png"
+      "icon": "/images/e/ed/DigimonFrontierBottom.png",
+      "axis_source": "override"
     },
     {
       "id": "bottom-spirit-bottom-3",
       "name": "*:Spirit Bottom",
       "slot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "DS",
@@ -546,7 +548,8 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
-      "icon": "/images/e/ed/DigimonFrontierBottom.png"
+      "icon": "/images/e/ed/DigimonFrontierBottom.png",
+      "axis_source": "override"
     },
     {
       "id": "bottom-trendy-wide-pants-event",
@@ -3216,7 +3219,7 @@
       "id": "fashion-spirit-accessory",
       "name": "*:Spirit Accessory",
       "slot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HT",
@@ -3228,13 +3231,14 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
-      "icon": "/images/6/6c/DigimonFrontierFashion.png"
+      "icon": "/images/6/6c/DigimonFrontierFashion.png",
+      "axis_source": "override"
     },
     {
       "id": "fashion-spirit-accessory-2",
       "name": "*:Spirit Accessory",
       "slot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HT",
@@ -3253,13 +3257,14 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
-      "icon": "/images/6/6c/DigimonFrontierFashion.png"
+      "icon": "/images/6/6c/DigimonFrontierFashion.png",
+      "axis_source": "override"
     },
     {
       "id": "fashion-spirit-accessory-3",
       "name": "*:Spirit Accessory",
       "slot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HT",
@@ -3285,7 +3290,8 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
-      "icon": "/images/6/6c/DigimonFrontierFashion.png"
+      "icon": "/images/6/6c/DigimonFrontierFashion.png",
+      "axis_source": "override"
     },
     {
       "id": "fashion-sunglasses",
@@ -4294,7 +4300,7 @@
       "id": "gloves-spirit-gloves",
       "name": "*:Spirit Gloves",
       "slot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "AT",
@@ -4306,13 +4312,14 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
-      "icon": "/images/8/80/DigimonFrontierGloves.png"
+      "icon": "/images/8/80/DigimonFrontierGloves.png",
+      "axis_source": "override"
     },
     {
       "id": "gloves-spirit-gloves-2",
       "name": "*:Spirit Gloves",
       "slot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "AT",
@@ -4324,13 +4331,14 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
-      "icon": "/images/8/80/DigimonFrontierGloves.png"
+      "icon": "/images/8/80/DigimonFrontierGloves.png",
+      "axis_source": "override"
     },
     {
       "id": "gloves-spirit-gloves-3",
       "name": "*:Spirit Gloves",
       "slot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "AT",
@@ -4349,7 +4357,8 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
-      "icon": "/images/8/80/DigimonFrontierGloves.png"
+      "icon": "/images/8/80/DigimonFrontierGloves.png",
+      "axis_source": "override"
     },
     {
       "id": "gloves-square-lollipop",
@@ -4744,7 +4753,7 @@
       "id": "head-spirit-helmet",
       "name": "*:Spirit Helmet",
       "slot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "CT",
@@ -4756,13 +4765,14 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
-      "icon": "/images/2/2b/DigimonFrontierHead.png"
+      "icon": "/images/2/2b/DigimonFrontierHead.png",
+      "axis_source": "override"
     },
     {
       "id": "head-spirit-helmet-2",
       "name": "*:Spirit Helmet",
       "slot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "CT",
@@ -4781,13 +4791,14 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
-      "icon": "/images/2/2b/DigimonFrontierHead.png"
+      "icon": "/images/2/2b/DigimonFrontierHead.png",
+      "axis_source": "override"
     },
     {
       "id": "head-spirit-helmet-3",
       "name": "*:Spirit Helmet",
       "slot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "CT",
@@ -4813,7 +4824,8 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
-      "icon": "/images/2/2b/DigimonFrontierHead.png"
+      "icon": "/images/2/2b/DigimonFrontierHead.png",
+      "axis_source": "override"
     },
     {
       "id": "head-spooky-pumpkinmon-s-mask-30-days",
@@ -10463,7 +10475,7 @@
       "id": "shoes-spirit-shoes",
       "name": "*:Spirit Shoes",
       "slot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "Speed",
@@ -10474,13 +10486,14 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
-      "icon": "/images/a/a8/DigimonFrontierShoes.png"
+      "icon": "/images/a/a8/DigimonFrontierShoes.png",
+      "axis_source": "override"
     },
     {
       "id": "shoes-spirit-shoes-2",
       "name": "*:Spirit Shoes",
       "slot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "Speed",
@@ -10497,13 +10510,14 @@
       ],
       "upgrade": 5,
       "upgrade_max": 9,
-      "icon": "/images/a/a8/DigimonFrontierShoes.png"
+      "icon": "/images/a/a8/DigimonFrontierShoes.png",
+      "axis_source": "override"
     },
     {
       "id": "shoes-spirit-shoes-3",
       "name": "*:Spirit Shoes",
       "slot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "Speed",
@@ -10527,7 +10541,8 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
-      "icon": "/images/a/a8/DigimonFrontierShoes.png"
+      "icon": "/images/a/a8/DigimonFrontierShoes.png",
+      "axis_source": "override"
     },
     {
       "id": "shoes-spooky-wizardmon-shoes-30-days",
@@ -12172,7 +12187,7 @@
       "id": "top-spirit-top",
       "name": "*:Spirit Top",
       "slot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -12184,13 +12199,14 @@
       ],
       "upgrade": 0,
       "upgrade_max": 4,
-      "icon": "/images/d/d5/DigimonFrontierTop.png"
+      "icon": "/images/d/d5/DigimonFrontierTop.png",
+      "axis_source": "override"
     },
     {
       "id": "top-spirit-top-2",
       "name": "*:Spirit Top",
       "slot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -12198,17 +12214,25 @@
           "random": false,
           "min": 2300.0,
           "max": 2500.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "min": 600.0,
+          "max": 700.0
         }
       ],
       "upgrade": 5,
       "upgrade_max": 9,
-      "icon": "/images/d/d5/DigimonFrontierTop.png"
+      "icon": "/images/d/d5/DigimonFrontierTop.png",
+      "axis_source": "override"
     },
     {
       "id": "top-spirit-top-3",
       "name": "*:Spirit Top",
       "slot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "stats": [
         {
           "stat": "HP",
@@ -12216,6 +12240,13 @@
           "random": false,
           "min": 4000.0,
           "max": 4500.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "min": 1500.0,
+          "max": 2000.0
         },
         {
           "stat": "HP",
@@ -12227,7 +12258,8 @@
       ],
       "upgrade": 10,
       "upgrade_max": 15,
-      "icon": "/images/d/d5/DigimonFrontierTop.png"
+      "icon": "/images/d/d5/DigimonFrontierTop.png",
+      "axis_source": "override"
     },
     {
       "id": "top-spooky-soulmon-s-robe-30-days",
@@ -12369,6 +12401,13 @@
           "random": false,
           "min": 1300.0,
           "max": 1500.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "min": 200.0,
+          "max": 300.0
         }
       ],
       "upgrade": 5,
@@ -12388,6 +12427,13 @@
           "random": false,
           "min": 1600.0,
           "max": 2500.0
+        },
+        {
+          "stat": "DE",
+          "unit": "flat",
+          "random": false,
+          "min": 350.0,
+          "max": 1000.0
         },
         {
           "stat": "HP",
@@ -12761,7 +12807,7 @@
     {
       "table": 56,
       "heading": "Earrings",
-      "rows": 5,
+      "rows": 4,
       "reason": "rows without a readable name or stat"
     },
     {
@@ -12791,7 +12837,7 @@
     {
       "table": 62,
       "heading": "Bracelets",
-      "rows": 3,
+      "rows": 2,
       "reason": "rows without a readable name or stat"
     }
   ]

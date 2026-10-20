@@ -118,14 +118,13 @@
       "name": "Fire:Spirit Bottom",
       "slot": "bottom",
       "wikiSlot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
       "icon": "img/gear/digimonfrontierbottom-fire.png",
       "DS": 8000,
-      "ranged": true,
       "extra": [
         {
           "stat": "Skill DMG",
@@ -133,6 +132,56 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "DS": 2000
+        },
+        "1": {
+          "DS": 2050
+        },
+        "2": {
+          "DS": 2100
+        },
+        "3": {
+          "DS": 2150
+        },
+        "4": {
+          "DS": 2250
+        },
+        "5": {
+          "DS": 2300
+        },
+        "6": {
+          "DS": 2350
+        },
+        "7": {
+          "DS": 2400
+        },
+        "8": {
+          "DS": 2450
+        },
+        "9": {
+          "DS": 2500
+        },
+        "10": {
+          "DS": 7000
+        },
+        "11": {
+          "DS": 7200
+        },
+        "12": {
+          "DS": 7400
+        },
+        "13": {
+          "DS": 7600
+        },
+        "14": {
+          "DS": 7800
+        },
+        "15": {
+          "DS": 8000
+        }
+      },
       "nameTh": "ไฟ : กางเกงแห่งสปิริต"
     },
     {
@@ -151,14 +200,13 @@
       "name": "Ice:Spirit Bottom",
       "slot": "bottom",
       "wikiSlot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
       "icon": "img/gear/digimonfrontierbottom-ice.png",
       "DS": 8000,
-      "ranged": true,
       "extra": [
         {
           "stat": "Skill DMG",
@@ -166,6 +214,56 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "DS": 2000
+        },
+        "1": {
+          "DS": 2050
+        },
+        "2": {
+          "DS": 2100
+        },
+        "3": {
+          "DS": 2150
+        },
+        "4": {
+          "DS": 2250
+        },
+        "5": {
+          "DS": 2300
+        },
+        "6": {
+          "DS": 2350
+        },
+        "7": {
+          "DS": 2400
+        },
+        "8": {
+          "DS": 2450
+        },
+        "9": {
+          "DS": 2500
+        },
+        "10": {
+          "DS": 7000
+        },
+        "11": {
+          "DS": 7200
+        },
+        "12": {
+          "DS": 7400
+        },
+        "13": {
+          "DS": 7600
+        },
+        "14": {
+          "DS": 7800
+        },
+        "15": {
+          "DS": 8000
+        }
+      },
       "nameTh": "น้ำแข็ง : กางเกงแห่งสปิริต"
     },
     {
@@ -191,14 +289,13 @@
       "name": "Light:Spirit Bottom",
       "slot": "bottom",
       "wikiSlot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
       "icon": "img/gear/digimonfrontierbottom-light.png",
       "DS": 8000,
-      "ranged": true,
       "extra": [
         {
           "stat": "Skill DMG",
@@ -206,6 +303,56 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "DS": 2000
+        },
+        "1": {
+          "DS": 2050
+        },
+        "2": {
+          "DS": 2100
+        },
+        "3": {
+          "DS": 2150
+        },
+        "4": {
+          "DS": 2250
+        },
+        "5": {
+          "DS": 2300
+        },
+        "6": {
+          "DS": 2350
+        },
+        "7": {
+          "DS": 2400
+        },
+        "8": {
+          "DS": 2450
+        },
+        "9": {
+          "DS": 2500
+        },
+        "10": {
+          "DS": 7000
+        },
+        "11": {
+          "DS": 7200
+        },
+        "12": {
+          "DS": 7400
+        },
+        "13": {
+          "DS": 7600
+        },
+        "14": {
+          "DS": 7800
+        },
+        "15": {
+          "DS": 8000
+        }
+      },
       "nameTh": "แสง : กางเกงแห่งสปิริต"
     },
     {
@@ -287,14 +434,13 @@
       "name": "Thunder:Spirit Bottom",
       "slot": "bottom",
       "wikiSlot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
       "icon": "img/gear/digimonfrontierbottom-thunder.png",
       "DS": 8000,
-      "ranged": true,
       "extra": [
         {
           "stat": "Skill DMG",
@@ -302,7 +448,342 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "DS": 2000
+        },
+        "1": {
+          "DS": 2050
+        },
+        "2": {
+          "DS": 2100
+        },
+        "3": {
+          "DS": 2150
+        },
+        "4": {
+          "DS": 2250
+        },
+        "5": {
+          "DS": 2300
+        },
+        "6": {
+          "DS": 2350
+        },
+        "7": {
+          "DS": 2400
+        },
+        "8": {
+          "DS": 2450
+        },
+        "9": {
+          "DS": 2500
+        },
+        "10": {
+          "DS": 7000
+        },
+        "11": {
+          "DS": 7200
+        },
+        "12": {
+          "DS": 7400
+        },
+        "13": {
+          "DS": 7600
+        },
+        "14": {
+          "DS": 7800
+        },
+        "15": {
+          "DS": 8000
+        }
+      },
       "nameTh": "สายฟ้า : กางเกงแห่งสปิริต"
+    },
+    {
+      "id": "bottom-thunderbolt-bottom-of-qinglongmon-legend",
+      "name": "Thunderbolt Bottom of Qinglongmon [Legend]",
+      "slot": "bottom",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [เลเจนด์]",
+      "levelStats": {
+        "0": {
+          "DE": 16,
+          "HT": 180
+        },
+        "1": {
+          "DE": 27,
+          "HT": 315
+        },
+        "2": {
+          "DE": 54,
+          "HT": 342
+        },
+        "3": {
+          "DE": 81,
+          "HT": 369
+        },
+        "4": {
+          "DE": 108,
+          "HT": 396
+        },
+        "5": {
+          "DE": 135,
+          "HT": 423
+        },
+        "6": {
+          "DE": 162,
+          "HT": 450
+        },
+        "7": {
+          "DE": 189,
+          "HT": 477
+        },
+        "8": {
+          "DE": 216,
+          "HT": 504
+        },
+        "9": {
+          "DE": 243,
+          "HT": 531
+        },
+        "10": {
+          "DE": 270,
+          "HT": 558
+        }
+      },
+      "DE": 270,
+      "HT": 558
+    },
+    {
+      "id": "bottom-thunderbolt-bottom-of-qinglongmon-normal",
+      "name": "Thunderbolt Bottom of Qinglongmon [Normal]",
+      "slot": "bottom",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [ปกติ]",
+      "levelStats": {
+        "0": {
+          "DE": 4,
+          "HT": 120
+        },
+        "1": {
+          "DE": 18,
+          "HT": 210
+        },
+        "2": {
+          "DE": 36,
+          "HT": 228
+        },
+        "3": {
+          "DE": 54,
+          "HT": 246
+        },
+        "4": {
+          "DE": 72,
+          "HT": 264
+        },
+        "5": {
+          "DE": 90,
+          "HT": 282
+        },
+        "6": {
+          "DE": 108,
+          "HT": 300
+        },
+        "7": {
+          "DE": 126,
+          "HT": 318
+        },
+        "8": {
+          "DE": 144,
+          "HT": 336
+        },
+        "9": {
+          "DE": 162,
+          "HT": 354
+        },
+        "10": {
+          "DE": 180,
+          "HT": 372
+        }
+      },
+      "DE": 180,
+      "HT": 372
+    },
+    {
+      "id": "bottom-thunderbolt-bottom-of-qinglongmon-rare",
+      "name": "Thunderbolt Bottom of Qinglongmon [Rare]",
+      "slot": "bottom",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [แรร์]",
+      "levelStats": {
+        "0": {
+          "DE": 8,
+          "HT": 140
+        },
+        "1": {
+          "DE": 21,
+          "HT": 245
+        },
+        "2": {
+          "DE": 42,
+          "HT": 266
+        },
+        "3": {
+          "DE": 63,
+          "HT": 287
+        },
+        "4": {
+          "DE": 84,
+          "HT": 308
+        },
+        "5": {
+          "DE": 105,
+          "HT": 329
+        },
+        "6": {
+          "DE": 126,
+          "HT": 350
+        },
+        "7": {
+          "DE": 147,
+          "HT": 371
+        },
+        "8": {
+          "DE": 168,
+          "HT": 392
+        },
+        "9": {
+          "DE": 189,
+          "HT": 413
+        },
+        "10": {
+          "DE": 210,
+          "HT": 434
+        }
+      },
+      "DE": 210,
+      "HT": 434
+    },
+    {
+      "id": "bottom-thunderbolt-bottom-of-qinglongmon-ultimate",
+      "name": "Thunderbolt Bottom of Qinglongmon [Ultimate]",
+      "slot": "bottom",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [อัลติเมท]",
+      "levelStats": {
+        "0": {
+          "DE": 20,
+          "HT": 200
+        },
+        "1": {
+          "DE": 30,
+          "HT": 350
+        },
+        "2": {
+          "DE": 60,
+          "HT": 380
+        },
+        "3": {
+          "DE": 90,
+          "HT": 410
+        },
+        "4": {
+          "DE": 120,
+          "HT": 440
+        },
+        "5": {
+          "DE": 150,
+          "HT": 470
+        },
+        "6": {
+          "DE": 180,
+          "HT": 500
+        },
+        "7": {
+          "DE": 210,
+          "HT": 530
+        },
+        "8": {
+          "DE": 240,
+          "HT": 560
+        },
+        "9": {
+          "DE": 270,
+          "HT": 590
+        },
+        "10": {
+          "DE": 300,
+          "HT": 620
+        }
+      },
+      "DE": 300,
+      "HT": 620
+    },
+    {
+      "id": "bottom-thunderbolt-bottom-of-qinglongmon-unique",
+      "name": "Thunderbolt Bottom of Qinglongmon [Unique]",
+      "slot": "bottom",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "กางเกงแห่งสายฟ้าของจินลอนมอน [ยูนีค]",
+      "levelStats": {
+        "0": {
+          "DE": 12,
+          "HT": 160
+        },
+        "1": {
+          "DE": 24,
+          "HT": 280
+        },
+        "2": {
+          "DE": 48,
+          "HT": 304
+        },
+        "3": {
+          "DE": 72,
+          "HT": 328
+        },
+        "4": {
+          "DE": 96,
+          "HT": 352
+        },
+        "5": {
+          "DE": 120,
+          "HT": 376
+        },
+        "6": {
+          "DE": 144,
+          "HT": 400
+        },
+        "7": {
+          "DE": 168,
+          "HT": 424
+        },
+        "8": {
+          "DE": 192,
+          "HT": 448
+        },
+        "9": {
+          "DE": 216,
+          "HT": 472
+        },
+        "10": {
+          "DE": 240,
+          "HT": 496
+        }
+      },
+      "DE": 240,
+      "HT": 496
     },
     {
       "id": "bottom-trendy-wide-pants-event",
@@ -321,14 +802,13 @@
       "name": "Wind:Spirit Bottom",
       "slot": "bottom",
       "wikiSlot": "Bottom",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
       "icon": "img/gear/digimonfrontierbottom-wind.png",
       "DS": 8000,
-      "ranged": true,
       "extra": [
         {
           "stat": "Skill DMG",
@@ -336,6 +816,56 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "DS": 2000
+        },
+        "1": {
+          "DS": 2050
+        },
+        "2": {
+          "DS": 2100
+        },
+        "3": {
+          "DS": 2150
+        },
+        "4": {
+          "DS": 2250
+        },
+        "5": {
+          "DS": 2300
+        },
+        "6": {
+          "DS": 2350
+        },
+        "7": {
+          "DS": 2400
+        },
+        "8": {
+          "DS": 2450
+        },
+        "9": {
+          "DS": 2500
+        },
+        "10": {
+          "DS": 7000
+        },
+        "11": {
+          "DS": 7200
+        },
+        "12": {
+          "DS": 7400
+        },
+        "13": {
+          "DS": 7600
+        },
+        "14": {
+          "DS": 7800
+        },
+        "15": {
+          "DS": 8000
+        }
+      },
       "nameTh": "ลม : กางเกงแห่งสปิริต"
     },
     {
@@ -845,7 +1375,7 @@
       "name": "Fire:Spirit Accessory",
       "slot": "fashion",
       "wikiSlot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -853,7 +1383,67 @@
       "icon": "img/gear/digimonfrontierfashion-fire.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "HT": 1000
+        },
+        "1": {
+          "HT": 1050
+        },
+        "2": {
+          "HT": 1100
+        },
+        "3": {
+          "HT": 1150
+        },
+        "4": {
+          "HT": 1250
+        },
+        "5": {
+          "HT": 1300,
+          "AT": 1000
+        },
+        "6": {
+          "HT": 1350,
+          "AT": 1200
+        },
+        "7": {
+          "HT": 1400,
+          "AT": 1300
+        },
+        "8": {
+          "HT": 1450,
+          "AT": 1400
+        },
+        "9": {
+          "HT": 1500,
+          "AT": 1500
+        },
+        "10": {
+          "HT": 4500,
+          "AT": 2000
+        },
+        "11": {
+          "HT": 4700,
+          "AT": 2100
+        },
+        "12": {
+          "HT": 4900,
+          "AT": 2200
+        },
+        "13": {
+          "HT": 5100,
+          "AT": 2300
+        },
+        "14": {
+          "HT": 5300,
+          "AT": 2400
+        },
+        "15": {
+          "HT": 5500,
+          "AT": 2500
+        }
+      },
       "nameTh": "ไฟ : เครื่องประดับแห่งสปิริต"
     },
     {
@@ -878,7 +1468,7 @@
       "name": "Ice:Spirit Accessory",
       "slot": "fashion",
       "wikiSlot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -886,7 +1476,67 @@
       "icon": "img/gear/digimonfrontierfashion-ice.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "HT": 1000
+        },
+        "1": {
+          "HT": 1050
+        },
+        "2": {
+          "HT": 1100
+        },
+        "3": {
+          "HT": 1150
+        },
+        "4": {
+          "HT": 1250
+        },
+        "5": {
+          "HT": 1300,
+          "AT": 1000
+        },
+        "6": {
+          "HT": 1350,
+          "AT": 1200
+        },
+        "7": {
+          "HT": 1400,
+          "AT": 1300
+        },
+        "8": {
+          "HT": 1450,
+          "AT": 1400
+        },
+        "9": {
+          "HT": 1500,
+          "AT": 1500
+        },
+        "10": {
+          "HT": 4500,
+          "AT": 2000
+        },
+        "11": {
+          "HT": 4700,
+          "AT": 2100
+        },
+        "12": {
+          "HT": 4900,
+          "AT": 2200
+        },
+        "13": {
+          "HT": 5100,
+          "AT": 2300
+        },
+        "14": {
+          "HT": 5300,
+          "AT": 2400
+        },
+        "15": {
+          "HT": 5500,
+          "AT": 2500
+        }
+      },
       "nameTh": "น้ำแข็ง : เครื่องประดับแห่งสปิริต"
     },
     {
@@ -916,7 +1566,7 @@
       "name": "Light:Spirit Accessory",
       "slot": "fashion",
       "wikiSlot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -924,8 +1574,328 @@
       "icon": "img/gear/digimonfrontierfashion-light.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "HT": 1000
+        },
+        "1": {
+          "HT": 1050
+        },
+        "2": {
+          "HT": 1100
+        },
+        "3": {
+          "HT": 1150
+        },
+        "4": {
+          "HT": 1250
+        },
+        "5": {
+          "HT": 1300,
+          "AT": 1000
+        },
+        "6": {
+          "HT": 1350,
+          "AT": 1200
+        },
+        "7": {
+          "HT": 1400,
+          "AT": 1300
+        },
+        "8": {
+          "HT": 1450,
+          "AT": 1400
+        },
+        "9": {
+          "HT": 1500,
+          "AT": 1500
+        },
+        "10": {
+          "HT": 4500,
+          "AT": 2000
+        },
+        "11": {
+          "HT": 4700,
+          "AT": 2100
+        },
+        "12": {
+          "HT": 4900,
+          "AT": 2200
+        },
+        "13": {
+          "HT": 5100,
+          "AT": 2300
+        },
+        "14": {
+          "HT": 5300,
+          "AT": 2400
+        },
+        "15": {
+          "HT": 5500,
+          "AT": 2500
+        }
+      },
       "nameTh": "แสง : เครื่องประดับแห่งสปิริต"
+    },
+    {
+      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-legend",
+      "name": "Phoenix Feather Robe of Zhuqiaomon [Legend]",
+      "slot": "fashion",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [เลเจนด์]",
+      "levelStats": {
+        "0": {
+          "AT": 175
+        },
+        "1": {
+          "AT": 225
+        },
+        "2": {
+          "AT": 248
+        },
+        "3": {
+          "AT": 270
+        },
+        "4": {
+          "AT": 293
+        },
+        "5": {
+          "AT": 315
+        },
+        "6": {
+          "AT": 338
+        },
+        "7": {
+          "AT": 360
+        },
+        "8": {
+          "AT": 383
+        },
+        "9": {
+          "AT": 405
+        },
+        "10": {
+          "AT": 428
+        }
+      },
+      "AT": 428,
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 8.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-normal",
+      "name": "Phoenix Feather Robe of Zhuqiaomon [Normal]",
+      "slot": "fashion",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [ปกติ]",
+      "levelStats": {
+        "0": {
+          "AT": 100
+        },
+        "1": {
+          "AT": 150
+        },
+        "2": {
+          "AT": 165
+        },
+        "3": {
+          "AT": 180
+        },
+        "4": {
+          "AT": 195
+        },
+        "5": {
+          "AT": 210
+        },
+        "6": {
+          "AT": 225
+        },
+        "7": {
+          "AT": 240
+        },
+        "8": {
+          "AT": 255
+        },
+        "9": {
+          "AT": 270
+        },
+        "10": {
+          "AT": 285
+        }
+      },
+      "AT": 285,
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 2.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-rare",
+      "name": "Phoenix Feather Robe of Zhuqiaomon [Rare]",
+      "slot": "fashion",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [แรร์]",
+      "levelStats": {
+        "0": {
+          "AT": 125
+        },
+        "1": {
+          "AT": 175
+        },
+        "2": {
+          "AT": 193
+        },
+        "3": {
+          "AT": 210
+        },
+        "4": {
+          "AT": 228
+        },
+        "5": {
+          "AT": 245
+        },
+        "6": {
+          "AT": 263
+        },
+        "7": {
+          "AT": 280
+        },
+        "8": {
+          "AT": 298
+        },
+        "9": {
+          "AT": 315
+        },
+        "10": {
+          "AT": 333
+        }
+      },
+      "AT": 333,
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 4.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-ultimate",
+      "name": "Phoenix Feather Robe of Zhuqiaomon [Ultimate]",
+      "slot": "fashion",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [อัลติเมท]",
+      "levelStats": {
+        "0": {
+          "AT": 200
+        },
+        "1": {
+          "AT": 250
+        },
+        "2": {
+          "AT": 275
+        },
+        "3": {
+          "AT": 300
+        },
+        "4": {
+          "AT": 325
+        },
+        "5": {
+          "AT": 350
+        },
+        "6": {
+          "AT": 375
+        },
+        "7": {
+          "AT": 400
+        },
+        "8": {
+          "AT": 425
+        },
+        "9": {
+          "AT": 450
+        },
+        "10": {
+          "AT": 475
+        }
+      },
+      "AT": 475,
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "fashion-phoenix-feather-robe-of-zhuqiaomon-unique",
+      "name": "Phoenix Feather Robe of Zhuqiaomon [Unique]",
+      "slot": "fashion",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เสื้อคลุมขนนกฟีนิกซ์ของซูเซมอน [ยูนีค]",
+      "levelStats": {
+        "0": {
+          "AT": 150
+        },
+        "1": {
+          "AT": 200
+        },
+        "2": {
+          "AT": 220
+        },
+        "3": {
+          "AT": 240
+        },
+        "4": {
+          "AT": 260
+        },
+        "5": {
+          "AT": 280
+        },
+        "6": {
+          "AT": 300
+        },
+        "7": {
+          "AT": 320
+        },
+        "8": {
+          "AT": 340
+        },
+        "9": {
+          "AT": 360
+        },
+        "10": {
+          "AT": 380
+        }
+      },
+      "AT": 380,
+      "extra": [
+        {
+          "stat": "SCD",
+          "value": 6.0,
+          "unit": "pct"
+        }
+      ]
     },
     {
       "id": "fashion-qinglongmon-s-lightning-cape",
@@ -966,7 +1936,7 @@
       "name": "Thunder:Spirit Accessory",
       "slot": "fashion",
       "wikiSlot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -974,7 +1944,67 @@
       "icon": "img/gear/digimonfrontierfashion-thunder.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "HT": 1000
+        },
+        "1": {
+          "HT": 1050
+        },
+        "2": {
+          "HT": 1100
+        },
+        "3": {
+          "HT": 1150
+        },
+        "4": {
+          "HT": 1250
+        },
+        "5": {
+          "HT": 1300,
+          "AT": 1000
+        },
+        "6": {
+          "HT": 1350,
+          "AT": 1200
+        },
+        "7": {
+          "HT": 1400,
+          "AT": 1300
+        },
+        "8": {
+          "HT": 1450,
+          "AT": 1400
+        },
+        "9": {
+          "HT": 1500,
+          "AT": 1500
+        },
+        "10": {
+          "HT": 4500,
+          "AT": 2000
+        },
+        "11": {
+          "HT": 4700,
+          "AT": 2100
+        },
+        "12": {
+          "HT": 4900,
+          "AT": 2200
+        },
+        "13": {
+          "HT": 5100,
+          "AT": 2300
+        },
+        "14": {
+          "HT": 5300,
+          "AT": 2400
+        },
+        "15": {
+          "HT": 5500,
+          "AT": 2500
+        }
+      },
       "nameTh": "สายฟ้า : เครื่องประดับแห่งสปิริต"
     },
     {
@@ -1018,7 +2048,7 @@
       "name": "Wind:Spirit Accessory",
       "slot": "fashion",
       "wikiSlot": "Fashion",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -1026,7 +2056,67 @@
       "icon": "img/gear/digimonfrontierfashion-wind.png",
       "HT": 5500,
       "AT": 2500,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "HT": 1000
+        },
+        "1": {
+          "HT": 1050
+        },
+        "2": {
+          "HT": 1100
+        },
+        "3": {
+          "HT": 1150
+        },
+        "4": {
+          "HT": 1250
+        },
+        "5": {
+          "HT": 1300,
+          "AT": 1000
+        },
+        "6": {
+          "HT": 1350,
+          "AT": 1200
+        },
+        "7": {
+          "HT": 1400,
+          "AT": 1300
+        },
+        "8": {
+          "HT": 1450,
+          "AT": 1400
+        },
+        "9": {
+          "HT": 1500,
+          "AT": 1500
+        },
+        "10": {
+          "HT": 4500,
+          "AT": 2000
+        },
+        "11": {
+          "HT": 4700,
+          "AT": 2100
+        },
+        "12": {
+          "HT": 4900,
+          "AT": 2200
+        },
+        "13": {
+          "HT": 5100,
+          "AT": 2300
+        },
+        "14": {
+          "HT": 5300,
+          "AT": 2400
+        },
+        "15": {
+          "HT": 5500,
+          "AT": 2500
+        }
+      },
       "nameTh": "ลม : เครื่องประดับแห่งสปิริต"
     },
     {
@@ -1387,14 +2477,63 @@
       "name": "Fire:Spirit Gloves",
       "slot": "gloves",
       "wikiSlot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-fire.png",
       "AT": 5000,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "AT": 1500
+        },
+        "1": {
+          "AT": 1550
+        },
+        "2": {
+          "AT": 1600
+        },
+        "3": {
+          "AT": 1650
+        },
+        "4": {
+          "AT": 1750
+        },
+        "5": {
+          "AT": 1800
+        },
+        "6": {
+          "AT": 1850
+        },
+        "7": {
+          "AT": 1900
+        },
+        "8": {
+          "AT": 1950
+        },
+        "9": {
+          "AT": 2000
+        },
+        "10": {
+          "AT": 4000
+        },
+        "11": {
+          "AT": 4200
+        },
+        "12": {
+          "AT": 4400
+        },
+        "13": {
+          "AT": 4600
+        },
+        "14": {
+          "AT": 4800
+        },
+        "15": {
+          "AT": 5000
+        }
+      },
       "nameTh": "ไฟ : ถุงมือแห่งสปิริต"
     },
     {
@@ -1422,15 +2561,259 @@
       "name": "Ice:Spirit Gloves",
       "slot": "gloves",
       "wikiSlot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-ice.png",
       "AT": 5000,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "AT": 1500
+        },
+        "1": {
+          "AT": 1550
+        },
+        "2": {
+          "AT": 1600
+        },
+        "3": {
+          "AT": 1650
+        },
+        "4": {
+          "AT": 1750
+        },
+        "5": {
+          "AT": 1800
+        },
+        "6": {
+          "AT": 1850
+        },
+        "7": {
+          "AT": 1900
+        },
+        "8": {
+          "AT": 1950
+        },
+        "9": {
+          "AT": 2000
+        },
+        "10": {
+          "AT": 4000
+        },
+        "11": {
+          "AT": 4200
+        },
+        "12": {
+          "AT": 4400
+        },
+        "13": {
+          "AT": 4600
+        },
+        "14": {
+          "AT": 4800
+        },
+        "15": {
+          "AT": 5000
+        }
+      },
       "nameTh": "น้ำแข็ง : ถุงมือแห่งสปิริต"
+    },
+    {
+      "id": "gloves-immaculate-gauntlet-of-baihumon-legend",
+      "name": "Immaculate Gauntlet of Baihumon [Legend]",
+      "slot": "gloves",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [เลเจนด์]",
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {
+          "CT": 1.0
+        },
+        "3": {
+          "CT": 2.0
+        },
+        "4": {
+          "CT": 3.0
+        },
+        "5": {
+          "CT": 4.0
+        },
+        "6": {
+          "CT": 5.0
+        },
+        "7": {
+          "CT": 6.0
+        },
+        "8": {
+          "CT": 7.0
+        },
+        "9": {
+          "CT": 8.0
+        },
+        "10": {
+          "CT": 10.0
+        }
+      },
+      "CT": 10.0
+    },
+    {
+      "id": "gloves-immaculate-gauntlet-of-baihumon-normal",
+      "name": "Immaculate Gauntlet of Baihumon [Normal]",
+      "slot": "gloves",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [ปกติ]",
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {
+          "CT": 1.0
+        },
+        "6": {
+          "CT": 2.0
+        },
+        "7": {
+          "CT": 3.0
+        },
+        "8": {
+          "CT": 4.0
+        },
+        "9": {
+          "CT": 5.0
+        },
+        "10": {
+          "CT": 6.0
+        }
+      },
+      "CT": 6.0
+    },
+    {
+      "id": "gloves-immaculate-gauntlet-of-baihumon-rare",
+      "name": "Immaculate Gauntlet of Baihumon [Rare]",
+      "slot": "gloves",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [แรร์]",
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {
+          "CT": 1.0
+        },
+        "5": {
+          "CT": 2.0
+        },
+        "6": {
+          "CT": 3.0
+        },
+        "7": {
+          "CT": 4.0
+        },
+        "8": {
+          "CT": 5.0
+        },
+        "9": {
+          "CT": 6.0
+        },
+        "10": {
+          "CT": 7.0
+        }
+      },
+      "CT": 7.0
+    },
+    {
+      "id": "gloves-immaculate-gauntlet-of-baihumon-ultimate",
+      "name": "Immaculate Gauntlet of Baihumon [Ultimate]",
+      "slot": "gloves",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [อัลติเมท]",
+      "levelStats": {
+        "0": {},
+        "1": {
+          "CT": 1.0
+        },
+        "2": {
+          "CT": 2.0
+        },
+        "3": {
+          "CT": 3.0
+        },
+        "4": {
+          "CT": 4.0
+        },
+        "5": {
+          "CT": 5.0
+        },
+        "6": {
+          "CT": 6.0
+        },
+        "7": {
+          "CT": 7.0
+        },
+        "8": {
+          "CT": 8.0
+        },
+        "9": {
+          "CT": 9.0
+        },
+        "10": {
+          "CT": 12.0
+        }
+      },
+      "CT": 12.0
+    },
+    {
+      "id": "gloves-immaculate-gauntlet-of-baihumon-unique",
+      "name": "Immaculate Gauntlet of Baihumon [Unique]",
+      "slot": "gloves",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "สนับมือศักดิ์สิทธิ์ของไบฟูมอน [ยูนีค]",
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {
+          "CT": 1.0
+        },
+        "4": {
+          "CT": 2.0
+        },
+        "5": {
+          "CT": 3.0
+        },
+        "6": {
+          "CT": 4.0
+        },
+        "7": {
+          "CT": 5.0
+        },
+        "8": {
+          "CT": 6.0
+        },
+        "9": {
+          "CT": 7.0
+        },
+        "10": {
+          "CT": 8.0
+        }
+      },
+      "CT": 8.0
     },
     {
       "id": "gloves-lanamon-s-gauntlet-event",
@@ -1449,14 +2832,63 @@
       "name": "Light:Spirit Gloves",
       "slot": "gloves",
       "wikiSlot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-light.png",
       "AT": 5000,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "AT": 1500
+        },
+        "1": {
+          "AT": 1550
+        },
+        "2": {
+          "AT": 1600
+        },
+        "3": {
+          "AT": 1650
+        },
+        "4": {
+          "AT": 1750
+        },
+        "5": {
+          "AT": 1800
+        },
+        "6": {
+          "AT": 1850
+        },
+        "7": {
+          "AT": 1900
+        },
+        "8": {
+          "AT": 1950
+        },
+        "9": {
+          "AT": 2000
+        },
+        "10": {
+          "AT": 4000
+        },
+        "11": {
+          "AT": 4200
+        },
+        "12": {
+          "AT": 4400
+        },
+        "13": {
+          "AT": 4600
+        },
+        "14": {
+          "AT": 4800
+        },
+        "15": {
+          "AT": 5000
+        }
+      },
       "nameTh": "แสง : ถุงมือแห่งสปิริต"
     },
     {
@@ -1623,14 +3055,63 @@
       "name": "Thunder:Spirit Gloves",
       "slot": "gloves",
       "wikiSlot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-thunder.png",
       "AT": 5000,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "AT": 1500
+        },
+        "1": {
+          "AT": 1550
+        },
+        "2": {
+          "AT": 1600
+        },
+        "3": {
+          "AT": 1650
+        },
+        "4": {
+          "AT": 1750
+        },
+        "5": {
+          "AT": 1800
+        },
+        "6": {
+          "AT": 1850
+        },
+        "7": {
+          "AT": 1900
+        },
+        "8": {
+          "AT": 1950
+        },
+        "9": {
+          "AT": 2000
+        },
+        "10": {
+          "AT": 4000
+        },
+        "11": {
+          "AT": 4200
+        },
+        "12": {
+          "AT": 4400
+        },
+        "13": {
+          "AT": 4600
+        },
+        "14": {
+          "AT": 4800
+        },
+        "15": {
+          "AT": 5000
+        }
+      },
       "nameTh": "สายฟ้า : ถุงมือแห่งสปิริต"
     },
     {
@@ -1668,14 +3149,63 @@
       "name": "Wind:Spirit Gloves",
       "slot": "gloves",
       "wikiSlot": "Gloves",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
       "icon": "img/gear/digimonfrontiergloves-wind.png",
       "AT": 5000,
-      "ranged": true,
+      "levelStats": {
+        "0": {
+          "AT": 1500
+        },
+        "1": {
+          "AT": 1550
+        },
+        "2": {
+          "AT": 1600
+        },
+        "3": {
+          "AT": 1650
+        },
+        "4": {
+          "AT": 1750
+        },
+        "5": {
+          "AT": 1800
+        },
+        "6": {
+          "AT": 1850
+        },
+        "7": {
+          "AT": 1900
+        },
+        "8": {
+          "AT": 1950
+        },
+        "9": {
+          "AT": 2000
+        },
+        "10": {
+          "AT": 4000
+        },
+        "11": {
+          "AT": 4200
+        },
+        "12": {
+          "AT": 4400
+        },
+        "13": {
+          "AT": 4600
+        },
+        "14": {
+          "AT": 4800
+        },
+        "15": {
+          "AT": 5000
+        }
+      },
       "nameTh": "ลม : ถุงมือแห่งสปิริต"
     },
     {
@@ -1848,14 +3378,13 @@
       "name": "Fire:Spirit Helmet",
       "slot": "head",
       "wikiSlot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-fire.png",
       "CT": 55.0,
-      "ranged": true,
       "extra": [
         {
           "stat": "CT DMG",
@@ -1863,6 +3392,56 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "CT": 10.0
+        },
+        "1": {
+          "CT": 12.0
+        },
+        "2": {
+          "CT": 13.0
+        },
+        "3": {
+          "CT": 14.0
+        },
+        "4": {
+          "CT": 15.0
+        },
+        "5": {
+          "CT": 16.0
+        },
+        "6": {
+          "CT": 17.0
+        },
+        "7": {
+          "CT": 18.0
+        },
+        "8": {
+          "CT": 19.0
+        },
+        "9": {
+          "CT": 20.0
+        },
+        "10": {
+          "CT": 45.0
+        },
+        "11": {
+          "CT": 47.0
+        },
+        "12": {
+          "CT": 49.0
+        },
+        "13": {
+          "CT": 51.0
+        },
+        "14": {
+          "CT": 53.0
+        },
+        "15": {
+          "CT": 55.0
+        }
+      },
       "nameTh": "ไฟ : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -1870,14 +3449,13 @@
       "name": "Ice:Spirit Helmet",
       "slot": "head",
       "wikiSlot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-ice.png",
       "CT": 55.0,
-      "ranged": true,
       "extra": [
         {
           "stat": "CT DMG",
@@ -1885,6 +3463,56 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "CT": 10.0
+        },
+        "1": {
+          "CT": 12.0
+        },
+        "2": {
+          "CT": 13.0
+        },
+        "3": {
+          "CT": 14.0
+        },
+        "4": {
+          "CT": 15.0
+        },
+        "5": {
+          "CT": 16.0
+        },
+        "6": {
+          "CT": 17.0
+        },
+        "7": {
+          "CT": 18.0
+        },
+        "8": {
+          "CT": 19.0
+        },
+        "9": {
+          "CT": 20.0
+        },
+        "10": {
+          "CT": 45.0
+        },
+        "11": {
+          "CT": 47.0
+        },
+        "12": {
+          "CT": 49.0
+        },
+        "13": {
+          "CT": 51.0
+        },
+        "14": {
+          "CT": 53.0
+        },
+        "15": {
+          "CT": 55.0
+        }
+      },
       "nameTh": "น้ำแข็ง : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -1914,14 +3542,13 @@
       "name": "Light:Spirit Helmet",
       "slot": "head",
       "wikiSlot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-light.png",
       "CT": 55.0,
-      "ranged": true,
       "extra": [
         {
           "stat": "CT DMG",
@@ -1929,7 +3556,342 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "CT": 10.0
+        },
+        "1": {
+          "CT": 12.0
+        },
+        "2": {
+          "CT": 13.0
+        },
+        "3": {
+          "CT": 14.0
+        },
+        "4": {
+          "CT": 15.0
+        },
+        "5": {
+          "CT": 16.0
+        },
+        "6": {
+          "CT": 17.0
+        },
+        "7": {
+          "CT": 18.0
+        },
+        "8": {
+          "CT": 19.0
+        },
+        "9": {
+          "CT": 20.0
+        },
+        "10": {
+          "CT": 45.0
+        },
+        "11": {
+          "CT": 47.0
+        },
+        "12": {
+          "CT": 49.0
+        },
+        "13": {
+          "CT": 51.0
+        },
+        "14": {
+          "CT": 53.0
+        },
+        "15": {
+          "CT": 55.0
+        }
+      },
       "nameTh": "แสง : หมวกเกราะแห่งสปิริต"
+    },
+    {
+      "id": "head-noble-head-ornament-of-huanglongmon-legend",
+      "name": "Noble Head Ornament of Huanglongmon [Legend]",
+      "slot": "head",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [เลเจนด์]",
+      "levelStats": {
+        "0": {
+          "HT": 130,
+          "AT": 25
+        },
+        "1": {
+          "HT": 225,
+          "AT": 270
+        },
+        "2": {
+          "HT": 239,
+          "AT": 293
+        },
+        "3": {
+          "HT": 252,
+          "AT": 315
+        },
+        "4": {
+          "HT": 266,
+          "AT": 338
+        },
+        "5": {
+          "HT": 279,
+          "AT": 360
+        },
+        "6": {
+          "HT": 293,
+          "AT": 383
+        },
+        "7": {
+          "HT": 306,
+          "AT": 405
+        },
+        "8": {
+          "HT": 320,
+          "AT": 428
+        },
+        "9": {
+          "HT": 333,
+          "AT": 450
+        },
+        "10": {
+          "HT": 347,
+          "AT": 473
+        }
+      },
+      "HT": 347,
+      "AT": 473
+    },
+    {
+      "id": "head-noble-head-ornament-of-huanglongmon-normal",
+      "name": "Noble Head Ornament of Huanglongmon [Normal]",
+      "slot": "head",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [ปกติ]",
+      "levelStats": {
+        "0": {
+          "HT": 80,
+          "AT": 10
+        },
+        "1": {
+          "HT": 150,
+          "AT": 180
+        },
+        "2": {
+          "HT": 159,
+          "AT": 195
+        },
+        "3": {
+          "HT": 168,
+          "AT": 210
+        },
+        "4": {
+          "HT": 177,
+          "AT": 225
+        },
+        "5": {
+          "HT": 186,
+          "AT": 240
+        },
+        "6": {
+          "HT": 195,
+          "AT": 255
+        },
+        "7": {
+          "HT": 204,
+          "AT": 270
+        },
+        "8": {
+          "HT": 213,
+          "AT": 285
+        },
+        "9": {
+          "HT": 222,
+          "AT": 300
+        },
+        "10": {
+          "HT": 231,
+          "AT": 315
+        }
+      },
+      "HT": 231,
+      "AT": 315
+    },
+    {
+      "id": "head-noble-head-ornament-of-huanglongmon-rare",
+      "name": "Noble Head Ornament of Huanglongmon [Rare]",
+      "slot": "head",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [แรร์]",
+      "levelStats": {
+        "0": {
+          "HT": 100,
+          "AT": 15
+        },
+        "1": {
+          "HT": 175,
+          "AT": 210
+        },
+        "2": {
+          "HT": 186,
+          "AT": 228
+        },
+        "3": {
+          "HT": 196,
+          "AT": 245
+        },
+        "4": {
+          "HT": 207,
+          "AT": 263
+        },
+        "5": {
+          "HT": 217,
+          "AT": 280
+        },
+        "6": {
+          "HT": 228,
+          "AT": 298
+        },
+        "7": {
+          "HT": 238,
+          "AT": 315
+        },
+        "8": {
+          "HT": 249,
+          "AT": 333
+        },
+        "9": {
+          "HT": 259,
+          "AT": 350
+        },
+        "10": {
+          "HT": 270,
+          "AT": 368
+        }
+      },
+      "HT": 270,
+      "AT": 368
+    },
+    {
+      "id": "head-noble-head-ornament-of-huanglongmon-ultimate",
+      "name": "Noble Head Ornament of Huanglongmon [Ultimate]",
+      "slot": "head",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [อัลติเมท]",
+      "levelStats": {
+        "0": {
+          "HT": 150,
+          "AT": 30
+        },
+        "1": {
+          "HT": 250,
+          "AT": 300
+        },
+        "2": {
+          "HT": 265,
+          "AT": 325
+        },
+        "3": {
+          "HT": 280,
+          "AT": 350
+        },
+        "4": {
+          "HT": 295,
+          "AT": 375
+        },
+        "5": {
+          "HT": 310,
+          "AT": 400
+        },
+        "6": {
+          "HT": 325,
+          "AT": 425
+        },
+        "7": {
+          "HT": 340,
+          "AT": 450
+        },
+        "8": {
+          "HT": 355,
+          "AT": 475
+        },
+        "9": {
+          "HT": 370,
+          "AT": 500
+        },
+        "10": {
+          "HT": 385,
+          "AT": 525
+        }
+      },
+      "HT": 385,
+      "AT": 525
+    },
+    {
+      "id": "head-noble-head-ornament-of-huanglongmon-unique",
+      "name": "Noble Head Ornament of Huanglongmon [Unique]",
+      "slot": "head",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "มงกุฎศักดิ์สิทธิ์ของฟานลอนมอน [ยูนีค]",
+      "levelStats": {
+        "0": {
+          "HT": 120,
+          "AT": 20
+        },
+        "1": {
+          "HT": 200,
+          "AT": 240
+        },
+        "2": {
+          "HT": 212,
+          "AT": 260
+        },
+        "3": {
+          "HT": 224,
+          "AT": 280
+        },
+        "4": {
+          "HT": 236,
+          "AT": 300
+        },
+        "5": {
+          "HT": 248,
+          "AT": 320
+        },
+        "6": {
+          "HT": 260,
+          "AT": 340
+        },
+        "7": {
+          "HT": 272,
+          "AT": 360
+        },
+        "8": {
+          "HT": 284,
+          "AT": 380
+        },
+        "9": {
+          "HT": 296,
+          "AT": 400
+        },
+        "10": {
+          "HT": 308,
+          "AT": 420
+        }
+      },
+      "HT": 308,
+      "AT": 420
     },
     {
       "id": "head-qinglongmon-s-lightning-ornament",
@@ -2012,14 +3974,13 @@
       "name": "Thunder:Spirit Helmet",
       "slot": "head",
       "wikiSlot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-thunder.png",
       "CT": 55.0,
-      "ranged": true,
       "extra": [
         {
           "stat": "CT DMG",
@@ -2027,6 +3988,56 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "CT": 10.0
+        },
+        "1": {
+          "CT": 12.0
+        },
+        "2": {
+          "CT": 13.0
+        },
+        "3": {
+          "CT": 14.0
+        },
+        "4": {
+          "CT": 15.0
+        },
+        "5": {
+          "CT": 16.0
+        },
+        "6": {
+          "CT": 17.0
+        },
+        "7": {
+          "CT": 18.0
+        },
+        "8": {
+          "CT": 19.0
+        },
+        "9": {
+          "CT": 20.0
+        },
+        "10": {
+          "CT": 45.0
+        },
+        "11": {
+          "CT": 47.0
+        },
+        "12": {
+          "CT": 49.0
+        },
+        "13": {
+          "CT": 51.0
+        },
+        "14": {
+          "CT": 53.0
+        },
+        "15": {
+          "CT": 55.0
+        }
+      },
       "nameTh": "สายฟ้า : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -2046,14 +4057,13 @@
       "name": "Wind:Spirit Helmet",
       "slot": "head",
       "wikiSlot": "Head",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
       "icon": "img/gear/digimonfrontierhead-wind.png",
       "CT": 55.0,
-      "ranged": true,
       "extra": [
         {
           "stat": "CT DMG",
@@ -2061,6 +4071,56 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {
+          "CT": 10.0
+        },
+        "1": {
+          "CT": 12.0
+        },
+        "2": {
+          "CT": 13.0
+        },
+        "3": {
+          "CT": 14.0
+        },
+        "4": {
+          "CT": 15.0
+        },
+        "5": {
+          "CT": 16.0
+        },
+        "6": {
+          "CT": 17.0
+        },
+        "7": {
+          "CT": 18.0
+        },
+        "8": {
+          "CT": 19.0
+        },
+        "9": {
+          "CT": 20.0
+        },
+        "10": {
+          "CT": 45.0
+        },
+        "11": {
+          "CT": 47.0
+        },
+        "12": {
+          "CT": 49.0
+        },
+        "13": {
+          "CT": 51.0
+        },
+        "14": {
+          "CT": 53.0
+        },
+        "15": {
+          "CT": 55.0
+        }
+      },
       "nameTh": "ลม : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -2775,7 +4835,7 @@
       "name": "Fire:Spirit Shoes",
       "slot": "shoes",
       "wikiSlot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -2798,6 +4858,24 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
       "nameTh": "ไฟ : รองเท้าแห่งสปิริต"
     },
     {
@@ -2805,7 +4883,7 @@
       "name": "Ice:Spirit Shoes",
       "slot": "shoes",
       "wikiSlot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -2828,6 +4906,24 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
       "nameTh": "น้ำแข็ง : รองเท้าแห่งสปิริต"
     },
     {
@@ -2835,7 +4931,7 @@
       "name": "Light:Spirit Shoes",
       "slot": "shoes",
       "wikiSlot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -2858,7 +4954,195 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
       "nameTh": "แสง : รองเท้าแห่งสปิริต"
+    },
+    {
+      "id": "shoes-shoes-of-the-four-holy-beasts-legend",
+      "name": "Shoes of the Four Holy Beasts [Legend]",
+      "slot": "shoes",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [เลเจนด์]",
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {}
+      },
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 150.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Speed",
+          "value": 20.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "shoes-shoes-of-the-four-holy-beasts-normal",
+      "name": "Shoes of the Four Holy Beasts [Normal]",
+      "slot": "shoes",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [ปกติ]",
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {}
+      },
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 60.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Speed",
+          "value": 5.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "shoes-shoes-of-the-four-holy-beasts-rare",
+      "name": "Shoes of the Four Holy Beasts [Rare]",
+      "slot": "shoes",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [แรร์]",
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {}
+      },
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 80.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Speed",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "shoes-shoes-of-the-four-holy-beasts-ultimate",
+      "name": "Shoes of the Four Holy Beasts [Ultimate]",
+      "slot": "shoes",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [อัลติเมท]",
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {}
+      },
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 500.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Speed",
+          "value": 25.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "shoes-shoes-of-the-four-holy-beasts-unique",
+      "name": "Shoes of the Four Holy Beasts [Unique]",
+      "slot": "shoes",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "รองเท้าแห่งสี่สัตว์เทพ [ยูนีค]",
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {}
+      },
+      "extra": [
+        {
+          "stat": "EXP",
+          "value": 100.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Speed",
+          "value": 15.0,
+          "unit": "pct"
+        }
+      ]
     },
     {
       "id": "shoes-spooky-wizardmon-shoes-30-days",
@@ -2918,7 +5202,7 @@
       "name": "Thunder:Spirit Shoes",
       "slot": "shoes",
       "wikiSlot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -2941,6 +5225,24 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
       "nameTh": "สายฟ้า : รองเท้าแห่งสปิริต"
     },
     {
@@ -2948,7 +5250,7 @@
       "name": "Wind:Spirit Shoes",
       "slot": "shoes",
       "wikiSlot": "Shoes",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
@@ -2971,6 +5273,24 @@
           "unit": "pct"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {}
+      },
       "nameTh": "ลม : รองเท้าแห่งสปิริต"
     },
     {
@@ -3003,6 +5323,266 @@
       ],
       "nameTh": "รองเท้าของมิยาโกะ",
       "nameThShin": "(ชิน) รองเท้าของมิยาโกะ"
+    },
+    {
+      "id": "top-abyssal-armor-of-xuanwumon-legend",
+      "name": "Abyssal Armor of Xuanwumon [Legend]",
+      "slot": "top",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [เลเจนด์]",
+      "levelStats": {
+        "0": {
+          "DS": 120
+        },
+        "1": {
+          "DS": 180
+        },
+        "2": {
+          "DS": 360
+        },
+        "3": {
+          "DS": 540
+        },
+        "4": {
+          "DS": 720
+        },
+        "5": {
+          "DS": 900
+        },
+        "6": {
+          "DS": 1170
+        },
+        "7": {
+          "DS": 1440
+        },
+        "8": {
+          "DS": 1710
+        },
+        "9": {
+          "DS": 1980
+        },
+        "10": {
+          "DS": 2250
+        }
+      },
+      "DS": 2250,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 2250.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-abyssal-armor-of-xuanwumon-normal",
+      "name": "Abyssal Armor of Xuanwumon [Normal]",
+      "slot": "top",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [ปกติ]",
+      "levelStats": {
+        "0": {
+          "DS": 30
+        },
+        "1": {
+          "DS": 120
+        },
+        "2": {
+          "DS": 240
+        },
+        "3": {
+          "DS": 360
+        },
+        "4": {
+          "DS": 480
+        },
+        "5": {
+          "DS": 600
+        },
+        "6": {
+          "DS": 780
+        },
+        "7": {
+          "DS": 960
+        },
+        "8": {
+          "DS": 1140
+        },
+        "9": {
+          "DS": 1320
+        },
+        "10": {
+          "DS": 1500
+        }
+      },
+      "DS": 1500,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-abyssal-armor-of-xuanwumon-rare",
+      "name": "Abyssal Armor of Xuanwumon [Rare]",
+      "slot": "top",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [แรร์]",
+      "levelStats": {
+        "0": {
+          "DS": 60
+        },
+        "1": {
+          "DS": 140
+        },
+        "2": {
+          "DS": 280
+        },
+        "3": {
+          "DS": 420
+        },
+        "4": {
+          "DS": 560
+        },
+        "5": {
+          "DS": 700
+        },
+        "6": {
+          "DS": 910
+        },
+        "7": {
+          "DS": 1120
+        },
+        "8": {
+          "DS": 1330
+        },
+        "9": {
+          "DS": 1540
+        },
+        "10": {
+          "DS": 1750
+        }
+      },
+      "DS": 1750,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 1750.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-abyssal-armor-of-xuanwumon-ultimate",
+      "name": "Abyssal Armor of Xuanwumon [Ultimate]",
+      "slot": "top",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [อัลติเมท]",
+      "levelStats": {
+        "0": {
+          "DS": 150
+        },
+        "1": {
+          "DS": 200
+        },
+        "2": {
+          "DS": 400
+        },
+        "3": {
+          "DS": 600
+        },
+        "4": {
+          "DS": 800
+        },
+        "5": {
+          "DS": 1000
+        },
+        "6": {
+          "DS": 1300
+        },
+        "7": {
+          "DS": 1600
+        },
+        "8": {
+          "DS": 1900
+        },
+        "9": {
+          "DS": 2200
+        },
+        "10": {
+          "DS": 2500
+        }
+      },
+      "DS": 2500,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 2500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-abyssal-armor-of-xuanwumon-unique",
+      "name": "Abyssal Armor of Xuanwumon [Unique]",
+      "slot": "top",
+      "axis": "unknown",
+      "upgrade": 0,
+      "upgradeMax": 10,
+      "nameTh": "เกราะแห่งห้วงมหาสมุทรของเชนวูมอน [ยูนีค]",
+      "levelStats": {
+        "0": {
+          "DS": 90
+        },
+        "1": {
+          "DS": 160
+        },
+        "2": {
+          "DS": 320
+        },
+        "3": {
+          "DS": 480
+        },
+        "4": {
+          "DS": 640
+        },
+        "5": {
+          "DS": 800
+        },
+        "6": {
+          "DS": 1040
+        },
+        "7": {
+          "DS": 1280
+        },
+        "8": {
+          "DS": 1520
+        },
+        "9": {
+          "DS": 1760
+        },
+        "10": {
+          "DS": 2000
+        }
+      },
+      "DS": 2000,
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 2000.0,
+          "unit": "flat"
+        }
+      ]
     },
     {
       "id": "top-agumon-top",
@@ -3117,6 +5697,8 @@
       "bands": 3,
       "iconWiki": "/images/7/7e/MDGTop.png",
       "icon": "img/gear/mdgtop-davis.png",
+      "DE": 1000,
+      "ranged": true,
       "extra": [
         {
           "stat": "HP",
@@ -3155,12 +5737,13 @@
       "name": "Fire:Spirit Top",
       "slot": "top",
       "wikiSlot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
       "icon": "img/gear/digimonfrontiertop-fire.png",
+      "DE": 2000,
       "extra": [
         {
           "stat": "HP",
@@ -3173,6 +5756,46 @@
           "unit": "flat"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {
+          "DE": 600
+        },
+        "6": {
+          "DE": 625
+        },
+        "7": {
+          "DE": 650
+        },
+        "8": {
+          "DE": 675
+        },
+        "9": {
+          "DE": 700
+        },
+        "10": {
+          "DE": 1500
+        },
+        "11": {
+          "DE": 1600
+        },
+        "12": {
+          "DE": 1700
+        },
+        "13": {
+          "DE": 1800
+        },
+        "14": {
+          "DE": 1900
+        },
+        "15": {
+          "DE": 2000
+        }
+      },
       "nameTh": "ไฟ : เสื้อแห่งสปิริต"
     },
     {
@@ -3244,12 +5867,13 @@
       "name": "Ice:Spirit Top",
       "slot": "top",
       "wikiSlot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
       "icon": "img/gear/digimonfrontiertop-ice.png",
+      "DE": 2000,
       "extra": [
         {
           "stat": "HP",
@@ -3262,6 +5886,46 @@
           "unit": "flat"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {
+          "DE": 600
+        },
+        "6": {
+          "DE": 625
+        },
+        "7": {
+          "DE": 650
+        },
+        "8": {
+          "DE": 675
+        },
+        "9": {
+          "DE": 700
+        },
+        "10": {
+          "DE": 1500
+        },
+        "11": {
+          "DE": 1600
+        },
+        "12": {
+          "DE": 1700
+        },
+        "13": {
+          "DE": 1800
+        },
+        "14": {
+          "DE": 1900
+        },
+        "15": {
+          "DE": 2000
+        }
+      },
       "nameTh": "น้ำแข็ง : เสื้อแห่งสปิริต"
     },
     {
@@ -3287,12 +5951,13 @@
       "name": "Light:Spirit Top",
       "slot": "top",
       "wikiSlot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
       "icon": "img/gear/digimonfrontiertop-light.png",
+      "DE": 2000,
       "extra": [
         {
           "stat": "HP",
@@ -3305,6 +5970,46 @@
           "unit": "flat"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {
+          "DE": 600
+        },
+        "6": {
+          "DE": 625
+        },
+        "7": {
+          "DE": 650
+        },
+        "8": {
+          "DE": 675
+        },
+        "9": {
+          "DE": 700
+        },
+        "10": {
+          "DE": 1500
+        },
+        "11": {
+          "DE": 1600
+        },
+        "12": {
+          "DE": 1700
+        },
+        "13": {
+          "DE": 1800
+        },
+        "14": {
+          "DE": 1900
+        },
+        "15": {
+          "DE": 2000
+        }
+      },
       "nameTh": "แสง : เสื้อแห่งสปิริต"
     },
     {
@@ -3368,6 +6073,8 @@
       "bands": 3,
       "iconWiki": "/images/7/7e/MDGTop.png",
       "icon": "img/gear/mdgtop-tk.png",
+      "DE": 1000,
+      "ranged": true,
       "extra": [
         {
           "stat": "HP",
@@ -3388,12 +6095,13 @@
       "name": "Thunder:Spirit Top",
       "slot": "top",
       "wikiSlot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
       "icon": "img/gear/digimonfrontiertop-thunder.png",
+      "DE": 2000,
       "extra": [
         {
           "stat": "HP",
@@ -3406,6 +6114,46 @@
           "unit": "flat"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {
+          "DE": 600
+        },
+        "6": {
+          "DE": 625
+        },
+        "7": {
+          "DE": 650
+        },
+        "8": {
+          "DE": 675
+        },
+        "9": {
+          "DE": 700
+        },
+        "10": {
+          "DE": 1500
+        },
+        "11": {
+          "DE": 1600
+        },
+        "12": {
+          "DE": 1700
+        },
+        "13": {
+          "DE": 1800
+        },
+        "14": {
+          "DE": 1900
+        },
+        "15": {
+          "DE": 2000
+        }
+      },
       "nameTh": "สายฟ้า : เสื้อแห่งสปิริต"
     },
     {
@@ -3451,12 +6199,13 @@
       "name": "Wind:Spirit Top",
       "slot": "top",
       "wikiSlot": "Top",
-      "axis": "unknown",
+      "axis": "digimon",
       "upgrade": 10,
       "upgradeMax": 15,
       "bands": 3,
       "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
       "icon": "img/gear/digimonfrontiertop-wind.png",
+      "DE": 2000,
       "extra": [
         {
           "stat": "HP",
@@ -3469,6 +6218,46 @@
           "unit": "flat"
         }
       ],
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {
+          "DE": 600
+        },
+        "6": {
+          "DE": 625
+        },
+        "7": {
+          "DE": 650
+        },
+        "8": {
+          "DE": 675
+        },
+        "9": {
+          "DE": 700
+        },
+        "10": {
+          "DE": 1500
+        },
+        "11": {
+          "DE": 1600
+        },
+        "12": {
+          "DE": 1700
+        },
+        "13": {
+          "DE": 1800
+        },
+        "14": {
+          "DE": 1900
+        },
+        "15": {
+          "DE": 2000
+        }
+      },
       "nameTh": "ลม : เสื้อแห่งสปิริต"
     },
     {
@@ -3532,6 +6321,8 @@
       "bands": 3,
       "iconWiki": "/images/7/7e/MDGTop.png",
       "icon": "img/gear/mdgtop-yolei.png",
+      "DE": 1000,
+      "ranged": true,
       "extra": [
         {
           "stat": "HP",

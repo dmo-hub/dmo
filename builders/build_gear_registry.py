@@ -39,6 +39,32 @@ SRC = PROJ / "data" / "clothing_items.json"
 OUT = PROJ / "docs" / "gear_registry.json"
 ICON_DIR = PROJ / "docs" / "img" / "gear"
 TH_NAMES = PROJ / "data" / "gear_th_names.json"
+UPGRADE_LEVELS = PROJ / "data" / "upgrade_levels.json"
+
+# vplay's per-level Spirit tables name the piece, not the element: one table
+# serves all five "*:Spirit X" items.
+SPIRIT_PIECES = {
+    "หมวกเกราะแห่งสปิริต": "Helmet",
+    "เครื่องประดับแห่งสปิริต": "Accessory",
+    "เสื้อแห่งสปิริต": "Top",
+    "กางเกงแห่งสปิริต": "Bottom",
+    "ถุงมือแห่งสปิริต": "Gloves",
+    "รองเท้าแห่งสปิริต": "Shoes",
+}
+# The 2026 Four Holy Beasts pieces exist only in vplay's tables. Neither source
+# names a slot, so each takes the slot its kind fills in the six-piece sets
+# (the old Four Holy Beasts cape sits in fashion). NA names only the Ultimate
+# grade; the other English grade words mirror vplay's Thai ones.
+HOLY_SLOTS = {
+    "Noble Head Ornament of Huanglongmon": "head",
+    "Phoenix Feather Robe of Zhuqiaomon": "fashion",
+    "Abyssal Armor of Xuanwumon": "top",
+    "Thunderbolt Bottom of Qinglongmon": "bottom",
+    "Immaculate Gauntlet of Baihumon": "gloves",
+    "Shoes of the Four Holy Beasts": "shoes",
+}
+GRADE_EN = {"ปกติ": "Normal", "แรร์": "Rare", "ยูนีค": "Unique",
+            "เลเจนด์": "Legend", "อัลติเมท": "Ultimate"}
 
 
 def icon_filename(wiki_path):
@@ -205,6 +231,86 @@ def add_thai_names(out):
     return named
 
 
+def level_table(levels):
+    """vplay levels -> {"0": {stat: value}, ...} for every level up to the top.
+
+    Solver stats only. A level the table leaves blank gets {} -- the stat has
+    not unlocked yet -- so the page never falls back to a different level."""
+    top = max(l["upgrade"] for l in levels)
+    table = {str(n): {} for n in range(top + 1)}
+    for l in levels:
+        row = table[str(l["upgrade"])]
+        for st in l["stats"]:
+            key = st["stat"]
+            if key in SOLVER_STATS:
+                row[key] = row.get(key, 0) + (st["value"] if key in PCT_STATS
+                                              else js_round(st["value"]))
+    return table, top
+
+
+def non_solver_at(levels, lvl):
+    row = next((l for l in levels if l["upgrade"] == lvl), None)
+    return [{"stat": s["stat"], "value": s["value"], "unit": s["unit"]}
+            for s in (row or {}).get("stats", []) if s["stat"] not in SOLVER_STATS]
+
+
+def add_level_stats(out):
+    """Attach vplay's per-level stats so the page can follow the player's own
+    upgrade level instead of the wiki's top band."""
+    items = json.loads(UPGRADE_LEVELS.read_text(encoding="utf-8"))["items"]
+    by_name = {it["name"]: it for it in items}
+    done = 0
+
+    for th, part in SPIRIT_PIECES.items():
+        src = by_name.get(th)
+        if not src:
+            print(f"  ! {UPGRADE_LEVELS.name}: no {th!r}")
+            continue
+        table, top = level_table(src["levels"])
+        for rec in out:
+            if not re.fullmatch(r"\w+:Spirit " + part, rec["name"]):
+                continue
+            # The wiki's top band and vplay's top level must agree, or one of
+            # the two sources is describing a different item.
+            for key in SOLVER_STATS:
+                if rec.get(key, 0) != table[str(top)].get(key, 0):
+                    print(f"  ! {rec['name']} {key}: wiki {rec.get(key, 0)} "
+                          f"vs vplay +{top} {table[str(top)].get(key, 0)}")
+            rec["levelStats"] = table
+            rec.pop("ranged", None)          # exact per level now, not a roll top
+            done += 1
+
+    for src in items:
+        en = src.get("piece_en")
+        if not en:
+            continue
+        m = re.fullmatch(r"(.+) \[(.+)\]", src["name"])
+        grade = GRADE_EN.get(m.group(2)) if m else None
+        slot = HOLY_SLOTS.get(en)
+        if not (grade and slot):
+            print(f"  ! {UPGRADE_LEVELS.name}: cannot place {src['name']!r}")
+            continue
+        table, top = level_table(src["levels"])
+        name = f"{en} [{grade}]"
+        rec = {
+            "id": re.sub(r"[^a-z0-9]+", "-", f"{slot}-{name}".lower()).strip("-"),
+            "name": name,
+            "slot": slot,
+            "axis": "unknown",           # vplay never says tamer or digimon
+            "upgrade": 0,
+            "upgradeMax": top,
+            "nameTh": src["name"],
+            "levelStats": table,
+        }
+        rec.update(table[str(top)])
+        extra = non_solver_at(src["levels"], top)
+        if extra:
+            rec["extra"] = extra
+        out.append(rec)
+        done += 1
+    return done
+
+
 # Wiki slot -> solver slot id. Anything absent is not wearable gear for the
 # optimizer and is left out; the counts are printed so a drop is never silent.
 SLOT_MAP = {
@@ -338,6 +444,7 @@ def main():
             rec["extra"] = other
         out.extend(split_sets(rec))
 
+    leveled = add_level_stats(out)
     named_th = add_thai_names(out)
     out.sort(key=lambda r: (r["slot"], r["name"]))
     payload = {
@@ -357,6 +464,7 @@ def main():
         by_axis[r["axis"]] += 1
     print("wrote %s" % OUT.relative_to(PROJ))
     print("  items %d in %d slots, %d with a Thai name" % (len(out), len(by_slot), named_th))
+    print("  per-level stats on %d items" % leveled)
     print("  axis  %s" % dict(by_axis))
     print("  slots %s" % ", ".join("%s=%d" % kv for kv in sorted(by_slot.items())))
     if dropped:
