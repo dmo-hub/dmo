@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-10-19",
+  "built_at": "2026-10-20",
   "source": "data/set_rosters.json + data/set_effects.json + docs/gear_registry.json",
   "note": "a set is complete when all its SLOTS are filled; each slot accepts either the base item or its shin variant",
   "sets": [
@@ -160,7 +160,7 @@
           "stats": {
             "CT": 5500.0
           },
-          "stats_from": "*:Spirit Helmet"
+          "stats_from": "Ice:Spirit Helmet"
         },
         {
           "slot": "fashion",
@@ -173,7 +173,7 @@
             "AT": 2500,
             "HT": 5500
           },
-          "stats_from": "*:Spirit Accessory"
+          "stats_from": "Ice:Spirit Accessory"
         },
         {
           "slot": "top",
@@ -183,7 +183,7 @@
             "น้ำแข็ง : เสื้อแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Top"
+          "stats_from": "Ice:Spirit Top"
         },
         {
           "slot": "bottom",
@@ -195,7 +195,7 @@
           "stats": {
             "DS": 8000
           },
-          "stats_from": "*:Spirit Bottom"
+          "stats_from": "Ice:Spirit Bottom"
         },
         {
           "slot": "gloves",
@@ -207,7 +207,7 @@
           "stats": {
             "AT": 5000
           },
-          "stats_from": "*:Spirit Gloves"
+          "stats_from": "Ice:Spirit Gloves"
         },
         {
           "slot": "shoes",
@@ -217,7 +217,7 @@
             "น้ำแข็ง : รองเท้าแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Shoes"
+          "stats_from": "Ice:Spirit Shoes"
         }
       ],
       "bonuses": [
@@ -402,7 +402,7 @@
           "stats": {
             "CT": 5500.0
           },
-          "stats_from": "*:Spirit Helmet"
+          "stats_from": "Wind:Spirit Helmet"
         },
         {
           "slot": "fashion",
@@ -415,7 +415,7 @@
             "AT": 2500,
             "HT": 5500
           },
-          "stats_from": "*:Spirit Accessory"
+          "stats_from": "Wind:Spirit Accessory"
         },
         {
           "slot": "top",
@@ -425,7 +425,7 @@
             "ลม : เสื้อแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Top"
+          "stats_from": "Wind:Spirit Top"
         },
         {
           "slot": "bottom",
@@ -437,7 +437,7 @@
           "stats": {
             "DS": 8000
           },
-          "stats_from": "*:Spirit Bottom"
+          "stats_from": "Wind:Spirit Bottom"
         },
         {
           "slot": "gloves",
@@ -449,7 +449,7 @@
           "stats": {
             "AT": 5000
           },
-          "stats_from": "*:Spirit Gloves"
+          "stats_from": "Wind:Spirit Gloves"
         },
         {
           "slot": "shoes",
@@ -459,7 +459,7 @@
             "ลม : รองเท้าแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Shoes"
+          "stats_from": "Wind:Spirit Shoes"
         }
       ],
       "bonuses": [
@@ -570,7 +570,7 @@
           "stats": {
             "CT": 5500.0
           },
-          "stats_from": "*:Spirit Helmet"
+          "stats_from": "Thunder:Spirit Helmet"
         },
         {
           "slot": "fashion",
@@ -583,7 +583,7 @@
             "AT": 2500,
             "HT": 5500
           },
-          "stats_from": "*:Spirit Accessory"
+          "stats_from": "Thunder:Spirit Accessory"
         },
         {
           "slot": "top",
@@ -593,7 +593,7 @@
             "สายฟ้า : เสื้อแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Top"
+          "stats_from": "Thunder:Spirit Top"
         },
         {
           "slot": "bottom",
@@ -605,7 +605,7 @@
           "stats": {
             "DS": 8000
           },
-          "stats_from": "*:Spirit Bottom"
+          "stats_from": "Thunder:Spirit Bottom"
         },
         {
           "slot": "gloves",
@@ -617,7 +617,7 @@
           "stats": {
             "AT": 5000
           },
-          "stats_from": "*:Spirit Gloves"
+          "stats_from": "Thunder:Spirit Gloves"
         },
         {
           "slot": "shoes",
@@ -627,7 +627,7 @@
             "สายฟ้า : รองเท้าแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Shoes"
+          "stats_from": "Thunder:Spirit Shoes"
         }
       ],
       "bonuses": [
@@ -670,7 +670,7 @@
           "stats": {
             "CT": 5500.0
           },
-          "stats_from": "*:Spirit Helmet"
+          "stats_from": "Light:Spirit Helmet"
         },
         {
           "slot": "fashion",
@@ -683,7 +683,7 @@
             "AT": 2500,
             "HT": 5500
           },
-          "stats_from": "*:Spirit Accessory"
+          "stats_from": "Light:Spirit Accessory"
         },
         {
           "slot": "top",
@@ -693,7 +693,7 @@
             "แสง : เสื้อแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Top"
+          "stats_from": "Light:Spirit Top"
         },
         {
           "slot": "bottom",
@@ -705,7 +705,7 @@
           "stats": {
             "DS": 8000
           },
-          "stats_from": "*:Spirit Bottom"
+          "stats_from": "Light:Spirit Bottom"
         },
         {
           "slot": "gloves",
@@ -717,7 +717,7 @@
           "stats": {
             "AT": 5000
           },
-          "stats_from": "*:Spirit Gloves"
+          "stats_from": "Light:Spirit Gloves"
         },
         {
           "slot": "shoes",
@@ -727,7 +727,7 @@
             "แสง : รองเท้าแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Shoes"
+          "stats_from": "Light:Spirit Shoes"
         }
       ],
       "bonuses": [
@@ -912,7 +912,7 @@
           "stats": {
             "CT": 5500.0
           },
-          "stats_from": "*:Spirit Helmet"
+          "stats_from": "Fire:Spirit Helmet"
         },
         {
           "slot": "fashion",
@@ -925,7 +925,7 @@
             "AT": 2500,
             "HT": 5500
           },
-          "stats_from": "*:Spirit Accessory"
+          "stats_from": "Fire:Spirit Accessory"
         },
         {
           "slot": "top",
@@ -935,7 +935,7 @@
             "ไฟ : เสื้อแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Top"
+          "stats_from": "Fire:Spirit Top"
         },
         {
           "slot": "bottom",
@@ -947,7 +947,7 @@
           "stats": {
             "DS": 8000
           },
-          "stats_from": "*:Spirit Bottom"
+          "stats_from": "Fire:Spirit Bottom"
         },
         {
           "slot": "gloves",
@@ -959,7 +959,7 @@
           "stats": {
             "AT": 5000
           },
-          "stats_from": "*:Spirit Gloves"
+          "stats_from": "Fire:Spirit Gloves"
         },
         {
           "slot": "shoes",
@@ -969,7 +969,7 @@
             "ไฟ : รองเท้าแห่งสปิริต"
           ],
           "stats": {},
-          "stats_from": "*:Spirit Shoes"
+          "stats_from": "Fire:Spirit Shoes"
         }
       ],
       "bonuses": [

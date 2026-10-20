@@ -112,6 +112,55 @@ def icon_by_name(row_names, name, icons):
     named = [p for p in found if stem_key(p) == key]
     return named[0] if len(named) == 1 else None
 
+# The wiki lists one "*:Spirit X" row per slot for five in-game sets ("*" is
+# the element, as in its "Fire : Spirit" set-effect rows) and draws all five
+# pieces side by side in one picture, left to right in that same order
+# (Agunimon, Lobomon, Kumamon, Kazemon, Beetlemon). Each set becomes its own
+# pick with its own cut-out icon. Stats are per row on the wiki, so all five
+# share them.
+SPLIT_SETS = {
+    "*:Spirit ": ["Fire", "Light", "Ice", "Wind", "Thunder"],
+}
+# Left edge of each piece's frame in those pictures (all six share one
+# layout, 188 px wide); a piece is 34 px wide, the last one is cut by the
+# picture's edge.
+SPLIT_TILE_X = [2, 40, 77, 116, 155]
+SPLIT_TILE_W = 34
+
+
+def split_icon(src, i, tag):
+    """Cut piece i out of a combined picture, saved next to it. Rewritten
+    only when the bytes differ, so a rebuild leaves the files alone."""
+    from io import BytesIO
+    from PIL import Image
+    im = Image.open(src)
+    x = SPLIT_TILE_X[i]
+    tile = im.crop((x, 0, min(x + SPLIT_TILE_W, im.width), im.height))
+    buf = BytesIO()
+    tile.save(buf, "PNG", optimize=True)
+    dst = src.with_name(f"{src.stem}-{tag}.png")
+    if not dst.exists() or dst.read_bytes() != buf.getvalue():
+        dst.write_bytes(buf.getvalue())
+    return dst
+
+
+def split_sets(rec):
+    """One registry record, or one per set for a "*:" row."""
+    for prefix, sets in SPLIT_SETS.items():
+        if not rec["name"].startswith(prefix):
+            continue
+        piece = rec["name"][len("*:"):]
+        out = []
+        for i, el in enumerate(sets):
+            r = dict(rec, id=f"{rec['id']}-{el.lower()}", name=f"{el}:{piece}")
+            if rec.get("icon"):
+                tile = split_icon(PROJ / "docs" / rec["icon"], i, el.lower())
+                r["icon"] = tile.relative_to(PROJ / "docs").as_posix()
+            out.append(r)
+        return out
+    return [rec]
+
+
 # Wiki slot -> solver slot id. Anything absent is not wearable gear for the
 # optimizer and is left out; the counts are printed so a drop is never silent.
 SLOT_MAP = {
@@ -243,7 +292,7 @@ def main():
             rec["ranged"] = True            # the page says these are top-of-roll
         if other:
             rec["extra"] = other
-        out.append(rec)
+        out.extend(split_sets(rec))
 
     out.sort(key=lambda r: (r["slot"], r["name"]))
     payload = {

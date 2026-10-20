@@ -1,29 +1,8 @@
 {
-  "built_at": "2026-10-19",
+  "built_at": "2026-10-20",
   "source": "data/clothing_items.json",
   "note": "stat values are the TOP of each roll range and the highest upgrade band; axis 'unknown' means the wiki never said which side the stat feeds",
   "items": [
-    {
-      "id": "bottom-spirit-bottom-3",
-      "name": "*:Spirit Bottom",
-      "slot": "bottom",
-      "wikiSlot": "Bottom",
-      "axis": "unknown",
-      "upgrade": 10,
-      "upgradeMax": 15,
-      "bands": 3,
-      "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
-      "icon": "img/gear/digimonfrontierbottom.png",
-      "DS": 8000,
-      "ranged": true,
-      "extra": [
-        {
-          "stat": "Skill DMG",
-          "value": 45.0,
-          "unit": "pct"
-        }
-      ]
-    },
     {
       "id": "bottom-agumon-bottom",
       "name": "Agumon Bottom",
@@ -106,6 +85,27 @@
       "CT": 3.0
     },
     {
+      "id": "bottom-spirit-bottom-3-fire",
+      "name": "Fire:Spirit Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
+      "icon": "img/gear/digimonfrontierbottom-fire.png",
+      "DS": 8000,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 45.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
       "id": "bottom-flame-short-pants-of-zhuqiaomon",
       "name": "Flame Short Pants of Zhuqiaomon",
       "slot": "bottom",
@@ -114,6 +114,27 @@
       "iconWiki": "/images/a/a3/Zhuqiomon_shorts.png",
       "icon": "img/gear/zhuqiomon_shorts.png",
       "DS": 1000
+    },
+    {
+      "id": "bottom-spirit-bottom-3-ice",
+      "name": "Ice:Spirit Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
+      "icon": "img/gear/digimonfrontierbottom-ice.png",
+      "DS": 8000,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 45.0,
+          "unit": "pct"
+        }
+      ]
     },
     {
       "id": "bottom-lanamon-s-tights-event",
@@ -129,6 +150,27 @@
           "stat": "HP",
           "value": 1500.0,
           "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "bottom-spirit-bottom-3-light",
+      "name": "Light:Spirit Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
+      "icon": "img/gear/digimonfrontierbottom-light.png",
+      "DS": 8000,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 45.0,
+          "unit": "pct"
         }
       ]
     },
@@ -183,6 +225,27 @@
       "DS": 500
     },
     {
+      "id": "bottom-spirit-bottom-3-thunder",
+      "name": "Thunder:Spirit Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
+      "icon": "img/gear/digimonfrontierbottom-thunder.png",
+      "DS": 8000,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 45.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
       "id": "bottom-trendy-wide-pants-event",
       "name": "Trendy Wide Pants [Event]",
       "slot": "bottom",
@@ -192,6 +255,27 @@
       "icon": "img/gear/trendy_wide_pants_event.png",
       "DS": 1000,
       "AT": 200
+    },
+    {
+      "id": "bottom-spirit-bottom-3-wind",
+      "name": "Wind:Spirit Bottom",
+      "slot": "bottom",
+      "wikiSlot": "Bottom",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/e/ed/DigimonFrontierBottom.png",
+      "icon": "img/gear/digimonfrontierbottom-wind.png",
+      "DS": 8000,
+      "ranged": true,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 45.0,
+          "unit": "pct"
+        }
+      ]
     },
     {
       "id": "bottom-xuanwumon-shiny-short-pants",
@@ -562,21 +646,6 @@
       ]
     },
     {
-      "id": "fashion-spirit-accessory-3",
-      "name": "*:Spirit Accessory",
-      "slot": "fashion",
-      "wikiSlot": "Fashion",
-      "axis": "unknown",
-      "upgrade": 10,
-      "upgradeMax": 15,
-      "bands": 3,
-      "iconWiki": "/images/6/6c/DigimonFrontierFashion.png",
-      "icon": "img/gear/digimonfrontierfashion.png",
-      "HT": 5500,
-      "AT": 2500,
-      "ranged": true
-    },
-    {
       "id": "fashion-agumon-ornament",
       "name": "Agumon Ornament",
       "slot": "fashion",
@@ -676,6 +745,21 @@
       ]
     },
     {
+      "id": "fashion-spirit-accessory-3-fire",
+      "name": "Fire:Spirit Accessory",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/6/6c/DigimonFrontierFashion.png",
+      "icon": "img/gear/digimonfrontierfashion-fire.png",
+      "HT": 5500,
+      "AT": 2500,
+      "ranged": true
+    },
+    {
       "id": "fashion-headphones",
       "name": "Headphones",
       "slot": "fashion",
@@ -690,6 +774,21 @@
           "unit": "pct"
         }
       ]
+    },
+    {
+      "id": "fashion-spirit-accessory-3-ice",
+      "name": "Ice:Spirit Accessory",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/6/6c/DigimonFrontierFashion.png",
+      "icon": "img/gear/digimonfrontierfashion-ice.png",
+      "HT": 5500,
+      "AT": 2500,
+      "ranged": true
     },
     {
       "id": "fashion-lanamon-s-shell-event",
@@ -713,6 +812,21 @@
       ]
     },
     {
+      "id": "fashion-spirit-accessory-3-light",
+      "name": "Light:Spirit Accessory",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/6/6c/DigimonFrontierFashion.png",
+      "icon": "img/gear/digimonfrontierfashion-light.png",
+      "HT": 5500,
+      "AT": 2500,
+      "ranged": true
+    },
+    {
       "id": "fashion-qinglongmon-s-lightning-cape",
       "name": "Qinglongmon's Lightning Cape",
       "slot": "fashion",
@@ -727,6 +841,21 @@
           "unit": "pct"
         }
       ]
+    },
+    {
+      "id": "fashion-spirit-accessory-3-thunder",
+      "name": "Thunder:Spirit Accessory",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/6/6c/DigimonFrontierFashion.png",
+      "icon": "img/gear/digimonfrontierfashion-thunder.png",
+      "HT": 5500,
+      "AT": 2500,
+      "ranged": true
     },
     {
       "id": "fashion-trendy-wireless-earphones-event",
@@ -761,6 +890,21 @@
           "unit": "pct"
         }
       ]
+    },
+    {
+      "id": "fashion-spirit-accessory-3-wind",
+      "name": "Wind:Spirit Accessory",
+      "slot": "fashion",
+      "wikiSlot": "Fashion",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/6/6c/DigimonFrontierFashion.png",
+      "icon": "img/gear/digimonfrontierfashion-wind.png",
+      "HT": 5500,
+      "AT": 2500,
+      "ranged": true
     },
     {
       "id": "fashion-xuanwumon-s-aquatic-cape",
@@ -939,20 +1083,6 @@
       "ranged": true
     },
     {
-      "id": "gloves-spirit-gloves-3",
-      "name": "*:Spirit Gloves",
-      "slot": "gloves",
-      "wikiSlot": "Gloves",
-      "axis": "unknown",
-      "upgrade": 10,
-      "upgradeMax": 15,
-      "bands": 3,
-      "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
-      "icon": "img/gear/digimonfrontiergloves.png",
-      "AT": 5000,
-      "ranged": true
-    },
-    {
       "id": "gloves-agumon-paw-gloves",
       "name": "Agumon Paw Gloves",
       "slot": "gloves",
@@ -1095,6 +1225,20 @@
       "CT": 5.0
     },
     {
+      "id": "gloves-spirit-gloves-3-fire",
+      "name": "Fire:Spirit Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
+      "icon": "img/gear/digimonfrontiergloves-fire.png",
+      "AT": 5000,
+      "ranged": true
+    },
+    {
       "id": "gloves-flame-gloves-of-zhuqiaomon",
       "name": "Flame Gloves of Zhuqiaomon",
       "slot": "gloves",
@@ -1115,6 +1259,20 @@
       "AT": 250
     },
     {
+      "id": "gloves-spirit-gloves-3-ice",
+      "name": "Ice:Spirit Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
+      "icon": "img/gear/digimonfrontiergloves-ice.png",
+      "AT": 5000,
+      "ranged": true
+    },
+    {
       "id": "gloves-lanamon-s-gauntlet-event",
       "name": "Lanamon's Gauntlet [Event]",
       "slot": "gloves",
@@ -1124,6 +1282,20 @@
       "icon": "img/gear/lanamon_s_gauntlet.png",
       "CT": 5.0,
       "DS": 2000
+    },
+    {
+      "id": "gloves-spirit-gloves-3-light",
+      "name": "Light:Spirit Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
+      "icon": "img/gear/digimonfrontiergloves-light.png",
+      "AT": 5000,
+      "ranged": true
     },
     {
       "id": "gloves-power-gloves-1-7-15-or-30-days",
@@ -1265,6 +1437,20 @@
       ]
     },
     {
+      "id": "gloves-spirit-gloves-3-thunder",
+      "name": "Thunder:Spirit Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
+      "icon": "img/gear/digimonfrontiergloves-thunder.png",
+      "AT": 5000,
+      "ranged": true
+    },
+    {
       "id": "gloves-trendy-watch-event",
       "name": "Trendy Watch [Event]",
       "slot": "gloves",
@@ -1291,6 +1477,20 @@
           "unit": "flat"
         }
       ]
+    },
+    {
+      "id": "gloves-spirit-gloves-3-wind",
+      "name": "Wind:Spirit Gloves",
+      "slot": "gloves",
+      "wikiSlot": "Gloves",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/8/80/DigimonFrontierGloves.png",
+      "icon": "img/gear/digimonfrontiergloves-wind.png",
+      "AT": 5000,
+      "ranged": true
     },
     {
       "id": "gloves-xuanwumon-gloves",
@@ -1345,20 +1545,6 @@
       "iconWiki": "/images/8/80/Zhuqiamon%27s_Infernal_Gloves.png",
       "icon": "img/gear/zhuqiamon_s_infernal_gloves.png",
       "AT": 330
-    },
-    {
-      "id": "head-spirit-helmet-3",
-      "name": "*:Spirit Helmet",
-      "slot": "head",
-      "wikiSlot": "Head",
-      "axis": "unknown",
-      "upgrade": 10,
-      "upgradeMax": 15,
-      "bands": 3,
-      "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
-      "icon": "img/gear/digimonfrontierhead.png",
-      "CT": 5500.0,
-      "ranged": true
     },
     {
       "id": "head-arbormon-s-helmet-event",
@@ -1440,6 +1626,34 @@
       "CT": 3.0
     },
     {
+      "id": "head-spirit-helmet-3-fire",
+      "name": "Fire:Spirit Helmet",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
+      "icon": "img/gear/digimonfrontierhead-fire.png",
+      "CT": 5500.0,
+      "ranged": true
+    },
+    {
+      "id": "head-spirit-helmet-3-ice",
+      "name": "Ice:Spirit Helmet",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
+      "icon": "img/gear/digimonfrontierhead-ice.png",
+      "CT": 5500.0,
+      "ranged": true
+    },
+    {
       "id": "head-lanamon-s-helmet-event",
       "name": "Lanamon's Helmet [Event]",
       "slot": "head",
@@ -1459,6 +1673,20 @@
           "unit": "pct"
         }
       ]
+    },
+    {
+      "id": "head-spirit-helmet-3-light",
+      "name": "Light:Spirit Helmet",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
+      "icon": "img/gear/digimonfrontierhead-light.png",
+      "CT": 5500.0,
+      "ranged": true
     },
     {
       "id": "head-qinglongmon-s-lightning-ornament",
@@ -1511,6 +1739,20 @@
       ]
     },
     {
+      "id": "head-spirit-helmet-3-thunder",
+      "name": "Thunder:Spirit Helmet",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
+      "icon": "img/gear/digimonfrontierhead-thunder.png",
+      "CT": 5500.0,
+      "ranged": true
+    },
+    {
       "id": "head-trendy-ball-cap-event",
       "name": "Trendy Ball Cap [Event]",
       "slot": "head",
@@ -1520,6 +1762,20 @@
       "icon": "img/gear/trendy_ball_cap_event.png",
       "AT": 100,
       "HT": 300
+    },
+    {
+      "id": "head-spirit-helmet-3-wind",
+      "name": "Wind:Spirit Helmet",
+      "slot": "head",
+      "wikiSlot": "Head",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/2/2b/DigimonFrontierHead.png",
+      "icon": "img/gear/digimonfrontierhead-wind.png",
+      "CT": 5500.0,
+      "ranged": true
     },
     {
       "id": "head-xuanwumon-s-aquatic-ornament",
@@ -2144,35 +2400,6 @@
       "CT": 7.0
     },
     {
-      "id": "shoes-spirit-shoes-3",
-      "name": "*:Spirit Shoes",
-      "slot": "shoes",
-      "wikiSlot": "Shoes",
-      "axis": "unknown",
-      "upgrade": 10,
-      "upgradeMax": 15,
-      "bands": 3,
-      "iconWiki": "/images/a/a8/DigimonFrontierShoes.png",
-      "icon": "img/gear/digimonfrontiershoes.png",
-      "extra": [
-        {
-          "stat": "Speed",
-          "value": 30.0,
-          "unit": "pct"
-        },
-        {
-          "stat": "Affinity",
-          "value": 40.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "EXP",
-          "value": 3500.0,
-          "unit": "pct"
-        }
-      ]
-    },
-    {
       "id": "shoes-agumon-feet-shoes-30d",
       "name": "Agumon Feet Shoes [30D]",
       "slot": "shoes",
@@ -2193,6 +2420,93 @@
       "DE": 200
     },
     {
+      "id": "shoes-spirit-shoes-3-fire",
+      "name": "Fire:Spirit Shoes",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/a/a8/DigimonFrontierShoes.png",
+      "icon": "img/gear/digimonfrontiershoes-fire.png",
+      "extra": [
+        {
+          "stat": "Speed",
+          "value": 30.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Affinity",
+          "value": 40.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 3500.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "shoes-spirit-shoes-3-ice",
+      "name": "Ice:Spirit Shoes",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/a/a8/DigimonFrontierShoes.png",
+      "icon": "img/gear/digimonfrontiershoes-ice.png",
+      "extra": [
+        {
+          "stat": "Speed",
+          "value": 30.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Affinity",
+          "value": 40.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 3500.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "shoes-spirit-shoes-3-light",
+      "name": "Light:Spirit Shoes",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/a/a8/DigimonFrontierShoes.png",
+      "icon": "img/gear/digimonfrontiershoes-light.png",
+      "extra": [
+        {
+          "stat": "Speed",
+          "value": 30.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Affinity",
+          "value": 40.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 3500.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
       "id": "shoes-spooky-wizardmon-shoes-30-days",
       "name": "Spooky Wizardmon Shoes[30 days]",
       "slot": "shoes",
@@ -2211,6 +2525,64 @@
       "iconWiki": "/images/a/a4/Swimming_Gears_-_Flippers_%2830D%29.png",
       "icon": "img/gear/swimming_gears_-_flippers__30d_.png",
       "DE": 200
+    },
+    {
+      "id": "shoes-spirit-shoes-3-thunder",
+      "name": "Thunder:Spirit Shoes",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/a/a8/DigimonFrontierShoes.png",
+      "icon": "img/gear/digimonfrontiershoes-thunder.png",
+      "extra": [
+        {
+          "stat": "Speed",
+          "value": 30.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Affinity",
+          "value": 40.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 3500.0,
+          "unit": "pct"
+        }
+      ]
+    },
+    {
+      "id": "shoes-spirit-shoes-3-wind",
+      "name": "Wind:Spirit Shoes",
+      "slot": "shoes",
+      "wikiSlot": "Shoes",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/a/a8/DigimonFrontierShoes.png",
+      "icon": "img/gear/digimonfrontiershoes-wind.png",
+      "extra": [
+        {
+          "stat": "Speed",
+          "value": 30.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "Affinity",
+          "value": 40.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "EXP",
+          "value": 3500.0,
+          "unit": "pct"
+        }
+      ]
     },
     {
       "id": "shoes-yolei-t-k-davis-shoes-3",
@@ -2238,30 +2610,6 @@
           "stat": "EXP",
           "value": 2000.0,
           "unit": "pct"
-        }
-      ]
-    },
-    {
-      "id": "top-spirit-top-3",
-      "name": "*:Spirit Top",
-      "slot": "top",
-      "wikiSlot": "Top",
-      "axis": "unknown",
-      "upgrade": 10,
-      "upgradeMax": 15,
-      "bands": 3,
-      "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
-      "icon": "img/gear/digimonfrontiertop.png",
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 4500.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "HP",
-          "value": 3500.0,
-          "unit": "flat"
         }
       ]
     },
@@ -2380,6 +2728,30 @@
       ]
     },
     {
+      "id": "top-spirit-top-3-fire",
+      "name": "Fire:Spirit Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
+      "icon": "img/gear/digimonfrontiertop-fire.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 4500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 3500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
       "id": "top-flame-hooded-shirt-of-zhuqiaomon",
       "name": "Flame Hooded Shirt of Zhuqiaomon",
       "slot": "top",
@@ -2444,6 +2816,30 @@
       ]
     },
     {
+      "id": "top-spirit-top-3-ice",
+      "name": "Ice:Spirit Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
+      "icon": "img/gear/digimonfrontiertop-ice.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 4500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 3500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
       "id": "top-lanamon-s-swimsuit-event",
       "name": "Lanamon's Swimsuit [Event]",
       "slot": "top",
@@ -2456,6 +2852,30 @@
         {
           "stat": "HP",
           "value": 700.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-spirit-top-3-light",
+      "name": "Light:Spirit Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
+      "icon": "img/gear/digimonfrontiertop-light.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 4500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 3500.0,
           "unit": "flat"
         }
       ]
@@ -2509,6 +2929,30 @@
       ]
     },
     {
+      "id": "top-spirit-top-3-thunder",
+      "name": "Thunder:Spirit Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
+      "icon": "img/gear/digimonfrontiertop-thunder.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 4500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 3500.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
       "id": "top-trendy-white-shirt-event",
       "name": "Trendy White Shirt [Event]",
       "slot": "top",
@@ -2541,6 +2985,30 @@
         {
           "stat": "HP",
           "value": 800.0,
+          "unit": "flat"
+        }
+      ]
+    },
+    {
+      "id": "top-spirit-top-3-wind",
+      "name": "Wind:Spirit Top",
+      "slot": "top",
+      "wikiSlot": "Top",
+      "axis": "unknown",
+      "upgrade": 10,
+      "upgradeMax": 15,
+      "bands": 3,
+      "iconWiki": "/images/d/d5/DigimonFrontierTop.png",
+      "icon": "img/gear/digimonfrontiertop-wind.png",
+      "extra": [
+        {
+          "stat": "HP",
+          "value": 4500.0,
+          "unit": "flat"
+        },
+        {
+          "stat": "HP",
+          "value": 3500.0,
           "unit": "flat"
         }
       ]
