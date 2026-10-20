@@ -39,6 +39,8 @@ python tools/refresh.py --no-fetch          # re-run enrich/build only (no netwo
 #    (Chrome-CDP steps — dmowiki attributes #11-12 — stay manual.)
 
 # 1. Full scrape + parse (network) — populates cache/ and writes data/scan_result.json
+#    Exits 1 without writing when the gameking list comes back empty (site
+#    unreachable), so refresh.py stops instead of wiping every deck match.
 python scanners/scan_decks.py
 
 # 2. Re-parse only from cached HTML (no network) — use after tweaking parser logic
@@ -60,6 +62,9 @@ python extractors/extract_digimon_images.py
 python builders/build_digimon_html.py
 
 # 8. Scrape KR news board list (digimonmasters.com Btype=Update) → data/kr_news_index.json
+#    Every page is re-fetched (a new post shifts the whole board) and parsed one
+#    <li> at a time: the last row of each page carries a broken class attribute
+#    and same-day posts show "today HH:MM", which a whole-item regex ran across.
 python fetchers/fetch_kr_news_index.py
 
 # 9. Fetch each KR update post body & extract `[ 신규 디지몬 추가 - <name> ]` markers
@@ -108,6 +113,15 @@ python fetchers/fetch_dmowiki_pages.py --mode api --list titles.txt
 #      only once the file is in docs/img/gear/. /images/ sits behind the same
 #      challenge as the pages, so the download goes through the same tab.
 python fetchers/fetch_dmowiki_images.py      # then re-run build_gear_registry.py
+#      Grouped wiki rows ("*:Spirit X", "Yolei,T.K,Davis X") draw every set's
+#      piece in one picture; SPLIT_SETS in build_gear_registry splits them into
+#      one pick per set with a cut-out icon. Picture order is NOT the name's:
+#      MDG pictures run Davis, T.K, Yolei. build_set_registry reads each set's
+#      own pieces through TEMPLATE_BY_SET.
+#      Thai names (nameTh): set pieces from data/set_rosters.json, everything
+#      else from data/gear_th_names.json (each pair checked present in a cached
+#      vplay page). docs/gear-names.html lists them with pictures and sets;
+#      clothing slots there show set pieces only.
 
 # 11d. TH wording on decks.html. scan_th_patch_decks reads every "เพิ่มเด็คใหม่"
 #      out of the cached TH posts; data/deck_th_map.json is the hand-checked
