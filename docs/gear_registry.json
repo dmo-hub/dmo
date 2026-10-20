@@ -997,159 +997,6 @@
       "nameTh": "กางเกงขาสั้นสีแดงเพลิงของซูเซมอน"
     },
     {
-      "id": "bracelets-fancy-bracelet-of-ancient-breath-2",
-      "name": "Fancy Bracelet of Ancient Breath",
-      "slot": "bracelet",
-      "wikiSlot": "Bracelets",
-      "axis": "unknown",
-      "iconWiki": "/images/4/41/Fancy_Bracelet_of_Ancient_Breath.png",
-      "icon": "img/gear/fancy_bracelet_of_ancient_breath.png",
-      "DS": 299,
-      "DE": 37,
-      "CT": 2.0,
-      "HT": 187,
-      "EV": 2.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 299.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "bracelets-knight-s-bracelet-2",
-      "name": "Knight's Bracelet",
-      "slot": "bracelet",
-      "wikiSlot": "Bracelets",
-      "axis": "unknown",
-      "iconWiki": "/images/8/8f/Knight%27s_Bracelet.png",
-      "icon": "img/gear/knight_s_bracelet.png",
-      "DS": 800,
-      "DE": 100,
-      "CT": 7.0,
-      "HT": 500,
-      "EV": 6.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 800.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "bracelets-miracle-bracelet-level-10-2",
-      "name": "Miracle Bracelet",
-      "slot": "bracelet",
-      "wikiSlot": "Bracelets",
-      "axis": "unknown",
-      "bands": 10,
-      "level": 10,
-      "iconWiki": "/images/a/a4/Miracle_Bracelet_-Level_10-.png",
-      "icon": "img/gear/miracle_bracelet_-level_10-.png",
-      "DS": 1152,
-      "AT": 576,
-      "DE": 144,
-      "CT": 9.0,
-      "HT": 720,
-      "EV": 9.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1152.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "กำไลแห่งปาฏิหาริย์"
-    },
-    {
-      "id": "bracelets-miracle-bracelet-special-2",
-      "name": "Miracle Bracelet [Special]",
-      "slot": "bracelet",
-      "wikiSlot": "Bracelets",
-      "axis": "unknown",
-      "iconWiki": "/images/7/7e/Miracle_Bracelet_-Special-.png",
-      "icon": "img/gear/miracle_bracelet_-special-.png",
-      "DS": 1200,
-      "AT": 600,
-      "DE": 150,
-      "CT": 10.0,
-      "HT": 750,
-      "EV": 9.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1200.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "กำไลแห่งปาฏิหาริย์[ระดับพิเศษ]"
-    },
-    {
-      "id": "bracelets-radiant-knight-s-bracelet-2",
-      "name": "Radiant Knight's Bracelet",
-      "slot": "bracelet",
-      "wikiSlot": "Bracelets",
-      "axis": "unknown",
-      "iconWiki": "/images/8/8f/Knight%27s_Bracelet.png",
-      "icon": "img/gear/knight_s_bracelet.png",
-      "DS": 800,
-      "DE": 100,
-      "CT": 7.0,
-      "HT": 500,
-      "EV": 6.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 800.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "bracelets-royal-knight-s-bracelet-2",
-      "name": "Royal : Knight's Bracelet",
-      "slot": "bracelet",
-      "wikiSlot": "Bracelets",
-      "axis": "unknown",
-      "iconWiki": "/images/e/eb/Royal_Bracelet.png",
-      "icon": "img/gear/royal_bracelet.png",
-      "DS": 800,
-      "DE": 100,
-      "CT": 7.0,
-      "HT": 500,
-      "EV": 6.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 800.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
-      "id": "bracelets-royal-radiant-knight-s-bracelet-2",
-      "name": "Royal : Radiant Knight's Bracelet",
-      "slot": "bracelet",
-      "wikiSlot": "Bracelets",
-      "axis": "unknown",
-      "iconWiki": "/images/e/eb/Royal_Bracelet.png",
-      "icon": "img/gear/royal_bracelet.png",
-      "DS": 800,
-      "DE": 100,
-      "CT": 7.0,
-      "HT": 500,
-      "EV": 6.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 800.0,
-          "unit": "flat"
-        }
-      ]
-    },
-    {
       "id": "bracelets-royal-x-knight-s-bracelet-2",
       "name": "Royal : X-Knight's Bracelet",
       "slot": "bracelet",
@@ -5637,29 +5484,6 @@
       "nameTh": "แหวนที่เปล่งประกายของสี่สัตว์เทพที่ถูกผนึก"
     },
     {
-      "id": "rings-ring-of-four-holy-beasts-lv-5",
-      "name": "Ring of Four Holy Beasts [ ]",
-      "slot": "ring",
-      "wikiSlot": "Rings",
-      "axis": "unknown",
-      "bands": 5,
-      "level": 5,
-      "iconWiki": "/images/9/97/Sealed_Ring_of_Four_Holy_Beasts.png",
-      "icon": "img/gear/sealed_ring_of_four_holy_beasts.png",
-      "DS": 880,
-      "AT": 330,
-      "DE": 28,
-      "CT": 6.0,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 880.0,
-          "unit": "flat"
-        }
-      ],
-      "nameTh": "แหวนของสี่สัตว์เทพ"
-    },
-    {
       "id": "rings-shining-arena-ring-2",
       "name": "Shining Arena Ring",
       "slot": "ring",
@@ -5680,16 +5504,6 @@
           "unit": "flat"
         }
       ]
-    },
-    {
-      "id": "rings-underworld-ring",
-      "name": "Underworld Ring",
-      "slot": "ring",
-      "wikiSlot": "Rings",
-      "axis": "unknown",
-      "AT": 450,
-      "CT": 7.0,
-      "nameTh": "แหวนแห่งยมโลก"
     },
     {
       "id": "rings-zero-unit-ring-2",
