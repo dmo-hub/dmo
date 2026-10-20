@@ -143,7 +143,8 @@
       "axis": "tamer",
       "iconWiki": "/images/a/a3/Zhuqiomon_shorts.png",
       "icon": "img/gear/zhuqiomon_shorts.png",
-      "DS": 1000
+      "DS": 1000,
+      "nameTh": "กางเกงขาสั้นชั้นดีของซูเซมอน"
     },
     {
       "id": "bottom-spirit-bottom-3-ice",
@@ -1260,7 +1261,8 @@
       "axis": "tamer",
       "iconWiki": "/images/1/15/Baihumon_Gloves.png",
       "icon": "img/gear/baihumon_gloves.png",
-      "AT": 300
+      "AT": 300,
+      "nameTh": "ถุงมือชั้นดีของไบฟูมอน"
     },
     {
       "id": "gloves-baihumon-gloves",
@@ -1658,7 +1660,8 @@
           "value": 200.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ถุงมือสยองขวัญของวารุมอนซาเอมอน"
     },
     {
       "id": "gloves-spirit-gloves-3-wind",
@@ -1950,7 +1953,8 @@
           "value": 200.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "หน้ากากสยองขวัญของพัมพ์มอน [30 วัน]"
     },
     {
       "id": "head-yolei-t-k-davis-head-3-tk",
@@ -2808,7 +2812,8 @@
       "axis": "unknown",
       "iconWiki": "/images/f/f5/Spooky_Wizardmon_Shoes%2830_days%29.png",
       "icon": "img/gear/spooky_wizardmon_shoes_30_days_.png",
-      "DE": 100
+      "DE": 100,
+      "nameTh": "รองเท้าของวิซาร์มอน [30 วัน]"
     },
     {
       "id": "shoes-swimming-gears-flippers-30d",
@@ -3293,7 +3298,8 @@
           "value": 1000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ผ้าคลุมสยองขวัญของบาเคมอน [30 วัน]"
     },
     {
       "id": "top-yolei-t-k-davis-top-3-tk",
@@ -3439,7 +3445,8 @@
           "value": 1000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดชั้นดีของเชนวูมอน"
     },
     {
       "id": "top-xuanwumon-s-aquatic-hooded-shirt",
