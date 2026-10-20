@@ -2942,7 +2942,7 @@
       "id": "glasses-digimon-kaiser-s-goggles-at",
       "name": "Digimon Kaiser's Goggles [AT]",
       "slot": "glasses",
-      "axis": "unknown",
+      "axis": "digimon",
       "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [AT]",
       "upgrade": 0,
       "upgradeMax": 10,
@@ -2994,7 +2994,7 @@
       "id": "glasses-digimon-kaiser-s-goggles-ct",
       "name": "Digimon Kaiser's Goggles [CT]",
       "slot": "glasses",
-      "axis": "unknown",
+      "axis": "digimon",
       "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [CT]",
       "upgrade": 0,
       "upgradeMax": 10,
@@ -3046,7 +3046,7 @@
       "id": "glasses-digimon-kaiser-s-goggles-ev",
       "name": "Digimon Kaiser's Goggles [EV]",
       "slot": "glasses",
-      "axis": "unknown",
+      "axis": "digimon",
       "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [EV]",
       "upgrade": 0,
       "upgradeMax": 10,
@@ -3098,7 +3098,7 @@
       "id": "glasses-digimon-kaiser-s-goggles-hp",
       "name": "Digimon Kaiser's Goggles [HP]",
       "slot": "glasses",
-      "axis": "unknown",
+      "axis": "digimon",
       "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [HP]",
       "upgrade": 0,
       "upgradeMax": 10,
@@ -3134,7 +3134,7 @@
       "id": "glasses-digimon-kaiser-s-goggles-ht",
       "name": "Digimon Kaiser's Goggles [HT]",
       "slot": "glasses",
-      "axis": "unknown",
+      "axis": "digimon",
       "nameTh": "แว่นตาของดิจิมอนไกเซอร์ [HT]",
       "upgrade": 0,
       "upgradeMax": 10,
@@ -5779,7 +5779,8 @@
           "value": 1500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แหวนแห่งความหวังอันเปล่งประกาย"
     },
     {
       "id": "rings-fanglongmon-s-ancient-ring-lv-10",

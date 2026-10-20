@@ -52,10 +52,11 @@ GOGGLES_WIKI_SLOTS = {"Adventure Goggles", "Digimon Kaiser´s Goggles", "Tamer`s
 # which wiki heading's picture a Thai variant borrows when no row shares its name
 GOGGLES_PICTURE = {"Adventure Goggles": "Adventure Goggles",
                    "Digimon Kaiser's Goggles": "Digimon Kaiser´s Goggles"}
-# vplay's Adventure Goggles post says the stats go to the digimon; the Kaiser
-# post never says, so those stay unscored until someone confirms the side.
-GOGGLES_AXIS = {"Adventure Goggles": "digimon", "Tamer’s Goggles": "tamer",
-                "Complete Tamer’s Goggles": "tamer"}
+# vplay's Adventure Goggles post says the stats go to the digimon. The Kaiser
+# post never says; its numbers (AT 4000, CT 40%) are digimon-scale, ten times
+# what the tamer-side goggles give, so they are read as digimon too.
+GOGGLES_AXIS = {"Adventure Goggles": "digimon", "Digimon Kaiser's Goggles": "digimon",
+                "Tamer’s Goggles": "tamer", "Complete Tamer’s Goggles": "tamer"}
 
 # vplay's per-level Spirit tables name the piece, not the element: one table
 # serves all five "*:Spirit X" items.

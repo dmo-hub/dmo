@@ -437,5 +437,5 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   `build_gear_registry.add_th_goggles` drops the wiki's goggles rows (named
   "Tamer's Goggles [..]" under every goggles heading, NA rolls) for them.
   Adventure Goggles are 25 fixed main/third-option pairs, axis digimon (the
-  post says so); Kaiser goggles stay axis "unknown" because their post never
-  says which side the stats feed.
+  post says so); Kaiser goggles are read as digimon too -- their post never
+  says, but AT 4000 / CT 40% is digimon-scale, not the tamer goggles' AT 400.
