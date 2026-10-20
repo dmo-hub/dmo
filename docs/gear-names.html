@@ -41,6 +41,22 @@
   .gn-shin { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
   .gn-empty { color: var(--muted); padding: 18px 0; }
   .gn-note { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: 0 0 16px; }
+  .gn-sets { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+  .gn-set { border: 1px solid var(--border); border-radius: 12px; background: var(--surface-card);
+    padding: 12px 14px; min-width: 0; }
+  .gn-set h3 { margin: 0; font-size: 14.5px; color: var(--ink); }
+  .gn-set .en { font-size: 12.5px; color: var(--muted); margin: 0 0 8px; }
+  .gn-pieces { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+  .gn-piece { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--body);
+    border: 1px solid var(--border); border-radius: 8px; padding: 3px 8px 3px 3px;
+    background: var(--surface-soft); max-width: 100%; }
+  .gn-piece .gn-img { width: 28px; height: 28px; }
+  .gn-piece .gn-img img { width: 28px; height: 28px; }
+  .gn-piece .gn-img.none { font-size: 9px; }
+  .gn-piece span { overflow-wrap: anywhere; }
+  .gn-bonus { font-size: 12.5px; color: var(--body); line-height: 1.55; margin: 2px 0 0; }
+  .gn-bonus b { color: var(--ink); }
+  .gn-bonus .cond { color: var(--muted); }
 </style>
 </head>
 <body>
@@ -70,6 +86,7 @@
       <div class="hero-stat"><div class="num" id="st-all">0</div><div class="lbl">ชิ้น</div></div>
       <div class="hero-stat"><div class="num" id="st-th">0</div><div class="lbl">มีชื่อไทย</div></div>
       <div class="hero-stat"><div class="num" id="st-img">0</div><div class="lbl">มีภาพ</div></div>
+      <div class="hero-stat"><div class="num" id="st-set">0</div><div class="lbl">เซ็ต</div></div>
     </div>
   </div>
 
@@ -81,6 +98,11 @@
     <button type="button" class="gn-chip" data-f="noth" aria-pressed="false">ไม่มีชื่อไทย<span class="n" id="n-noth"></span></button>
     <button type="button" class="gn-chip" data-f="noimg" aria-pressed="false">ไม่มีภาพ<span class="n" id="n-noimg"></span></button>
   </div>
+
+  <section class="gn-slot" id="sets-wrap" hidden>
+    <h2>เซ็ต<span class="n" id="sets-n"></span></h2>
+    <div class="gn-sets" id="sets"></div>
+  </section>
 
   <div id="list"><p class="gn-empty">กำลังโหลด…</p></div>
 
@@ -103,6 +125,8 @@
     ["bracelet", "กำไล"], ["keyring", "พวงกุญแจ"]
   ];
   var items = [];
+  var sets = [];
+  var byName = {};
   var filter = "all";
   var $ = function (id) { return document.getElementById(id); };
 
@@ -134,8 +158,68 @@
     return c;
   }
 
+  function imgBox(src, alt) {
+    var box = el("div", "gn-img" + (src ? "" : " none"));
+    if (src) {
+      var img = document.createElement("img");
+      img.src = src;
+      img.alt = alt;
+      img.loading = "lazy";
+      box.appendChild(img);
+    } else {
+      box.textContent = "ไม่มีภาพ";
+    }
+    return box;
+  }
+
+  /* "ครบ 4 ชิ้น: +40% Skill DMG · HP 4500" -- a chance-based bonus also says when it fires. */
+  function bonusLine(b) {
+    var p = el("p", "gn-bonus");
+    p.appendChild(el("b", "", "ครบ " + b.pieces + " ชิ้น: "));
+    p.appendChild(document.createTextNode((b.effects || []).map(function (e) { return e.text; }).join(" · ")));
+    if (!b.permanent) {
+      p.appendChild(el("span", "cond", " (โอกาส " + b.chance + (b.operation && b.operation !== "None" ? " เมื่อ " + b.operation : "") + ")"));
+    }
+    return p;
+  }
+
+  function setCard(s) {
+    var c = el("div", "gn-set");
+    c.appendChild(el("h3", "", s.set_th));
+    c.appendChild(el("div", "en", s.set));
+    var row = el("div", "gn-pieces");
+    s.slots.forEach(function (x) {
+      var it = byName[x.stats_from] || {};
+      var piece = el("div", "gn-piece");
+      piece.title = [it.name, x.shin].filter(Boolean).join(" · ");
+      piece.appendChild(imgBox(it.icon, x.item));
+      piece.appendChild(el("span", "", x.item));
+      row.appendChild(piece);
+    });
+    c.appendChild(row);
+    (s.bonuses || []).forEach(function (b) { c.appendChild(bonusLine(b)); });
+    return c;
+  }
+
+  function renderSets(q) {
+    var wrap = $("sets-wrap");
+    var host = $("sets");
+    host.textContent = "";
+    /* The two filters are about single pieces, so the sets step aside for them. */
+    var rows = filter !== "all" ? [] : sets.filter(function (s) {
+      if (!q) return true;
+      return [s.set_th, s.set].concat(s.slots.map(function (x) {
+        return [x.item, x.shin, x.stats_from].join(" ");
+      })).join(" ").toLowerCase().indexOf(q) >= 0;
+    });
+    rows.forEach(function (s) { host.appendChild(setCard(s)); });
+    $("sets-n").textContent = rows.length + " เซ็ต";
+    wrap.hidden = !rows.length;
+  }
+
   function render() {
     var q = $("q").value.trim().toLowerCase();
+    renderSets(q);
     var host = $("list");
     host.textContent = "";
     var shown = 0;
@@ -174,12 +258,19 @@
   });
   $("q").addEventListener("input", render);
 
-  fetch("gear_registry.json")
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (d) {
+  function getJson(url) {
+    return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+
+  Promise.all([getJson("gear_registry.json"), getJson("set_registry.json")])
+    .then(function (both) {
+      var d = both[0];
+      sets = both[1].sets || [];
       var known = {};
       SLOTS.forEach(function (s) { known[s[0]] = true; });
       items = (d.items || []).filter(function (it) { return known[it.slot]; });
+      items.forEach(function (it) { byName[it.name] = it; });
+      $("st-set").textContent = sets.length;
       var th = items.filter(function (it) { return it.nameTh; }).length;
       var img = items.filter(function (it) { return it.icon; }).length;
       $("st-all").textContent = items.length;
