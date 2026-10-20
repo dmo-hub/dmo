@@ -48,7 +48,8 @@ CONFIGS = {
     },
 }
 
-NEW_MARKER_RE = re.compile(r"\[\s*New\s+Deck\s+Add(?:ed)?\b[^\]]*\]", re.IGNORECASE)
+# Plural too: a post adding several decks titles it "[New Decks Added]".
+NEW_MARKER_RE = re.compile(r"\[\s*New\s+Decks?\s+Add(?:ed)?\b[^\]]*\]", re.IGNORECASE)
 EXISTING_MARKER_RE = re.compile(
     r"\[\s*(?:Existing\s+Deck\s+Effect\s+Changed|Modify\s+Existing\s+Deck)\b[^\]]*\]",
     re.IGNORECASE,
@@ -183,6 +184,7 @@ def has_marker(html):
     low = html.lower()
     return (
         "new deck add" in low
+        or bool(NEW_MARKER_RE.search(html))
         or "existing deck effect changed" in low
         or "modify existing deck" in low
     )

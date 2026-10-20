@@ -1,11 +1,11 @@
 {
-  "scan_date": "2026-10-20 22:20:46",
+  "scan_date": "2026-10-20 23:20:05",
   "scanned": {
     "event": 649,
     "patch": 784
   },
-  "matched_posts": 22,
-  "new_deck_count": 37,
+  "matched_posts": 23,
+  "new_deck_count": 42,
   "existing_deck_count": 1,
   "matches": [
     {
@@ -109,6 +109,8 @@
       "subject": "13.05.2025 Update",
       "url": "https://dmo.gameking.com/news/EventView.aspx?idx=731",
       "new_decks": [
+        "Descent! Ancient Dragon Warrior",
+        "Stop Diablomon!",
         "White Wings: Sorrow and Determination"
       ],
       "existing_decks": [],
@@ -306,6 +308,21 @@
       "new_decks": [
         "The One Who Descended in Radiance",
         "Radiance Against Despair"
+      ],
+      "existing_decks": [],
+      "has_new_marker": true,
+      "has_existing_marker": false
+    },
+    {
+      "kind": "patch",
+      "idx": 4199,
+      "date": "09-16-2026",
+      "subject": "16.09.2026 Update",
+      "url": "https://dmo.gameking.com/News/PatchNoteView.aspx?idx=4199",
+      "new_decks": [
+        "Sun of Sorrow, Whispered",
+        "The Dark Side of the Inverted Sun",
+        "Eternal Destruction and Chaos"
       ],
       "existing_decks": [],
       "has_new_marker": true,
