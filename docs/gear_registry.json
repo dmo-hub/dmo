@@ -364,7 +364,8 @@
       "axis": "tamer",
       "iconWiki": "/images/a/a6/Xuanwumon%27s_Aquatic_Short_Pants.png",
       "icon": "img/gear/xuanwumon_s_aquatic_short_pants.png",
-      "DS": 1100
+      "DS": 1100,
+      "nameTh": "กางเกงขาสั้นแห่งสายน้ำของเชนวูมอน"
     },
     {
       "id": "bottom-yolei-t-k-davis-bottom-3-yolei",
@@ -555,7 +556,8 @@
           "value": 880.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ต่างหูของสี่สัตว์เทพ"
     },
     {
       "id": "earrings-fanglongmon-s-ancient-earring-lv-10",
@@ -667,7 +669,8 @@
           "value": 1040.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ต่างหูที่เปล่งประกายของสี่สัตว์เทพ"
     },
     {
       "id": "earrings-regular-earrings",
@@ -1031,7 +1034,8 @@
           "value": 5.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "เสื้อคลุมแห่งสายน้ำของเชนวูมอน"
     },
     {
       "id": "fashion-yolei-t-k-davis-fashion-3-yolei",
@@ -1559,7 +1563,8 @@
           "value": 100.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "อมยิ้มรูปแท่งสี่เหลี่ยม"
     },
     {
       "id": "gloves-star-lollipop",
@@ -1576,7 +1581,8 @@
           "value": 100.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "อมยิ้มรูปดาว"
     },
     {
       "id": "gloves-yolei-t-k-davis-gloves-3-tk",
@@ -1681,7 +1687,8 @@
       "axis": "tamer",
       "iconWiki": "/images/4/4f/Xuanwumon%27s_Aquatic_Gloves.png",
       "icon": "img/gear/xuanwumon_s_aquatic_gloves.png",
-      "AT": 330
+      "AT": 330,
+      "nameTh": "ถุงมือแห่งสายน้ำของเชนวูมอน"
     },
     {
       "id": "gloves-yolei-t-k-davis-gloves-3-yolei",
@@ -2001,7 +2008,8 @@
           "value": 50.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "เครื่องประดับแห่งสายน้ำของเชนวูมอน"
     },
     {
       "id": "head-yolei-t-k-davis-head-3-yolei",
@@ -2236,7 +2244,8 @@
           "value": 10.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สไปรอลคีย์ริง[ME] Lv Max"
     },
     {
       "id": "spiral-key-ring-wg-spiral-key-ring-wg-lv-7",
@@ -2387,7 +2396,8 @@
           "value": 880.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "สร้อยของสี่สัตว์เทพ"
     },
     {
       "id": "necklaces-necklaces-with-3-options",
@@ -3421,7 +3431,8 @@
           "value": 1200.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดแห่งสายน้ำของเชนวูมอน"
     },
     {
       "id": "top-yolei-t-k-davis-top-3-yolei",
