@@ -1049,5 +1049,20 @@
     "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)",
     "url": "https://www.vplay.in.th/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%8B%E0%B8%B5%E0%B8%A5%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/",
     "date": ""
+  },
+  "kr-811897": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 수 씰 교환권 필요 개수 마스터 개수 능력치 마스터 수치",
+        "score": 22,
+        "rows": 21,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Garbagemon Seal</td><td>10</td><td>1</td><td>AT</td><td>100</td></tr><tr><td>Megadramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>SkullKnightmon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>오메가몬 Ver.B 씰</td><td>1</td><td>10</td><td>AT</td><td>300</td></tr><tr><td>Scorpiomon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Baristamon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>LadyDevimon Seal</td><td>5</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Birdramon Seal</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>DeadlyAxemon Seal</td><td>1</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>[ 각성 ] 리리스몬 저항 씰</td><td>1</td><td>10</td><td>CT</td><td>300</td></tr><tr><td>Okuwamon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Spidermon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Dorulumon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>에오스몬 ( 완전체 ) 씰</td><td>10</td><td>1</td><td>DS</td><td>150</td></tr><tr><td>TeslaJellymon Seal</td><td>5</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>MetalEtemon Seal</td><td>5</td><td>1</td><td>EV</td><td>100</td></tr><tr><td>Groundramon Seal</td><td>1</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Wendimon Seal</td><td>5</td><td>1</td><td>HT</td><td>150</td></tr><tr><td>SymbareAngoramon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>오메가몬 Ver.Z/D 씰</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811897&Btype=Update",
+    "date": "19.11.2025"
   }
 }
