@@ -296,7 +296,9 @@ def add_level_stats(out):
             "id": re.sub(r"[^a-z0-9]+", "-", f"{slot}-{name}".lower()).strip("-"),
             "name": name,
             "slot": slot,
-            "axis": "unknown",           # vplay never says tamer or digimon
+            # vplay never says tamer or digimon; the site owner ruled digimon
+            # so the solver counts the set instead of skipping it.
+            "axis": "digimon",
             "upgrade": 0,
             "upgradeMax": top,
             "nameTh": src["name"],
