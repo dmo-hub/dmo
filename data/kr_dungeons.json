@@ -1,5 +1,462 @@
 {
   "dungeons": {
+    "혼돈의전장": {
+      "sources": [
+        "755022"
+      ],
+      "name": "혼돈의 전장",
+      "location": "주작몬의 안식처",
+      "npc": "<사성수>주작몬",
+      "req": "Lv.110+",
+      "conditions": [
+        "퀘스트 [시험] 완료 디지몬 레벨 110 이상"
+      ],
+      "pass_item": "주작몬의 입장용 부적 [혼돈의 전장] 1개",
+      "party": 4,
+      "boss": "메기드라몬 베르제브몬",
+      "date": "2021-03-03",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=755022&Btype=Update"
+    },
+    "최후의결전": {
+      "sources": [
+        "755022"
+      ],
+      "name": "최후의 결전",
+      "location": "주작몬의 안식처",
+      "npc": "<사성수>주작몬",
+      "req": "Lv.110+",
+      "conditions": [
+        "퀘스트 [혼돈의 전장] 완료 디지몬 레벨 110 이상"
+      ],
+      "pass_item": "주작몬의 입장용 부적 [최후의 결정] 1개",
+      "party": 4,
+      "boss": "주작몬",
+      "monsters": [
+        {
+          "name": "등장 몬스터",
+          "title": "지급 방식"
+        },
+        {
+          "name": "머슈몬",
+          "title": "드랍 (50%)"
+        },
+        {
+          "name": "브롯사몬",
+          "level": 100
+        },
+        {
+          "name": "우드몬",
+          "level": 50
+        },
+        {
+          "name": "쥬레이몬",
+          "level": 100
+        },
+        {
+          "name": "베지몬",
+          "level": 50
+        },
+        {
+          "name": "쟈가몬",
+          "level": 100
+        },
+        {
+          "name": "라플레시몬",
+          "title": "리워드 (100%)"
+        },
+        {
+          "name": "???",
+          "title": "리워드 (100%)"
+        },
+        {
+          "name": "번개콩알몬",
+          "title": "드랍 (50%)"
+        },
+        {
+          "name": "오쿠와몬",
+          "level": 100
+        },
+        {
+          "name": "록몬",
+          "level": 100
+        },
+        {
+          "name": "플라이몬",
+          "level": 50
+        },
+        {
+          "name": "나이트몬",
+          "level": 100
+        },
+        {
+          "name": "블랙워그레이몬",
+          "title": "리워드 (100%)"
+        },
+        {
+          "name": "로오치몬",
+          "title": "드랍 (50%)"
+        },
+        {
+          "name": "레오몬",
+          "title": "드랍 (50%)"
+        },
+        {
+          "name": "샤벨레오몬",
+          "level": 100
+        },
+        {
+          "name": "아이언레오몬",
+          "level": 50
+        },
+        {
+          "name": "메탈에테몬",
+          "level": 100
+        },
+        {
+          "name": "임프몬",
+          "level": 50
+        },
+        {
+          "name": "베르제브몬",
+          "level": 100
+        },
+        {
+          "name": "화이트레오몬",
+          "level": 100
+        },
+        {
+          "name": "메드레오몬 암드모드",
+          "level": 100
+        },
+        {
+          "name": "반쵸레오몬",
+          "title": "리워드 (100%)"
+        }
+      ],
+      "date": "2021-03-03",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=755022&Btype=Update"
+    },
+    "레인보우브릿지": {
+      "sources": [
+        "758321"
+      ],
+      "name": "레인보우 브릿지",
+      "location": "미나토구",
+      "npc": "원뿔몬",
+      "req": "Lv.100+",
+      "conditions": [
+        "퀘스트 [출발] 완료 디지몬 레벨 100 이상"
+      ],
+      "pass_item": "원뿔몬의 도움 1개",
+      "party": 4,
+      "boss": "연체몬, ○○몬, 메가드라몬",
+      "date": "2021-06-24",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=758321&Btype=Update"
+    },
+    "해룡의지배구역": {
+      "sources": [
+        "762390"
+      ],
+      "name": "해룡의 지배구역",
+      "location": "시작의 숲",
+      "npc": "신태일",
+      "req": "Lv.110+",
+      "conditions": [
+        "퀘스트 [바다의 지배자! 메탈시드라몬] 완료 디지몬 레벨 110 이상"
+      ],
+      "pass_item": "해룡의 지배구역 입장권[NORMAL] 1개",
+      "party": 4,
+      "boss": "메탈시드라몬",
+      "date": "2021-11-24",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=762390&Btype=Update"
+    },
+    "인형의집앞마당": {
+      "sources": [
+        "765104"
+      ],
+      "name": "인형의 집 앞마당",
+      "location": "꼭두각시의 숲",
+      "npc": "신태일",
+      "req": "Lv.110+",
+      "conditions": [
+        "퀘스트 [피노키몬의 함정] 완료 디지몬 레벨 110 이상"
+      ],
+      "pass_item": "인형의 집 앞마당 입장권[NORMAL] 1개",
+      "party": 4,
+      "boss": "피노키몬",
+      "date": "2022-01-05",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=765104&Btype=Update"
+    },
+    "제국의뒷면": {
+      "sources": [
+        "767529"
+      ],
+      "name": "제국의 뒷면",
+      "location": "지하 도시",
+      "npc": "신태일",
+      "req": "Lv.110+",
+      "conditions": [
+        "퀘스트 [모두 힘을 합쳐 싸운다 - 2] 완료 디지몬 레벨 110 이상"
+      ],
+      "pass_item": "제국의 뒷면 던전 입장권[NORMAL] 1개",
+      "party": 4,
+      "boss": "파워드라몬",
+      "monsters": [
+        {
+          "name": "베드퍼펫몬",
+          "title": "<잔혹한 관리관>",
+          "level": 126
+        },
+        {
+          "name": "파워드라몬",
+          "title": "<어둠의 사천왕>",
+          "level": 126
+        }
+      ],
+      "date": "2022-03-30",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=767529&Btype=Update"
+    },
+    "경기장[NORMAL]": {
+      "sources": [
+        "768455"
+      ],
+      "name": "경기장 [NORMAL]",
+      "location": "신주쿠 동부(밤)",
+      "npc": "<DAT대원>폰체스몬W",
+      "req": "Lv.100+",
+      "conditions": [
+        "퀘스트 [바지라몬 발견] 완료 디지몬 레벨 100 이상"
+      ],
+      "pass_item": "경기장 입장권[NORMAL] 1개",
+      "party": 1,
+      "boss": "(데바)바지라몬",
+      "monsters": [
+        {
+          "name": "바지라몬",
+          "title": "(데바)",
+          "level": 118
+        },
+        {
+          "name": "켄터스몬",
+          "title": "(데바의 부하)",
+          "level": 118
+        }
+      ],
+      "date": "2022-05-25",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=768455&Btype=Update"
+    },
+    "광대의무대": {
+      "sources": [
+        "768621"
+      ],
+      "name": "광대의 무대",
+      "location": "악몽의 꼭대기",
+      "npc": "신태일",
+      "req": "Lv.110+",
+      "conditions": [
+        "퀘스트 [최종 결전 - 1] 완료 디지몬 레벨 110 이상"
+      ],
+      "pass_item": "광대의 무대 던전 입장권[NORMAL] 1개",
+      "party": 4,
+      "boss": "피에몬",
+      "monsters": [
+        {
+          "name": "피에몬",
+          "title": "<어둠의 사천왕>",
+          "level": 129
+        },
+        {
+          "name": "이블몬",
+          "title": "<졸개>",
+          "level": 129
+        }
+      ],
+      "date": "2022-06-08",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=768621&Btype=Update"
+    },
+    "도로[EASY]": {
+      "sources": [
+        "769121"
+      ],
+      "name": "도로[EASY]",
+      "location": "신주쿠 서부(낮)",
+      "npc": "<DAT대원>폰체스몬W",
+      "req": "Lv.110+",
+      "conditions": [
+        "퀘스트 [비가라몬 등장] 완료 디지몬 레벨 110 이상"
+      ],
+      "pass_item": "-",
+      "party": 1,
+      "boss": "(데바)비가라몬",
+      "monsters": [
+        {
+          "name": "비가라몬",
+          "title": "(데바)",
+          "level": 117
+        },
+        {
+          "name": "모노크로몬",
+          "title": "(데바의 부하)",
+          "level": 118
+        },
+        {
+          "name": "메탈티라노몬",
+          "title": "(데바의 부하)",
+          "level": 119
+        }
+      ],
+      "date": "2022-07-20",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=769121&Btype=Update"
+    },
+    "무의공간": {
+      "sources": [
+        "769411"
+      ],
+      "name": "무의 공간",
+      "location": "무의 공간",
+      "npc": "신태일",
+      "req": "Lv.110+",
+      "conditions": [
+        "퀘스트 [모두와 함께] 완료 디지몬 레벨 110 이상"
+      ],
+      "pass_item": "무의 공간 입장권[NORMAL] 1개",
+      "party": 4,
+      "boss": "아포카리몬",
+      "monsters": [
+        {
+          "name": "아포카리몬",
+          "title": "<흑막>",
+          "level": 130
+        }
+      ],
+      "date": "2022-08-17",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=769411&Btype=Update"
+    },
+    "판롱몬던전(어려움)": {
+      "sources": [
+        "773445"
+      ],
+      "name": "판롱몬 던전 (어려움)",
+      "location": "D-터미널",
+      "npc": "<사성수 던전 안내자>테리어몬",
+      "req": "Lv.90+",
+      "conditions": [
+        "테이머 레벨 90 이상"
+      ],
+      "pass_item": "판롱몬 던전 통행증 [어려움] 1개",
+      "party": 4,
+      "boss": "판롱몬",
+      "monsters": [
+        {
+          "name": "현무몬",
+          "title": "(북방의 지배자)",
+          "level": 130
+        },
+        {
+          "name": "주작몬",
+          "title": "(남방의 지배자)",
+          "level": 130
+        },
+        {
+          "name": "백호몬",
+          "title": "(서방의 지배자)",
+          "level": 130
+        },
+        {
+          "name": "청룡몬",
+          "title": "(동방의 지배자)",
+          "level": 130
+        },
+        {
+          "name": "판롱몬",
+          "level": 130
+        }
+      ],
+      "date": "2023-03-02",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=773445&Btype=Update"
+    },
+    "신주쿠역": {
+      "sources": [
+        "775239"
+      ],
+      "name": "신주쿠역",
+      "location": "사무실",
+      "npc": "정종진",
+      "req": "Lv.105+",
+      "conditions": [
+        "퀘스트 [긴급! 다량의 D-리퍼 출연!] 완료 디지몬 레벨 105 이상"
+      ],
+      "pass_item": "신주쿠역 입장권 [NORMAL] 1개",
+      "party": 4,
+      "boss": "D-리퍼 ADR-06",
+      "monsters": [
+        {
+          "name": "D-리퍼 ADR-04",
+          "level": 130
+        },
+        {
+          "name": "D-리퍼 ADR-05",
+          "title": "<공격>",
+          "level": 130
+        },
+        {
+          "name": "D-리퍼 ADR-06",
+          "level": 130
+        }
+      ],
+      "date": "2023-05-31",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=775239&Btype=Update"
+    },
+    "신주쿠공원(D-리퍼)": {
+      "sources": [
+        "775533"
+      ],
+      "name": "신주쿠 공원(D-리퍼)",
+      "location": "사무실",
+      "npc": "정종진",
+      "req": "Lv.105+",
+      "conditions": [
+        "퀘스트 [사라진 오유민] 완료 디지몬 레벨 105 이상"
+      ],
+      "pass_item": "신주쿠 공원(D-리퍼) 입장권 [NORMAL] 1개",
+      "party": 1,
+      "boss": "리퍼",
+      "monsters": [
+        {
+          "name": "리퍼",
+          "level": 140
+        }
+      ],
+      "date": "2023-06-21",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=775533&Btype=Update"
+    },
+    "D-리퍼의영역": {
+      "sources": [
+        "775533"
+      ],
+      "name": "D-리퍼의 영역",
+      "location": "세이프티 에어리어",
+      "npc": "오유민",
+      "req": "Lv.105+",
+      "conditions": [
+        "퀘스트 [테이머즈, 결집!] 완료 디지몬 레벨 105 이상"
+      ],
+      "pass_item": "D-리퍼의 영역 입장권 [NORMAL] 1개",
+      "party": 4,
+      "boss": "리퍼, 마더 D-리퍼",
+      "monsters": [
+        {
+          "name": "리퍼",
+          "level": 140
+        },
+        {
+          "name": "마더 D-리퍼",
+          "level": 140
+        }
+      ],
+      "date": "2023-06-21",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=775533&Btype=Update"
+    },
     "로얄베이스(어려움)": {
       "sources": [
         "780203"

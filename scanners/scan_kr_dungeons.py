@@ -159,7 +159,12 @@ def parse_post(raw):
             if seen:
                 mode = None
             continue
-        if val[0] == "던전 이름" and len(val) >= 2:
+        # Wider rows starting "던전 이름" head a list table (one dungeon per
+        # row, e.g. ticket counts), not a dungeon's own info table.
+        if val[0] == "던전 이름" and len(val) > 2:
+            mode = None
+            continue
+        if val[0] == "던전 이름" and len(val) == 2:
             cur, mode = val[1], "info"
             r = rec(cur)
             if named and key(named) != key(cur) and key(named) in out:

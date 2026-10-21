@@ -18048,5 +18048,4121 @@
     "300"
    ]
   ]
+ },
+ "kr-778741#0": {
+  "server": "kr",
+  "date": "15.11.2023",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Happiness Seal",
+    "1",
+    "2",
+    "DS",
+    "200"
+   ],
+   [
+    "Environment Guardian Seal",
+    "1",
+    "2",
+    "AT",
+    "150"
+   ],
+   [
+    "그라디몬",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "케라몬",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "파피몬 ( 흑 )",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "PawnChessmon W",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "PawnChessmon B",
+    "10",
+    "1",
+    "CT",
+    "100"
+   ],
+   [
+    "머슈몬",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "그레이몬",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "다크티라노몬",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "그라우몬",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "켄터스몬",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "지오그레이몬",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "말벌몬",
+    "5",
+    "1",
+    "BL",
+    "150"
+   ],
+   [
+    "가오가몬",
+    "1",
+    "5",
+    "CT",
+    "200"
+   ],
+   [
+    "유키다루몬",
+    "1",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "나이트몬",
+    "1",
+    "1",
+    "HT",
+    "300"
+   ],
+   [
+    "스컬그레이몬",
+    "1",
+    "1",
+    "DS",
+    "400"
+   ],
+   [
+    "홀리엔젤몬",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "파라사이몬",
+    "1",
+    "10",
+    "HT",
+    "400"
+   ],
+   [
+    "Chimairamon",
+    "1",
+    "10",
+    "DE",
+    "250"
+   ],
+   [
+    "오로치몬",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "로드나이트몬",
+    "1",
+    "25",
+    "HT",
+    "400"
+   ],
+   [
+    "미라지 가오가몬",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "Ulforce V-dramon",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "ImperialDramon",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "샤우트몬 X2",
+    "1",
+    "100",
+    "CT",
+    "400"
+   ],
+   [
+    "듀크몬 크림존모드",
+    "1",
+    "100",
+    "BL",
+    "300"
+   ],
+   [
+    "반쵸레오몬",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ]
+  ]
+ },
+ "kr-778337#0": {
+  "server": "kr",
+  "date": "18.10.2023",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Exploration Seal",
+    "1",
+    "2",
+    "HT",
+    "100"
+   ],
+   [
+    "Hope Seal",
+    "1",
+    "2",
+    "CT",
+    "150"
+   ],
+   [
+    "Dracmon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Dorumon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Plotmon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Patamon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Monodramon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Gazimon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Thunderballmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Devimon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Kyubimon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Etemon Seal",
+    "1",
+    "10",
+    "BL",
+    "200"
+   ],
+   [
+    "Gladimon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Toy Agumon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "RaptorDramon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Metaltyranomon Seal",
+    "1",
+    "10",
+    "DE",
+    "200"
+   ],
+   [
+    "BlackGatomon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "Culumon Seal",
+    "1",
+    "100",
+    "AT",
+    "250"
+   ],
+   [
+    "Phantomon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "Whamon Seal",
+    "1",
+    "10",
+    "HP",
+    "250"
+   ],
+   [
+    "Kuzuhamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "MetalGarurumon Seal",
+    "1",
+    "25",
+    "CT",
+    "300"
+   ],
+   [
+    "Death-X-Dorugoramon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "Piedmon Seal",
+    "1",
+    "100",
+    "DS",
+    "500"
+   ],
+   [
+    "Lucemon: Wild 2nd Mode Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "Baihumon Seal",
+    "1",
+    "25",
+    "HT",
+    "500"
+   ]
+  ]
+ },
+ "kr-777492#0": {
+  "server": "kr",
+  "date": "23.08.2023",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "ImperialDramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "VenomMyotismon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Examon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Culumon Seal",
+    "1",
+    "100",
+    "AT",
+    "250"
+   ],
+   [
+    "ExV-mon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Guillmon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Jesmon Seal",
+    "1",
+    "25",
+    "CT",
+    "300"
+   ],
+   [
+    "MetalGarurumon Seal",
+    "1",
+    "25",
+    "CT",
+    "300"
+   ],
+   [
+    "Vajramon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "PawnChessmon B Seal",
+    "10",
+    "1",
+    "CT",
+    "100"
+   ],
+   [
+    "Tankdramon Seal",
+    "1",
+    "1",
+    "BL",
+    "200"
+   ],
+   [
+    "Shakkoumon Seal",
+    "1",
+    "1",
+    "BL",
+    "200"
+   ],
+   [
+    "펠코몬 씰",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Diablomon Seal",
+    "1",
+    "6",
+    "DS",
+    "500"
+   ],
+   [
+    "Gawappamon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Mikemon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "MetalSeadramon Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "Ulforce V-dramon Seal",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "Whamon Seal",
+    "1",
+    "10",
+    "HP",
+    "250"
+   ],
+   [
+    "Raremon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Chimairamon Seal",
+    "1",
+    "10",
+    "DE",
+    "250"
+   ],
+   [
+    "폰체스몬 w 씰",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Marsmon Seal",
+    "1",
+    "100",
+    "EV",
+    "400"
+   ],
+   [
+    "Bokomon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "Rapidmon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "Beelzebumon Seal",
+    "1",
+    "100",
+    "HT",
+    "400"
+   ],
+   [
+    "Craniamon Seal",
+    "1",
+    "25",
+    "HT",
+    "500"
+   ],
+   [
+    "Hackmon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "Floramon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ]
+  ]
+ },
+ "kr-777188#0": {
+  "server": "kr",
+  "date": "26.07.2023",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Syakomon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Kamemon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Palmon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Mushmon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Lalamon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Waspmon Seal",
+    "5",
+    "1",
+    "BL",
+    "150"
+   ],
+   [
+    "Greymon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Garurumon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "SunFlowmon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Ogremon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Gatomon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "Witchmon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Pukamon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Datamon Seal",
+    "1",
+    "1",
+    "CT",
+    "250"
+   ],
+   [
+    "Yukidarumon Seal",
+    "1",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Knightmon Seal",
+    "1",
+    "1",
+    "HT",
+    "300"
+   ],
+   [
+    "SkullGreymon Seal",
+    "1",
+    "1",
+    "DS",
+    "400"
+   ],
+   [
+    "Firm Seal",
+    "1",
+    "2",
+    "BL",
+    "100"
+   ],
+   [
+    "Marksman Seal",
+    "1",
+    "2",
+    "HT",
+    "100"
+   ],
+   [
+    "Conversion Seal",
+    "1",
+    "2",
+    "CT",
+    "150"
+   ],
+   [
+    "Armor Seal",
+    "1",
+    "2",
+    "DE",
+    "100"
+   ],
+   [
+    "Marin Devimon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "RizeGreymon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "NeoDevimon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "Puppetmon Seal",
+    "1",
+    "25",
+    "DS",
+    "500"
+   ],
+   [
+    "Omegamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Powerdramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "ShadowSeraphimon Seal",
+    "1",
+    "100",
+    "CT",
+    "350"
+   ],
+   [
+    "Fanglongmon Seal",
+    "1",
+    "100",
+    "BL",
+    "350"
+   ],
+   [
+    "Rosemon Burst Mode Seal",
+    "1",
+    "100",
+    "EV",
+    "400"
+   ],
+   [
+    "BanchoLeomon Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "Belial Vamdemon Seal",
+    "1",
+    "100",
+    "HT",
+    "500"
+   ]
+  ]
+ },
+ "kr-775435#0": {
+  "server": "kr",
+  "date": "14.06.2023",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Gladimon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Keramon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "PicoDevimon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Gabumon(Black) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Agumon(S) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Hagurumon Seal",
+    "6",
+    "1",
+    "EV",
+    "150"
+   ],
+   [
+    "Angemon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Kabuterimon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Kyubimon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Ankylomon Seal",
+    "1",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Grow Well Seal",
+    "1",
+    "2",
+    "HP",
+    "150"
+   ],
+   [
+    "Heat Wave Seal",
+    "1",
+    "2",
+    "DS",
+    "200"
+   ],
+   [
+    "Passionate Seal",
+    "1",
+    "2",
+    "AT",
+    "150"
+   ],
+   [
+    "Seal Of Coolness",
+    "1",
+    "2",
+    "EV",
+    "100"
+   ],
+   [
+    "Blossomon Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "Antylamon Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "Silphymon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Myotismon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Rosemon Seal",
+    "1",
+    "25",
+    "HT",
+    "400"
+   ],
+   [
+    "Ravemon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "HerculesKabuterimon Seal",
+    "1",
+    "25",
+    "DE",
+    "250"
+   ],
+   [
+    "Sakuyamon Seal",
+    "1",
+    "60",
+    "HP",
+    "400"
+   ],
+   [
+    "Lucemon: Wild 2nd Mode Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "GrandisKuwagamon Seal",
+    "1",
+    "100",
+    "DS",
+    "500"
+   ],
+   [
+    "ShoutmonX2 Seal",
+    "1",
+    "100",
+    "CT",
+    "400"
+   ],
+   [
+    "Omegamon Zwart Seal",
+    "1",
+    "100",
+    "CT",
+    "400"
+   ],
+   [
+    "Alphamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Kuzuhamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Gallantmon (Crimson Mode) Seal",
+    "1",
+    "100",
+    "BL",
+    "300"
+   ]
+  ]
+ },
+ "kr-774443#0": {
+  "server": "kr",
+  "date": "03.05.2023",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Gomamon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Plotmon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Monodramon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Gaomon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Leomon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Dorumon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Centalmon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Growmon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "GeoGreymon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Sinduramon Seal",
+    "1",
+    "1",
+    "HP",
+    "250"
+   ],
+   [
+    "Gesomon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Gaogamon Seal",
+    "1",
+    "5",
+    "CT",
+    "200"
+   ],
+   [
+    "Lilamon Seal",
+    "1",
+    "10",
+    "BL",
+    "200"
+   ],
+   [
+    "Metaltyranomon Seal",
+    "1",
+    "10",
+    "DE",
+    "200"
+   ],
+   [
+    "Orochimon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "MagnaAngemon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "SaberLeomon Seal",
+    "1",
+    "10",
+    "CT",
+    "300"
+   ],
+   [
+    "MachGaogamon Seal",
+    "1",
+    "10",
+    "DS",
+    "400"
+   ],
+   [
+    "Parasimon Seal",
+    "1",
+    "10",
+    "HT",
+    "400"
+   ],
+   [
+    "ShineGreymon Seal",
+    "1",
+    "25",
+    "BL",
+    "250"
+   ],
+   [
+    "MirageGaogamon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "LordKnightmon Seal",
+    "1",
+    "25",
+    "HT",
+    "400"
+   ],
+   [
+    "MirageGaogamon BurstMode Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Megidramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Ravemon Burst Mode Seal",
+    "1",
+    "100",
+    "CT",
+    "350"
+   ],
+   [
+    "Piedmon Seal",
+    "1",
+    "100",
+    "DS",
+    "500"
+   ],
+   [
+    "ShineGreymon BurstMode Seal",
+    "1",
+    "100",
+    "HP",
+    "550"
+   ],
+   [
+    "Apocalymon Seal",
+    "1",
+    "100",
+    "HT",
+    "550"
+   ]
+  ]
+ },
+ "kr-773568#0": {
+  "server": "kr",
+  "date": "08.03.2023",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "PawnChessmon B Seal",
+    "10",
+    "1",
+    "CT",
+    "100"
+   ],
+   [
+    "PawnChessmon W Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "ExV-mon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Gawappamon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Ogremon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Devimon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Togemon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Monochromon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Gatomon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "DarkTyrannomon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Shakkoumon Seal",
+    "1",
+    "1",
+    "BL",
+    "200"
+   ],
+   [
+    "Yukidarumon Seal",
+    "1",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "WereGarurumon(Black) Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "MetalGarurumon Seal",
+    "1",
+    "25",
+    "CT",
+    "300"
+   ],
+   [
+    "Jesmon Seal",
+    "1",
+    "25",
+    "CT",
+    "300"
+   ],
+   [
+    "Ulforce V-dramon Seal",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "Sleipmon Seal",
+    "1",
+    "25",
+    "DE",
+    "250"
+   ],
+   [
+    "Bokomon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "ImperialDramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "ShadowSeraphimon Seal",
+    "1",
+    "100",
+    "CT",
+    "350"
+   ],
+   [
+    "Marsmon Seal",
+    "1",
+    "100",
+    "EV",
+    "400"
+   ],
+   [
+    "Belial Vamdemon Seal",
+    "1",
+    "100",
+    "HT",
+    "500"
+   ],
+   [
+    "Examon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Culumon Seal",
+    "1",
+    "100",
+    "AT",
+    "250"
+   ],
+   [
+    "Fanglongmon Seal",
+    "1",
+    "100",
+    "BL",
+    "350"
+   ],
+   [
+    "MetalSeadramon Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "Beelzebumon Seal",
+    "1",
+    "100",
+    "HT",
+    "400"
+   ]
+  ]
+ },
+ "kr-772637#0": {
+  "server": "kr",
+  "date": "11.01.2023",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Piyomon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Lalamon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Falcomon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Patamon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Gabumon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "Ikkakumon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Thunderballmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "SunFlowmon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Pukamon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "WereGarurumon(Black) Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "Chimairamon Seal",
+    "1",
+    "10",
+    "DE",
+    "250"
+   ],
+   [
+    "NeoDevimon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "Marin Devimon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Etemon Seal",
+    "1",
+    "10",
+    "BL",
+    "200"
+   ],
+   [
+    "Phantomon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "Lilamon Seal",
+    "1",
+    "10",
+    "BL",
+    "200"
+   ],
+   [
+    "Crownmon Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "Rosemon Seal",
+    "1",
+    "25",
+    "HT",
+    "400"
+   ],
+   [
+    "Ravemon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "HerculesKabuterimon Seal",
+    "1",
+    "25",
+    "DE",
+    "250"
+   ],
+   [
+    "Puppetmon Seal",
+    "1",
+    "25",
+    "DS",
+    "500"
+   ],
+   [
+    "Powerdramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Chaosmon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Lucemon: Wild 2nd Mode Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "Omegamon Zwart Seal",
+    "1",
+    "100",
+    "CT",
+    "400"
+   ],
+   [
+    "BanchoLeomon Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "Rosemon Burst Mode Seal",
+    "1",
+    "100",
+    "EV",
+    "400"
+   ],
+   [
+    "Ravemon Burst Mode Seal",
+    "1",
+    "100",
+    "CT",
+    "350"
+   ]
+  ]
+ },
+ "kr-771577#0": {
+  "server": "kr",
+  "date": "02.11.2022",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Agumon(S) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Gaomon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Plotmon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Gomamon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Piyomon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "GeoGreymon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Gaogamon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Tylomon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Greymon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Garurumon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "RizeGreymon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "마하가오몬 씰",
+    "1",
+    "10",
+    "DS",
+    "400"
+   ],
+   [
+    "MetalGreymon Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "MegaKabuterimon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "MagnaAngemon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "Metaltyranomon Seal",
+    "1",
+    "10",
+    "DE",
+    "200"
+   ],
+   [
+    "ShineGreymon Seal",
+    "1",
+    "25",
+    "BL",
+    "250"
+   ],
+   [
+    "MirageGaogamon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "Piedmon Seal",
+    "1",
+    "100",
+    "DS",
+    "500"
+   ],
+   [
+    "Alphamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "ShineGreymon BurstMode Seal",
+    "1",
+    "100",
+    "HP",
+    "550"
+   ],
+   [
+    "MirageGaogamon BurstMode Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Apocalymon Seal",
+    "1",
+    "100",
+    "HT",
+    "550"
+   ]
+  ]
+ },
+ "kr-770529#0": {
+  "server": "kr",
+  "date": "05.10.2022",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Piyomon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Kamemon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Guillmon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Palmon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Ikkakumon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Witchmon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Chimairamon Seal",
+    "1",
+    "10",
+    "DE",
+    "250"
+   ],
+   [
+    "Vajramon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "NeoDevimon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "Marin Devimon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Bokomon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "Ulforce V-dramon Seal",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "Puppetmon Seal",
+    "1",
+    "25",
+    "DS",
+    "500"
+   ],
+   [
+    "Powerdramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Examon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Chaosmon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Lucemon: Wild 2nd Mode Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "Omegamon Zwart Seal",
+    "1",
+    "100",
+    "CT",
+    "400"
+   ]
+  ]
+ },
+ "kr-769188#0": {
+  "server": "kr",
+  "date": "27.07.2022",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Gabumon(Black) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Hackmon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "Keramon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Piyomon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Renamon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Angemon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "BaoHackmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Togemon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Coredramon(Green) Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Flymon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Whamon Seal",
+    "1",
+    "10",
+    "HP",
+    "250"
+   ],
+   [
+    "SaviorHackmon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "Vajramon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "NeoDevimon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "Myotismon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Jesmon Seal",
+    "1",
+    "100",
+    "CT",
+    "300"
+   ],
+   [
+    "MetalSeadramon Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "TyrantKabuterimon Seal",
+    "1",
+    "25",
+    "HT",
+    "500"
+   ],
+   [
+    "Death-X-mon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Omegamon Alter-S Seal",
+    "1",
+    "100",
+    "HP",
+    "600"
+   ],
+   [
+    "Boltboutamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ]
+  ]
+ },
+ "kr-767920#0": {
+  "server": "kr",
+  "date": "20.04.2022",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Lalamon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Falcomon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Woodmon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Centalmon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Kyubimon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Leomon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Thunderballmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "SunFlowmon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Pukamon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Raremon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Phantomon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "Lilamon Seal",
+    "1",
+    "10",
+    "BL",
+    "200"
+   ],
+   [
+    "Crownmon Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "Myotismon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Sleipmon Seal",
+    "1",
+    "25",
+    "DE",
+    "250"
+   ],
+   [
+    "LordKnightmon Seal",
+    "1",
+    "25",
+    "HT",
+    "400"
+   ],
+   [
+    "Rosemon Seal",
+    "1",
+    "25",
+    "HT",
+    "400"
+   ],
+   [
+    "Ravemon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "VenomMyotismon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "BanchoLeomon Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "Rosemon Burst Mode Seal",
+    "1",
+    "100",
+    "EV",
+    "400"
+   ],
+   [
+    "Ravemon Burst Mode Seal",
+    "1",
+    "100",
+    "CT",
+    "350"
+   ],
+   [
+    "Fanglongmon Seal",
+    "1",
+    "100",
+    "BL",
+    "350"
+   ],
+   [
+    "Culumon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ]
+  ]
+ },
+ "kr-766499#0": {
+  "server": "kr",
+  "date": "03.02.2022",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Agumon(S) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Gaomon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Monodramon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Guillmon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Commandramon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Coredramon(Green) Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "GeoGreymon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Gaogamon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Chimairamon Seal",
+    "1",
+    "10",
+    "DE",
+    "250"
+   ],
+   [
+    "WereGarurumon Seal",
+    "1",
+    "10",
+    "DS",
+    "400"
+   ],
+   [
+    "RizeGreymon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "마하가오몬 씰",
+    "1",
+    "10",
+    "DS",
+    "400"
+   ],
+   [
+    "MetalGarurumon Seal",
+    "1",
+    "25",
+    "CT",
+    "300"
+   ],
+   [
+    "Ulforce V-dramon Seal",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "ShineGreymon Seal",
+    "1",
+    "25",
+    "BL",
+    "250"
+   ],
+   [
+    "MirageGaogamon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "Beelzebumon Seal",
+    "1",
+    "100",
+    "HT",
+    "400"
+   ],
+   [
+    "Megidramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "ShineGreymon BurstMode Seal",
+    "1",
+    "100",
+    "HP",
+    "550"
+   ],
+   [
+    "MirageGaogamon BurstMode Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ]
+  ]
+ },
+ "kr-766005#0": {
+  "server": "kr",
+  "date": "26.01.2022",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Agumon(S) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Monodramon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Guillmon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Commandramon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Coredramon(Green) Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "GeoGreymon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Chimairamon Seal",
+    "1",
+    "10",
+    "DE",
+    "250"
+   ],
+   [
+    "WereGarurumon Seal",
+    "1",
+    "10",
+    "DS",
+    "400"
+   ],
+   [
+    "RizeGreymon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "MetalGarurumon Seal",
+    "1",
+    "25",
+    "CT",
+    "300"
+   ],
+   [
+    "Ulforce V-dramon Seal",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "ShineGreymon Seal",
+    "1",
+    "25",
+    "BL",
+    "250"
+   ],
+   [
+    "Beelzebumon Seal",
+    "1",
+    "100",
+    "HT",
+    "400"
+   ],
+   [
+    "Megidramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "ShineGreymon BurstMode Seal",
+    "1",
+    "100",
+    "HP",
+    "550"
+   ]
+  ]
+ },
+ "kr-760924#0": {
+  "server": "kr",
+  "date": "23.09.2021",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "돌몬",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "카메몬",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "샤코몬",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "가트몬",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "다크티라노몬",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "위치몬",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Mikemon",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "데블몬",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Tankdramon",
+    "1",
+    "1",
+    "BL",
+    "200"
+   ],
+   [
+    "묘티스몬",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "네오데블몬",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "켄타우로스몬",
+    "1",
+    "25",
+    "DE",
+    "250"
+   ],
+   [
+    "Bokomon",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "카오스피에몬",
+    "1",
+    "25",
+    "CT",
+    "350"
+   ],
+   [
+    "프린스콩알몬",
+    "1",
+    "25",
+    "CT",
+    "350"
+   ],
+   [
+    "워그레이몬",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "현무몬",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "데크스몬",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "판롱몬",
+    "1",
+    "100",
+    "BL",
+    "350"
+   ],
+   [
+    "오메가몬 Alter-S",
+    "1",
+    "100",
+    "HP",
+    "600"
+   ]
+  ]
+ },
+ "kr-757633#0": {
+  "server": "kr",
+  "date": "06.05.2021",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Monodramon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Patamon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Floramon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "Commandramon Seal",
+    "10",
+    "1",
+    "CT",
+    "150"
+   ],
+   [
+    "Coredramon(Green) Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Kabuterimon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Ankylomon Seal",
+    "1",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Devimon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Yaksamon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "RaptorDramon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Raremon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Metaltyranomon Seal",
+    "1",
+    "1",
+    "DE",
+    "200"
+   ],
+   [
+    "Etemon Seal",
+    "1",
+    "1",
+    "BL",
+    "200"
+   ],
+   [
+    "Tankdramon Seal",
+    "1",
+    "1",
+    "BL",
+    "200"
+   ],
+   [
+    "Orochimon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Death-X-Dorugoramon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "Craniamon Seal",
+    "1",
+    "25",
+    "HT",
+    "500"
+   ],
+   [
+    "TyrantKabuterimon Seal",
+    "1",
+    "25",
+    "HT",
+    "500"
+   ],
+   [
+    "Omegamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Beelzebumon Seal",
+    "1",
+    "100",
+    "HT",
+    "400"
+   ],
+   [
+    "Megidramon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ]
+  ]
+ },
+ "kr-754653#0": {
+  "server": "kr",
+  "date": "17.02.2021",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Culumon Seal",
+    "1",
+    "50",
+    "AT",
+    "250"
+   ],
+   [
+    "Mushmon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Kamemon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Guillmon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Bokomon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "Tylomon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Centalmon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Monochromon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Gesomon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Witchmon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Growmon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "Giromon Seal",
+    "1",
+    "1",
+    "AT",
+    "250"
+   ],
+   [
+    "Vajramon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "Sinduramon Seal",
+    "1",
+    "1",
+    "HP",
+    "250"
+   ],
+   [
+    "Parasimon Seal",
+    "1",
+    "10",
+    "HT",
+    "400"
+   ],
+   [
+    "SaberLeomon Seal",
+    "1",
+    "10",
+    "CT",
+    "300"
+   ],
+   [
+    "Baihumon Seal",
+    "1",
+    "25",
+    "HT",
+    "500"
+   ],
+   [
+    "Examon Seal",
+    "1",
+    "25",
+    "AT",
+    "300"
+   ],
+   [
+    "Ulforce V-dramon Seal",
+    "1",
+    "25",
+    "HP",
+    "500"
+   ],
+   [
+    "Fanglongmon Seal",
+    "1",
+    "100",
+    "BL",
+    "350"
+   ],
+   [
+    "VenomMyotismon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ]
+  ]
+ },
+ "kr-751882#0": {
+  "server": "kr",
+  "date": "16.12.2020",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Patamon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Keramon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Gabumon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "Devimon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Witchmon Seal",
+    "5",
+    "1",
+    "HT",
+    "200"
+   ],
+   [
+    "Gatomon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "Waspmon Seal",
+    "5",
+    "1",
+    "BL",
+    "150"
+   ],
+   [
+    "RaptorDramon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Kyubimon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Yukidarumon Seal",
+    "1",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Ankylomon Seal",
+    "1",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Datamon Seal",
+    "1",
+    "1",
+    "CT",
+    "250"
+   ],
+   [
+    "SkullGreymon Seal",
+    "1",
+    "1",
+    "DS",
+    "400"
+   ],
+   [
+    "Metaltyranomon Seal",
+    "1",
+    "1",
+    "DE",
+    "200"
+   ],
+   [
+    "Knightmon Seal",
+    "1",
+    "1",
+    "HT",
+    "300"
+   ],
+   [
+    "Marin Devimon Seal",
+    "1",
+    "1",
+    "AT",
+    "250"
+   ],
+   [
+    "LordKnightmon Seal",
+    "1",
+    "10",
+    "HT",
+    "400"
+   ],
+   [
+    "Death-X-Dorugoramon Seal",
+    "1",
+    "10",
+    "EV",
+    "350"
+   ],
+   [
+    "Culumon Seal",
+    "1",
+    "50",
+    "AT",
+    "250"
+   ],
+   [
+    "Fanglongmon Seal",
+    "1",
+    "100",
+    "BL",
+    "350"
+   ],
+   [
+    "VenomMyotismon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ]
+  ]
+ },
+ "kr-744261#0": {
+  "server": "kr",
+  "date": "28.04.2020",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Guillmon Seal",
+    "10",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Patamon Seal",
+    "10",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Dracmon Seal",
+    "10",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Gabumon Seal",
+    "10",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Devimon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Woodmon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Sangloupmon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Gatomon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Allomon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "RaptorDramon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Monochromon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Giromon Seal",
+    "1",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Sinduramon Seal",
+    "1",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Chimairamon Seal",
+    "1",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "WereGarurumon Seal",
+    "1",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "SaberLeomon Seal",
+    "1",
+    "10",
+    "—",
+    "—"
+   ],
+   [
+    "Xuanwumon Seal",
+    "1",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "Baihumon Seal",
+    "1",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "Sleipmon Seal",
+    "1",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "Dynasmon Seal",
+    "1",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "Death-X-mon Seal",
+    "1",
+    "25",
+    "—",
+    "—"
+   ]
+  ]
+ },
+ "kr-737451#0": {
+  "server": "kr",
+  "date": "24.07.2019",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Veemon Seal",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Woodmon Seal",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Kyubimon Seal",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Gatomon Seal",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Sangloupmon Seal",
+    "—",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Sleipmon Seal",
+    "—",
+    "10",
+    "—",
+    "—"
+   ],
+   [
+    "Parasimon Seal",
+    "—",
+    "10",
+    "—",
+    "—"
+   ],
+   [
+    "Baihumon Seal",
+    "—",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "Xuanwumon Seal",
+    "—",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "Death-X-mon Seal",
+    "—",
+    "100",
+    "—",
+    "—"
+   ],
+   [
+    "TyrantKabuterimon Seal",
+    "—",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "ChaosPiedmon Seal",
+    "—",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "Examon Seal",
+    "—",
+    "100",
+    "—",
+    "—"
+   ],
+   [
+    "Omegamon Alter-S Seal",
+    "—",
+    "100",
+    "—",
+    "—"
+   ]
+  ]
+ },
+ "kr-734684#0": {
+  "server": "kr",
+  "date": "27.03.2019",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Diablomon Seal",
+    "1",
+    "6",
+    "—",
+    "—"
+   ],
+   [
+    "Tentomon Seal",
+    "10",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Azulongmon Seal",
+    "1",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "Examon Seal",
+    "1",
+    "100",
+    "—",
+    "—"
+   ],
+   [
+    "Dracmon Seal",
+    "10",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Veedramon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Knightmon Seal",
+    "1",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Warumonzaemon Seal",
+    "1",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Craniamon Seal",
+    "1",
+    "25",
+    "—",
+    "—"
+   ],
+   [
+    "Ulforce V-dramon Seal",
+    "1",
+    "25",
+    "—",
+    "—"
+   ]
+  ]
+ },
+ "kr-730024#0": {
+  "server": "kr",
+  "date": "19.12.2018",
+  "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Etemon Seal",
+    "1",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Coredramon(Green) Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Renamon Seal",
+    "10",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Kyubimon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Centalmon Seal",
+    "5",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Datamon Seal",
+    "1",
+    "1",
+    "—",
+    "—"
+   ],
+   [
+    "Parasimon Seal",
+    "1",
+    "10",
+    "—",
+    "—"
+   ],
+   [
+    "Sleipmon Seal",
+    "1",
+    "10",
+    "—",
+    "—"
+   ],
+   [
+    "Dynasmon Seal",
+    "1",
+    "10",
+    "—",
+    "—"
+   ],
+   [
+    "Death-X-mon Seal",
+    "1",
+    "100",
+    "—",
+    "—"
+   ]
+  ]
  }
 }

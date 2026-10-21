@@ -13,7 +13,7 @@ Output: kr_news_index.json
 
 Caches each list page under cache/kr_list_p<N>.html. Every run re-fetches:
 - Pages (1..N) are fetched until a page's oldest date is older than STOP_DATE.
-- Set STOP_DATE in main() (defaults to 2024-01-01) to cap how far back to scrape.
+- Set STOP_DATE in main() (defaults to 2018-01-01) to cap how far back to scrape.
 """
 
 import json
@@ -99,7 +99,7 @@ def parse_page(html: str) -> list[dict]:
     return posts
 
 
-def main(stop_date: str = "2024-01-01") -> None:
+def main(stop_date: str = "2018-01-01") -> None:
     """Scrape pages 1..N until the oldest date on a page is < stop_date.
 
     Every page is re-fetched: each new post pushes the rest down one slot, so a
@@ -144,6 +144,7 @@ def main(stop_date: str = "2024-01-01") -> None:
 
 
 if __name__ == "__main__":
-    # Earliest digimon post in scan_result_digimon.json is 2024-03-05;
-    # default cap a bit earlier for safety.
-    main(stop_date="2024-01-01")
+    # Reaches back past the oldest TH dungeon (2019) so scan_kr_dungeons sees
+    # the posts that added them. Older posts are harmless to the digimon
+    # feed, which keeps Rank U names only.
+    main(stop_date="2018-01-01")

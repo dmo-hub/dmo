@@ -558,4 +558,9 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   TH cards through the hand map `data/kr_dungeon_map.json` -- pair only when
   location/NPC/boss/monsters agree -- and lists the rest as KR-only cards.
   KR is never written into `data/dungeons.json` (scan_dungeons owns it and
-  expects a TH side). Coverage = the KR index range (from 2023-12).
+  expects a TH side). Coverage = the KR index range: `fetch_kr_news_index`
+  reaches back to 2018-01-01 (the oldest TH dungeon is 2019). The older posts
+  also feed KR seal tables 2018-2023 and older `source_kr` links (NA Shin
+  variants of 2021-22); the digimon feed is unaffected (Rank U only). A row
+  starting "던전 이름" with more than two cells heads a list table, not a
+  dungeon's info table.

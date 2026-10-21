@@ -1278,5 +1278,335 @@
     "note": "",
     "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811897&Btype=Update",
     "date": "19.11.2025"
+  },
+  "kr-778741": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 4,
+        "rows": 30,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Happiness Seal</td><td>1</td><td>2</td><td>DS</td><td>200</td></tr><tr><td>Environment Guardian Seal</td><td>1</td><td>2</td><td>AT</td><td>150</td></tr><tr><td>그라디몬</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>케라몬</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>파피몬 ( 흑 )</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>PawnChessmon W</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>PawnChessmon B</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>머슈몬</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>그레이몬</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>다크티라노몬</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>그라우몬</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>켄터스몬</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>지오그레이몬</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>말벌몬</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>가오가몬</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>유키다루몬</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>나이트몬</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>스컬그레이몬</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>홀리엔젤몬</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>파라사이몬</td><td>1</td><td>10</td><td>HT</td><td>400</td></tr><tr><td>Chimairamon</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>오로치몬</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>로드나이트몬</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>미라지 가오가몬</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Ulforce V-dramon</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>ImperialDramon</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>샤우트몬 X2</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>듀크몬 크림존모드</td><td>1</td><td>100</td><td>BL</td><td>300</td></tr><tr><td>반쵸레오몬</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=778741&Btype=Update",
+    "date": "15.11.2023"
+  },
+  "kr-778337": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 28,
+        "rows": 27,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Exploration Seal</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>Hope Seal</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>Dracmon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Dorumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Plotmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Gazimon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Etemon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Gladimon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Toy Agumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>RaptorDramon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Metaltyranomon Seal</td><td>1</td><td>10</td><td>DE</td><td>200</td></tr><tr><td>BlackGatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Culumon Seal</td><td>1</td><td>100</td><td>AT</td><td>250</td></tr><tr><td>Phantomon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Whamon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>Kuzuhamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Death-X-Dorugoramon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Piedmon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>Lucemon: Wild 2nd Mode Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Baihumon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=778337&Btype=Update",
+    "date": "18.10.2023"
+  },
+  "kr-777492": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 31,
+        "rows": 30,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>ImperialDramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>VenomMyotismon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Culumon Seal</td><td>1</td><td>100</td><td>AT</td><td>250</td></tr><tr><td>ExV-mon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Guillmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Jesmon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Vajramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>PawnChessmon B Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>Tankdramon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Shakkoumon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>펠코몬 씰</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Diablomon Seal</td><td>1</td><td>6</td><td>DS</td><td>500</td></tr><tr><td>Gawappamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Mikemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>MetalSeadramon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Whamon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>폰체스몬 w 씰</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Marsmon Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>Bokomon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Rapidmon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Beelzebumon Seal</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr><tr><td>Craniamon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Hackmon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Floramon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=777492&Btype=Update",
+    "date": "23.08.2023"
+  },
+  "kr-777188": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 34,
+        "rows": 33,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Syakomon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Palmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Mushmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Waspmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>Greymon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Garurumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>SunFlowmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Ogremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Witchmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Pukamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Datamon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>Yukidarumon Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Knightmon Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>SkullGreymon Seal</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>Firm Seal</td><td>1</td><td>2</td><td>BL</td><td>100</td></tr><tr><td>Marksman Seal</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>Conversion Seal</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>Armor Seal</td><td>1</td><td>2</td><td>DE</td><td>100</td></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Puppetmon Seal</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Powerdramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShadowSeraphimon Seal</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr><tr><td>Fanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>Rosemon Burst Mode Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>BanchoLeomon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Belial Vamdemon Seal</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=777188&Btype=Update",
+    "date": "26.07.2023"
+  },
+  "kr-775435": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 31,
+        "rows": 30,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gladimon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Keramon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>PicoDevimon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Gabumon(Black) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Hagurumon Seal</td><td>6</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Kabuterimon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Ankylomon Seal</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Grow Well Seal</td><td>1</td><td>2</td><td>HP</td><td>150</td></tr><tr><td>Heat Wave Seal</td><td>1</td><td>2</td><td>DS</td><td>200</td></tr><tr><td>Passionate Seal</td><td>1</td><td>2</td><td>AT</td><td>150</td></tr><tr><td>Seal Of Coolness</td><td>1</td><td>2</td><td>EV</td><td>100</td></tr><tr><td>Blossomon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Antylamon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Silphymon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Rosemon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>Ravemon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Sakuyamon Seal</td><td>1</td><td>60</td><td>HP</td><td>400</td></tr><tr><td>Lucemon: Wild 2nd Mode Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>GrandisKuwagamon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>ShoutmonX2 Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Omegamon Zwart Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Alphamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Kuzuhamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Gallantmon (Crimson Mode) Seal</td><td>1</td><td>100</td><td>BL</td><td>300</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=775435&Btype=Update",
+    "date": "14.06.2023"
+  },
+  "kr-774443": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 30,
+        "rows": 29,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gomamon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Plotmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Gaomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Leomon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Dorumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Growmon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Sinduramon Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>Gesomon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Gaogamon Seal</td><td>1</td><td>5</td><td>CT</td><td>200</td></tr><tr><td>Lilamon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Metaltyranomon Seal</td><td>1</td><td>10</td><td>DE</td><td>200</td></tr><tr><td>Orochimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>MagnaAngemon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>SaberLeomon Seal</td><td>1</td><td>10</td><td>CT</td><td>300</td></tr><tr><td>MachGaogamon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>Parasimon Seal</td><td>1</td><td>10</td><td>HT</td><td>400</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>MirageGaogamon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>LordKnightmon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>MirageGaogamon BurstMode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Megidramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Ravemon Burst Mode Seal</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr><tr><td>Piedmon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>ShineGreymon BurstMode Seal</td><td>1</td><td>100</td><td>HP</td><td>550</td></tr><tr><td>Apocalymon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=774443&Btype=Update",
+    "date": "03.05.2023"
+  },
+  "kr-773568": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 29,
+        "rows": 28,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>PawnChessmon B Seal</td><td>10</td><td>1</td><td>CT</td><td>100</td></tr><tr><td>PawnChessmon W Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>ExV-mon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Gawappamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Ogremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Togemon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Monochromon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>DarkTyrannomon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Shakkoumon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Yukidarumon Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>WereGarurumon(Black) Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Jesmon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Bokomon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>ImperialDramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShadowSeraphimon Seal</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr><tr><td>Marsmon Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>Belial Vamdemon Seal</td><td>1</td><td>100</td><td>HT</td><td>500</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Culumon Seal</td><td>1</td><td>100</td><td>AT</td><td>250</td></tr><tr><td>Fanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>MetalSeadramon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Beelzebumon Seal</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=773568&Btype=Update",
+    "date": "08.03.2023"
+  },
+  "kr-772637": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 30,
+        "rows": 29,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Falcomon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Ikkakumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>SunFlowmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Pukamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>WereGarurumon(Black) Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Etemon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Phantomon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Lilamon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Crownmon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Rosemon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>Ravemon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Puppetmon Seal</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>Powerdramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Chaosmon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Lucemon: Wild 2nd Mode Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Omegamon Zwart Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>BanchoLeomon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Rosemon Burst Mode Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>Ravemon Burst Mode Seal</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=772637&Btype=Update",
+    "date": "11.01.2023"
+  },
+  "kr-771577": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 25,
+        "rows": 24,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Gaomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Plotmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Gomamon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Gaogamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Tylomon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Greymon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Garurumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>마하가오몬 씰</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>MetalGreymon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>MegaKabuterimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>MagnaAngemon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Metaltyranomon Seal</td><td>1</td><td>10</td><td>DE</td><td>200</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>MirageGaogamon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Piedmon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>Alphamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShineGreymon BurstMode Seal</td><td>1</td><td>100</td><td>HP</td><td>550</td></tr><tr><td>MirageGaogamon BurstMode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Apocalymon Seal</td><td>1</td><td>100</td><td>HT</td><td>550</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=771577&Btype=Update",
+    "date": "02.11.2022"
+  },
+  "kr-770529": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 20,
+        "rows": 19,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Guillmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Palmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Ikkakumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Witchmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>Vajramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Bokomon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Puppetmon Seal</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>Powerdramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Chaosmon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Lucemon: Wild 2nd Mode Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Omegamon Zwart Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=770529&Btype=Update",
+    "date": "05.10.2022"
+  },
+  "kr-769188": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 23,
+        "rows": 22,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gabumon(Black) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Hackmon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Keramon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Renamon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>BaoHackmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Togemon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Coredramon(Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Flymon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Whamon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>SaviorHackmon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Vajramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Jesmon Seal</td><td>1</td><td>100</td><td>CT</td><td>300</td></tr><tr><td>MetalSeadramon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>TyrantKabuterimon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Death-X-mon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Omegamon Alter-S Seal</td><td>1</td><td>100</td><td>HP</td><td>600</td></tr><tr><td>Boltboutamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=769188&Btype=Update",
+    "date": "27.07.2022"
+  },
+  "kr-767920": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 26,
+        "rows": 25,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Lalamon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Falcomon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Woodmon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Leomon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>SunFlowmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Pukamon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Phantomon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Lilamon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Crownmon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>LordKnightmon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>Rosemon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>Ravemon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>VenomMyotismon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>BanchoLeomon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Rosemon Burst Mode Seal</td><td>1</td><td>100</td><td>EV</td><td>400</td></tr><tr><td>Ravemon Burst Mode Seal</td><td>1</td><td>100</td><td>CT</td><td>350</td></tr><tr><td>Fanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>Culumon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=767920&Btype=Update",
+    "date": "20.04.2022"
+  },
+  "kr-766499": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최대 수치",
+        "score": 22,
+        "rows": 21,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Gaomon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Guillmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Commandramon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Coredramon(Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Gaogamon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>마하가오몬 씰</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>MirageGaogamon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Beelzebumon Seal</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr><tr><td>Megidramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShineGreymon BurstMode Seal</td><td>1</td><td>100</td><td>HP</td><td>550</td></tr><tr><td>MirageGaogamon BurstMode Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=766499&Btype=Update",
+    "date": "03.02.2022"
+  },
+  "kr-766005": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최종 수치",
+        "score": 17,
+        "rows": 16,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Guillmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Commandramon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Coredramon(Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>GeoGreymon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>RizeGreymon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>ShineGreymon Seal</td><td>1</td><td>25</td><td>BL</td><td>250</td></tr><tr><td>Beelzebumon Seal</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr><tr><td>Megidramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>ShineGreymon BurstMode Seal</td><td>1</td><td>100</td><td>HP</td><td>550</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=766005&Btype=Update",
+    "date": "26.01.2022"
+  },
+  "kr-760924": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최종 수치",
+        "score": 2,
+        "rows": 21,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>돌몬</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>카메몬</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>샤코몬</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>가트몬</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>다크티라노몬</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>위치몬</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Mikemon</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>데블몬</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Tankdramon</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>묘티스몬</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>네오데블몬</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>켄타우로스몬</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Bokomon</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>카오스피에몬</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>프린스콩알몬</td><td>1</td><td>25</td><td>CT</td><td>350</td></tr><tr><td>워그레이몬</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>현무몬</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>데크스몬</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>판롱몬</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>오메가몬 Alter-S</td><td>1</td><td>100</td><td>HP</td><td>600</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=760924&Btype=Update",
+    "date": "23.09.2021"
+  },
+  "kr-757633": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최종 수치",
+        "score": 23,
+        "rows": 22,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Floramon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Commandramon Seal</td><td>10</td><td>1</td><td>CT</td><td>150</td></tr><tr><td>Coredramon(Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Kabuterimon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Ankylomon Seal</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Yaksamon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>RaptorDramon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Metaltyranomon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Etemon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Tankdramon Seal</td><td>1</td><td>1</td><td>BL</td><td>200</td></tr><tr><td>Orochimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Death-X-Dorugoramon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Craniamon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>TyrantKabuterimon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Beelzebumon Seal</td><td>1</td><td>100</td><td>HT</td><td>400</td></tr><tr><td>Megidramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=757633&Btype=Update",
+    "date": "06.05.2021"
+  },
+  "kr-754653": {
+    "tables": [
+      {
+        "header": "제작 아이템 재료 아이템 능력치 최종 수치",
+        "score": 42,
+        "rows": 22,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Culumon Seal</td><td>1</td><td>50</td><td>AT</td><td>250</td></tr><tr><td>Mushmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Guillmon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Bokomon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Tylomon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Monochromon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Gesomon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Witchmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Growmon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Giromon Seal</td><td>1</td><td>1</td><td>AT</td><td>250</td></tr><tr><td>Vajramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Sinduramon Seal</td><td>1</td><td>1</td><td>HP</td><td>250</td></tr><tr><td>Parasimon Seal</td><td>1</td><td>10</td><td>HT</td><td>400</td></tr><tr><td>SaberLeomon Seal</td><td>1</td><td>10</td><td>CT</td><td>300</td></tr><tr><td>Baihumon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Examon Seal</td><td>1</td><td>25</td><td>AT</td><td>300</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>Fanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>VenomMyotismon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=754653&Btype=Update",
+    "date": "17.02.2021"
+  },
+  "kr-751882": {
+    "tables": [
+      {
+        "header": "제작 아이템 재료 아이템 최대 수치 ( 마스터 등급 달성 시 )",
+        "score": 42,
+        "rows": 22,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Keramon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Witchmon Seal</td><td>5</td><td>1</td><td>HT</td><td>200</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Waspmon Seal</td><td>5</td><td>1</td><td>BL</td><td>150</td></tr><tr><td>RaptorDramon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Yukidarumon Seal</td><td>1</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Ankylomon Seal</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Datamon Seal</td><td>1</td><td>1</td><td>CT</td><td>250</td></tr><tr><td>SkullGreymon Seal</td><td>1</td><td>1</td><td>DS</td><td>400</td></tr><tr><td>Metaltyranomon Seal</td><td>1</td><td>1</td><td>DE</td><td>200</td></tr><tr><td>Knightmon Seal</td><td>1</td><td>1</td><td>HT</td><td>300</td></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>1</td><td>AT</td><td>250</td></tr><tr><td>LordKnightmon Seal</td><td>1</td><td>10</td><td>HT</td><td>400</td></tr><tr><td>Death-X-Dorugoramon Seal</td><td>1</td><td>10</td><td>EV</td><td>350</td></tr><tr><td>Culumon Seal</td><td>1</td><td>50</td><td>AT</td><td>250</td></tr><tr><td>Fanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>350</td></tr><tr><td>VenomMyotismon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=751882&Btype=Update",
+    "date": "16.12.2020"
+  },
+  "kr-744261": {
+    "tables": [
+      {
+        "header": "제작 아이템 재료 아이템",
+        "score": 42,
+        "rows": 22,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Guillmon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Dracmon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Woodmon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sangloupmon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Allomon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>RaptorDramon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Monochromon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Giromon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sinduramon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>SaberLeomon Seal</td><td>1</td><td>10</td><td>—</td><td>—</td></tr><tr><td>Xuanwumon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Baihumon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Dynasmon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Death-X-mon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=744261&Btype=Update",
+    "date": "28.04.2020"
+  },
+  "kr-737451": {
+    "tables": [
+      {
+        "header": "제작 씰 획득 수 필요 [ 씰교환권 ] 개수",
+        "score": 16,
+        "rows": 15,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Veemon Seal</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Woodmon Seal</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Kyubimon Seal</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Gatomon Seal</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sangloupmon Seal</td><td>—</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Sleipmon Seal</td><td>—</td><td>10</td><td>—</td><td>—</td></tr><tr><td>Parasimon Seal</td><td>—</td><td>10</td><td>—</td><td>—</td></tr><tr><td>Baihumon Seal</td><td>—</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Xuanwumon Seal</td><td>—</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Death-X-mon Seal</td><td>—</td><td>100</td><td>—</td><td>—</td></tr><tr><td>TyrantKabuterimon Seal</td><td>—</td><td>25</td><td>—</td><td>—</td></tr><tr><td>ChaosPiedmon Seal</td><td>—</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Examon Seal</td><td>—</td><td>100</td><td>—</td><td>—</td></tr><tr><td>Omegamon Alter-S Seal</td><td>—</td><td>100</td><td>—</td><td>—</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=737451&Btype=Update",
+    "date": "24.07.2019"
+  },
+  "kr-734684": {
+    "tables": [
+      {
+        "header": "제작 씰 필요 [ 씰교환권 ] 개수",
+        "score": 12,
+        "rows": 11,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Diablomon Seal</td><td>1</td><td>6</td><td>—</td><td>—</td></tr><tr><td>Tentomon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Azulongmon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>—</td><td>—</td></tr><tr><td>Dracmon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Veedramon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Knightmon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Warumonzaemon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Craniamon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=734684&Btype=Update",
+    "date": "27.03.2019"
+  },
+  "kr-730024": {
+    "tables": [
+      {
+        "header": "제작 씰 리스트 필요 씰교환권 마스터 시 획득 효과",
+        "score": 12,
+        "rows": 11,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Etemon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Coredramon(Green) Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Renamon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Centalmon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Datamon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Parasimon Seal</td><td>1</td><td>10</td><td>—</td><td>—</td></tr><tr><td>Sleipmon Seal</td><td>1</td><td>10</td><td>—</td><td>—</td></tr><tr><td>Dynasmon Seal</td><td>1</td><td>10</td><td>—</td><td>—</td></tr><tr><td>Death-X-mon Seal</td><td>1</td><td>100</td><td>—</td><td>—</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=730024&Btype=Update",
+    "date": "19.12.2018"
   }
 }
