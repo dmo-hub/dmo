@@ -16,6 +16,9 @@ from pathlib import Path
 PROJ = Path(__file__).resolve().parent.parent
 DATA = PROJ / "data" / "dungeons.json"
 OUT = PROJ / "docs" / "dungeon.html"
+KR_DATA = PROJ / "data" / "kr_dungeons.json"
+KR_MAP = PROJ / "data" / "kr_dungeon_map.json"
+SRC_LABEL = {"th": "อ่านต่อที่ vplay ↗", "kr": "ประกาศอัปเดต KR ↗", "na": "ต้นทาง ↗"}
 
 SERVERS = [("na", "NA"), ("kr", "KR"), ("th", "TH")]
 
@@ -26,16 +29,23 @@ def esc(s):
 
 def server_panel(code, label, srv):
     if not srv:
+        # TH is fully scanned, so a blank TH side means the server lacks it.
+        soon = "ยังไม่พบในเซิร์ฟนี้" if code == "th" else "เร็ว ๆ นี้"
         return (
             f'<div class="dg-srv dg-srv-{code} dg-srv-empty">'
             f'<span class="dg-srv-tag">{label}</span>'
-            f'<span class="dg-soon">เร็ว ๆ นี้</span></div>'
+            f'<span class="dg-soon">{soon}</span></div>'
         )
     rows = []
-    for key, field, fmt in (("location", "ที่ตั้ง", str), ("npc", "NPC", str),
-                            ("req", "เลเวล", str), ("party", "จำนวนคน", lambda n: f"สูงสุด {n} คน"),
-                            ("pass_item", "บัตรผ่าน", str),
-                            ("clear_reward", "เคลียร์ได้", str)):
+    # TH names head the card; another server's own name for the dungeon
+    # is what a player there searches for.
+    fields = (("name", "ชื่อ", str),) if code != "th" else ()
+    fields += (("location", "ที่ตั้ง", str), ("npc", "NPC", str),
+               ("req", "เลเวล", str), ("party", "จำนวนคน", lambda n: f"สูงสุด {n} คน"),
+               ("conditions", "เงื่อนไข", " · ".join), ("limit", "จำกัด", str),
+               ("pass_item", "บัตรผ่าน", str),
+               ("clear_reward", "เคลียร์ได้", str))
+    for key, field, fmt in fields:
         if srv.get(key):
             rows.append(f'<div class="dg-fld"><span class="dg-k">{field}</span>'
                         f'<span class="dg-v">{esc(fmt(srv[key]))}</span></div>')
@@ -51,11 +61,19 @@ def server_panel(code, label, srv):
     rewards = srv.get("rewards") or []
     drops = srv.get("drop") or []
     if rewards:
-        lis = "".join(
-            f'<li>{esc(r["item"])}'
-            + (f' ×{esc(r["qty"])}' if r.get("qty") else "")
-            + (f' <span class="dg-note">{esc(r["rate"])}</span>' if r.get("rate") else "")
-            + "</li>" for r in rewards)
+        grouped = len({r.get("quest") for r in rewards}) > 1
+        parts, last = [], object()
+        for r in rewards:
+            if grouped and r.get("quest") != last:
+                last = r.get("quest")
+                parts.append(f'<li class="dg-q">{esc(last or "")}</li>')
+            parts.append(
+                f'<li>{esc(r["item"])}'
+                + (f' ×{esc(r["qty"])}' if r.get("qty") else "")
+                + (f' <span class="dg-note">{esc(r["rate"])}</span>' if r.get("rate") else "")
+                + (f' <span class="dg-note">รอบ {esc(r["round"])}</span>' if r.get("round") else "")
+                + "</li>")
+        lis = "".join(parts)
         body = f'<ul class="dg-droplist">{lis}</ul>'
         # Long tables (40+ rows) would bury the next card; fold them.
         if len(rewards) > 8:
@@ -68,7 +86,7 @@ def server_panel(code, label, srv):
     src = ""
     if srv.get("url"):
         src = (f'<a class="dg-src" href="{esc(srv["url"])}" target="_blank" '
-               f'rel="noopener">อ่านต่อที่ vplay ↗</a>')
+               f'rel="noopener">{SRC_LABEL.get(code, "ต้นทาง ↗")}</a>')
     summary = f'<p class="dg-summary">{esc(srv["summary"])}</p>' if srv.get("summary") else ""
     date_html = f'<span class="dg-date">{esc(srv["date"])}</span>' if srv.get("date") else ""
     rows_html = "".join(rows)
@@ -81,7 +99,7 @@ def server_panel(code, label, srv):
 
 
 def dungeon_card(d):
-    th = d.get("th") or {}
+    th = d.get("th") or d.get("kr") or {}
     # Without a known boss the dungeon's name heads the card, and is not
     # repeated underneath.
     title = esc(th.get("boss") or th.get("name") or d["id"])
@@ -148,6 +166,8 @@ STYLE = """
     line-height: 1.6; }
   .dg-droplist li { font-size: 12.5px; }
   .dg-note { color: var(--muted); font-size: 11.5px; }
+  .dg-droplist .dg-q { list-style: none; margin: 6px 0 0 -18px; font-weight: 600;
+    color: var(--muted); font-size: 12px; }
   .dg-drop summary { cursor: pointer; font-size: 12.5px; color: var(--body); }
   .dg-src { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 600;
     color: var(--coral); }
@@ -156,11 +176,13 @@ STYLE = """
 
 def render(payload):
     # Newest first: the dungeon a player is asking about is usually the latest.
-    ordered = sorted(payload["dungeons"], key=lambda d: (d.get("th") or {}).get("date") or "",
+    ordered = sorted(payload["dungeons"],
+                     key=lambda d: (d.get("th") or d.get("kr") or {}).get("date") or "",
                      reverse=True)
     cards = "\n".join(dungeon_card(d) for d in ordered)
     n = len(payload["dungeons"])
     n_th = sum(1 for d in payload["dungeons"] if d.get("th"))
+    n_kr = sum(1 for d in payload["dungeons"] if d.get("kr"))
     return f"""<!DOCTYPE html>
 <html lang="th">
 <head>
@@ -196,11 +218,12 @@ def render(payload):
       <div>
         <h1>🏰 Dungeons — ไกด์ดันเจี้ยน</h1>
         <p class="lead">ดันเจี้ยน (ดันบอส) ของ Digimon Masters Online — บอส · เงื่อนไขเลเวล · บัตรผ่าน · ของดรอป
-          รวมทุกเซิร์ฟ NA · KR · TH · คอลัมน์ TH จาก vplay.in.th (NA/KR เร็ว ๆ นี้)</p>
+          รวมทุกเซิร์ฟ NA · KR · TH · คอลัมน์ TH จาก vplay.in.th · KR จากประกาศอัปเดต digimonmasters.com (NA เร็ว ๆ นี้)</p>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><div class="num">{n}</div><div class="lbl">ดันเจี้ยน</div></div>
         <div class="hero-stat"><div class="num">{n_th}</div><div class="lbl">TH</div></div>
+        <div class="hero-stat"><div class="num">{n_kr}</div><div class="lbl">KR</div></div>
         <div class="hero-stat"><div class="num">3</div><div class="lbl">เซิร์ฟ</div></div>
       </div>
     </div>
@@ -209,7 +232,7 @@ def render(payload):
 {cards}
     </div>
     <p class="lead" style="margin-top:14px;font-size:12px">
-      ที่มา: vplay.in.th (TH) · รูปบอสเว้นช่องไว้ใส่ภายหลัง · gen จาก
+      ที่มา: vplay.in.th (TH) · digimonmasters.com ประกาศอัปเดต (KR — ไม่มีหน้าไกด์ จึงรวมจากโพสต์ที่เพิ่ม/แก้ดันเจี้ยน) · รูปบอสเว้นช่องไว้ใส่ภายหลัง · gen จาก
       <code>builders/build_dungeon_html.py</code> — data <code>data/dungeons.json</code>
     </p>
   </section>
@@ -227,8 +250,31 @@ def render(payload):
 """
 
 
+def attach_kr(payload):
+    """Join KR records onto TH cards via the hand map; the rest stand alone.
+
+    Joined here rather than written into dungeons.json, which scan_dungeons
+    rebuilds from TH sources and expects every card to carry a TH side."""
+    if not KR_DATA.exists():
+        return payload
+    kr = json.loads(KR_DATA.read_text(encoding="utf-8"))["dungeons"]
+    pairs = json.loads(KR_MAP.read_text(encoding="utf-8"))["map"] if KR_MAP.exists() else {}
+    used = set()
+    cards = []
+    for d in payload["dungeons"]:
+        k = pairs.get(d["id"])
+        if k in kr:
+            d = dict(d, kr=kr[k])
+            used.add(k)
+        cards.append(d)
+    for k, r in kr.items():
+        if k not in used:
+            cards.append({"id": f"kr-{k}", "boss_en": "", "image": "", "na": None, "th": None, "kr": r})
+    return dict(payload, dungeons=cards)
+
+
 def main():
-    payload = json.loads(DATA.read_text(encoding="utf-8"))
+    payload = attach_kr(json.loads(DATA.read_text(encoding="utf-8")))
     OUT.write_text(render(payload), encoding="utf-8")
     print(f"wrote {OUT.relative_to(PROJ)}  ({len(payload['dungeons'])} dungeon)")
 

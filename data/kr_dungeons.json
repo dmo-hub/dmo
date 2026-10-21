@@ -1,0 +1,1348 @@
+{
+  "dungeons": {
+    "로얄베이스(어려움)": {
+      "sources": [
+        "780203"
+      ],
+      "name": "로얄 베이스 (어려움)",
+      "location": "베르단디 터미널",
+      "npc": "듀크몬 X",
+      "req": "Lv.140+",
+      "conditions": [
+        "퀘스트 [목숨을 걸 준비] 완료 디지몬 레벨 140 이상"
+      ],
+      "pass_item": "차원 이동 – 로얄 베이스(어려움)1개",
+      "party": 4,
+      "boss": "데크스몬",
+      "monsters": [
+        {
+          "name": "로드나이트몬",
+          "level": 140
+        },
+        {
+          "name": "듀나스몬",
+          "level": 140
+        },
+        {
+          "name": "알포스브이드라몬",
+          "level": 140
+        },
+        {
+          "name": "켄타우로스몬",
+          "level": 140
+        },
+        {
+          "name": "엑자몬",
+          "level": 140
+        },
+        {
+          "name": "데크스돌그레몬",
+          "level": 140
+        },
+        {
+          "name": "게이트",
+          "level": 140
+        },
+        {
+          "name": "X-DATA코어",
+          "level": 140
+        },
+        {
+          "name": "케이트",
+          "level": 140
+        },
+        {
+          "name": "데크스돌고라몬",
+          "level": 140
+        },
+        {
+          "name": "데크스돌고라몬의 알",
+          "level": 140
+        },
+        {
+          "name": "데크스몬",
+          "level": 140
+        }
+      ],
+      "rewards": [
+        {
+          "item": "오염된 X항체-CORE",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "로얄 베이스 스테이지"
+        },
+        {
+          "item": "더블 강화칩 개조 키트",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "로얄 베이스 스테이지"
+        },
+        {
+          "item": "씰 마스터 랜덤 팩",
+          "qty": "2",
+          "rate": "100%",
+          "quest": "로얄 베이스 스테이지"
+        },
+        {
+          "item": "금괴 2T",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "로얄 베이스 스테이지"
+        },
+        {
+          "item": "강화칩 랜덤 상자 16 ~ 18Lv",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "로얄 베이스 스테이지"
+        },
+        {
+          "item": "오염된 X항체-CORE",
+          "qty": "3",
+          "rate": "100%",
+          "quest": "로얄 베이스 중심부 스테이지"
+        },
+        {
+          "item": "더블 강화칩 개조 키트",
+          "qty": "2",
+          "rate": "100%",
+          "quest": "로얄 베이스 중심부 스테이지"
+        },
+        {
+          "item": "씰 마스터 랜덤 팩",
+          "qty": "3",
+          "rate": "100%",
+          "quest": "로얄 베이스 중심부 스테이지"
+        },
+        {
+          "item": "금괴 5T",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "로얄 베이스 중심부 스테이지"
+        },
+        {
+          "item": "강화칩 랜덤 상자 16 ~ 18Lv",
+          "qty": "2",
+          "rate": "100%",
+          "quest": "로얄 베이스 중심부 스테이지"
+        },
+        {
+          "item": "오염된 X항체-CORE",
+          "qty": "5",
+          "rate": "100%",
+          "quest": "이그드라실의 방 스테이지"
+        },
+        {
+          "item": "더블 강화칩 개조 키트",
+          "qty": "3",
+          "rate": "100%",
+          "quest": "이그드라실의 방 스테이지"
+        },
+        {
+          "item": "씰 마스터 랜덤 팩",
+          "qty": "5",
+          "rate": "100%",
+          "quest": "이그드라실의 방 스테이지"
+        },
+        {
+          "item": "금괴 10T",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "이그드라실의 방 스테이지"
+        },
+        {
+          "item": "강화칩 랜덤 상자 16 ~ 18Lv",
+          "qty": "3",
+          "rate": "100%",
+          "quest": "이그드라실의 방 스테이지"
+        }
+      ],
+      "date": "2023-12-20",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=780203&Btype=Update"
+    },
+    "파괴와재생": {
+      "sources": [
+        "785439",
+        "818133"
+      ],
+      "name": "파괴와 재생",
+      "location": "D-터미널",
+      "npc": "<파괴와 재생의 던전 안내자> 보코몬",
+      "req": "Lv.140+",
+      "conditions": [
+        "디지바이스 퀘스트 [보코몬의 호출] 완료 디지몬 레벨 140 이상 테이머 레벨 140 이상"
+      ],
+      "pass_item": "스사노오몬의 흔적 3개",
+      "party": 4,
+      "boss": "스사노오몬",
+      "monsters": [
+        {
+          "name": "스사노오몬",
+          "level": 140
+        }
+      ],
+      "rewards": [
+        {
+          "item": "디지코드 조각",
+          "qty": "11",
+          "rate": "100%",
+          "quest": "파괴와 재생"
+        },
+        {
+          "item": "20T 금괴",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "파괴와 재생"
+        },
+        {
+          "item": "파괴와 재생의 씰 마스터 랜덤 팩",
+          "qty": "10",
+          "rate": "100%",
+          "quest": "파괴와 재생"
+        }
+      ],
+      "date": "2026-06-16",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=818133&Btype=Update"
+    },
+    "닷트본부지하창고": {
+      "sources": [
+        "787457"
+      ],
+      "name": "닷트본부 지하창고",
+      "location": "닷트본부",
+      "npc": "<주부> 오유리",
+      "req": "Lv.120+",
+      "conditions": [
+        "디지몬 레벨 120 이상"
+      ],
+      "pass_item": "닷트본부 마스터키 1개",
+      "party": 1,
+      "monsters": [
+        {
+          "name": "폰체스몬 W",
+          "title": "1단계"
+        },
+        {
+          "name": "폰체스몬 B",
+          "title": "1단계"
+        },
+        {
+          "name": "나이트체스몬 W",
+          "title": "2단계"
+        },
+        {
+          "name": "나이트체스몬 B",
+          "title": "2단계"
+        },
+        {
+          "name": "비숍체스몬",
+          "title": "3단계"
+        },
+        {
+          "name": "룩체스몬",
+          "title": "3단계"
+        },
+        {
+          "name": "킹체스몬",
+          "title": "4단계"
+        },
+        {
+          "name": "퀸체스몬",
+          "title": "4단계"
+        },
+        {
+          "name": "콩알몬",
+          "title": "5단계"
+        },
+        {
+          "name": "빅콩알몬",
+          "title": "6단계"
+        },
+        {
+          "name": "프린스콩알몬",
+          "title": "7단계"
+        },
+        {
+          "name": "로오치몬",
+          "title": "-"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "1,000,000B 금괴",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "닷트본부 지하창고"
+        }
+      ],
+      "date": "2024-05-22",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787457&Btype=Update"
+    },
+    "디지몬아레나[일반]/[하드]": {
+      "sources": [
+        "787457"
+      ],
+      "name": "디지몬 아레나[일반] / [하드]",
+      "location": "닷트본부",
+      "npc": "<디지몬 아레나> 미키",
+      "req": "Lv.110+",
+      "conditions": [
+        "디지몬 아레나[일반]: 디지몬 레벨 110 이상 디지몬 아레나[하드]: 디지몬 레벨 140 이상"
+      ],
+      "pass_item": "디지몬 아레나 입장권 1개",
+      "party": 1,
+      "rewards": [
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "1",
+          "round": "1",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "1",
+          "round": "2",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "2",
+          "round": "3",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "2",
+          "round": "4",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "3",
+          "round": "5",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "3",
+          "round": "6",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "3",
+          "round": "7",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "4",
+          "round": "8",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "5",
+          "round": "9",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "8",
+          "round": "10",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [일반]",
+          "qty": "4",
+          "round": "히든",
+          "rate": "100%",
+          "quest": "디지몬 아레나 일반"
+        },
+        {
+          "item": "아레나 코인 [하드]",
+          "qty": "1",
+          "round": "0",
+          "rate": "0.5%",
+          "quest": "디지몬 아레나 하드"
+        },
+        {
+          "item": "아레나 코인 [하드]",
+          "qty": "2",
+          "round": "1",
+          "rate": "100%",
+          "quest": "디지몬 아레나 하드"
+        },
+        {
+          "item": "아레나 코인 [하드]",
+          "qty": "5",
+          "round": "2",
+          "rate": "100%",
+          "quest": "디지몬 아레나 하드"
+        },
+        {
+          "item": "아레나 코인 [하드]",
+          "qty": "8",
+          "round": "3",
+          "rate": "100%",
+          "quest": "디지몬 아레나 하드"
+        },
+        {
+          "item": "아레나 코인 [하드]",
+          "qty": "9",
+          "round": "4",
+          "rate": "100%",
+          "quest": "디지몬 아레나 하드"
+        },
+        {
+          "item": "아레나 코인 [하드]",
+          "qty": "10",
+          "round": "5",
+          "rate": "100%",
+          "quest": "디지몬 아레나 하드"
+        }
+      ],
+      "date": "2024-05-22",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=787457&Btype=Update"
+    },
+    "디지몬카이저": {
+      "sources": [
+        "789668"
+      ],
+      "name": "디지몬 카이저",
+      "location": "D-터미널",
+      "npc": "<디지몬 카이저 던전 안내자>브이몬",
+      "req": "Lv.150+",
+      "conditions": [
+        "디지몬 레벨 150 이상"
+      ],
+      "pass_item": "디지털 월드 접속기 1개",
+      "party": 4,
+      "boss": "메탈그레이몬(흑)",
+      "monsters": [
+        {
+          "name": "메탈그레이몬(흑)",
+          "level": 150
+        }
+      ],
+      "rewards": [
+        {
+          "item": "사악한 기운",
+          "qty": "6",
+          "rate": "100%",
+          "quest": "디지몬 카이저"
+        },
+        {
+          "item": "장비 데이터 조각",
+          "qty": "28",
+          "rate": "100%",
+          "quest": "디지몬 카이저"
+        },
+        {
+          "item": "15T",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "디지몬 카이저"
+        },
+        {
+          "item": "사악한 기운",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "디지몬 카이저"
+        },
+        {
+          "item": "사악한 기운",
+          "qty": "2",
+          "rate": "50%",
+          "quest": "디지몬 카이저"
+        },
+        {
+          "item": "금괴 5T",
+          "qty": "2",
+          "rate": "20%",
+          "quest": "디지몬 카이저"
+        },
+        {
+          "item": "(眞) 장비 랜덤 상자",
+          "qty": "1",
+          "rate": "0.05%",
+          "quest": "디지몬 카이저"
+        }
+      ],
+      "date": "2024-08-21",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=789668&Btype=Update"
+    },
+    "상점가[Easy]/[Normal]": {
+      "sources": [
+        "793209"
+      ],
+      "name": "상점가 [Easy] / [Normal]",
+      "location": "D-터미널",
+      "npc": "<상점가 안내자>은하준",
+      "req": "Lv.150+",
+      "conditions": [
+        "[Easy] 디지몬 레벨 150이상 / [Normal] 디지몬 레벨 160이상"
+      ],
+      "pass_item": "Dim 카드 1개",
+      "party": 1,
+      "boss": "굴루스감마몬",
+      "limit": "[Easy] 1회 / [Normal] 1회",
+      "monsters": [
+        {
+          "name": "굴루스감마몬 [Easy]",
+          "level": 150
+        },
+        {
+          "name": "굴루스감마몬 [Normal]",
+          "level": 166
+        }
+      ],
+      "rewards": [
+        {
+          "item": "오염된 디지코드",
+          "qty": "3",
+          "rate": "100%",
+          "quest": "상점가(Easy)"
+        },
+        {
+          "item": "7T",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "상점가(Easy)"
+        },
+        {
+          "item": "강화 재료 상자(쉬움)",
+          "qty": "2",
+          "rate": "100%",
+          "quest": "상점가(Easy)"
+        },
+        {
+          "item": "오염된 디지코드",
+          "qty": "10",
+          "rate": "100%",
+          "quest": "상점가(Normal)"
+        },
+        {
+          "item": "처형인의 나이프",
+          "qty": "7",
+          "rate": "100%",
+          "quest": "상점가(Normal)"
+        },
+        {
+          "item": "20T",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "상점가(Normal)"
+        },
+        {
+          "item": "강화 재료 상자(보통)",
+          "qty": "2",
+          "rate": "100%",
+          "quest": "상점가(Normal)"
+        },
+        {
+          "item": "오염된 디지코드",
+          "qty": "2",
+          "rate": "50%",
+          "quest": "상점가(Easy)"
+        },
+        {
+          "item": "강화 재료 상자(쉬움)",
+          "qty": "2",
+          "rate": "25%",
+          "quest": "상점가(Easy)"
+        },
+        {
+          "item": "오염된 디지코드",
+          "qty": "4",
+          "rate": "50%",
+          "quest": "상점가(Normal)"
+        },
+        {
+          "item": "처형인의 나이프",
+          "qty": "2",
+          "rate": "50%",
+          "quest": "상점가(Normal)"
+        },
+        {
+          "item": "강화 재료 상자(보통)",
+          "qty": "2",
+          "rate": "25%",
+          "quest": "상점가(Normal)"
+        },
+        {
+          "item": "(眞) 장비 랜덤 상자",
+          "qty": "1",
+          "rate": "0.05%",
+          "quest": "상점가(Normal)"
+        }
+      ],
+      "date": "2024-10-23",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=793209&Btype=Update"
+    },
+    "카이저의영역": {
+      "sources": [
+        "794959"
+      ],
+      "name": "카이저의 영역",
+      "location": "카이저의 영역",
+      "npc": "<카이저의 영역 안내자>브이몬",
+      "req": "Lv.140+",
+      "conditions": [
+        "긴급! 디지털 월드 퀘스트 완료 / 디지몬 레벨 140이상"
+      ],
+      "pass_item": "이블 스파이럴 1개",
+      "party": 1,
+      "monsters": [
+        {
+          "name": "모노크로몬",
+          "title": "<보스>",
+          "level": 150
+        },
+        {
+          "name": "스컬그레이몬",
+          "title": "<보스>",
+          "level": 150
+        },
+        {
+          "name": "로오치몬",
+          "title": "<보스>",
+          "level": 150
+        },
+        {
+          "name": "시드라몬",
+          "title": "<보스>",
+          "level": 150
+        },
+        {
+          "name": "스타몬",
+          "title": "<보스>",
+          "level": 150
+        },
+        {
+          "name": "배드퍼펫몬",
+          "title": "<보스>",
+          "level": 150
+        }
+      ],
+      "rewards": [
+        {
+          "item": "랜덤 강화 재료 스캔 상자(대)",
+          "qty": "10",
+          "quest": "카이저의 영역 1인"
+        },
+        {
+          "item": "랜덤 강화 재료 스캔 상자(대)",
+          "qty": "15",
+          "quest": "카이저의 영역 4인"
+        }
+      ],
+      "date": "2024-11-20",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=794959&Btype=Update"
+    },
+    "요코하마비밀공원": {
+      "sources": [
+        "797210"
+      ],
+      "name": "요코하마 비밀공원",
+      "location": "요코하마 동쪽 마을",
+      "npc": "<길거리의 고양이>달봉이",
+      "conditions": [
+        "퀘스트 작별 인사 완료"
+      ],
+      "pass_item": "특제 고양이 참치 통조림 1개",
+      "party": 1,
+      "monsters": [
+        {
+          "name": "스타몬즈",
+          "level": 20
+        },
+        {
+          "name": "로오치몬",
+          "level": 50
+        },
+        {
+          "name": "도그몬",
+          "level": 80
+        },
+        {
+          "name": "마쿠라몬",
+          "level": 110
+        }
+      ],
+      "date": "2025-02-05",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=797210&Btype=Update"
+    },
+    "카이저의기지[Easy]/[Normal]": {
+      "sources": [
+        "797630"
+      ],
+      "name": "카이저의 기지 [Easy] / [Normal]",
+      "location": "D-터미널",
+      "npc": "<디지몬 카이저 던전 안내자>브이몬",
+      "req": "Lv.150+",
+      "conditions": [
+        "[Easy] 디지몬 레벨 150이상 / [Normal] 디지몬 레벨 160이상",
+        "퀘스트 정체불명의 톱니바퀴 완료"
+      ],
+      "pass_item": "동력실 톱니바퀴 5개",
+      "party": 4,
+      "boss": "키메라몬",
+      "monsters": [
+        {
+          "name": "키메라몬",
+          "title": "<합성>",
+          "level": 155
+        }
+      ],
+      "rewards": [
+        {
+          "item": "키메라몬의 사악한 기운",
+          "qty": "2",
+          "rate": "100%",
+          "quest": "카이저의 기지(Easy)"
+        },
+        {
+          "item": "7T",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "카이저의 기지(Easy)"
+        },
+        {
+          "item": "강화 재료 상자(쉬움)",
+          "qty": "3",
+          "rate": "100%",
+          "quest": "카이저의 기지(Easy)"
+        },
+        {
+          "item": "키메라몬의 사악한 기운",
+          "qty": "10",
+          "rate": "100%",
+          "quest": "카이저의 기지(Normal)"
+        },
+        {
+          "item": "디지몬 카이저의 검은 고리",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "카이저의 기지(Normal)"
+        },
+        {
+          "item": "20T",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "카이저의 기지(Normal)"
+        },
+        {
+          "item": "강화 재료 상자(보통)",
+          "qty": "3",
+          "rate": "100%",
+          "quest": "카이저의 기지(Normal)"
+        },
+        {
+          "item": "키메라몬의 사악한 기운",
+          "qty": "2",
+          "rate": "50%",
+          "quest": "카이저의 기지(Easy)"
+        },
+        {
+          "item": "키메라몬의 사악한 기운",
+          "qty": "2",
+          "rate": "50%",
+          "quest": "카이저의 기지(Normal)"
+        },
+        {
+          "item": "키메라몬의 사악한 기운",
+          "qty": "1",
+          "rate": "20%",
+          "quest": "카이저의 기지(Normal)"
+        },
+        {
+          "item": "5T",
+          "qty": "1",
+          "rate": "20%",
+          "quest": "카이저의 기지(Normal)"
+        },
+        {
+          "item": "봉인된 크로스로더 상자",
+          "qty": "1",
+          "rate": "0.5%",
+          "quest": "카이저의 기지(Normal)"
+        },
+        {
+          "item": "(眞) 장비 랜덤 상자",
+          "qty": "1",
+          "rate": "0.05%",
+          "quest": "카이저의 기지(Normal)"
+        }
+      ],
+      "date": "2025-02-19",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=797630&Btype=Update"
+    },
+    "던전마스터즈챌린지": {
+      "sources": [
+        "800036",
+        "811897"
+      ],
+      "name": "던전 마스터즈 챌린지",
+      "pass_item": "던전 마스터즈 챌린지 입장권 1개",
+      "party": 4,
+      "date": "2025-11-19",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811897&Btype=Update"
+    },
+    "다크웹": {
+      "sources": [
+        "802550"
+      ],
+      "name": "다크 웹",
+      "req": "Lv.150+",
+      "conditions": [
+        "디지몬 레벨 150이상",
+        "네트워크 오류 완료"
+      ],
+      "pass_item": "-",
+      "party": 2,
+      "boss": "디아블로몬, ???",
+      "monsters": [
+        {
+          "name": "디아블로몬",
+          "level": 160
+        },
+        {
+          "name": "???",
+          "level": 160
+        }
+      ],
+      "rewards": [
+        {
+          "item": "쿠라몬의 데이터",
+          "qty": "15",
+          "rate": "100%",
+          "quest": "다크 웹"
+        },
+        {
+          "item": "20T 금괴",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "다크 웹"
+        },
+        {
+          "item": "강화 재료 랜덤 상자(보통)",
+          "qty": "5",
+          "rate": "100%",
+          "quest": "다크 웹"
+        },
+        {
+          "item": "돌파 재료 상자 [지급용]",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "다크 웹"
+        }
+      ],
+      "date": "2025-05-14",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=802550&Btype=Update"
+    },
+    "던전마스터즈2챌린지": {
+      "sources": [
+        "807742",
+        "811897"
+      ],
+      "name": "던전 마스터즈2 챌린지",
+      "pass_item": "던전 마스터즈2 챌린지 입장권 1개",
+      "party": 4,
+      "date": "2025-11-19",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=811897&Btype=Update"
+    },
+    "네버랜드": {
+      "sources": [
+        "810988"
+      ],
+      "name": "네버랜드",
+      "location": "D-터미널",
+      "npc": "<던전 안내자>장한솔",
+      "req": "Lv.160+",
+      "conditions": [
+        "디지몬 레벨 160이상",
+        "이상현상 완료"
+      ],
+      "party": 4,
+      "boss": "에오스몬",
+      "monsters": [
+        {
+          "name": "에오스몬",
+          "level": 160
+        }
+      ],
+      "rewards": [
+        {
+          "item": "빛의 링",
+          "qty": "20",
+          "quest": "네버랜드"
+        },
+        {
+          "item": "40 T 금괴",
+          "qty": "1",
+          "quest": "네버랜드"
+        },
+        {
+          "item": "강화 재료 랜덤 상자(보통)",
+          "qty": "7",
+          "quest": "네버랜드"
+        },
+        {
+          "item": "돌파 재료 상자 [지급용]",
+          "qty": "1",
+          "quest": "네버랜드"
+        },
+        {
+          "item": "디지몬 마스터즈 던전 코인",
+          "qty": "1",
+          "quest": "네버랜드"
+        },
+        {
+          "item": "돌파 재료 상자 [지급용] / 확률",
+          "qty": "1",
+          "quest": "네버랜드"
+        },
+        {
+          "item": "봉인된 최초의 디지바이스 상자 / 확률",
+          "qty": "1",
+          "quest": "네버랜드"
+        },
+        {
+          "item": "상점가(Normal)",
+          "qty": "15",
+          "quest": "던전"
+        },
+        {
+          "item": "상점가(Easy)",
+          "qty": "10",
+          "quest": "던전"
+        },
+        {
+          "item": "디지몬 카이저",
+          "qty": "10",
+          "quest": "던전"
+        },
+        {
+          "item": "카이저의 기지(Normal)",
+          "qty": "15",
+          "quest": "던전"
+        },
+        {
+          "item": "카이저의 기지(Easy)",
+          "qty": "10",
+          "quest": "던전"
+        },
+        {
+          "item": "파괴와 재생",
+          "qty": "10",
+          "quest": "던전"
+        },
+        {
+          "item": "로얄 베이스(Hard)",
+          "qty": "10",
+          "quest": "던전"
+        },
+        {
+          "item": "그림자 미궁(쉬움)",
+          "qty": "5",
+          "quest": "던전"
+        },
+        {
+          "item": "그림자 미궁(어려움)",
+          "qty": "5",
+          "quest": "던전"
+        },
+        {
+          "item": "사성수 던전 (Easy)",
+          "qty": "5",
+          "quest": "던전"
+        },
+        {
+          "item": "사성수 던전 (Normal)",
+          "qty": "5",
+          "quest": "던전"
+        },
+        {
+          "item": "사성수 던전 (Hard)",
+          "qty": "5",
+          "quest": "던전"
+        },
+        {
+          "item": "황룡몬 (쉬움)",
+          "qty": "5",
+          "quest": "던전"
+        },
+        {
+          "item": "황룡몬",
+          "qty": "5",
+          "quest": "던전"
+        },
+        {
+          "item": "황룡몬 (어려움)",
+          "qty": "10",
+          "quest": "던전"
+        }
+      ],
+      "date": "2025-10-01",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=810988&Btype=Update"
+    },
+    "악몽": {
+      "sources": [
+        "812032"
+      ],
+      "name": "악몽",
+      "location": "D-터미널",
+      "npc": "<던전 안내자>브이몬",
+      "req": "Lv.160+",
+      "conditions": [
+        "디지몬 레벨 160이상",
+        "어둠의 씨앗 퀘스트 완료"
+      ],
+      "party": 1,
+      "boss": "베리얼묘티스몬",
+      "monsters": [
+        {
+          "name": "베리얼묘티스몬",
+          "level": 160
+        }
+      ],
+      "rewards": [
+        {
+          "item": "어둠의 꽃",
+          "qty": "20",
+          "quest": "악몽"
+        },
+        {
+          "item": "40 T 금괴",
+          "qty": "1",
+          "quest": "악몽"
+        },
+        {
+          "item": "강화 재료 랜덤 상자(보통)",
+          "qty": "7",
+          "quest": "악몽"
+        },
+        {
+          "item": "돌파 재료 상자 [지급용]",
+          "qty": "2",
+          "quest": "악몽"
+        },
+        {
+          "item": "디지몬 마스터즈 던전 코인",
+          "qty": "1",
+          "quest": "악몽"
+        }
+      ],
+      "date": "2025-11-25",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812032&Btype=Update"
+    },
+    "터미널지하": {
+      "sources": [
+        "812545"
+      ],
+      "name": "터미널 지하",
+      "location": "디지털 월드",
+      "npc": "<디지털 월드>보코몬",
+      "conditions": [
+        "[숲의 터미널로] 퀘스트 완료"
+      ],
+      "pass_item": "터미널 지하 통행증 1개",
+      "party": 1,
+      "boss": "레어몬",
+      "monsters": [
+        {
+          "name": "레어몬",
+          "level": 175
+        }
+      ],
+      "rewards": [
+        {
+          "item": "불안정한 디지코드",
+          "qty": "1",
+          "rate": "100%",
+          "quest": "터미널 지하"
+        },
+        {
+          "item": "랜덤 프론티어 장비 상자 [지급용]",
+          "qty": "1",
+          "rate": "3.85%",
+          "quest": "터미널 지하"
+        },
+        {
+          "item": "랜덤 프론티어 장비 상자",
+          "qty": "1",
+          "rate": "1%",
+          "quest": "터미널 지하"
+        },
+        {
+          "item": "디지터리 파워 결정체 주머니 [지급용]",
+          "qty": "1",
+          "rate": "15%",
+          "quest": "터미널 지하"
+        },
+        {
+          "item": "강화 데이터 전송 앱 & 조각모음 랜덤주머니 [지급용]",
+          "qty": "1",
+          "rate": "15%",
+          "quest": "터미널 지하"
+        }
+      ],
+      "date": "2025-12-30",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=812545&Btype=Update"
+    },
+    "속성아레나": {
+      "sources": [
+        "813810"
+      ],
+      "name": "속성 아레나",
+      "location": "닷트본부",
+      "npc": "<디지몬 속성 아레나 입장>테리어몬",
+      "party": 4,
+      "rewards": [
+        {
+          "item": "상위 0 ~ 10%",
+          "qty": "20",
+          "quest": "속성 아레나"
+        },
+        {
+          "item": "상위 10 ~ 30%",
+          "qty": "15",
+          "quest": "속성 아레나"
+        },
+        {
+          "item": "상위 30 ~ 50%",
+          "qty": "10",
+          "quest": "속성 아레나"
+        },
+        {
+          "item": "상위 50 ~ 70%",
+          "qty": "7",
+          "quest": "속성 아레나"
+        },
+        {
+          "item": "상위 70 ~ 100%",
+          "qty": "5",
+          "quest": "속성 아레나"
+        }
+      ],
+      "date": "2026-01-27",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=813810&Btype=Update"
+    },
+    "7대마왕의성역:발바몬": {
+      "sources": [
+        "820292",
+        "823223"
+      ],
+      "name": "7대 마왕의 성역 : 발바몬",
+      "location": "D-터미널",
+      "npc": "<로얄나이츠>알파몬",
+      "req": "Lv.170+",
+      "party": 4,
+      "boss": "<탐욕의 마왕>발바몬",
+      "monsters": [
+        {
+          "name": "<탐욕의 마왕> 발바몬",
+          "level": 178
+        }
+      ],
+      "date": "2026-09-01",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=823223&Btype=Update",
+      "limit": "8회",
+      "conditions": [
+        "7대 마왕의 준동 : 탐욕 완료"
+      ],
+      "rewards": [
+        {
+          "item": "탐욕의 결정",
+          "qty": "10",
+          "quest": "서브 퀘스트 발바몬의 탐욕을 저지하라! (발바몬 1회 처치)"
+        },
+        {
+          "item": "100 T 금괴",
+          "qty": "1",
+          "quest": "서브 퀘스트 발바몬의 탐욕을 저지하라! (발바몬 1회 처치)"
+        },
+        {
+          "item": "마정석 조각",
+          "qty": "27",
+          "quest": "서브 퀘스트 발바몬의 탐욕을 저지하라! (발바몬 1회 처치)"
+        },
+        {
+          "item": "탐욕의 마왕 발바몬 씰",
+          "qty": "10",
+          "quest": "서브 퀘스트 발바몬의 탐욕을 저지하라! (발바몬 1회 처치)"
+        },
+        {
+          "item": "마정석 조각",
+          "qty": "5",
+          "quest": "주간 퀘스트 주간 탐욕의 재림 (발바몬 1회 처치)"
+        },
+        {
+          "item": "탐욕의 결정",
+          "qty": "5",
+          "quest": "주간 퀘스트 주간 탐욕의 재림 (발바몬 1회 처치)"
+        },
+        {
+          "item": "탐욕의 마왕 발바몬 씰",
+          "qty": "10",
+          "quest": "주간 퀘스트 주간 탐욕의 재림 (발바몬 1회 처치)"
+        },
+        {
+          "item": "10 T 금괴",
+          "qty": "8",
+          "quest": "주간 퀘스트 주간 탐욕의 재림 (발바몬 1회 처치)"
+        }
+      ]
+    },
+    "7대마왕의성역:벨페몬": {
+      "sources": [
+        "823928",
+        "824436"
+      ],
+      "name": "7대 마왕의 성역 : 벨페몬",
+      "location": "불꽃의 터미널",
+      "npc": "<로얄 나이츠>알파몬",
+      "req": "Lv.170+",
+      "party": 4,
+      "boss": "<나태의 마왕>벨페몬",
+      "monsters": [
+        {
+          "name": "<나태의 마왕> 벨페몬",
+          "level": 178
+        }
+      ],
+      "date": "2026-09-29",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=824436&Btype=Update",
+      "limit": "8회",
+      "conditions": [
+        "7대 마왕의 준동 : 나태 완료"
+      ],
+      "rewards": [
+        {
+          "item": "나태의 결정",
+          "qty": "10",
+          "quest": "서브 퀘스트 벨페몬의 폭주를 저지하라! (벨페몬 1회 처치)"
+        },
+        {
+          "item": "100 T 금괴",
+          "qty": "1",
+          "quest": "서브 퀘스트 벨페몬의 폭주를 저지하라! (벨페몬 1회 처치)"
+        },
+        {
+          "item": "마정석 조각",
+          "qty": "27",
+          "quest": "서브 퀘스트 벨페몬의 폭주를 저지하라! (벨페몬 1회 처치)"
+        },
+        {
+          "item": "마정석 조각",
+          "qty": "5",
+          "quest": "주간 퀘스트 주간 나태의 재림 (벨페몬 1회 처치)"
+        },
+        {
+          "item": "나태의 결정",
+          "qty": "5",
+          "quest": "주간 퀘스트 주간 나태의 재림 (벨페몬 1회 처치)"
+        },
+        {
+          "item": "10 T 금괴",
+          "qty": "8",
+          "quest": "주간 퀘스트 주간 나태의 재림 (벨페몬 1회 처치)"
+        }
+      ]
+    },
+    "디지몬카이저(쉬움)": {
+      "sources": [
+        "824598"
+      ],
+      "name": "디지몬 카이저(쉬움)",
+      "location": "D-터미널",
+      "npc": "<디지몬 카이저 던전 안내자>브이몬",
+      "req": "Lv.150+",
+      "conditions": [
+        "디지몬 레벨 150이상"
+      ],
+      "party": 1,
+      "boss": "메탈그레이몬(청)",
+      "monsters": [
+        {
+          "name": "메탈그레이몬(청)",
+          "level": 150
+        }
+      ],
+      "rewards": [
+        {
+          "item": "사악한 기운",
+          "qty": "3",
+          "quest": "반복 퀘스트 디지몬 카이저 (쉬움)"
+        },
+        {
+          "item": "장비 데이터 조각",
+          "qty": "5",
+          "quest": "반복 퀘스트 디지몬 카이저 (쉬움)"
+        },
+        {
+          "item": "파워 디지몬 장비 선택 상자 [지급용]",
+          "qty": "1",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 1"
+        },
+        {
+          "item": "장비 강화 재료 상자 [지급용]",
+          "qty": "10",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 1"
+        },
+        {
+          "item": "파워 디지몬 장비 선택 상자 [지급용]",
+          "qty": "1",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 2"
+        },
+        {
+          "item": "장비 강화 재료 상자 [지급용]",
+          "qty": "10",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 2"
+        },
+        {
+          "item": "파워 디지몬 장비 선택 상자 [지급용]",
+          "qty": "1",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 3"
+        },
+        {
+          "item": "장비 강화 재료 상자 [지급용]",
+          "qty": "10",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 3"
+        },
+        {
+          "item": "파워 디지몬 장비 선택 상자 [지급용]",
+          "qty": "1",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 4"
+        },
+        {
+          "item": "장비 강화 재료 상자 [지급용]",
+          "qty": "10",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 4"
+        },
+        {
+          "item": "5 T 금괴",
+          "qty": "1",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 5"
+        },
+        {
+          "item": "장비 강화 재료 상자 [지급용]",
+          "qty": "10",
+          "quest": "서브 퀘스트 디지몬 카이저 (쉬움) 5"
+        }
+      ],
+      "date": "2026-10-06",
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=824598&Btype=Update"
+    }
+  }
+}

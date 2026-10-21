@@ -69,6 +69,9 @@ IDEMPOTENT_BUILDS = [
     ["scanners/scan_set_effects.py"],
     ["scanners/scan_vplay_sets.py"],
     ["builders/build_set_registry.py"],
+    # reads cached KR posts only
+    ["scanners/scan_kr_dungeons.py"],
+    ["builders/build_dungeon_html.py"],
 ]
 
 

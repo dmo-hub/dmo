@@ -1,0 +1,17 @@
+{
+  "_note": "TH card id (data/dungeons.json) -> KR dungeon key (data/kr_dungeons.json). Pair only when location/NPC/boss/monster list agree; a KR dungeon left out becomes its own KR-only card.",
+  "map": {
+    "thp-067bf9c6": "악몽",
+    "thp-6bf3deca": "다크웹",
+    "thp-9380df48": "네버랜드",
+    "thp-0425cb93": "요코하마비밀공원",
+    "thp-7ae6d50b": "터미널지하",
+    "thp-2415f627": "닷트본부지하창고",
+    "thp-5d37be5d": "파괴와재생",
+    "thp-13451d0b": "디지몬카이저",
+    "thp-445aadb3": "카이저의영역",
+    "thp-9ce46fe2": "카이저의기지[Easy]/[Normal]",
+    "thp-c9ceabb7": "로얄베이스(어려움)",
+    "thp-ea56c763": "상점가[Easy]/[Normal]"
+  }
+}

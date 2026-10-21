@@ -32,6 +32,8 @@ STEPS = [
     ("kr", False, "enrichers/enrich_digimon_kr.py", []),
     ("kr", False, "extractors/extract_kr_digimon_images.py", []),
     ("kr", False, "enrichers/find_kr_only_digimon.py", []),
+    # after scan_kr_digimon_releases, which caches the post bodies it reads
+    ("kr", False, "scanners/scan_kr_dungeons.py", []),
     ("th", True, "fetchers/fetch_th_patch_index.py", []),
     ("th", True, "scanners/scan_th_patch_digimon.py", []),
     ("th", False, "enrichers/enrich_digimon_th.py", []),
