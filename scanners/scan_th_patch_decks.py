@@ -27,8 +27,9 @@ PROJ = Path(__file__).resolve().parent.parent
 CACHE = PROJ / "cache"
 OUT = PROJ / "data" / "th_patch_decks.json"
 
-DECK_HEADING_RE = re.compile(r"^(?:\d+\s*\.\s*)?เพิ่มเด็คใหม่\s*(?:[:：–-]\s*(.*))?$")
-LIST_TITLE_RE = re.compile(r"^(?:รายชื่อดิจิมอน|รายการดิจิมอน(?:เด็คใหม่)?)\s*(?:[–-]\s*(.*))?$")
+# Post 75 writes "เพิ่ม Deck ใหม่ : <name>" and "รายการดิจิมอน : <name>".
+DECK_HEADING_RE = re.compile(r"^(?:\d+\s*\.\s*)?เพิ่ม\s*(?:เด็ค|Deck)\s*ใหม่\s*(?:[:：–-]\s*(.*))?$", re.I)
+LIST_TITLE_RE = re.compile(r"^(?:รายชื่อดิจิมอน|รายการดิจิมอน(?:เด็คใหม่)?)\s*(?:[:：–-]\s*(.*))?$")
 
 
 def deck_heading(b):
