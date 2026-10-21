@@ -17042,56 +17042,6 @@
       "rowsFrom": "Necklaces with 4 or 5 Options"
     },
     {
-      "id": "necklace-miracle-necklace-level-10",
-      "name": "Miracle Necklace [Level 10]",
-      "slot": "necklace",
-      "axis": "unknown",
-      "rollOnly": true,
-      "info": "ค่าออปชันสุ่ม — กรอกค่าที่ชิ้นของคุณได้เอง",
-      "nameTh": "สร้อยแห่งปาฏิหาริย์[เลเวล 10]",
-      "iconWiki": "/images/6/6b/Miracle_Necklace_Lv10.png",
-      "icon": "img/gear/miracle_necklace_lv10.png",
-      "rows": [
-        {
-          "label": "Max HP",
-          "max": "+800"
-        },
-        {
-          "label": "Max DS",
-          "max": "+800"
-        },
-        {
-          "label": "Attack",
-          "max": "+200"
-        },
-        {
-          "label": "Defense",
-          "max": "+50"
-        },
-        {
-          "label": "Critical",
-          "max": "+5%"
-        },
-        {
-          "label": "Skill",
-          "max": "+250"
-        },
-        {
-          "label": "Attribute",
-          "max": "+5%"
-        },
-        {
-          "label": "Critical Damage",
-          "max": "+20%"
-        },
-        {
-          "label": "Attack Speed",
-          "max": "+15%"
-        }
-      ],
-      "rowsFrom": "Necklaces with 4 or 5 Options"
-    },
-    {
       "id": "necklace-necklace-of-sealed-baihumon",
       "name": "Necklace of Sealed Baihumon",
       "slot": "necklace",
@@ -17579,48 +17529,6 @@
       "nameThInferred": true,
       "iconWiki": "/images/5/56/Special_Miracle_Ring.png",
       "icon": "img/gear/special_miracle_ring.png",
-      "rows": [
-        {
-          "label": "Max HP",
-          "max": "+800"
-        },
-        {
-          "label": "Max DS",
-          "max": "+800"
-        },
-        {
-          "label": "Attack",
-          "max": "+300"
-        },
-        {
-          "label": "Defense",
-          "max": "+25"
-        },
-        {
-          "label": "Critical",
-          "max": "+5%"
-        },
-        {
-          "label": "Skill",
-          "max": "+400"
-        },
-        {
-          "label": "Attribute",
-          "max": "+5%"
-        }
-      ],
-      "rowsFrom": "Ring with 4 or 5 Options"
-    },
-    {
-      "id": "ring-miracle-ring-level-10",
-      "name": "Miracle Ring [Level 10]",
-      "slot": "ring",
-      "axis": "unknown",
-      "rollOnly": true,
-      "info": "ค่าออปชันสุ่ม — กรอกค่าที่ชิ้นของคุณได้เอง",
-      "nameTh": "แหวนแห่งปาฏิหาริย์[เลเวล 10]",
-      "iconWiki": "/images/0/06/Miracle_Ring.png",
-      "icon": "img/gear/miracle_ring.png",
       "rows": [
         {
           "label": "Max HP",
