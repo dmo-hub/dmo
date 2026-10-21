@@ -720,6 +720,34 @@ def build_accessory_ref(items, icons):
     return out
 
 
+def add_roll_only(out, accessories):
+    """Accessories whose stats are random options (gear-names lists them with
+    the cap they roll from) have no fixed numbers, so the loop above drops
+    them -- and the picker then offered 3 of 9 earrings. They go in with no
+    stats for the player to type what their piece rolled. A piece the
+    registry already has under another spelling shares its picture."""
+    have = {(r["slot"], r.get("iconWiki")) for r in out if r.get("iconWiki")}
+    names = {(r["slot"], r["name"]) for r in out}
+    added = 0
+    for a in accessories:
+        if (a["slot"], a["name"]) in names or (a["slot"], a.get("iconWiki")) in have:
+            continue
+        rec = {
+            "id": re.sub(r"[^a-z0-9]+", "-", f"{a['slot']}-{a['name']}".lower()).strip("-"),
+            "name": a["name"],
+            "slot": a["slot"],
+            "axis": "unknown",
+            "rollOnly": True,
+            "info": "ค่าออปชันสุ่ม — กรอกค่าที่ชิ้นของคุณได้เอง",
+        }
+        for field in ("nameTh", "nameThInferred", "iconWiki", "icon", "rows", "rowsFrom"):
+            if a.get(field) is not None:
+                rec[field] = a[field]
+        out.append(rec)
+        added += 1
+    return added
+
+
 def band_key(item):
     """Sort key that puts the highest upgrade band last."""
     if item.get("_name_level") is not None:
@@ -816,6 +844,8 @@ def main():
     tamer_gear = add_th_tamer_gear(out, items)
     named_th = add_thai_names(out)
     shin = add_shin_pieces(out)
+    accessories = build_accessory_ref(items, icons)
+    roll_only = add_roll_only(out, accessories)
     out.sort(key=lambda r: (r["slot"], r["name"]))
     payload = {
         "built_at": date.today().isoformat(),
@@ -826,7 +856,6 @@ def main():
         "items": out,
     }
     write_stamped(OUT, payload, "built_at")
-    accessories = build_accessory_ref(items, icons)
 
     by_slot = defaultdict(int)
     by_axis = defaultdict(int)
@@ -837,6 +866,7 @@ def main():
     print("  items %d in %d slots, %d with a Thai name" % (len(out), len(by_slot), named_th))
     print("  per-level stats on %d items" % leveled)
     print("  shin pieces split out %d" % shin)
+    print("  random-option accessories added for typed values %d" % roll_only)
     print("  Thai-server goggles %d" % goggles)
     print("  digivice/aura/key ring/ID card/XAI %d" % tamer_gear)
     print("  axis  %s" % dict(by_axis))
