@@ -45,6 +45,7 @@
     min-width: 62px; padding: 4px 7px; border: 1px solid var(--hairline);
     border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
   .go-picker { min-width: 240px; }
+  table.go-tbl td.go-statval { font-variant-numeric: tabular-nums; color: var(--ink); min-width: 62px; }
   .go-pick-btn { display: flex; align-items: center; gap: 8px; width: 100%; font: inherit;
     font-size: 12.5px; text-align: left; padding: 4px 28px 4px 7px; cursor: pointer;
     border: 1px solid var(--hairline); border-radius: 7px; background: var(--surface-soft);
@@ -360,6 +361,17 @@
       save();
     });
     td.appendChild(inp);
+    return td;
+  }
+
+  /* Clothing stats are fixed by the piece and its upgrade level (owner's
+     call), so the row shows them instead of offering a box to type into. */
+  function statValueCell(item, field) {
+    var td = document.createElement("td");
+    td.className = "go-statval";
+    var v = num(item[field]);
+    td.textContent = window.GearSolver.PCT_STATS[field]
+      ? String(Math.round(v * 100) / 100) : Math.round(v).toLocaleString("en-US");
     return td;
   }
 
@@ -862,9 +874,13 @@
       var tr = document.createElement("tr");
       tr.appendChild(nameCell(it));
       tr.appendChild(upgradeCell(it));
-      tr.appendChild(statCell(it, "AT", "1"));
-      tr.appendChild(statCell(it, "HT", "1"));
-      tr.appendChild(statCell(it, "CT", "0.01"));
+      if (CLOTHING.indexOf(it.slot) >= 0) {
+        ["AT", "HT", "CT"].forEach(function (f) { tr.appendChild(statValueCell(it, f)); });
+      } else {
+        tr.appendChild(statCell(it, "AT", "1"));
+        tr.appendChild(statCell(it, "HT", "1"));
+        tr.appendChild(statCell(it, "CT", "0.01"));
+      }
       tr.appendChild(delCell(data.accessories, it));
       return labelCells(tr, ACC_COLS);
     }
@@ -1355,6 +1371,21 @@
     return { accessories: d.accessories.filter(inList), chips: d.chips.filter(inList) };
   }
 
+  /* Clothing cells are no longer typed into, so a value typed before that
+     change would sit there unseen-editable; re-read every piece from the
+     registry at the player's saved level. */
+  function refreshClothing(rows) {
+    rows.forEach(function (row) {
+      if (CLOTHING.indexOf(row.slot) < 0 || !row.name) return;
+      var pick = findInRegistry(row.name, row.slot);
+      if (!pick) return;
+      STAT_FIELDS.forEach(function (f) {
+        row[f.key] = pick[f.key] !== undefined ? pick[f.key] : 0;
+      });
+      applyLevelStats(row, pick, levels[pick.name]);
+    });
+  }
+
   var savedGoal = jget(GOAL_KEY, null);
   if (savedGoal) {
     GOAL_FIELDS.forEach(function (id) {
@@ -1373,6 +1404,7 @@
     /* Only prune when the lists loaded: with a failed fetch every row would
        look unlisted and the player's whole set would be wiped. */
     if (registry.length && chipRegistry.length) data = dropUnlisted(data);
+    refreshClothing(data.accessories);
     reseedIdSeq();
     save();
     render();
