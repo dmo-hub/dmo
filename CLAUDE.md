@@ -184,7 +184,12 @@ python builders/compare_digimon_sources.py 731          # just one idx
 #     Only Seal-Exchange-Ticket tables are kept; columns are normalized to the
 #     Thai-server names. gameking posts that ship the list as an image (no HTML
 #     table) get their rows from data/seal_ocr.json (vision-OCR'd, canonical
-#     column order; supports an "alias" to reuse another post's standing list).
+#     column order; supports an "alias" to reuse another post's standing list;
+#     a "text" entry instead of "img" is a list the post types as plain lines,
+#     e.g. the 2017 Seal Master renewal na-352 / kr-708817). A card with no
+#     table is deleted on build, so before calling a post "image only" read
+#     its cached page: season-pass and seal-exchanger lists sit in HTML tables
+#     the ticket filter skips on purpose — those go in data/event_seals.json.
 #     KR table cells are shown in English via data/kr_seal_en.json (Korean
 #     seal-name -> official English; unmapped names stay Korean). build_seal_tables.py
 #     also removes cards with no table and refreshes hero/tab counts.
