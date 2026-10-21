@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="หาชุดของสวม + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้าทุกสเตตที่ตั้งไว้">
+<meta name="description" content="หาชุดของสวม + ชิปที่ดีที่สุดตามลำดับสเตตัสที่เลือก โดยยังถึงเป้าทุกสเตตที่ตั้งไว้">
 <meta property="og:title" content="DMO Tracker — Gear Optimizer">
-<meta property="og:description" content="หาชุดของสวม + ชิปที่ให้ AT สูงสุด โดยยังถึงเป้าทุกสเตตที่ตั้งไว้">
+<meta property="og:description" content="หาชุดของสวม + ชิปที่ดีที่สุดตามลำดับสเตตัสที่เลือก โดยยังถึงเป้าทุกสเตตที่ตั้งไว้">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#9881;</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,6 +86,15 @@
   .go-btn.primary { background: var(--primary); color: var(--on-primary); border-color: transparent; }
   .go-spacer { flex: 1; }
 
+  .go-prio { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .go-prio li { display: flex; align-items: center; gap: 8px; padding: 6px 10px;
+    border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface-soft); }
+  .go-prio li.off { opacity: .55; }
+  .go-prio .rank { min-width: 64px; font-size: 12px; color: var(--muted); }
+  .go-prio .stat { flex: 1; font-weight: 600; color: var(--ink); }
+  .go-prio button { font: inherit; font-size: 12px; min-width: 32px; padding: 3px 8px; cursor: pointer;
+    border: 1px solid var(--hairline); border-radius: 7px; background: var(--surface-card); color: var(--ink); }
+  .go-prio button:disabled { opacity: .35; cursor: default; }
   .go-fields { display: grid; grid-template-columns: repeat(3, minmax(120px, 1fr)); gap: 12px; }
   @media (max-width: 620px) { .go-fields { grid-template-columns: 1fr 1fr; } }
   .go-field label { display: block; font-size: 11.5px; font-weight: 600; color: var(--muted); margin-bottom: 5px; }
@@ -179,7 +188,7 @@
   <div class="hero">
     <div>
       <h1>&#9881;&#65039; Gear Optimizer</h1>
-      <p class="lead">ใส่ของสวมกับชิปที่มี ตั้งเป้าสเตตที่ต้องการ แล้วระบบจะหาชุดที่ให้ <b>AT สูงสุด</b> ที่ยังถึงเป้าให้ — ไล่ครบทุกความเป็นไปได้ ไม่ใช่การเดา · <a href="gear-names.html">ดูชื่ออุปกรณ์ EN / TH พร้อมภาพ &rarr;</a></p>
+      <p class="lead">ใส่ของสวมกับชิปที่มี ตั้งเป้าสเตตที่ต้องการ แล้วระบบจะหาชุดที่ดีที่สุด<b>ตามลำดับสเตตัสที่คุณเรียง</b> (เริ่มต้น AT) ที่ยังถึงเป้าให้ — ไล่ครบทุกความเป็นไปได้ ไม่ใช่การเดา · <a href="gear-names.html">ดูชื่ออุปกรณ์ EN / TH พร้อมภาพ &rarr;</a></p>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><div class="num" id="hero-acc">0</div><div class="lbl">ของสวม</div></div>
@@ -232,8 +241,17 @@
     </div>
 
     <div class="go-card">
+      <h2>ลำดับความสำคัญ</h2>
+      <p class="go-sub">ระบบดันอันดับ 1 ให้สูงสุดก่อน — อันดับ 2 ใช้ตัดสินเฉพาะชุดที่อันดับ 1 ได้เท่ากันพอดี แล้วไล่ลงไปทีละอันดับ · ใช้ ↑ ↓ เรียง · กดเอาออกได้ ถ้าไม่สนสเตตัสนั้น</p>
+      <ol class="go-prio" id="prio-list"></ol>
+      <div class="go-actions">
+        <button class="go-btn" id="prio-reset" type="button">คืนค่าเริ่มต้น (AT)</button>
+      </div>
+    </div>
+
+    <div class="go-card">
       <h2>เป้าหมาย</h2>
-      <p class="go-sub">เว้นไว้ = ไม่บังคับ · กรอกเท่าไหร่ = ต้องถึงอย่างน้อยเท่านั้น — เกินเป้าไม่มีผลดีผลเสีย ส่วน AT ไม่ต้องตั้งเป้า ระบบดันให้สูงสุดเอง</p>
+      <p class="go-sub">เว้นไว้ = ไม่บังคับ · กรอกเท่าไหร่ = ต้องถึงอย่างน้อยเท่านั้น — เกินเป้าไม่ได้คะแนนเพิ่มจากเป้า แต่ยังนับตามลำดับความสำคัญด้านบน</p>
       <div class="go-fields" id="target-fields"></div>
       <p class="go-warn" id="target-warn" hidden></p>
       <div class="go-actions">
@@ -287,7 +305,7 @@
     noName: "(\u0e44\u0e21\u0e48\u0e21\u0e35\u0e0a\u0e37\u0e48\u0e2d)",
     del: "\u0e25\u0e1a\u0e41\u0e16\u0e27\u0e19\u0e35\u0e49",
     noItems: "\u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e21\u0e35\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e43\u0e2b\u0e49\u0e04\u0e33\u0e19\u0e27\u0e13 \u2014 \u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a\u0e2b\u0e23\u0e37\u0e2d\u0e0a\u0e34\u0e1b\u0e01\u0e48\u0e2d\u0e19",
-    ok: "\u2705 \u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e2b\u0e21\u0e32\u0e22\u0e44\u0e14\u0e49 \u2014 \u0e19\u0e35\u0e48\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e43\u0e2b\u0e49 AT \u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e17\u0e38\u0e01\u0e02\u0e49\u0e2d\u0e17\u0e35\u0e48\u0e15\u0e31\u0e49\u0e07\u0e44\u0e27\u0e49",
+    ok: "\u2705 \u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e2b\u0e21\u0e32\u0e22\u0e44\u0e14\u0e49 \u2014 \u0e19\u0e35\u0e48\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e14\u0e35\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e15\u0e32\u0e21\u0e25\u0e33\u0e14\u0e31\u0e1a\u0e04\u0e27\u0e32\u0e21\u0e2a\u0e33\u0e04\u0e31\u0e0d \u0e43\u0e19\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e17\u0e38\u0e01\u0e02\u0e49\u0e2d\u0e17\u0e35\u0e48\u0e15\u0e31\u0e49\u0e07\u0e44\u0e27\u0e49",
     missA: "\u26a0\ufe0f \u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e14\u0e49\u0e27\u0e22\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e17\u0e35\u0e48\u0e21\u0e35\u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49 \u2014 \u0e22\u0e31\u0e07\u0e02\u0e32\u0e14: ",
     missC: " \u2014 \u0e14\u0e49\u0e32\u0e19\u0e25\u0e48\u0e32\u0e07\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e40\u0e02\u0e49\u0e32\u0e43\u0e01\u0e25\u0e49\u0e40\u0e1b\u0e49\u0e32\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14 \u0e41\u0e25\u0e30\u0e41\u0e23\u0e07\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e40\u0e17\u0e48\u0e32\u0e17\u0e35\u0e48\u0e17\u0e33\u0e44\u0e14\u0e49\u0e43\u0e19\u0e23\u0e30\u0e22\u0e30\u0e19\u0e31\u0e49\u0e19",
     accHead: "\u0e02\u0e2d\u0e07\u0e2a\u0e27\u0e21",
@@ -1060,6 +1078,67 @@
     });
     return { base: base, targets: targets };
   }
+  /* Priority order (owner's call): the solver maximizes these lexicographically.
+     Stats taken out of the list are not maximized at all; AT alone is the old
+     behaviour and the default. */
+  var PRIO_KEY = "dmo_gear_priority";
+  var PRIO_ALL = window.GearSolver.PRIORITY_STATS;
+  var priority = (function () {
+    var saved = jget(PRIO_KEY, null);
+    if (!Array.isArray(saved)) return ["AT"];
+    var ok = saved.filter(function (st, i) { return PRIO_ALL.indexOf(st) >= 0 && saved.indexOf(st) === i; });
+    return ok.length ? ok : ["AT"];
+  })();
+
+  function prioLabel(st) { return st + (window.GearSolver.PCT_STATS[st] ? " (%)" : ""); }
+
+  function renderPriority() {
+    var host = $("prio-list");
+    host.textContent = "";
+    var rows = priority.concat(PRIO_ALL.filter(function (st) { return priority.indexOf(st) < 0; }));
+    rows.forEach(function (st) {
+      var on = priority.indexOf(st);
+      var li = document.createElement("li");
+      if (on < 0) li.className = "off";
+      var rank = document.createElement("span");
+      rank.className = "rank";
+      rank.textContent = on >= 0 ? "อันดับ " + (on + 1) : "ไม่นับ";
+      var name = document.createElement("span");
+      name.className = "stat";
+      name.textContent = prioLabel(st);
+      li.appendChild(rank);
+      li.appendChild(name);
+      var btn = function (text, label, disabled, fn) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = text;
+        b.setAttribute("aria-label", label + " " + st);
+        b.disabled = disabled;
+        b.addEventListener("click", function () { fn(); savePriority(); renderPriority(); });
+        li.appendChild(b);
+      };
+      if (on >= 0) {
+        btn("↑", "เลื่อนขึ้น", on === 0, function () {
+          priority.splice(on - 1, 0, priority.splice(on, 1)[0]);
+        });
+        btn("↓", "เลื่อนลง", on === priority.length - 1, function () {
+          priority.splice(on + 1, 0, priority.splice(on, 1)[0]);
+        });
+        btn("เอาออก", "เอาออก", priority.length === 1, function () { priority.splice(on, 1); });
+      } else {
+        btn("+ นับ", "นับ", false, function () { priority.push(st); });
+      }
+      host.appendChild(li);
+    });
+  }
+  function savePriority() { jset(PRIO_KEY, priority); }
+  $("prio-reset").addEventListener("click", function () {
+    priority = ["AT"];
+    savePriority();
+    renderPriority();
+  });
+  renderPriority();
+
   function saveGoal() {
     var g = {};
     GOAL_FIELDS.forEach(function (id) { g[id] = $(id).value; });
@@ -1109,7 +1188,7 @@
       return copy;
     });
     solveData.sets = setRegistry;
-    var out = window.GearSolver.solve(solveData, g.base, g.targets);
+    var out = window.GearSolver.solve(solveData, g.base, g.targets, priority.slice());
     lastRun = { out: out, goal: g, dupes: dupes, axisDropped: axisCut.dropped };
     renderResult();
     showTab("tab-result");
@@ -1187,7 +1266,15 @@
     head.appendChild(row(["สเตตัส", "เป้า", "ได้", "ขาด"], "th"));
     tbl.appendChild(head);
     var body = document.createElement("tbody");
-    body.appendChild(row(["AT", "สูงสุด", fmt(t.AT), "—"], "td"));
+    var ranked = (out.result.priority || ["AT"]);
+    var fieldOf = {};
+    STAT_FIELDS.forEach(function (f) { fieldOf[f.key] = f; });
+    ranked.forEach(function (st, i) {
+      if (st in g.targets) return;  // shown below with its floor
+      var f = fieldOf[st];
+      body.appendChild(row([f.label, "สูงสุด · อันดับ " + (i + 1),
+        f.pct ? fmtCT(t[st]) + "%" : fmt(t[st]), "—"], "td"));
+    });
     // One row per stat the user actually asked for; untargeted stats would
     // just be noise on a page whose whole point is the floors you set.
     var shy = [];
@@ -1199,7 +1286,8 @@
       var hit = got >= want;
       if (!hit) shy.push({ f: f, got: got });
       // the mark and the words carry the verdict, not the colour alone
-      body.appendChild(row([f.label, show(want), show(got),
+      var r = ranked.indexOf(f.key);
+      body.appendChild(row([f.label, show(want) + (r >= 0 ? " · อันดับ " + (r + 1) : ""), show(got),
         hit ? "✓ ถึงเป้า" : "✗ ขาด " + show(want - got)], "td", hit ? "hit" : "short"));
     });
     tbl.appendChild(body);

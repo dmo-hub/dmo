@@ -4,7 +4,10 @@
  *   - 12 distinct gear slots (6 accessory + 6 clothing); one item each.
  *   - Chips are one interchangeable pool; at most MAX_CHIPS of them.
  *   - Any stat can be given a floor (hard); overshoot above it is worthless.
- *   - AT has no floor and is maximized.
+ *   - The rest is maximized in the caller's priority order (lexicographic:
+ *     stat 2 only decides between loadouts tied on stat 1). Default: AT alone.
+ *     A lexicographic order survives adding the same amount to both sides,
+ *     so the DP may keep one best state per key exactly as it did for AT.
  *
  * Only the stats the caller actually targets enter the state key. That is not
  * an optimisation detail -- benchmarking on the real registry put two targets
@@ -104,6 +107,34 @@
 
   function scale(stat, v) {
     return PCT_STATS[stat] ? ct100(v) : Math.round(num(v));
+  }
+
+  /* The objective: the stats to maximize, most important first. Set once per
+     solve() call and read by every helper below, rather than threaded through
+     each of them as a parameter. */
+  var ALL_STATS = ["AT", "HT", "CT", "DS", "DE", "EV", "BL"];
+  var OBJ = ["AT"];
+
+  function setPriority(priority) {
+    var seen = {};
+    OBJ = (priority || []).filter(function (st) {
+      var ok = ALL_STATS.indexOf(st) >= 0 && !seen[st];
+      seen[st] = true;
+      return ok;
+    });
+    if (!OBJ.length) OBJ = ["AT"];
+  }
+
+  function objOf(it) {
+    return OBJ.map(function (st) { return scale(st, it && it[st]); });
+  }
+  function addVec(a, b) {
+    return a.map(function (x, i) { return x + b[i]; });
+  }
+  // > 0 when a is the better objective
+  function cmpObj(a, b) {
+    for (var i = 0; i < a.length; i++) if (a[i] !== b[i]) return a[i] - b[i];
+    return 0;
   }
   function unscale(stat, v) {
     return PCT_STATS[stat] ? v / 100 : v;
@@ -208,7 +239,10 @@
      reaching the targets first, then AT, then the smaller shortfall. A
      digivice row with no cap (typed by hand) is offered in every run; with no
      capped digivice at all the old flat MAX_CHIPS applies. */
-  function solve(data, baseStats, targetHT, targetCT) {
+  function solve(data, baseStats, targetHT, targetCT, priority) {
+    // (data, base, {targets}, [priority]) is the page's call shape
+    if (Array.isArray(targetCT)) { priority = targetCT; targetCT = undefined; }
+    setPriority(priority);
     var all = (data && data.accessories) || [];
     var caps = [];
     all.forEach(function (it) {
@@ -231,7 +265,7 @@
       var row = out.result.accessories.filter(function (a) { return a.slot === "digivice"; })[0];
       var mine = sub.accessories.filter(function (it) { return it.slot === "digivice" && it.chipCap === cap; });
       if (row && !row.item && mine.length) {
-        var pick = mine.slice().sort(function (a, b) { return num(b.AT) - num(a.AT); })[0];
+        var pick = mine.slice().sort(function (a, b) { return cmpObj(objOf(b), objOf(a)); })[0];
         row.item = pick;
         var t = out.result.totals;
         t.AT += num(pick.AT);
@@ -239,6 +273,7 @@
       }
       if (!best || better(out, best)) best = out;
     });
+    if (best) best.result.priority = OBJ.slice();
     return best;
   }
 
@@ -248,7 +283,7 @@
       return Object.keys(o.shortfall || {}).reduce(function (s, k) { return s + o.shortfall[k]; }, 0);
     };
     if (!a.feasible && gap(a) !== gap(b)) return gap(a) < gap(b);
-    return a.result.totals.AT > b.result.totals.AT;
+    return cmpObj(objOf(a.result.totals), objOf(b.result.totals)) > 0;
   }
 
   function solveCapped(data, baseStats, targetHT, targetCT, maxChips) {
@@ -311,14 +346,14 @@
        chipTable.forEach(function (ch) {
         var g = gear[k];
         var st = {
-          at: g.at + ch.at,
+          o: addVec(g.o, ch.o),
           v: axes.map(function (stat, i) { return Math.min(caps[i], g.v[i] + ch.v[i]); }),
           gear: g, chips: ch,
         };
         var meets = axes.every(function (stat, i) { return st.v[i] >= caps[i]; });
-        if (meets && (!best || st.at > best.at)) best = st;
+        if (meets && (!best || cmpObj(st.o, best.o) > 0)) best = st;
 
-        // Fallback candidate: least total shortfall, then highest AT. The AT
+        // Fallback candidate: least total shortfall, then the best objective. That
         // tiebreak is what stops "closest to target" from also meaning "weakest
         // possible" — a pure min-shortfall pass happily leaves free slots empty.
         // Shortfalls are summed in display units so a percentage stat short by 5
@@ -330,7 +365,7 @@
           short[stat] = unscale(stat, gap);
           pen += short[stat];
         });
-        if (!bestShort || pen < bestShort.pen || (pen === bestShort.pen && st.at > bestShort.st.at)) {
+        if (!bestShort || pen < bestShort.pen || (pen === bestShort.pen && cmpObj(st.o, bestShort.st.o) > 0)) {
           bestShort = { pen: pen, st: st, short: short };
         }
        });
@@ -383,13 +418,13 @@
   }
 
   /* Keep only the plain items no other plain item in the slot beats. b beats a
-     when it is at least as good on every tracked axis and on AT; then any
+     when it is at least as good on every tracked axis and objective stat; then any
      loadout wearing a does at least as well wearing b instead, so dropping a
      cannot lose the optimum. Exact ties keep the first, so equal pieces of
      different untracked sets collapse to one. */
   function paretoPlain(items, axes) {
     var vecs = items.map(function (it) {
-      return axes.map(function (st) { return scale(st, it[st]); }).concat([num(it.AT)]);
+      return axes.map(function (st) { return scale(st, it[st]); }).concat(objOf(it));
     });
     return items.filter(function (it, i) {
       for (var j = 0; j < items.length; j++) {
@@ -413,13 +448,13 @@
     var zero = axes.map(function () { return 0; });
     var zeroCounts = plan.map(function () { return 0; });
     var states = {};
-    states[key(zero, 0, zeroCounts)] = { at: 0, v: zero, n: 0, c: zeroCounts,
+    states[key(zero, 0, zeroCounts)] = { o: objOf(null), v: zero, n: 0, c: zeroCounts,
                                          plan: plan, prev: null, pick: null };
 
     function step(st, it) {
       var ti = tracked[index.owner[it.name]];
       var c = st.c;
-      var bonusAT = 0;
+      var o = addVec(st.o, objOf(it));
       var gain = axes.map(function (stat) { return scale(stat, it[stat]); });
       if (ti !== undefined && c[ti] < ladders[ti].length - 1) {
         c = c.slice();
@@ -428,10 +463,12 @@
         axes.forEach(function (stat, i) {
           gain[i] += scale(stat, num(after[stat]) - num(before[stat]));
         });
-        bonusAT = num(after.AT) - num(before.AT);
+        o = o.map(function (x, j) {
+          return x + scale(OBJ[j], num(after[OBJ[j]]) - num(before[OBJ[j]]));
+        });
       }
       var v = axes.map(function (stat, i) { return Math.min(caps[i], st.v[i] + gain[i]); });
-      return { v: v, c: c, at: st.at + num(it.AT) + bonusAT };
+      return { v: v, c: c, o: o };
     }
 
     // --- accessories: exactly one choice per slot, "leave empty" included ---
@@ -446,14 +483,14 @@
       Object.keys(states).forEach(function (k) {
         var st = states[k];
         // empty slot: totals and set counts carry over unchanged
-        if (!next[k] || next[k].at < st.at) {
-          next[k] = { at: st.at, v: st.v, n: st.n, c: st.c, plan: plan, prev: st, pick: null };
+        if (!next[k] || cmpObj(next[k].o, st.o) < 0) {
+          next[k] = { o: st.o, v: st.v, n: st.n, c: st.c, plan: plan, prev: st, pick: null };
         }
         candidates.forEach(function (it) {
           var r = step(st, it);
           var nk = key(r.v, st.n, r.c);
-          if (!next[nk] || next[nk].at < r.at) {
-            next[nk] = { at: r.at, v: r.v, n: st.n, c: r.c, plan: plan, prev: st, pick: it };
+          if (!next[nk] || cmpObj(next[nk].o, r.o) < 0) {
+            next[nk] = { o: r.o, v: r.v, n: st.n, c: r.c, plan: plan, prev: st, pick: it };
           }
         });
       });
@@ -464,12 +501,12 @@
   }
 
   /* Every distinct capped gain the chip pool can add with at most maxChips
-     chips, keeping the best AT per gain and dropping any row another row beats
-     on every axis and AT (the join only ever wants the better one). */
+     chips, keeping the best objective per gain and dropping any row another row
+     beats on every axis and objective stat (the join only wants the better one). */
   function runChips(chips, axes, caps, maxChips) {
     var zero = axes.map(function () { return 0; });
     var states = {};
-    states[zero.join("|") + "|0"] = { at: 0, v: zero, n: 0, prev: null, pick: null };
+    states[zero.join("|") + "|0"] = { o: objOf(null), v: zero, n: 0, prev: null, pick: null };
     chips.forEach(function (it) {
       var next = {};
       // carry every state forward unchanged (this chip not taken)
@@ -480,10 +517,10 @@
         var v = axes.map(function (stat, i) {
           return Math.min(caps[i], st.v[i] + scale(stat, it[stat]));
         });
-        var at = st.at + num(it.AT);
+        var o = addVec(st.o, objOf(it));
         var nk = v.join("|") + "|" + (st.n + 1);
-        if (!next[nk] || next[nk].at < at) {
-          next[nk] = { at: at, v: v, n: st.n + 1, prev: st, pick: it };
+        if (!next[nk] || cmpObj(next[nk].o, o) < 0) {
+          next[nk] = { o: o, v: v, n: st.n + 1, prev: st, pick: it };
         }
       });
       states = next;
@@ -491,13 +528,17 @@
     var byGain = {};
     Object.keys(states).forEach(function (k) {
       var st = states[k], g = st.v.join("|");
-      if (!byGain[g] || byGain[g].at < st.at) byGain[g] = st;
+      if (!byGain[g] || cmpObj(byGain[g].o, st.o) < 0) byGain[g] = st;
     });
     var rows = Object.keys(byGain).map(function (g) { return byGain[g]; });
     return rows.filter(function (a) {
       return !rows.some(function (b) {
-        if (b === a || b.at < a.at) return false;
-        var strict = b.at > a.at;
+        if (b === a) return false;
+        var strict = false;
+        for (var j = 0; j < a.o.length; j++) {
+          if (b.o[j] < a.o[j]) return false;
+          if (b.o[j] > a.o[j]) strict = true;
+        }
         for (var i = 0; i < a.v.length; i++) {
           if (b.v[i] < a.v[i]) return false;
           if (b.v[i] > a.v[i]) strict = true;
@@ -518,9 +559,9 @@
     picks.reverse();
     var tip = joined.gear;
     picks.forEach(function (it) {
-      tip = { at: tip.at, v: tip.v, c: tip.c, plan: tip.plan, prev: tip, pick: it, chip: true };
+      tip = { o: tip.o, v: tip.v, c: tip.c, plan: tip.plan, prev: tip, pick: it, chip: true };
     });
-    return { at: joined.at, v: joined.v, c: joined.gear.c, plan: joined.gear.plan,
+    return { o: joined.o, v: joined.v, c: joined.gear.c, plan: joined.gear.plan,
              prev: tip.prev, pick: tip.pick, chip: tip.chip };
   }
 
@@ -719,6 +760,7 @@
     slotGroup: slotGroup,
     MAX_CHIPS: MAX_CHIPS,
     PCT_STATS: PCT_STATS,
+    PRIORITY_STATS: ALL_STATS.slice(),
     solve: solve,
     findDuplicateIds: findDuplicateIds,
     applyUpgradeLevels: applyUpgradeLevels,
