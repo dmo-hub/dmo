@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-10-20",
+  "built_at": "2026-10-21",
   "source": "data/clothing_items.json",
   "note": "accessories roll random options; rows are what each option can roll (min/max, or the cap), not what a piece has",
   "items": [
@@ -289,7 +289,8 @@
           "max": "+6%"
         }
       ],
-      "rowsFrom": "Regular Earrings"
+      "rowsFrom": "Regular Earrings",
+      "nameTh": "ต่างหูชั้นดีที่ถูกผนึกของไบฟูมอน"
     },
     {
       "name": "Brilliant Kindness Earring",
@@ -430,7 +431,8 @@
           "max": "+6%"
         }
       ],
-      "rowsFrom": "Regular Earrings"
+      "rowsFrom": "Regular Earrings",
+      "nameTh": "ต่างหูดิจิตอลฮาซาร์ด"
     },
     {
       "name": "Flame Earring of Sealed Zhuqiaomon",
@@ -482,7 +484,8 @@
           "max": "+6%"
         }
       ],
-      "rowsFrom": "Regular Earrings"
+      "rowsFrom": "Regular Earrings",
+      "nameTh": "ต่างหูชั้นดีที่ถูกผนึกของซูเซมอน"
     },
     {
       "name": "Miracle Earring [Special]",
@@ -534,7 +537,8 @@
           "max": "+6%"
         }
       ],
-      "rowsFrom": "Regular Earrings"
+      "rowsFrom": "Regular Earrings",
+      "nameTh": "ต่างหูแห่งปาฏิหาริย์[ระดับพิเศษ]"
     },
     {
       "name": "Miracle Earrings [Level 10]",
@@ -586,7 +590,8 @@
           "max": "+6%"
         }
       ],
-      "rowsFrom": "Regular Earrings"
+      "rowsFrom": "Regular Earrings",
+      "nameTh": "ต่างหูแห่งปาฏิหาริย์[เลเวล 10]"
     },
     {
       "name": "Qinglongmon's Sealed Radiant Earring",
@@ -638,7 +643,8 @@
           "max": "+6%"
         }
       ],
-      "rowsFrom": "Regular Earrings"
+      "rowsFrom": "Regular Earrings",
+      "nameTh": "ต่างหูชั้นดีที่ถูกผนึกของจินลอนมอน"
     },
     {
       "name": "Sealed Radiant Earrings of Four Holy Beasts [Lv.1-5]",
@@ -799,7 +805,8 @@
           "max": "+15%"
         }
       ],
-      "rowsFrom": "Necklaces with 4 or 5 Options"
+      "rowsFrom": "Necklaces with 4 or 5 Options",
+      "nameTh": "สร้อยชั้นดีที่ถูกผนึกของไบฟูมอน"
     },
     {
       "name": "Digital Hazard Necklace",
@@ -847,7 +854,8 @@
           "max": "+15%"
         }
       ],
-      "rowsFrom": "Necklaces with 4 or 5 Options"
+      "rowsFrom": "Necklaces with 4 or 5 Options",
+      "nameTh": "สร้อยคอดิจิตอลฮาซาร์ด"
     },
     {
       "name": "Flame Necklace of Sealed Zhuqiaomon",
@@ -895,7 +903,8 @@
           "max": "+15%"
         }
       ],
-      "rowsFrom": "Necklaces with 4 or 5 Options"
+      "rowsFrom": "Necklaces with 4 or 5 Options",
+      "nameTh": "สร้อยชั้นดีที่ถูกผนึกของซูเซมอน"
     },
     {
       "name": "Miracle Necklace [Level 10]",
@@ -943,7 +952,8 @@
           "max": "+15%"
         }
       ],
-      "rowsFrom": "Necklaces with 4 or 5 Options"
+      "rowsFrom": "Necklaces with 4 or 5 Options",
+      "nameTh": "สร้อยแห่งปาฏิหาริย์[เลเวล 10]"
     },
     {
       "name": "Miracle Necklace (Special)",
@@ -991,7 +1001,8 @@
           "max": "+15%"
         }
       ],
-      "rowsFrom": "Necklaces with 4 or 5 Options"
+      "rowsFrom": "Necklaces with 4 or 5 Options",
+      "nameTh": "สร้อยแห่งปาฏิหาริย์[ระดับพิเศษ]"
     },
     {
       "name": "Necklace of Sealed Baihumon",
@@ -1039,7 +1050,8 @@
           "max": "+15%"
         }
       ],
-      "rowsFrom": "Necklaces with 4 or 5 Options"
+      "rowsFrom": "Necklaces with 4 or 5 Options",
+      "nameTh": "สร้อยที่ถูกผนึกของไบฟูมอน"
     },
     {
       "name": "Qinglongmon's Sealed Radiant Necklace",
@@ -1087,7 +1099,8 @@
           "max": "+15%"
         }
       ],
-      "rowsFrom": "Necklaces with 4 or 5 Options"
+      "rowsFrom": "Necklaces with 4 or 5 Options",
+      "nameTh": "สร้อยชั้นดีที่ถูกผนึกของจินลอนมอน"
     },
     {
       "name": "Radiant Miracle Necklace",
@@ -1272,7 +1285,9 @@
           "max": "+15%"
         }
       ],
-      "rowsFrom": "Necklaces with 4 or 5 Options"
+      "rowsFrom": "Necklaces with 4 or 5 Options",
+      "nameTh": "สร้อยชั้นดีที่ถูกผนึกของเชนวูมอน",
+      "nameThInferred": true
     },
     {
       "name": "Zero Unit Necklace",
@@ -1368,7 +1383,8 @@
           "max": "+5%"
         }
       ],
-      "rowsFrom": "Ring with 4 or 5 Options"
+      "rowsFrom": "Ring with 4 or 5 Options",
+      "nameTh": "แหวนชั้นดีที่ถูกผนึกของไบฟูมอน"
     },
     {
       "name": "Brilliant Ring of Hope",
@@ -1497,7 +1513,8 @@
           "max": "+5%"
         }
       ],
-      "rowsFrom": "Ring with 4 or 5 Options"
+      "rowsFrom": "Ring with 4 or 5 Options",
+      "nameTh": "แหวนดิจิตอลฮาซาร์ด"
     },
     {
       "name": "Flame Ring of Sealed Zhuqiaomon",
@@ -1537,7 +1554,8 @@
           "max": "+5%"
         }
       ],
-      "rowsFrom": "Ring with 4 or 5 Options"
+      "rowsFrom": "Ring with 4 or 5 Options",
+      "nameTh": "แหวนชั้นดีที่ถูกผนึกของซูเซมอน"
     },
     {
       "name": "Miracle Ring [Level 10]",
@@ -1577,7 +1595,8 @@
           "max": "+5%"
         }
       ],
-      "rowsFrom": "Ring with 4 or 5 Options"
+      "rowsFrom": "Ring with 4 or 5 Options",
+      "nameTh": "แหวนแห่งปาฏิหาริย์[เลเวล 10]"
     },
     {
       "name": "Miracle Ring (Special)",
@@ -1617,7 +1636,9 @@
           "max": "+5%"
         }
       ],
-      "rowsFrom": "Ring with 4 or 5 Options"
+      "rowsFrom": "Ring with 4 or 5 Options",
+      "nameTh": "แหวนแห่งปาฏิหาริย์[ระดับพิเศษ]",
+      "nameThInferred": true
     },
     {
       "name": "Qinglongmon's Sealed Radiant Ring",
@@ -1657,7 +1678,8 @@
           "max": "+5%"
         }
       ],
-      "rowsFrom": "Ring with 4 or 5 Options"
+      "rowsFrom": "Ring with 4 or 5 Options",
+      "nameTh": "แหวนชั้นดีที่ถูกผนึกของจินลอนมอน"
     },
     {
       "name": "Sealed Radiant Ring of Four Holy Beasts [Lv.1-5]",
@@ -1802,7 +1824,8 @@
           "max": "+5%"
         }
       ],
-      "rowsFrom": "Ring with 4 or 5 Options"
+      "rowsFrom": "Ring with 4 or 5 Options",
+      "nameTh": "แหวนชั้นดีที่ถูกผนึกของเชนวูมอน"
     },
     {
       "name": "Zero Unit Ring",

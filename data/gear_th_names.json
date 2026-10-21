@@ -138,5 +138,31 @@
     "Xuanwumon Shiny Gloves": "ถุงมือชั้นดีของเชนวูมอน",
     "Xuanwumon Shiny Short Pants": "กางเกงขาสั้นชั้นดีของเชนวูมอน",
     "Xuanwumon Short Pants": "กางเกงขาสั้นของเชนวูมอน"
+  },
+  "_accessory_only_note": "Accessories the registry drops for having no fixed stats, so they live only in docs/accessory_registry.json; build_accessory_ref writes these names there. Same rules as items (found in a vplay post, option-count tails like [5 ออฟชั่น] dropped). The inferred pair follows its siblings' vplay names.",
+  "accessory_only": {
+    "Aural Earring of Sealed Baihumon": "ต่างหูชั้นดีที่ถูกผนึกของไบฟูมอน",
+    "Aural Necklace of Sealed Baihumon": "สร้อยชั้นดีที่ถูกผนึกของไบฟูมอน",
+    "Aural Ring of Sealed Baihumon": "แหวนชั้นดีที่ถูกผนึกของไบฟูมอน",
+    "Digital Hazard Earring": "ต่างหูดิจิตอลฮาซาร์ด",
+    "Digital Hazard Necklace": "สร้อยคอดิจิตอลฮาซาร์ด",
+    "Digital Hazard Ring": "แหวนดิจิตอลฮาซาร์ด",
+    "Flame Earring of Sealed Zhuqiaomon": "ต่างหูชั้นดีที่ถูกผนึกของซูเซมอน",
+    "Flame Necklace of Sealed Zhuqiaomon": "สร้อยชั้นดีที่ถูกผนึกของซูเซมอน",
+    "Flame Ring of Sealed Zhuqiaomon": "แหวนชั้นดีที่ถูกผนึกของซูเซมอน",
+    "Miracle Earring [Special]": "ต่างหูแห่งปาฏิหาริย์[ระดับพิเศษ]",
+    "Miracle Earrings [Level 10]": "ต่างหูแห่งปาฏิหาริย์[เลเวล 10]",
+    "Miracle Necklace (Special)": "สร้อยแห่งปาฏิหาริย์[ระดับพิเศษ]",
+    "Miracle Necklace [Level 10]": "สร้อยแห่งปาฏิหาริย์[เลเวล 10]",
+    "Miracle Ring [Level 10]": "แหวนแห่งปาฏิหาริย์[เลเวล 10]",
+    "Necklace of Sealed Baihumon": "สร้อยที่ถูกผนึกของไบฟูมอน",
+    "Qinglongmon's Sealed Radiant Earring": "ต่างหูชั้นดีที่ถูกผนึกของจินลอนมอน",
+    "Qinglongmon's Sealed Radiant Necklace": "สร้อยชั้นดีที่ถูกผนึกของจินลอนมอน",
+    "Qinglongmon's Sealed Radiant Ring": "แหวนชั้นดีที่ถูกผนึกของจินลอนมอน",
+    "Xuanwumon Sealed Shiny Ring": "แหวนชั้นดีที่ถูกผนึกของเชนวูมอน"
+  },
+  "accessory_only_inferred": {
+    "Miracle Ring (Special)": "แหวนแห่งปาฏิหาริย์[ระดับพิเศษ]",
+    "Xuanwumon Sealed Shiny Necklace": "สร้อยชั้นดีที่ถูกผนึกของเชนวูมอน"
   }
 }

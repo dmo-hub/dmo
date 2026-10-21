@@ -632,6 +632,20 @@ def build_accessory_ref(items, icons):
                 rec["rowsFrom"] = name
         out.append(rec)
 
+    # Pieces the registry drops for having no fixed stats never get a Thai name
+    # from add_th_names; gear_th_names keeps theirs in its accessory_only blocks.
+    th_names = json.loads(TH_NAMES.read_text(encoding="utf-8"))
+    by_name = {r["name"]: r for r in out}
+    for block, inferred in (("accessory_only", False), ("accessory_only_inferred", True)):
+        for en, th in th_names.get(block, {}).items():
+            rec = by_name.get(en)
+            if not rec:
+                print(f"  ! {TH_NAMES.name} {block}: no accessory named {en!r}")
+                continue
+            rec["nameTh"] = th
+            if inferred:
+                rec["nameThInferred"] = True
+
     write_stamped(ACCESSORY_OUT, {
         "built_at": date.today().isoformat(),
         "source": "data/clothing_items.json",
