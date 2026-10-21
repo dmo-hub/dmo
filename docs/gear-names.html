@@ -346,10 +346,11 @@
          from the registry row that shares the picture. */
       var thByIcon = {};
       (d.items || []).forEach(function (it) {
-        if (ACCESSORY.indexOf(it.slot) >= 0 && it.iconWiki && it.nameTh) thByIcon[it.iconWiki] = it.nameTh;
+        if (ACCESSORY.indexOf(it.slot) >= 0 && it.iconWiki && it.nameTh) thByIcon[it.iconWiki] = it;
       });
       var accessories = (both[2].items || []).map(function (it) {
-        return it.iconWiki && thByIcon[it.iconWiki] ? Object.assign({ nameTh: thByIcon[it.iconWiki] }, it) : it;
+        var src = it.iconWiki && thByIcon[it.iconWiki];
+        return src ? Object.assign({ nameTh: src.nameTh, nameThInferred: src.nameThInferred }, it) : it;
       });
       var known = {};
       SLOTS.forEach(function (s) { known[s[0]] = true; });

@@ -1093,7 +1093,9 @@
           "value": 960.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "รอยัล : กำไลแห่ง X-ไนท์",
+      "nameThInferred": true
     },
     {
       "id": "bracelets-vital-breath-digivice-v-2",
@@ -1406,7 +1408,9 @@
       "icon": "img/gear/eosdvicemax.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
-      "obtain": "Update with Ring of Light Weekly Quest Neverland"
+      "obtain": "Update with Ring of Light Weekly Quest Neverland",
+      "nameTh": "ไฟนอล ดิจิไวซ์",
+      "nameThInferred": true
     },
     {
       "id": "digivice-first-digivice",
@@ -4838,7 +4842,9 @@
       "axis": "tamer",
       "iconWiki": "/images/4/45/Boundless_Crude_Gloves.png",
       "icon": "img/gear/boundless_crude_gloves.png",
-      "AT": 250
+      "AT": 250,
+      "nameTh": "ถุงมือไร้ขีดจำกัด : ขั้นสูง [30 วัน]",
+      "nameThInferred": true
     },
     {
       "id": "gloves-boundless-crude-gloves-30-days",
@@ -4848,7 +4854,9 @@
       "axis": "tamer",
       "iconWiki": "/images/4/45/Boundless_Crude_Gloves.png",
       "icon": "img/gear/boundless_crude_gloves.png",
-      "AT": 150
+      "AT": 150,
+      "nameTh": "ถุงมือไร้ขีดจำกัด : ชั้นต่ำ [30 วัน]",
+      "nameThInferred": true
     },
     {
       "id": "gloves-boundless-inferior-gloves-30-days",
@@ -4858,7 +4866,9 @@
       "axis": "tamer",
       "iconWiki": "/images/c/c6/Boundless_Inferior_Gloves.png",
       "icon": "img/gear/boundless_inferior_gloves.png",
-      "AT": 50
+      "AT": 50,
+      "nameTh": "ถุงมือไร้ขีดจำกัด : ชั้นรอง [30 วัน]",
+      "nameThInferred": true
     },
     {
       "id": "gloves-boundless-plain-gloves-30-days",
@@ -4868,7 +4878,9 @@
       "axis": "tamer",
       "iconWiki": "/images/4/45/Boundless_Crude_Gloves.png",
       "icon": "img/gear/boundless_crude_gloves.png",
-      "AT": 200
+      "AT": 200,
+      "nameTh": "ถุงมือไร้ขีดจำกัด : พื้นฐาน [30 วัน]",
+      "nameThInferred": true
     },
     {
       "id": "gloves-chakkumon-s-romeo-event",
@@ -5285,7 +5297,9 @@
           "value": 50.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ถุงมือพาวเวอร์ [1/7/15/30 วัน]",
+      "nameThInferred": true
     },
     {
       "id": "gloves-power-gloves-7-days",
@@ -5301,7 +5315,9 @@
           "value": 50.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ถุงมือพาวเวอร์ [7 วัน]",
+      "nameThInferred": true
     },
     {
       "id": "gloves-power-gloves-permanent",
@@ -5317,7 +5333,9 @@
           "value": 50.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ถุงมือพาวเวอร์ [ถาวร]",
+      "nameThInferred": true
     },
     {
       "id": "gloves-qinglongmon-s-gloves",
@@ -5362,7 +5380,9 @@
       "axis": "tamer",
       "iconWiki": "/images/0/0d/Shiny_Desert_Gloves_Icon.png",
       "icon": "img/gear/shiny_desert_gloves_icon.png",
-      "AT": 210
+      "AT": 210,
+      "nameTh": "ถุงมือทะเลทรายที่เปล่งประกาย [60 วัน]",
+      "nameThInferred": true
     },
     {
       "id": "gloves-small-lollipop",
@@ -9747,7 +9767,9 @@
           "value": 800.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อยืดอันลิมิเต็ด : ขั้นสูง [30 วัน]",
+      "nameThInferred": true
     },
     {
       "id": "top-spirit-top-3-wind",
@@ -10126,7 +10148,9 @@
         }
       ],
       "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
-      "obtain": "Event/Cash shop"
+      "obtain": "Event/Cash shop",
+      "nameTh": "XAI Ver Anniversary",
+      "nameThInferred": true
     },
     {
       "id": "xai-system-xai-ver-i",
@@ -10138,7 +10162,9 @@
       "icon": "img/gear/xai_ver_i.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
-      "obtain": "Quest Reward (Verdandi)"
+      "obtain": "Quest Reward (Verdandi)",
+      "nameTh": "XAI Ver I",
+      "nameThInferred": true
     },
     {
       "id": "xai-system-xai-ver-ii",
@@ -10150,7 +10176,9 @@
       "icon": "img/gear/xai_ver_ii.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
-      "obtain": "Digitamamon (Item Make) Event reward"
+      "obtain": "Digitamamon (Item Make) Event reward",
+      "nameTh": "XAI Ver II",
+      "nameThInferred": true
     },
     {
       "id": "xai-system-xai-ver-iii",
@@ -10186,7 +10214,9 @@
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
       "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
-      "info": "dmowiki ยังไม่มีค่า"
+      "info": "dmowiki ยังไม่มีค่า",
+      "nameTh": "XAI Ver IX",
+      "nameThInferred": true
     },
     {
       "id": "xai-system-xai-ver-storm",
@@ -10282,7 +10312,9 @@
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
       "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
-      "info": "dmowiki ยังไม่มีค่า"
+      "info": "dmowiki ยังไม่มีค่า",
+      "nameTh": "XAI Ver VII",
+      "nameThInferred": true
     },
     {
       "id": "xai-system-xai-ver-viii",
@@ -10293,7 +10325,9 @@
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
       "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
-      "info": "dmowiki ยังไม่มีค่า"
+      "info": "dmowiki ยังไม่มีค่า",
+      "nameTh": "XAI Ver VIII",
+      "nameThInferred": true
     },
     {
       "id": "xai-system-xai-ver-x",
@@ -10304,7 +10338,9 @@
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
       "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
-      "info": "dmowiki ยังไม่มีค่า"
+      "info": "dmowiki ยังไม่มีค่า",
+      "nameTh": "XAI Ver X",
+      "nameThInferred": true
     },
     {
       "id": "xai-system-xai-ver-x-mas",
