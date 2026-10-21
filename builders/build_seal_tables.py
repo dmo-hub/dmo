@@ -657,11 +657,14 @@ def _one_table_body(key, ti, t, srv, tmatch, dates, standing, total, rec_index, 
         out.append('<div class="seal-meta">' + "".join(meta) + "</div>")
     # actions row: star button + the table toggle
     out.append('<div class="seal-actions">')
-    out.append(
-        f'<div class="seal-starbar"><button class="seal-star" '
-        f'data-tkey="{key}#{ti}" type="button" title="เพิ่มเข้ารายการติดตาม">'
-        f'<span class="ic">☆</span>ติดตาม</button></div>'
-    )
+    # Event seals cost event currency, not tickets, so the calculator the star
+    # feeds has nothing to compute for them; emit_seal_data leaves them out too.
+    if not t.get("event"):
+        out.append(
+            f'<div class="seal-starbar"><button class="seal-star" '
+            f'data-tkey="{key}#{ti}" type="button" title="เพิ่มเข้ารายการติดตาม">'
+            f'<span class="ic">☆</span>ติดตาม</button></div>'
+        )
     out.append('<details class="seal-detail"><summary>📋 ดูตาราง</summary>')
     thtml = _mark_standing(t["html"], srv, standing)
     # TH list matched to a NA/KR twin: flag each seal that recurs in a later
@@ -746,6 +749,8 @@ def emit_seal_data(data, html, standing=None):
             continue
         srv = key.split("-")[0]
         for ti, t in enumerate(v["tables"]):
+            if t.get("event"):
+                continue
             rows = _table_rows_only(t["html"])
             out[f"{key}#{ti}"] = {
                 "server": srv,

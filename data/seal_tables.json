@@ -1050,6 +1050,40 @@
     "url": "https://www.vplay.in.th/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%8B%E0%B8%B5%E0%B8%A5%E0%B8%A1%E0%B8%B2%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/",
     "date": ""
   },
+  "th-95": {
+    "tables": [
+      {
+        "header": "EVENT",
+        "score": -1,
+        "event": true,
+        "rows": 2,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>ใช้แลก</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>ซีลพักร้อนในโลกดิจิตอล AT [กิจกรรม]</td><td>150</td><td>ตะกร้าผลไม้ [กิจกรรม] ×5</td><td>AT</td><td>500</td></tr></table>",
+        "cat_title": "ซีลกิจกรรม (แลกด้วยของกิจกรรม)",
+        "caption": "รายการแลกซีล (Seal Exchange List) · ซีลกิจกรรม (แลกด้วยของกิจกรรม)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-95/",
+    "date": "15.10.2026"
+  },
+  "kr-824740": {
+    "tables": [
+      {
+        "header": "EVENT",
+        "score": -1,
+        "event": true,
+        "rows": 9,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>ใช้แลก</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>17th Anniversary HP Seal</td><td>150</td><td>Xuanwumon Coin ×2 (20/account)</td><td>HP</td><td>300</td></tr><tr><td>17th Anniversary AT Seal</td><td>150</td><td>Xuanwumon Coin ×2 (20/account)</td><td>AT</td><td>300</td></tr><tr><td>17th Anniversary DS Seal</td><td>—</td><td>—</td><td>DS</td><td>300</td></tr><tr><td>17th Anniversary CT Seal</td><td>—</td><td>—</td><td>CT</td><td>300</td></tr><tr><td>17th Anniversary HT Seal</td><td>—</td><td>—</td><td>HT</td><td>300</td></tr><tr><td>17th Anniversary DE Seal</td><td>—</td><td>—</td><td>DE</td><td>300</td></tr><tr><td>17th Anniversary BL Seal</td><td>—</td><td>—</td><td>BL</td><td>300</td></tr><tr><td>17th Anniversary EV Seal</td><td>—</td><td>—</td><td>EV</td><td>300</td></tr></table>",
+        "cat_title": "ซีลกิจกรรม (แลกด้วยของกิจกรรม)",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List) · ซีลกิจกรรม (แลกด้วยของกิจกรรม)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=824740&Btype=Update",
+    "date": "13.10.2026"
+  },
   "kr-811897": {
     "tables": [
       {

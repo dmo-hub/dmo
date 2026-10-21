@@ -1,0 +1,20 @@
+{
+  "_note": "Event seals bought with event currency (fruit baskets, beast coins), which extract_seal_tables leaves out on purpose -- it keeps Seal Exchange Ticket lists only. Hand-copied from the post; rows are [seal, seals per exchange, what one exchange costs, stat, Seal Master stat]. A seal the post lists without an exchange gets '—' for the middle two.",
+  "th-95": {
+    "rows": [
+      ["ซีลพักร้อนในโลกดิจิตอล AT [กิจกรรม]", "150", "ตะกร้าผลไม้ [กิจกรรม] ×5", "AT", "500"]
+    ]
+  },
+  "kr-824740": {
+    "rows": [
+      ["17th Anniversary HP Seal", "150", "Xuanwumon Coin ×2 (20/account)", "HP", "300"],
+      ["17th Anniversary AT Seal", "150", "Xuanwumon Coin ×2 (20/account)", "AT", "300"],
+      ["17th Anniversary DS Seal", "—", "—", "DS", "300"],
+      ["17th Anniversary CT Seal", "—", "—", "CT", "300"],
+      ["17th Anniversary HT Seal", "—", "—", "HT", "300"],
+      ["17th Anniversary DE Seal", "—", "—", "DE", "300"],
+      ["17th Anniversary BL Seal", "—", "—", "BL", "300"],
+      ["17th Anniversary EV Seal", "—", "—", "EV", "300"]
+    ]
+  }
+}

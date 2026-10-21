@@ -45,6 +45,18 @@ OCR_DATA = (
     if OCR_PATH.exists()
     else {}
 )
+EVENT_PATH = PROJ / "data" / "event_seals.json"
+EVENT_SEALS = (
+    {
+        k: v
+        for k, v in json.loads(EVENT_PATH.read_text(encoding="utf-8")).items()
+        if not k.startswith("_")
+    }
+    if EVENT_PATH.exists()
+    else {}
+)
+# Event rows are paid in event currency, so the ticket column becomes a cost.
+EVENT_HEADER = ["รายการซีล", "จำนวนซีลที่ได้รับ", "ใช้แลก", "ความสามารถ", "สเตตัสสูงสุด"]
 # Korean seal-name -> official English name, so KR tables show English data.
 KR_EN_PATH = PROJ / "data" / "kr_seal_en.json"
 KR_EN = json.loads(KR_EN_PATH.read_text(encoding="utf-8")) if KR_EN_PATH.exists() else {}
@@ -475,10 +487,10 @@ def normalize_table(tb, server):
     return "".join(out)
 
 
-def emit_norm_rows(rows):
+def emit_norm_rows(rows, header=NORM_HEADER):
     """Build a normalized table straight from canonical [name,qty,ticket,stat,max] rows."""
     out = ['<table class="seal-tbl">', "<tr>"]
-    out += [f"<th>{H.escape(c)}</th>" for c in NORM_HEADER]
+    out += [f"<th>{H.escape(c)}</th>" for c in header]
     out.append("</tr>")
     for r in rows:
         cells = [str(c) if str(c).strip() else "—" for c in r]
@@ -730,6 +742,19 @@ def extract(post):
                 "html": emit_norm_rows(OCR_DATA[post["key"]]["rows"]),
             }
         )
+    if post["key"] in EVENT_SEALS:
+        ev = EVENT_SEALS[post["key"]]["rows"]
+        tables.append(
+            {
+                "header": "EVENT",
+                "score": -1,
+                "event": True,
+                "rows": len(ev) + 1,
+                "normalized": True,
+                "html": emit_norm_rows(ev, EVENT_HEADER),
+                "cat_title": "ซีลกิจกรรม (แลกด้วยของกิจกรรม)",
+            }
+        )
     cap = CAPTION[server]
     for i, t in enumerate(tables):
         if t.get("cat_title"):  # split section -> its own name
@@ -801,8 +826,13 @@ def main():
         + [{"key": f"th-{s}", "server": "TH", "id": s} for s in TH_SUFFIXES]
         + [{"key": "th-system", "server": "TH", "id": "system"}]
     )
+    known = {p["key"] for p in curated}
+    for key in EVENT_SEALS:
+        if key not in known:
+            srv, _, ident = key.partition("-")
+            curated.append({"key": key, "server": srv.upper(), "id": int(ident)})
     curated_keys = {p["key"] for p in curated}
-    discovered = discover_new()
+    discovered = [p for p in discover_new() if p["key"] not in curated_keys]
     if discovered:
         print(f"Discovered {len(discovered)} candidate post(s) not in the curated lists:")
         for p in discovered:
