@@ -259,16 +259,16 @@ def first_digivice(content):
 
 
 def loader(content, name, name_th):
-    """The loaders' Lv. 0 row is a fixed AT; every level after adds the pool."""
+    """The posts give a fixed AT for Lv. 0 only and say nothing of the crafted
+    loader the picker offers, so no AT is carried (user call); every level
+    after Lv. 0 adds the pool."""
     ts = tables(content)
-    at = next((r for r in ts[0] if r and r[0] == "Lv. 0"), None)
-    stats = [stat_value("AT", at[1])] if at else []
     by_level = pool_by_level(ts[0], loader_level)
     by_level["0"] = []
     return {"name": name, "nameTh": name_th, "slot": "digivice", "axis": "digimon",
-            "picture": "SusaLoaderMax.PNG", "levels": [{"upgrade": 0, "stats": stats}],
+            "picture": "SusaLoaderMax.PNG", "levels": [{"upgrade": 0, "stats": []}],
             "rows": pool_rows(ts[0]), "rowsByLevel": by_level, "levelLabels": LOADER_LABELS,
-            "info": "Lv.0 ให้ AT 20 · Lv.1 ขึ้นไปสุ่มออปชันจากรายการ"}
+            "info": "Lv.1 ขึ้นไปสุ่มออปชันจากรายการ"}
 
 
 def true_digivices(content):

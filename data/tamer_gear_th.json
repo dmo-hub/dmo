@@ -964,13 +964,7 @@
       "levels": [
         {
           "upgrade": 0,
-          "stats": [
-            {
-              "stat": "AT",
-              "value": 20.0,
-              "unit": "flat"
-            }
-          ]
+          "stats": []
         }
       ],
       "rows": [
@@ -1197,7 +1191,7 @@
         "1": "Lv.1",
         "2": "Lv.Max"
       },
-      "info": "Lv.0 ให้ AT 20 · Lv.1 ขึ้นไปสุ่มออปชันจากรายการ"
+      "info": "Lv.1 ขึ้นไปสุ่มออปชันจากรายการ"
     },
     {
       "name": "Digimon Fusion Loader",
@@ -1208,13 +1202,7 @@
       "levels": [
         {
           "upgrade": 0,
-          "stats": [
-            {
-              "stat": "AT",
-              "value": 20.0,
-              "unit": "flat"
-            }
-          ]
+          "stats": []
         }
       ],
       "rows": [
@@ -1441,7 +1429,7 @@
         "1": "Lv.1",
         "2": "Lv.Max"
       },
-      "info": "Lv.0 ให้ AT 20 · Lv.1 ขึ้นไปสุ่มออปชันจากรายการ"
+      "info": "Lv.1 ขึ้นไปสุ่มออปชันจากรายการ"
     },
     {
       "name": "Digimon Darkness Loader",
@@ -1452,13 +1440,7 @@
       "levels": [
         {
           "upgrade": 0,
-          "stats": [
-            {
-              "stat": "AT",
-              "value": 20.0,
-              "unit": "flat"
-            }
-          ]
+          "stats": []
         }
       ],
       "rows": [
@@ -1685,7 +1667,7 @@
         "1": "Lv.1",
         "2": "Lv.Max"
       },
-      "info": "Lv.0 ให้ AT 20 · Lv.1 ขึ้นไปสุ่มออปชันจากรายการ"
+      "info": "Lv.1 ขึ้นไปสุ่มออปชันจากรายการ"
     },
     {
       "name": "True Digivice of Courage",

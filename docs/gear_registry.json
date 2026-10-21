@@ -2024,7 +2024,6 @@
       "slot": "digivice",
       "axis": "digimon",
       "nameTh": "ดาร์กเนส โหลดเดอร์",
-      "AT": 20,
       "iconWiki": "/images/d/d2/SusaLoaderMax.PNG",
       "icon": "img/gear/susaloadermax-digimondarknessloader.png",
       "rows": [
@@ -2099,7 +2098,7 @@
           "max": "20%"
         }
       ],
-      "info": "Lv.0 ให้ AT 20 · Lv.1 ขึ้นไปสุ่มออปชันจากรายการ",
+      "info": "Lv.1 ขึ้นไปสุ่มออปชันจากรายการ",
       "rowsByLevel": {
         "1": [
           {
@@ -2255,15 +2254,9 @@
       "upgrade": 0,
       "upgradeMax": 2,
       "levelStats": {
-        "0": {
-          "AT": 20
-        },
-        "1": {
-          "AT": 20
-        },
-        "2": {
-          "AT": 20
-        }
+        "0": {},
+        "1": {},
+        "2": {}
       },
       "chips": 6
     },
@@ -2273,7 +2266,6 @@
       "slot": "digivice",
       "axis": "digimon",
       "nameTh": "ฟิวชั่นโหลดเดอร์",
-      "AT": 20,
       "iconWiki": "/images/d/d2/SusaLoaderMax.PNG",
       "icon": "img/gear/susaloadermax-digimonfusionloader.png",
       "rows": [
@@ -2348,7 +2340,7 @@
           "max": "20%"
         }
       ],
-      "info": "Lv.0 ให้ AT 20 · Lv.1 ขึ้นไปสุ่มออปชันจากรายการ",
+      "info": "Lv.1 ขึ้นไปสุ่มออปชันจากรายการ",
       "rowsByLevel": {
         "1": [
           {
@@ -2504,15 +2496,9 @@
       "upgrade": 0,
       "upgradeMax": 2,
       "levelStats": {
-        "0": {
-          "AT": 20
-        },
-        "1": {
-          "AT": 20
-        },
-        "2": {
-          "AT": 20
-        }
+        "0": {},
+        "1": {},
+        "2": {}
       },
       "chips": 6
     },
@@ -2522,7 +2508,6 @@
       "slot": "digivice",
       "axis": "digimon",
       "nameTh": "ครอสโหลดเดอร์-ซากุระ",
-      "AT": 20,
       "iconWiki": "/images/d/d2/SusaLoaderMax.PNG",
       "icon": "img/gear/susaloadermax-digimonxrosloader.png",
       "rows": [
@@ -2597,7 +2582,7 @@
           "max": "20%"
         }
       ],
-      "info": "Lv.0 ให้ AT 20 · Lv.1 ขึ้นไปสุ่มออปชันจากรายการ",
+      "info": "Lv.1 ขึ้นไปสุ่มออปชันจากรายการ",
       "rowsByLevel": {
         "1": [
           {
@@ -2753,15 +2738,9 @@
       "upgrade": 0,
       "upgradeMax": 2,
       "levelStats": {
-        "0": {
-          "AT": 20
-        },
-        "1": {
-          "AT": 20
-        },
-        "2": {
-          "AT": 20
-        }
+        "0": {},
+        "1": {},
+        "2": {}
       },
       "chips": 6
     },
@@ -16282,58 +16261,6 @@
       ]
     },
     {
-      "id": "keyring-digi-key-ring-families",
-      "name": "DIGI-Key Ring (Families)",
-      "slot": "keyring",
-      "axis": "digimon",
-      "nameTh": "DIGI-ที่เก็บคีย์ริง [ตระกูล]",
-      "AT": 278,
-      "ranged": true,
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1940.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "Skill DMG",
-          "value": 10.0,
-          "unit": "pct"
-        }
-      ],
-      "rows": [
-        {
-          "label": "HP",
-          "min": "388",
-          "max": "1,940"
-        },
-        {
-          "label": "AT",
-          "min": "55",
-          "max": "278"
-        },
-        {
-          "label": "Skill DMG",
-          "min": "2%",
-          "max": "10%"
-        }
-      ],
-      "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล",
-      "families": [
-        "DA",
-        "DR",
-        "DS",
-        "JT",
-        "ME",
-        "NSO",
-        "NSP",
-        "TBD",
-        "UK",
-        "VB",
-        "WG"
-      ]
-    },
-    {
       "id": "keyring-ghost-keyring-families",
       "name": "Ghost Keyring ( Families )",
       "slot": "keyring",
@@ -16527,162 +16454,6 @@
         {
           "label": "Skill DMG",
           "fixed": "50%"
-        }
-      ],
-      "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล",
-      "families": [
-        "DA",
-        "DR",
-        "DS",
-        "JT",
-        "ME",
-        "NSO",
-        "NSP",
-        "TBD",
-        "UK",
-        "VB",
-        "WG"
-      ]
-    },
-    {
-      "id": "keyring-spiral-key-ring-families-lv-max",
-      "name": "Spiral Key Ring (Families) Lv.Max",
-      "slot": "keyring",
-      "axis": "digimon",
-      "nameTh": "สไปรอลคีย์ริง [ตระกูล]",
-      "upgrade": 0,
-      "upgradeMax": 8,
-      "levelStats": {
-        "0": {},
-        "1": {
-          "AT": 10
-        },
-        "2": {
-          "AT": 19
-        },
-        "3": {
-          "AT": 38
-        },
-        "4": {
-          "AT": 67
-        },
-        "5": {
-          "AT": 105
-        },
-        "6": {
-          "AT": 153
-        },
-        "7": {
-          "AT": 210
-        },
-        "8": {
-          "AT": 278
-        }
-      },
-      "levelExtra": {
-        "1": [
-          {
-            "stat": "HP",
-            "value": 60.0,
-            "unit": "flat"
-          }
-        ],
-        "2": [
-          {
-            "stat": "HP",
-            "value": 130.0,
-            "unit": "flat"
-          }
-        ],
-        "3": [
-          {
-            "stat": "HP",
-            "value": 260.0,
-            "unit": "flat"
-          }
-        ],
-        "4": [
-          {
-            "stat": "HP",
-            "value": 470.0,
-            "unit": "flat"
-          }
-        ],
-        "5": [
-          {
-            "stat": "HP",
-            "value": 730.0,
-            "unit": "flat"
-          }
-        ],
-        "6": [
-          {
-            "stat": "HP",
-            "value": 1070.0,
-            "unit": "flat"
-          }
-        ],
-        "7": [
-          {
-            "stat": "HP",
-            "value": 1470.0,
-            "unit": "flat"
-          }
-        ],
-        "8": [
-          {
-            "stat": "HP",
-            "value": 1940.0,
-            "unit": "flat"
-          },
-          {
-            "stat": "Skill DMG",
-            "value": 10.0,
-            "unit": "pct"
-          }
-        ]
-      },
-      "levelLabels": {
-        "1": "Lv.1",
-        "2": "Lv.2",
-        "3": "Lv.3",
-        "4": "Lv.4",
-        "5": "Lv.5",
-        "6": "Lv.6",
-        "7": "Lv.7",
-        "8": "Lv.Max"
-      },
-      "AT": 278,
-      "ranged": true,
-      "iconWiki": "/images/4/4b/Spiral_Key_Ring_DS_Level_7.png",
-      "icon": "img/gear/spiral_key_ring_ds_level_7.png",
-      "extra": [
-        {
-          "stat": "HP",
-          "value": 1940.0,
-          "unit": "flat"
-        },
-        {
-          "stat": "Skill DMG",
-          "value": 10.0,
-          "unit": "pct"
-        }
-      ],
-      "rows": [
-        {
-          "label": "HP",
-          "min": "388",
-          "max": "1,940"
-        },
-        {
-          "label": "AT",
-          "min": "55",
-          "max": "278"
-        },
-        {
-          "label": "Skill DMG",
-          "min": "2%",
-          "max": "10%"
         }
       ],
       "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล",

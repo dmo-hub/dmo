@@ -66,6 +66,9 @@ GOGGLES_AXIS = {"Adventure Goggles": "digimon", "Digimon Kaiser's Goggles": "dig
 # its complete tier (owner), which the vplay rows already carry.
 TAMER_GEAR_TH = PROJ / "data" / "tamer_gear_th.json"
 WIKI_ONLY_TAMER_GEAR = {"XAI System": "xai"}
+# Scanned but left off the site on the owner's call; the scanner keeps them so
+# tamer_gear_th.json still mirrors the posts.
+TAMER_GEAR_EXCLUDED = {"DIGI-Key Ring (Families)", "Spiral Key Ring (Families) Lv.Max"}
 WIKI_ONLY_NAMES = {}
 # The wiki leaves XAI's side blank; the owner confirmed it feeds the digimon.
 WIKI_ONLY_AXIS = {"xai": "digimon"}
@@ -411,6 +414,8 @@ def add_th_tamer_gear(out, items):
     out[:] = [r for r in out if r["slot"] != "keyring"]
     added = 0
     for src in json.loads(TAMER_GEAR_TH.read_text(encoding="utf-8"))["items"]:
+        if src["name"] in TAMER_GEAR_EXCLUDED:
+            continue
         table, top = level_table(src["levels"])
         rec = {
             "id": re.sub(r"[^a-z0-9]+", "-", f"{src['slot']}-{src['name']}".lower()).strip("-"),
@@ -445,8 +450,7 @@ def add_th_tamer_gear(out, items):
         for field in ("rowsFrom", "info", "families", "rowsByLevel", "levelLabels"):
             if src.get(field):
                 rec[field] = src[field]
-        # Levels that only change the option pool keep the solver stats flat:
-        # the posts give the loaders' AT at Lv. 0 alone, so it stays as it was.
+        # Levels that only change the option pool keep the solver stats flat.
         if rec.get("levelLabels") and "levelStats" not in rec and src["name"] != "First Digivice":
             flat = {k: rec[k] for k in ("AT", "HT", "CT", "DS", "DE", "EV", "BL") if k in rec}
             levels = sorted(int(k) for k in rec["levelLabels"])

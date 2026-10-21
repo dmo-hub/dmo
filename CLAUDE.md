@@ -541,6 +541,10 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   ID cards tamer (wiki), Spiral-family / DIGI-Key Ring / XAI
   digimon (no post says; the owner decided -- scanner values plus
   `WIKI_ONLY_AXIS`, which must win over the wiki row's "unknown" string).
+  The owner later took Spiral-family and DIGI-Key Ring off the site: the
+  scanner still writes them, `TAMER_GEAR_EXCLUDED` in build_gear_registry
+  drops them. The loaders carry no AT -- the posts state AT 20 for Lv. 0
+  only, nothing for the crafted loader the picker offers (owner call).
   Not a `refresh.py` step: run it by hand like scan_clothing.
 - **Upgrade picker levels** (`docs/gear.html` `upgradeCell`): a registry
   piece with no `levelStats` has one fixed value in the game, so its picker is
