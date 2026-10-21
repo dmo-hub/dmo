@@ -121,7 +121,13 @@ python fetchers/fetch_dmowiki_images.py      # then re-run build_gear_registry.p
 #      Thai names (nameTh): set pieces from data/set_rosters.json, everything
 #      else from data/gear_th_names.json (each pair checked present in a cached
 #      vplay page). docs/gear-names.html lists them with pictures and sets;
-#      clothing slots there show set pieces only.
+#      clothing slots there show set pieces only. Names vplay never prints sit
+#      in its "inferred" block on the owner's call (built from vplay's own
+#      wording) and carry nameThInferred, which both pages label "อนุมาน";
+#      move a pair up into "items" once vplay prints it. Accessories the
+#      registry drops (no fixed stats) live only in accessory_registry.json,
+#      so their names go in "accessory_only" / "accessory_only_inferred",
+#      written by build_accessory_ref, not add_th_names.
 
 # 11d. TH wording on decks.html. scan_th_patch_decks reads every "เพิ่มเด็คใหม่"
 #      out of the cached TH posts; data/deck_th_map.json is the hand-checked
@@ -476,5 +482,7 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   family key rings list their 11 families instead of 11 items. A digivice's
   attribute/element options go to `rows` (gear-names) and never to stats.
   Axis: digivices/aura/Ghost digimon (posts say so), Spiral base tamer (post),
-  ID cards tamer (wiki), Spiral-family / DIGI-Key Ring / XAI unknown (nothing
-  says). Not a `refresh.py` step: run it by hand like scan_clothing.
+  ID cards tamer (wiki), Spiral-family / DIGI-Key Ring / XAI / Final Digivice
+  digimon (no post says; the owner decided -- scanner values plus
+  `WIKI_ONLY_AXIS`, which must win over the wiki row's "unknown" string).
+  Not a `refresh.py` step: run it by hand like scan_clothing.
