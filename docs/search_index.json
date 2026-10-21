@@ -9327,59 +9327,6 @@
   },
   {
    "type": "seal",
-   "key": "garurumonblack",
-   "display": "Garurumon (Black)",
-   "names": {
-    "en": [
-     "Garurumon (Black)",
-     "Garurumon(Black)"
-    ],
-    "kr": [
-     "가루몬 씰 ( 흑 )"
-    ],
-    "th": []
-   },
-   "servers": {
-    "kr": [
-     {
-      "post": "kr-708817",
-      "date": "11.05.2017",
-      "qty": "5",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "kr-814605",
-      "date": "03.03.2026",
-      "qty": "5",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "200"
-     }
-    ],
-    "na": [
-     {
-      "post": "na-352",
-      "date": "30.05.2017",
-      "qty": "5",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "na-4121",
-      "date": "17.03.2026",
-      "qty": "5",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "200"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
    "key": "garurumonx",
    "display": "Garurumon X",
    "names": {
@@ -9439,6 +9386,58 @@
       "tickets": "1",
       "stat": "CT",
       "value": "100"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "garurumonblack",
+   "display": "Garurumon(Black)",
+   "names": {
+    "en": [
+     "Garurumon(Black)"
+    ],
+    "kr": [
+     "가루몬 씰 ( 흑 )"
+    ],
+    "th": []
+   },
+   "servers": {
+    "kr": [
+     {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "kr-814605",
+      "date": "03.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "200"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-4121",
+      "date": "17.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "200"
      }
     ]
    }

@@ -191,7 +191,7 @@
     ]
   },
   "kr-708817": {
-    "text": "newsBoard o=708817 ([씰 마스터] 리뉴얼, 11.05.2017) — text lines \"씰 교환권 1개 → X 씰 N개\", same 22 seals as na-352; names via kr_seal_en.json, 가루몬(흑) unmapped -> Garurumon (Black) Seal; no stat or Master value in the post",
+    "text": "newsBoard o=708817 ([씰 마스터] 리뉴얼, 11.05.2017) — text lines \"씰 교환권 1개 → X 씰 N개\", same 22 seals as na-352; names via kr_seal_en.json, 가루몬(흑) unmapped -> Garurumon(Black) Seal as on kr-814605; no stat or Master value in the post",
     "rows": [
       ["Tsunomon Seal", "10", "1", "—", "—"],
       ["Upamon Seal", "10", "1", "—", "—"],
@@ -208,7 +208,7 @@
       ["Dorugamon Seal", "5", "1", "—", "—"],
       ["Soulmon Seal", "5", "1", "—", "—"],
       ["Togemon Seal", "5", "1", "—", "—"],
-      ["Garurumon (Black) Seal", "5", "1", "—", "—"],
+      ["Garurumon(Black) Seal", "5", "1", "—", "—"],
       ["Lillymon Seal", "1", "1", "—", "—"],
       ["SkullSatamon Seal", "1", "1", "—", "—"],
       ["Mistymon Seal", "1", "1", "—", "—"],
