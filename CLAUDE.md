@@ -487,7 +487,10 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
 - Accessories (rings, necklaces, earrings, bracelets) roll random options. The
   wiki's tables give option counts and what each option can roll, never one
   piece's stats, so the registry's numbers for them are only a cap (axis
-  "unknown", the solver skips them). `build_gear_registry` also writes
+  "unknown"). The optimizer scores every row whatever its axis -- the owner
+  counts tamer-side and unplaced gear toward the digimon
+  (`gear-solver.scorableAxis`); the axis stays in the data so that is one
+  line to narrow again. `build_gear_registry` also writes
   `docs/accessory_registry.json` -- list row joined to its roll table -- for
   the gear-names page. In `scan_clothing`, Minimum/Maximum/Fixed columns mean
   the table is one item named by its `<caption>` (or a one-cell title row),

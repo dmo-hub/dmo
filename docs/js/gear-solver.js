@@ -640,18 +640,11 @@
     return out;
   }
 
-  /* Decision 02 scoped the optimizer to DIGIMON stats. Tamer gear reaches
-     values ~10x larger on the same axis names, so leaving it in the pool makes
-     the solver pick it every time and hand back a loadout whose numbers never
-     reach the digimon. Rows the wiki never placed on an axis are the same
-     hazard with the added twist that nobody knows which way they fall.
-
-     Rows carrying no axis mark at all are hand-entered and stay: the player
-     typed those numbers, so they are the player's to judge. */
-  function scorableAxis(it) {
-    var ax = it && it.regAxis;
-    if (!ax) return true;
-    return ax === "digimon";
+  /* Every row is scored, whatever its axis: the owner counts tamer-side and
+     unplaced gear toward the digimon too. The axis mark stays on the rows
+     (registry, saved data) so this is one line to narrow again. */
+  function scorableAxis() {
+    return true;
   }
 
   function dropOffAxis(data) {
@@ -659,9 +652,6 @@
     ((data && data.accessories) || []).forEach(function (it) {
       (scorableAxis(it) ? kept : dropped).push(it);
     });
-    /* Chips go through the same gate. Every chip on file today is marked
-       digimon, so this drops nothing yet -- but a chip is scored exactly like
-       a piece of gear, so a tamer one would skew the answer the same way. */
     ((data && data.chips) || []).forEach(function (it) {
       (scorableAxis(it) ? keptChips : dropped).push(it);
     });

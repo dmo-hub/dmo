@@ -38,11 +38,14 @@
   table.go-tbl tr:last-child td { border-bottom: 0; }
   .go-acc-grp + .go-acc-grp { margin-top: 18px; }
   .go-acc-grp h3 { margin: 0 0 2px; font-size: 14px; color: var(--ink); }
+  .go-acc-slot { border: 1px solid var(--hairline); border-radius: var(--radius); padding: 10px 12px; margin-top: 8px; }
+  .go-acc-slot h4 { margin: 0 0 8px; font-size: 13px; color: var(--ink); }
+  .go-acc-slot .go-actions { margin-top: 8px; }
   .go-acc-grp .go-sub { margin: 0 0 8px; }
   table.go-tbl input, table.go-tbl select { font: inherit; font-size: 12.5px; width: 100%;
     min-width: 62px; padding: 4px 7px; border: 1px solid var(--hairline);
     border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
-  table.go-tbl td.go-name input { min-width: 120px; }
+  table.go-tbl td.go-name select { min-width: 120px; }
   .go-name-row { display: flex; align-items: center; gap: 6px; }
   .go-th { font-size: 12px; color: var(--muted); margin: 3px 0 0 30px; line-height: 1.4; }
   .go-icon { width: 24px; height: 24px; flex: none; object-fit: contain; }
@@ -135,7 +138,7 @@
       font-size: 11px; color: var(--muted); margin-bottom: 2px; }
     table.go-tbl td.go-name { grid-column: 1 / 3; padding-right: 52px; }
     table.go-tbl td.go-del-cell { position: absolute; top: 10px; right: 10px; }
-    table.go-tbl input, table.go-tbl select, table.go-tbl td.go-name input { min-width: 0; }
+    table.go-tbl input, table.go-tbl select, table.go-tbl td.go-name select { min-width: 0; }
     .go-del { min-width: 44px; min-height: 44px; border: 1px solid var(--hairline); border-radius: 9px; }
   }
 </style>
@@ -190,7 +193,6 @@
            solver must not need an edit here, the same way adding a slot
            already does not. -->
       <div id="acc-groups"></div>
-      <div id="reg-lists" hidden></div>
     </div>
 
     <div class="go-card">
@@ -255,7 +257,6 @@
   var SLOT_GROUPS = window.GearSolver.SLOT_GROUPS;
   var slotsInGroup = window.GearSolver.slotsInGroup;
   var slotLabel = window.GearSolver.slotLabel;
-  var slotGroup = window.GearSolver.slotGroup;
   var MAX_CHIPS = window.GearSolver.MAX_CHIPS;
   var ITEMS_KEY = "dmo_gear_items", GOAL_KEY = "dmo_gear_goal";
 
@@ -356,20 +357,35 @@
     return td;
   }
 
-  /* Picking from the registry writes the stats in. Typing a name by hand still
-     works -- the box is a datalist, not a closed select, because the registry
-     only covers what the wiki records. */
+  /* Picking from the registry writes the stats in. The box is a closed
+     select (owner's call): a typed name matched nothing half the time and left
+     a row with no stats. A row saved under a name the registry no longer has
+     keeps it as its own option, so opening the page never renames it. */
   function nameCell(item) {
     var td = document.createElement("td");
     td.className = "go-name";
 
-    var inp = document.createElement("input");
-    inp.type = "text";
+    var inp = document.createElement("select");
+    /* Chips carry no slot, so they pick from the chip registry. */
+    var list = (item.slot ? registryBySlot[item.slot] : chipRegistry) || [];
+    var blank = document.createElement("option");
+    blank.value = "";
+    blank.textContent = "— เลือก —";
+    inp.appendChild(blank);
+    if (item.name && !findInRegistry(item.name, item.slot)) {
+      var own = document.createElement("option");
+      own.value = item.name;
+      own.textContent = item.name + " (ไม่อยู่ในทะเบียน)";
+      inp.appendChild(own);
+    }
+    list.forEach(function (it) {
+      var o = document.createElement("option");
+      o.value = it.name;
+      o.textContent = it.nameTh ? it.name + " · " + it.nameTh : it.name;
+      inp.appendChild(o);
+    });
     inp.value = item.name || "";
-    /* Chips carry no slot, so they get their own list rather than the dead
-       "reg-undefined" the slot lookup would otherwise produce. */
-    inp.setAttribute("list", "reg-" + (item.slot || CHIP_LIST));
-    inp.addEventListener("input", function () {
+    inp.addEventListener("change", function () {
       item.name = inp.value;
       var pick = findInRegistry(inp.value, item.slot);
       if (pick) applyRegistryItem(item, pick);
@@ -483,23 +499,14 @@
     row.regRanged = false;
   }
 
-  /* An item whose axis the wiki never stated might feed the tamer instead of
-     the digimon, and the two scales differ by ~10x. Showing it with a warning
-     beats hiding gear a player actually owns. */
+  /* The wiki gives some pieces only a range; the row carries its top. Every
+     axis is scored (owner's call), so the axis is no longer flagged. */
   function registryFlag(item) {
-    /* Keyed off the axis mark, not the registry id: what matters is whether
-       the solver will score this row, and that is decided by regAxis alone. */
-    if (!item.regAxis && !item.regRanged) return null;
-    var bits = [];
-    if (item.regAxis && item.regAxis !== "digimon") {
-      bits.push(item.regAxis === "tamer" ? "\u0e41\u0e01\u0e19\u0e40\u0e17\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c" : "\u0e44\u0e21\u0e48\u0e23\u0e39\u0e49\u0e41\u0e01\u0e19");
-    }
-    if (item.regRanged) bits.push("\u0e04\u0e48\u0e32\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14");
-    if (!bits.length) return null;
+    if (!item.regRanged) return null;
     var el = document.createElement("span");
     el.className = "go-flag";
-    el.textContent = bits.join(" \u00b7 ");
-    el.title = "\u0e41\u0e01\u0e19\u0e40\u0e17\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c = optimizer \u0e44\u0e21\u0e48\u0e04\u0e34\u0e14\u0e04\u0e30\u0e41\u0e19\u0e19\u0e43\u0e2b\u0e49 \u00b7 \u0e44\u0e21\u0e48\u0e23\u0e39\u0e49\u0e41\u0e01\u0e19 = \u0e2d\u0e32\u0e08\u0e40\u0e1b\u0e47\u0e19\u0e02\u0e2d\u0e07\u0e40\u0e17\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c \u00b7 \u0e04\u0e48\u0e32\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14 = \u0e27\u0e34\u0e01\u0e34\u0e43\u0e2b\u0e49\u0e40\u0e1b\u0e47\u0e19\u0e0a\u0e48\u0e27\u0e07 \u0e43\u0e0a\u0e49\u0e02\u0e2d\u0e1a\u0e1a\u0e19";
+    el.textContent = "\u0e04\u0e48\u0e32\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14";
+    el.title = "\u0e04\u0e48\u0e32\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14 = \u0e27\u0e34\u0e01\u0e34\u0e43\u0e2b\u0e49\u0e40\u0e1b\u0e47\u0e19\u0e0a\u0e48\u0e27\u0e07 \u0e43\u0e0a\u0e49\u0e02\u0e2d\u0e1a\u0e1a\u0e19";
     return el;
   }
 
@@ -533,7 +540,6 @@
   /* Only the Double ChipSets (R16-R18) are offered. Every number in here is
      the primary and secondary sets already added together -- a Double ChipSet
      grants both at once -- so a picked chip needs no further arithmetic. */
-  var CHIP_LIST = "chip";
   var chipRegistry = [];
 
   /* The clothing sets. Without this the solver has nothing to match items
@@ -611,148 +617,88 @@
     return td;
   }
 
-  /* One datalist per slot, so a row only offers gear that fits its slot. */
-  function renderDatalists() {
-    var host = $("reg-lists");
-    host.textContent = "";
-    SLOTS.forEach(function (slot) {
-      var dl = document.createElement("datalist");
-      dl.id = "reg-" + slot;
-      (registryBySlot[slot] || []).forEach(function (it) {
-        var o = document.createElement("option");
-        o.value = it.name;
-        /* The browser filters a datalist on the label too, so typing the
-           Thai name finds the piece. */
-        var parts = it.nameTh ? [it.nameTh] : [];
-        STAT_FIELDS.forEach(function (f) {
-          if (it[f.key]) parts.push(f.key + " " + it[f.key]);
-        });
-        if (it.axis !== "digimon") parts.push(it.axis);
-        o.label = parts.join(" \u00b7 ");
-        dl.appendChild(o);
-      });
-      host.appendChild(dl);
-    });
-    host.appendChild(buildDatalist(CHIP_LIST, chipRegistry));
-  }
+  var ACC_COLS = ["ชื่อ", "ตีบวก", "AT", "HT", "CT (%)", ""];
 
-  function buildDatalist(id, items) {
-    var dl = document.createElement("datalist");
-    dl.id = "reg-" + id;
-    items.forEach(function (it) {
-      var o = document.createElement("option");
-      o.value = it.name;
-      var parts = [];
-      STAT_FIELDS.forEach(function (f) {
-        if (it[f.key]) parts.push(f.key + " " + it[f.key]);
-      });
-      o.label = parts.join(" · ");
-      dl.appendChild(o);
-    });
-    return dl;
-  }
-
-  var ACC_COLS = ["ชื่อ", "ช่อง",
-                  "ตีบวก", "AT", "HT", "CT (%)", ""];
-
-  /* One card per slot group. The dropdown already groups the slots this way,
-     so the tables now match what the picker shows instead of being one long
-     list the reader has to segment by eye. */
+  /* One box per slot (owner's call): the head box offers head pieces only, so
+     a row can never be filed under the wrong slot and there is no slot field
+     to set. Boxes sit under their group's heading. */
   function renderAcc() {
     var host = $("acc-groups");
     host.textContent = "";
 
-    /* Rows are grouped for display only -- data.accessories keeps its own
-       order, because that is what the solver and localStorage round-trip. */
-    var groups = {};
+    /* Rows are split by slot for display only -- data.accessories keeps its
+       own order, because that is what the solver and localStorage round-trip. */
+    var bySlot = {};
     data.accessories.forEach(function (it) {
-      var g = slotGroup(it.slot);
-      (groups[g] = groups[g] || []).push(it);
+      (bySlot[it.slot] = bySlot[it.slot] || []).push(it);
     });
 
     SLOT_GROUPS.forEach(function (g) {
-      var block = document.createElement("section");
-      block.className = "go-acc-grp";
-
+      var grp = document.createElement("section");
+      grp.className = "go-acc-grp";
       var h = document.createElement("h3");
       h.textContent = g;
-      block.appendChild(h);
-
-      var sub = document.createElement("p");
-      sub.className = "go-sub";
-      sub.textContent = slotsInGroup(g).map(slotLabel).join(" · ");
-      block.appendChild(sub);
-
-      var wrap = document.createElement("div");
-      wrap.className = "go-tbl-wrap";
-      var table = document.createElement("table");
-      table.className = "go-tbl";
-      var thead = document.createElement("thead");
-      var htr = document.createElement("tr");
-      ACC_COLS.forEach(function (label) {
-        var th = document.createElement("th");
-        th.textContent = label;
-        htr.appendChild(th);
+      grp.appendChild(h);
+      slotsInGroup(g).forEach(function (slot) {
+        grp.appendChild(slotBox(slot, bySlot[slot] || []));
       });
-      thead.appendChild(htr);
-      table.appendChild(thead);
-
-      var body = document.createElement("tbody");
-      (groups[g] || []).forEach(function (it) { body.appendChild(accRow(it, g)); });
-      table.appendChild(body);
-      wrap.appendChild(table);
-      block.appendChild(wrap);
-
-      /* Adding from inside a group starts the row in that group's first slot,
-         so the new row lands where the button was pressed rather than jumping
-         to another table. */
-      var actions = document.createElement("div");
-      actions.className = "go-actions";
-      var btn = document.createElement("button");
-      btn.className = "go-btn";
-      btn.type = "button";
-      btn.textContent = "+ เพิ่ม" + g;
-      btn.addEventListener("click", function () {
-        var first = slotsInGroup(g)[0] || SLOTS[0];
-        data.accessories.push({ id: nextId("acc"), name: "", slot: first,
-                                AT: 0, HT: 0, CT: 0 });
-        save(); render();
-      });
-      actions.appendChild(btn);
-      block.appendChild(actions);
-
-      host.appendChild(block);
+      host.appendChild(grp);
     });
   }
 
-  /* `group` is the block this row is rendered in. The dropdown then offers only
-     that block's slots -- repeating all three groups in every row would let a
-     row pick a slot that belongs to a different table, and it would jump there
-     on the next render. Moving an item between groups is therefore delete and
-     re-add, which is what each block's own "+ add" button is for. */
-  function accRow(it, group) {
+  function slotBox(slot, rows) {
+    var block = document.createElement("div");
+    block.className = "go-acc-slot";
+
+    var h = document.createElement("h4");
+    h.textContent = slotLabel(slot);
+    block.appendChild(h);
+
+    var wrap = document.createElement("div");
+    wrap.className = "go-tbl-wrap";
+    var table = document.createElement("table");
+    table.className = "go-tbl";
+    var thead = document.createElement("thead");
+    var htr = document.createElement("tr");
+    ACC_COLS.forEach(function (label) {
+      var th = document.createElement("th");
+      th.textContent = label;
+      htr.appendChild(th);
+    });
+    thead.appendChild(htr);
+    table.appendChild(thead);
+
+    var body = document.createElement("tbody");
+    rows.forEach(function (it) { body.appendChild(accRow(it)); });
+    table.appendChild(body);
+    wrap.appendChild(table);
+    if (rows.length) block.appendChild(wrap);
+
+    var actions = document.createElement("div");
+    actions.className = "go-actions";
+    var btn = document.createElement("button");
+    btn.className = "go-btn";
+    btn.type = "button";
+    btn.textContent = "+ เพิ่ม" + slotLabel(slot);
+    btn.addEventListener("click", function () {
+      data.accessories.push({ id: nextId("acc"), name: "", slot: slot,
+                              AT: 0, HT: 0, CT: 0 });
+      save(); render();
+    });
+    actions.appendChild(btn);
+    block.appendChild(actions);
+    return block;
+  }
+
+  function accRow(it) {
     {
       var tr = document.createElement("tr");
       tr.appendChild(nameCell(it));
-      var tdSlot = document.createElement("td");
-      var sel = document.createElement("select");
-      var members = slotsInGroup(group || slotGroup(it.slot));
-      members.forEach(function (s) {
-        var o = document.createElement("option");
-        o.value = s;                      // id stays English -- it is stored
-        o.textContent = slotLabel(s);
-        if (it.slot === s) o.selected = true;
-        sel.appendChild(o);
-      });
-      sel.addEventListener("change", function () { it.slot = sel.value; save(); });
-      tdSlot.appendChild(sel);
-      tr.appendChild(tdSlot);
       tr.appendChild(upgradeCell(it));
       tr.appendChild(statCell(it, "AT", "1"));
       tr.appendChild(statCell(it, "HT", "1"));
       tr.appendChild(statCell(it, "CT", "0.01"));
       tr.appendChild(delCell(data.accessories, it));
-      if (it.regAxis && it.regAxis !== "digimon") tr.className = "go-row-off";
       return labelCells(tr, ACC_COLS);
     }
   }
@@ -772,7 +718,6 @@
   }
 
   function render() {
-    renderDatalists();
     renderAcc();
     renderChips();
     // built from SLOTS so the wording can never drift from the solver
@@ -815,14 +760,9 @@
     add("ชุดสปิริตและสี่สัตว์เทพใหม่ใช้ค่าตามระดับตีบวก · ค่าที่วิกิให้เป็นช่วงใช้ค่าสูงสุดของช่วง", "go-gap");
     box.hidden = false;
 
-    var by = {};
-    registry.forEach(function (it) { by[it.axis] = (by[it.axis] || 0) + 1; });
     var c = $("reg-count");
-    c.innerHTML = "นับเข้าการคำนวณ <b>" + (by.digimon || 0) + " จาก " + registry.length +
-      "</b> ชิ้นในทะเบียน <details><summary>ทำไมไม่ครบ</summary><ul>" +
-      "<li>" + (by.unknown || 0) + " ชิ้น: วิกิไม่บอกว่าค่าเป็นของเทมเมอร์หรือดิจิมอน</li>" +
-      "<li>" + (by.tamer || 0) + " ชิ้น: ค่าเป็นของเทมเมอร์ ไม่เพิ่มสเตตัสดิจิมอน</li>" +
-      "</ul></details> · แถวสีเทาในตารางคือของที่ไม่นับ";
+    c.innerHTML = "นับเข้าการคำนวณทุกชิ้น <b>" + registry.length +
+      "</b> ชิ้นในทะเบียน · ของแกนเทมเมอร์และที่ไม่รู้แกนนับเป็นฝั่งดิจิมอน";
     c.hidden = false;
   }
 
@@ -1251,7 +1191,7 @@
 
   var savedItems = jget(ITEMS_KEY, null);
   /* The picker needs the registry before the first paint, otherwise the
-     datalists render empty and typing offers nothing. */
+     name dropdowns render empty. */
   Promise.all([loadRegistry(), loadChipRegistry(),
                loadSetRegistry()]).then(function () {
     if (savedItems && ((savedItems.accessories || []).length || (savedItems.chips || []).length)) {
