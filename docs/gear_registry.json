@@ -1157,7 +1157,7 @@
       "nameTh": "ดาร์กเนส โหลดเดอร์",
       "AT": 20,
       "iconWiki": "/images/d/d2/SusaLoaderMax.PNG",
-      "icon": "img/gear/susaloadermax.png",
+      "icon": "img/gear/susaloadermax-digimondarknessloader.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -1240,7 +1240,7 @@
       "nameTh": "ฟิวชั่นโหลดเดอร์",
       "AT": 20,
       "iconWiki": "/images/d/d2/SusaLoaderMax.PNG",
-      "icon": "img/gear/susaloadermax.png",
+      "icon": "img/gear/susaloadermax-digimonfusionloader.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -1323,7 +1323,7 @@
       "nameTh": "ครอสโหลดเดอร์-ซากุระ",
       "AT": 20,
       "iconWiki": "/images/d/d2/SusaLoaderMax.PNG",
-      "icon": "img/gear/susaloadermax.png",
+      "icon": "img/gear/susaloadermax-digimonxrosloader.png",
       "rows": [
         {
           "label": "ดาต้า",
@@ -1409,8 +1409,7 @@
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
       "obtain": "Update with Ring of Light Weekly Quest Neverland",
-      "nameTh": "ไฟนอล ดิจิไวซ์",
-      "nameThInferred": true
+      "nameTh": "เฟิร์สท์ ดิจิไวซ์ ระดับ สมบูรณ์"
     },
     {
       "id": "digivice-first-digivice",

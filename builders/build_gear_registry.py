@@ -176,6 +176,16 @@ SPLIT_SETS = {
 }
 
 
+# Pieces that share one picture of several 32px icons side by side (left
+# edge of each). SusaLoaderMax shows the three loaders, left to right
+# Xros Loader (Sakura), Fusion Loader, Darkness Loader -- the owner's reading.
+SHARED_PICTURE = {
+    "Digimon Xros Loader": 0,
+    "Digimon Fusion Loader": 32,
+    "Digimon Darkness Loader": 64,
+}
+
+
 def split_icon(src, box, tag):
     """Cut one piece out of a combined picture, saved next to it. Rewritten
     only when the bytes differ, so a rebuild leaves the files alone."""
@@ -387,6 +397,10 @@ def add_th_tamer_gear(out, items):
         if wiki_icon:
             rec["iconWiki"] = wiki_icon
             icon = local_icon(wiki_icon)
+            if icon and src["name"] in SHARED_PICTURE:
+                tag = re.sub(r"[^a-z0-9]+", "", src["name"].lower())
+                tile = split_icon(PROJ / "docs" / icon, (SHARED_PICTURE[src["name"]], 32), tag)
+                icon = tile.relative_to(PROJ / "docs").as_posix()
             if icon:
                 rec["icon"] = icon
         extra = non_solver_at(src["levels"], top)

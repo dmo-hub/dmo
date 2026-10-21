@@ -36,6 +36,7 @@
     "Fairimon's Lower Armor [Event]": "กางเกงนางฟ้าของแฟรี่มอน [กิจกรรม]",
     "Fairimon's Upper Armor [Event]": "เสื้อนางฟ้าของแฟรี่มอน [กิจกรรม]",
     "Fairimon's Wing Googles [Event]": "แว่นกันลมของแฟรี่มอน [กิจกรรม]",
+    "Final Digivice": "เฟิร์สท์ ดิจิไวซ์ ระดับ สมบูรณ์",
     "Flame Short Pants of Zhuqiaomon": "กางเกงขาสั้นชั้นดีของซูเซมอน",
     "Ghost Keyring ( Families )": "โกสท์ คีย์ริง",
     "Headphones": "ชุดหูฟัง",
@@ -97,7 +98,7 @@
     "Zhuqiaomon's Infernal Cape": "เสื้อคลุมสีแดงเพลิงของซูเซมอน",
     "Zhuqiaomon's Infernal Ornament": "ผ้าโพกสีแดงเพลิงของซูเซมอน"
   },
-  "_inferred_note": "Names vplay never prints (full-text search of every post found none), built by the owner's call from vplay's own pattern: the middle tier (Aural/Flame/Shiny/Radiant) as '<piece>ชั้นดีของ<beast>' like Baihumon Aural Gloves, the plain tier as '<piece>ของ<beast>'. The rest borrow vplay's own words where it has them: tiers as '<piece> : ขั้นสูง' / 'พื้นฐาน' (its mask boxes; Crude/Inferior have no vplay word, so ชั้นต่ำ/ชั้นรอง), Power/Unlimited/Final transliterated as vplay does (พาวเวอร์, อันลิมิเต็ด, เฟิร์สท์ ดิจิไวซ์), 'ทะเลทรายที่เปล่งประกาย' from its desert coin, 'รอยัลไนท์', and XAI kept in English like 'XAI Ver IV'. Durations as '[N วัน]', Permanent '[ถาวร]'. Pages mark them as inferred; a vplay sighting moves the pair up into items.",
+  "_inferred_note": "Names vplay never prints (full-text search of every post found none), built by the owner's call from vplay's own pattern: the middle tier (Aural/Flame/Shiny/Radiant) as '<piece>ชั้นดีของ<beast>' like Baihumon Aural Gloves, the plain tier as '<piece>ของ<beast>'. The rest borrow vplay's own words where it has them: tiers as '<piece> : ขั้นสูง' / 'พื้นฐาน' (its mask boxes; Crude/Inferior have no vplay word, so ชั้นต่ำ/ชั้นรอง), Power/Unlimited transliterated as vplay does (พาวเวอร์, อันลิมิเต็ด), 'ทะเลทรายที่เปล่งประกาย' from its desert coin, 'รอยัลไนท์', and XAI kept in English like 'XAI Ver IV'. Durations as '[N วัน]', Permanent '[ถาวร]'. Pages mark them as inferred; a vplay sighting moves the pair up into items.",
   "inferred": {
     "Aural Hooded Shirt of Baihumon": "เสื้อฮู้ดชั้นดีของไบฟูมอน",
     "Aural Short Pants of Baihumon": "กางเกงขาสั้นชั้นดีของไบฟูมอน",
@@ -106,7 +107,6 @@
     "Boundless Crude Gloves (30 days)": "ถุงมือไร้ขีดจำกัด : ชั้นต่ำ [30 วัน]",
     "Boundless Inferior Gloves (30 days)": "ถุงมือไร้ขีดจำกัด : ชั้นรอง [30 วัน]",
     "Boundless Plain Gloves (30 days)": "ถุงมือไร้ขีดจำกัด : พื้นฐาน [30 วัน]",
-    "Final Digivice": "ไฟนอล ดิจิไวซ์",
     "Flame Gloves of Zhuqiaomon": "ถุงมือชั้นดีของซูเซมอน",
     "Flame Hooded Shirt of Zhuqiaomon": "เสื้อฮู้ดชั้นดีของซูเซมอน",
     "Gloves of Zhuqiaomon": "ถุงมือของซูเซมอน",
