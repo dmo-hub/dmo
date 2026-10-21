@@ -1399,19 +1399,6 @@
       "info": "ค่าออปชันที่ Lv. Max · สุ่มออปชันจากรายการ"
     },
     {
-      "id": "eos-digivice-final-digivice",
-      "name": "Final Digivice",
-      "slot": "digivice",
-      "wikiSlot": "Eos Digivice",
-      "axis": "digimon",
-      "iconWiki": "/images/a/a0/EosDviceMax.PNG",
-      "icon": "img/gear/eosdvicemax.png",
-      "rows": [],
-      "info": "dmowiki ยังไม่มีค่า",
-      "obtain": "Update with Ring of Light Weekly Quest Neverland",
-      "nameTh": "เฟิร์สท์ ดิจิไวซ์ ระดับ สมบูรณ์"
-    },
-    {
       "id": "digivice-first-digivice",
       "name": "First Digivice",
       "slot": "digivice",

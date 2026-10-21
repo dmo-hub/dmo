@@ -61,14 +61,14 @@ GOGGLES_AXIS = {"Adventure Goggles": "digimon", "Digimon Kaiser's Goggles": "dig
                 "Tamer’s Goggles": "tamer", "Complete Tamer’s Goggles": "tamer"}
 # Digivices, Digi-Aura, key rings and ID cards from vplay (scan_vplay_tamer_gear).
 # The wiki's key ring rows (every level, four of eleven families) give way to
-# them; the older XAI and the Final Digivice have no vplay post, so the wiki's
-# rows stay beside the vplay XAI.
+# them; the older XAI has no vplay post, so the wiki's rows stay beside the
+# vplay XAI. The wiki's Final Digivice is left out: it is the First Digivice at
+# its complete tier (owner), which the vplay rows already carry.
 TAMER_GEAR_TH = PROJ / "data" / "tamer_gear_th.json"
-WIKI_ONLY_TAMER_GEAR = {"XAI System": "xai", "Eos Digivice": "digivice"}
-WIKI_ONLY_NAMES = {"Eos Digivice": {"Final Digivice"}}
-# The wiki leaves XAI's and the Final Digivice's side blank; the owner
-# confirmed both feed the digimon.
-WIKI_ONLY_AXIS = {"xai": "digimon", "digivice": "digimon"}
+WIKI_ONLY_TAMER_GEAR = {"XAI System": "xai"}
+WIKI_ONLY_NAMES = {}
+# The wiki leaves XAI's side blank; the owner confirmed it feeds the digimon.
+WIKI_ONLY_AXIS = {"xai": "digimon"}
 
 # vplay's per-level Spirit tables name the piece, not the element: one table
 # serves all five "*:Spirit X" items.
@@ -373,7 +373,7 @@ def display_rows(stats):
 
 def add_th_tamer_gear(out, items):
     """Thai-server digivices, aura, key rings and ID cards, plus the wiki's XAI
-    and Final Digivice rows (stat-less ones too: the page lists them by name)."""
+    rows (stat-less ones too: the page lists them by name)."""
     if not TAMER_GEAR_TH.exists():
         print(f"  ! missing {TAMER_GEAR_TH.name}")
         return 0
