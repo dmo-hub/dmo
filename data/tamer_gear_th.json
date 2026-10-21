@@ -1807,14 +1807,154 @@
     },
     {
       "name": "Spiral Key Ring Lv.Max",
-      "nameTh": "สไปรอลคีย์ริง Lv Max",
+      "nameTh": "สไปรอลคีย์ริง",
       "slot": "keyring",
       "axis": "tamer",
       "picture": "Spiral_Key_Ring_Lv.6+.png",
       "ranged": true,
       "levels": [
         {
-          "upgrade": 0,
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 50.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 8.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "DE",
+              "value": 6.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 100.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 15.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "DE",
+              "value": 10.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 210.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 30.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "DE",
+              "value": 22.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 370.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 54.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "DE",
+              "value": 37.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 590.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 84.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "DE",
+              "value": 59.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 860.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 122.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "DE",
+              "value": 86.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1180.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 168.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "DE",
+              "value": 119.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
           "stats": [
             {
               "stat": "HP",
@@ -1834,6 +1974,16 @@
           ]
         }
       ],
+      "levelLabels": {
+        "1": "Lv.1",
+        "2": "Lv.2",
+        "3": "Lv.3",
+        "4": "Lv.4",
+        "5": "Lv.5",
+        "6": "Lv.6",
+        "7": "Lv.7",
+        "8": "Lv.Max"
+      },
       "rows": [
         {
           "label": "HP",
@@ -1854,14 +2004,119 @@
     },
     {
       "name": "Spiral Key Ring (Families) Lv.Max",
-      "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max",
+      "nameTh": "สไปรอลคีย์ริง [ตระกูล]",
       "slot": "keyring",
       "axis": "digimon",
       "ranged": true,
       "picture": "Spiral_Key_Ring_DS_Level_7.png",
       "levels": [
         {
-          "upgrade": 0,
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 60.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 10.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 130.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 19.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 260.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 38.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 470.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 67.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 730.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 105.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1070.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 153.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "HP",
+              "value": 1470.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 210.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
           "stats": [
             {
               "stat": "HP",
@@ -1881,6 +2136,16 @@
           ]
         }
       ],
+      "levelLabels": {
+        "1": "Lv.1",
+        "2": "Lv.2",
+        "3": "Lv.3",
+        "4": "Lv.4",
+        "5": "Lv.5",
+        "6": "Lv.6",
+        "7": "Lv.7",
+        "8": "Lv.Max"
+      },
       "rows": [
         {
           "label": "HP",

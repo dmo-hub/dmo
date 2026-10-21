@@ -532,11 +532,30 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   tier (เฟิร์สท์ ดิจิไวซ์ ระดับ สมบูรณ์, owner), already in the vplay rows. The Digital Monster X pair is the exception: TH patch post
   25565 prints their table, English names from NA event_811 (same numbers).
   That post's "อุปกรณ์ฟรอนเทียร์" is the Spirit set the registry already has,
-  not new gear. Each line is kept at its top tier only, one item per line;
-  family key rings list their 11 families instead of 11 items. A digivice's
+  not new gear. One item per line; the Spiral rings carry Lv 1-7 + Max as
+  levels 1-8 (each level is its own crafted ring, top of each roll), every
+  other line only its top tier; family key rings list their 11 families
+  instead of 11 items. A digivice's
   attribute/element options go to `rows` (gear-names) and never to stats.
   Axis: digivices/aura/Ghost digimon (posts say so), Spiral base tamer (post),
   ID cards tamer (wiki), Spiral-family / DIGI-Key Ring / XAI
   digimon (no post says; the owner decided -- scanner values plus
   `WIKI_ONLY_AXIS`, which must win over the wiki row's "unknown" string).
   Not a `refresh.py` step: run it by hand like scan_clothing.
+- **Upgrade picker levels** (`docs/gear.html` `upgradeCell`): a registry
+  piece with no `levelStats` has one fixed value in the game, so its picker is
+  locked to "—". `levelLabels` (`{"<level>": "<label>"}`) limits the picker to
+  the listed levels -- Spiral `Lv.1..Lv.Max` (1-8), Adventure Goggles `+0` and
+  `สมบูรณ์` (16), plus `+1..+15` for the three pairs the NA wiki tabulates
+  (`cache/dmowiki_adventure_goggles.html`; Lv 0 matches vplay). A saved level
+  missing from the labels reads as the top (`levelAt`). Wiki pieces that print
+  their level in the name (`[Lv.1]..[Lv.5]`) become `levelStats` in
+  `build_gear_registry.main`.
+- **KR dungeons**: KR publishes no guide pages, only weekly update posts.
+  `scanners/scan_kr_dungeons.py` reads cached `cache/kr_view_o*.html` (the
+  "던전 이름" row names the dungeon; titles above tables name areas/sub-zones)
+  into `data/kr_dungeons.json`; `build_dungeon_html.attach_kr` joins them onto
+  TH cards through the hand map `data/kr_dungeon_map.json` -- pair only when
+  location/NPC/boss/monsters agree -- and lists the rest as KR-only cards.
+  KR is never written into `data/dungeons.json` (scan_dungeons owns it and
+  expects a TH side). Coverage = the KR index range (from 2023-12).

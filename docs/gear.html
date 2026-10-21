@@ -393,14 +393,21 @@
     return pct ? (Math.round(v * 100) / 100) + "%" : Math.round(v).toLocaleString("en-US");
   }
 
-  function extrasAt(pick, lvl) {
-    if (!pick) return [];
-    if (!pick.levelStats) return pick.extra || [];
+  function levelAt(pick, lvl) {
     var top = pick.upgradeMax !== undefined ? pick.upgradeMax
       : Math.max.apply(null, Object.keys(pick.levelStats).map(Number));
     var want = (lvl === undefined || lvl === null || lvl === "") ? top : num(lvl);
     var at = Math.min(Math.max(0, Math.round(want)), top);
-    return (pick.levelExtra || {})[String(at)] || [];
+    /* Labelled pieces only have the listed levels; anything else was saved
+       from the old +0..+15 picker and stood for the registry's top value. */
+    if (pick.levelLabels && pick.levelLabels[String(at)] === undefined) at = top;
+    return at;
+  }
+
+  function extrasAt(pick, lvl) {
+    if (!pick) return [];
+    if (!pick.levelStats) return pick.extra || [];
+    return (pick.levelExtra || {})[String(levelAt(pick, lvl))] || [];
   }
 
   function statListCell(item) {
@@ -671,11 +678,7 @@
      its top; a level whose stats have not unlocked yet is genuinely zero. */
   function applyLevelStats(row, pick, lvl) {
     if (!pick || !pick.levelStats) return;
-    var top = pick.upgradeMax !== undefined ? pick.upgradeMax
-      : Math.max.apply(null, Object.keys(pick.levelStats).map(Number));
-    var want = (lvl === undefined || lvl === null || lvl === "") ? top : num(lvl);
-    var at = Math.min(Math.max(0, Math.round(want)), top);
-    var s = pick.levelStats[String(at)] || {};
+    var s = pick.levelStats[String(levelAt(pick, lvl))] || {};
     STAT_FIELDS.forEach(function (f) {
       row[f.key] = s[f.key] !== undefined ? s[f.key] : 0;
     });
@@ -822,13 +825,26 @@
     none.value = "";
     none.textContent = "—";
     inp.appendChild(none);
-    for (var lv = 0; lv <= top; lv++) {
+    /* A listed piece without a per-level table has one fixed value in the
+       game; offering +0..+15 would suggest the numbers follow it. */
+    if (pick && !pick.levelStats) {
+      inp.disabled = true;
+      inp.title = "ชิ้นนี้ไม่มีระดับตีบวก — ใช้ค่าตามทะเบียน";
+      td.appendChild(inp);
+      return td;
+    }
+    var labels = pick && pick.levelLabels;
+    var steps = labels
+      ? Object.keys(labels).map(Number).sort(function (a, b) { return a - b; })
+      : [];
+    if (!labels) for (var lv = 0; lv <= top; lv++) steps.push(lv);
+    steps.forEach(function (lv) {
       var o = document.createElement("option");
       o.value = String(lv);
-      o.textContent = "+" + lv;
+      o.textContent = labels ? labels[String(lv)] : "+" + lv;
       inp.appendChild(o);
-    }
-    inp.value = (key && levels[key] !== undefined) ? String(levels[key]) : "";
+    });
+    inp.value = (key && levels[key] !== undefined) ? String(pick ? levelAt(pick, levels[key]) : levels[key]) : "";
     inp.disabled = !key;
     inp.addEventListener("change", function () {
       var k = it.name || "";

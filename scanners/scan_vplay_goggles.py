@@ -39,6 +39,13 @@ POST_URL = "https://www.vplay.in.th/wp-json/wp/v2/posts/%d?_fields=id,date,link,
 ADVENTURE_POST = 19820
 KAISER_POST = 25445
 TAMER_POST = 17826
+# NA wiki page with Adventure Goggles Lv 1-15 for three pairs; vplay only
+# prints Lv 0 and the complete row. Lv 0 matches between the two servers.
+NA_ADVENTURE = PROJ / "cache" / "dmowiki_adventure_goggles.html"
+NA_STATS = {"Hit Rate": "HT", "Attack": "AT", "Critical Hit": "CT", "Evade": "EV",
+            "HP": "HP", "Skill Damage": "Skill DMG"}
+# "Complete" sits above NA's Lv 15, so it takes the next slot.
+COMPLETE = 16
 
 # Column labels in these tables. "SCD" is skill damage (dmowiki prints "Skill
 # Damage %" in the same option slot); like "พลังโจมตีสกิล" it has no solver
@@ -83,8 +90,9 @@ def stat_value(stat, cell):
 
 def adventure(content):
     """One table per variant: header "ค่าสเตตัสหลัก <main>", a label row
-    (Lv, SCD, <main>, <third>), then Lv 0 and "สมบูรณ์" rows. Only the
-    complete row is kept -- it is what a finished pair gives."""
+    (Lv, SCD, <main>, <third>), then Lv 0 and "สมบูรณ์" rows. Lv 0 stays at 0
+    and complete goes to COMPLETE; the NA wiki fills 1-15 where it has them."""
+    na = na_adventure_levels()
     out = []
     for table in re.findall(r"<table.*?</table>", content, re.S):
         rows = rows_of(table)
@@ -92,16 +100,54 @@ def adventure(content):
             continue
         labels = [STAT_LABELS.get(x) for x in rows[1][1:]]
         done = next((r for r in rows if r and r[0] == "สมบูรณ์"), None)
+        start = next((r for r in rows if r and re.match(r"Lv\s*0$", r[0])), None)
         if not done or None in labels:
             print("  ! adventure table not read: %r" % rows[:2])
             continue
         main, third = labels[1], labels[2]
-        stats = [s for s in (stat_value(k, v) for k, v in zip(labels, done[1:])) if s]
+        def stats_of(row):
+            return [s for s in (stat_value(k, v) for k, v in zip(labels, row[1:])) if s]
+        levels = [{"upgrade": 0, "stats": stats_of(start)}] if start else []
+        levels += na.get((main, third), [])
+        levels.append({"upgrade": COMPLETE, "stats": stats_of(done)})
         out.append({
             "name": "Adventure Goggles [%s/%s]" % (main, third),
             "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [%s/%s]" % (main, third),
-            "levels": [{"upgrade": 0, "stats": stats}],
+            "levels": levels,
+            "levelLabels": {str(l["upgrade"]): ("สมบูรณ์" if l["upgrade"] == COMPLETE
+                                                else "+%d" % l["upgrade"]) for l in levels},
         })
+    return out
+
+
+NA_PHRASE = re.compile(r"(%s)\s*([\d,.]+)\s*(%%)?" % "|".join(map(re.escape, NA_STATS)))
+
+
+def na_adventure_levels():
+    """{(main, third): [levels 1..15]} from the NA wiki's per-pair tables
+    ("HT/HT Goggles" ... "Total Status Given"). Missing cache -> {}."""
+    if not NA_ADVENTURE.exists():
+        print("  ! missing %s -- Adventure Goggles keep Lv 0 + complete only" % NA_ADVENTURE.name)
+        return {}
+    page = NA_ADVENTURE.read_text(encoding="utf-8", errors="replace")
+    out = {}
+    for m in re.finditer(r"(\w+)/(\w+) Goggles(.*?)(<table.*?</table>)", page, re.S):
+        if "<table" in m.group(3):
+            continue
+        pair = (m.group(1), m.group(2))
+        levels = []
+        for row in rows_of(m.group(4)):
+            lv = re.match(r"Adventure Goggles Lv\s*(\d+)$", row[1]) if len(row) > 3 else None
+            if not lv:
+                continue
+            stats = []
+            for name, val, pct in NA_PHRASE.findall(row[-1]):
+                st = stat_value(NA_STATS[name], val + pct)
+                if st:
+                    stats.append(st)
+            levels.append({"upgrade": int(lv.group(1)), "stats": stats})
+        if levels:
+            out[pair] = levels
     return out
 
 
@@ -175,7 +221,7 @@ def main():
         "fetched_at": date.today().isoformat(),
         "source": [adv["link"], kai["link"], tam["link"]],
         "note": ("Thai-server goggles; CT/EV printed without % are raw (100 per 1%). "
-                 "Adventure Goggles keep only the complete row."),
+                 "Adventure Goggles: Lv 0 and complete (as 16) from vplay, Lv 1-15 from the NA wiki where it has them."),
         "items": items,
     }, "fetched_at")
     print("wrote %s" % OUT.relative_to(PROJ))

@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-10-20",
+  "fetched_at": "2026-10-21",
   "source": [
     "https://www.vplay.in.th/%e0%b9%81%e0%b8%a7%e0%b9%88%e0%b8%99%e0%b8%99%e0%b8%b4%e0%b8%a3%e0%b8%a0%e0%b8%b1%e0%b8%a2%e0%b9%81%e0%b8%ad%e0%b8%94%e0%b9%80%e0%b8%a7%e0%b8%99%e0%b9%80%e0%b8%88%e0%b8%ad%e0%b8%a3%e0%b9%8c/",
     "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-94/",
     "https://www.vplay.in.th/%e0%b8%a3%e0%b8%b2%e0%b8%a2%e0%b8%a5%e0%b8%b0%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%94%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%ad%e0%b8%b1%e0%b8%9e%e0%b9%80%e0%b8%94%e0%b8%97%e0%b8%9b%e0%b8%a3-53/"
   ],
-  "note": "Thai-server goggles; CT/EV printed without % are raw (100 per 1%). Adventure Goggles keep only the complete row.",
+  "note": "Thai-server goggles; CT/EV printed without % are raw (100 per 1%). Adventure Goggles: Lv 0 and complete (as 16) from vplay, Lv 1-15 from the NA wiki where it has them.",
   "items": [
     {
       "name": "Adventure Goggles [HT/HT]",
@@ -16,6 +16,251 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 25.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HT",
+              "value": 10.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 75.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 125.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 200.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 250.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 300.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 375.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 450.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 525.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 600.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 675.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 750.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 840.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 910.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 980.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 1050.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -31,7 +276,26 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "1": "+1",
+        "2": "+2",
+        "3": "+3",
+        "4": "+4",
+        "5": "+5",
+        "6": "+6",
+        "7": "+7",
+        "8": "+8",
+        "9": "+9",
+        "10": "+10",
+        "11": "+11",
+        "12": "+12",
+        "13": "+13",
+        "14": "+14",
+        "15": "+15",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [HT/EV]",
@@ -42,6 +306,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 25.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EV",
+              "value": 0.25,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -57,7 +341,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [HT/CT]",
@@ -68,6 +356,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 25.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "CT",
+              "value": 2.75,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -83,7 +391,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [HT/HP]",
@@ -94,6 +406,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 25.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -109,7 +441,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [HT/AT]",
@@ -120,6 +456,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 25.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 275.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -135,7 +491,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [EV/HT]",
@@ -146,6 +506,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 0.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 10.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -161,7 +541,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [EV/EV]",
@@ -172,6 +556,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 0.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 0.25,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -187,7 +591,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [EV/CT]",
@@ -198,6 +606,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 0.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 2.75,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -213,7 +641,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [EV/HP]",
@@ -224,6 +656,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 0.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -239,7 +691,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [EV/AT]",
@@ -250,6 +706,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 0.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 275.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -265,7 +741,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [AT/HT]",
@@ -276,6 +756,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HT",
+              "value": 10.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -291,7 +791,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [AT/EV]",
@@ -302,6 +806,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EV",
+              "value": 0.25,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -317,7 +841,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [AT/CT]",
@@ -328,6 +856,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "CT",
+              "value": 2.75,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -343,7 +891,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [AT/HP]",
@@ -354,6 +906,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -369,7 +941,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [AT/AT]",
@@ -380,6 +956,251 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 300.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 275.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 660.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 715.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 770.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 825.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 880.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 935.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 990.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1045.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1100.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1155.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1210.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1320.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1430.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1595.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 1760.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -395,7 +1216,26 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "1": "+1",
+        "2": "+2",
+        "3": "+3",
+        "4": "+4",
+        "5": "+5",
+        "6": "+6",
+        "7": "+7",
+        "8": "+8",
+        "9": "+9",
+        "10": "+10",
+        "11": "+11",
+        "12": "+12",
+        "13": "+13",
+        "14": "+14",
+        "15": "+15",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [CT/HT]",
@@ -406,6 +1246,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 4.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "HT",
+              "value": 10.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -421,7 +1281,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [CT/EV]",
@@ -432,6 +1296,26 @@
           "stats": [
             {
               "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 4.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "EV",
+              "value": 0.25,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
+          "stats": [
+            {
+              "stat": "Skill DMG",
               "value": 10.0,
               "unit": "pct"
             },
@@ -447,7 +1331,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [CT/CT]",
@@ -455,6 +1343,251 @@
       "levels": [
         {
           "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 4.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 2.75,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 1,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 1.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 8.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 2,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 2.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 8.75,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 3,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 9.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 4,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 10.25,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 5,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 3.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 11.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 6,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 11.75,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 7,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 12.5,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 8,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 4.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 13.25,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 9,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 14.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 10,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 15.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 11,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 5.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 16.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 12,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 17.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 13,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 18.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 14,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 6.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 19.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 15,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 7.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 20.0,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
           "stats": [
             {
               "stat": "Skill DMG",
@@ -473,7 +1606,26 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "1": "+1",
+        "2": "+2",
+        "3": "+3",
+        "4": "+4",
+        "5": "+5",
+        "6": "+6",
+        "7": "+7",
+        "8": "+8",
+        "9": "+9",
+        "10": "+10",
+        "11": "+11",
+        "12": "+12",
+        "13": "+13",
+        "14": "+14",
+        "15": "+15",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [CT/HP]",
@@ -481,6 +1633,26 @@
       "levels": [
         {
           "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 4.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
           "stats": [
             {
               "stat": "Skill DMG",
@@ -499,7 +1671,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [CT/AT]",
@@ -507,6 +1683,26 @@
       "levels": [
         {
           "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "CT",
+              "value": 4.5,
+              "unit": "pct"
+            },
+            {
+              "stat": "AT",
+              "value": 275.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
           "stats": [
             {
               "stat": "Skill DMG",
@@ -525,7 +1721,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [HP/HT]",
@@ -533,6 +1733,26 @@
       "levels": [
         {
           "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HT",
+              "value": 10.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
           "stats": [
             {
               "stat": "Skill DMG",
@@ -551,7 +1771,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [HP/EV]",
@@ -559,6 +1783,26 @@
       "levels": [
         {
           "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "EV",
+              "value": 0.25,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
           "stats": [
             {
               "stat": "Skill DMG",
@@ -577,7 +1821,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [HP/CT]",
@@ -585,6 +1833,26 @@
       "levels": [
         {
           "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "CT",
+              "value": 2.75,
+              "unit": "pct"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
           "stats": [
             {
               "stat": "Skill DMG",
@@ -603,7 +1871,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [HP/HP]",
@@ -611,6 +1883,26 @@
       "levels": [
         {
           "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "HP",
+              "value": 150.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
           "stats": [
             {
               "stat": "Skill DMG",
@@ -629,7 +1921,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Adventure Goggles [HP/AT]",
@@ -637,6 +1933,26 @@
       "levels": [
         {
           "upgrade": 0,
+          "stats": [
+            {
+              "stat": "Skill DMG",
+              "value": 0.0,
+              "unit": "pct"
+            },
+            {
+              "stat": "HP",
+              "value": 200.0,
+              "unit": "flat"
+            },
+            {
+              "stat": "AT",
+              "value": 275.0,
+              "unit": "flat"
+            }
+          ]
+        },
+        {
+          "upgrade": 16,
           "stats": [
             {
               "stat": "Skill DMG",
@@ -655,7 +1971,11 @@
             }
           ]
         }
-      ]
+      ],
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      }
     },
     {
       "name": "Digimon Kaiser's Goggles [HT]",

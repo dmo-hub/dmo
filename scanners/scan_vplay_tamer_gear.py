@@ -228,28 +228,51 @@ def families(cells, pattern):
     return sorted({m.group(1).upper() for c in cells for m in [re.search(pattern, c)] if m})
 
 
+SPIRAL_LEVEL = re.compile(r"Lv ?(\d+|Max)\b")
+# Each level is its own crafted ring; Max follows Lv 7, so it takes slot 8.
+SPIRAL_LABELS = {str(n): "Lv.%d" % n for n in range(1, 8)}
+SPIRAL_LABELS["8"] = "Lv.Max"
+
+
+def spiral_levels(rows, what):
+    """Craft rows of one ring line -> levels 1..8 at the top of each roll,
+    plus the Max display rows. Rows naming a ring only as an ingredient end
+    in a count, not a stat line, and are skipped."""
+    by_level = {}
+    for r in rows:
+        m = SPIRAL_LEVEL.search(r[0])
+        if not m or not DETAIL.search(r[-1]):
+            continue
+        lvl = 8 if m.group(1) == "Max" else int(m.group(1))
+        stats, disp = key_detail(r[-1])
+        prev = by_level.setdefault(lvl, (stats, disp))
+        if prev[0] != stats:
+            print("  ! %s Lv %s rows disagree" % (what, m.group(1)))
+    if sorted(by_level) != list(range(1, 9)):
+        print("  ! %s levels found: %r" % (what, sorted(by_level)))
+    levels = [{"upgrade": n, "stats": by_level[n][0]} for n in sorted(by_level)]
+    return levels, by_level[8][1]
+
+
 def spiral(content):
     ts = tables(content)
-    base = next(r for t in ts for r in t if r and r[0].startswith("สไปรอลคีย์ริง Lv Max"))
-    stats, rows = key_detail(base[-1])
-    out = [{"name": "Spiral Key Ring Lv.Max", "nameTh": "สไปรอลคีย์ริง Lv Max",
+    own = [r for t in ts for r in t if r and re.match(r"สไปรอลคีย์ริง Lv", r[0])]
+    levels, rows = spiral_levels(own, "spiral")
+    out = [{"name": "Spiral Key Ring Lv.Max", "nameTh": "สไปรอลคีย์ริง",
             "slot": "keyring", "axis": "tamer", "picture": "Spiral_Key_Ring_Lv.6+.png",
-            "ranged": True, "levels": [{"upgrade": 0, "stats": stats}], "rows": rows}]
+            "ranged": True, "levels": levels, "levelLabels": SPIRAL_LABELS, "rows": rows}]
     fam_rows = [r for t in ts for r in t
-                if r and re.match(r"สไปรอลคีย์ริง ?\[\w+\] Lv Max", r[0])]
-    details = {r[-1] for r in fam_rows}
-    if len(details) != 1:
-        print("  ! spiral family Lv Max rows disagree: %r" % details)
+                if r and re.match(r"สไปรอลคีย์ริง ?\[\w+\] Lv", r[0])]
     fams = families([r[0] for r in fam_rows], r"\[(\w+)\]")
-    stats, rows = key_detail(fam_rows[0][-1])
+    levels, rows = spiral_levels(fam_rows, "spiral family")
     out.append({"name": "Spiral Key Ring (Families) Lv.Max",
-                "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max", "slot": "keyring",
+                "nameTh": "สไปรอลคีย์ริง [ตระกูล]", "slot": "keyring",
                 # No post names the side; the owner confirmed digimon in game.
                 "axis": "digimon", "ranged": True,
                 # One record stands for all eleven families; the wiki only
                 # pictures four, so one of them represents the lot.
                 "picture": "Spiral_Key_Ring_DS_Level_7.png",
-                "levels": [{"upgrade": 0, "stats": stats}], "rows": rows,
+                "levels": levels, "levelLabels": SPIRAL_LABELS, "rows": rows,
                 "families": fams, "info": "แยกชิ้นตามตระกูล ค่าเท่ากันทุกตระกูล"})
     return out
 

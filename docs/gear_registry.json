@@ -4914,6 +4914,201 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/AT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "AT": 575
+        },
+        "1": {
+          "AT": 660
+        },
+        "2": {
+          "AT": 715
+        },
+        "3": {
+          "AT": 770
+        },
+        "4": {
+          "AT": 825
+        },
+        "5": {
+          "AT": 880
+        },
+        "6": {
+          "AT": 935
+        },
+        "7": {
+          "AT": 990
+        },
+        "8": {
+          "AT": 1045
+        },
+        "9": {
+          "AT": 1100
+        },
+        "10": {
+          "AT": 1155
+        },
+        "11": {
+          "AT": 1210
+        },
+        "12": {
+          "AT": 1320
+        },
+        "13": {
+          "AT": 1430
+        },
+        "14": {
+          "AT": 1595
+        },
+        "15": {
+          "AT": 1760
+        },
+        "16": {
+          "AT": 2200
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "1": "+1",
+        "2": "+2",
+        "3": "+3",
+        "4": "+4",
+        "5": "+5",
+        "6": "+6",
+        "7": "+7",
+        "8": "+8",
+        "9": "+9",
+        "10": "+10",
+        "11": "+11",
+        "12": "+12",
+        "13": "+13",
+        "14": "+14",
+        "15": "+15",
+        "16": "สมบูรณ์"
+      },
       "AT": 2200,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -4931,6 +5126,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/CT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "AT": 300,
+          "CT": 2.75
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "AT": 1200,
+          "CT": 10.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "AT": 1200,
       "CT": 10.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -4949,6 +5191,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/EV]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "AT": 300,
+          "EV": 0.25
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "AT": 1200,
+          "EV": 8.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "AT": 1200,
       "EV": 8.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -4967,6 +5256,61 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/HP]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "AT": 300
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "AT": 1200
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 150.0,
+            "unit": "flat"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "AT": 1200,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -4989,6 +5333,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [AT/HT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "AT": 300,
+          "HT": 10
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "AT": 1200,
+          "HT": 500
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "AT": 1200,
       "HT": 500,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5007,6 +5398,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/AT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "CT": 4.5,
+          "AT": 275
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "CT": 15.0,
+          "AT": 1000
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "CT": 15.0,
       "AT": 1000,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5025,6 +5463,201 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/CT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "CT": 7.25
+        },
+        "1": {
+          "CT": 8.0
+        },
+        "2": {
+          "CT": 8.75
+        },
+        "3": {
+          "CT": 9.5
+        },
+        "4": {
+          "CT": 10.25
+        },
+        "5": {
+          "CT": 11.0
+        },
+        "6": {
+          "CT": 11.75
+        },
+        "7": {
+          "CT": 12.5
+        },
+        "8": {
+          "CT": 13.25
+        },
+        "9": {
+          "CT": 14.0
+        },
+        "10": {
+          "CT": 15.0
+        },
+        "11": {
+          "CT": 16.0
+        },
+        "12": {
+          "CT": 17.0
+        },
+        "13": {
+          "CT": 18.0
+        },
+        "14": {
+          "CT": 19.0
+        },
+        "15": {
+          "CT": 20.0
+        },
+        "16": {
+          "CT": 25.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "1": "+1",
+        "2": "+2",
+        "3": "+3",
+        "4": "+4",
+        "5": "+5",
+        "6": "+6",
+        "7": "+7",
+        "8": "+8",
+        "9": "+9",
+        "10": "+10",
+        "11": "+11",
+        "12": "+12",
+        "13": "+13",
+        "14": "+14",
+        "15": "+15",
+        "16": "สมบูรณ์"
+      },
       "CT": 25.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -5042,6 +5675,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/EV]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "CT": 4.5,
+          "EV": 0.25
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "CT": 15.0,
+          "EV": 8.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "CT": 15.0,
       "EV": 8.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5060,6 +5740,61 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/HP]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "CT": 4.5
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "CT": 15.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 150.0,
+            "unit": "flat"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "CT": 15.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -5082,6 +5817,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [CT/HT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "CT": 4.5,
+          "HT": 10
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "CT": 15.0,
+          "HT": 500
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "CT": 15.0,
       "HT": 500,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5100,6 +5882,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/AT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "EV": 0.5,
+          "AT": 275
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "EV": 10.0,
+          "AT": 1000
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "EV": 10.0,
       "AT": 1000,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5118,6 +5947,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/CT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "EV": 0.5,
+          "CT": 2.75
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "EV": 10.0,
+          "CT": 10.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "EV": 10.0,
       "CT": 10.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5136,6 +6012,51 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/EV]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "EV": 0.75
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "EV": 18.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "EV": 18.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -5153,6 +6074,61 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/HP]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "EV": 0.5
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "EV": 10.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 150.0,
+            "unit": "flat"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "EV": 10.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -5175,6 +6151,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [EV/HT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "EV": 0.5,
+          "HT": 10
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "EV": 10.0,
+          "HT": 500
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "EV": 10.0,
       "HT": 500,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5193,6 +6216,61 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/AT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "AT": 275
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "AT": 1000
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 200.0,
+            "unit": "flat"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "AT": 1000,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -5215,6 +6293,61 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/CT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "CT": 2.75
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "CT": 10.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 200.0,
+            "unit": "flat"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "CT": 10.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -5237,6 +6370,61 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/EV]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "EV": 0.25
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "EV": 8.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 200.0,
+            "unit": "flat"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "EV": 8.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -5259,6 +6447,67 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/HP]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 200.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "HP",
+            "value": 150.0,
+            "unit": "flat"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
       "extra": [
@@ -5285,6 +6534,61 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HP/HT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "HT": 10
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "HT": 500
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 200.0,
+            "unit": "flat"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "HT": 500,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -5307,6 +6611,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/AT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "HT": 25,
+          "AT": 275
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "HT": 750,
+          "AT": 1000
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "HT": 750,
       "AT": 1000,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5325,6 +6676,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/CT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "HT": 25,
+          "CT": 2.75
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "HT": 750,
+          "CT": 10.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "HT": 750,
       "CT": 10.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5343,6 +6741,53 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/EV]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "HT": 25,
+          "EV": 0.25
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "HT": 750,
+          "EV": 8.0
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "HT": 750,
       "EV": 8.0,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
@@ -5361,6 +6806,61 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/HP]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "HT": 25
+        },
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "7": {},
+        "8": {},
+        "9": {},
+        "10": {},
+        "11": {},
+        "12": {},
+        "13": {},
+        "14": {},
+        "15": {},
+        "16": {
+          "HT": 750
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 150.0,
+            "unit": "flat"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "16": "สมบูรณ์"
+      },
       "HT": 750,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -5383,6 +6883,201 @@
       "slot": "glasses",
       "axis": "digimon",
       "nameTh": "แว่นนิรภัยแอดเวนเจอร์ [HT/HT]",
+      "upgrade": 0,
+      "upgradeMax": 16,
+      "levelStats": {
+        "0": {
+          "HT": 35
+        },
+        "1": {
+          "HT": 75
+        },
+        "2": {
+          "HT": 125
+        },
+        "3": {
+          "HT": 200
+        },
+        "4": {
+          "HT": 250
+        },
+        "5": {
+          "HT": 300
+        },
+        "6": {
+          "HT": 375
+        },
+        "7": {
+          "HT": 450
+        },
+        "8": {
+          "HT": 525
+        },
+        "9": {
+          "HT": 600
+        },
+        "10": {
+          "HT": 675
+        },
+        "11": {
+          "HT": 750
+        },
+        "12": {
+          "HT": 840
+        },
+        "13": {
+          "HT": 910
+        },
+        "14": {
+          "HT": 980
+        },
+        "15": {
+          "HT": 1050
+        },
+        "16": {
+          "HT": 1250
+        }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Skill DMG",
+            "value": 0.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "16": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "0": "+0",
+        "1": "+1",
+        "2": "+2",
+        "3": "+3",
+        "4": "+4",
+        "5": "+5",
+        "6": "+6",
+        "7": "+7",
+        "8": "+8",
+        "9": "+9",
+        "10": "+10",
+        "11": "+11",
+        "12": "+12",
+        "13": "+13",
+        "14": "+14",
+        "15": "+15",
+        "16": "สมบูรณ์"
+      },
       "HT": 1250,
       "iconWiki": "/images/8/87/Adv_Goggles_15.png",
       "icon": "img/gear/adv_goggles_15.png",
@@ -13228,7 +14923,109 @@
       "name": "Spiral Key Ring (Families) Lv.Max",
       "slot": "keyring",
       "axis": "digimon",
-      "nameTh": "สไปรอลคีย์ริง [ตระกูล] Lv Max",
+      "nameTh": "สไปรอลคีย์ริง [ตระกูล]",
+      "upgrade": 0,
+      "upgradeMax": 8,
+      "levelStats": {
+        "0": {},
+        "1": {
+          "AT": 10
+        },
+        "2": {
+          "AT": 19
+        },
+        "3": {
+          "AT": 38
+        },
+        "4": {
+          "AT": 67
+        },
+        "5": {
+          "AT": 105
+        },
+        "6": {
+          "AT": 153
+        },
+        "7": {
+          "AT": 210
+        },
+        "8": {
+          "AT": 278
+        }
+      },
+      "levelExtra": {
+        "1": [
+          {
+            "stat": "HP",
+            "value": 60.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 130.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 260.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 470.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 730.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 1070.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 1470.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 1940.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ]
+      },
+      "levelLabels": {
+        "1": "Lv.1",
+        "2": "Lv.2",
+        "3": "Lv.3",
+        "4": "Lv.4",
+        "5": "Lv.5",
+        "6": "Lv.6",
+        "7": "Lv.7",
+        "8": "Lv.Max"
+      },
       "AT": 278,
       "ranged": true,
       "iconWiki": "/images/4/4b/Spiral_Key_Ring_DS_Level_7.png",
@@ -13282,7 +15079,112 @@
       "name": "Spiral Key Ring Lv.Max",
       "slot": "keyring",
       "axis": "tamer",
-      "nameTh": "สไปรอลคีย์ริง Lv Max",
+      "nameTh": "สไปรอลคีย์ริง",
+      "upgrade": 0,
+      "upgradeMax": 8,
+      "levelStats": {
+        "0": {},
+        "1": {
+          "AT": 8,
+          "DE": 6
+        },
+        "2": {
+          "AT": 15,
+          "DE": 10
+        },
+        "3": {
+          "AT": 30,
+          "DE": 22
+        },
+        "4": {
+          "AT": 54,
+          "DE": 37
+        },
+        "5": {
+          "AT": 84,
+          "DE": 59
+        },
+        "6": {
+          "AT": 122,
+          "DE": 86
+        },
+        "7": {
+          "AT": 168,
+          "DE": 119
+        },
+        "8": {
+          "AT": 222,
+          "DE": 156
+        }
+      },
+      "levelExtra": {
+        "1": [
+          {
+            "stat": "HP",
+            "value": 50.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 210.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 370.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 590.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 860.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 1180.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 1550.0,
+            "unit": "flat"
+          }
+        ]
+      },
+      "levelLabels": {
+        "1": "Lv.1",
+        "2": "Lv.2",
+        "3": "Lv.3",
+        "4": "Lv.4",
+        "5": "Lv.5",
+        "6": "Lv.6",
+        "7": "Lv.7",
+        "8": "Lv.Max"
+      },
       "AT": 222,
       "DE": 156,
       "ranged": true,

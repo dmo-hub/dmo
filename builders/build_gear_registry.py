@@ -368,6 +368,8 @@ def add_th_goggles(out):
         if top:
             rec.update(upgrade=0, upgradeMax=top, levelStats=table)
             with_level_extra(rec, src["levels"])
+            if src.get("levelLabels"):
+                rec["levelLabels"] = src["levelLabels"]
         rec.update(table[str(top)])
         if src.get("ranged"):
             rec["ranged"] = True
@@ -420,6 +422,8 @@ def add_th_tamer_gear(out, items):
         if top:
             rec.update(upgrade=0, upgradeMax=top, levelStats=table)
             with_level_extra(rec, src["levels"])
+            if src.get("levelLabels"):
+                rec["levelLabels"] = src["levelLabels"]
         rec.update(table[str(top)])
         if src.get("ranged"):
             rec["ranged"] = True
