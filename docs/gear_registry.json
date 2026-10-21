@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-10-20",
+  "built_at": "2026-10-21",
   "source": "data/clothing_items.json",
   "note": "stat values are the TOP of each roll range and the highest upgrade band; axis 'unknown' means the wiki never said which side the stat feeds",
   "items": [
@@ -1107,7 +1107,8 @@
           "value": 5.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "ไวทัล เบรธ ดิจิไวซ์ -V-"
     },
     {
       "id": "bracelets-zero-unit-bracelet-2",
@@ -1129,7 +1130,8 @@
           "value": 1440.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "กำไลซีโร่ยูนิตที่ถูกปิดผนึก"
     },
     {
       "id": "digivice-digimon-darkness-loader",
@@ -2811,7 +2813,8 @@
           "value": 1500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "ต่างหูแห่งความเมตตาที่เปล่งประกาย"
     },
     {
       "id": "earrings-radiant-earrings-of-four-holy-beasts-lv-5",
@@ -8194,7 +8197,8 @@
           "value": 15.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สร้อยคอปาฏิหาริย์ที่เปล่งประกาย"
     },
     {
       "id": "necklaces-radiant-necklace-of-four-holy-beasts-lv-5",
@@ -8247,7 +8251,8 @@
           "value": 15.0,
           "unit": "pct"
         }
-      ]
+      ],
+      "nameTh": "สร้อยคอซีโร่ยูนิตที่ถูกปิดผนึก"
     },
     {
       "id": "rings-brilliant-ring-of-hope-2",
@@ -8315,7 +8320,8 @@
           "value": 960.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แหวนอารีน่าที่เปล่งประกาย"
     },
     {
       "id": "rings-zero-unit-ring-2",
@@ -8335,7 +8341,8 @@
           "value": 960.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "แหวนซีโร่ยูนิตที่ถูกปิดผนึก"
     },
     {
       "id": "shoes-agumon-feet-shoes-30d",
@@ -9981,7 +9988,8 @@
         }
       ],
       "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
-      "obtain": "Event cash shop item"
+      "obtain": "Event cash shop item",
+      "nameTh": "XAI Ver VI (ซากุระ)"
     },
     {
       "id": "xai-system-xai-ver-anniversary",
@@ -10051,7 +10059,8 @@
       "icon": "img/gear/xai_ver_iii.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
-      "obtain": "Digitamamon (Item Make) Event reward"
+      "obtain": "Digitamamon (Item Make) Event reward",
+      "nameTh": "XAI Ver III"
     },
     {
       "id": "xai-system-xai-ver-iv",
@@ -10062,7 +10071,8 @@
       "iconWiki": "/images/f/fb/XAI_Ver_iv.png",
       "icon": "img/gear/xai_ver_iv.png",
       "rows": [],
-      "info": "dmowiki ยังไม่มีค่า"
+      "info": "dmowiki ยังไม่มีค่า",
+      "nameTh": "XAI Ver IV"
     },
     {
       "id": "xai-system-xai-ver-ix",
@@ -10102,7 +10112,8 @@
         }
       ],
       "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
-      "obtain": "Event cash shop item"
+      "obtain": "Event cash shop item",
+      "nameTh": "XAI Ver.สายฟ้า"
     },
     {
       "id": "xai-system-xai-ver-storm-ii",
@@ -10131,7 +10142,8 @@
         }
       ],
       "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
-      "obtain": "Event cash shop item"
+      "obtain": "Event cash shop item",
+      "nameTh": "XAI Ver.สายฟ้า2"
     },
     {
       "id": "xai-system-xai-ver-v",
@@ -10142,7 +10154,8 @@
       "iconWiki": "/images/c/c4/XAI_ver_v.png",
       "icon": "img/gear/xai_ver_v.png",
       "rows": [],
-      "info": "dmowiki ยังไม่มีค่า"
+      "info": "dmowiki ยังไม่มีค่า",
+      "nameTh": "XAI Ver V"
     },
     {
       "id": "xai-system-xai-ver-vi",
@@ -10154,7 +10167,8 @@
       "icon": "img/gear/xai_ver_vi.png",
       "rows": [],
       "info": "dmowiki ยังไม่มีค่า",
-      "obtain": "Cash shop item"
+      "obtain": "Cash shop item",
+      "nameTh": "XAI Ver VI"
     },
     {
       "id": "xai-system-xai-ver-vii",
@@ -10216,7 +10230,8 @@
         }
       ],
       "info": "ค่าจาก dmowiki (vplay ยังไม่มีโพสต์)",
-      "obtain": "Event cash shop item"
+      "obtain": "Event cash shop item",
+      "nameTh": "XAI Ver. X-Mas"
     }
   ]
 }
