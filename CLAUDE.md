@@ -469,7 +469,10 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   not in `/wp-json/wp/v2/posts` without `?categories=5`) ->
   `data/tamer_gear_th.json` -> `build_gear_registry.add_th_tamer_gear`, which
   drops every wiki key ring row and adds the wiki's XAI + Final Digivice (no
-  vplay post). Each line is kept at its top tier only, one item per line;
+  vplay post). The Digital Monster X pair is the exception: TH patch post
+  25565 prints their table, English names from NA event_811 (same numbers).
+  That post's "อุปกรณ์ฟรอนเทียร์" is the Spirit set the registry already has,
+  not new gear. Each line is kept at its top tier only, one item per line;
   family key rings list their 11 families instead of 11 items. A digivice's
   attribute/element options go to `rows` (gear-names) and never to stats.
   Axis: digivices/aura/Ghost digimon (posts say so), Spiral base tamer (post),
