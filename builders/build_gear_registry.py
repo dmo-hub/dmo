@@ -786,6 +786,18 @@ def main():
             rec["ranged"] = True            # the page says these are top-of-roll
         if other:
             rec["extra"] = other
+        # Level-in-name rows are the piece at each level, so they double as
+        # its per-level table instead of only feeding the top band.
+        if len(rows) > 1 and all(r.get("_name_level") is not None for r in rows):
+            levels = [{"upgrade": r["_name_level"],
+                       "stats": [{"stat": s["stat"], "value": top_of(s),
+                                  "unit": s.get("unit", "flat")}
+                                 for s in r["stats"]
+                                 if s.get("stat") and top_of(s) is not None]}
+                      for r in rows]
+            table, top = level_table(levels)
+            rec.update(upgradeMax=top, levelStats=table)
+            with_level_extra(rec, levels)
         out.extend(split_sets(rec))
 
     leveled = add_level_stats(out)
