@@ -19,6 +19,9 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import aliases  # noqa: E402
+
 try:
     sys.stdout.reconfigure(encoding="utf-8")
 except Exception:
@@ -104,15 +107,40 @@ MANUAL = {
     "ไทแรนคาบุเทริมอน": "TyrantKabuterimon",
     "ไทแรนคาบูเทริมอน": "TyrantKabuterimon",
     "ไบฟูมอน": "Baihumon",
+    # --- event seals: meaning matches AND th-88's stat/master value matches
+    #     the NA/KR row (Blue Dragon, Sapling, Imagination, Victory have no
+    #     NA/KR seal that fits both, so they stay unmapped) ---
+    "แห่งความกระตือรือร้น": "Passionate",
+    "ผู้พิทักษ์สิ่งแวดล้อม": "Environment Guardian",
+    "เปิดเทอมใหม่": "New Semester",
+    "ซัมเมอร์": "Summer",
+    "ครบรอบ 10 ปี": "10th Year Anniversary",
+    "เทพธนู": "Marksman",
+    "แห่งการสำรวจ": "Exploration",
+    "แห่งความกล้า": "Brave",
+    "แห่งความหวัง": "Hope",
+    "มังกร": "Dragon",
+    "สุดท้ายของปี 2024": "Last Seal of 2024",
+    "แห่งความซื่อสัตย์": "Sincerity",
+    "อากาศร้อน": "Heat",
+    "เติบโตมาอย่างดี": "Grow Well",
+    "แห่งความแข็งแกร่ง": "Firm",
+    "แห่งมิตรภาพ": "Friendship",
+    "แห่งฤดูใบไม้ผลิ": "Spring",
+    "แห่งความเย็นยะเยือก": "Coolness",
+    "แห่งความรู้": "Knowledge",
+    "แห่งครอบครัว": "Family",
+    "แห่งความสุข": "Happiness",
+    "แห่งการเริ่มต้น": "Beginning",
 }
 
 
 def th_name(s):
-    return re.sub(r"\s*ซีล.*$", "", re.sub(r"\[[^\]]*\]", "", s)).strip()
+    return aliases.seal_base(s)
 
 
 def en_name(s):
-    return re.sub(r"\s*Seal.*$", "", re.sub(r"\[[^\]]*\]", "", s)).strip()
+    return aliases.seal_base(s)
 
 
 def rows(html):

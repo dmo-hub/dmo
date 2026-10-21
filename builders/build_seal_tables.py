@@ -316,13 +316,12 @@ def _name_multiset(html, server):
         ]
         if not cells or not cells[0]:
             continue
-        raw = re.sub(r"\[[^\]]*\]", "", cells[0]).strip()
+        base = aliases.seal_base(cells[0])
         if server == "th":
-            base = re.sub(r"\s*ซีล.*$", "", raw).strip()
             en = TH_EN.get(base)
-            key = _norm_seal(en) if en else "th:" + _norm_seal(re.sub(r"ซีล", "", base))
+            key = _norm_seal(en) if en else "th:" + base
         else:
-            key = _norm_seal(re.sub(r"\s*Seal.*$", "", raw))
+            key = _norm_seal(base)
         if key:
             ms[key] += 1
     return ms
@@ -491,8 +490,7 @@ def _seal_key(raw, srv):
     has no English mapping (it then can't be matched against the NA/KR set)."""
     raw = re.sub(r"\[[^\]]*\]", "", raw).strip()
     if srv == "th":
-        base = re.sub(r"\s*ซีล.*$", "", raw).strip()
-        en = TH_EN.get(base)
+        en = TH_EN.get(aliases.seal_base(raw))
         return _norm_seal(en) if en else None
     return _norm_seal(raw)
 

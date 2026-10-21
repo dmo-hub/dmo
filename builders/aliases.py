@@ -28,10 +28,24 @@ def _norm_key(s: str) -> str:
 
 
 def _strip_decoration(s: str) -> str:
-    """Drop a trailing ' Seal...'/' 씰...'/' ซีล...' suffix and [bracketed] tags."""
-    s = re.sub(r"\[[^\]]*\]", "", s)
+    """Drop a trailing ' Seal...'/' 씰...'/' ซีล...' suffix and [bracketed] tags.
+
+    Event seals put the word first ("Seal of spring", "ซีลแห่งความหวัง");
+    cutting from the first "Seal" left those empty, so every one of them fell
+    out of cross-server matching. They keep the rest of the name instead."""
+    s = re.sub(r"\[[^\]]*\]|\((?:กิจกรรม|กิจกกรม)\)", "", s).strip()
+    m = re.match(r"(?i)^(seal\s+of\s+(.+)|last\s+seal\s+of\s+.+)$", s)
+    if m:
+        s = m.group(2) or m.group(1)
+        return re.sub(r"(?i)\s+(x\d+|\d+ea)$", "", s).strip()
+    if s.startswith("ซีล"):
+        return s[len("ซีล"):].strip()
     s = re.sub(r"\s*(Seal|씰|ซีล).*$", "", s)
     return s.strip()
+
+
+# The base name a seal-table row compares by (what TH_EN keys and values hold).
+seal_base = _strip_decoration
 
 
 def _load():

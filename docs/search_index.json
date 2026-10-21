@@ -7,632 +7,6 @@
  "entries": [
   {
    "type": "seal",
-   "key": "",
-   "display": "",
-   "names": {
-    "en": [
-     ""
-    ],
-    "kr": [
-     "무더위의 씰",
-     "봄의 씰",
-     "싸늘함의 씰",
-     "싸늘함의 씰 [ 지급용 ]",
-     "여름의 씰"
-    ],
-    "th": []
-   },
-   "servers": {
-    "kr": [
-     {
-      "post": "kr-780048",
-      "date": "13.12.2023",
-      "qty": "1",
-      "tickets": "2",
-      "stat": "EV",
-      "value": "100"
-     },
-     {
-      "post": "kr-807402",
-      "date": "18.06.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "150"
-     },
-     {
-      "post": "kr-807402",
-      "date": "18.06.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HP",
-      "value": "150"
-     },
-     {
-      "post": "kr-807402",
-      "date": "18.06.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "BL",
-      "value": "100"
-     },
-     {
-      "post": "kr-807402",
-      "date": "18.06.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "EV",
-      "value": "100"
-     },
-     {
-      "post": "kr-811362",
-      "date": "15.10.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "150"
-     },
-     {
-      "post": "kr-811362",
-      "date": "15.10.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HP",
-      "value": "150"
-     },
-     {
-      "post": "kr-811362",
-      "date": "15.10.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "BL",
-      "value": "100"
-     },
-     {
-      "post": "kr-811362",
-      "date": "15.10.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "EV",
-      "value": "100"
-     },
-     {
-      "post": "kr-811713",
-      "date": "05.11.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "150"
-     },
-     {
-      "post": "kr-811713",
-      "date": "05.11.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HP",
-      "value": "150"
-     },
-     {
-      "post": "kr-811713",
-      "date": "05.11.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "BL",
-      "value": "100"
-     },
-     {
-      "post": "kr-811713",
-      "date": "05.11.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "EV",
-      "value": "100"
-     }
-    ],
-    "na": [
-     {
-      "post": "na-703",
-      "date": "04.02.2025",
-      "qty": "—",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "na-703",
-      "date": "04.02.2025",
-      "qty": "—",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "na-703",
-      "date": "04.02.2025",
-      "qty": "—",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "na-715",
-      "date": "08.04.2025",
-      "qty": "—",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "na-715",
-      "date": "08.04.2025",
-      "qty": "—",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "na-715",
-      "date": "08.04.2025",
-      "qty": "—",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "na-743",
-      "date": "17.06.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "150"
-     },
-     {
-      "post": "na-743",
-      "date": "17.06.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HP",
-      "value": "150"
-     },
-     {
-      "post": "na-743",
-      "date": "17.06.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "BL",
-      "value": "100"
-     },
-     {
-      "post": "na-743",
-      "date": "17.06.2025",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "EV",
-      "value": "100"
-     }
-    ],
-    "th": [
-     {
-      "post": "th-56",
-      "date": "23.11.2023",
-      "qty": "1",
-      "tickets": "2",
-      "stat": "HP",
-      "value": "150"
-     },
-     {
-      "post": "th-56",
-      "date": "23.11.2023",
-      "qty": "1",
-      "tickets": "2",
-      "stat": "AT",
-      "value": "150"
-     },
-     {
-      "post": "th-56",
-      "date": "23.11.2023",
-      "qty": "1",
-      "tickets": "2",
-      "stat": "EV",
-      "value": "100"
-     },
-     {
-      "post": "th-59",
-      "date": "22.02.2024",
-      "qty": "1",
-      "tickets": "2",
-      "stat": "HT",
-      "value": "100"
-     },
-     {
-      "post": "th-59",
-      "date": "22.02.2024",
-      "qty": "1",
-      "tickets": "2",
-      "stat": "CT",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "200"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "5",
-      "stat": "AT",
-      "value": "300"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HT",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HT",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HT",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HT",
-      "value": "200"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "CT",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "CT",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "CT",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "5",
-      "stat": "CT",
-      "value": "200"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HP",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HP",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "HP",
-      "value": "150"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "BL",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "BL",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "BL",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "EV",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "EV",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "EV",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "EV",
-      "value": "100"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "DS",
-      "value": "200"
-     },
-     {
-      "post": "th-88",
-      "date": "11.06.2026",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "DS",
-      "value": "200"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "th-91",
-      "date": "23.07.2026",
-      "qty": "10",
-      "tickets": "10",
-      "stat": "—",
-      "value": "—"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
    "key": "10thyearanniversary",
    "display": "10th Year Anniversary",
    "names": {
@@ -640,7 +14,9 @@
      "10th Year Anniversary"
     ],
     "kr": [],
-    "th": []
+    "th": [
+     "ครบรอบ 10 ปี"
+    ]
    },
    "servers": {
     "na": [
@@ -663,6 +39,16 @@
      {
       "post": "na-743",
       "date": "17.06.2025",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "AT",
+      "value": "300"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
       "qty": "1",
       "tickets": "5",
       "stat": "AT",
@@ -3043,7 +2429,9 @@
     "kr": [
      "시작의 씰"
     ],
-    "th": []
+    "th": [
+     "แห่งการเริ่มต้น"
+    ]
    },
    "servers": {
     "kr": [
@@ -3104,6 +2492,24 @@
       "tickets": "1",
       "stat": "DS",
       "value": "200"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "200"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -3927,7 +3333,9 @@
      "용기의 씰",
      "용기의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "แห่งความกล้า"
+    ]
    },
    "servers": {
     "kr": [
@@ -3996,6 +3404,24 @@
       "tickets": "1",
       "stat": "HT",
       "value": "100"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -4825,16 +4251,105 @@
     "en": [
      "Coolness"
     ],
-    "kr": [],
-    "th": []
+    "kr": [
+     "싸늘함의 씰",
+     "싸늘함의 씰 [ 지급용 ]"
+    ],
+    "th": [
+     "แห่งความเย็นยะเยือก"
+    ]
    },
    "servers": {
+    "kr": [
+     {
+      "post": "kr-780048",
+      "date": "13.12.2023",
+      "qty": "1",
+      "tickets": "2",
+      "stat": "EV",
+      "value": "100"
+     },
+     {
+      "post": "kr-807402",
+      "date": "18.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
+     },
+     {
+      "post": "kr-811362",
+      "date": "15.10.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
+     },
+     {
+      "post": "kr-811713",
+      "date": "05.11.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
+     }
+    ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-740",
       "date": "10.06.2025",
       "qty": "—",
       "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-743",
+      "date": "17.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-56",
+      "date": "23.11.2023",
+      "qty": "1",
+      "tickets": "2",
+      "stat": "EV",
+      "value": "100"
+     },
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
       "stat": "—",
       "value": "—"
      }
@@ -6417,7 +5932,9 @@
     "kr": [
      "용의 씰"
     ],
-    "th": []
+    "th": [
+     "มังกร"
+    ]
    },
    "servers": {
     "kr": [
@@ -6452,6 +5969,24 @@
       "date": "10.06.2025",
       "qty": "—",
       "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
       "stat": "—",
       "value": "—"
      }
@@ -7384,7 +6919,9 @@
      "환경의 수호자 씰",
      "환경의 수호자 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "ผู้พิทักษ์สิ่งแวดล้อม"
+    ]
    },
    "servers": {
     "kr": [
@@ -7461,6 +6998,24 @@
       "tickets": "1",
       "stat": "AT",
       "value": "150"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -7831,7 +7386,9 @@
      "탐험의 씰",
      "탐험의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "แห่งการสำรวจ"
+    ]
    },
    "servers": {
     "kr": [
@@ -7900,6 +7457,32 @@
       "tickets": "1",
       "stat": "HT",
       "value": "100"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-59",
+      "date": "22.02.2024",
+      "qty": "1",
+      "tickets": "2",
+      "stat": "HT",
+      "value": "100"
+     },
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -8129,7 +7712,9 @@
     "kr": [
      "가정의 씰"
     ],
-    "th": []
+    "th": [
+     "แห่งครอบครัว"
+    ]
    },
    "servers": {
     "kr": [
@@ -8190,6 +7775,24 @@
       "tickets": "1",
       "stat": "EV",
       "value": "100"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -8306,7 +7909,9 @@
      "견고의 씰",
      "견고의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "แห่งความแข็งแกร่ง"
+    ]
    },
    "servers": {
     "kr": [
@@ -8383,6 +7988,24 @@
       "tickets": "1",
       "stat": "BL",
       "value": "100"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -8533,7 +8156,9 @@
      "우정의 씰",
      "우정의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "แห่งมิตรภาพ"
+    ]
    },
    "servers": {
     "kr": [
@@ -8610,6 +8235,24 @@
       "tickets": "1",
       "stat": "BL",
       "value": "100"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -10811,7 +10454,9 @@
      "무럭무럭 자라다오",
      "무럭무럭 자라다오 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "เติบโตมาอย่างดี"
+    ]
    },
    "servers": {
     "kr": [
@@ -10880,6 +10525,32 @@
       "tickets": "1",
       "stat": "HP",
       "value": "150"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-56",
+      "date": "23.11.2023",
+      "qty": "1",
+      "tickets": "2",
+      "stat": "HP",
+      "value": "150"
+     },
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -11260,7 +10931,9 @@
      "행복의 씰",
      "행복의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "แห่งความสุข"
+    ]
    },
    "servers": {
     "kr": [
@@ -11338,6 +11011,24 @@
       "stat": "DS",
       "value": "200"
      }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "200"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
+     }
     ]
    }
   },
@@ -11373,16 +11064,88 @@
     "en": [
      "Heat"
     ],
-    "kr": [],
-    "th": []
+    "kr": [
+     "무더위의 씰"
+    ],
+    "th": [
+     "อากาศร้อน"
+    ]
    },
    "servers": {
+    "kr": [
+     {
+      "post": "kr-807402",
+      "date": "18.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
+     },
+     {
+      "post": "kr-811362",
+      "date": "15.10.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
+     },
+     {
+      "post": "kr-811713",
+      "date": "05.11.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
+     }
+    ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-740",
       "date": "10.06.2025",
       "qty": "—",
       "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-743",
+      "date": "17.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
       "stat": "—",
       "value": "—"
      }
@@ -11618,7 +11381,9 @@
      "희망의 씰",
      "희망의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "แห่งความหวัง"
+    ]
    },
    "servers": {
     "kr": [
@@ -11695,6 +11460,32 @@
       "tickets": "1",
       "stat": "CT",
       "value": "150"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-59",
+      "date": "22.02.2024",
+      "qty": "1",
+      "tickets": "2",
+      "stat": "CT",
+      "value": "150"
+     },
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -12773,7 +12564,9 @@
      "지식의 씰",
      "지식의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "แห่งความรู้"
+    ]
    },
    "servers": {
     "kr": [
@@ -12850,6 +12643,24 @@
       "tickets": "1",
       "stat": "EV",
       "value": "100"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -13457,108 +13268,6 @@
   },
   {
    "type": "seal",
-   "key": "last",
-   "display": "Last",
-   "names": {
-    "en": [
-     "Last"
-    ],
-    "kr": [
-     "2023 년의 마지막 씰",
-     "2023 년의 마지막 씰 [ 지급용 ]",
-     "2024 년 마지막 씰"
-    ],
-    "th": []
-   },
-   "servers": {
-    "kr": [
-     {
-      "post": "kr-789333",
-      "date": "07.08.2024",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "CT",
-      "value": "200"
-     },
-     {
-      "post": "kr-807402",
-      "date": "18.06.2025",
-      "qty": "1",
-      "tickets": "5",
-      "stat": "CT",
-      "value": "200"
-     },
-     {
-      "post": "kr-807402",
-      "date": "18.06.2025",
-      "qty": "1",
-      "tickets": "5",
-      "stat": "CT",
-      "value": "200"
-     },
-     {
-      "post": "kr-811362",
-      "date": "15.10.2025",
-      "qty": "1",
-      "tickets": "5",
-      "stat": "CT",
-      "value": "200"
-     },
-     {
-      "post": "kr-811362",
-      "date": "15.10.2025",
-      "qty": "1",
-      "tickets": "5",
-      "stat": "CT",
-      "value": "200"
-     },
-     {
-      "post": "kr-811713",
-      "date": "05.11.2025",
-      "qty": "1",
-      "tickets": "5",
-      "stat": "CT",
-      "value": "200"
-     },
-     {
-      "post": "kr-811713",
-      "date": "05.11.2025",
-      "qty": "1",
-      "tickets": "5",
-      "stat": "CT",
-      "value": "200"
-     }
-    ],
-    "na": [
-     {
-      "post": "na-703",
-      "date": "04.02.2025",
-      "qty": "—",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "na-715",
-      "date": "08.04.2025",
-      "qty": "—",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
-     },
-     {
-      "post": "na-743",
-      "date": "17.06.2025",
-      "qty": "1",
-      "tickets": "5",
-      "stat": "CT",
-      "value": "200"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
    "key": "lastevolutionkizuna",
    "display": "Last Evolution Kizuna",
    "names": {
@@ -13605,6 +13314,137 @@
       "tickets": "100",
       "stat": "AT",
       "value": "400"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "lastsealof2023",
+   "display": "Last Seal of 2023",
+   "names": {
+    "en": [
+     "Last Seal of 2023"
+    ],
+    "kr": [
+     "2023 년의 마지막 씰",
+     "2023 년의 마지막 씰 [ 지급용 ]"
+    ],
+    "th": []
+   },
+   "servers": {
+    "kr": [
+     {
+      "post": "kr-789333",
+      "date": "07.08.2024",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "200"
+     },
+     {
+      "post": "kr-807402",
+      "date": "18.06.2025",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "CT",
+      "value": "200"
+     },
+     {
+      "post": "kr-811362",
+      "date": "15.10.2025",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "CT",
+      "value": "200"
+     },
+     {
+      "post": "kr-811713",
+      "date": "05.11.2025",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "CT",
+      "value": "200"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-743",
+      "date": "17.06.2025",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "CT",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "lastsealof2024",
+   "display": "Last Seal of 2024",
+   "names": {
+    "en": [
+     "Last Seal of 2024"
+    ],
+    "kr": [
+     "2024 년 마지막 씰"
+    ],
+    "th": [
+     "สุดท้ายของปี 2024"
+    ]
+   },
+   "servers": {
+    "kr": [
+     {
+      "post": "kr-807402",
+      "date": "18.06.2025",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "CT",
+      "value": "200"
+     },
+     {
+      "post": "kr-811362",
+      "date": "15.10.2025",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "CT",
+      "value": "200"
+     },
+     {
+      "post": "kr-811713",
+      "date": "05.11.2025",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "CT",
+      "value": "200"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "5",
+      "stat": "CT",
+      "value": "200"
      }
     ]
    }
@@ -14746,7 +14586,9 @@
      "신궁의 씰",
      "신궁의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "เทพธนู"
+    ]
    },
    "servers": {
     "kr": [
@@ -14823,6 +14665,24 @@
       "tickets": "1",
       "stat": "HT",
       "value": "100"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -16735,7 +16595,9 @@
     "kr": [
      "새 학기 씰"
     ],
-    "th": []
+    "th": [
+     "เปิดเทอมใหม่"
+    ]
    },
    "servers": {
     "kr": [
@@ -16796,6 +16658,24 @@
       "tickets": "1",
       "stat": "AT",
       "value": "150"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -17737,7 +17617,9 @@
      "정열의 씰",
      "정열의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "แห่งความกระตือรือร้น"
+    ]
    },
    "servers": {
     "kr": [
@@ -17806,6 +17688,32 @@
       "tickets": "1",
       "stat": "AT",
       "value": "150"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-56",
+      "date": "23.11.2023",
+      "qty": "1",
+      "tickets": "2",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -20798,7 +20706,9 @@
      "성실의 씰",
      "성실의 씰 [ 지급용 ]"
     ],
-    "th": []
+    "th": [
+     "แห่งความซื่อสัตย์"
+    ]
    },
    "servers": {
     "kr": [
@@ -20875,6 +20785,24 @@
       "tickets": "1",
       "stat": "HP",
       "value": "150"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -21444,21 +21372,94 @@
   {
    "type": "seal",
    "key": "spring",
-   "display": "Spring",
+   "display": "spring",
    "names": {
     "en": [
+     "spring",
      "Spring"
     ],
-    "kr": [],
-    "th": []
+    "kr": [
+     "봄의 씰"
+    ],
+    "th": [
+     "แห่งฤดูใบไม้ผลิ"
+    ]
    },
    "servers": {
+    "kr": [
+     {
+      "post": "kr-807402",
+      "date": "18.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     },
+     {
+      "post": "kr-811362",
+      "date": "15.10.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     },
+     {
+      "post": "kr-811713",
+      "date": "05.11.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     }
+    ],
     "na": [
+     {
+      "post": "na-703",
+      "date": "04.02.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-715",
+      "date": "08.04.2025",
+      "qty": "—",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-740",
       "date": "10.06.2025",
       "qty": "—",
       "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-743",
+      "date": "17.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "100"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
       "stat": "—",
       "value": "—"
      }
@@ -21476,7 +21477,9 @@
     "kr": [
      "새싹의 씰"
     ],
-    "th": []
+    "th": [
+     "แห่งต้นกล้า"
+    ]
    },
    "servers": {
     "kr": [
@@ -21514,27 +21517,94 @@
       "stat": "HT",
       "value": "200"
      }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "200"
+     }
     ]
    }
   },
   {
    "type": "seal",
    "key": "summer",
-   "display": "Summer",
+   "display": "summer",
    "names": {
     "en": [
+     "summer",
      "Summer"
     ],
-    "kr": [],
-    "th": []
+    "kr": [
+     "여름의 씰"
+    ],
+    "th": [
+     "ซัมเมอร์"
+    ]
    },
    "servers": {
+    "kr": [
+     {
+      "post": "kr-807402",
+      "date": "18.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
+      "post": "kr-811362",
+      "date": "15.10.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
+      "post": "kr-811713",
+      "date": "05.11.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     }
+    ],
     "na": [
      {
       "post": "na-740",
       "date": "10.06.2025",
       "qty": "—",
       "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-743",
+      "date": "17.06.2025",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
       "stat": "—",
       "value": "—"
      }
@@ -24424,6 +24494,86 @@
       "tickets": "25",
       "stat": "DS",
       "value": "600"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:ของมังกรสีน้ำเงิน",
+   "display": "ของมังกรสีน้ำเงิน",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "ของมังกรสีน้ำเงิน"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:แห่งจินตนาการ",
+   "display": "แห่งจินตนาการ",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "แห่งจินตนาการ"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "100"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "th:แห่งชัยชนะ",
+   "display": "แห่งชัยชนะ",
+   "names": {
+    "en": [],
+    "kr": [],
+    "th": [
+     "แห่งชัยชนะ"
+    ]
+   },
+   "servers": {
+    "th": [
+     {
+      "post": "th-88",
+      "date": "11.06.2026",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "150"
+     },
+     {
+      "post": "th-91",
+      "date": "23.07.2026",
+      "qty": "10",
+      "tickets": "10",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
