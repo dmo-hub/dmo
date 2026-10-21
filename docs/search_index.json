@@ -1,7 +1,7 @@
 {
  "coverage": {
   "na": "2026-09-16",
-  "kr": "2026-07-14",
+  "kr": "2026-09-15",
   "th": "2026-09-17"
  },
  "entries": [
@@ -26270,6 +26270,12 @@
      {
       "url": "https://dmo.gameking.com/news/PatchNoteView.aspx?idx=4199",
       "date": "09-16-2026"
+     }
+    ],
+    "kr": [
+     {
+      "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=823928&Btype=Update",
+      "date": "2026-09-15"
      }
     ]
    }

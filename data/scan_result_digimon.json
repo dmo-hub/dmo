@@ -1177,7 +1177,21 @@
       "digimon": [
         "Apollomon Whispered"
       ],
-      "image": "img/digimon/p4199.png"
+      "image": "img/digimon/p4199.png",
+      "source_kr": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=823928&Btype=Update",
+      "image_kr": "img/digimon/p4199_kr.png",
+      "attributes": {
+        "Apollomon Whispered": {
+          "attribute": "Virus",
+          "attribute_abbr": "VI",
+          "natural_attribute": "Pitch Black",
+          "families": [
+            "Dragon's Roar",
+            "Nature Spirits",
+            "TBD"
+          ]
+        }
+      }
     }
   }
 }
