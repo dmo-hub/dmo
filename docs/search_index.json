@@ -10547,38 +10547,6 @@
   },
   {
    "type": "seal",
-   "key": "golemon",
-   "display": "Golemon",
-   "names": {
-    "en": [],
-    "kr": [],
-    "th": [
-     "โกเลมอน"
-    ]
-   },
-   "servers": {
-    "th": [
-     {
-      "post": "th-12",
-      "date": "24.09.2020",
-      "qty": "5",
-      "tickets": "1",
-      "stat": "DE",
-      "value": "—"
-     },
-     {
-      "post": "th-21",
-      "date": "07.01.2021",
-      "qty": "5",
-      "tickets": "1",
-      "stat": "DE",
-      "value": "—"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
    "key": "gomamon",
    "display": "Gomamon",
    "names": {
@@ -20534,7 +20502,9 @@
     "kr": [
      "록몬 씰"
     ],
-    "th": []
+    "th": [
+     "โกเลมอน"
+    ]
    },
    "servers": {
     "kr": [
@@ -20575,6 +20545,24 @@
      {
       "post": "na-457",
       "date": "17.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-12",
+      "date": "24.09.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
+     },
+     {
+      "post": "th-21",
+      "date": "07.01.2021",
       "qty": "5",
       "tickets": "1",
       "stat": "DE",

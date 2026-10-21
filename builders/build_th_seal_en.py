@@ -99,7 +99,10 @@ MANUAL = {
     "แร็ปเตอร์ดรามอน": "Raptordramon",
     "แรร์มอน": "Raremon",
     "แฮคมอน": "Hackmon",
-    "โกเลมอน": "Golemon",
+    # TH's in-game name for DMO's Rockmon (not wikimon's Golemon): the same
+    # chess-event quest reads "กำจัดโกเลมอน และ ลีลีมอน" in TH and
+    # "Defeat Rockmon ... Lillymon at Silver Lake" in NA (Steam, 28.07.2020)
+    "โกเลมอน": "Rockmon",
     "โบลท์โบทามอน": "Boltboutamon",  # NA na-579 and KR 볼토바우타몬 spell it so
     "โบโคมอน": "Bokomon",
     "โมโนคุโรมอน": "Monochromon",

@@ -212,8 +212,10 @@ python builders/compare_digimon_sources.py 731          # just one idx
 #     A TH table with no exact twin gets a "≈ คล้าย" note for NA/KR lists that
 #     differ by at most min(4, size/4) seals. Pre-2023 twins of old TH tables
 #     live in KR 2019–2022 posts (Word-style tables: "제작 아이템" header, qty in
-#     the seal cell "길몬 씰 10 개") and in NA posts that only Wayback still
-#     serves when gameking is down — fetch with the CDX "original" URL
+#     the seal cell "길몬 씰 10 개"). When gameking is down, NA posts are still
+#     on Steam: ISteamNews/GetNewsForApp appid=537180 with maxlength=0 returns
+#     every announcement in full, images included (complete for 2018–2020,
+#     unlike Wayback). Wayback needs the CDX "original" URL
 #     (http://dmo.gameking.com:80/News/...), a rebuilt URL 404s. cache/ is not
 #     in git, so a post copied in from Wayback exists only on this machine.
 #     New seal posts are AUTO-DISCOVERED from cache/ (phrase scan + the
