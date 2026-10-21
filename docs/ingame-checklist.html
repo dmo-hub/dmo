@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DMO — สิ่งที่ต้องเช็คในเกม</title>
+<link rel="stylesheet" href="css/site.css">
 <style>
 :root{
   --bg:#0f1115; --card:#171a21; --line:#272b35; --fg:#e7e9ee; --dim:#9aa3b2;
@@ -20,7 +21,7 @@ body{margin:0;background:var(--bg);color:var(--fg);
   font:15px/1.55 "Noto Sans Thai",-apple-system,"Segoe UI",Roboto,sans-serif;
   padding:0 0 92px;-webkit-text-size-adjust:100%}
 .wrap{max-width:880px;margin:0 auto;padding:0 14px}
-header{background:linear-gradient(180deg,var(--card),transparent);
+header:not(.site-nav){background:linear-gradient(180deg,var(--card),transparent);
   border-bottom:1px solid var(--line);padding:18px 0 14px;margin-bottom:6px}
 h1{font-size:20px;margin:0 0 4px}
 .lede{color:var(--dim);font-size:13px;margin:0}
@@ -92,6 +93,20 @@ button.act.ghost{background:transparent;border:1px solid var(--line);color:var(-
 </style>
 </head>
 <body>
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="gear.html">Gear Optimizer</a>
+      <a href="gear-names.html">Gear Names</a>
+    </nav>
+    <span class="nav-meta">scrape: gameking · KR · TH</span>
+  </div>
+</header>
 <header><div class="wrap">
   <h1>สิ่งที่ต้องเช็คในเกม</h1>
   <p class="lede">DMO Gear Optimizer — เปิดเกมรอบเดียวเก็บได้ครบทั้ง 4 ข้อ</p>
