@@ -70,7 +70,9 @@ MANUAL = {
     "มุเกนดรามอน": "MugenDramon",
     "ยูคิดารุมอน": "Yukidarumon",
     "ลอร์ดไนท์มอน": "LordKnightmon",
-    "ลูเจมอน ซาตานโหมด": "Lucemon Satan Mode",
+    # NA calls the Satan Mode seal "Lucemon: Wild 2nd Mode" (KR 루체몬 사탄모드
+    # in kr_seal_en; na-630 lists it where th-56 lists this, same HP 500 / 100)
+    "ลูเจมอน ซาตานโหมด": "Lucemon: Wild 2nd Mode",
     "วาจิรามอน": "Vajramon",
     "วาสพ์มอน": "Waspmon",
     "สกัลเกรย์มอน": "SkullGreymon",
@@ -98,7 +100,7 @@ MANUAL = {
     "แรร์มอน": "Raremon",
     "แฮคมอน": "Hackmon",
     "โกเลมอน": "Golemon",
-    "โบลท์โบทามอน": "BoltBotamon",
+    "โบลท์โบทามอน": "Boltboutamon",  # NA na-579 and KR 볼토바우타몬 spell it so
     "โบโคมอน": "Bokomon",
     "โมโนคุโรมอน": "Monochromon",
     "โมโนดรามอน": "Monodramon",

@@ -769,6 +769,22 @@
     "url": "https://dmo.gameking.com/news/EventView.aspx?idx=673",
     "date": "11.06.2024"
   },
+  "na-647": {
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 27,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Exploration Seal [Event]</td><td>1</td><td>2</td><td>HT</td><td>100</td></tr><tr><td>Hope Seal [Event]</td><td>1</td><td>2</td><td>CT</td><td>150</td></tr><tr><td>Dracmon Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Dorumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Salamon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Monodramon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Gazimon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Thunderballmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>AT</td><td>200</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Etemon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Gladimon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Toy Agumon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>RaptorDramon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Metaltyranomon Seal</td><td>1</td><td>10</td><td>DE</td><td>200</td></tr><tr><td>Blackgatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>200</td></tr><tr><td>Culumon Seal</td><td>1</td><td>100</td><td>AT</td><td>250</td></tr><tr><td>Phantomon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>Whamon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>Kuzuhamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>MetalGarurumon Seal</td><td>1</td><td>25</td><td>CT</td><td>300</td></tr><tr><td>DexDorugoramon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Piedmon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>Lucemon: Wild 2nd Mode Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Baihumon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=647",
+    "date": "24.10.2023"
+  },
   "na-636": {
     "tables": [
       {
@@ -784,6 +800,38 @@
     "note": "",
     "url": "https://dmo.gameking.com/news/EventView.aspx?idx=636",
     "date": "01.08.2023"
+  },
+  "na-630": {
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 30,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gladimon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Keramon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>PicoDevimon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Gabumon (Black) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Agumon(S) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Hagurumon Seal</td><td>6</td><td>1</td><td>EV</td><td>150</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Kabuterimon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Ankylomon Seal</td><td>1</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Grow Well Seal [Event]</td><td>1</td><td>2</td><td>HP</td><td>150</td></tr><tr><td>Heat Wave Seal [Event]</td><td>1</td><td>2</td><td>DS</td><td>200</td></tr><tr><td>Passionate Seal [Event]</td><td>1</td><td>2</td><td>AT</td><td>150</td></tr><tr><td>Seal Of Coolness [Event]</td><td>1</td><td>2</td><td>EV</td><td>100</td></tr><tr><td>Blossomon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Antylamon Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Silphymon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Rosemon Seal</td><td>1</td><td>25</td><td>HT</td><td>400</td></tr><tr><td>Ravemon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Sakuyamon Seal</td><td>1</td><td>60</td><td>HP</td><td>400</td></tr><tr><td>Lucemon: Wild 2nd Mode Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>GrandisKuwagamon Seal</td><td>1</td><td>100</td><td>DS</td><td>500</td></tr><tr><td>ShoutmonX2 Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Omegamon Zwart Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr><tr><td>Alphamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Kuzuhamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Gallantmon Crimson Mode Seal</td><td>1</td><td>100</td><td>BL</td><td>300</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=630",
+    "date": "20.06.2023"
+  },
+  "na-579": {
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 22,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gabumon (Black) Seal</td><td>10</td><td>1</td><td>BL</td><td>100</td></tr><tr><td>Hackmon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Keramon Seal</td><td>10</td><td>1</td><td>HP</td><td>150</td></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Renamon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Angemon Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>BaoHackmon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Togemon Seal</td><td>5</td><td>1</td><td>CT</td><td>200</td></tr><tr><td>Coredramon (Green) Seal</td><td>5</td><td>1</td><td>DS</td><td>300</td></tr><tr><td>Flymon Seal</td><td>5</td><td>1</td><td>DE</td><td>150</td></tr><tr><td>Whamon Seal</td><td>1</td><td>10</td><td>HP</td><td>250</td></tr><tr><td>SaviorHackmon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Vajramon Seal</td><td>1</td><td>10</td><td>CT</td><td>250</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Myotismon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Jesmon Seal</td><td>1</td><td>100</td><td>CT</td><td>300</td></tr><tr><td>MetalSeadramon Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>TyrantKabuterimon Seal</td><td>1</td><td>25</td><td>HT</td><td>500</td></tr><tr><td>Death-X-mon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Omegamon Alter-S Seal</td><td>1</td><td>100</td><td>HP</td><td>600</td></tr><tr><td>Boltboutamon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=579",
+    "date": "02.08.2022"
   },
   "na-551": {
     "tables": [

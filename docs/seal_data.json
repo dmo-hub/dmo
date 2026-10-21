@@ -12179,6 +12179,224 @@
    ]
   ]
  },
+ "na-647#0": {
+  "server": "na",
+  "date": "24.10.2023",
+  "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Exploration Seal [Event]",
+    "1",
+    "2",
+    "HT",
+    "100"
+   ],
+   [
+    "Hope Seal [Event]",
+    "1",
+    "2",
+    "CT",
+    "150"
+   ],
+   [
+    "Dracmon Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Dorumon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Salamon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Patamon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Monodramon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Gazimon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Thunderballmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Devimon Seal",
+    "5",
+    "1",
+    "AT",
+    "200"
+   ],
+   [
+    "Kyubimon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Etemon Seal",
+    "1",
+    "10",
+    "BL",
+    "200"
+   ],
+   [
+    "Gladimon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Toy Agumon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "RaptorDramon Seal",
+    "5",
+    "1",
+    "HP",
+    "200"
+   ],
+   [
+    "Metaltyranomon Seal",
+    "1",
+    "10",
+    "DE",
+    "200"
+   ],
+   [
+    "Blackgatomon Seal",
+    "5",
+    "1",
+    "EV",
+    "200"
+   ],
+   [
+    "Culumon Seal",
+    "1",
+    "100",
+    "AT",
+    "250"
+   ],
+   [
+    "Phantomon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "Whamon Seal",
+    "1",
+    "10",
+    "HP",
+    "250"
+   ],
+   [
+    "Kuzuhamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "MetalGarurumon Seal",
+    "1",
+    "25",
+    "CT",
+    "300"
+   ],
+   [
+    "DexDorugoramon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "Piedmon Seal",
+    "1",
+    "100",
+    "DS",
+    "500"
+   ],
+   [
+    "Lucemon: Wild 2nd Mode Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "Baihumon Seal",
+    "1",
+    "25",
+    "HT",
+    "500"
+   ]
+  ]
+ },
  "na-636#0": {
   "server": "na",
   "date": "01.08.2023",
@@ -12442,6 +12660,426 @@
     "100",
     "HT",
     "500"
+   ]
+  ]
+ },
+ "na-630#0": {
+  "server": "na",
+  "date": "20.06.2023",
+  "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Gladimon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Keramon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "PicoDevimon Seal",
+    "10",
+    "1",
+    "AT",
+    "150"
+   ],
+   [
+    "Gabumon (Black) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Agumon(S) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Hagurumon Seal",
+    "6",
+    "1",
+    "EV",
+    "150"
+   ],
+   [
+    "Angemon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Kabuterimon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Kyubimon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Ankylomon Seal",
+    "1",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Grow Well Seal [Event]",
+    "1",
+    "2",
+    "HP",
+    "150"
+   ],
+   [
+    "Heat Wave Seal [Event]",
+    "1",
+    "2",
+    "DS",
+    "200"
+   ],
+   [
+    "Passionate Seal [Event]",
+    "1",
+    "2",
+    "AT",
+    "150"
+   ],
+   [
+    "Seal Of Coolness [Event]",
+    "1",
+    "2",
+    "EV",
+    "100"
+   ],
+   [
+    "Blossomon Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "Antylamon Seal",
+    "1",
+    "10",
+    "HT",
+    "300"
+   ],
+   [
+    "Silphymon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Myotismon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Rosemon Seal",
+    "1",
+    "25",
+    "HT",
+    "400"
+   ],
+   [
+    "Ravemon Seal",
+    "1",
+    "25",
+    "EV",
+    "350"
+   ],
+   [
+    "HerculesKabuterimon Seal",
+    "1",
+    "25",
+    "DE",
+    "250"
+   ],
+   [
+    "Sakuyamon Seal",
+    "1",
+    "60",
+    "HP",
+    "400"
+   ],
+   [
+    "Lucemon: Wild 2nd Mode Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "GrandisKuwagamon Seal",
+    "1",
+    "100",
+    "DS",
+    "500"
+   ],
+   [
+    "ShoutmonX2 Seal",
+    "1",
+    "100",
+    "CT",
+    "400"
+   ],
+   [
+    "Omegamon Zwart Seal",
+    "1",
+    "100",
+    "CT",
+    "400"
+   ],
+   [
+    "Alphamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Kuzuhamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Gallantmon Crimson Mode Seal",
+    "1",
+    "100",
+    "BL",
+    "300"
+   ]
+  ]
+ },
+ "na-579#0": {
+  "server": "na",
+  "date": "02.08.2022",
+  "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ",
+  "note": "",
+  "inf": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "rows": [
+   [
+    "Gabumon (Black) Seal",
+    "10",
+    "1",
+    "BL",
+    "100"
+   ],
+   [
+    "Hackmon Seal",
+    "10",
+    "1",
+    "HT",
+    "100"
+   ],
+   [
+    "Keramon Seal",
+    "10",
+    "1",
+    "HP",
+    "150"
+   ],
+   [
+    "Piyomon Seal",
+    "10",
+    "1",
+    "DS",
+    "200"
+   ],
+   [
+    "Renamon Seal",
+    "10",
+    "1",
+    "DE",
+    "100"
+   ],
+   [
+    "Angemon Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "BaoHackmon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Togemon Seal",
+    "5",
+    "1",
+    "CT",
+    "200"
+   ],
+   [
+    "Coredramon (Green) Seal",
+    "5",
+    "1",
+    "DS",
+    "300"
+   ],
+   [
+    "Flymon Seal",
+    "5",
+    "1",
+    "DE",
+    "150"
+   ],
+   [
+    "Whamon Seal",
+    "1",
+    "10",
+    "HP",
+    "250"
+   ],
+   [
+    "SaviorHackmon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "Vajramon Seal",
+    "1",
+    "10",
+    "CT",
+    "250"
+   ],
+   [
+    "NeoDevimon Seal",
+    "1",
+    "10",
+    "EV",
+    "300"
+   ],
+   [
+    "Myotismon Seal",
+    "1",
+    "10",
+    "AT",
+    "250"
+   ],
+   [
+    "Jesmon Seal",
+    "1",
+    "100",
+    "CT",
+    "300"
+   ],
+   [
+    "MetalSeadramon Seal",
+    "1",
+    "100",
+    "HP",
+    "500"
+   ],
+   [
+    "TyrantKabuterimon Seal",
+    "1",
+    "25",
+    "HT",
+    "500"
+   ],
+   [
+    "Death-X-mon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
+   ],
+   [
+    "Omegamon Alter-S Seal",
+    "1",
+    "100",
+    "HP",
+    "600"
+   ],
+   [
+    "Boltboutamon Seal",
+    "1",
+    "100",
+    "AT",
+    "300"
    ]
   ]
  },
