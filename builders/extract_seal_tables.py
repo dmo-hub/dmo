@@ -742,6 +742,8 @@ def extract(post):
                 "html": emit_norm_rows(OCR_DATA[post["key"]]["rows"]),
             }
         )
+        if "text" in OCR_DATA[post["key"]]:  # list typed in the post, not an image
+            tables[-1]["from_text"] = True
     if post["key"] in EVENT_SEALS:
         ev = EVENT_SEALS[post["key"]]["rows"]
         tables.append(
@@ -763,7 +765,11 @@ def extract(post):
             base = cap
         else:
             base = f"{cap} ({i + 1})"
-        t["caption"] = base + (" · ดึงจากรูปภาพ" if t.get("ocr") else "")
+        if t.get("from_text"):
+            base += " · ถอดจากข้อความในโพสต์"
+        elif t.get("ocr"):
+            base += " · ดึงจากรูปภาพ"
+        t["caption"] = base
     note = "" if tables else "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)"
     return {"tables": tables, "note": note, "url": post_url(post), "date": post_date(post, raw)}
 

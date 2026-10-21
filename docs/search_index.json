@@ -526,6 +526,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-789333",
       "date": "07.08.2024",
       "qty": "10",
@@ -543,6 +551,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4108",
       "date": "11.02.2026",
@@ -1546,6 +1562,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-787646",
       "date": "29.05.2024",
       "qty": "10",
@@ -1571,6 +1595,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4121",
       "date": "17.03.2026",
@@ -1809,6 +1841,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-814269",
       "date": "10.02.2026",
       "qty": "1",
@@ -1818,6 +1858,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4114",
       "date": "04.03.2026",
@@ -5661,6 +5709,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-813810",
       "date": "27.01.2026",
       "qty": "5",
@@ -5678,6 +5734,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4108",
       "date": "11.02.2026",
@@ -6871,6 +6935,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-789333",
       "date": "07.08.2024",
       "qty": "10",
@@ -6888,6 +6960,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4110",
       "date": "25.02.2026",
@@ -7813,6 +7893,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-792682",
       "date": "25.09.2024",
       "qty": "10",
@@ -7830,6 +7918,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4108",
       "date": "11.02.2026",
@@ -9133,6 +9229,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-812989",
       "date": "13.01.2026",
       "qty": "1",
@@ -9142,6 +9246,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4100",
       "date": "28.01.2026",
@@ -9215,6 +9327,59 @@
   },
   {
    "type": "seal",
+   "key": "garurumonblack",
+   "display": "Garurumon (Black)",
+   "names": {
+    "en": [
+     "Garurumon (Black)",
+     "Garurumon(Black)"
+    ],
+    "kr": [
+     "가루몬 씰 ( 흑 )"
+    ],
+    "th": []
+   },
+   "servers": {
+    "kr": [
+     {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "kr-814605",
+      "date": "03.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "200"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "na-4121",
+      "date": "17.03.2026",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "200"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "garurumonx",
    "display": "Garurumon X",
    "names": {
@@ -9274,42 +9439,6 @@
       "tickets": "1",
       "stat": "CT",
       "value": "100"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
-   "key": "garurumonblack",
-   "display": "Garurumon(Black)",
-   "names": {
-    "en": [
-     "Garurumon(Black)"
-    ],
-    "kr": [
-     "가루몬 씰 ( 흑 )"
-    ],
-    "th": []
-   },
-   "servers": {
-    "kr": [
-     {
-      "post": "kr-814605",
-      "date": "03.03.2026",
-      "qty": "5",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "200"
-     }
-    ],
-    "na": [
-     {
-      "post": "na-4121",
-      "date": "17.03.2026",
-      "qty": "5",
-      "tickets": "1",
-      "stat": "AT",
-      "value": "200"
      }
     ]
    }
@@ -11781,6 +11910,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-814493",
       "date": "24.02.2026",
       "qty": "10",
@@ -11790,6 +11927,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4118",
       "date": "11.03.2026",
@@ -12681,6 +12826,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-813810",
       "date": "27.01.2026",
       "qty": "10",
@@ -12690,6 +12843,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4108",
       "date": "11.02.2026",
@@ -12753,6 +12914,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-792682",
       "date": "25.09.2024",
       "qty": "10",
@@ -12770,6 +12939,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4108",
       "date": "11.02.2026",
@@ -13707,6 +13884,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-814493",
       "date": "24.02.2026",
       "qty": "1",
@@ -13788,6 +13973,30 @@
       "tickets": "1",
       "stat": "DS",
       "value": "100"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "lilymon",
+   "display": "Lilymon",
+   "names": {
+    "en": [
+     "Lilymon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -15954,12 +16163,30 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-813810",
       "date": "27.01.2026",
       "qty": "1",
       "tickets": "1",
       "stat": "EV",
       "value": "300"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -18478,6 +18705,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-813810",
       "date": "27.01.2026",
       "qty": "10",
@@ -19924,6 +20159,30 @@
   },
   {
    "type": "seal",
+   "key": "seedmon",
+   "display": "Seedmon",
+   "names": {
+    "en": [
+     "Seedmon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
    "key": "sefirotmon",
    "display": "Sefirotmon",
    "names": {
@@ -20139,6 +20398,30 @@
       "tickets": "1",
       "stat": "DE",
       "value": "100"
+     }
+    ]
+   }
+  },
+  {
+   "type": "seal",
+   "key": "shamamon",
+   "display": "Shamamon",
+   "names": {
+    "en": [
+     "Shamamon"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "servers": {
+    "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -21095,6 +21378,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-814605",
       "date": "03.03.2026",
       "qty": "1",
@@ -21104,6 +21395,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4121",
       "date": "17.03.2026",
@@ -21284,6 +21583,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-813810",
       "date": "27.01.2026",
       "qty": "5",
@@ -21293,6 +21600,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4108",
       "date": "11.02.2026",
@@ -21908,6 +22223,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-812989",
       "date": "13.01.2026",
       "qty": "10",
@@ -22287,6 +22610,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-787646",
       "date": "29.05.2024",
       "qty": "5",
@@ -22312,6 +22643,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4110",
       "date": "25.02.2026",
@@ -22420,7 +22759,8 @@
    "display": "Toy Agumon",
    "names": {
     "en": [
-     "Toy Agumon"
+     "Toy Agumon",
+     "ToyAgumon"
     ],
     "kr": [
      "토이아구몬 씰"
@@ -22431,6 +22771,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "kr-792682",
       "date": "25.09.2024",
@@ -22449,6 +22797,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4129",
       "date": "01.04.2026",
@@ -22486,6 +22842,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-792682",
       "date": "25.09.2024",
       "qty": "10",
@@ -22503,6 +22867,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4105",
       "date": "04.02.2026",
@@ -22886,6 +23258,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-813810",
       "date": "27.01.2026",
       "qty": "10",
@@ -22895,6 +23275,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4108",
       "date": "11.02.2026",
@@ -23206,6 +23594,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-708817",
+      "date": "11.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-814064",
       "date": "03.02.2026",
       "qty": "1",
@@ -23215,6 +23611,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4110",
       "date": "25.02.2026",
@@ -24676,6 +25080,30 @@
   },
   {
    "type": "patch",
+   "key": "kr-708817",
+   "display": "kr-708817 — 씰 교환권 제작 리스트 (Seal Exchange Craft List) · ถอดจากข้อความในโพสต์",
+   "names": {
+    "en": [
+     "kr-708817",
+     "씰 교환권 제작 리스트 (Seal Exchange Craft List) · ถอดจากข้อความในโพสต์"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#kr-708817",
+   "n_tables": 1,
+   "n_rows": 22,
+   "servers": {
+    "kr": [
+     {
+      "post": "kr-708817",
+      "date": "11.05.2017"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
    "key": "kr-780048",
    "display": "kr-780048 — 씰 교환권 제작 리스트 (Seal Exchange Craft List)",
    "names": {
@@ -25250,6 +25678,30 @@
      {
       "post": "kr-814935",
       "date": "17.03.2026"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "na-352",
+   "display": "na-352 — Seal Exchange Ticket — Craft List · ถอดจากข้อความในโพสต์",
+   "names": {
+    "en": [
+     "na-352",
+     "Seal Exchange Ticket — Craft List · ถอดจากข้อความในโพสต์"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-352",
+   "n_tables": 1,
+   "n_rows": 22,
+   "servers": {
+    "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017"
      }
     ]
    }

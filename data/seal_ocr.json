@@ -1,5 +1,5 @@
 {
-  "_note": "Seal-exchange tables transcribed (vision OCR) from the exchange-list IMAGE in gameking posts that ship no HTML table. Columns are already in canonical order: [seal, seals given, tickets used, stat, max@Master]. Source image is noted per entry. Merged in by builders/extract_seal_tables.py for posts that have no HTML table.",
+  "_note": "Seal-exchange tables transcribed (vision OCR) from the exchange-list IMAGE in gameking posts that ship no HTML table. Columns are already in canonical order: [seal, seals given, tickets used, stat, max@Master]. Source image is noted per entry (img); an entry with text instead was copied from a list the post writes as plain text lines. Merged in by builders/extract_seal_tables.py for posts that have no HTML table.",
   "na-673": {
     "img": "EventView idx=673 (Guilmon's Seal Exchange)",
     "rows": [
@@ -161,6 +161,60 @@
       ["Dexmon", "1", "100", "AT", "300"],
       ["Fanglongmon", "1", "100", "BL", "350"],
       ["Omegamon Alter-S", "1", "100", "HP", "600"]
+    ]
+  },
+  "na-352": {
+    "text": "EventView idx=352 (Renewal of Seal Master, 30.05.2017) — the list is written as text lines (\"Seal Exchange Ticket 1ea → X Seal Nea\"), not a table; the post gives no stat or Master value",
+    "rows": [
+      ["Tsunomon Seal", "10", "1", "—", "—"],
+      ["Upamon Seal", "10", "1", "—", "—"],
+      ["Koromon Seal", "10", "1", "—", "—"],
+      ["Seedmon Seal", "10", "1", "—", "—"],
+      ["Agumon Seal", "10", "1", "—", "—"],
+      ["FanBeemon Seal", "10", "1", "—", "—"],
+      ["Shamamon Seal", "10", "1", "—", "—"],
+      ["Impmon Seal", "10", "1", "—", "—"],
+      ["Kunemon Seal", "10", "1", "—", "—"],
+      ["Armadimon Seal", "10", "1", "—", "—"],
+      ["Elecmon Seal", "10", "1", "—", "—"],
+      ["ToyAgumon Seal", "10", "1", "—", "—"],
+      ["Dorugamon Seal", "5", "1", "—", "—"],
+      ["Soulmon Seal", "5", "1", "—", "—"],
+      ["Togemon Seal", "5", "1", "—", "—"],
+      ["Garurumon(Black) Seal", "5", "1", "—", "—"],
+      ["Lilymon Seal", "1", "1", "—", "—"],
+      ["SkullSatamon Seal", "1", "1", "—", "—"],
+      ["Mistymon Seal", "1", "1", "—", "—"],
+      ["Vikaralamon Seal", "1", "1", "—", "—"],
+      ["Asuramon Seal", "1", "1", "—", "—"],
+      ["Garudamon Seal", "1", "1", "—", "—"]
+    ]
+  },
+  "kr-708817": {
+    "text": "newsBoard o=708817 ([씰 마스터] 리뉴얼, 11.05.2017) — text lines \"씰 교환권 1개 → X 씰 N개\", same 22 seals as na-352; names via kr_seal_en.json, 가루몬(흑) unmapped -> Garurumon (Black) Seal; no stat or Master value in the post",
+    "rows": [
+      ["Tsunomon Seal", "10", "1", "—", "—"],
+      ["Upamon Seal", "10", "1", "—", "—"],
+      ["Koromon Seal", "10", "1", "—", "—"],
+      ["Tanemon Seal", "10", "1", "—", "—"],
+      ["Agumon Seal", "10", "1", "—", "—"],
+      ["FanBeemon Seal", "10", "1", "—", "—"],
+      ["PrimaryGoburimon Seal", "10", "1", "—", "—"],
+      ["Impmon Seal", "10", "1", "—", "—"],
+      ["Kunemon Seal", "10", "1", "—", "—"],
+      ["Armadimon Seal", "10", "1", "—", "—"],
+      ["Elecmon Seal", "10", "1", "—", "—"],
+      ["Toy Agumon Seal", "10", "1", "—", "—"],
+      ["Dorugamon Seal", "5", "1", "—", "—"],
+      ["Soulmon Seal", "5", "1", "—", "—"],
+      ["Togemon Seal", "5", "1", "—", "—"],
+      ["Garurumon (Black) Seal", "5", "1", "—", "—"],
+      ["Lillymon Seal", "1", "1", "—", "—"],
+      ["SkullSatamon Seal", "1", "1", "—", "—"],
+      ["Mistymon Seal", "1", "1", "—", "—"],
+      ["Vikaralamon Seal", "1", "1", "—", "—"],
+      ["Asuramon Seal", "1", "1", "—", "—"],
+      ["Garudamon Seal", "1", "1", "—", "—"]
     ]
   }
 }

@@ -987,6 +987,20 @@ def ensure_cards(html, data):
                 html = html[: hm.start()] + section + html[hm.start() :]
                 placed = True
                 break
+        # older than every month on the page → new section after the last card
+        last_hdr = None
+        for last_hdr in _MONTH_HDR.finditer(html):
+            pass
+        if not placed and last_hdr:
+            end = html.rfind("</article>")
+            if end > last_hdr.end():
+                end += len("</article>")
+                section = (
+                    f'\n\n    <div class="tl-month"><span class="tl-month-label">{want_label}'
+                    f'</span><span class="tl-month-count">1 post</span></div>\n{stub.rstrip()}'
+                )
+                html = html[:end] + section + html[end:]
+                placed = True
         if placed:
             print(f"  ++ stub card created: {key} ({d['date']}) — review placement")
         else:

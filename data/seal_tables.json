@@ -1,7 +1,18 @@
 {
   "kr-816593": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)",
+    "tables": [
+      {
+        "header": "EVENT",
+        "score": -1,
+        "event": true,
+        "rows": 9,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>ใช้แลก</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Season Pass HP Seal</td><td>200</td><td>Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)</td><td>HP</td><td>1000</td></tr><tr><td>Season Pass DS Seal</td><td>200</td><td>Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)</td><td>DS</td><td>1500</td></tr><tr><td>Season Pass AT Seal</td><td>200</td><td>Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)</td><td>AT</td><td>600</td></tr><tr><td>Season Pass CT Seal</td><td>200</td><td>Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)</td><td>CT</td><td>1000</td></tr><tr><td>Season Pass HT Seal</td><td>200</td><td>Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)</td><td>HT</td><td>600</td></tr><tr><td>Season Pass DE Seal</td><td>200</td><td>Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)</td><td>DE</td><td>700</td></tr><tr><td>Season Pass BL Seal</td><td>200</td><td>Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)</td><td>BL</td><td>700</td></tr><tr><td>Season Pass EV Seal</td><td>200</td><td>Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)</td><td>EV</td><td>700</td></tr></table>",
+        "cat_title": "ซีลกิจกรรม (แลกด้วยของกิจกรรม)",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List) · ซีลกิจกรรม (แลกด้วยของกิจกรรม)"
+      }
+    ],
+    "note": "",
     "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=816593&Btype=Update",
     "date": "12.05.2026"
   },
@@ -383,8 +394,19 @@
     "date": "13.12.2023"
   },
   "kr-708817": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)",
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 23,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Tsunomon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Upamon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Koromon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Tanemon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Agumon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>FanBeemon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>PrimaryGoburimon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Impmon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Kunemon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Armadimon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Elecmon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Toy Agumon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Dorugamon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Soulmon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Togemon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Garurumon (Black) Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Lillymon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>SkullSatamon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Mistymon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Vikaralamon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Asuramon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Garudamon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr></table>",
+        "from_text": true,
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List) · ถอดจากข้อความในโพสต์"
+      }
+    ],
+    "note": "",
     "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=708817&Btype=Event",
     "date": "11.05.2017"
   },
@@ -562,14 +584,36 @@
     "date": "18.11.2025"
   },
   "na-789": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)",
+    "tables": [
+      {
+        "header": "EVENT",
+        "score": -1,
+        "event": true,
+        "rows": 62,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>ใช้แลก</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Passionate Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Environment Guardian Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>New Semester Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Seal of summer [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>10th Year Anniversary Seal</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>11th Year Anniversary Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>12th Year Anniversary Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Blue Serpent Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>13th Year Anniversary AT Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×5</td><td>AT</td><td>—</td></tr><tr><td>Marksman Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Exploration Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Brave Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Sprout’s Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>PowerDigimon Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>13th Year Anniversary HT Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×5</td><td>HT</td><td>—</td></tr><tr><td>Conversion Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Hope Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Last Seal of 2023 [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>13th Year Anniversary CT Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×5</td><td>CT</td><td>—</td></tr><tr><td>Sincerity Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Seal of Heat [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Grow Well Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>13th Year Anniversary HP Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×5</td><td>HP</td><td>—</td></tr><tr><td>Armor Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>13th Year Anniversary DE Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×5</td><td>DE</td><td>—</td></tr><tr><td>Firm Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>friendship Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Seal of spring [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>13th Year Anniversary BL Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×5</td><td>BL</td><td>—</td></tr><tr><td>Seal Of Coolness [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Knowledge Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Family Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>13th Year Anniversary EV Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×5</td><td>EV</td><td>—</td></tr><tr><td>Heat Wave Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Happiness Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>Beginning Seal[Event]</td><td>1</td><td>Special Seal Exchanger ×1</td><td>—</td><td>—</td></tr><tr><td>13th Year Anniversary DS Seal [Event]</td><td>1</td><td>Special Seal Exchanger ×5</td><td>DS</td><td>—</td></tr><tr><td>Dungeon Masters HP Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>HP</td><td>—</td></tr><tr><td>Dungeon Masters DS Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>DS</td><td>—</td></tr><tr><td>Dungeon Masters AT Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>AT</td><td>—</td></tr><tr><td>Dungeon Masters CT Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>CT</td><td>—</td></tr><tr><td>Dungeon Masters HT Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>HT</td><td>—</td></tr><tr><td>Dungeon Masters DE Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>DE</td><td>—</td></tr><tr><td>Dungeon Masters BL Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>BL</td><td>—</td></tr><tr><td>Dungeon Masters EV Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>EV</td><td>—</td></tr><tr><td>Dungeon Masters2 HP Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>HP</td><td>—</td></tr><tr><td>Dungeon Masters2 DS Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>DS</td><td>—</td></tr><tr><td>Dungeon Masters2 AT Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>AT</td><td>—</td></tr><tr><td>Dungeon Masters2 CT Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>CT</td><td>—</td></tr><tr><td>Dungeon Masters2 HT Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>HT</td><td>—</td></tr><tr><td>Dungeon Masters2 DE Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>DE</td><td>—</td></tr><tr><td>Dungeon Masters2 BL Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>BL</td><td>—</td></tr><tr><td>Dungeon Masters2 EV Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>EV</td><td>—</td></tr><tr><td>Dungeon Masters3 HP Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>HP</td><td>—</td></tr><tr><td>Dungeon Masters3 DS Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>DS</td><td>—</td></tr><tr><td>Dungeon Masters3 AT Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>AT</td><td>—</td></tr><tr><td>Dungeon Masters3 CT Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>CT</td><td>—</td></tr><tr><td>Dungeon Masters3 HT Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>HT</td><td>—</td></tr><tr><td>Dungeon Masters3 DE Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>DE</td><td>—</td></tr><tr><td>Dungeon Masters3 BL Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>BL</td><td>—</td></tr><tr><td>Dungeon Masters3 EV Seal [Event]</td><td>1</td><td>Dungeon Masters Seal Exchanger ×1</td><td>EV</td><td>—</td></tr></table>",
+        "cat_title": "ซีลกิจกรรม (แลกด้วยของกิจกรรม)",
+        "caption": "Seal Exchange Ticket — Craft List · ซีลกิจกรรม (แลกด้วยของกิจกรรม)"
+      }
+    ],
+    "note": "",
     "url": "https://dmo.gameking.com/news/EventView.aspx?idx=789",
     "date": "04.11.2025"
   },
   "na-784": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)",
+    "tables": [
+      {
+        "header": "EVENT",
+        "score": -1,
+        "event": true,
+        "rows": 11,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>ใช้แลก</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Season Pass HP Seal [Event]</td><td>200</td><td>Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)</td><td>HP</td><td>1000</td></tr><tr><td>Season Pass DS Seal [Event]</td><td>200</td><td>Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)</td><td>DS</td><td>1500</td></tr><tr><td>Season Pass AT Seal [Event]</td><td>200</td><td>Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)</td><td>AT</td><td>600</td></tr><tr><td>Season Pass CT Seal [Event]</td><td>200</td><td>Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)</td><td>CT</td><td>1000</td></tr><tr><td>Season Pass HT Seal [Event]</td><td>200</td><td>Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)</td><td>HT</td><td>600</td></tr><tr><td>Season Pass DE Seal [Event]</td><td>200</td><td>Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)</td><td>DE</td><td>700</td></tr><tr><td>Season Pass BL Seal [Event]</td><td>200</td><td>Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)</td><td>BL</td><td>700</td></tr><tr><td>Season Pass EV Seal [Event]</td><td>200</td><td>Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)</td><td>EV</td><td>700</td></tr><tr><td>16th Anniversary DE Seal [Event]</td><td>150</td><td>16th Anniversary Gold Coin ×5</td><td>DE</td><td>—</td></tr><tr><td>16th Anniversary BL Seal [Event]</td><td>150</td><td>16th Anniversary Gold Coin ×5</td><td>BL</td><td>—</td></tr></table>",
+        "cat_title": "ซีลกิจกรรม (แลกด้วยของกิจกรรม)",
+        "caption": "Seal Exchange Ticket — Craft List · ซีลกิจกรรม (แลกด้วยของกิจกรรม)"
+      }
+    ],
+    "note": "",
     "url": "https://dmo.gameking.com/news/EventView.aspx?idx=784",
     "date": "01.10.2025"
   },
@@ -774,8 +818,19 @@
     "date": "12.10.2021"
   },
   "na-352": {
-    "tables": [],
-    "note": "โพสต์อธิบายกลไก/แสดงเป็นรูปภาพ — ไม่มีตาราง HTML (ดูในโพสต์ต้นทาง)",
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 23,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Tsunomon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Upamon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Koromon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Seedmon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Agumon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>FanBeemon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Shamamon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Impmon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Kunemon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Armadimon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Elecmon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>ToyAgumon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Dorugamon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Soulmon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Togemon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Garurumon(Black) Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Lilymon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>SkullSatamon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Mistymon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Vikaralamon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Asuramon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Garudamon Seal</td><td>1</td><td>1</td><td>—</td><td>—</td></tr></table>",
+        "from_text": true,
+        "caption": "Seal Exchange Ticket — Craft List · ถอดจากข้อความในโพสต์"
+      }
+    ],
+    "note": "",
     "url": "https://dmo.gameking.com/news/EventView.aspx?idx=352",
     "date": "30.05.2017"
   },

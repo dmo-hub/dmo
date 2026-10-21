@@ -1,5 +1,5 @@
 {
-  "_note": "Event seals bought with event currency (fruit baskets, beast coins), which extract_seal_tables leaves out on purpose -- it keeps Seal Exchange Ticket lists only. Hand-copied from the post; rows are [seal, seals per exchange, what one exchange costs, stat, Seal Master stat]. A seal the post lists without an exchange gets '—' for the middle two.",
+  "_note": "Event seals bought with event currency (fruit baskets, beast coins, season-pass seal boxes, special seal exchangers), which extract_seal_tables leaves out on purpose -- it keeps Seal Exchange Ticket lists only. Hand-copied from the post; rows are [seal, seals per exchange, what one exchange costs, stat, Seal Master stat]. A seal the post lists without an exchange gets '—' for the middle two.",
   "th-95": {
     "rows": [
       ["ซีลพักร้อนในโลกดิจิตอล AT [กิจกรรม]", "150", "ตะกร้าผลไม้ [กิจกรรม] ×5", "AT", "500"]
@@ -15,6 +15,97 @@
       ["17th Anniversary DE Seal", "—", "—", "DE", "300"],
       ["17th Anniversary BL Seal", "—", "—", "BL", "300"],
       ["17th Anniversary EV Seal", "—", "—", "EV", "300"]
+    ]
+  },
+  "kr-816593": {
+    "rows": [
+      ["Season Pass HP Seal", "200", "Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)", "HP", "1000"],
+      ["Season Pass DS Seal", "200", "Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)", "DS", "1500"],
+      ["Season Pass AT Seal", "200", "Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)", "AT", "600"],
+      ["Season Pass CT Seal", "200", "Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)", "CT", "1000"],
+      ["Season Pass HT Seal", "200", "Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)", "HT", "600"],
+      ["Season Pass DE Seal", "200", "Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)", "DE", "700"],
+      ["Season Pass BL Seal", "200", "Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)", "BL", "700"],
+      ["Season Pass EV Seal", "200", "Season Pass Seal Box ×1 (투명한 유리병 ×100 + Season Pass Token ×2)", "EV", "700"]
+    ]
+  },
+  "na-789": {
+    "rows": [
+      ["Passionate Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Environment Guardian Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["New Semester Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Seal of summer [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["10th Year Anniversary Seal", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["11th Year Anniversary Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["12th Year Anniversary Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Blue Serpent Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["13th Year Anniversary AT Seal [Event]", "1", "Special Seal Exchanger ×5", "AT", "—"],
+      ["Marksman Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Exploration Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Brave Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Sprout’s Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["PowerDigimon Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["13th Year Anniversary HT Seal [Event]", "1", "Special Seal Exchanger ×5", "HT", "—"],
+      ["Conversion Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Hope Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Last Seal of 2023 [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["13th Year Anniversary CT Seal [Event]", "1", "Special Seal Exchanger ×5", "CT", "—"],
+      ["Sincerity Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Seal of Heat [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Grow Well Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["13th Year Anniversary HP Seal [Event]", "1", "Special Seal Exchanger ×5", "HP", "—"],
+      ["Armor Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["13th Year Anniversary DE Seal [Event]", "1", "Special Seal Exchanger ×5", "DE", "—"],
+      ["Firm Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["friendship Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Seal of spring [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["13th Year Anniversary BL Seal [Event]", "1", "Special Seal Exchanger ×5", "BL", "—"],
+      ["Seal Of Coolness [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Knowledge Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Family Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["13th Year Anniversary EV Seal [Event]", "1", "Special Seal Exchanger ×5", "EV", "—"],
+      ["Heat Wave Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Happiness Seal [Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["Beginning Seal[Event]", "1", "Special Seal Exchanger ×1", "—", "—"],
+      ["13th Year Anniversary DS Seal [Event]", "1", "Special Seal Exchanger ×5", "DS", "—"],
+      ["Dungeon Masters HP Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "HP", "—"],
+      ["Dungeon Masters DS Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "DS", "—"],
+      ["Dungeon Masters AT Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "AT", "—"],
+      ["Dungeon Masters CT Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "CT", "—"],
+      ["Dungeon Masters HT Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "HT", "—"],
+      ["Dungeon Masters DE Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "DE", "—"],
+      ["Dungeon Masters BL Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "BL", "—"],
+      ["Dungeon Masters EV Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "EV", "—"],
+      ["Dungeon Masters2 HP Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "HP", "—"],
+      ["Dungeon Masters2 DS Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "DS", "—"],
+      ["Dungeon Masters2 AT Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "AT", "—"],
+      ["Dungeon Masters2 CT Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "CT", "—"],
+      ["Dungeon Masters2 HT Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "HT", "—"],
+      ["Dungeon Masters2 DE Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "DE", "—"],
+      ["Dungeon Masters2 BL Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "BL", "—"],
+      ["Dungeon Masters2 EV Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "EV", "—"],
+      ["Dungeon Masters3 HP Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "HP", "—"],
+      ["Dungeon Masters3 DS Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "DS", "—"],
+      ["Dungeon Masters3 AT Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "AT", "—"],
+      ["Dungeon Masters3 CT Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "CT", "—"],
+      ["Dungeon Masters3 HT Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "HT", "—"],
+      ["Dungeon Masters3 DE Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "DE", "—"],
+      ["Dungeon Masters3 BL Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "BL", "—"],
+      ["Dungeon Masters3 EV Seal [Event]", "1", "Dungeon Masters Seal Exchanger ×1", "EV", "—"]
+    ]
+  },
+  "na-784": {
+    "rows": [
+      ["Season Pass HP Seal [Event]", "200", "Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)", "HP", "1000"],
+      ["Season Pass DS Seal [Event]", "200", "Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)", "DS", "1500"],
+      ["Season Pass AT Seal [Event]", "200", "Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)", "AT", "600"],
+      ["Season Pass CT Seal [Event]", "200", "Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)", "CT", "1000"],
+      ["Season Pass HT Seal [Event]", "200", "Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)", "HT", "600"],
+      ["Season Pass DE Seal [Event]", "200", "Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)", "DE", "700"],
+      ["Season Pass BL Seal [Event]", "200", "Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)", "BL", "700"],
+      ["Season Pass EV Seal [Event]", "200", "Season Pass Seal Box ×1 (16th Anniversary Gold Coin ×80 + Season Pass Token2 ×2)", "EV", "700"],
+      ["16th Anniversary DE Seal [Event]", "150", "16th Anniversary Gold Coin ×5", "DE", "—"],
+      ["16th Anniversary BL Seal [Event]", "150", "16th Anniversary Gold Coin ×5", "BL", "—"]
     ]
   }
 }
