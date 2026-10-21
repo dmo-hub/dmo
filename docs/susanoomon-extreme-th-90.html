@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,9 +32,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Share+Tech+Mono&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <title>DMO · [เอ็กซ์ตรีม] ซูซาโนะโอมอน — ไกด์วัตถุดิบ + คำนวณ</title>
+<link rel="stylesheet" href="css/site.css">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  :root{
+  /* [data-theme] outranks site.css's :root[data-theme="dark"], which also sets --amber */
+  :root[data-theme]{
     --deep:#020912; --panel:rgba(8,16,36,.82);
     --blue:#00B4FF; --gold:#FFD700; --grn:#3FDD7A; --red:#FF4D6A;
     --txt:#DCEEFF; --mut:#7488B0; --grid:rgba(0,180,255,.05);
@@ -44,8 +46,11 @@
   }
   body{
     background:#020912; color:var(--txt); font-family:'Kanit',sans-serif;
-    display:flex; justify-content:center; padding:24px 12px; min-height:100vh;
+    display:flex; flex-direction:column; align-items:center; gap:24px; padding:24px 12px; min-height:100vh;
+    font-size:16px; line-height:normal; -webkit-font-smoothing:auto;
   }
+  body > .site-nav{align-self:stretch; margin:-24px -12px 0}
+  h1,h2,h3,h4{font-family:inherit}
   .poster{
     position:relative; width:1080px; max-width:100%;
     background:radial-gradient(ellipse 90% 42% at 50% 0%,#12264d 0%,#0a1830 45%,#06122a 100%);
@@ -273,6 +278,20 @@
 </style>
 </head>
 <body>
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a class="brand" href="./"><span class="dot"></span>DMO Tracker</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="decks.html">Decks</a>
+      <a href="digimon.html">Digimon</a>
+      <a href="seals.html">Seal</a>
+      <a href="gear.html">Gear Optimizer</a>
+      <a href="gear-names.html">Gear Names</a>
+    </nav>
+    <span class="nav-meta">scrape: gameking · KR · TH</span>
+  </div>
+</header>
   <div class="poster">
     <span class="frame-c tl"></span><span class="frame-c tr"></span>
     <span class="frame-c bl"></span><span class="frame-c br"></span>
