@@ -719,22 +719,27 @@
     };
   }
 
+  /* Pages caches JSON for 10 minutes, so right after a deploy the browser
+     could pair the new page with the old registry (fields the page now reads
+     missing -- e.g. per-level extra stats). Revalidate every load instead. */
+  var FRESH = { cache: "no-cache" };
+
   function loadSetRegistry() {
-    return fetch("set_registry.json")
+    return fetch("set_registry.json", FRESH)
       .then(okOrFail("set_registry.json"))
       .then(function (d) { setRegistry = (d && d.sets) || []; })
       .catch(function () { loadFailures.push("set_registry.json"); setRegistry = []; });
   }
 
   function loadChipRegistry() {
-    return fetch("chip_registry.json")
+    return fetch("chip_registry.json", FRESH)
       .then(okOrFail("chip_registry.json"))
       .then(function (d) { chipRegistry = (d && d.items) || []; })
       .catch(function () { loadFailures.push("chip_registry.json"); chipRegistry = []; });
   }
 
   function loadRegistry() {
-    return fetch("gear_registry.json")
+    return fetch("gear_registry.json", FRESH)
       .then(okOrFail("gear_registry.json"))
       .then(function (d) {
         registry = (d && d.items) || [];
