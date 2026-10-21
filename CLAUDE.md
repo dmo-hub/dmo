@@ -393,6 +393,14 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
 - All scripts force UTF-8 stdout at startup (`sys.stdout.reconfigure`) because the project path contains Thai characters and the default Windows console encoding will crash on prints.
 - `BASE` host, the two AJAX endpoints, and the two view-URL templates are centralized in the `CONFIGS` dict at the top of [scan_decks.py](scan_decks.py) — other scripts import from there rather than duplicating URLs.
 - Post dates in cached HTML are `MM-DD-YYYY` (US format), extracted with `DATE_RE = r">\s*(\d{2}-\d{2}-\d{4})\s*<"`.
+- Seals: `extract_seal_tables` keeps Seal Exchange Ticket lists only. Event
+  seals paid in event items (fruit baskets, beast coins) go in
+  `data/event_seals.json` by hand; they get a card on seals.html with a cost
+  column but no star and no `seal_data.json` entry, since the calculator
+  counts tickets. Compare seal names through `aliases.seal_base` / `norm`,
+  never a local `\s*Seal.*$` regex: that cut "Seal of spring" and
+  "ซีลแห่งความหวัง" to nothing, and those seals silently dropped out of
+  cross-server matching and the search index.
 - Scanners read `cache/*.html` only. Never move cache files aside to force a
   refetch while a source might be down: the NA posts once sat in
   `cache/_stale-<date>/` after gameking stopped answering, and Gammamon plus
