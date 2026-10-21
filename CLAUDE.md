@@ -564,3 +564,17 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   variants of 2021-22); the digimon feed is unaffected (Rank U only). A row
   starting "던전 이름" with more than two cells heads a list table, not a
   dungeon's info table.
+- **Do not edit builders/scanners while `refresh.py` runs in the background.**
+  Its last step is `validate.py`, whose idempotency gate re-runs every builder
+  and fails on the half-applied edit ("rebuild changed: build_gear_registry.py")
+  -- a failure caused by the edit, not by the refresh. Wait for it to finish,
+  or re-run `validate.py` after.
+- **Playwright scripts find gear rows by `nameTh`, not the English name.**
+  `gear.html` shows Thai names first, so a lookup on `name` matches no row,
+  dispatches nothing, and reads exactly like a page bug (stored levels never
+  change). Take `nameTh` from `docs/gear_registry.json`.
+- **A screenshot from the owner is the live site.** Before chasing a bug in
+  it, check the fix is pushed (`git merge-base --is-ancestor HEAD origin/main`)
+  and that Pages serves it -- e.g. count items in
+  `https://dmo-hub.github.io/dmo/gear_registry.json?x=<random>` -- since Pages
+  lags a push by a few minutes.
