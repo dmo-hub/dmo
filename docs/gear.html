@@ -28,6 +28,8 @@
   .go-card > h2 { font-size: 15px; margin: 0 0 4px; color: var(--ink);
     font-family: var(--display-font); font-weight: 600; }
   .go-card > .go-sub { font-size: 12.5px; color: var(--muted); margin: 0 0 14px; line-height: 1.6; }
+  #panel-items > .go-sub { font-size: 12.5px; color: var(--muted); margin: 0 0 6px; line-height: 1.6; }
+  #panel-items > .go-count { margin-bottom: 14px; }
 
   .go-tbl-wrap { overflow-x: auto; border: 1px solid var(--hairline); border-radius: var(--radius); }
   table.go-tbl { border-collapse: collapse; width: 100%; font-size: 12.5px; min-width: 460px; }
@@ -36,12 +38,9 @@
   table.go-tbl thead th { background: var(--surface-card); color: var(--ink); font-weight: 600; }
   table.go-tbl td:first-child, table.go-tbl th:first-child { text-align: left; }
   table.go-tbl tr:last-child td { border-bottom: 0; }
-  .go-acc-grp + .go-acc-grp { margin-top: 18px; }
-  .go-acc-grp h3 { margin: 0 0 2px; font-size: 14px; color: var(--ink); }
   .go-acc-slot { border: 1px solid var(--hairline); border-radius: var(--radius); padding: 10px 12px; margin-top: 8px; }
   .go-acc-slot h4 { margin: 0 0 8px; font-size: 13px; color: var(--ink); }
   .go-acc-slot .go-actions { margin-top: 8px; }
-  .go-acc-grp .go-sub { margin: 0 0 8px; }
   table.go-tbl input, table.go-tbl select { font: inherit; font-size: 12.5px; width: 100%;
     min-width: 62px; padding: 4px 7px; border: 1px solid var(--hairline);
     border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
@@ -195,17 +194,14 @@
   </div>
 
   <section class="go-panel" id="panel-items" role="tabpanel" aria-labelledby="tab-items">
-    <div class="go-card">
-      <h2>ของสวม</h2>
-      <p class="go-sub" id="slot-hint"></p>
-      <p class="go-sub" id="reg-hint"></p>
-      <div class="go-count" id="reg-count" hidden></div>
-      <!-- One card per slot group, built from SLOT_GROUPS when the page
-           renders. Kept out of the markup on purpose: adding a group to the
-           solver must not need an edit here, the same way adding a slot
-           already does not. -->
-      <div id="acc-groups"></div>
-    </div>
+    <p class="go-sub" id="slot-hint"></p>
+    <p class="go-sub" id="reg-hint"></p>
+    <div class="go-count" id="reg-count" hidden></div>
+    <!-- One card per slot group (ชุด · ประดับ · อื่น ๆ), built from SLOT_GROUPS
+         when the page renders. Kept out of the markup on purpose: adding a
+         group to the solver must not need an edit here, the same way adding a
+         slot already does not. -->
+    <div id="acc-groups"></div>
 
     <div class="go-card">
       <h2>ชิป</h2>
@@ -219,7 +215,7 @@
       <div class="go-actions">
         <button class="go-btn" id="chip-add" type="button">+ เพิ่มชิป</button>
         <span class="go-spacer"></span>
-        <button class="go-btn" id="reset-seed" type="button">คืนค่าชุดตัวอย่าง</button>
+        <button class="go-btn" id="clear-all" type="button">ล้างรายการทั้งหมด</button>
       </div>
       <p class="note" style="margin-top:14px">ข้อมูลเก็บในเบราว์เซอร์ของคุณเอง (localStorage) — ไม่ได้ส่งขึ้นเซิร์ฟเวอร์ และไม่หายเมื่อปิดหน้า</p>
     </div>
@@ -287,8 +283,6 @@
     empty: "\u2014 \u0e27\u0e48\u0e32\u0e07 \u2014",
     noName: "(\u0e44\u0e21\u0e48\u0e21\u0e35\u0e0a\u0e37\u0e48\u0e2d)",
     del: "\u0e25\u0e1a\u0e41\u0e16\u0e27\u0e19\u0e35\u0e49",
-    confirmSeed: "\u0e41\u0e17\u0e19\u0e17\u0e35\u0e48\u0e23\u0e32\u0e22\u0e01\u0e32\u0e23\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14\u0e14\u0e49\u0e27\u0e22\u0e0a\u0e38\u0e14\u0e15\u0e31\u0e27\u0e2d\u0e22\u0e48\u0e32\u0e07? \u0e02\u0e2d\u0e07\u0e17\u0e35\u0e48\u0e41\u0e01\u0e49\u0e44\u0e27\u0e49\u0e08\u0e30\u0e2b\u0e32\u0e22",
-    seedFail: "\u0e42\u0e2b\u0e25\u0e14\u0e0a\u0e38\u0e14\u0e15\u0e31\u0e27\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49 \u2014 \u0e40\u0e1b\u0e34\u0e14\u0e2b\u0e19\u0e49\u0e32\u0e19\u0e35\u0e49\u0e1c\u0e48\u0e32\u0e19\u0e40\u0e27\u0e47\u0e1a \u0e44\u0e21\u0e48\u0e43\u0e0a\u0e48\u0e40\u0e1b\u0e34\u0e14\u0e44\u0e1f\u0e25\u0e4c\u0e15\u0e23\u0e07 \u0e46",
     noItems: "\u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e21\u0e35\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e43\u0e2b\u0e49\u0e04\u0e33\u0e19\u0e27\u0e13 \u2014 \u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e30\u0e14\u0e31\u0e1a\u0e2b\u0e23\u0e37\u0e2d\u0e0a\u0e34\u0e1b\u0e01\u0e48\u0e2d\u0e19",
     ok: "\u2705 \u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e2b\u0e21\u0e32\u0e22\u0e44\u0e14\u0e49 \u2014 \u0e19\u0e35\u0e48\u0e04\u0e37\u0e2d\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e43\u0e2b\u0e49 AT \u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e1a\u0e23\u0e23\u0e14\u0e32\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e17\u0e38\u0e01\u0e02\u0e49\u0e2d\u0e17\u0e35\u0e48\u0e15\u0e31\u0e49\u0e07\u0e44\u0e27\u0e49",
     missA: "\u26a0\ufe0f \u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e16\u0e36\u0e07\u0e40\u0e1b\u0e49\u0e32\u0e14\u0e49\u0e27\u0e22\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e17\u0e35\u0e48\u0e21\u0e35\u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49 \u2014 \u0e22\u0e31\u0e07\u0e02\u0e32\u0e14: ",
@@ -808,8 +802,8 @@
 
     SLOT_GROUPS.forEach(function (g) {
       var grp = document.createElement("section");
-      grp.className = "go-acc-grp";
-      var h = document.createElement("h3");
+      grp.className = "go-card go-acc-grp";
+      var h = document.createElement("h2");
       h.textContent = g;
       grp.appendChild(h);
       slotsInGroup(g).forEach(function (slot) {
@@ -945,9 +939,10 @@
     data.chips.push({ id: nextId("chip"), name: "", AT: 0, HT: 0, CT: 0 });
     save(); render();
   });
-  $("reset-seed").addEventListener("click", function () {
-    if (!window.confirm(T.confirmSeed)) return;
-    loadSeed(true);
+  $("clear-all").addEventListener("click", function () {
+    if (!window.confirm("ล้างของสวมและชิปทั้งหมด?")) return;
+    data = { accessories: [], chips: [] };
+    save(); render();
   });
 
   // ---------------------------------------------------------------- goal
@@ -1350,19 +1345,14 @@
     };
   }
 
-  function loadSeed(force) {
-    fetch("gear_items.json")
-      .then(function (r) { return r.json(); })
-      .then(function (seed) {
-        data = normalize(seed);
-        reseedIdSeq();
-        save(); render();
-      })
-      .catch(function () {
-        if (force) window.alert(T.seedFail);
-        data = normalize(data);
-        render();
-      });
+  /* Rows the picker cannot offer -- the old sample set (Ring-AT, AT-1 ...)
+     and hand-typed names from before the name box was pick-only -- are
+     dropped (owner's call). A row with no name yet is one just added. */
+  function dropUnlisted(d) {
+    var inList = function (it) {
+      return !it.name || pickList(it.slot).some(function (p) { return p.name === it.name; });
+    };
+    return { accessories: d.accessories.filter(inList), chips: d.chips.filter(inList) };
   }
 
   var savedGoal = jget(GOAL_KEY, null);
@@ -1377,16 +1367,15 @@
      name dropdowns render empty. */
   Promise.all([loadRegistry(), loadChipRegistry(),
                loadSetRegistry()]).then(function () {
-    if (savedItems && ((savedItems.accessories || []).length || (savedItems.chips || []).length)) {
-      data = normalize(savedItems);
-      relinkByRegId(data.accessories, registry);
-      relinkByRegId(data.chips, chipRegistry);
-      reseedIdSeq();
-      save();
-      render();
-    } else {
-      loadSeed(false);
-    }
+    data = normalize(savedItems || {});
+    relinkByRegId(data.accessories, registry);
+    relinkByRegId(data.chips, chipRegistry);
+    /* Only prune when the lists loaded: with a failed fetch every row would
+       look unlisted and the player's whole set would be wiped. */
+    if (registry.length && chipRegistry.length) data = dropUnlisted(data);
+    reseedIdSeq();
+    save();
+    render();
   });
 })();
 </script>

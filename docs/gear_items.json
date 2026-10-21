@@ -49,30 +49,6 @@
       "slot": "bracelet"
     },
     {
-      "id": "acc7",
-      "name": "Wing-AT",
-      "AT": 700,
-      "HT": 0,
-      "CT": 0.0,
-      "slot": "wing"
-    },
-    {
-      "id": "acc8",
-      "name": "Wing-HT",
-      "AT": 0,
-      "HT": 600,
-      "CT": 0.0,
-      "slot": "wing"
-    },
-    {
-      "id": "acc9",
-      "name": "Wing-CT",
-      "AT": 0,
-      "HT": 0,
-      "CT": 6.0,
-      "slot": "wing"
-    },
-    {
       "id": "acc10",
       "name": "Glasses-AT",
       "AT": 2200,

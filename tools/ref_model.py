@@ -56,7 +56,7 @@ PROJ = Path(__file__).resolve().parent.parent
 # JS: a reference model that reads its rules from the thing it is checking is
 # not independent of it.
 SLOTS = [
-    "ring", "necklace", "bracelet", "earring", "glasses", "wing",
+    "ring", "necklace", "bracelet", "earring", "glasses",
     "head", "fashion", "top", "bottom", "gloves", "shoes", "keyring",
     "digivice", "aura",
 ]
