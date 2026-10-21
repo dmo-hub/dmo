@@ -45,9 +45,22 @@
   table.go-tbl input, table.go-tbl select { font: inherit; font-size: 12.5px; width: 100%;
     min-width: 62px; padding: 4px 7px; border: 1px solid var(--hairline);
     border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
-  table.go-tbl td.go-name select { min-width: 120px; }
-  .go-name-row { display: flex; align-items: center; gap: 6px; }
-  .go-th { font-size: 12px; color: var(--muted); margin: 3px 0 0 30px; line-height: 1.4; }
+  .go-picker { min-width: 240px; }
+  .go-pick-btn { display: flex; align-items: center; gap: 8px; width: 100%; font: inherit;
+    font-size: 12.5px; text-align: left; padding: 4px 28px 4px 7px; cursor: pointer;
+    border: 1px solid var(--hairline); border-radius: 7px; background: var(--surface-soft);
+    color: var(--ink); position: relative; min-height: 32px; }
+  .go-pick-btn::after { content: "\25BE"; position: absolute; right: 9px; color: var(--muted); }
+  .go-pick-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .go-pick-label.is-empty { color: var(--muted); }
+  .go-pick-list { position: fixed; z-index: 40; margin: 0; padding: 4px; list-style: none;
+    min-width: 260px; max-width: min(460px, calc(100vw - 16px)); max-height: 320px; overflow-y: auto;
+    background: var(--canvas); border: 1px solid var(--hairline); border-radius: 9px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .18); }
+  .go-pick-list li { display: flex; align-items: center; gap: 8px; padding: 6px 8px;
+    border-radius: 6px; cursor: pointer; font-size: 13px; color: var(--ink); white-space: normal; text-align: left; }
+  .go-pick-list li.is-active { background: var(--surface-card); }
+  .go-pick-list li[aria-selected="true"] { font-weight: 600; }
   .go-icon { width: 24px; height: 24px; flex: none; object-fit: contain; }
   .go-list .go-icon { vertical-align: middle; margin-right: 6px; }
   /* --muted-soft on white is 2.65:1 -- too faint to read, and 19px is under
@@ -138,7 +151,7 @@
       font-size: 11px; color: var(--muted); margin-bottom: 2px; }
     table.go-tbl td.go-name { grid-column: 1 / 3; padding-right: 52px; }
     table.go-tbl td.go-del-cell { position: absolute; top: 10px; right: 10px; }
-    table.go-tbl input, table.go-tbl select, table.go-tbl td.go-name select { min-width: 0; }
+    table.go-tbl input, table.go-tbl select, .go-picker { min-width: 0; }
     .go-del { min-width: 44px; min-height: 44px; border: 1px solid var(--hairline); border-radius: 9px; }
   }
 </style>
@@ -357,56 +370,53 @@
     return td;
   }
 
-  /* Picking from the registry writes the stats in. The box is a closed
-     select (owner's call): a typed name matched nothing half the time and left
-     a row with no stats. A row saved under a name the registry no longer has
-     keeps it as its own option, so opening the page never renames it. */
+  /* What a picker lists for a slot: the same pieces gear-names shows --
+     clothing slots offer set pieces only. Chips carry no slot and pick from
+     the chip registry. */
+  var CLOTHING = ["head", "top", "bottom", "gloves", "shoes", "fashion"];
+  function pickList(slot) {
+    if (!slot) return chipRegistry;
+    var list = registryBySlot[slot] || [];
+    if (CLOTHING.indexOf(slot) < 0) return list;
+    var inSet = {};
+    setRegistry.forEach(function (s) {
+      (s.slots || []).forEach(function (x) {
+        inSet[x.stats_from] = true;
+        if (x.stats_shin_from) inSet[x.stats_shin_from] = true;
+      });
+    });
+    return list.filter(function (it) { return inSet[it.name]; });
+  }
+
+  // Thai name first (owner's call), English when vplay never printed one.
+  function pickLabel(it) {
+    if (!it.nameTh) return it.name;
+    return it.nameTh + (it.nameThInferred ? " (อนุมาน)" : "");
+  }
+
+  /* Picking from the registry writes the stats in. Pick-only (owner's call):
+     a typed name matched nothing half the time and left a row with no stats.
+     A native select cannot show pictures, so this is a button plus a listbox.
+     A row saved under a name the list no longer offers keeps it as its own
+     entry, so opening the page never renames it. */
   function nameCell(item) {
     var td = document.createElement("td");
     td.className = "go-name";
 
-    var inp = document.createElement("select");
-    /* Chips carry no slot, so they pick from the chip registry. */
-    var list = (item.slot ? registryBySlot[item.slot] : chipRegistry) || [];
-    var blank = document.createElement("option");
-    blank.value = "";
-    blank.textContent = "— เลือก —";
-    inp.appendChild(blank);
-    if (item.name && !findInRegistry(item.name, item.slot)) {
-      var own = document.createElement("option");
-      own.value = item.name;
-      own.textContent = item.name + " (ไม่อยู่ในทะเบียน)";
-      inp.appendChild(own);
-    }
-    list.forEach(function (it) {
-      var o = document.createElement("option");
-      o.value = it.name;
-      o.textContent = it.nameTh ? it.name + " · " + it.nameTh : it.name;
-      inp.appendChild(o);
+    var list = pickList(item.slot).map(function (it) {
+      return { value: it.name, label: pickLabel(it), icon: it.icon || "" };
     });
-    inp.value = item.name || "";
-    inp.addEventListener("change", function () {
-      item.name = inp.value;
-      var pick = findInRegistry(inp.value, item.slot);
+    if (item.name && !list.some(function (o) { return o.value === item.name; })) {
+      list.unshift({ value: item.name, label: item.name + " (ไม่อยู่ในรายการ)", icon: iconFor(item) });
+    }
+    td.appendChild(picker(list, item.name || "", function (value) {
+      item.name = value;
+      var pick = findInRegistry(value, item.slot);
       if (pick) applyRegistryItem(item, pick);
       save();
       renderAcc();
-    });
-    var row = document.createElement("div");
-    row.className = "go-name-row";
-    var icon = iconImg(iconFor(item));
-    if (icon) row.appendChild(icon);
-    row.appendChild(inp);
-    td.appendChild(row);
-
-    var pick = item.name && item.slot ? findInRegistry(item.name, item.slot) : null;
-    if (pick && pick.nameTh) {
-      var th = document.createElement("div");
-      th.className = "go-th";
-      th.textContent = pick.nameTh + (pick.nameThInferred ? " (อนุมาน)" : "");
-      if (pick.nameThShin) th.title = "ร่างชิน: " + pick.nameThShin;
-      td.appendChild(th);
-    }
+      renderChips();
+    }));
 
     var flag = registryFlag(item);
     if (flag) td.appendChild(flag);
@@ -430,6 +440,130 @@
     img.loading = "lazy";
     img.alt = "";             // the name is printed right beside it
     return img;
+  }
+
+  /* Button + listbox. The list is position:fixed because the tables sit in
+     an overflow:auto wrapper that would clip it; it closes on any scroll or
+     resize rather than chasing the button. */
+  function picker(options, value, onPick) {
+    var wrap = document.createElement("div");
+    wrap.className = "go-picker";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "go-pick-btn";
+    btn.setAttribute("aria-haspopup", "listbox");
+    btn.setAttribute("aria-expanded", "false");
+    var cur = null;
+    options.forEach(function (o) { if (o.value === value) cur = o; });
+    pickFace(btn, cur ? cur.icon : "", cur ? cur.label : "— เลือก —", !cur);
+    wrap.appendChild(btn);
+
+    var panel = document.createElement("ul");
+    panel.className = "go-pick-list";
+    panel.setAttribute("role", "listbox");
+    panel.tabIndex = -1;
+    panel.hidden = true;
+    var lis = options.map(function (o, i) {
+      var li = document.createElement("li");
+      li.setAttribute("role", "option");
+      li.setAttribute("aria-selected", o.value === value ? "true" : "false");
+      pickFace(li, o.icon, o.label, false);
+      li.addEventListener("mousedown", function (e) { e.preventDefault(); });
+      li.addEventListener("click", function () { choose(i); });
+      li.addEventListener("mousemove", function () { setActive(i); });
+      panel.appendChild(li);
+      return li;
+    });
+    wrap.appendChild(panel);
+
+    var active = -1;
+    function setActive(i) {
+      if (active >= 0 && lis[active]) lis[active].classList.remove("is-active");
+      active = Math.max(0, Math.min(i, lis.length - 1));
+      var li = lis[active];
+      if (li) {
+        li.classList.add("is-active");
+        /* scrollIntoView would also scroll the page, which closes the list. */
+        if (li.offsetTop < panel.scrollTop) panel.scrollTop = li.offsetTop;
+        else if (li.offsetTop + li.offsetHeight > panel.scrollTop + panel.clientHeight) {
+          panel.scrollTop = li.offsetTop + li.offsetHeight - panel.clientHeight;
+        }
+      }
+    }
+    function onOutside(e) { if (!wrap.contains(e.target)) close(false); }
+    /* The page scrolls smoothly (site.css), so a scroll can still be running
+       when the list opens: follow the button, close only once it is gone. */
+    function onMove(e) {
+      if (e && e.target === panel) return;  // scrolling the list itself
+      var r = btn.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > window.innerHeight) close(false);
+      else place();
+    }
+    function open() {
+      if (!lis.length) return;
+      panel.hidden = false;
+      place();
+      btn.setAttribute("aria-expanded", "true");
+      var sel = options.map(function (o) { return o.value; }).indexOf(value);
+      setActive(sel >= 0 ? sel : 0);
+      panel.focus({ preventScroll: true });
+      document.addEventListener("mousedown", onOutside);
+      window.addEventListener("scroll", onMove, true);
+      window.addEventListener("resize", onMove);
+    }
+    function place() {
+      var r = btn.getBoundingClientRect();
+      panel.style.maxHeight = "";
+      panel.style.left = Math.max(8, Math.min(r.left, window.innerWidth - panel.offsetWidth - 8)) + "px";
+      // open on the side with more room, and never past the window's edge
+      var below = window.innerHeight - r.bottom - 12;
+      var above = r.top - 12;
+      var down = below >= Math.min(panel.offsetHeight, 240) || below >= above;
+      var room = Math.max(120, down ? below : above);
+      if (panel.offsetHeight > room) panel.style.maxHeight = room + "px";
+      panel.style.top = (down ? r.bottom + 4 : r.top - panel.offsetHeight - 4) + "px";
+    }
+    function close(focusBtn) {
+      if (panel.hidden) return;
+      panel.hidden = true;
+      btn.setAttribute("aria-expanded", "false");
+      document.removeEventListener("mousedown", onOutside);
+      window.removeEventListener("scroll", onMove, true);
+      window.removeEventListener("resize", onMove);
+      if (focusBtn) btn.focus();
+    }
+    function choose(i) {
+      close(true);
+      if (options[i] && options[i].value !== value) onPick(options[i].value);
+    }
+    btn.addEventListener("click", function () { panel.hidden ? open() : close(false); });
+    btn.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); open(); }
+    });
+    panel.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") { e.preventDefault(); setActive(active + 1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); setActive(active - 1); }
+      else if (e.key === "Home") { e.preventDefault(); setActive(0); }
+      else if (e.key === "End") { e.preventDefault(); setActive(lis.length - 1); }
+      else if (e.key === "Enter" || e.key === " ") { e.preventDefault(); choose(active); }
+      else if (e.key === "Escape") { e.preventDefault(); close(true); }
+      else if (e.key === "Tab") { close(false); }
+    });
+    return wrap;
+  }
+
+  function pickFace(host, icon, label, placeholder) {
+    var img = iconImg(icon);
+    if (img) host.appendChild(img);
+    else {
+      var gap = document.createElement("span");
+      gap.className = "go-icon";
+      host.appendChild(gap);
+    }
+    var s = document.createElement("span");
+    s.className = "go-pick-label" + (placeholder ? " is-empty" : "");
+    s.textContent = label;
+    host.appendChild(s);
   }
 
   function findInRegistry(name, slot) {
@@ -623,26 +757,33 @@
   function upgradeCell(it) {
     var firstPick = it.slot === "digivice" && it.name ? findInRegistry(it.name, it.slot) : null;
     if (firstPick && firstPick.chipsByLevel) return firstDigiviceLevelCell(it, firstPick);
+    /* A select rather than a number box (owner's call): typing let "0999"
+       through. +0 up to the piece's own top, +15 when the registry gives none. */
     var td = document.createElement("td");
-    var inp = document.createElement("input");
-    inp.type = "number"; inp.min = "0"; inp.max = "15"; inp.step = "1";
-    inp.placeholder = "+0";
+    var inp = document.createElement("select");
     var key = it.name || "";
-    inp.value = (key && levels[key] !== undefined) ? levels[key] : "";
     var pick = it.name && it.slot ? findInRegistry(it.name, it.slot) : null;
-    if (pick && pick.upgradeMax !== undefined) inp.max = String(pick.upgradeMax);
-    inp.addEventListener("input", function () {
+    var top = pick && pick.upgradeMax !== undefined ? num(pick.upgradeMax) : 15;
+    var none = document.createElement("option");
+    none.value = "";
+    none.textContent = "—";
+    inp.appendChild(none);
+    for (var lv = 0; lv <= top; lv++) {
+      var o = document.createElement("option");
+      o.value = String(lv);
+      o.textContent = "+" + lv;
+      inp.appendChild(o);
+    }
+    inp.value = (key && levels[key] !== undefined) ? String(levels[key]) : "";
+    inp.disabled = !key;
+    inp.addEventListener("change", function () {
       var k = it.name || "";
       if (!k) return;
       if (inp.value === "") { delete levels[k]; } else { levels[k] = num(inp.value); }
       saveLevels();
-    });
-    /* Re-rendering on every keystroke would steal focus mid-typing, so the
-       stats follow the level once the field is committed. */
-    inp.addEventListener("change", function () {
-      var p = it.name && it.slot ? findInRegistry(it.name, it.slot) : null;
+      var p = it.slot ? findInRegistry(k, it.slot) : null;
       if (!p || !p.levelStats) return;
-      applyLevelStats(it, p, levels[it.name]);
+      applyLevelStats(it, p, levels[k]);
       save();
       renderAcc();
     });
@@ -650,7 +791,7 @@
     return td;
   }
 
-  var ACC_COLS = ["ชื่อ", "ตีบวก", "AT", "HT", "CT (%)", ""];
+  var ACC_COLS = ["ชื่อ", "ตีบวก/เลเวล", "AT", "HT", "CT (%)", ""];
 
   /* One box per slot (owner's call): the head box offers head pieces only, so
      a row can never be filed under the wrong slot and there is no slot field
