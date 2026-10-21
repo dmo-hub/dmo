@@ -81,7 +81,9 @@
       "axis": "tamer",
       "iconWiki": "/images/0/0c/Baihumon_Pants.png",
       "icon": "img/gear/baihumon_pants.png",
-      "DS": 1000
+      "DS": 1000,
+      "nameTh": "กางเกงขาสั้นชั้นดีของไบฟูมอน",
+      "nameThInferred": true
     },
     {
       "id": "bottom-baihumon-s-flawless-short-pants",
@@ -530,7 +532,9 @@
       "axis": "tamer",
       "iconWiki": "/images/d/d1/Qinglongmon%27s_Radiant_Pants.png",
       "icon": "img/gear/qinglongmon_s_radiant_pants.png",
-      "DS": 1000
+      "DS": 1000,
+      "nameTh": "กางเกงขาสั้นชั้นดีของจินลอนมอน",
+      "nameThInferred": true
     },
     {
       "id": "bottom-short-pants-of-baihumon",
@@ -540,7 +544,9 @@
       "axis": "tamer",
       "iconWiki": "/images/0/0c/Baihumon_Pants.png",
       "icon": "img/gear/baihumon_pants.png",
-      "DS": 500
+      "DS": 500,
+      "nameTh": "กางเกงขาสั้นของไบฟูมอน",
+      "nameThInferred": true
     },
     {
       "id": "bottom-short-pants-of-qinglongmon",
@@ -550,7 +556,9 @@
       "axis": "tamer",
       "iconWiki": "/images/d/d1/Qinglongmon%27s_Radiant_Pants.png",
       "icon": "img/gear/qinglongmon_s_radiant_pants.png",
-      "DS": 500
+      "DS": 500,
+      "nameTh": "กางเกงขาสั้นของจินลอนมอน",
+      "nameThInferred": true
     },
     {
       "id": "bottom-short-pants-of-zhuqiaomon",
@@ -560,7 +568,9 @@
       "axis": "tamer",
       "iconWiki": "/images/a/a3/Zhuqiomon_shorts.png",
       "icon": "img/gear/zhuqiomon_shorts.png",
-      "DS": 500
+      "DS": 500,
+      "nameTh": "กางเกงขาสั้นของซูเซมอน",
+      "nameThInferred": true
     },
     {
       "id": "bottom-yolei-t-k-davis-bottom-3-tk",
@@ -863,7 +873,9 @@
       "axis": "tamer",
       "iconWiki": "/images/8/8a/Ebonwumon_Shorts.png",
       "icon": "img/gear/ebonwumon_shorts.png",
-      "DS": 1000
+      "DS": 1000,
+      "nameTh": "กางเกงขาสั้นชั้นดีของเชนวูมอน",
+      "nameThInferred": true
     },
     {
       "id": "bottom-xuanwumon-short-pants",
@@ -873,7 +885,9 @@
       "axis": "tamer",
       "iconWiki": "/images/8/8a/Ebonwumon_Shorts.png",
       "icon": "img/gear/ebonwumon_shorts.png",
-      "DS": 500
+      "DS": 500,
+      "nameTh": "กางเกงขาสั้นของเชนวูมอน",
+      "nameThInferred": true
     },
     {
       "id": "bottom-xuanwumon-s-aquatic-short-pants",
@@ -4801,7 +4815,9 @@
       "axis": "tamer",
       "iconWiki": "/images/1/15/Baihumon_Gloves.png",
       "icon": "img/gear/baihumon_gloves.png",
-      "AT": 250
+      "AT": 250,
+      "nameTh": "ถุงมือของไบฟูมอน",
+      "nameThInferred": true
     },
     {
       "id": "gloves-baihumon-s-flawless-gloves",
@@ -5099,7 +5115,9 @@
       "axis": "tamer",
       "iconWiki": "/images/d/df/Flame_Gloves_of_Zhuqiaomon.png",
       "icon": "img/gear/flame_gloves_of_zhuqiaomon.png",
-      "AT": 300
+      "AT": 300,
+      "nameTh": "ถุงมือชั้นดีของซูเซมอน",
+      "nameThInferred": true
     },
     {
       "id": "gloves-gloves-of-zhuqiaomon",
@@ -5109,7 +5127,9 @@
       "axis": "tamer",
       "iconWiki": "/images/d/df/Flame_Gloves_of_Zhuqiaomon.png",
       "icon": "img/gear/flame_gloves_of_zhuqiaomon.png",
-      "AT": 250
+      "AT": 250,
+      "nameTh": "ถุงมือของซูเซมอน",
+      "nameThInferred": true
     },
     {
       "id": "gloves-spirit-gloves-3-ice",
@@ -5307,7 +5327,9 @@
       "axis": "tamer",
       "iconWiki": "/images/4/4d/Qinglongmon%27s_Radiant_Gloves.png",
       "icon": "img/gear/qinglongmon_s_radiant_gloves.png",
-      "AT": 250
+      "AT": 250,
+      "nameTh": "ถุงมือของจินลอนมอน",
+      "nameThInferred": true
     },
     {
       "id": "gloves-qinglongmon-s-lightning-gloves",
@@ -5328,7 +5350,9 @@
       "axis": "tamer",
       "iconWiki": "/images/4/4d/Qinglongmon%27s_Radiant_Gloves.png",
       "icon": "img/gear/qinglongmon_s_radiant_gloves.png",
-      "AT": 300
+      "AT": 300,
+      "nameTh": "ถุงมือชั้นดีของจินลอนมอน",
+      "nameThInferred": true
     },
     {
       "id": "gloves-shiny-desert-gloves-60-days",
@@ -5692,7 +5716,9 @@
       "axis": "tamer",
       "iconWiki": "/images/4/43/Ebonwumon_Gloves.png",
       "icon": "img/gear/ebonwumon_gloves.png",
-      "AT": 250
+      "AT": 250,
+      "nameTh": "ถุงมือของเชนวูมอน",
+      "nameThInferred": true
     },
     {
       "id": "gloves-xuanwumon-shiny-gloves",
@@ -5702,7 +5728,9 @@
       "axis": "tamer",
       "iconWiki": "/images/4/43/Ebonwumon_Gloves.png",
       "icon": "img/gear/ebonwumon_gloves.png",
-      "AT": 300
+      "AT": 300,
+      "nameTh": "ถุงมือชั้นดีของเชนวูมอน",
+      "nameThInferred": true
     },
     {
       "id": "gloves-xuanwumon-s-aquatic-gloves",
@@ -8955,7 +8983,9 @@
           "value": 1000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดชั้นดีของไบฟูมอน",
+      "nameThInferred": true
     },
     {
       "id": "top-baihumon-s-flawless-hooded-shirt",
@@ -9231,7 +9261,9 @@
           "value": 1000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดชั้นดีของซูเซมอน",
+      "nameThInferred": true
     },
     {
       "id": "top-hooded-shirt-of-baihumon",
@@ -9247,7 +9279,9 @@
           "value": 500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดของไบฟูมอน",
+      "nameThInferred": true
     },
     {
       "id": "top-hooded-shirt-of-qinglongmon",
@@ -9263,7 +9297,9 @@
           "value": 500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดของจินลอนมอน",
+      "nameThInferred": true
     },
     {
       "id": "top-hooded-shirt-of-zhuqiaomon",
@@ -9279,7 +9315,9 @@
           "value": 500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดของซูเซมอน",
+      "nameThInferred": true
     },
     {
       "id": "top-spirit-top-3-ice",
@@ -9462,7 +9500,9 @@
           "value": 1000.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดชั้นดีของจินลอนมอน",
+      "nameThInferred": true
     },
     {
       "id": "top-spooky-soulmon-s-robe-30-days",
@@ -9789,7 +9829,9 @@
           "value": 500.0,
           "unit": "flat"
         }
-      ]
+      ],
+      "nameTh": "เสื้อฮู้ดของเชนวูมอน",
+      "nameThInferred": true
     },
     {
       "id": "top-xuanwumon-shiny-hooded-shirt",

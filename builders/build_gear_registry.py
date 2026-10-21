@@ -235,15 +235,19 @@ def add_thai_names(out):
 
     # Gear outside the rosters: names found in vplay posts, keyed by the
     # registry's English name. A key that matches nothing is a rename upstream.
-    extra = json.loads(TH_NAMES.read_text(encoding="utf-8"))["items"]
+    th_names = json.loads(TH_NAMES.read_text(encoding="utf-8"))
     by_name = {it["name"]: it for it in out}
-    for en, th in extra.items():
-        it = by_name.get(en)
-        if not it:
-            print(f"  ! {TH_NAMES.name}: no registry item named {en!r}")
-        elif not it.get("nameTh"):
-            it["nameTh"] = th
-            named += 1
+    # "inferred" names vplay never printed; the flag lets pages say so.
+    for block, inferred in (("items", False), ("inferred", True)):
+        for en, th in th_names.get(block, {}).items():
+            it = by_name.get(en)
+            if not it:
+                print(f"  ! {TH_NAMES.name}: no registry item named {en!r}")
+            elif not it.get("nameTh"):
+                it["nameTh"] = th
+                if inferred:
+                    it["nameThInferred"] = True
+                named += 1
     return named
 
 

@@ -96,5 +96,29 @@
     "Zhuqiamon's Infernal Short Pants": "กางเกงขาสั้นสีแดงเพลิงของซูเซมอน",
     "Zhuqiaomon's Infernal Cape": "เสื้อคลุมสีแดงเพลิงของซูเซมอน",
     "Zhuqiaomon's Infernal Ornament": "ผ้าโพกสีแดงเพลิงของซูเซมอน"
+  },
+  "_inferred_note": "Names vplay never prints (full-text search of every post found none), built by the owner's call from vplay's own pattern: the middle tier (Aural/Flame/Shiny/Radiant) as '<piece>ชั้นดีของ<beast>' like Baihumon Aural Gloves, the plain tier as '<piece>ของ<beast>'. Pages mark them as inferred; a vplay sighting moves the pair up into items.",
+  "inferred": {
+    "Aural Hooded Shirt of Baihumon": "เสื้อฮู้ดชั้นดีของไบฟูมอน",
+    "Aural Short Pants of Baihumon": "กางเกงขาสั้นชั้นดีของไบฟูมอน",
+    "Baihumon Gloves": "ถุงมือของไบฟูมอน",
+    "Flame Gloves of Zhuqiaomon": "ถุงมือชั้นดีของซูเซมอน",
+    "Flame Hooded Shirt of Zhuqiaomon": "เสื้อฮู้ดชั้นดีของซูเซมอน",
+    "Gloves of Zhuqiaomon": "ถุงมือของซูเซมอน",
+    "Hooded Shirt of Baihumon": "เสื้อฮู้ดของไบฟูมอน",
+    "Hooded Shirt of Qinglongmon": "เสื้อฮู้ดของจินลอนมอน",
+    "Hooded Shirt of Zhuqiaomon": "เสื้อฮู้ดของซูเซมอน",
+    "Qinglongmon's Gloves": "ถุงมือของจินลอนมอน",
+    "Qinglongmon's Radiant Gloves": "ถุงมือชั้นดีของจินลอนมอน",
+    "Radiant Hooded Shirt of Qinglongmon": "เสื้อฮู้ดชั้นดีของจินลอนมอน",
+    "Radiant Short Pants of Qinglongmon": "กางเกงขาสั้นชั้นดีของจินลอนมอน",
+    "Short Pants of Baihumon": "กางเกงขาสั้นของไบฟูมอน",
+    "Short Pants of Qinglongmon": "กางเกงขาสั้นของจินลอนมอน",
+    "Short Pants of Zhuqiaomon": "กางเกงขาสั้นของซูเซมอน",
+    "Xuanwumon Gloves": "ถุงมือของเชนวูมอน",
+    "Xuanwumon Hooded Shirt": "เสื้อฮู้ดของเชนวูมอน",
+    "Xuanwumon Shiny Gloves": "ถุงมือชั้นดีของเชนวูมอน",
+    "Xuanwumon Shiny Short Pants": "กางเกงขาสั้นชั้นดีของเชนวูมอน",
+    "Xuanwumon Short Pants": "กางเกงขาสั้นของเชนวูมอน"
   }
 }

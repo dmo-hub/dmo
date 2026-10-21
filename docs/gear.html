@@ -387,7 +387,7 @@
     if (pick && pick.nameTh) {
       var th = document.createElement("div");
       th.className = "go-th";
-      th.textContent = pick.nameTh;
+      th.textContent = pick.nameTh + (pick.nameThInferred ? " (อนุมาน)" : "");
       if (pick.nameThShin) th.title = "ร่างชิน: " + pick.nameThShin;
       td.appendChild(th);
     }

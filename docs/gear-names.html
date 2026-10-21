@@ -38,6 +38,7 @@
   .gn-en { font-size: 13px; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
   .gn-th { font-size: 13px; color: var(--body); overflow-wrap: anywhere; }
   .gn-th.none { color: var(--muted); font-style: italic; }
+  .gn-guess { margin-left: 6px; padding: 0 5px; border: 1px solid var(--muted); border-radius: 4px; font-size: 11px; color: var(--muted); }
   .gn-shin { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
   .gn-empty { color: var(--muted); padding: 18px 0; }
   .gn-note { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: 0 0 16px; }
@@ -167,7 +168,12 @@
     c.appendChild(box);
     var t = el("div", "gn-txt");
     t.appendChild(el("div", "gn-en", it.name));
-    t.appendChild(el("div", "gn-th" + (it.nameTh ? "" : " none"), it.nameTh || "ยังไม่มีชื่อไทย"));
+    var th = el("div", "gn-th" + (it.nameTh ? "" : " none"), it.nameTh || "ยังไม่มีชื่อไทย");
+    if (it.nameThInferred) {
+      th.appendChild(el("span", "gn-guess", "อนุมาน"));
+      th.title = "vplay ไม่เคยเขียนชื่อนี้ ตั้งตามแพตเทิร์นชื่อชิ้นอื่นในชุด";
+    }
+    t.appendChild(th);
     if (it.nameThShin) t.appendChild(el("div", "gn-shin", it.nameThShin));
     c.appendChild(t);
     return c;
