@@ -69,6 +69,13 @@ WIKI_ONLY_TAMER_GEAR = {"XAI System": "xai"}
 WIKI_ONLY_NAMES = {}
 # The wiki leaves XAI's side blank; the owner confirmed it feeds the digimon.
 WIKI_ONLY_AXIS = {"xai": "digimon"}
+# How many chips a digivice lets the digimon wear: the loaders 6 and the true
+# crest digivices / D-Arks 4 (owner); the First Digivice by its level, from
+# the table in vplay post 25337 (Lv1-5 six, Lv6-10 seven, complete eight --
+# level 11 here, so "default to the top" lands on complete).
+CHIP_SLOTS = (("Loader", 6), ("True D-Ark", 4), ("True Digivice", 4))
+FIRST_DIGIVICE_CHIPS = {**{str(n): 6 for n in range(1, 6)},
+                        **{str(n): 7 for n in range(6, 11)}, "11": 8}
 
 # vplay's per-level Spirit tables name the piece, not the element: one table
 # serves all five "*:Spirit X" items.
@@ -411,6 +418,13 @@ def add_th_tamer_gear(out, items):
         for field in ("rowsFrom", "info", "families"):
             if src.get(field):
                 rec[field] = src[field]
+        if src["slot"] == "digivice":
+            if src["name"] == "First Digivice":
+                rec["chipsByLevel"] = FIRST_DIGIVICE_CHIPS
+            else:
+                rec["chips"] = next((n for word, n in CHIP_SLOTS if word in src["name"]), None)
+                if rec["chips"] is None:
+                    raise SystemExit(f"no chip count for digivice {src['name']!r} -- add it to CHIP_SLOTS")
         out.append(rec)
         added += 1
 

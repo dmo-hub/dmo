@@ -202,7 +202,57 @@
     return out;
   }
 
+  /* The digivice decides how many chips fit (a row's chipCap: loaders 6, true
+     digivices 4, the First Digivice 6-8 by level). The chip pool and the
+     digivice therefore cannot be chosen apart: each distinct cap is solved
+     with only that cap's digivices on offer, and the best answer wins --
+     reaching the targets first, then AT, then the smaller shortfall. A
+     digivice row with no cap (typed by hand) is offered in every run; with no
+     capped digivice at all the old flat MAX_CHIPS applies. */
   function solve(data, baseStats, targetHT, targetCT) {
+    var all = (data && data.accessories) || [];
+    var caps = [];
+    all.forEach(function (it) {
+      if (it.slot === "digivice" && it.chipCap > 0 && caps.indexOf(it.chipCap) < 0) caps.push(it.chipCap);
+    });
+    if (!caps.length) caps = [MAX_CHIPS];
+    var best = null;
+    caps.forEach(function (cap) {
+      var sub = {};
+      Object.keys(data || {}).forEach(function (k) { sub[k] = data[k]; });
+      sub.accessories = all.filter(function (it) {
+        return it.slot !== "digivice" || !(it.chipCap > 0) || it.chipCap === cap;
+      });
+      var out = solveCapped(sub, baseStats, targetHT, targetCT, cap);
+      if (!out) return;
+      out.maxChips = cap;
+      /* The cap came from wearing one of these digivices, so the answer has
+         to wear one even when its stats add nothing the search could see
+         (all zero). Stats are never negative, so the totals only grow. */
+      var row = out.result.accessories.filter(function (a) { return a.slot === "digivice"; })[0];
+      var mine = sub.accessories.filter(function (it) { return it.slot === "digivice" && it.chipCap === cap; });
+      if (row && !row.item && mine.length) {
+        var pick = mine.slice().sort(function (a, b) { return num(b.AT) - num(a.AT); })[0];
+        row.item = pick;
+        var t = out.result.totals;
+        t.AT += num(pick.AT);
+        STATS.forEach(function (st) { t[st] = unscale(st, scale(st, t[st]) + scale(st, pick[st])); });
+      }
+      if (!best || better(out, best)) best = out;
+    });
+    return best;
+  }
+
+  function better(a, b) {
+    if (a.feasible !== b.feasible) return a.feasible;
+    var gap = function (o) {
+      return Object.keys(o.shortfall || {}).reduce(function (s, k) { return s + o.shortfall[k]; }, 0);
+    };
+    if (!a.feasible && gap(a) !== gap(b)) return gap(a) < gap(b);
+    return a.result.totals.AT > b.result.totals.AT;
+  }
+
+  function solveCapped(data, baseStats, targetHT, targetCT, maxChips) {
     var accessories = (data && data.accessories) || [];
     var chips = (data && data.chips) || [];
     var index = indexSets(data && data.sets);
@@ -252,7 +302,7 @@
        work once per plan and on every gear state -- with 18 chips that phase
        was ~99% of a solve. It is built once here as a table of capped gain
        vectors and joined to each plan's finished gear states below. */
-    var chipTable = runChips(chips, axes, caps);
+    var chipTable = runChips(chips, axes, caps, maxChips);
     var plans = setPlans(data && data.sets, index);
     var best = null;
     var bestShort = null;
@@ -414,10 +464,10 @@
     return states;
   }
 
-  /* Every distinct capped gain the chip pool can add with at most MAX_CHIPS
+  /* Every distinct capped gain the chip pool can add with at most maxChips
      chips, keeping the best AT per gain and dropping any row another row beats
      on every axis and AT (the join only ever wants the better one). */
-  function runChips(chips, axes, caps) {
+  function runChips(chips, axes, caps, maxChips) {
     var zero = axes.map(function () { return 0; });
     var states = {};
     states[zero.join("|") + "|0"] = { at: 0, v: zero, n: 0, prev: null, pick: null };
@@ -427,7 +477,7 @@
       Object.keys(states).forEach(function (k) { next[k] = states[k]; });
       Object.keys(states).forEach(function (k) {
         var st = states[k];
-        if (st.n >= MAX_CHIPS) return;
+        if (st.n >= maxChips) return;
         var v = axes.map(function (stat, i) {
           return Math.min(caps[i], st.v[i] + scale(stat, it[stat]));
         });

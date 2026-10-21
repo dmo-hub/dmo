@@ -589,7 +589,40 @@
 
   function saveLevels() { jset(LEVELS_KEY, levels); }
 
+  /* Chips the digivice row allows. The First Digivice goes by its level
+     (1-10, 11 = complete), defaulting to complete like every other top pick. */
+  function chipCapOf(it) {
+    var pick = it.name ? findInRegistry(it.name, it.slot) : null;
+    if (!pick) return 0;
+    if (pick.chipsByLevel) {
+      var lv = levels[pick.name] !== undefined ? levels[pick.name] : 11;
+      return pick.chipsByLevel[String(lv)] || 0;
+    }
+    return pick.chips || 0;
+  }
+
+  function firstDigiviceLevelCell(it, pick) {
+    var td = document.createElement("td");
+    var sel = document.createElement("select");
+    for (var lv = 1; lv <= 11; lv++) {
+      var o = document.createElement("option");
+      o.value = String(lv);
+      o.textContent = (lv === 11 ? "สมบูรณ์" : "Lv" + lv) +
+        " · ชิป " + pick.chipsByLevel[String(lv)];
+      sel.appendChild(o);
+    }
+    sel.value = String(levels[pick.name] !== undefined ? levels[pick.name] : 11);
+    sel.addEventListener("change", function () {
+      levels[pick.name] = num(sel.value);
+      saveLevels();
+    });
+    td.appendChild(sel);
+    return td;
+  }
+
   function upgradeCell(it) {
+    var firstPick = it.slot === "digivice" && it.name ? findInRegistry(it.name, it.slot) : null;
+    if (firstPick && firstPick.chipsByLevel) return firstDigiviceLevelCell(it, firstPick);
     var td = document.createElement("td");
     var inp = document.createElement("input");
     inp.type = "number"; inp.min = "0"; inp.max = "15"; inp.step = "1";
@@ -737,7 +770,7 @@
     renderCoverage();
     // from the solver so the headline number cannot drift from the cap it uses
     $("hero-maxchips").textContent = MAX_CHIPS;
-    $("chip-hint").textContent = "\u0e0a\u0e34\u0e1b\u0e2a\u0e25\u0e31\u0e1a\u0e0a\u0e48\u0e2d\u0e07\u0e44\u0e14\u0e49\u0e2d\u0e34\u0e2a\u0e23\u0e30 \u2014 \u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e2a\u0e39\u0e07\u0e2a\u0e38\u0e14 " + MAX_CHIPS + " \u0e0a\u0e34\u0e49\u0e19 \u0e23\u0e30\u0e1a\u0e1a\u0e08\u0e30\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e0a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e14\u0e35\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e43\u0e2b\u0e49\u0e40\u0e2d\u0e07";
+    $("chip-hint").textContent = "\u0e0a\u0e34\u0e1b\u0e2a\u0e25\u0e31\u0e1a\u0e0a\u0e48\u0e2d\u0e07\u0e44\u0e14\u0e49\u0e2d\u0e34\u0e2a\u0e23\u0e30 \u2014 \u0e08\u0e33\u0e19\u0e27\u0e19\u0e17\u0e35\u0e48\u0e43\u0e2a\u0e48\u0e44\u0e14\u0e49\u0e02\u0e36\u0e49\u0e19\u0e01\u0e31\u0e1a\u0e14\u0e34\u0e08\u0e34\u0e44\u0e27\u0e0b\u0e4c: \u0e15\u0e23\u0e30\u0e01\u0e39\u0e25\u0e42\u0e2b\u0e25\u0e14\u0e40\u0e14\u0e2d\u0e23\u0e4c 6 \u00b7 \u0e14\u0e34\u0e08\u0e34\u0e44\u0e27\u0e0b\u0e4c\u0e17\u0e35\u0e48\u0e41\u0e17\u0e49\u0e08\u0e23\u0e34\u0e07 / D-\u0e2d\u0e32\u0e23\u0e4c\u0e04 4 \u00b7 \u0e40\u0e1f\u0e34\u0e23\u0e4c\u0e2a\u0e17\u0e4c \u0e14\u0e34\u0e08\u0e34\u0e44\u0e27\u0e0b\u0e4c 6\u20138 \u0e15\u0e32\u0e21\u0e40\u0e25\u0e40\u0e27\u0e25 (\u0e44\u0e21\u0e48\u0e43\u0e2a\u0e48\u0e14\u0e34\u0e08\u0e34\u0e44\u0e27\u0e0b\u0e4c = " + MAX_CHIPS + ") \u0e23\u0e30\u0e1a\u0e1a\u0e08\u0e30\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e14\u0e34\u0e08\u0e34\u0e44\u0e27\u0e0b\u0e4c\u0e01\u0e31\u0e1a\u0e0a\u0e38\u0e14\u0e0a\u0e34\u0e1b\u0e17\u0e35\u0e48\u0e14\u0e35\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e43\u0e2b\u0e49\u0e40\u0e2d\u0e07";
     $("hero-acc").textContent = data.accessories.length;
     $("hero-chip").textContent = data.chips.length;
   }
@@ -884,6 +917,14 @@
     var axisCut = window.GearSolver.dropOffAxis(solveData);
     solveData = axisCut.data;
     var dupes = window.GearSolver.findDuplicateIds(data);
+    solveData.accessories = solveData.accessories.map(function (it) {
+      var cap = it.slot === "digivice" ? chipCapOf(it) : 0;
+      if (!cap) return it;
+      var copy = {};
+      Object.keys(it).forEach(function (k) { copy[k] = it[k]; });
+      copy.chipCap = cap;
+      return copy;
+    });
     solveData.sets = setRegistry;
     var out = window.GearSolver.solve(solveData, g.base, g.targets);
     lastRun = { out: out, goal: g, dupes: dupes, axisDropped: axisCut.dropped };
@@ -1031,7 +1072,7 @@
     var c2 = document.createElement("div");
     c2.className = "go-card";
     var h2 = document.createElement("h2");
-    h2.textContent = T.chipHead + " (" + out.result.chips.length + "/" + MAX_CHIPS + ")";
+    h2.textContent = T.chipHead + " (" + out.result.chips.length + "/" + (out.maxChips || MAX_CHIPS) + ")";
     c2.appendChild(h2);
     var ul2 = document.createElement("ul");
     ul2.className = "go-list";
