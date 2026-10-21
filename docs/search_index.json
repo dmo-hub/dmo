@@ -828,6 +828,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-782119",
       "date": "07.02.2024",
       "qty": "5",
@@ -860,6 +868,14 @@
       "tickets": "1",
       "stat": "EV",
       "value": "200"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "—"
      }
     ],
     "th": [
@@ -1268,6 +1284,14 @@
       "tickets": "1",
       "stat": "DE",
       "value": "150"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
      },
      {
       "post": "na-630",
@@ -2910,30 +2934,6 @@
   },
   {
    "type": "seal",
-   "key": "blackweregarurumon",
-   "display": "BlackWereGarurumon",
-   "names": {
-    "en": [],
-    "kr": [],
-    "th": [
-     "แบล็ควาร์การูรูมอน"
-    ]
-   },
-   "servers": {
-    "th": [
-     {
-      "post": "th-42",
-      "date": "26.09.2022",
-      "qty": "1",
-      "tickets": "10",
-      "stat": "HT",
-      "value": "300"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
    "key": "blitzmon",
    "display": "Blitzmon",
    "names": {
@@ -3274,6 +3274,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "EV",
+      "value": "—"
+     },
      {
       "post": "kr-783755",
       "date": "13.03.2024",
@@ -3950,6 +3958,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
+     {
       "post": "kr-792682",
       "date": "25.09.2024",
       "qty": "1",
@@ -4014,6 +4030,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-797955",
       "date": "26.02.2025",
       "qty": "1",
@@ -4038,6 +4062,14 @@
       "tickets": "25",
       "stat": "CT",
       "value": "350"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "CT",
+      "value": "—"
      },
      {
       "post": "na-530",
@@ -4085,6 +4117,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "—"
+     },
      {
       "post": "kr-792682",
       "date": "25.09.2024",
@@ -4136,10 +4176,28 @@
      "키메라몬",
      "키메라몬 씰"
     ],
-    "th": []
+    "th": [
+     "คิเมรามอน"
+    ]
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
+     },
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "DE",
+      "value": "250"
+     },
      {
       "post": "kr-783755",
       "date": "13.03.2024",
@@ -4177,6 +4235,24 @@
      {
       "post": "na-551",
       "date": "28.02.2022",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "DE",
+      "value": "250"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-24",
+      "date": "25.03.2021",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
+     },
+     {
+      "post": "th-42",
+      "date": "26.09.2022",
       "qty": "1",
       "tickets": "10",
       "stat": "DE",
@@ -4647,6 +4723,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HT",
+      "value": "—"
+     },
+     {
       "post": "kr-780048",
       "date": "13.12.2023",
       "qty": "1",
@@ -4961,6 +5045,14 @@
       "value": "250"
      },
      {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "50",
+      "stat": "AT",
+      "value": "—"
+     },
+     {
       "post": "na-647",
       "date": "24.10.2023",
       "qty": "1",
@@ -5071,6 +5163,22 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "—"
+     },
+     {
       "post": "kr-797955",
       "date": "26.02.2025",
       "qty": "5",
@@ -5095,6 +5203,14 @@
       "tickets": "1",
       "stat": "HT",
       "value": "200"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "—"
      },
      {
       "post": "na-530",
@@ -5262,6 +5378,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "EV",
+      "value": "350"
+     },
+     {
       "post": "kr-789333",
       "date": "07.08.2024",
       "qty": "1",
@@ -5286,6 +5410,14 @@
       "tickets": "25",
       "stat": "EV",
       "value": "350"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "EV",
+      "value": "—"
      },
      {
       "post": "na-647",
@@ -5370,7 +5502,8 @@
    "display": "Death-X-mon",
    "names": {
     "en": [
-     "Death-X-mon"
+     "Death-X-mon",
+     "Dexmon"
     ],
     "kr": [
      "데크스몬 씰"
@@ -5381,6 +5514,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "kr-788597",
       "date": "10.07.2024",
@@ -5402,6 +5543,22 @@
      {
       "post": "na-4110",
       "date": "25.02.2026",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "—"
+     },
+     {
+      "post": "na-530",
+      "date": "12.10.2021",
       "qty": "1",
       "tickets": "100",
       "stat": "AT",
@@ -5585,6 +5742,14 @@
       "value": "200"
      },
      {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "—"
+     },
+     {
       "post": "na-530",
       "date": "12.10.2021",
       "qty": "5",
@@ -5676,30 +5841,6 @@
       "qty": "1",
       "tickets": "1",
       "stat": "HP",
-      "value": "300"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
-   "key": "dexmon",
-   "display": "Dexmon",
-   "names": {
-    "en": [
-     "Dexmon"
-    ],
-    "kr": [],
-    "th": []
-   },
-   "servers": {
-    "na": [
-     {
-      "post": "na-530",
-      "date": "12.10.2021",
-      "qty": "1",
-      "tickets": "100",
-      "stat": "AT",
       "value": "300"
      }
     ]
@@ -5968,6 +6109,22 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "—"
+     },
+     {
       "post": "kr-782119",
       "date": "07.02.2024",
       "qty": "10",
@@ -5992,6 +6149,14 @@
       "tickets": "1",
       "stat": "DS",
       "value": "200"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "—"
      },
      {
       "post": "na-530",
@@ -7379,6 +7544,22 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "—"
+     },
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "BL",
+      "value": "200"
+     },
+     {
       "post": "kr-788597",
       "date": "10.07.2024",
       "qty": "1",
@@ -7468,6 +7649,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-780048",
       "date": "13.12.2023",
       "qty": "1",
@@ -7508,6 +7697,14 @@
       "tickets": "100",
       "stat": "AT",
       "value": "300"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "—"
      },
      {
       "post": "na-683",
@@ -8122,6 +8319,14 @@
     ],
     "na": [
      {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "BL",
+      "value": "—"
+     },
+     {
       "post": "na-530",
       "date": "12.10.2021",
       "qty": "1",
@@ -8537,6 +8742,22 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "100"
+     },
+     {
       "post": "kr-782119",
       "date": "07.02.2024",
       "qty": "10",
@@ -8585,6 +8806,22 @@
       "tickets": "1",
       "stat": "HT",
       "value": "100"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "—"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "—"
      }
     ],
     "th": [
@@ -9681,6 +9918,14 @@
       "tickets": "1",
       "stat": "EV",
       "value": "200"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "—"
      },
      {
       "post": "na-530",
@@ -11012,20 +11257,31 @@
   },
   {
    "type": "seal",
-   "key": "guillmon",
-   "display": "Guillmon",
+   "key": "guilmon",
+   "display": "Guilmon",
    "names": {
     "en": [
-     "Guillmon"
+     "Guillmon",
+     "Guilmon"
     ],
     "kr": [
      "길몬",
      "길몬 씰"
     ],
-    "th": []
+    "th": [
+     "กิลมอน"
+    ]
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "—"
+     },
      {
       "post": "kr-783755",
       "date": "13.03.2024",
@@ -11045,34 +11301,16 @@
     ],
     "na": [
      {
-      "post": "na-551",
-      "date": "28.02.2022",
+      "post": "na-4105",
+      "date": "04.02.2026",
       "qty": "10",
       "tickets": "1",
       "stat": "AT",
       "value": "150"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
-   "key": "guilmon",
-   "display": "Guilmon",
-   "names": {
-    "en": [
-     "Guilmon"
-    ],
-    "kr": [],
-    "th": [
-     "กิลมอน"
-    ]
-   },
-   "servers": {
-    "na": [
+     },
      {
-      "post": "na-4105",
-      "date": "04.02.2026",
+      "post": "na-551",
+      "date": "28.02.2022",
       "qty": "10",
       "tickets": "1",
       "stat": "AT",
@@ -11664,6 +11902,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "DE",
+      "value": "250"
+     },
+     {
       "post": "kr-780048",
       "date": "13.12.2023",
       "qty": "1",
@@ -11976,6 +12222,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "200"
+     },
      {
       "post": "kr-797955",
       "date": "26.02.2025",
@@ -12422,6 +12676,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "—"
+     },
+     {
       "post": "kr-780048",
       "date": "13.12.2023",
       "qty": "5",
@@ -12630,6 +12892,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
+     },
+     {
       "post": "kr-787646",
       "date": "29.05.2024",
       "qty": "10",
@@ -12833,6 +13103,14 @@
       "value": "150"
      },
      {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "—"
+     },
+     {
       "post": "na-579",
       "date": "02.08.2022",
       "qty": "10",
@@ -12887,38 +13165,6 @@
   },
   {
    "type": "seal",
-   "key": "kimeramon",
-   "display": "Kimeramon",
-   "names": {
-    "en": [],
-    "kr": [],
-    "th": [
-     "คิเมรามอน"
-    ]
-   },
-   "servers": {
-    "th": [
-     {
-      "post": "th-24",
-      "date": "25.03.2021",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "DE",
-      "value": "—"
-     },
-     {
-      "post": "th-42",
-      "date": "26.09.2022",
-      "qty": "1",
-      "tickets": "10",
-      "stat": "DE",
-      "value": "250"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
    "key": "knightmon",
    "display": "Knightmon",
    "names": {
@@ -12959,6 +13205,14 @@
       "tickets": "1",
       "stat": "HT",
       "value": "300"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "—"
      },
      {
       "post": "na-636",
@@ -13461,6 +13715,14 @@
       "tickets": "1",
       "stat": "CT",
       "value": "200"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "—"
      },
      {
       "post": "na-630",
@@ -14418,6 +14680,14 @@
       "tickets": "25",
       "stat": "HT",
       "value": "400"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HT",
+      "value": "—"
      }
     ],
     "th": [
@@ -14636,6 +14906,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "HP",
+      "value": "500"
+     },
      {
       "post": "kr-797955",
       "date": "26.02.2025",
@@ -14966,6 +15244,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "AT",
+      "value": "250"
+     },
+     {
       "post": "kr-787646",
       "date": "29.05.2024",
       "qty": "1",
@@ -14990,6 +15276,14 @@
       "tickets": "10",
       "stat": "AT",
       "value": "250"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "—"
      },
      {
       "post": "na-636",
@@ -16160,6 +16454,14 @@
       "value": "200"
      },
      {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
+     },
+     {
       "post": "na-647",
       "date": "24.10.2023",
       "qty": "1",
@@ -16542,6 +16844,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-792682",
       "date": "25.09.2024",
       "qty": "5",
@@ -16566,6 +16876,14 @@
       "tickets": "1",
       "stat": "DE",
       "value": "150"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
      }
     ],
     "th": [
@@ -16786,19 +17104,30 @@
   },
   {
    "type": "seal",
-   "key": "mushmon",
-   "display": "Mushmon",
+   "key": "mushroomon",
+   "display": "Mushroomon",
    "names": {
     "en": [
-     "Mushmon"
+     "Mushmon",
+     "Mushroomon"
     ],
     "kr": [
      "머슈몬 씰"
     ],
-    "th": []
+    "th": [
+     "มัชชูมอน"
+    ]
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "—"
+     },
      {
       "post": "kr-813439",
       "date": "20.01.2026",
@@ -16807,23 +17136,7 @@
       "stat": "AT",
       "value": "150"
      }
-    ]
-   }
-  },
-  {
-   "type": "seal",
-   "key": "mushroomon",
-   "display": "Mushroomon",
-   "names": {
-    "en": [
-     "Mushroomon"
     ],
-    "kr": [],
-    "th": [
-     "มัชชูมอน"
-    ]
-   },
-   "servers": {
     "na": [
      {
       "post": "na-4105",
@@ -17035,6 +17348,14 @@
       "value": "250"
      },
      {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "—"
+     },
+     {
       "post": "na-636",
       "date": "01.08.2023",
       "qty": "1",
@@ -17097,6 +17418,22 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "EV",
+      "value": "—"
+     },
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "EV",
+      "value": "300"
+     },
      {
       "post": "kr-797955",
       "date": "26.02.2025",
@@ -17474,6 +17811,22 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "—"
+     },
+     {
       "post": "kr-788597",
       "date": "10.07.2024",
       "qty": "1",
@@ -17498,6 +17851,14 @@
       "tickets": "100",
       "stat": "AT",
       "value": "300"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "—"
      },
      {
       "post": "na-636",
@@ -17626,6 +17987,22 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "HP",
+      "value": "—"
+     },
+     {
       "post": "kr-787646",
       "date": "29.05.2024",
       "qty": "1",
@@ -17650,6 +18027,14 @@
       "tickets": "100",
       "stat": "HP",
       "value": "600"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "HP",
+      "value": "—"
      },
      {
       "post": "na-530",
@@ -17738,6 +18123,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "CT",
+      "value": "400"
+     },
      {
       "post": "kr-789333",
       "date": "07.08.2024",
@@ -18087,6 +18480,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "100"
+     },
+     {
       "post": "kr-788597",
       "date": "10.07.2024",
       "qty": "10",
@@ -18158,6 +18559,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HT",
+      "value": "—"
+     },
      {
       "post": "kr-797955",
       "date": "26.02.2025",
@@ -18352,6 +18761,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "150"
+     },
+     {
       "post": "kr-794497",
       "date": "13.11.2024",
       "qty": "10",
@@ -18376,6 +18793,14 @@
       "tickets": "1",
       "stat": "AT",
       "value": "150"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "AT",
+      "value": "—"
      },
      {
       "post": "na-647",
@@ -18929,6 +19354,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "200"
+     },
+     {
       "post": "kr-788597",
       "date": "10.07.2024",
       "qty": "10",
@@ -19100,6 +19533,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "300"
+     },
+     {
       "post": "kr-792682",
       "date": "25.09.2024",
       "qty": "1",
@@ -19181,6 +19622,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "CT",
+      "value": "—"
+     },
      {
       "post": "kr-797955",
       "date": "26.02.2025",
@@ -19291,6 +19740,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "DS",
+      "value": "500"
+     },
      {
       "post": "kr-782119",
       "date": "07.02.2024",
@@ -19433,6 +19890,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "EV",
+      "value": "300"
+     },
+     {
       "post": "kr-783755",
       "date": "13.03.2024",
       "qty": "1",
@@ -19498,6 +19963,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-814935",
       "date": "17.03.2026",
       "qty": "5",
@@ -19514,6 +19987,22 @@
       "tickets": "1",
       "stat": "HP",
       "value": "200"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "—"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "—"
      },
      {
       "post": "na-647",
@@ -19579,6 +20068,22 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "—"
+     },
+     {
       "post": "kr-783755",
       "date": "13.03.2024",
       "qty": "5",
@@ -19619,6 +20124,14 @@
       "tickets": "1",
       "stat": "HP",
       "value": "200"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HP",
+      "value": "—"
      },
      {
       "post": "na-683",
@@ -20026,6 +20539,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-780048",
       "date": "13.12.2023",
       "qty": "5",
@@ -20050,6 +20571,14 @@
       "tickets": "1",
       "stat": "DE",
       "value": "150"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "DE",
+      "value": "—"
      }
     ]
    }
@@ -20526,6 +21055,14 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "—"
+     },
      {
       "post": "kr-782119",
       "date": "07.02.2024",
@@ -21764,6 +22301,14 @@
       "tickets": "1",
       "stat": "DS",
       "value": "400"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "—"
      },
      {
       "post": "na-636",
@@ -23416,6 +23961,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "CT",
+      "value": "—"
+     },
+     {
       "post": "kr-782119",
       "date": "07.02.2024",
       "qty": "5",
@@ -23489,6 +24042,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-741155",
+      "date": "11.12.2019",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "—",
+      "value": "—"
+     },
+     {
       "post": "kr-792682",
       "date": "25.09.2024",
       "qty": "1",
@@ -23513,6 +24074,14 @@
       "tickets": "25",
       "stat": "HT",
       "value": "500"
+     },
+     {
+      "post": "na-457",
+      "date": "17.12.2019",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HT",
+      "value": "—"
      },
      {
       "post": "na-579",
@@ -23578,6 +24147,22 @@
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HP",
+      "value": "—"
+     },
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "25",
+      "stat": "HP",
+      "value": "500"
+     },
      {
       "post": "kr-782119",
       "date": "07.02.2024",
@@ -23881,6 +24466,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-748485",
+      "date": "16.09.2020",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "CT",
+      "value": "—"
+     },
+     {
       "post": "kr-783755",
       "date": "13.03.2024",
       "qty": "1",
@@ -24067,6 +24660,14 @@
       "tickets": "100",
       "stat": "AT",
       "value": "300"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "100",
+      "stat": "AT",
+      "value": "—"
      }
     ]
    }
@@ -24520,6 +25121,14 @@
       "value": "150"
      },
      {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "BL",
+      "value": "—"
+     },
+     {
       "post": "na-636",
       "date": "01.08.2023",
       "qty": "5",
@@ -24688,6 +25297,14 @@
    "servers": {
     "kr": [
      {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "DS",
+      "value": "400"
+     },
+     {
       "post": "kr-787646",
       "date": "29.05.2024",
       "qty": "1",
@@ -24753,7 +25370,7 @@
   {
    "type": "seal",
    "key": "weregarurumonblack",
-   "display": "WereGarurumon(Black)",
+   "display": "WereGarurumon (Black)",
    "names": {
     "en": [
      "WereGarurumon(Black)"
@@ -24761,10 +25378,20 @@
     "kr": [
      "워가루몬 ( 흑 ) 씰"
     ],
-    "th": []
+    "th": [
+     "แบล็ควาร์การูรูมอน"
+    ]
    },
    "servers": {
     "kr": [
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HT",
+      "value": "300"
+     },
      {
       "post": "kr-814707",
       "date": "10.03.2026",
@@ -24778,6 +25405,16 @@
      {
       "post": "na-4126",
       "date": "25.03.2026",
+      "qty": "1",
+      "tickets": "10",
+      "stat": "HT",
+      "value": "300"
+     }
+    ],
+    "th": [
+     {
+      "post": "th-42",
+      "date": "26.09.2022",
       "qty": "1",
       "tickets": "10",
       "stat": "HT",
@@ -24990,6 +25627,14 @@
       "tickets": "1",
       "stat": "HT",
       "value": "200"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "5",
+      "tickets": "1",
+      "stat": "HT",
+      "value": "—"
      },
      {
       "post": "na-530",
@@ -25300,6 +25945,14 @@
       "tickets": "1",
       "stat": "DS",
       "value": "300"
+     },
+     {
+      "post": "na-494",
+      "date": "01.12.2020",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "DS",
+      "value": "—"
      },
      {
       "post": "na-636",
@@ -25642,6 +26295,78 @@
      {
       "post": "kr-708817",
       "date": "11.05.2017"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "kr-741155",
+   "display": "kr-741155 — 씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+   "names": {
+    "en": [
+     "kr-741155",
+     "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#kr-741155",
+   "n_tables": 1,
+   "n_rows": 14,
+   "servers": {
+    "kr": [
+     {
+      "post": "kr-741155",
+      "date": "11.12.2019"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "kr-748485",
+   "display": "kr-748485 — 씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+   "names": {
+    "en": [
+     "kr-748485",
+     "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#kr-748485",
+   "n_tables": 1,
+   "n_rows": 21,
+   "servers": {
+    "kr": [
+     {
+      "post": "kr-748485",
+      "date": "16.09.2020"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "kr-762005",
+   "display": "kr-762005 — 씰 교환권 제작 리스트 (Seal Exchange Craft List)",
+   "names": {
+    "en": [
+     "kr-762005",
+     "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#kr-762005",
+   "n_tables": 1,
+   "n_rows": 20,
+   "servers": {
+    "kr": [
+     {
+      "post": "kr-762005",
+      "date": "10.11.2021"
      }
     ]
    }
@@ -26463,6 +27188,54 @@
      {
       "post": "na-4129",
       "date": "01.04.2026"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "na-457",
+   "display": "na-457 — Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ",
+   "names": {
+    "en": [
+     "na-457",
+     "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-457",
+   "n_tables": 1,
+   "n_rows": 14,
+   "servers": {
+    "na": [
+     {
+      "post": "na-457",
+      "date": "17.12.2019"
+     }
+    ]
+   }
+  },
+  {
+   "type": "patch",
+   "key": "na-494",
+   "display": "na-494 — Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ",
+   "names": {
+    "en": [
+     "na-494",
+     "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+    ],
+    "kr": [],
+    "th": []
+   },
+   "anchor": "seals.html#na-494",
+   "n_tables": 1,
+   "n_rows": 21,
+   "servers": {
+    "na": [
+     {
+      "post": "na-494",
+      "date": "01.12.2020"
      }
     ]
    }

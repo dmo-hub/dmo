@@ -393,6 +393,51 @@
     "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=780048&Btype=Update",
     "date": "13.12.2023"
   },
+  "kr-762005": {
+    "tables": [
+      {
+        "header": "제작 아이템 씰 지급 개수 필요 씰 교환권 개수 능력치 최종 수치",
+        "score": 22,
+        "rows": 21,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Piyomon Seal</td><td>10</td><td>1</td><td>DS</td><td>200</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>150</td></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>100</td></tr><tr><td>Palmon Seal</td><td>10</td><td>1</td><td>DE</td><td>100</td></tr><tr><td>Ikkakumon Seal</td><td>5</td><td>1</td><td>HP</td><td>200</td></tr><tr><td>Rapidmon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>WereGarurumon(Black) Seal</td><td>1</td><td>10</td><td>HT</td><td>300</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>10</td><td>DE</td><td>250</td></tr><tr><td>WereGarurumon Seal</td><td>1</td><td>10</td><td>DS</td><td>400</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>10</td><td>EV</td><td>300</td></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>10</td><td>AT</td><td>250</td></tr><tr><td>Etemon Seal</td><td>1</td><td>10</td><td>BL</td><td>200</td></tr><tr><td>Death-X-Dorugoramon Seal</td><td>1</td><td>25</td><td>EV</td><td>350</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>500</td></tr><tr><td>HerculesKabuterimon Seal</td><td>1</td><td>25</td><td>DE</td><td>250</td></tr><tr><td>Puppetmon Seal</td><td>1</td><td>25</td><td>DS</td><td>500</td></tr><tr><td>Powerdramon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Lucemon: Wild 2nd Mode Seal</td><td>1</td><td>100</td><td>HP</td><td>500</td></tr><tr><td>Chaosmon Seal</td><td>1</td><td>100</td><td>AT</td><td>300</td></tr><tr><td>Omegamon Zwart Seal</td><td>1</td><td>100</td><td>CT</td><td>400</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=762005&Btype=Update",
+    "date": "10.11.2021"
+  },
+  "kr-748485": {
+    "tables": [
+      {
+        "header": "제작 아이템 재료 아이템 적용 능력치",
+        "score": 42,
+        "rows": 22,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Guillmon Seal</td><td>10</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>Mushmon Seal</td><td>10</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>Kamemon Seal</td><td>10</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>Dorumon Seal</td><td>10</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>Tylomon Seal</td><td>5</td><td>1</td><td>CT</td><td>—</td></tr><tr><td>DarkTyrannomon Seal</td><td>5</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>Sangloupmon Seal</td><td>5</td><td>1</td><td>BL</td><td>—</td></tr><tr><td>Kabuterimon Seal</td><td>5</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>Cherrymon Seal</td><td>1</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>Chimairamon Seal</td><td>1</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>Etemon Seal</td><td>1</td><td>1</td><td>BL</td><td>—</td></tr><tr><td>NeoDevimon Seal</td><td>1</td><td>1</td><td>EV</td><td>—</td></tr><tr><td>Vajramon Seal</td><td>1</td><td>10</td><td>CT</td><td>—</td></tr><tr><td>Parasimon Seal</td><td>1</td><td>10</td><td>HT</td><td>—</td></tr><tr><td>PrinceMamemon Seal</td><td>1</td><td>25</td><td>CT</td><td>—</td></tr><tr><td>Bokomon Seal</td><td>1</td><td>25</td><td>EV</td><td>—</td></tr><tr><td>Craniamon Seal</td><td>1</td><td>25</td><td>HT</td><td>—</td></tr><tr><td>Ulforce V-dramon Seal</td><td>1</td><td>25</td><td>HP</td><td>—</td></tr><tr><td>Omegamon Alter-S Seal</td><td>1</td><td>100</td><td>HP</td><td>—</td></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>AT</td><td>—</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=748485&Btype=Update",
+    "date": "16.09.2020"
+  },
+  "kr-741155": {
+    "tables": [
+      {
+        "header": "No 제작 아이템 효과 재료 아이템",
+        "score": 28,
+        "rows": 15,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Dorumon Seal</td><td>10</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Rockmon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>RaptorDramon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>DarkTyrannomon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Monochromon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Allomon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>—</td><td>—</td></tr><tr><td>TyrantKabuterimon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>ChaosPiedmon Seal</td><td>1</td><td>25</td><td>—</td><td>—</td></tr><tr><td>Death-X-mon Seal</td><td>1</td><td>100</td><td>—</td><td>—</td></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>—</td><td>—</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>—</td><td>—</td></tr><tr><td>Omegamon Alter-S Seal</td><td>1</td><td>100</td><td>—</td><td>—</td></tr></table>",
+        "caption": "씰 교환권 제작 리스트 (Seal Exchange Craft List)"
+      }
+    ],
+    "note": "",
+    "url": "https://www.digimonmasters.com/news/newsBoard_sub.aspx?o=741155&Btype=Update",
+    "date": "11.12.2019"
+  },
   "kr-708817": {
     "tables": [
       {
@@ -864,6 +909,38 @@
     "note": "",
     "url": "https://dmo.gameking.com/news/EventView.aspx?idx=530",
     "date": "12.10.2021"
+  },
+  "na-494": {
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 22,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Culumon Seal</td><td>1</td><td>50</td><td>AT</td><td>—</td></tr><tr><td>Patamon Seal</td><td>10</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>Keramon Seal</td><td>10</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>Devimon Seal</td><td>5</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>Yukidarumon Seal</td><td>1</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>Ankylomon Seal</td><td>1</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>Witchmon Seal</td><td>5</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>Gatomon Seal</td><td>5</td><td>1</td><td>EV</td><td>—</td></tr><tr><td>Waspmon Seal</td><td>5</td><td>1</td><td>BL</td><td>—</td></tr><tr><td>RaptorDramon Seal</td><td>5</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>Kyubimon Seal</td><td>5</td><td>1</td><td>CT</td><td>—</td></tr><tr><td>Nanomon Seal</td><td>1</td><td>1</td><td>CT</td><td>—</td></tr><tr><td>SkullGreymon Seal</td><td>1</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>Metaltyranomon Seal</td><td>1</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>Knightmon Seal</td><td>1</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>Marin Devimon Seal</td><td>1</td><td>1</td><td>AT</td><td>—</td></tr><tr><td>LordKnightmon Seal</td><td>1</td><td>10</td><td>HT</td><td>—</td></tr><tr><td>DexDorugoramon Seal</td><td>1</td><td>10</td><td>EV</td><td>—</td></tr><tr><td>Fanglongmon Seal</td><td>1</td><td>100</td><td>BL</td><td>—</td></tr><tr><td>Venom Vamdemon Seal</td><td>1</td><td>100</td><td>AT</td><td>—</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=494",
+    "date": "01.12.2020"
+  },
+  "na-457": {
+    "tables": [
+      {
+        "header": "OCR",
+        "score": -1,
+        "ocr": true,
+        "rows": 15,
+        "normalized": true,
+        "html": "<table class=\"seal-tbl\"><tr><th>รายการซีล</th><th>จำนวนซีลที่ได้รับ</th><th>จำนวนตั๋วแลกการ์ดซีลที่ใช้ผลิต</th><th>ความสามารถ</th><th>สเตตัสสูงสุด</th></tr><tr><td>Gabumon Seal</td><td>10</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>Dorumon Seal</td><td>10</td><td>1</td><td>DS</td><td>—</td></tr><tr><td>Rockmon Seal</td><td>5</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>RaptorDramon Seal</td><td>5</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>DarkTyrannomon Seal</td><td>5</td><td>1</td><td>HT</td><td>—</td></tr><tr><td>Monochromon Seal</td><td>5</td><td>1</td><td>DE</td><td>—</td></tr><tr><td>Allomon Seal</td><td>5</td><td>1</td><td>EV</td><td>—</td></tr><tr><td>Raremon Seal</td><td>5</td><td>1</td><td>HP</td><td>—</td></tr><tr><td>TyrantKabuterimon Seal</td><td>1</td><td>25</td><td>HT</td><td>—</td></tr><tr><td>ChaosPiedmon Seal</td><td>1</td><td>25</td><td>CT</td><td>—</td></tr><tr><td>Dexmon Seal</td><td>1</td><td>100</td><td>AT</td><td>—</td></tr><tr><td>Omegamon Seal</td><td>1</td><td>100</td><td>AT</td><td>—</td></tr><tr><td>Examon Seal</td><td>1</td><td>100</td><td>AT</td><td>—</td></tr><tr><td>Omegamon Alter-S Seal</td><td>1</td><td>100</td><td>HP</td><td>—</td></tr></table>",
+        "caption": "Seal Exchange Ticket — Craft List · ดึงจากรูปภาพ"
+      }
+    ],
+    "note": "",
+    "url": "https://dmo.gameking.com/news/EventView.aspx?idx=457",
+    "date": "17.12.2019"
   },
   "na-352": {
     "tables": [

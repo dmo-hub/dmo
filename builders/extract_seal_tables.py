@@ -60,6 +60,8 @@ EVENT_HEADER = ["รายการซีล", "จำนวนซีลที�
 # Korean seal-name -> official English name, so KR tables show English data.
 KR_EN_PATH = PROJ / "data" / "kr_seal_en.json"
 KR_EN = json.loads(KR_EN_PATH.read_text(encoding="utf-8")) if KR_EN_PATH.exists() else {}
+# older KR posts space names differently ("타이런트 캅테리몬" vs "타이런트캅테리몬")
+KR_EN_NOSPACE = {re.sub(r"\s+", "", k): v for k, v in KR_EN.items()}
 
 UA = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -107,6 +109,9 @@ KR_IDS = [
     783755,
     782119,
     780048,
+    762005,
+    748485,
+    741155,
     708817,
 ]
 NA_IDS = [
@@ -139,6 +144,8 @@ NA_IDS = [
     579,
     551,
     530,
+    494,
+    457,
     352,
 ]
 TH_SUFFIXES = [92, 91, 88, 83, 78, 76, 66, 64, 59, 56, 49, 42, 28, 24, 21, 15, 12]
@@ -379,9 +386,9 @@ def _num(s):
 
 
 def _embedded_qty(s):
-    """Oldest TH packs qty into the name cell: 'กาบูมอน ซีล 10 ชิ้น'."""
-    m = re.search(r"(\d+)\s*ชิ้น", s)
-    return (m.group(1), re.sub(r"\s*\d+\s*ชิ้น.*$", "", s).strip()) if m else ("", s)
+    """Oldest TH/KR pack qty into the name cell: 'กาบูมอน ซีล 10 ชิ้น', '길몬 씰 10 개'."""
+    m = re.search(r"(\d+)\s*(?:ชิ้น|개)", s)
+    return (m.group(1), re.sub(r"\s*\d+\s*(?:ชิ้น|개).*$", "", s).strip()) if m else ("", s)
 
 
 def _role_of(cell):
@@ -469,7 +476,8 @@ def normalize_table(tb, server):
             continue
         eq, name = _embedded_qty(row[iname])
         if server == "KR":
-            name = KR_EN.get(name, name)  # show KR seal names in English
+            # show KR seal names in English
+            name = KR_EN.get(name) or KR_EN_NOSPACE.get(re.sub(r"\s+", "", name), name)
         given = row[given_q] if given_q is not None and given_q < len(row) else ""
         given = _num(given) or eq
         ticket = _num(row[ticket_q]) if ticket_q is not None and ticket_q < len(row) else ""
@@ -598,6 +606,10 @@ def is_exchange_header(htxt, head2, body_score, server):
     if not hint:
         return False
     if server == "KR":
+        # 2019-2021 KR lists head "제작 아이템 | 재료 아이템" with no obtain
+        # column; the count rides in the seal cell instead ("길몬 씰 10 개").
+        if "제작 아이템" in htxt and re.search(r"씰\s*\d+\s*개", head2):
+            return True
         return any(k in head2 for k in KR_OBTAIN_KW)
     if SEAL_NOUN.search(htxt):
         return True

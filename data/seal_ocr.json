@@ -65,6 +65,51 @@
       ["Gallantmon Crimson Mode Seal", "1", "100", "BL", "300"]
     ]
   },
+  "na-457": {
+    "img": "EventView idx=457 (Digitamon Seal Event Craft Formula image; the list shows no max stat)",
+    "rows": [
+      ["Gabumon Seal", "10", "1", "HT", "—"],
+      ["Dorumon Seal", "10", "1", "DS", "—"],
+      ["Rockmon Seal", "5", "1", "DE", "—"],
+      ["RaptorDramon Seal", "5", "1", "HP", "—"],
+      ["DarkTyrannomon Seal", "5", "1", "HT", "—"],
+      ["Monochromon Seal", "5", "1", "DE", "—"],
+      ["Allomon Seal", "5", "1", "EV", "—"],
+      ["Raremon Seal", "5", "1", "HP", "—"],
+      ["TyrantKabuterimon Seal", "1", "25", "HT", "—"],
+      ["ChaosPiedmon Seal", "1", "25", "CT", "—"],
+      ["Dexmon Seal", "1", "100", "AT", "—"],
+      ["Omegamon Seal", "1", "100", "AT", "—"],
+      ["Examon Seal", "1", "100", "AT", "—"],
+      ["Omegamon Alter-S Seal", "1", "100", "HP", "—"]
+    ]
+  },
+  "na-494": {
+    "img": "EventView idx=494 (Seal Exchange list, first image; the list shows no max stat)",
+    "rows": [
+      ["Culumon Seal", "1", "50", "AT", "—"],
+      ["Patamon Seal", "10", "1", "AT", "—"],
+      ["Keramon Seal", "10", "1", "HP", "—"],
+      ["Gabumon Seal", "10", "1", "HT", "—"],
+      ["Devimon Seal", "5", "1", "AT", "—"],
+      ["Yukidarumon Seal", "1", "1", "DS", "—"],
+      ["Ankylomon Seal", "1", "1", "DE", "—"],
+      ["Witchmon Seal", "5", "1", "HT", "—"],
+      ["Gatomon Seal", "5", "1", "EV", "—"],
+      ["Waspmon Seal", "5", "1", "BL", "—"],
+      ["RaptorDramon Seal", "5", "1", "HP", "—"],
+      ["Kyubimon Seal", "5", "1", "CT", "—"],
+      ["Nanomon Seal", "1", "1", "CT", "—"],
+      ["SkullGreymon Seal", "1", "1", "DS", "—"],
+      ["Metaltyranomon Seal", "1", "1", "DE", "—"],
+      ["Knightmon Seal", "1", "1", "HT", "—"],
+      ["Marin Devimon Seal", "1", "1", "AT", "—"],
+      ["LordKnightmon Seal", "1", "10", "HT", "—"],
+      ["DexDorugoramon Seal", "1", "10", "EV", "—"],
+      ["Fanglongmon Seal", "1", "100", "BL", "—"],
+      ["Venom Vamdemon Seal", "1", "100", "AT", "—"]
+    ]
+  },
   "na-579": {
     "img": "EventView idx=579 (Seal Exchange list, images 1-2)",
     "rows": [

@@ -356,7 +356,7 @@ def compute_matches(data):
 
 def compute_near_matches(data, exact):
     """TH tables with NO exact twin -> near twins on NA/KR whose seal multiset
-    differs by 1-2 entries (e.g. th-92 = na-792 minus Lilithmon X — one side
+    differs by a few entries (e.g. th-92 = na-792 minus Lilithmon X — one side
     added a seal, everything else identical). Returns
     {key: {ti: [(twin_key, extra_in_twin, extra_in_self), ...]}} where the
     extras are display names for the annotation."""
@@ -388,7 +388,8 @@ def compute_near_matches(data, exact):
             extra_o = oms - ms  # Counter difference
             extra_s = ms - oms
             diff = sum(extra_o.values()) + sum(extra_s.values())
-            if 1 <= diff <= 2:
+            # small lists would pair on noise, so the slack scales with size
+            if 1 <= diff <= min(4, sum(ms.values()) // 4):
                 found.append(
                     (
                         okey,

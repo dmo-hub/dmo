@@ -209,6 +209,13 @@ python builders/compare_digimon_sources.py 731          # just one idx
 #     localStorage "Seal Budget" calculator (per-table ⭐, per-server sub-tabs,
 #     ticket = ceil(want/qty)*tickets, packs = /3000, price = *editable/pack)
 #     fed by docs/seal_data.json.
+#     A TH table with no exact twin gets a "≈ คล้าย" note for NA/KR lists that
+#     differ by at most min(4, size/4) seals. Pre-2023 twins of old TH tables
+#     live in KR 2019–2022 posts (Word-style tables: "제작 아이템" header, qty in
+#     the seal cell "길몬 씰 10 개") and in NA posts that only Wayback still
+#     serves when gameking is down — fetch with the CDX "original" URL
+#     (http://dmo.gameking.com:80/News/...), a rebuilt URL 404s. cache/ is not
+#     in git, so a post copied in from Wayback exists only on this machine.
 #     New seal posts are AUTO-DISCOVERED from cache/ (phrase scan + the
 #     extractor's own table criteria); the hardcoded id lists are only the
 #     curated baseline. A kept discovery prints "!! NEW seal post(s)" — add a
