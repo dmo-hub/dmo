@@ -13873,7 +13873,8 @@
    "display": "Lillymon",
    "names": {
     "en": [
-     "Lillymon"
+     "Lillymon",
+     "Lilymon"
     ],
     "kr": [
      "릴리몬 씰"
@@ -13900,6 +13901,14 @@
      }
     ],
     "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "1",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
+     },
      {
       "post": "na-4118",
       "date": "11.03.2026",
@@ -13972,30 +13981,6 @@
       "tickets": "1",
       "stat": "DS",
       "value": "100"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
-   "key": "lilymon",
-   "display": "Lilymon",
-   "names": {
-    "en": [
-     "Lilymon"
-    ],
-    "kr": [],
-    "th": []
-   },
-   "servers": {
-    "na": [
-     {
-      "post": "na-352",
-      "date": "30.05.2017",
-      "qty": "1",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
      }
     ]
    }
@@ -18694,7 +18679,8 @@
    "display": "PrimaryGoburimon",
    "names": {
     "en": [
-     "PrimaryGoburimon"
+     "PrimaryGoburimon",
+     "Shamamon"
     ],
     "kr": [
      "원시고부리몬 씰"
@@ -18718,6 +18704,16 @@
       "tickets": "1",
       "stat": "CT",
       "value": "150"
+     }
+    ],
+    "na": [
+     {
+      "post": "na-352",
+      "date": "30.05.2017",
+      "qty": "10",
+      "tickets": "1",
+      "stat": "—",
+      "value": "—"
      }
     ]
    }
@@ -20397,30 +20393,6 @@
       "tickets": "1",
       "stat": "DE",
       "value": "100"
-     }
-    ]
-   }
-  },
-  {
-   "type": "seal",
-   "key": "shamamon",
-   "display": "Shamamon",
-   "names": {
-    "en": [
-     "Shamamon"
-    ],
-    "kr": [],
-    "th": []
-   },
-   "servers": {
-    "na": [
-     {
-      "post": "na-352",
-      "date": "30.05.2017",
-      "qty": "10",
-      "tickets": "1",
-      "stat": "—",
-      "value": "—"
      }
     ]
    }
