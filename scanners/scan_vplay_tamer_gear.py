@@ -160,6 +160,79 @@ def pool_rows(rows):
     return [out[e] for e in ELEMENTS if e in out]
 
 
+def pool_by_level(rows, level_key):
+    """Option pool per level -> {"<level>": [{label, min, max}]}.
+
+    Two layouts: a level row of ranges ("Lv. 1 | 3%-10% ..." -- loaders), or
+    a level row of base values followed by a "สูงสุด" row (First Digivice).
+    level_key maps a row's first cell to its level number, None to skip."""
+    out, labels, base, lvl = {}, None, None, None
+    for row in rows:
+        cells = [c for c in row if c]
+        if cells and all(element(c) for c in cells):
+            labels = [element(c) for c in cells]
+            continue
+        if not labels or not cells:
+            continue
+        if cells[0] == "สูงสุด" and base is not None:
+            pairs = list(zip(base, cells[1:]))
+            base = None
+        else:
+            lvl = level_key(cells[0])
+            if lvl is None:
+                continue
+            ranges = [c for c in cells[1:] if re.fullmatch(r"[\d.]+%-[\d.]+%", c)]
+            if ranges:
+                pairs = [c.split("-") for c in ranges]
+            else:
+                base = [c for c in cells[1:] if c.endswith("%")]
+                continue
+        bucket = out.setdefault(str(lvl), {})
+        for lab, (lo, hi) in zip(labels, pairs):
+            bucket[lab] = {"label": lab, "min": lo.strip(), "max": hi.strip()}
+    return {k: [v[e] for e in ELEMENTS if e in v] for k, v in out.items()}
+
+
+def mend_dropped_digit(by_level):
+    """vplay's First Digivice Lv 4 prints "1.5%" for 11.5%: a base that falls
+    below the level before it lost a digit, so it takes its neighbours' mean."""
+    keys = sorted(by_level, key=int)
+    for i in range(1, len(keys) - 1):
+        for j, cell in enumerate(by_level[keys[i]]):
+            prev, nxt = by_level[keys[i - 1]][j], by_level[keys[i + 1]][j]
+            val = lambda c: float(c["min"].rstrip("%"))
+            if val(cell) < val(prev):
+                cell["min"] = "%g%%" % ((val(prev) + val(nxt)) / 2)
+    return by_level
+
+
+def merge_levels(*parts):
+    """Each table holds a few options of every level; join them per level."""
+    out = {}
+    for part in parts:
+        for k, rows in part.items():
+            out.setdefault(k, []).extend(rows)
+    order = {e: i for i, e in enumerate(ELEMENTS)}
+    return {k: sorted(v, key=lambda r: order[r["label"]]) for k, v in out.items()}
+
+
+def first_digivice_level(cell):
+    if cell == "สมบูรณ์":
+        return 11
+    m = re.fullmatch(r"Lv\s*(\d+)", cell)
+    return int(m.group(1)) if m else None
+
+
+FIRST_LABELS = {str(n): "Lv.%d" % n for n in range(1, 11)}
+FIRST_LABELS["11"] = "สมบูรณ์"
+# The posts print the loaders' Lv. 0, Lv. 1 and Lv. Max only.
+LOADER_LABELS = {"0": "Lv.0", "1": "Lv.1", "2": "Lv.Max"}
+
+
+def loader_level(cell):
+    return {"Lv. 1": 1, "Lv. Max": 2}.get(cell)
+
+
 def first_digivice(content):
     ts = tables(content)
     pool = pool_rows(ts[0])
@@ -172,6 +245,10 @@ def first_digivice(content):
         {"name": "First Digivice", "nameTh": "เฟิร์สท์ ดิจิไวซ์", "slot": "digivice",
          "axis": "digimon", "picture": "EosDvice.PNG",
          "levels": [{"upgrade": 0, "stats": []}], "rows": pool,
+         "rowsByLevel": mend_dropped_digit(merge_levels(
+             pool_by_level(ts[0], first_digivice_level),
+             *(pool_by_level(t, first_digivice_level) for t in ts[2:]))),
+         "levelLabels": FIRST_LABELS,
          "info": "ค่าที่ระดับสมบูรณ์ (8 ชิปเซ็ท) พลังดิจิทารี่ 100% · สุ่มออปชันจากรายการ"},
         {"name": "DigiAura of Bracery and Friendship",
          "nameTh": "ดิจิออร่าแห่งความกล้าหาญและมิตรภาพ", "slot": "aura", "axis": "digimon",
@@ -186,9 +263,12 @@ def loader(content, name, name_th):
     ts = tables(content)
     at = next((r for r in ts[0] if r and r[0] == "Lv. 0"), None)
     stats = [stat_value("AT", at[1])] if at else []
+    by_level = pool_by_level(ts[0], loader_level)
+    by_level["0"] = []
     return {"name": name, "nameTh": name_th, "slot": "digivice", "axis": "digimon",
             "picture": "SusaLoaderMax.PNG", "levels": [{"upgrade": 0, "stats": stats}],
-            "rows": pool_rows(ts[0]), "info": "ค่าออปชันที่ Lv. Max · สุ่มออปชันจากรายการ"}
+            "rows": pool_rows(ts[0]), "rowsByLevel": by_level, "levelLabels": LOADER_LABELS,
+            "info": "Lv.0 ให้ AT 20 · Lv.1 ขึ้นไปสุ่มออปชันจากรายการ"}
 
 
 def true_digivices(content):

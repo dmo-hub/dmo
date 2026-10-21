@@ -66,6 +66,13 @@
   .gn-opt td { padding: 2px 6px; border-top: 1px solid var(--border); color: var(--body); }
   .gn-opt td:nth-child(2) { text-align: right; white-space: nowrap; color: var(--ink); }
   .gn-opt td:nth-child(3) { text-align: right; white-space: nowrap; color: var(--muted); width: 1%; }
+  .gn-lvwrap { overflow-x: auto; }
+  .gn-lv th { padding: 2px 6px; font-size: 11px; font-weight: 600; color: var(--muted);
+    text-align: right; white-space: nowrap; }
+  .gn-lv th:first-child { text-align: left; }
+  .gn-lv td { text-align: right; white-space: nowrap; color: var(--ink); }
+  .gn-lv td:first-child { text-align: left; color: var(--body); }
+  .gn-lv td:nth-child(3) { width: auto; color: var(--ink); }
   .gn-opt caption { caption-side: top; text-align: left; font-size: 11.5px; color: var(--muted); padding: 0 0 2px; }
 </style>
 </head>
@@ -196,7 +203,9 @@
     if (it.recommended === false) m.appendChild(el("span", "low", (meta.length ? " · " : "") + "ค่าสูงสุดต่ำ วิกิไม่แนะนำ"));
     if (meta.length || it.recommended === false) t.appendChild(m);
     if (it.obtain) t.appendChild(el("div", "gn-meta", "ได้จาก: " + it.obtain));
-    if (it.rows && it.rows.length) {
+    if (it.rowsByLevel && it.levelLabels) {
+      c.appendChild(levelTable(it));
+    } else if (it.rows && it.rows.length) {
       var tb = el("table", "gn-opt");
       if (it.rowsFrom && it.rowsFrom !== it.name) tb.appendChild(el("caption", "", "ค่าตาม " + it.rowsFrom));
       it.rows.forEach(function (r) {
@@ -210,6 +219,35 @@
       c.appendChild(tb);
     }
     return c;
+  }
+
+  /* Option pool by level: one column per level the post prints. A level
+     with no pool (a loader's Lv.0 is a flat AT) shows a dash. */
+  function levelTable(it) {
+    var keys = Object.keys(it.levelLabels).sort(function (a, b) { return a - b; });
+    var labels = [];
+    keys.forEach(function (k) {
+      (it.rowsByLevel[k] || []).forEach(function (r) {
+        if (labels.indexOf(r.label) < 0) labels.push(r.label);
+      });
+    });
+    var wrap = el("div", "gn-lvwrap");
+    var tb = el("table", "gn-opt gn-lv");
+    var head = el("tr");
+    head.appendChild(el("th", "", "ออปชัน"));
+    keys.forEach(function (k) { head.appendChild(el("th", "", it.levelLabels[k])); });
+    tb.appendChild(head);
+    labels.forEach(function (lab) {
+      var tr = el("tr");
+      tr.appendChild(el("td", "", lab));
+      keys.forEach(function (k) {
+        var r = (it.rowsByLevel[k] || []).filter(function (x) { return x.label === lab; })[0];
+        tr.appendChild(el("td", "", r ? r.min + " ~ " + r.max : "—"));
+      });
+      tb.appendChild(tr);
+    });
+    wrap.appendChild(tb);
+    return wrap;
   }
 
   function imgBox(src, alt) {

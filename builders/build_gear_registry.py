@@ -442,9 +442,16 @@ def add_th_tamer_gear(out, items):
             rec["extra"] = extra
         top_stats = next(l["stats"] for l in src["levels"] if l["upgrade"] == top)
         rec["rows"] = src.get("rows") or display_rows(top_stats)
-        for field in ("rowsFrom", "info", "families"):
+        for field in ("rowsFrom", "info", "families", "rowsByLevel", "levelLabels"):
             if src.get(field):
                 rec[field] = src[field]
+        # Levels that only change the option pool keep the solver stats flat:
+        # the posts give the loaders' AT at Lv. 0 alone, so it stays as it was.
+        if rec.get("levelLabels") and "levelStats" not in rec and src["name"] != "First Digivice":
+            flat = {k: rec[k] for k in ("AT", "HT", "CT", "DS", "DE", "EV", "BL") if k in rec}
+            levels = sorted(int(k) for k in rec["levelLabels"])
+            rec.update(upgrade=0, upgradeMax=levels[-1],
+                       levelStats={str(n): dict(flat) for n in levels})
         if src["slot"] == "digivice":
             if src["name"] == "First Digivice":
                 rec["chipsByLevel"] = FIRST_DIGIVICE_CHIPS
