@@ -5,6 +5,10 @@
 (function () {
   var STORAGE_KEY = 'dmo-theme';
   var root = document.documentElement;
+  /* Pages with their own palette load this file for the nav code below
+     only; a stored theme must not
+     repaint them, and a toggle there would do nothing. */
+  if (root.hasAttribute('data-theme-fixed')) return;
 
   function getInitial() {
     try {

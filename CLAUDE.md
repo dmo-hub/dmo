@@ -371,11 +371,17 @@ same look-and-feel as `decks.html` / `digimon.html`. All pages share the
 external stylesheet `docs/css/site.css` (light/dark via `docs/js/theme.js`) and
 the same `.site-nav` / `.hero` / `.timeline` / `.card` markup — don't re-inline
 CSS; reuse the tokens. `docs/styleguide.html` renders every shared component for
-copy-paste reference. A standalone page with its own dark theme that loads
-site.css only for the nav (seal-deal-calculator.html) must pin
-`<html data-theme="dark">` and skip theme.js: site.css colours h1-h3 with the
-light theme's dark ink, which made that page's headings unreadable. Its own
-generic `header{}` rule must exclude `.site-nav` (ingame-checklist.html).
+copy-paste reference. A standalone page with its own palette that loads
+site.css only for the nav (seal-deal-calculator, susanoomon-extreme-th-90,
+ingame-checklist) carries `<html data-theme-fixed>` and loads theme.js at the
+end of body: theme.js then skips the theme part (no toggle, a stored theme
+cannot repaint the page) and still runs the nav part, which drops the
+right-edge fade once the mobile nav row is scrolled to its end. A dark one
+also pins `data-theme="dark"`: site.css colours h1-h3 with the light theme's
+dark ink, which made the calculator's headings unreadable. site.css also
+reaches its body/h1-h4/`:root[data-theme]` tokens (--amber), so restate what
+the page relies on (Susanoomon page). Its own generic `header{}` rule must
+exclude `.site-nav` (ingame-checklist.html).
 
 **Mockup-first for new pages.** Before writing a `build_<topic>_html.py`, hand-write
 a *static mockup* `docs/<topic>.html` with 2-3 rows of FAKE data so the layout can
