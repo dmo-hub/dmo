@@ -406,7 +406,14 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   `?slug=`. The cache only covers the patch-note
   category, so a Thai name or per-level table not found in `cache/` is often in
   an event/promotion post -- that is where 7 Thai gear names and the Spirit /
-  Four Holy Beasts level tables came from.
+  Four Holy Beasts level tables came from. To find one, full-text search every
+  post type at once: `/wp-json/wp/v2/search?per_page=100&search=<term>` (then
+  fetch `/wp-json/wp/v2/posts/<id>`). Search Thai words or transliterations
+  (ซีโร่ยูนิต · ไวทัล), not the English name -- vplay rarely writes it. The
+  15 Thai names added 2026-10-21 (XAI, Zero Unit, Brilliant/Radiant/Shining
+  accessories, Vital Breath) came this way; the rest of the gap (base/middle
+  Four Holy Beasts pieces, Power/Boundless gloves, Unlimited T-shirt, Final
+  Digivice, XAI I/II/VII-X/Anniversary) returned nothing.
 - `scanners/scan_clothing.py` is not a `refresh.py` step. After changing it
   run it by hand, then `builders/build_gear_registry.py`, then
   `tools/validate.py` twice: the first run fails "builders idempotent" because
