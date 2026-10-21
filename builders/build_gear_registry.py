@@ -286,6 +286,26 @@ def level_table(levels):
     return table, top
 
 
+def level_extra(levels):
+    """vplay levels -> {"5": [{stat, value, unit}], ...}: the stats outside the
+    solver (CT DMG, Skill DMG ...) per level, so the page can show every stat
+    a piece has at the player's own level. Levels without any are left out."""
+    out = {}
+    for l in levels:
+        ex = [{"stat": s["stat"], "value": s["value"], "unit": s["unit"]}
+              for s in l["stats"] if s["stat"] not in SOLVER_STATS]
+        if ex:
+            out[str(l["upgrade"])] = ex
+    return out
+
+
+def with_level_extra(rec, levels):
+    ex = level_extra(levels)
+    if ex:
+        rec["levelExtra"] = ex
+    return rec
+
+
 def non_solver_at(levels, lvl):
     row = next((l for l in levels if l["upgrade"] == lvl), None)
     return [{"stat": s["stat"], "value": s["value"], "unit": s["unit"]}
@@ -315,6 +335,7 @@ def add_level_stats(out):
                     print(f"  ! {rec['name']} {key}: wiki {rec.get(key, 0)} "
                           f"vs vplay +{top} {table[str(top)].get(key, 0)}")
             rec["levelStats"] = table
+            with_level_extra(rec, src["levels"])
             rec.pop("ranged", None)          # exact per level now, not a roll top
             done += 1
 
@@ -346,6 +367,7 @@ def add_th_goggles(out):
         }
         if top:
             rec.update(upgrade=0, upgradeMax=top, levelStats=table)
+            with_level_extra(rec, src["levels"])
         rec.update(table[str(top)])
         if src.get("ranged"):
             rec["ranged"] = True
@@ -397,6 +419,7 @@ def add_th_tamer_gear(out, items):
         }
         if top:
             rec.update(upgrade=0, upgradeMax=top, levelStats=table)
+            with_level_extra(rec, src["levels"])
         rec.update(table[str(top)])
         if src.get("ranged"):
             rec["ranged"] = True
@@ -489,6 +512,7 @@ def add_shin_pieces(out):
                 print(f"  ! {rec['name']} {key}: wiki {rec.get(key, 0)} "
                       f"vs vplay +{top} {table[str(top)].get(key, 0)}")
         rec["levelStats"] = table
+        with_level_extra(rec, base["levels"])
         rec.pop("ranged", None)
         rec.pop("nameThShin")
 
@@ -504,6 +528,7 @@ def add_shin_pieces(out):
             "levelStats": table,
         })
         twin.update(table[str(top)])
+        with_level_extra(twin, shin["levels"])
         extra = non_solver_at(shin["levels"], top)
         if extra:
             twin["extra"] = extra

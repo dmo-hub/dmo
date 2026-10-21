@@ -189,6 +189,85 @@
         "15": {
           "DS": 4500
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 18.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 21.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -251,6 +330,85 @@
         }
       },
       "DS": 7000,
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 18.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 21.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 24.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "Skill DMG",
@@ -340,6 +498,85 @@
           "DS": 8000
         }
       },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 24.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 26.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 28.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 41.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 42.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 43.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 44.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 45.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "nameTh": "ไฟ : กางเกงแห่งสปิริต"
     },
     {
@@ -421,6 +658,85 @@
         "15": {
           "DS": 8000
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 24.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 26.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 28.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 41.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 42.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 43.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 44.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 45.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "น้ำแข็ง : กางเกงแห่งสปิริต"
     },
@@ -510,6 +826,85 @@
         "15": {
           "DS": 8000
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 24.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 26.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 28.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 41.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 42.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 43.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 44.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 45.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "แสง : กางเกงแห่งสปิริต"
     },
@@ -641,6 +1036,85 @@
         "15": {
           "DS": 4500
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 18.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 21.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -703,6 +1177,85 @@
         }
       },
       "DS": 7000,
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 18.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 21.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 24.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "Skill DMG",
@@ -779,6 +1332,85 @@
         "15": {
           "DS": 8000
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 24.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 26.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 28.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 41.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 42.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 43.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 44.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 45.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "สายฟ้า : กางเกงแห่งสปิริต"
     },
@@ -862,6 +1494,85 @@
         "15": {
           "DS": 8000
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 24.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 26.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 28.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 41.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 42.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 43.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 44.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 45.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "ลม : กางเกงแห่งสปิริต"
     },
@@ -969,6 +1680,85 @@
         "15": {
           "DS": 4500
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 18.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 21.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -1031,6 +1821,85 @@
         }
       },
       "DS": 7000,
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 18.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 21.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 24.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "Skill DMG",
@@ -4508,6 +5377,78 @@
           "AT": 4000
         }
       },
+      "levelExtra": {
+        "1": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "AT": 4000,
       "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
       "icon": "img/gear/kaiser_goggles.png",
@@ -4559,6 +5500,78 @@
         "10": {
           "CT": 40.0
         }
+      },
+      "levelExtra": {
+        "1": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ]
       },
       "CT": 40.0,
       "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
@@ -4612,6 +5625,78 @@
           "EV": 30.0
         }
       },
+      "levelExtra": {
+        "1": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "EV": 30.0,
       "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
       "icon": "img/gear/kaiser_goggles.png",
@@ -4643,6 +5728,128 @@
         "8": {},
         "9": {},
         "10": {}
+      },
+      "levelExtra": {
+        "1": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 4000.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 4050.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 4100.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 4150.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 4200.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 4250.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 4400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 4550.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 14.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 4700.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 5000.0,
+            "unit": "flat"
+          }
+        ]
       },
       "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
       "icon": "img/gear/kaiser_goggles.png",
@@ -4699,6 +5906,78 @@
         "10": {
           "HT": 3000
         }
+      },
+      "levelExtra": {
+        "1": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Skill DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Skill DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ]
       },
       "HT": 3000,
       "iconWiki": "/images/e/e0/Kaiser_Goggles.png",
@@ -4764,6 +6043,131 @@
         "15": {
           "AT": 400
         }
+      },
+      "levelExtra": {
+        "2": [
+          {
+            "stat": "EXP",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "EXP",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "EXP",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "EXP",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "EXP",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "EXP",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "EXP",
+            "value": 35.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "EXP",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "EXP",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "EXP",
+            "value": 70.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 100.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "EXP",
+            "value": 74.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 180.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "EXP",
+            "value": 76.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 250.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "EXP",
+            "value": 78.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 450.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "EXP",
+            "value": 80.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "HP",
+            "value": 700.0,
+            "unit": "flat"
+          }
+        ]
       },
       "AT": 400,
       "ranged": true,
@@ -4992,6 +6396,85 @@
         "15": {
           "AT": 2700
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -5054,6 +6537,85 @@
         }
       },
       "AT": 4000,
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "AS",
@@ -5134,6 +6696,85 @@
         "15": {
           "AT": 5000
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "ไฟ : ถุงมือแห่งสปิริต"
     },
@@ -5223,6 +6864,85 @@
           "AT": 5000
         }
       },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "nameTh": "น้ำแข็ง : ถุงมือแห่งสปิริต"
     },
     {
@@ -5298,6 +7018,85 @@
         "15": {
           "AT": 5000
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "แสง : ถุงมือแห่งสปิริต"
     },
@@ -5518,6 +7317,85 @@
         "15": {
           "AT": 2700
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -5580,6 +7458,85 @@
         }
       },
       "AT": 4000,
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "AS",
@@ -5649,6 +7606,85 @@
         "15": {
           "AT": 5000
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "สายฟ้า : ถุงมือแห่งสปิริต"
     },
@@ -5743,6 +7779,85 @@
         "15": {
           "AT": 5000
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "ลม : ถุงมือแห่งสปิริต"
     },
@@ -5843,6 +7958,85 @@
         "15": {
           "AT": 2700
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -5905,6 +8099,85 @@
         }
       },
       "AT": 4000,
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "AS",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "AS",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "AS",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "AS",
@@ -6065,6 +8338,85 @@
         "15": {
           "CT": 25.0
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 18.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 21.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -6127,6 +8479,85 @@
         }
       },
       "CT": 45.0,
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 26.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 27.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 33.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 36.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 39.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 42.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 45.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 60.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "CT DMG",
@@ -6216,6 +8647,85 @@
           "CT": 55.0
         }
       },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 34.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 36.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 38.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 51.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 52.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 53.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 54.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 55.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "nameTh": "ไฟ : หมวกเกราะแห่งสปิริต"
     },
     {
@@ -6286,6 +8796,85 @@
         "15": {
           "CT": 55.0
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 34.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 36.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 38.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 51.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 52.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 53.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 54.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 55.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "น้ำแข็ง : หมวกเกราะแห่งสปิริต"
     },
@@ -6379,6 +8968,85 @@
         "15": {
           "CT": 55.0
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 34.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 36.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 38.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 51.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 52.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 53.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 54.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 55.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "แสง : หมวกเกราะแห่งสปิริต"
     },
@@ -6504,6 +9172,85 @@
         "15": {
           "CT": 25.0
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 18.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 21.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -6566,6 +9313,85 @@
         }
       },
       "CT": 45.0,
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 26.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 27.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 33.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 36.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 39.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 42.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 45.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 60.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "CT DMG",
@@ -6642,6 +9468,85 @@
         "15": {
           "CT": 55.0
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 34.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 36.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 38.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 51.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 52.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 53.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 54.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 55.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "สายฟ้า : หมวกเกราะแห่งสปิริต"
     },
@@ -6725,6 +9630,85 @@
         "15": {
           "CT": 55.0
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 34.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 36.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 38.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 51.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 52.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 53.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 54.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 55.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "ลม : หมวกเกราะแห่งสปิริต"
     },
@@ -6815,6 +9799,85 @@
         "15": {
           "CT": 25.0
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 10.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 11.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 12.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 13.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 14.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 15.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 18.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 21.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -6877,6 +9940,85 @@
         }
       },
       "CT": 45.0,
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "CT DMG",
+            "value": 25.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "CT DMG",
+            "value": 26.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "CT DMG",
+            "value": 27.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "CT DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "CT DMG",
+            "value": 33.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "CT DMG",
+            "value": 36.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "CT DMG",
+            "value": 39.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "CT DMG",
+            "value": 42.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "CT DMG",
+            "value": 45.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "CT DMG",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "CT DMG",
+            "value": 60.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "CT DMG",
@@ -6960,6 +10102,100 @@
         "15": {
           "AT": 1500
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "EXP",
+            "value": 500.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "EXP",
+            "value": 1000.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "EXP",
+            "value": 1200.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "EXP",
+            "value": 1400.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "EXP",
+            "value": 1600.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "EXP",
+            "value": 1800.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "EXP",
+            "value": 2500.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "EXP",
+            "value": 4000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "EXP",
+            "value": 5000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       },
       "AT": 1500,
       "iconWiki": "/images/9/97/DigimonKing.png",
@@ -7049,6 +10285,100 @@
           "CT": 15.0
         }
       },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "EXP",
+            "value": 500.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "EXP",
+            "value": 1000.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "EXP",
+            "value": 1200.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "EXP",
+            "value": 1400.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "EXP",
+            "value": 1600.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "EXP",
+            "value": 1800.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "EXP",
+            "value": 2500.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "EXP",
+            "value": 4000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "EXP",
+            "value": 5000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "CT": 15.0,
       "iconWiki": "/images/9/97/DigimonKing.png",
       "icon": "img/gear/digimonking.png",
@@ -7104,6 +10434,190 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 700.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 800.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 900.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 1000.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 1200.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 500.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 1700.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1000.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 1900.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1200.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1400.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1600.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1800.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 2800.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 3000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2500.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 3500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 4000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 4000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 5000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 5000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       },
       "iconWiki": "/images/9/97/DigimonKing.png",
       "icon": "img/gear/digimonking.png",
@@ -7197,6 +10711,100 @@
           "HT": 1500
         }
       },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "EXP",
+            "value": 500.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "EXP",
+            "value": 1000.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "EXP",
+            "value": 1200.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "EXP",
+            "value": 1400.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "EXP",
+            "value": 1600.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "EXP",
+            "value": 1800.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "EXP",
+            "value": 2500.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "EXP",
+            "value": 4000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "EXP",
+            "value": 5000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "HT": 1500,
       "iconWiki": "/images/9/97/DigimonKing.png",
       "icon": "img/gear/digimonking.png",
@@ -7284,6 +10892,100 @@
         "15": {
           "AT": 1500
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       },
       "AT": 1500,
       "iconWiki": "/images/e/eb/HeavenWing.png",
@@ -7373,6 +11075,93 @@
           "CT": 15.0
         }
       },
+      "levelExtra": {
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "CT": 15.0,
       "iconWiki": "/images/e/eb/HeavenWing.png",
       "icon": "img/gear/heavenwing.png",
@@ -7428,6 +11217,185 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "EXP",
+            "value": 100.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "EXP",
+            "value": 150.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "EXP",
+            "value": 200.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "EXP",
+            "value": 250.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "EXP",
+            "value": 300.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "EXP",
+            "value": 400.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "EXP",
+            "value": 450.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "EXP",
+            "value": 500.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "EXP",
+            "value": 550.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "EXP",
+            "value": 600.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "EXP",
+            "value": 700.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "EXP",
+            "value": 800.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "EXP",
+            "value": 1000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "EXP",
+            "value": 1100.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "EXP",
+            "value": 1200.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "EXP",
+            "value": 1500.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       },
       "iconWiki": "/images/e/eb/HeavenWing.png",
       "icon": "img/gear/heavenwing.png",
@@ -7488,6 +11456,185 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 700.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 800.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 900.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 1000.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 1200.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 1700.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 1900.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 2800.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 3000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 3500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 4000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 5000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       },
       "iconWiki": "/images/e/eb/HeavenWing.png",
       "icon": "img/gear/heavenwing.png",
@@ -7581,6 +11728,93 @@
           "HT": 1500
         }
       },
+      "levelExtra": {
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "HT": 1500,
       "iconWiki": "/images/e/eb/HeavenWing.png",
       "icon": "img/gear/heavenwing.png",
@@ -7668,6 +11902,100 @@
         "15": {
           "AT": 1500
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       },
       "AT": 1500,
       "iconWiki": "/images/a/a8/TimeRuler.png",
@@ -7757,6 +12085,100 @@
           "CT": 15.0
         }
       },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "CT": 15.0,
       "iconWiki": "/images/a/a8/TimeRuler.png",
       "icon": "img/gear/timeruler.png",
@@ -7812,6 +12234,190 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "EXP",
+            "value": 100.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "EXP",
+            "value": 150.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "EXP",
+            "value": 200.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "EXP",
+            "value": 250.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "EXP",
+            "value": 300.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "EXP",
+            "value": 400.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "EXP",
+            "value": 450.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "EXP",
+            "value": 500.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "EXP",
+            "value": 550.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "EXP",
+            "value": 600.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "EXP",
+            "value": 700.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "EXP",
+            "value": 800.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "EXP",
+            "value": 1000.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "EXP",
+            "value": 1100.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "EXP",
+            "value": 1200.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "EXP",
+            "value": 1500.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       },
       "iconWiki": "/images/a/a8/TimeRuler.png",
       "icon": "img/gear/timeruler.png",
@@ -7872,6 +12478,190 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 700.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 800.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 900.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 1000.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 1200.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 1700.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 1900.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 2800.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 3000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 3500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 4000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 5000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       },
       "iconWiki": "/images/a/a8/TimeRuler.png",
       "icon": "img/gear/timeruler.png",
@@ -7964,6 +12754,100 @@
         "15": {
           "HT": 1500
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Skill DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Skill DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Skill DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Skill DMG",
+            "value": 4.0,
+            "unit": "pct"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Skill DMG",
+            "value": 5.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Skill DMG",
+            "value": 6.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Skill DMG",
+            "value": 7.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Skill DMG",
+            "value": 8.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 1.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Skill DMG",
+            "value": 9.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 2.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Skill DMG",
+            "value": 12.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Final DMG",
+            "value": 3.0,
+            "unit": "pct"
+          }
+        ]
       },
       "HT": 1500,
       "iconWiki": "/images/a/a8/TimeRuler.png",
@@ -8104,6 +12988,115 @@
         "15": {
           "HT": 1000
         }
+      },
+      "levelExtra": {
+        "5": [
+          {
+            "stat": "HP",
+            "value": 500.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 600.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 700.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 800.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 900.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 1000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 32.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 35.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 37.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 3000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 40.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 5000.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "Skill DMG",
+            "value": 50.0,
+            "unit": "pct"
+          }
+        ]
       },
       "HT": 1000,
       "iconWiki": "/images/6/66/Ghost_Key_Ring.png",
@@ -8478,6 +13471,205 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1500.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -8506,6 +13698,205 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2500.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          }
+        ]
       },
       "extra": [
         {
@@ -8571,6 +13962,205 @@
         "14": {},
         "15": {}
       },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3400.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3500.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "nameTh": "ไฟ : รองเท้าแห่งสปิริต"
     },
     {
@@ -8619,6 +14209,205 @@
         "14": {},
         "15": {}
       },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3400.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3500.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "nameTh": "น้ำแข็ง : รองเท้าแห่งสปิริต"
     },
     {
@@ -8666,6 +14455,205 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3400.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3500.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "แสง : รองเท้าแห่งสปิริต"
     },
@@ -8737,6 +14725,205 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1500.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -8765,6 +14952,205 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2500.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          }
+        ]
       },
       "extra": [
         {
@@ -8830,6 +15216,205 @@
         "14": {},
         "15": {}
       },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3400.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3500.0,
+            "unit": "pct"
+          }
+        ]
+      },
       "nameTh": "สายฟ้า : รองเท้าแห่งสปิริต"
     },
     {
@@ -8877,6 +15462,205 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3400.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3500.0,
+            "unit": "pct"
+          }
+        ]
       },
       "nameTh": "ลม : รองเท้าแห่งสปิริต"
     },
@@ -8926,6 +15710,205 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 20.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 25.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 1500.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 30.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ]
       }
     },
     {
@@ -8954,6 +15937,205 @@
         "13": {},
         "14": {},
         "15": {}
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "1": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "2": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "3": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "4": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          }
+        ],
+        "5": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2000.0,
+            "unit": "pct"
+          }
+        ],
+        "11": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2100.0,
+            "unit": "pct"
+          }
+        ],
+        "12": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2200.0,
+            "unit": "pct"
+          }
+        ],
+        "13": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2300.0,
+            "unit": "pct"
+          }
+        ],
+        "14": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 2500.0,
+            "unit": "pct"
+          }
+        ],
+        "15": [
+          {
+            "stat": "Speed",
+            "value": 30.0,
+            "unit": "pct"
+          },
+          {
+            "stat": "Affinity",
+            "value": 40.0,
+            "unit": "flat"
+          },
+          {
+            "stat": "EXP",
+            "value": 3000.0,
+            "unit": "pct"
+          }
+        ]
       },
       "extra": [
         {
@@ -9141,6 +16323,120 @@
         "15": {
           "DE": 1000
         }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 1000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 1050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 1100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 1150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 1250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 1300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 1350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 1400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 1450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 2600.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 2800.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 3000.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 3200.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 3500.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 4500.0,
+            "unit": "flat"
+          }
+        ]
       }
     },
     {
@@ -9193,6 +16489,120 @@
         }
       },
       "DE": 1500,
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 2050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 2150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 2250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 2350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 2400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 4600.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 4800.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 5000.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 5200.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 5500.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 7000.0,
+            "unit": "flat"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "HP",
@@ -9282,6 +16692,120 @@
         "15": {
           "DE": 2000
         }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 2050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 2150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 2250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 2350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 2400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 7000.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 7200.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 7400.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 7600.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 7800.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 8000.0,
+            "unit": "flat"
+          }
+        ]
       },
       "nameTh": "ไฟ : เสื้อแห่งสปิริต"
     },
@@ -9421,6 +16945,120 @@
           "DE": 2000
         }
       },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 2050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 2150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 2250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 2350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 2400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 7000.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 7200.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 7400.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 7600.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 7800.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 8000.0,
+            "unit": "flat"
+          }
+        ]
+      },
       "nameTh": "น้ำแข็ง : เสื้อแห่งสปิริต"
     },
     {
@@ -9504,6 +17142,120 @@
         "15": {
           "DE": 2000
         }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 2050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 2150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 2250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 2350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 2400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 7000.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 7200.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 7400.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 7600.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 7800.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 8000.0,
+            "unit": "flat"
+          }
+        ]
       },
       "nameTh": "แสง : เสื้อแห่งสปิริต"
     },
@@ -9623,6 +17375,120 @@
         "15": {
           "DE": 1000
         }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 1000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 1050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 1100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 1150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 1250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 1300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 1350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 1400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 1450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 2600.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 2800.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 3000.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 3200.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 3500.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 4500.0,
+            "unit": "flat"
+          }
+        ]
       }
     },
     {
@@ -9675,6 +17541,120 @@
         }
       },
       "DE": 1500,
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 2050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 2150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 2250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 2350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 2400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 4600.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 4800.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 5000.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 5200.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 5500.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 7000.0,
+            "unit": "flat"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "HP",
@@ -9746,6 +17726,120 @@
         "15": {
           "DE": 2000
         }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 2050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 2150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 2250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 2350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 2400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 7000.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 7200.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 7400.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 7600.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 7800.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 8000.0,
+            "unit": "flat"
+          }
+        ]
       },
       "nameTh": "สายฟ้า : เสื้อแห่งสปิริต"
     },
@@ -9852,6 +17946,120 @@
         "15": {
           "DE": 2000
         }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 2050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 2150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 2250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 2350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 2400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 7000.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 7200.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 7400.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 7600.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 7800.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 8000.0,
+            "unit": "flat"
+          }
+        ]
       },
       "nameTh": "ลม : เสื้อแห่งสปิริต"
     },
@@ -9971,6 +18179,120 @@
         "15": {
           "DE": 1000
         }
+      },
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 1000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 1050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 1100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 1150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 1250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 1300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 1350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 1400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 1450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 1500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 2600.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 2800.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 3000.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 3200.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 3500.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 4500.0,
+            "unit": "flat"
+          }
+        ]
       }
     },
     {
@@ -10023,6 +18345,120 @@
         }
       },
       "DE": 1500,
+      "levelExtra": {
+        "0": [
+          {
+            "stat": "HP",
+            "value": 2000.0,
+            "unit": "flat"
+          }
+        ],
+        "1": [
+          {
+            "stat": "HP",
+            "value": 2050.0,
+            "unit": "flat"
+          }
+        ],
+        "2": [
+          {
+            "stat": "HP",
+            "value": 2100.0,
+            "unit": "flat"
+          }
+        ],
+        "3": [
+          {
+            "stat": "HP",
+            "value": 2150.0,
+            "unit": "flat"
+          }
+        ],
+        "4": [
+          {
+            "stat": "HP",
+            "value": 2250.0,
+            "unit": "flat"
+          }
+        ],
+        "5": [
+          {
+            "stat": "HP",
+            "value": 2300.0,
+            "unit": "flat"
+          }
+        ],
+        "6": [
+          {
+            "stat": "HP",
+            "value": 2350.0,
+            "unit": "flat"
+          }
+        ],
+        "7": [
+          {
+            "stat": "HP",
+            "value": 2400.0,
+            "unit": "flat"
+          }
+        ],
+        "8": [
+          {
+            "stat": "HP",
+            "value": 2450.0,
+            "unit": "flat"
+          }
+        ],
+        "9": [
+          {
+            "stat": "HP",
+            "value": 2500.0,
+            "unit": "flat"
+          }
+        ],
+        "10": [
+          {
+            "stat": "HP",
+            "value": 4600.0,
+            "unit": "flat"
+          }
+        ],
+        "11": [
+          {
+            "stat": "HP",
+            "value": 4800.0,
+            "unit": "flat"
+          }
+        ],
+        "12": [
+          {
+            "stat": "HP",
+            "value": 5000.0,
+            "unit": "flat"
+          }
+        ],
+        "13": [
+          {
+            "stat": "HP",
+            "value": 5200.0,
+            "unit": "flat"
+          }
+        ],
+        "14": [
+          {
+            "stat": "HP",
+            "value": 5500.0,
+            "unit": "flat"
+          }
+        ],
+        "15": [
+          {
+            "stat": "HP",
+            "value": 7000.0,
+            "unit": "flat"
+          }
+        ]
+      },
       "extra": [
         {
           "stat": "HP",

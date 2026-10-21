@@ -45,7 +45,9 @@
     min-width: 62px; padding: 4px 7px; border: 1px solid var(--hairline);
     border-radius: 7px; background: var(--surface-soft); color: var(--ink); }
   .go-picker { min-width: 240px; }
-  table.go-tbl td.go-statval { font-variant-numeric: tabular-nums; color: var(--ink); min-width: 62px; }
+  table.go-tbl th.go-statval { text-align: left; }
+  table.go-tbl td.go-statval { font-variant-numeric: tabular-nums; color: var(--ink); min-width: 62px;
+    text-align: left; white-space: normal; }
   .go-pick-btn { display: flex; align-items: center; gap: 8px; width: 100%; font: inherit;
     font-size: 12.5px; text-align: left; padding: 4px 28px 4px 7px; cursor: pointer;
     border: 1px solid var(--hairline); border-radius: 7px; background: var(--surface-soft);
@@ -364,14 +366,36 @@
     return td;
   }
 
-  /* Clothing stats are fixed by the piece and its upgrade level (owner's
-     call), so the row shows them instead of offering a box to type into. */
-  function statValueCell(item, field) {
+  /* Clothing stats are fixed by the piece and its upgrade level, so the row
+     shows them instead of offering boxes -- every stat the piece has, not
+     just AT/HT/CT (owner's call): a DE/HP top otherwise read as all zeros. */
+  function fmtStat(v, pct) {
+    return pct ? (Math.round(v * 100) / 100) + "%" : Math.round(v).toLocaleString("en-US");
+  }
+
+  function extrasAt(pick, lvl) {
+    if (!pick) return [];
+    if (!pick.levelStats) return pick.extra || [];
+    var top = pick.upgradeMax !== undefined ? pick.upgradeMax
+      : Math.max.apply(null, Object.keys(pick.levelStats).map(Number));
+    var want = (lvl === undefined || lvl === null || lvl === "") ? top : num(lvl);
+    var at = Math.min(Math.max(0, Math.round(want)), top);
+    return (pick.levelExtra || {})[String(at)] || [];
+  }
+
+  function statListCell(item) {
     var td = document.createElement("td");
     td.className = "go-statval";
-    var v = num(item[field]);
-    td.textContent = window.GearSolver.PCT_STATS[field]
-      ? String(Math.round(v * 100) / 100) : Math.round(v).toLocaleString("en-US");
+    var parts = [];
+    STAT_FIELDS.forEach(function (f) {
+      var v = num(item[f.key]);
+      if (v) parts.push(f.label + " " + fmtStat(v, f.pct));
+    });
+    var pick = item.name ? findInRegistry(item.name, item.slot) : null;
+    extrasAt(pick, pick ? levels[pick.name] : undefined).forEach(function (e) {
+      parts.push(e.stat + " " + fmtStat(num(e.value), e.unit === "pct"));
+    });
+    td.textContent = parts.length ? parts.join(" · ") : "—";
     return td;
   }
 
@@ -797,6 +821,8 @@
   }
 
   var ACC_COLS = ["ชื่อ", "ตีบวก/เลเวล", "AT", "HT", "CT (%)", ""];
+  var CLOTH_COLS = ["ชื่อ", "ตีบวก/เลเวล", "สเตตัส", ""];
+  function colsFor(slot) { return CLOTHING.indexOf(slot) >= 0 ? CLOTH_COLS : ACC_COLS; }
 
   /* One box per slot (owner's call): the head box offers head pieces only, so
      a row can never be filed under the wrong slot and there is no slot field
@@ -839,9 +865,10 @@
     table.className = "go-tbl";
     var thead = document.createElement("thead");
     var htr = document.createElement("tr");
-    ACC_COLS.forEach(function (label) {
+    colsFor(slot).forEach(function (label) {
       var th = document.createElement("th");
       th.textContent = label;
+      if (label === "สเตตัส") th.className = "go-statval";
       htr.appendChild(th);
     });
     thead.appendChild(htr);
@@ -875,14 +902,14 @@
       tr.appendChild(nameCell(it));
       tr.appendChild(upgradeCell(it));
       if (CLOTHING.indexOf(it.slot) >= 0) {
-        ["AT", "HT", "CT"].forEach(function (f) { tr.appendChild(statValueCell(it, f)); });
+        tr.appendChild(statListCell(it));
       } else {
         tr.appendChild(statCell(it, "AT", "1"));
         tr.appendChild(statCell(it, "HT", "1"));
         tr.appendChild(statCell(it, "CT", "0.01"));
       }
       tr.appendChild(delCell(data.accessories, it));
-      return labelCells(tr, ACC_COLS);
+      return labelCells(tr, colsFor(it.slot));
     }
   }
 
