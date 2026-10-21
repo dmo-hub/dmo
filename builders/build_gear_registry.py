@@ -61,7 +61,8 @@ GOGGLES_AXIS = {"Adventure Goggles": "digimon", "Digimon Kaiser's Goggles": "dig
                 "Tamer’s Goggles": "tamer", "Complete Tamer’s Goggles": "tamer"}
 # Digivices, Digi-Aura, key rings and ID cards from vplay (scan_vplay_tamer_gear).
 # The wiki's key ring rows (every level, four of eleven families) give way to
-# them; XAI and the Final Digivice have no vplay post, so the wiki's rows stay.
+# them; the older XAI and the Final Digivice have no vplay post, so the wiki's
+# rows stay beside the vplay XAI.
 TAMER_GEAR_TH = PROJ / "data" / "tamer_gear_th.json"
 WIKI_ONLY_TAMER_GEAR = {"XAI System": "xai", "Eos Digivice": "digivice"}
 WIKI_ONLY_NAMES = {"Eos Digivice": {"Final Digivice"}}

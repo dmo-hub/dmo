@@ -9,6 +9,7 @@ off vplay's GM-note posts into data/tamer_gear_th.json.
     DIGI-Key Ring                  post 19025
     Ghost Key Ring                 post 23093
     Magnetic ID Card               posts 25498 Digimon King · 25000 Heaven Wings · 25363 Time Ruler
+    Digital Monster X XAI          post 25565  (patch note; English names from NA event_811)
 
 Every line is kept at its top tier only -- the complete digivice, the Lv Max
 key ring, the +15 card -- which is what a player wears. Cards and the Ghost
@@ -48,6 +49,9 @@ SPIRAL_POST = 16511
 DIGI_KEY_POST = 19025
 GHOST_POST = 23093
 CARD_POSTS = (25498, 25000, 25363)
+XAI_POST = 25565
+XAI_NAMES = {"ดิจิตอล มอนสเตอร์ X": "Digital Monster X",
+             "คอมพลีท ดิจิตอล มอนสเตอร์ X": "Complete Digital Monster X"}
 
 # The digivice option pool. vplay spells "no attribute" two ways.
 ELEMENTS = ["ดาต้า", "วัคซีน", "ไวรัส", "ไม่ระบุประเภท", "น้ำแข็ง", "น้ำ", "ไฟ",
@@ -57,7 +61,7 @@ ELEMENT_ALIAS = {"ไม่ปรากฎประเภท": "ไม่ระ�
 STAT_LABELS = {"AT": "AT", "HP": "HP", "HT": "HT", "CT": "CT", "DE": "DE", "EXP": "EXP",
                "พลังโจมตีสกิล": "Skill DMG", "ความเสียหายสุดท้าย": "Final DMG",
                # Ghost Key Ring's columns; dmowiki prints the first one as HT
-               "อัตราโจมตี": "HT", "HP สูงสุด": "HP"}
+               "อัตราโจมตี": "HT", "HP สูงสุด": "HP", "คริติคอล": "CT"}
 # Printed without "%", CT is the game's raw number, 100 per 1%: the cards list
 # CT +1500 where dmowiki prints 15%.
 RAW_PCT = {"CT", "EV", "BL"}
@@ -313,10 +317,28 @@ def cards(content):
     return [c for c in out if c["levels"]]
 
 
+def xai(content):
+    """The "รายละเอียด XAI ใหม่" table: name, X gauge, X crystal, then four
+    option columns named on the second header row. Gauge and crystal feed
+    X-evolution, not stats, so they go to "info"."""
+    table = next(t for t in tables(content) if t and "X-เกจ" in t[0])
+    labels = [STAT_LABELS[c] for c in table[1]]
+    out = []
+    for row in table[2:]:
+        name_th = re.sub(r"\s*\(.*\)\s*$", "", row[0]).strip()
+        if name_th not in XAI_NAMES:
+            continue
+        stats = [s for s in (stat_value(k, v) for k, v in zip(labels, row[3:])) if s]
+        out.append({"name": XAI_NAMES[name_th], "nameTh": name_th, "slot": "xai",
+                    "axis": "digimon", "levels": [{"upgrade": 0, "stats": stats}],
+                    "info": "X-เกจ +%s · X-คริสตัล +%s" % (row[1], row[2])})
+    return out
+
+
 def main():
     posts = {pid: load_post(pid) for pid in
              (FIRST_POST, XROS_POST, DARKNESS_POST, TRUE_POST, SPIRAL_POST,
-              DIGI_KEY_POST, GHOST_POST) + CARD_POSTS}
+              DIGI_KEY_POST, GHOST_POST, XAI_POST) + CARD_POSTS}
     body = {pid: p["content"]["rendered"] for pid, p in posts.items()}
     items = first_digivice(body[FIRST_POST])
     items.append(loader(body[XROS_POST], "Digimon Xros Loader", "ครอสโหลดเดอร์-ซากุระ"))
@@ -330,6 +352,7 @@ def main():
     items.append(ghost(body[GHOST_POST]))
     for pid in CARD_POSTS:
         items += cards(body[pid])
+    items += xai(body[XAI_POST])
     write_stamped(OUT, {
         "fetched_at": date.today().isoformat(),
         "source": [posts[pid]["link"] for pid in sorted(posts)],

@@ -10009,6 +10009,67 @@
       "nameTh": "เสื้อฮู้ดสีแดงเพลิงของซูเซมอน"
     },
     {
+      "id": "xai-complete-digital-monster-x",
+      "name": "Complete Digital Monster X",
+      "slot": "xai",
+      "axis": "digimon",
+      "nameTh": "คอมพลีท ดิจิตอล มอนสเตอร์ X",
+      "HT": 5000,
+      "CT": 50.0,
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 70.0,
+          "unit": "pct"
+        },
+        {
+          "stat": "HP",
+          "value": 5000.0,
+          "unit": "flat"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Skill DMG",
+          "fixed": "70%"
+        },
+        {
+          "label": "HP",
+          "fixed": "5000"
+        },
+        {
+          "label": "HT",
+          "fixed": "5000"
+        },
+        {
+          "label": "CT",
+          "fixed": "50%"
+        }
+      ],
+      "info": "X-เกจ +10000 · X-คริสตัล +11"
+    },
+    {
+      "id": "xai-digital-monster-x",
+      "name": "Digital Monster X",
+      "slot": "xai",
+      "axis": "digimon",
+      "nameTh": "ดิจิตอล มอนสเตอร์ X",
+      "extra": [
+        {
+          "stat": "Skill DMG",
+          "value": 10.0,
+          "unit": "pct"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Skill DMG",
+          "fixed": "10%"
+        }
+      ],
+      "info": "X-เกจ +5000 · X-คริสตัล +6"
+    },
+    {
       "id": "xai-system-sakura-xai-ver-vi",
       "name": "Sakura XAI Ver. VI",
       "slot": "xai",
