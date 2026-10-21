@@ -371,7 +371,11 @@ same look-and-feel as `decks.html` / `digimon.html`. All pages share the
 external stylesheet `docs/css/site.css` (light/dark via `docs/js/theme.js`) and
 the same `.site-nav` / `.hero` / `.timeline` / `.card` markup — don't re-inline
 CSS; reuse the tokens. `docs/styleguide.html` renders every shared component for
-copy-paste reference.
+copy-paste reference. A standalone page with its own dark theme that loads
+site.css only for the nav (seal-deal-calculator.html) must pin
+`<html data-theme="dark">` and skip theme.js: site.css colours h1-h3 with the
+light theme's dark ink, which made that page's headings unreadable. Its own
+generic `header{}` rule must exclude `.site-nav` (ingame-checklist.html).
 
 **Mockup-first for new pages.** Before writing a `build_<topic>_html.py`, hand-write
 a *static mockup* `docs/<topic>.html` with 2-3 rows of FAKE data so the layout can
@@ -435,8 +439,14 @@ hand-editing the JSON. It is a throwaway tool — not part of the build or CI.
   Digivice, XAI I/II/VII-X/Anniversary) returned nothing.
 - `scanners/scan_clothing.py` is not a `refresh.py` step. After changing it
   run it by hand, then `builders/build_gear_registry.py`, then
-  `tools/validate.py` twice: the first run fails "builders idempotent" because
-  `docs/set_registry.json` still holds the old values, the second passes.
+  `tools/validate.py`.
+- Before `tools/validate.py`, run every builder your change feeds (the list is
+  `IDEMPOTENT_BUILDS` in validate.py; seal edits also reach
+  `build_search_index.py` and `build_index_html.py`). The "builders idempotent"
+  check compares git status codes only: a stale output that was clean fails
+  the first run when the gate's rebuild dirties it, and a second run passes
+  only because the file is already `M`. That pass proves nothing — it once
+  hid that `docs/index.html` and `docs/search_index.json` were never rebuilt.
 - An item missing from the wiki-built registry is not proof NA lacks it. grep
   the NA notices in `cache/event_*.html` / `cache/patch_*.html` first: the 2025
   Four Holy Beasts gear (Noble Head Ornament of Huanglongmon ...) is absent
