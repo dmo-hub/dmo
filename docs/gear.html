@@ -1308,6 +1308,44 @@
       body.appendChild(row([f.label, show(want) + (r >= 0 ? " · อันดับ " + (r + 1) : ""), show(got),
         hit ? "✓ ถึงเป้า" : "✗ ขาด " + show(want - got)], "td", hit ? "hit" : "short"));
     });
+    /* The rest of the loadout's stats too (owner's call): what the set gives
+       overall, not only what was ranked or targeted. */
+    STAT_FIELDS.forEach(function (f) {
+      if (ranked.indexOf(f.key) >= 0 || f.key in g.targets) return;
+      body.appendChild(row([f.label, "—", f.pct ? fmtCT(t[f.key]) + "%" : fmt(t[f.key]), "—"], "td"));
+    });
+    /* Every stat outside the solver as well (owner's call): pieces at their
+       levels, chips, and each earned set bonus in full -- the solver keeps
+       only the bonus effects it scores. */
+    var extraTot = {};
+    var core = {};
+    STAT_FIELDS.forEach(function (f) { core[f.key] = true; });
+    function addExtra(stat, unit, value) {
+      if (!stat || core[stat] || !num(value)) return;
+      var k = stat + (unit === "pct" ? "%" : "");
+      extraTot[k] = extraTot[k] || { stat: stat, pct: unit === "pct", v: 0 };
+      extraTot[k].v += num(value);
+    }
+    out.result.accessories.forEach(function (a) {
+      if (!a.item || !a.item.name) return;
+      var pick = findInRegistry(a.item.name, a.slot);
+      extrasAt(pick, pick ? levels[pick.name] : undefined).forEach(function (e) {
+        addExtra(e.stat, e.unit, e.value);
+      });
+    });
+    out.result.chips.forEach(function (c) {
+      var reg = chipRegistry.filter(function (x) { return x.id === c.regId; })[0];
+      if (reg) addExtra("HP", "flat", reg.HP);
+    });
+    ((out.result && out.result.sets) || []).forEach(function (e) {
+      var s = setRegistry.filter(function (x) { return x.set === e.set; })[0];
+      var b = s && (s.bonuses || []).filter(function (x) { return Number(x.pieces) === e.pieces; })[0];
+      (b ? b.effects || [] : []).forEach(function (x) { addExtra(x.stat, x.unit, x.value); });
+    });
+    Object.keys(extraTot).sort().forEach(function (k) {
+      var x = extraTot[k];
+      body.appendChild(row([x.stat, "ไม่นับในการคำนวณ", fmtStat(x.v, x.pct), "—"], "td"));
+    });
     tbl.appendChild(body);
     card.appendChild(tbl);
     var n = Object.keys(g.targets).length;
