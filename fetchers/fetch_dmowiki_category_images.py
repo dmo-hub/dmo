@@ -2,6 +2,12 @@
 
     python fetchers/fetch_dmowiki_category_images.py Digimon_Rank_U
     python fetchers/fetch_dmowiki_category_images.py Digimon_Rank_U --dry-run
+    python fetchers/fetch_dmowiki_category_images.py --page Apollomon_Whispered
+
+--page takes digimon pages instead of a category and saves each page's
+infobox portrait (its first file image). A category page leaves out the
+picture of a digimon whose page has none in the gallery -- Apollomon
+Whispered was listed on Category:Digimon_Rank_U without one.
 
 The category page only carries thumbnails (/images/thumb/a/ab/X.png/120px-X.png);
 the original sits at /images/a/ab/X.png. Digimon portraits go to
@@ -76,21 +82,36 @@ def target(path: str, title: str | None) -> Path:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("category", help="e.g. Digimon_Rank_U")
+    ap.add_argument("category", nargs="+", help="e.g. Digimon_Rank_U (page titles with --page)")
+    ap.add_argument("--page", action="store_true", help="arguments are digimon pages")
     ap.add_argument("--delay", type=float, default=1.0)
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
     tab = RawTab()
-    status, html = tab.get_html(f"{ORIGIN}/Category:{args.category}")
-    if status != 200:
-        sys.exit(f"ERROR: Category:{args.category} answered {status}")
-    found = originals(html)
-    names = canonical(tab, [t for _, t in found if t])
-    paths = [(p, target(p, names.get(t) if t else None)) for p, t in found]
+    if args.page:
+        names = canonical(tab, args.category)
+        paths = []
+        for title in args.category:
+            status, html = tab.get_html(f"{ORIGIN}/{quote(title)}")
+            if status != 200:
+                sys.exit(f"ERROR: {title} answered {status}")
+            found = originals(html)
+            if not found:
+                sys.exit(f"ERROR: {title} has no picture")
+            paths.append((found[0][0], target(found[0][0], names.get(title, title))))
+        where = "the given pages"
+    else:
+        status, html = tab.get_html(f"{ORIGIN}/Category:{args.category[0]}")
+        if status != 200:
+            sys.exit(f"ERROR: Category:{args.category[0]} answered {status}")
+        found = originals(html)
+        names = canonical(tab, [t for _, t in found if t])
+        paths = [(p, target(p, names.get(t) if t else None)) for p, t in found]
+        where = f"Category:{args.category[0]}"
     todo = [(p, out) for p, out in paths if args.force or not out.exists()]
-    print(f"{len(paths)} pictures on Category:{args.category}, {len(todo)} to fetch")
+    print(f"{len(paths)} pictures on {where}, {len(todo)} to fetch")
     if args.dry_run:
         for p, out in todo:
             print(f"  {p} -> {out.relative_to(PROJ)}")

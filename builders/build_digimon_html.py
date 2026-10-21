@@ -25,6 +25,19 @@ SRC = PROJ / "data" / "scan_result_digimon.json"
 KR_INDEX = PROJ / "data" / "kr_news_index.json"
 KR_ONLY = PROJ / "data" / "kr_only_digimon.json"
 OUT = PROJ / "docs" / "digimon.html"
+# Post banners are taken as posted; this file drops the ones that do not show
+# the digimon and pins which banner belongs to which digimon in a post that
+# released several. Everything else falls back to the dmowiki portrait.
+IMAGES = PROJ / "data" / "digimon_images.json"
+WIKI_IMG = PROJ / "docs" / "img" / "wiki" / "digimon"
+
+
+def wiki_portrait(name: str) -> str | None:
+    """docs-relative path of the portrait fetch_dmowiki_category_images saved."""
+    stem = wiki_name(name).replace(":", "~").replace(" ", "_")
+    for f in sorted(WIKI_IMG.glob(f"{stem}.*")):
+        return f"img/wiki/digimon/{f.name}"
+    return None
 
 
 MONTH_NAMES = [
@@ -303,40 +316,47 @@ def render() -> str:
         return "".join(parts)
 
     # --- One entry card ------------------------------------------------
+    images = json.loads(IMAGES.read_text(encoding="utf-8")) if IMAGES.exists() else {}
+    rejected = images.get("rejected", {})
+    per_digimon = images.get("per_digimon", {})
+
+    # A post that released several digimon gets one card per digimon, each
+    # with its own picture: the post banner rarely shows them all alone.
+    # The first card keeps the post's id, which index/search pages link to.
     def render_entry(idx: str, p: dict, kind: str) -> str:
         prefix = {"event": "e", "patch": "p", "kr": "k"}[kind]
+        key = f"{prefix}{idx}"
         names = p["digimon"]
-        n = len(names)
-        attrs_map = p.get("attributes", {})
-        h2_text = html.escape(", ".join(wiki_name(n) for n in names))
-
-        items = "\n        ".join(
-            f"<li>{render_digimon(name, attrs_map.get(name), show_name=(n > 1))}</li>"
-            for name in names
+        if len(names) == 1:
+            post_img = p.get("image_th") or p.get("image") or p.get("image_kr")
+            if key in rejected:
+                post_img = None
+            picks = [post_img or wiki_portrait(names[0])]
+        else:
+            extra = p.get("images_th_extra") or {}
+            picks = [per_digimon.get(key, {}).get(name)
+                     or (extra.get(name) or {}).get("path")
+                     or wiki_portrait(name) for name in names]
+        return "\n".join(
+            render_card(key if i == 0 else f"{key}-{i + 1}", name, img, p, kind)
+            for i, (name, img) in enumerate(zip(names, picks))
         )
+
+    def render_card(card_id: str, name: str, img_path: str | None, p: dict, kind: str) -> str:
+        attrs_map = {k: v for k, v in (p.get("attributes") or {}).items() if k == name}
+        h2_text = html.escape(wiki_name(name))
+        items = f"<li>{render_digimon(name, attrs_map.get(name), show_name=False)}</li>"
         badge = '<span class="kr-only-badge">KR เท่านั้น</span>' if kind == "kr" else ""
         if kind == "kr" and not attrs_map:
             # an empty box reads as missing data; say why there is none yet
             items = "<li>ยังไม่ออกในเซิร์ฟเวอร์ NA — ข้อมูลมาจากโพสต์ KR</li>"
-        img_path = p.get("image_th") or p.get("image") or p.get("image_kr")
         img_block = (
             f'<a href="{img_path}" target="_blank">'
-            f'<img class="card-image" src="{img_path}" alt="idx {idx}" loading="lazy">'
+            f'<img class="card-image" src="{img_path}" alt="{h2_text}" loading="lazy">'
             f"</a>"
             if img_path
             else ""
         )
-        # Only the Thai banner sits beside these; a KR/NA banner may already
-        # show every digimon in the post.
-        extra = (p.get("images_th_extra") or {}) if p.get("image_th") else {}
-        extra = {k: v for k, v in extra.items() if k in names}
-        if extra:
-            img_block = '<div class="card-gallery">' + img_block + "".join(
-                f'<a href="{e["path"]}" target="_blank">'
-                f'<img class="card-image" src="{e["path"]}" alt="{html.escape(wiki_name(name))}" loading="lazy">'
-                f"</a>"
-                for name, e in extra.items()
-            ) + "</div>"
 
         all_attrs = sorted({a.get("attribute") for a in attrs_map.values() if a.get("attribute")})
         all_elems = sorted(
@@ -344,7 +364,7 @@ def render() -> str:
         )
         all_fams = sorted({f for a in attrs_map.values() for f in a.get("families", [])})
 
-        return f"""        <article class="card tl-entry" id="{prefix}{idx}"
+        return f"""        <article class="card tl-entry" id="{card_id}"
                  data-attr="{",".join(all_attrs)}"
                  data-elem="{",".join(all_elems)}"
                  data-family="{",".join(all_fams)}">

@@ -144,7 +144,16 @@ python tools/apply_th_decks.py                 # -> docs/decks.html (idempotent)
 #          python fetchers/fetch_dmowiki_pages.py Category:Digimon_Rank_U --force
 #          cp cache/dmowiki_category~digimon_rank_u.html rank_u.html
 #        fetch_dmowiki_category_images.py <Category> saves that page's pictures
-#        to docs/img/wiki/ (portraits named after their page).
+#        to docs/img/wiki/ (portraits named after their page); with --page
+#        <Title> it saves one digimon page's infobox portrait (a category can
+#        list a digimon without a picture: Apollomon Whispered).
+#      - digimon.html pictures: look at every post banner before it ships --
+#        posts have carried a settings screenshot, the encyclopedia screen, an
+#        anniversary banner. data/digimon_images.json "rejected" drops such a
+#        banner and the card shows the dmowiki portrait instead. A post with
+#        several digimon renders one card per digimon (first keeps the post id,
+#        then <id>-2 ...); "per_digimon" pins a banner that shows that one
+#        digimon, the rest get their dmowiki portrait.
 #      - Decks with no Rank U digimon are left off decks.html and listed in
 #        data/deck_excluded.json ("e622" whole post, "e673/<deck name>" one deck);
 #        diff_report, the home feed and apply_th_decks all read it.

@@ -1,0 +1,11 @@
+{
+  "rejected": {
+    "p4199": "game settings screenshot (Interface Setting), not Apollomon Whispered",
+    "p4121": "Digimon Encyclopedia screen, not Omegamon X Extreme",
+    "e692": "13th anniversary banner, not Eosmon LV6",
+    "e708": "skill effect only, ZeedMillenniummon not visible"
+  },
+  "per_digimon": {
+    "e782": {"Goddramon": "img/digimon/e782_th.jpeg"}
+  }
+}
